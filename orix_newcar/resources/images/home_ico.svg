@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="_레이어_1_Frame_Clip_Content_Mask_" data-name="_레이어_1 [Frame Clip Content Mask]" width="14.294" height="13.774" transform="translate(1454.941 227.941)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="home_ico" transform="translate(-1447 -220)">
+    <g id="_레이어_1_Clip_Content_" data-name="_레이어_1 (Clip Content)" clip-path="url(#clip-path)">
+      <rect id="_레이어_1_Frame_Background_" data-name="_레이어_1 [Frame Background]" width="14.294" height="13.774" transform="translate(1454.941 227.941)" fill="none"/>
+      <g id="clippath">
+        <path id="Vector" d="M0,0H14.206V13.774H0Z" transform="translate(1455.03 227.941)" fill="none"/>
+        <path id="패스_47137" data-name="패스 47137" d="M0,4.5,5.765,0l5.765,4.5" transform="translate(1456.209 229.706)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <path id="패스_47138" data-name="패스 47138" d="M8.157,0V6.614H0V0" transform="translate(1457.891 233.31)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+    <rect id="_격리_모드_Frame_Background_" data-name="_격리_모드 [Frame Background]" width="30" height="30" transform="translate(1477 250) rotate(-180)" fill="none"/>
+  </g>
+</svg>

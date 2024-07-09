@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords">
+    <meta name="description" content="ORIX Capital description">
+
+	<meta property="og:locale" content="ko_KR" />
+	<meta property="og:type" content="website" />
+
+	<link href="../../resources/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/renewal.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/guide.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../../resources/js/jquery.js"></script>
+    <script type="text/javascript" src="../../resources/js/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
+
+</head>
+<style>
+    .contents.guide { padding:15px; }
+    .guide .code h4 { margin-bottom:5px; }
+    /* color css */
+    .guide .code .border { margin-bottom:20px; padding:20px; border:1px solid #33333323; border-radius:15px; }
+    .btn-wrap > span{  display:inline; font-weight:bold; }
+    .btn-wrap > button,
+    .btn-wrap > a {  margin-bottom:10px; }
+    .flex { display:flex; align-items: center; }
+</style>
+<body>
+    <div class="wrap">
+        <div id="container" class="sub-content">
+            <div class="contents-wrap">
+                <div class="contents guide">
+					<div class="code">
+						<section>
+                            <form>
+                                <h4>INPUT</h4>
+                                <div class="border">
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <div class="amount">
+                                                <input id="" type="amount" class="form-control amount-num" placeholder="0" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                                <span class="amount-txt">원</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="amount">
+                                                <input id="" type="amount" class="form-control amount-num" placeholder="0" inputmode="numeric" disabled><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                                <span class="amount-txt">원</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="amount">
+                                                <input id="" type="amount" class="form-control amount-num" placeholder="0">
+                                                <span class="amount-txt">%</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="amount">
+                                                <input id="" type="amount" class="form-control amount-num" placeholder="옵션명">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="amount w140">
+                                                <input id="" type="amount" class="form-control amount-num" placeholder="0" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                                <span class="amount-txt">원</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="amount w140">
+                                                <input id="" type="amount" class="form-control amount-num" placeholder="0" inputmode="numeric" disabled><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                                <span class="amount-txt">원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>SELECT BOX(popup 열리는  select)</h4>
+                                <div class="border">
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <div class="select-wrap">
+                                                <button class="btn-select pop">직접입력</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="select-wrap">
+                                                <button class="btn-select pop" disabled>Self(자가정비)</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="select-wrap">
+                                                <button class="btn-select pop w140">직접입력</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>SELECT BOX(footer or option나오는 slelect)</h4>
+                                <div class="border">
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <div class="select-wrap">
+                                                <button class="btn-select">직접입력</button>
+                                                <div class="select-list">
+                                                    <ul>
+                                                        <li><button type="button">naver.com</button></li>
+                                                        <li><button type="button">gmail.com</button></li>
+                                                        <li><button type="button">daum.net</button></li>
+                                                        <li><button type="button">kakao.com</button></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="select-wrap">
+                                                <button class="btn-select" disabled>패밀리사이트</button>
+                                                <div class="select-list">
+                                                    <ul>
+                                                        <li><button type="button">naver.com</button></li>
+                                                        <li><button type="button">gmail.com</button></li>
+                                                        <li><button type="button">daum.net</button></li>
+                                                        <li><button type="button">kakao.com</button></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+						</section>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
+	<script>
+        $(function(){
+            $('div[data-include-path]').each(function(){
+                var path = $(this).attr('data-include-path');
+                $(this).load(path,function(response,status,xhr){
+                    if(status == 'error'){
+                        var msg = 'Sory but there was an error:';
+                        $(this).html(msg + xhr.status + '' + xhr.statusText);
+                    }
+                })
+            })
+        })
+    </script>
+    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
+</body>
+</html>
+

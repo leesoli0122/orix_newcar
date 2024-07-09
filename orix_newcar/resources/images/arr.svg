@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="_격리_모드_Frame_Clip_Content_Mask_" data-name="_격리_모드 [Frame Clip Content Mask]" width="30" height="30" transform="translate(1507 250) rotate(-180)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="arr" transform="translate(-1477 -220)">
+    <g id="_격리_모드_Clip_Content_" data-name="_격리_모드 (Clip Content)" clip-path="url(#clip-path)">
+      <rect id="_격리_모드_Frame_Background_" data-name="_격리_모드 [Frame Background]" width="30" height="30" transform="translate(1507 250) rotate(-180)" fill="none"/>
+      <path id="패스_52503" data-name="패스 52503" d="M5.4,11.109,0,5.709,5.4,0" transform="translate(1494.391 240.735) rotate(-180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="사각형_21754" data-name="사각형 21754" d="M0,0H30V30H0Z" transform="translate(1507 250) rotate(-180)" fill="none"/>
+    </g>
+  </g>
+</svg>

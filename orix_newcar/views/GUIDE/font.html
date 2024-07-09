@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords">
+    <meta name="description" content="ORIX Capital description">
+
+	<meta property="og:locale" content="ko_KR" />
+	<meta property="og:type" content="website" />
+
+	<link href="../../resources/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/content.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../../resources/js/jquery.js"></script>
+    <script type="text/javascript" src="../../resources/js/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
+
+</head>
+<style>
+    .contents.guide { padding:15px; }
+    .guide .code h4 { margin-bottom:5px; }
+    /* color css */
+    .guide .code .guide-txt { margin-bottom:20px; padding:20px; border:1px solid #33333323; border-radius:15px; }
+    .guide .code .guide-txt li { padding:10px; }
+    .btn-wrap > span{  display:inline; font-weight:bold; }
+    .btn-wrap > button,
+    .btn-wrap > a {  margin-bottom:10px; }
+    .flex { display:flex; align-items: center; }
+</style>
+<body>
+    <div class="wrap">
+        <div id="container" class="sub-content">
+            <div class="contents-wrap">
+                <div class="contents guide">
+					<div class="code">
+						<section>
+                            <h4>font-size</h4>
+							<ul class="guide-txt">
+								<li>
+                                    <ul class="flex">
+                                        <li style="font-size:var(--font-24);">브랜드나 차종을 선택해주세요</li>
+                                        <li>24px</li>
+                                        <li>chart</li>
+                                    </ul>
+								</li>
+								<li>
+                                    <ul class="flex">
+                                        <li style="font-size:var(--font-20);">브랜드나 차종을 선택해주세요</li>
+                                        <li>20px</li>
+                                        <li>step</li>
+                                    </ul>
+								</li>
+								<li>
+                                    <ul class="flex">
+                                        <li style="font-size:var(--font-18);">브랜드나 차종을 선택해주세요</li>
+                                        <li>18px</li>
+                                        <li>menu, 큰 버튼, 서브title, 달력title, 일정title, 컨텐츠title, 3단컨텐츠 최종금액</li>
+                                    </ul>
+								</li>
+								<li>
+                                    <ul class="flex">
+                                        <li style="font-size:var(--font-16);">브랜드나 차종을 선택해주세요</li>
+                                        <li>16px</li>
+                                        <li>기본 폰트</li>
+                                    </ul>
+								</li>
+								<li>
+                                    <ul class="flex">
+                                        <li style="font-size:var(--font-14);">브랜드나 차종을 선택해주세요</li>
+                                        <li>14px</li>
+                                        <li>헤더, location_list, 버튼 안에 숫자, 
+                                            3단 컨텐츠 내용, subtext, 셀렉트박스 내용, 셀렉트박스 결과값, 인풋 text, 체크박스</li>
+                                    </ul>
+								</li>
+								<!-- <li>
+                                    <ul class="flex">
+                                        <li style="font-size:var(--font-12);">브랜드나 차종을 선택해주세요</li>
+                                        <li>12px</li>
+                                        <li>카피라이트, 모바일 사이즈로 줄일 때 14px이였던 폰트</li>
+                                    </ul>
+								</li> -->
+							</ul>
+                            <h4>font-weight</h4>
+							<ul class="guide-txt">
+								<li style="font-weight:var(--w-regular);">나눔고딕 - regular</li>
+								<li style="font-weight:var(--w-bold);">나눔고딕 - bold</li>
+								<li style="font-weight:var(--w-extrabold);">나눔고딕 - extrabold</li>
+							</ul>
+						</section>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
+	<script>
+        $(function(){
+            $('div[data-include-path]').each(function(){
+                var path = $(this).attr('data-include-path');
+                $(this).load(path,function(response,status,xhr){
+                    if(status == 'error'){
+                        var msg = 'Sory but there was an error:';
+                        $(this).html(msg + xhr.status + '' + xhr.statusText);
+                    }
+                })
+            })
+        })
+    </script>
+    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
+</body>
+</html>
+

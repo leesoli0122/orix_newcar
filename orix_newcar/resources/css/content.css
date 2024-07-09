@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.unit { display:inline-block; position:absolute; top:50%; right:0; transform: translate(0, -50%); }
+
+/* 스크롤 시 active */
+.fix { position:fixed; animation: down 0.5s ease; top:0; width:100%; }
+
+/* button */
+.bottom-btn-wrap .btn-wrap button.btn-primary { color:var(--white); }
+.btn-wrap .btn.btn-text::after { content:""; display:inline-block; width:24px; height:24px; vertical-align:middle; border:1px solid var(--normal); }
+
+/* filter */
+.filter-btn { display:inline-block; padding:8px 12px 8px 20px; border:1px solid var(--focus); border-radius:24px; }
+.filter-btn::after { content:""; display:inline-block; margin-left:8px; width:20px; height:20px; background:url("../images/close-ico.png")no-repeat center;vertical-align:sub; cursor:pointer; }
+
+/************************ step ************************/
+ul.step.icon li.car::after { background:url("../images/car_select.png")no-repeat 50%/50px; }
+ul.step.icon li.car.on::after { background:url("../images/car_select_on.png")no-repeat 50%/50px; }
+ul.step.icon li.car.pre::after { background:url("../images/car_select_end.png")no-repeat 50%/50px; }
+ul.step.icon li.info::after { background:url("../images/info_text.png")no-repeat 50%/50px; }
+ul.step.icon li.info.on::after { background:url("../images/info_text_on.png")no-repeat 50%/50px; }
+ul.step.icon li.info.pre::after { background:url("../images/info_text_end.png")no-repeat 50%/50px; }
+ul.step.icon li.esti::after { background:url("../images/estimate.png")no-repeat 50%/50px; }
+ul.step.icon li.esti.on::after { background:url("../images/estimate_on.png")no-repeat 50%/50px; }
+ul.step.icon li.esti.pre::after { background:url("../images/estimate_end.png")no-repeat 50%/50px; }
+ul.step.icon li.view::after { background:url("../images/view_quotation.png")no-repeat 50%/50px; }
+ul.step.icon li.view.on::after { background:url("../images/view_quotation_on.png")no-repeat 50%/50px; }
+ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.png")no-repeat 50%/50px; }
+
+/*****************************before*****************************/
+.select-wrap .btn-select.pop.img::before { content:""; position:absolute; left:10px; top:50%; transform:translateY(-50%); display:inline-block; width:34px; height:22px;  }
+.select-wrap .btn-select.pop.hd::before { background:url("../images/logo/domestic/hyundai.png")no-repeat; background-size:contain; }
+
+/*****************************공지사항*****************************/
+.specifications-wrap { display:block; margin:40px auto 0; max-width:900px; width:100%; }
+.specifications-wrap .sfc-box { display:flex; }
+.specifications-wrap .sfc-box .car-img { display:inline-block; padding:58px 44px; background-color:var(--normal); color:var(--white); }
+.specifications-wrap .sfc-box .car-img .img { display:inline-block; width:320px; max-height:151px; height:100%; margin-bottom:10px; }
+.specifications-wrap .sfc-box .car-img .img.hd-01 { background:url("../images/car/hd_01.png")no-repeat center; }
+.specifications-wrap .sfc-box .car-info { display:inline-block; width:100%; }
+.specifications-wrap .sfc-box + .btn-wrap { margin-top:20px; }

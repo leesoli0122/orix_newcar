@@ -170,6 +170,15 @@ tbody td { font-weight:300; }
 .txt-list.li-box li .txt { flex:initial; padding-left:20px;  }
 .txt-list.li-box li span:first-child:after { content:""; position:absolute; top:50%; right:0; transform:translateY(-50%); display:block; width:1px; height:20px; background:#003F86; }
 
+/*****************************info*****************************/
+.specifications-wrap { display:block; margin:40px auto 0; max-width:900px; width:100%; }
+.specifications-wrap .sfc-box { display:flex; }
+.specifications-wrap .sfc-box .car-img { display:inline-block; padding:58px 44px; background-color:var(--normal); color:var(--white); }
+.specifications-wrap .sfc-box .car-img .img { display:inline-block; width:320px; max-height:151px; height:100%; margin-bottom:10px; }
+.specifications-wrap .sfc-box .car-img .img.hd-01 { background:url("../images/car/hd_mb_01.png")no-repeat center; }
+.specifications-wrap .sfc-box .car-info { display:inline-block; width:100%; }
+.specifications-wrap .sfc-box + .btn-wrap { margin-top:20px; }
+
 /******s: 리스트에 form 요소 들어갈 때 ******/
 .txt-detail-area.form { display:inline-block; width:100%; height:max-content; border-left:1px solid var(--border); border-right:1px solid var(--border); }
 .txt-detail-area.form .txt-list.form-wrap { height:722px; overflow-y:scroll; }
@@ -223,7 +232,7 @@ tbody td { font-weight:300; }
 .table-row.right-color tbody td { color:#00345F; }
 
 .table-col tbody tr th { border-left:1px solid var(--border); }
-.table-col tbody tr td { text-align:left;  border-right:1px solid var(--border); color:#212121; font-weight:500; }
+.table-col tbody tr td { text-align:left;  border-right:1px solid var(--border);  font-weight:500; }
 
 .table-col tbody tr th { font-weight:400; color:#333333; background:var(--secondary); }
 
@@ -244,7 +253,7 @@ tbody td { font-weight:300; }
 /******e: 총 소요비용 ******/
 
 /******s: 견적 ******/
-.txt-list-wrap.estimate { max-width:1400px; width:100%; margin:80px auto 0; overflow-x:scroll; overflow-y:hidden; white-space: nowrap; cursor:pointer; }
+.txt-list-wrap.estimate { max-width:1400px; width:100%; margin:80px auto 0; cursor:pointer; text-align:center; }
 
 .txt-list-wrap.estimate::-webkit-scrollbar { height:10px; }
 .txt-list-wrap.estimate::-webkit-scrollbar-track { background-color:var(--background2); }
@@ -263,7 +272,9 @@ tbody td { font-weight:300; }
 .btn-wrap .btn{ display:inline-block; padding:8px 20px; width:auto; min-width:75px; font-size:var(--font-14); line-height:14px; font-weight:var(--w-bold); letter-spacing:normal;  border-radius:var(--border-radius10); text-align:center; }
 .btn.btn-primary { background-color:var(--primary); color:var(--white); }
 .btn.btn-primary +.btn-primary { margin-left:10px; }
-.btn.btn-text { padding:0 0; height:auto; font-size:var(--font-16); font-weight:var(--w-bold); line-height:24px; color:#158CFC; border-radius:0; }
+.btn.btn-text { padding:0 0; margin-right:20px; margin-bottom:0; height:auto; font-size:var(--font-16); color:var(--title); font-weight:700; line-height:initial; text-decoration:none;  border-radius:0; }
+.btn.btn-text-ico { position:absolute; right: 0; bottom: 10px; padding:0 0; height:auto; font-size:var(--font-16); font-weight:var(--w-bold); line-height:24px; color:#158CFC;  border-radius:0; }
+
 
 .btn-layer-close { display:block; width:40px; height:40px; font-size:0;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.828' height='21.828'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='m1.414 1.414 19 19M20.414 1.414l-19 19'/%3E%3C/g%3E%3C/svg%3E");
@@ -393,8 +404,7 @@ th .info-txt-wrap::before,
 }
 .breadcrumb-wrap ul > li:last-of-type { color:var(--title); }
 .breadcrumb-wrap ul > li:last-of-type::after { display:none; width:0; background:transparent; }
-.breadcrumb-wrap ul > li.home a{ display:inline-block; font-size:0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='none' d='M1454.94 227.94h14.3v13.77h-14.3z' data-name='_레이어_1 %5BFrame Clip Content Mask%5D'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg fill='none'%3E%3Cg clip-path='url(%23a)' data-name='_레이어_1 (Clip Content)' transform='translate(-1447 -220)'%3E%3Cpath d='M1454.94 227.94h14.3v13.77h-14.3z' data-name='_레이어_1 %5BFrame Background%5D'/%3E%3Cpath d='M1455.03 227.94h14.2v13.78h-14.2Z'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' d='m1456.2 234.2 5.77-4.5 5.77 4.5' data-name='패스 47137'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' d='M1466.05 233.31v6.61h-8.16v-6.61' data-name='패스 47138'/%3E%3C/g%3E%3Cpath d='M30 30H0V0h30z' data-name='_격리_모드 %5BFrame Background%5D'/%3E%3C/g%3E%3C/svg%3E");
+.breadcrumb-wrap ul > li.home a{ display:inline-block; width:30px; font-size:0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='none' d='M1454.94 227.94h14.3v13.77h-14.3z' data-name='_레이어_1 %5BFrame Clip Content Mask%5D'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg fill='none'%3E%3Cg clip-path='url(%23a)' data-name='_레이어_1 (Clip Content)' transform='translate(-1447 -220)'%3E%3Cpath d='M1454.94 227.94h14.3v13.77h-14.3z' data-name='_레이어_1 %5BFrame Background%5D'/%3E%3Cpath d='M1455.03 227.94h14.2v13.78h-14.2Z'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' d='m1456.2 234.2 5.77-4.5 5.77 4.5' data-name='패스 47137'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' d='M1466.05 233.31v6.61h-8.16v-6.61' data-name='패스 47138'/%3E%3C/g%3E%3Cpath d='M30 30H0V0h30z' data-name='_격리_모드 %5BFrame Background%5D'/%3E%3C/g%3E%3C/svg%3E");
     background-repeat: no-repeat;background-position:center center;
 }
 

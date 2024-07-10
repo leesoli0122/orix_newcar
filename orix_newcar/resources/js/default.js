@@ -1,6 +1,6 @@
 window.addEventListener('scroll', () => {
 	const bwLeft = window.scrollX;
-	document.querySelector('#header').addClass('scroll').style.transform = `translateX(-${bwLeft}px)`;
+	document.querySelector('#header')/*.addClass('scroll')*/.style.transform = `translateX(-${bwLeft}px)`;
 });
 
 $(document).ready(function() {
@@ -291,7 +291,7 @@ $(document).ready(function() {
   /**selectbox***/
   document.addEventListener('DOMContentLoaded', function() {
     // 버튼과 리스트를 가져오기
-    const btns = document.querySelectorAll('.btn-select:not(.btn-select.pop)');
+    const btns = document.querySelectorAll('.btn-select:not(.btn-select.pop)'); //2024.07.08 이솔 not 추가
     const lists = document.querySelectorAll('.select-list');
 
     // 각각의 버튼에 대해 이벤트 리스너 추가

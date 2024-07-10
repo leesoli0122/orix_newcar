@@ -31,11 +31,6 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
 .select-wrap .btn-select.pop.img::before { content:""; position:absolute; left:10px; top:50%; transform:translateY(-50%); display:inline-block; width:34px; height:22px;  }
 .select-wrap .btn-select.pop.hd::before { background:url("../images/logo/domestic/hyundai.png")no-repeat; background-size:contain; }
 
-/*****************************공지사항*****************************/
-.specifications-wrap { display:block; margin:40px auto 0; max-width:900px; width:100%; }
-.specifications-wrap .sfc-box { display:flex; }
-.specifications-wrap .sfc-box .car-img { display:inline-block; padding:58px 44px; background-color:var(--normal); color:var(--white); }
-.specifications-wrap .sfc-box .car-img .img { display:inline-block; width:320px; max-height:151px; height:100%; margin-bottom:10px; }
-.specifications-wrap .sfc-box .car-img .img.hd-01 { background:url("../images/car/hd_01.png")no-repeat center; }
-.specifications-wrap .sfc-box .car-info { display:inline-block; width:100%; }
-.specifications-wrap .sfc-box + .btn-wrap { margin-top:20px; }
+/* 차량선택 */
+.choose-wrap .choose-group { max-height:500px; border-top:1px solid var(--title); border-bottom:1px solid var(--title); }
+.choose-wrap .choose-group + .label { margin-top:30px; }

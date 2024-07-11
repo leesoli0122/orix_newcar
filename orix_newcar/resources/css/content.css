@@ -50,7 +50,7 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
 .contents-wrap .choose-wrap .txt-list-wrap { display:flex; }
 .contents-wrap .choose-wrap .txt-list-wrap .txt-list { padding-bottom:20px; border-right:1px solid var(--border); }
 .contents-wrap .choose-wrap .txt-list-wrap .txt-detail-area:last-child .txt-list { border-right:none; }
-.contents-wrap .choose-wrap .txt-list-wrap .txt-list li { display:inline-block; margin: 20px 20px 0 20px; }
+.contents-wrap .choose-wrap .txt-list-wrap .txt-list li { display:inline-block; margin: 20px 0 0 20px; }
 
 /* 차량선택했을 때 */
 .choose-wrap .choose-group ul li.on,

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_21859" data-name="사각형 21859" width="24" height="24" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="calender_arr_ico" transform="translate(24 24) rotate(180)">
+    <g id="그룹_44687" data-name="그룹 44687">
+      <rect id="사각형_21845" data-name="사각형 21845" width="24" height="24" fill="none"/>
+      <g id="그룹_44686" data-name="그룹 44686" transform="translate(-0.736 -0.736)">
+        <g id="그룹_44685" data-name="그룹 44685" transform="translate(0.736 0.736)">
+          <g id="그룹_44684" data-name="그룹 44684" clip-path="url(#clip-path)">
+            <path id="패스_52664" data-name="패스 52664" d="M14.047,7.352a.837.837,0,0,0-1.429.592V19.688a.837.837,0,0,0,1.429.592l5.675-5.674a1.118,1.118,0,0,0,0-1.579Z" transform="translate(-3.228 -1.818)" fill="#757575"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

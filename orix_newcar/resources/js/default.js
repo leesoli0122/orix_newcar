@@ -349,4 +349,27 @@ $(document).ready(function() {
             btn.classList.remove('action');
         });
     });
+
+    new Chart(document.getElementById("doughnut-chart"), {
+      type: 'doughnut',
+      data: {
+        // labels: ["진행", "완료"],
+        datasets: [
+          {
+            //label: "Population (millions)",
+            backgroundColor: ["#1B6DFA", "#2DB9BC"],
+            data: [42,8]
+          }
+        ]
+      },
+      options: {
+        responsive: false,
+        tooltips: {// 툴팁삭제
+          enabled:false
+        },
+        animation: {//차트 애니메이션 사용 안 함
+          duration: 0
+        }
+      }
+  });
 });

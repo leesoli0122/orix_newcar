@@ -158,10 +158,11 @@ header#header .top > div > ul.menu-r li a.btn-primary { padding:4px 15px; line-h
 /* 인크루드 확인용 */
 
 .contents-wrap > div,
-.contents-wrap > section:not(.contents-wrap .breadcrumb-wrap, .contents-wrap .specifications-wrap, .contents-wrap .txt-list-wrap),
+.contents-wrap > section:not(.contents-wrap .breadcrumb-wrap, .contents-wrap .specifications-wrap, .contents-wrap .txt-list-wrap, .contents-wrap .my-cont-wrap),
 .contents-wrap > form,
 .form-wrap + .bottom-btn-wrap { display:block; margin:40px auto 0; width:100%; max-width:1400px;  }
 .contents-wrap .txt-list-wrap:not(.contents-wrap .txt-list-wrap.car-info, .contents-wrap .txt-list-wrap.estimate, .contents-wrap .choose-wrap .txt-list-wrap) { display:grid; grid-template-columns: repeat(3, minmax(448px, auto)); gap:20px; margin:40px auto 0; width:100%; max-width:1400px;  }
+.contents-wrap .my-cont-wrap { display:flex; justify-content: space-between; margin:40px auto 0; width:100%; max-width:1400px; }
 section.bottom-btn-wrap.result-area { margin:42px auto 0; }
 .terms-area + .terms-area { margin-top:80px; }
 

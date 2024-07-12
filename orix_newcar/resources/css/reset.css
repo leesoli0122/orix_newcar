@@ -204,4 +204,9 @@ section.bottom-btn-wrap.result-area { margin:42px auto 0; }
 
   .footer-wrap > div { min-width:0; }
   .footer-wrap .form-wrap { position:initial; transform:unset; }
+  .footer-wrap .form-row > div.col { max-width:140px; }
+  .footer-wrap .select-wrap .btn-select { width:140px; }
+  .footer-wrap .form-wrap .select-wrap .btn-select { padding:13px 10px 13px 20px; height:auto; font-size:var(--font-14); }
+  .footer-wrap .select-wrap .btn-select::after { right:10px; }
+  .footer-wrap .form-wrap .btn-wrap .btn-ok { margin-left:10px; height:40px; border-radius:7px; }
 }

@@ -13,12 +13,13 @@
 	<link href="../../resources/css/reset.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/renewal.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/content.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/ui/datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/ui/jquery-ui.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="../../resources/js/jquery.js"></script>
     <script type="text/javascript" src="../../resources/js/default.js"></script>
     <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-
 </head>
 <body>
     <div class="wrap">
@@ -40,17 +41,250 @@
                 </section>
                 <section class="my-cont-wrap">
                     <div class="my-group">
+                        <!-- 월간실적 -->
                         <h3 class="label">나의 월간실적</h3>
                         <div class="donut-wrap">
-                            <canvas id="doughnut-chart"></canvas>
+                            <div class="btn-wrap">
+                                <button class="btn btn-month-prev">이전</button>
+                                <div class="month-tit">2024년 6월</div>
+                                <button class="btn btn-month-next">다음</button>
+                            </div>
+                            <div class="donut">
+                                <canvas id="doughnut-chart" width="150vw" height="150vh"></canvas>
+                                <ul class="chart-label">
+                                    <li class="ing">
+                                        <span class="tit">진행</span>
+                                        <span class="num">42건</span>
+                                    </li>
+                                    <li class="end">
+                                        <span class="tit">완료</span>
+                                        <span class="num">6건</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+                        <!-- 현황조회 -->
+                        <h3 class="label">현황조회(리스/렌트)</h3>
+                        <div class="btn-wrap">
+                            <div class="btn btn-text-ico plus">더보기</div>
+                        </div>
+                        <ul class="situation-wrap">
+                            <li>           
+                                <span class="tit">견적</span>
+                                <div class="txt"><span>15</span></div>
+                            </li>
+                            <li>
+                                <span class="tit">약정펀딩</span>
+                                <div class="txt"><span>1</span></div>
+                            </li>
+                            <li>
+                                <span class="tit">상담심사</span>
+                                <div class="txt"><span>15</span></div>
+                            </li>
+                            <li>
+                                <span class="tit">인도</span>
+                                <div class="txt"><span>1</span></div>
+                            </li>
+                            <li>
+                                <span class="tit">발주배정</span>
+                                <div class="txt"><span>15</span></div>
+                            </li>
+                        </ul>
+                        <!-- 퀵메뉴 -->
+                        <ul class="quick-menu">
+                            <li class="ma"><a href="javascript:void(0);">고객관리</a></li>
+                            <li class="pe"><a href="javascript:void(0);">실적조회</a></li>
+                            <li class="ca"><a href="javascript:void(0);">할부계산기</a></li>
+                            <li class="re"><a href="javascript:void(0);">선출고</a></li>
+                        </ul>
+                    </div>
+                    <div class="my-group">
+                        <!-- 일정관리 -->
+                        <h3 class="label">일정관리</h3>
+                        <div class="calendar-wrap">
+                            <div class="calendar">
+                                <div class="btn-wrap">
+                                    <button class="btn btn-month-prev">이전</button>
+                                    <div class="month-tit">2024년 6월</div>
+                                    <button class="btn btn-month-next">다음</button>
+                                </div>
+                                <table class="date-month">
+                                    <colgroup>
+                                        <col width="50">
+                                        <col width="50">
+                                        <col width="50">
+                                        <col width="50">
+                                        <col width="50">
+                                        <col width="50">
+                                        <col width="50">
+                                    </colgroup>
+                                    <thead>
+                                        <tr class="week">
+                                            <th class="holy">SUN</th>
+                                            <th>MON</th>
+                                            <th>TUE</th>
+                                            <th>WED</th>
+                                            <th>THU</th>
+                                            <th>FRI</th>
+                                            <th>SAT</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="days">
+                                        <tr>
+                                            <td class="holy"></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="holy">2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="holy">9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="holy">16</td>
+                                            <td>17</td>
+                                            <td>18</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td class="today">21</td>
+                                            <td>22</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="holy">23</td>
+                                            <td>24</td>
+                                            <td>25</td>
+                                            <td>26</td>
+                                            <td>27</td>
+                                            <td>28</td>
+                                            <td>29</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="holy">30</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="todo">
+                                <p class="label"><span>2024년 06월 21일 (금)</span></p>
+                                <div class="btn-wrap">
+                                    <button class="btn btn-primary">일정추가</button>
+                                </div>
+                                <div class="list">
+                                    <ul>
+                                        <li class="to-list">
+                                            <div class="text ok">
+                                                <span class="time">10:00</span>
+                                                <span class="tit">홍길동 고객님 견적 상담(비대면)</span>
+                                            </div>
+                                            <div class="btn-wrap">
+                                                <button class="btn modify">수정</button>
+                                                <button class="btn delete">삭제</button>
+                                            </div>
+                                        </li>
+                                        <li class="to-list">
+                                            <div class="text">
+                                                <span class="time">12:00</span>
+                                                <span class="tit">(주)오릭스캐피탈 방문</span>
+                                            </div>
+                                            <div class="btn-wrap">
+                                                <button class="btn modify">수정</button>
+                                                <button class="btn delete">삭제</button>
+                                            </div>
+                                        </li>
+                                        <li class="to-list">
+                                            <div class="text">
+                                                <span class="time">15:00</span>
+                                                <span class="tit">김철수 고객님 견적상담(AAA대리점)</span>
+                                            </div>
+                                            <div class="btn-wrap">
+                                                <button class="btn modify">수정</button>
+                                                <button class="btn delete">삭제</button>
+                                            </div>
+                                        </li>
+                                        <li class="to-list">
+                                            <div class="text">
+                                                <span class="time">17:00</span>
+                                                <span class="tit">김이박 고객님 차량 출고(출고장)</span>
+                                            </div>
+                                            <div class="btn-wrap">
+                                                <button class="btn modify">수정</button>
+                                                <button class="btn delete">삭제</button>
+                                            </div>
+                                        </li>
+                                        <li class="to-list">
+                                            <div class="text">
+                                                <span class="time">19:00</span>
+                                                <span class="tit">최영희 고객님 XXX대리점 방문 예정</span>
+                                            </div>
+                                            <div class="btn-wrap">
+                                                <button class="btn modify">수정</button>
+                                                <button class="btn delete">삭제</button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 공지사항 -->
+                        <h3 class="label">공지사항</h3>
+                        <div class="btn-wrap">
+                            <div class="btn btn-text-ico plus">더보기</div>
+                        </div>
+                        <ul class="notice-wrap">
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <p class="notice-tit-area">
+                                        <span class="text">2024년 4월 영업채널 프로모션 변경사항</span>
+                                        <span class="num">24.04.01</span>
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <p class="notice-tit-area">
+                                        <span class="text">24년 4월 특판차량 납기표</span>
+                                        <span class="num">24.04.01</span>
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <p class="notice-tit-area">
+                                        <span class="text">24년 탁송제휴사 용품리스트</span>
+                                        <span class="num">24.01.01</span>
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </section>
             </div>
         </div>
         <div data-include-path="../INCLUDE/footer.html"></div>
     </div>
-    <script type="text/javascript" src="../../resources/js/donut.js"></script>
 
     <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
 	<script>

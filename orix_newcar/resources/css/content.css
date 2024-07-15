@@ -105,7 +105,7 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
 .quick-menu li.re::before { background:url("../images/release_ico.png")no-repeat center center; }
 /************ 일정관리 ************/
 .calendar-wrap { display:flex; padding:20px; border-radius:20px; background-color:var(--secondary); }
-.calendar-wrap .calendar { margin-right:20px; padding:20px 20px 43px; width:420px; border-radius:20px; background-color:var(--white); }
+.calendar-wrap .calendar { margin-right:20px; padding:20px 20px 43px; max-width:420px; width:100%; border-radius:20px; background-color:var(--white); }
 .calendar-wrap .calendar .btn-wrap { margin-bottom:20px; }
 .calendar-wrap .calendar .week th { padding:2px 0; width:50px; font-size:var(--font-18); font-weight:var(--w-bold); color:var(--title); text-align:center; }
 .calendar-wrap .calendar .week th.holy,
@@ -115,8 +115,9 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
 .calendar-wrap .calendar .date-month thead th { border-bottom:0; }
 .calendar-wrap .calendar .date-month tbody th, .calendar-wrap .calendar .date-month thead td, .calendar-wrap .calendar .date-month tbody td { padding:7px 0; border-bottom:0; }
 .calendar-wrap .calendar .days td.today { line-height:25px; text-decoration:underline; }
+.calendar-wrap .todo { width:100%; }
 
-.calendar-wrap .list { margin-top:10px; padding-right:30px; max-width:490px; width:100%; max-height:329px; overflow-y:scroll; }
+.calendar-wrap .list { margin-top:10px; padding-right:20px; max-width:490px; width:100%; max-height:329px; overflow-y:scroll; }
 .calendar-wrap .list::-webkit-scrollbar { width:10px; }
 .calendar-wrap .list::-webkit-scrollbar-track { background-color:var(--background2); }
 .calendar-wrap .list::-webkit-scrollbar-thumb { background-color:var(--border); }
@@ -156,6 +157,7 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
     .my-group + .my-group { margin-top:30px; }
     .donut-wrap { width:100%; }
     .donut-wrap .donut { justify-content:center; }
+    .calendar-wrap .list { max-width:none; }
 
 }
 
@@ -200,7 +202,7 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
 
     /* 마이페이지 */
     .calendar-wrap { flex-direction:column; }
-    .calendar-wrap .calendar { width:100%; }
+    .calendar-wrap .calendar { max-width:none; width:100%; }
     .calendar-wrap .todo { margin-top:30px; }
     .calendar-wrap .list { padding-right:20px; max-width:none; }
     .calendar-wrap .list .to-list { gap:20px; }

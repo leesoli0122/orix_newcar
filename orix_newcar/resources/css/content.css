@@ -223,4 +223,14 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
 
     /* 마이페이지 */
     .notice-wrap li .text { max-width:200px; font-size:var(--font-12); }
+    .donut-wrap { padding:20px 9px 40px; }
+    .my-group .btn-wrap .month-tit { font-size:var(--font-16); }
+    .donut-wrap .donut .chart-label { margin-left:20px; }
+    .btn.btn-text-ico.plus::after { vertical-align:top; }
+    .donut-wrap .donut .chart-label .tit { margin-right:10px; font-size:var(--font-12); }
+    .donut-wrap .donut .chart-label li .tit::before { margin-right:10px; }
+    .donut-wrap .donut .chart-label .num { font-size:var(--font-16); }
+
+    .calendar-wrap .calendar .week th { font-size:var(--font-12); }
+    .calendar-wrap .calendar .days td { font-size:var(--font-12); }
 }

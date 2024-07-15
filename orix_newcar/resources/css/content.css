@@ -136,6 +136,9 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
 .notice-wrap li .text { font-size:var(--font-16); line-height:19px; font-weight:var(--w-bold); color:var(--title); }
 .notice-wrap li .notice-tit-area + .text { margin-top:8px; }
 
+/*************************** 견적내기 **************************/
+.specifications-wrap .sfc-box .car-img .img.hd-01 { background:url("../images/car/hd_mb_001.png")no-repeat center; }
+
 /*************************** 미디어쿼리 **************************/
 @media screen and (max-width: 1200px) {
     /* 공통 */
@@ -143,9 +146,13 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
 
     .choose-wrap .choose-group .brand { flex-direction:column; }
     .choose-wrap .choose-group .domestic { max-width:none; border-right:0; border-bottom:1px solid var(--border); }
+
+    .contents-wrap .txt-list-wrap:not(.contents-wrap .txt-list-wrap.car-info, .contents-wrap .txt-list-wrap.estimate, .contents-wrap .choose-wrap .txt-list-wrap) { padding:0 20px; }
+
+    .txt-list-wrap.estimate { overflow-x:scroll; }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     ul.step.icon li { padding:48px 5px 0; }
     ul.step.icon li span { padding:20px 0 0; font-size:var(--font-12); }
     ul.step.icon li.car::after { background:url("../images/car_select.png")no-repeat 50%/36px; }
@@ -162,7 +169,7 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
     ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.png")no-repeat 50%/36px; }
     
     .label + .btn-wrap .btn.btn-text-ico { margin-top:0; }
-    .btn-wrap { justify-content:flex-start; padding-bottom:10px; }
+    .btn-wrap:not(.footer .btn-wrap) { justify-content:flex-start; padding-bottom:10px; }
     .btn.btn-text-ico { position:initial; margin-top: 10px;
     }
 
@@ -177,10 +184,19 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
     .contents-wrap .choose-wrap .choose-group .model-wrap::-webkit-scrollbar { width:10px; }
     .contents-wrap .choose-wrap .choose-group .model-wrap::-webkit-scrollbar-thumb { width:10px; background-color:var(--border); border-radius:2px; border-radius:2px; }
     .contents-wrap .choose-wrap .choose-group .model-wrap::-webkit-scrollbar-track { width:10px; background-color:var(--background2); border-radius:5px; }
-    .contents-wrap .choose-wrap .choose-group .model-wrap .model-group ul { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+    .contents-wrap .choose-wrap .choose-group .model-wrap .model-group ul { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
     .model-wrap .model { padding:10px 7px 10px; margin:0; max-width:143px; width:100%; }
     .model-wrap .model .car { width:129px; }
 
     .filter-btn { font-size:var(--font-14); }
     .filter-btn + .filter-btn { margin-left:10px; }
+}
+
+@media screen and (max-width: 400px) {
+    ul.step.icon { align-items:flex-start; }
+    ul.step.icon li { padding:30px 0 0; }
+    .choose-wrap .choose-group .brand ul { grid-template-columns:repeat(4,1fr); gap:2px; }
+    .filter-btn { padding:10px; }
+
+    .contents-wrap .choose-wrap .choose-group .model-wrap .model-group ul { grid-template-columns:repeat(2,1fr); }
 }

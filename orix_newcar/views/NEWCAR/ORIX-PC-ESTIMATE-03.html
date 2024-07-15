@@ -26,7 +26,7 @@
 		<div data-include-path="../INCLUDE/header.html"></div>
 
         <div id="container" class="sub-content">
-            <div class="contents-wrap">
+            <div class="contents-wrap estimate">
                 <section class="breadcrumb-wrap">
                     <ul>
                         <li class="home"><a href="javascript:void(0);">홈</a></li>
@@ -90,9 +90,10 @@
                 </section>
                 <section class="txt-list-wrap">
                     <!-- 차량선택 -->
-                    <div class="txt-detail-area form">
+                    <div class="txt-detail-area form mo" onclick="openPopup('estimate1')">
                         <div class="txt-detail-header">
                             <p class="tit">차량선택</p>
+                            <span class="yes">확인완료</span>
                         </div>
                         <ul class="txt-list form-wrap">
                             <li class="form-group">
@@ -155,9 +156,10 @@
                         </div>
                     </div>
                     <!-- 옵션선택 -->
-                    <div class="txt-detail-area form">
+                    <div class="txt-detail-area form mo" onclick="openPopup('estimate2')">
                         <div class="txt-detail-header">
                             <p class="tit">옵션선택</p>
+                            <span class="no">미확인</span>
                         </div>
                         <ul class="txt-list form-wrap">
                             <li class="check-buttons">
@@ -233,9 +235,10 @@
                         </div>
                     </div>
                     <!-- 지불내역 -->
-                    <div class="txt-detail-area form">
+                    <div class="txt-detail-area form  mo" onclick="openPopup('estimate3')">
                         <div class="txt-detail-header">
                             <p class="tit">지불내역</p>
+                            <span class="no">미확인</span>
                         </div>
                         <ul class="txt-list form-wrap result">
                             <li class="form-group">
@@ -330,9 +333,10 @@
                         </div>
                     </div>
                     <!-- 할인 선택(2023-11) -->
-                    <div class="txt-detail-area form cost">
+                    <div class="txt-detail-area form cost mo" onclick="openPopup('estimate4')">
                         <div class="txt-detail-header">
                             <p class="tit">할인 선택(2023-11)</p>
+                            <span class="no">미확인</span>
                         </div>
                         <ul class="txt-list form-wrap">
                             <li class="result-box">
@@ -394,9 +398,10 @@
                         </div>
                     </div>
                     <!-- 등록/부대비용 -->
-                    <div class="txt-detail-area form cost">
+                    <div class="txt-detail-area form cost mo" onclick="openPopup('estimate5')">
                         <div class="txt-detail-header">
                             <p class="tit">등록/부대비용</p>
+                            <span class="no">미확인</span>
                         </div>
                         <ul class="txt-list form-wrap result">
                             <li class="form-group">
@@ -485,9 +490,10 @@
                         </div>
                     </div>
                     <!-- 고객정보 -->
-                    <div class="txt-detail-area form cost">
+                    <div class="txt-detail-area form cost mo">
                         <div class="txt-detail-header">
                             <p class="tit">고객정보</p>
+                            <span class="no">미확인</span>
                         </div>
                         <ul class="txt-list form-wrap c-info">
                             <li class="form-group radio-buttons">
@@ -568,7 +574,7 @@
                         </ul>
                     </div>
                     <!-- 탁송정보 -->
-                    <div class="txt-detail-area">
+                    <div class="txt-detail-area mo">
                         <div class="table-type table-col form-wrap">
                             <table>
                                 <caption>신용조회 동의 완료 고객 선택 테이블</caption>
@@ -578,7 +584,10 @@
                                 </colgroup>
                                 <tbody>
                                     <tr>
-                                        <th scope="col" rowspan="2">탁송 정보</th>
+                                        <th scope="col" rowspan="2">
+                                            탁송 정보
+                                            <span class="no">미확인</span>
+                                        </th>
                                         <td class="tit">
                                             <div class="form-group radio-buttons">
                                                 <label for="radio-14" class="radio-button">
@@ -830,6 +839,83 @@
         })
     </script>
     <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
+    <div id="estimate1" class="layerpopup laypop-all on" style="display: block;">
+        <div class="content-wrap">
+            <div class="pop-header">
+                <h2 class="pop-title">차량 선택</h2>
+                <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+            </div>
+
+            <div class="ly-con-wrap ly-scroll-con" id="">
+                <div class="txt-list-wrap">
+                    <ul class="txt-list form-wrap">
+                        <li class="form-group">
+                            <span class="tit">브랜드</span>
+                            <div class="select-wrap">
+                                <button class="btn-select pop img hd">현대</button>
+                            </div>
+                        </li>
+                        <li class="form-group">
+                            <span class="tit">모델</span>
+                            <div class="select-wrap">
+                                <button class="btn-select pop">디 올뉴그랜저</button>
+                            </div>
+                        </li>
+                        <li class="form-group">
+                            <span class="tit">라인업</span>
+                            <div class="select-wrap">
+                                <button class="btn-select pop">디 올뉴그랜저</button>
+                                <p>(개소세 환원)</p>
+                            </div>
+                        </li>
+                        <li class="form-group">
+                            <span class="tit">트림</span>
+                            <div class="select-wrap">
+                                <button class="btn-select pop">2WD</button>
+                                <p class="num">55,480,000 원</p>
+                            </div>
+                        </li>
+                        <li class="form-group">
+                            <span class="tit">만기</span>
+                            <div class="select-wrap">
+                                <button class="btn-select pop">선택형</button>
+                            </div>
+                        </li>
+                        <li class="form-group">
+                            <span class="tit">약정거리</span>
+                            <div class="select-wrap">
+                                <button class="btn-select pop">2만 km</button>
+                                <p class="num">0 원</p>
+                            </div>
+                        </li>
+                        <li class="form-group">
+                            <span class="tit">외장</span>
+                            <div class="select-wrap">
+                                <button class="btn-select pop">어비스 블랙 펄</button>
+                                <p class="num">0 원</p>
+                            </div>
+                        </li>
+                        <li class="form-group">
+                            <span class="tit">내장</span>
+                            <div class="select-wrap">
+                                <button class="btn-select pop">블랙</button>
+                                <p class="num">0 원</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="txt-detail-footer">
+                <p class="tit">기본가격(+색상)</p>
+                <span class="txt"><span class="num">55,480,00</span> 원</span>
+            </div>
+        </div>
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <a href="#none" class="btn btn-primary confirm">다음(옵션선택)</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 

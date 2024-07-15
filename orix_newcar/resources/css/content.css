@@ -178,7 +178,7 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
     ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.png")no-repeat 50%/36px; }
     
     .label + .btn-wrap .btn.btn-text-ico { margin-top:0; }
-    .btn-wrap:not(.footer .btn-wrap, .donut-wrap .btn-wrap, .donut-wrap + .label + .btn-wrap, .calendar .btn-wrap, .calendar-wrap + .label + .btn-wrap) { justify-content:flex-start; padding-bottom:10px; }
+    .btn-wrap:not(.footer .btn-wrap, .donut-wrap .btn-wrap, .donut-wrap + .label + .btn-wrap, .calendar .btn-wrap, .calendar-wrap + .label + .btn-wrap, .todo .btn-wrap) { justify-content:flex-start; padding-bottom:10px; }
     .btn.btn-text-ico:not(.btn-wrap .btn.btn-text-ico.plus) { position:initial; margin-top: 10px;
     }
 
@@ -201,6 +201,8 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
     .filter-btn + .filter-btn { margin-left:10px; }
 
     /* 마이페이지 */
+    .quick-menu li { padding-top:64px; font-size:var(--font-12); }
+
     .calendar-wrap { flex-direction:column; }
     .calendar-wrap .calendar { max-width:none; width:100%; }
     .calendar-wrap .todo { margin-top:30px; }

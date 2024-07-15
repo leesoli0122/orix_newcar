@@ -365,12 +365,12 @@ th .info-txt-wrap::before,
 /**********************************팝업********************************/
 /** 레이어 풀팝업 **/
 .layerpopup.laypop-all {position:fixed; top:0;left:0;right:0;bottom:0;width:100%;border-top:none;background:var(--white);z-index:21;}
-.layerpopup.laypop-all .content-wrap {z-index:20; padding:20px; margin-top:50px; /*padding-bottom:150px;*/ background:#fff;}
+.layerpopup.laypop-all .content-wrap {z-index:20; margin-top:50px; /*padding-bottom:150px;*/ background:#fff;}
 .layerpopup.laypop-all .pop-header {position:fixed; top:0; left:0; right:0;height:50px; padding:0 20px; background:#fff;line-height:50px;z-index:5;}
 .layerpopup.laypop-all .pop-header:has(+.pop-con-wrap>.default-wrap>.txt-list-wrap:first-child) { border:0; }
 .layerpopup.laypop-all .pop-header .pop-title { font-size:var(--font-18); font-weight:var(--w-bold); }
 .layerpopup.laypop-all .btn-layer-close{position:fixed; top:5px;right:12px;width:40px;height:40px; background: url("../images/ic_btn_close.png") no-repeat;text-indent:-9999px;}
-.layerpopup.laypop-all .ly-con-wrap { padding-bottom:80px; padding-right:20px; }
+/* .layerpopup.laypop-all .ly-con-wrap { padding-bottom:80px; } */
 .layerpopup .btn-wrap.btn-primary .btn-layer-close { position:static; width:100%; padding:15px 0; height:49px; background-image: none; background-color: #003F86; text-indent:inherit; }
 .layerpopup.laypop-all .ly-con-wrap .btn-cont-wrap { margin-top:48px; }
 .layerpopup.laypop-all .ly-con-wrap .btn-cont-wrap.center { margin-top:30px; }

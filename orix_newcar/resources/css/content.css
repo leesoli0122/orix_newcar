@@ -143,7 +143,8 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
 .specifications-wrap .sfc-box .car-img .img.hd-01 { background:url("../images/car/hd_mb_001.png")no-repeat center; }
 
 /****** 리스트 footer ******/
-.txt-list-wrap .txt-detail-area .txt-detail-footer:not(.txt-detail-footer:has(.footer-group)) { display:flex; gap:5px; align-items:center; justify-content:space-between; padding:20px; font-size:var(--font-18); font-weight:var(--w-bold); color:var(--white); line-height:28px; background-color:#75757580; }
+.txt-list-wrap .txt-detail-area .txt-detail-footer:not(.txt-detail-footer:has(.footer-group)),
+.layerpopup.laypop-all .txt-detail-footer { display:flex; gap:5px; align-items:center; justify-content:space-between; padding:20px; font-size:var(--font-18); font-weight:var(--w-bold); color:var(--white); line-height:28px; background-color:#75757580; }
 .txt-list-wrap .txt-detail-area .txt-detail-footer .footer-group.key { padding:20px; background-color:var(--normal); color:var(--white); font-weight:var(--w-bold); }
 .txt-list-wrap .txt-detail-area .txt-detail-footer .footer-group { padding:20px; display:flex; align-items:center; justify-content:space-between; color:var(--white); font-weight:var(--w-bold); background-color:#75757580; }
 .txt-list-wrap .txt-detail-area .txt-detail-footer .txt { font-size:var(--font-18); }
@@ -188,13 +189,14 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
 
     /********************* 팝업-contents *********************/
     .ly-con-wrap .txt-list-wrap .txt-list.form-wrap, .ly-con-wrap .txt-list-wrap .txt-detail-footer, .ly-con-wrap .txt-list-wrap .txt-detail-area .txt-detail-footer:not(.txt-detail-footer:has(.footer-group)) { display:block; }
+    .ly-con-wrap .txt-list-wrap .txt-list.form-wrap { height:100%; overflow-y:unset; }
     .ly-con-wrap .select-wrap .btn-select.img { padding: 10px 9px 10px 48px; }
-    .ly-con-wrap .txt-list.form-wrap li { padding:20px 0; border-bottom:1px solid var(--border); }
+    .ly-con-wrap .txt-list.form-wrap li { padding:20px; border-bottom:1px solid var(--border); }
     .ly-con-wrap .txt-list.form-wrap .form-group + .form-group { margin-top:0; }
     .ly-con-wrap .txt-list li { margin:0; }
 
     /** _스크롤 컨텐츠 레이어 **/
-    .laypop-all .ly-scroll-con { overflow:hidden; overflow-y:auto; max-height:540px; }
+    .laypop-all .ly-scroll-con { overflow:hidden; overflow-y:auto; max-height:734px; }
     .laypop-all.plus .pop-header { padding:10px 0 15px 0; }
     /* .laypop-all .ly-scroll-con.min-height {   } */
     .laypop-all .default-wrap {  padding:0 20px 10px; }
@@ -249,7 +251,7 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
     .specifications-wrap .sfc-box .car-img { padding:30px 28px; text-align:center; }
     .specifications-wrap .sfc-box .car-img .img { display:block;        width:auto; }
     .specifications-wrap .sfc-box + .btn-wrap { margin-top:0; margin-bottom:20px; }
-    .txt-list-wrap.estimate { display:flex; flex-direction:column; align-items:center; }
+    .txt-list-wrap.estimate { display:flex; flex-direction:column; align-items:center; overflow-x:unset; }
 
     /* 마이페이지 */
     .quick-menu li { padding-top:64px; font-size:var(--font-12); }
@@ -276,6 +278,9 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
 
     .contents-wrap .choose-wrap .choose-group .model-wrap .model-group ul { grid-template-columns:repeat(2,1fr); }
 
+    /* 견적내기 */
+    .txt-list-wrap.estimate .txt-detail-area { width:100%; }
+
     /* 마이페이지 */
     .notice-wrap li .text { max-width:200px; font-size:var(--font-12); }
     .donut-wrap { padding:20px 9px 40px; }
@@ -287,4 +292,9 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
 
     .calendar-wrap .calendar .week th { font-size:var(--font-12); }
     .calendar-wrap .calendar .days td { font-size:var(--font-12); }
+
+    /* 팝업 */
+    .layerpopup.laypop-all .ly-con-wrap .select-wrap .btn-select { width:140px; }
+    .layerpopup.laypop-all .ly-con-wrap .select-wrap p { text-align:right; }
+    .layerpopup.laypop-all .txt-detail-area.form .txt-list.form-wrap li.check-buttons .description { width:auto; }
 }

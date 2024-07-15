@@ -136,16 +136,12 @@ tbody td { font-weight:300; }
 .txt-detail-area .txt-detail-header .delete:hover,
 .my-group .btn-wrap .btn.delete:hover { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23757575' d='M0 0h13.4v18.07H0z' data-name='사각형 21871'/%3E%3C/clipPath%3E%3C/defs%3E%3Cpath fill='none' d='M0 0h24v24H0z' data-name='사각형 21845' opacity='.1'/%3E%3Cpath fill='none' d='M5 0h14a5 5 0 0 1 5 5v14a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5Z' data-name='패스 52683'/%3E%3Cg data-name='그룹 44708'%3E%3Cg fill='%23056ED6' clip-path='url(%23a)' data-name='그룹 44707' transform='translate(5.3 2.97)'%3E%3Cpath d='M10.16 18.06H3.23A2.94 2.94 0 0 1 .3 15.13V6.55a.68.68 0 1 1 1.36 0v8.58a1.58 1.58 0 0 0 1.57 1.58h6.93a1.58 1.58 0 0 0 1.58-1.58V6.55a.68.68 0 1 1 1.35 0v8.58a2.94 2.94 0 0 1-2.93 2.93' data-name='패스 52684'/%3E%3Cpath d='M12.72 4.21H.68a.68.68 0 0 1 0-1.35h12.04a.68.68 0 1 1 0 1.36' data-name='패스 52685'/%3E%3Cpath d='M8.5 1.35H4.9A.68.68 0 0 1 4.9 0h3.6a.68.68 0 1 1 0 1.35' data-name='패스 52686'/%3E%3Cpath d='M4.9 14.15a.68.68 0 0 1-.69-.68V8.66a.68.68 0 0 1 1.36 0v4.81a.68.68 0 0 1-.68.68' data-name='패스 52687'/%3E%3Cpath d='M8.5 14.15a.68.68 0 0 1-.67-.68V8.66a.68.68 0 0 1 1.35 0v4.81a.68.68 0 0 1-.67.68' data-name='패스 52688'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
 
-/****** 리스트 footer ******/
-.txt-list-wrap .txt-detail-area .txt-detail-footer:not(.txt-detail-footer:has(.footer-group)) { display:flex; gap:5px; align-items:center; justify-content:space-between; padding:20px; font-size:var(--font-18); font-weight:var(--w-bold); color:var(--white); line-height:28px; background-color:#75757580; }
-.txt-list-wrap .txt-detail-area .txt-detail-footer .footer-group.key { padding:20px; background-color:var(--normal); color:var(--white); font-weight:var(--w-bold); }
-.txt-list-wrap .txt-detail-area .txt-detail-footer .footer-group { padding:20px; display:flex; align-items:center; justify-content:space-between; color:var(--white); font-weight:var(--w-bold); background-color:#75757580; }
-.txt-list-wrap .txt-detail-area .txt-detail-footer .txt { font-size:var(--font-18); }
-
 .txt-detail-header.no-line { border-bottom:none; }
 .txt-detail-header + .txt-detail-header { margin-top:10px; }
 
 /****** 리스트 기본 txt-list ******/
+.txt-list-wrap .txt-detail-area.mo .yes,
+.txt-list-wrap .txt-detail-area.mo .no { display:none; }
 .txt-list:not(.txt-list.form-wrap){ padding:20px; }
 .txt-list li { display:flex; align-items:center; justify-content:space-between; margin:20px 0; gap:20px; }
 .txt-list li:first-child { margin-top:0; }
@@ -177,7 +173,7 @@ tbody td { font-weight:300; }
 .specifications-wrap { display:block; margin:40px auto 0; max-width:900px; width:100%; }
 .specifications-wrap .sfc-box { display:flex; }
 .specifications-wrap .sfc-box .car-img { display:inline-block; padding:58px 40px; background-color:var(--normal); color:var(--white); font-weight:var(--w-bold); }
-.specifications-wrap .sfc-box .car-img .img { display:inline-block; width:320px; max-height:151px; height:100%; margin-bottom:10px; }
+.specifications-wrap .sfc-box .car-img .img { display:inline-block; width:320px; height:151px; margin-bottom:10px; }
 .specifications-wrap .sfc-box .car-info { display:inline-block; width:100%; }
 .specifications-wrap .sfc-box + .btn-wrap { margin-top:20px; }
 

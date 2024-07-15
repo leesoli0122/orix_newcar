@@ -297,4 +297,8 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
     .layerpopup.laypop-all .ly-con-wrap .select-wrap .btn-select { width:140px; }
     .layerpopup.laypop-all .ly-con-wrap .select-wrap p { text-align:right; }
     .layerpopup.laypop-all .txt-detail-area.form .txt-list.form-wrap li.check-buttons .description { width:auto; }
+    .layerpopup.laypop-all  .txt-detail-area.form .txt-list.form-wrap li .amount { width:140px; }
+
+    .txt-list-wrap.estimate + .bottom-btn-wrap .btn-wrap { display:block; width:100%; }
+    .txt-list-wrap.estimate + .bottom-btn-wrap .btn-wrap button { min-width:0; width:100%; }
 }

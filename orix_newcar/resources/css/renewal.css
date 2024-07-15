@@ -433,8 +433,7 @@ ul.step.icon li.pre span { color:#7CB3E4; }
 .urgency-wrap::before { content:""; position:absolute; width:24px; height:24px; left:20px; top:50%; transform:translateY(-50%); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23d32344' d='M0 0h16.67v20H0z' data-name='사각형 21860'/%3E%3C/clipPath%3E%3C/defs%3E%3Cpath fill='none' d='M0 0h24v24H0z' data-name='사각형 21845'/%3E%3Cg data-name='그룹 44690'%3E%3Cg clip-path='url(%23a)' data-name='그룹 44689' transform='translate(3.66 2)'%3E%3Cpath fill='%23ffaab9' d='M11.25 17.09a2.91 2.91 0 0 1-5.83 0Z' data-name='패스 52666'/%3E%3Cpath fill='%23e33354' d='M14.91 11.85V8.33a6.6 6.6 0 0 0-5.17-6.42v-.44A1.45 1.45 0 0 0 8.48.01a1.4 1.4 0 0 0-1.55 1.4v.5a6.6 6.6 0 0 0-5.17 6.42v3.52a6.54 6.54 0 0 1-1.63 4.32.56.56 0 0 0 .43.92h15.55a.56.56 0 0 0 .43-.92 6.54 6.54 0 0 1-1.63-4.32' data-name='패스 52667'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
 
 @media screen and (max-width: 1200px){
-  .contents-wrap > section:not(.urgency-wrap, .breadcrumb-wrap) { padding:0 20px; }
-
+  .contents-wrap { padding:0 20px; }
   .contents-wrap .my-cont-wrap { flex-direction:column; }
 
 }

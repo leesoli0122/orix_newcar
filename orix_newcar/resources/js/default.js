@@ -202,80 +202,79 @@ $(document).ready(function() {
   
   }
   
-  // popup
   function openPopup(id) {
     var _target = $('#' + id);
-    currentTop = $(window).scrollTop();
+    var currentTop = $(window).scrollTop();
 
-    // 팝업이 열릴 때 body의 스크롤을 막습니다.
-    $('body').css('overflow', 'hidden');
+    // 모바일 기기인 경우에만 실행
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+        // 팝업이 열릴 때 body의 스크롤을 막습니다.
+        $('body').css('overflow', 'hidden');
 
-    //_target.fadeIn(300);
-    layerFunc(_target);
-    _target.removeClass('close');
-    _target.addClass('on').show();
-    _target.focus();
-    _target.find('.btn-layer-close, .btn-close, .confirm').on('click', function () {
-        closePopupUp(id);
-        // 팝업이 닫힐 때 body의 스크롤을 허용합니다.
-        $('body').css('overflow', '');
-        $(window).scrollTop(currentTop);
-        _target.removeClass('on');
-    });
-
-    // data-focus가 btn-layer-close인 경우 레이어 팝업 닫기
-    if (_target.attr('data-focus') === 'btn-layer-close') {
-        _target.find('[data-focus="btn-layer-close"]').on('click', function () {
-            _target.hide(); // 레이어 감추기
+        layerFunc(_target);
+        _target.removeClass('close');
+        _target.addClass('on').show();
+        _target.focus();
+        _target.find('.btn-layer-close, .btn-close, .confirm').on('click', function () {
             closePopupUp(id);
             // 팝업이 닫힐 때 body의 스크롤을 허용합니다.
             $('body').css('overflow', '');
             $(window).scrollTop(currentTop);
             _target.removeClass('on');
         });
-    }
-  
-    if (_target.has('.ly-select-list').length > 0) {
-        _target.find('.ly-select-list > li > button').on('click', function () {
-            _target.hide(); // 레이어 감추기
-            closePopupUp(id);
-            // 팝업이 닫힐 때 body의 스크롤을 허용합니다.
-            $('body').css('overflow', '');
-            $(window).scrollTop(currentTop);
-            _target.removeClass('show');
-        });
-    }
-  
-    /** 테이블 팝업 **/
-    if (_target.has('.ly-select > .table-type.check').length > 0) {
-        _target.find('.ly-select .table-type.check tbody tr').on('click', function () {
-            _target.hide(); // 레이어 감추기
-            closePopupUp(id);
-            // 팝업이 닫힐 때 body의 스크롤을 허용합니다.
-            $('body').css('overflow', '');
-            $(window).scrollTop(currentTop);
-            _target.removeClass('show');
-            e.preventDefault();
-        });
+
+        // data-focus가 btn-layer-close인 경우 레이어 팝업 닫기
+        if (_target.attr('data-focus') === 'btn-layer-close') {
+            _target.find('[data-focus="btn-layer-close"]').on('click', function () {
+                _target.hide(); // 레이어 감추기
+                closePopupUp(id);
+                // 팝업이 닫힐 때 body의 스크롤을 허용합니다.
+                $('body').css('overflow', '');
+                $(window).scrollTop(currentTop);
+                _target.removeClass('on');
+            });
+        }
+
+        if (_target.has('.ly-select-list').length > 0) {
+            _target.find('.ly-select-list > li > button').on('click', function () {
+                _target.hide(); // 레이어 감추기
+                closePopupUp(id);
+                // 팝업이 닫힐 때 body의 스크롤을 허용합니다.
+                $('body').css('overflow', '');
+                $(window).scrollTop(currentTop);
+                _target.removeClass('show');
+            });
+        }
+
+        /** 테이블 팝업 **/
+        if (_target.has('.ly-select > .table-type.check').length > 0) {
+            _target.find('.ly-select .table-type.check tbody tr').on('click', function () {
+                _target.hide(); // 레이어 감추기
+                closePopupUp(id);
+                // 팝업이 닫힐 때 body의 스크롤을 허용합니다.
+                $('body').css('overflow', '');
+                $(window).scrollTop(currentTop);
+                _target.removeClass('show');
+                e.preventDefault();
+            });
+        }
     }
 }
 
-
-  
-  function closePopup(id) {
+function closePopup(id) {
     var _target = $('#' + id);
     deleteBlock();
     _target.fadeOut(600);
     _target.removeClass('on');
     $(window).scrollTop(currentTop);
-  }
-  
-  function closePopupUp(id) {
+}
+
+function closePopupUp(id) {
     deleteBlock();
-    //ADD eunji 2020-10-05
+    // ADD eunji 2020-10-05
     $('#' + id).scrollTop(0);
     $('#' + id).fadeOut(600);
-  }
+}
   
   /**
   * 중앙정렬 위치

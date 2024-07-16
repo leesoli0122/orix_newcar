@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords">
+    <meta name="description" content="ORIX Capital description">
+
+	<meta property="og:locale" content="ko_KR" />
+	<meta property="og:type" content="website" />
+
+	<link href="../../resources/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/content.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/renewal.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../../resources/js/jquery.js"></script>
+    <script type="text/javascript" src="../../resources/js/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
+
+</head>
+<style>
+    .contents.guide { padding:15px; }
+    .guide .code h4 { margin-bottom:5px; }
+    /* color css */
+    .guide .code .guide-clr { margin-bottom:20px; padding:20px; border:1px solid #33333323; border-radius:15px; }
+    .guide-clr > li { display:inline-block; margin:10px; }
+    .guide-clr > li > div,
+    .guide-clr > li > p { margin:0 auto; padding:5px; text-align:center; }
+    .guide-clr > li > div { width:70PX; height:70px; border:1px solid #e6e6e6; border-radius:10px; }
+    .btn-wrap > span{  display:inline; font-weight:bold; }
+    .btn-wrap > button,
+    .btn-wrap > a {  margin-bottom:10px; }
+</style>
+<body>
+    <div class="wrap">
+        <div id="container" class="sub-content">
+            <div class="contents-wrap">
+                <div class="contents guide">
+					<div class="code">
+						<section>
+                            <h4>기본</h4>
+							<div class="guide-clr">
+								<section class="txt-list-wrap">
+                                    <!-- 차량선택 -->
+                                    <div class="txt-detail-area form mo" onclick="openPopup('estimate1')">
+                                        <div class="txt-detail-header">
+                                            <p class="tit">차량선택</p>
+                                            <span class="yes">확인완료</span>
+                                        </div>
+                                        <ul class="txt-list form-wrap">
+                                            <li class="form-group">
+                                                <span class="tit">브랜드</span>
+                                                <div class="select-wrap">
+                                                    <button class="btn-select pop img hd">현대</button>
+                                                </div>
+                                            </li>
+                                            <li class="form-group">
+                                                <span class="tit">모델</span>
+                                                <div class="select-wrap">
+                                                    <button class="btn-select pop">디 올뉴그랜저</button>
+                                                </div>
+                                            </li>
+                                            <li class="form-group">
+                                                <span class="tit">라인업</span>
+                                                <div class="select-wrap">
+                                                    <button class="btn-select pop">디 올뉴그랜저</button>
+                                                    <p>(개소세 환원)</p>
+                                                </div>
+                                            </li>
+                                            <li class="form-group">
+                                                <span class="tit">트림</span>
+                                                <div class="select-wrap">
+                                                    <button class="btn-select pop">2WD</button>
+                                                    <p class="num">55,480,000 원</p>
+                                                </div>
+                                            </li>
+                                            <li class="form-group">
+                                                <span class="tit">만기</span>
+                                                <div class="select-wrap">
+                                                    <button class="btn-select pop">선택형</button>
+                                                </div>
+                                            </li>
+                                            <li class="form-group">
+                                                <span class="tit">약정거리</span>
+                                                <div class="select-wrap">
+                                                    <button class="btn-select pop">2만 km</button>
+                                                    <p class="num">0 원</p>
+                                                </div>
+                                            </li>
+                                            <li class="form-group">
+                                                <span class="tit">외장</span>
+                                                <div class="select-wrap">
+                                                    <button class="btn-select pop">어비스 블랙 펄</button>
+                                                    <p class="num">0 원</p>
+                                                </div>
+                                            </li>
+                                            <li class="form-group">
+                                                <span class="tit">내장</span>
+                                                <div class="select-wrap">
+                                                    <button class="btn-select pop">블랙</button>
+                                                    <p class="num">0 원</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="txt-detail-footer">
+                                            <p class="tit">기본가격(+색상)</p>
+                                            <span class="txt"><span class="num">55,480,00</span> 원</span>
+                                        </div>
+                                    </div>
+                                </section>
+							</div>
+                            <h4>check-button 있을 때
+                            </h4>
+                            <div class="guide-clr">
+                                <div class="txt-list-wrap">
+                                    <!-- 옵션선택 -->
+                                    <div class="txt-detail-area form mo" onclick="openPopup('estimate2')">
+                                        <div class="txt-detail-header">
+                                            <p class="tit">옵션선택</p>
+                                            <span class="no">미확인</span>
+                                        </div>
+                                        <ul class="txt-list form-wrap">
+                                            <li class="check-buttons">
+                                                <div class="check-top">
+                                                    <input type="checkbox" id="check01" name="terms">
+                                                    <label for="check01" class="check-button tit">
+                                                        <span class="text">파노라마 선루프</span>
+                                                    </label>
+                                                    <span class="txt"><span class="num">5,040,000</span>원</span>
+                                                </div>
+                                                <p class="description">헤드업 디스플레이, 하이테크 패키지, 드라이빙 어시스턴츠 패키지, 2열 컴포트 패키지</p>
+                                            </li>
+                                            <li class="check-buttons">
+                                                <div class="check-top">
+                                                    <input type="checkbox" id="check02" name="terms">
+                                                    <label for="check02" class="check-button tit">
+                                                        <span class="text">헤드업 디스플레이</span>
+                                                    </label>
+                                                    <span class="txt"><span class="num">1,880,000</span>원</span>
+                                                </div>
+                                                <p class="description">운전석&동승석 에르고 모션 시트(18방향, 쿠션 익스텐션, 볼스터 전동 조절 적둉, 스트레칭 모드 포함), 고스트 도어 들로징, 2열 컴포트 패키지</p>
+                                            </li>
+                                            <li class="check-buttons">
+                                                <div class="check-top">
+                                                    <input type="checkbox" id="check03" name="terms">
+                                                    <label for="check03" class="check-button tit">
+                                                        <span class="text">플래티넘</span>
+                                                    </label>
+                                                    <span class="txt"><span class="num">1,880,000</span>원</span>
+                                                </div>
+                                                <p class="description">운전석&동승석 에르고 모션 시트(18방향, 쿠션 익스텐션, 볼스터 전동 조절 적둉, 스트레칭 모드 포함), 고스트 도어 들로징, 2열 컴포트 패키지</p>
+                                            </li>
+                                            <li class="check-buttons">
+                                                <div class="check-top">
+                                                    <input type="checkbox" id="check04" name="terms">
+                                                    <label for="check04" class="check-button tit">
+                                                        <span class="text">파트 어시스트</span>
+                                                    </label>
+                                                    <span class="txt"><span class="num">1,880,000</span>원</span>
+                                                </div>
+                                                <p class="description">운전석&동승석 에르고 모션 시트(18방향, 쿠션 익스텐션, 볼스터 전동 조절 적둉, 스트레칭 모드 포함</p>
+                                            </li>
+                                            <li class="plus-box">
+                                                <ul class="form-wrap">
+                                                    <li class="form-group">
+                                                        <span class="tit">구분</span>
+                                                        <div class="select-wrap">
+                                                            <button class="btn-select">옵션에 표시</button>
+                                                        </div>
+                                                    </li>
+                                                    <li class="form-group">
+                                                        <span class="tit">명칭</span>
+                                                        <div class="amount">
+                                                            <input id="" type="amount" class="form-control" placeholder="옵션명">
+                                                        </div>
+                                                    </li>
+                                                    <li class="form-group">
+                                                        <span class="tit">구분</span>
+                                                        <div class="amount">
+                                                            <input id="" type="amount" class="form-control amount-num" placeholder="0" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                                            <span class="amount-txt">원</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="btn-wrap">
+                                                    <button class="btn btn-primary">적용</button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="txt-detail-footer">
+                                            <p class="tit">옵션 합계 (7)</p>
+                                            <span class="txt"><span class="num">5,840,000</span> 원</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>footer 두개일 때</h4>
+                            <div class="guide-clr">
+                                <div class="txt-list-wrap">
+                                    <!-- 등록/부대비용 -->
+                                    <div class="txt-detail-area form cost mo" onclick="openPopup('estimate5')">
+                                        <div class="txt-detail-header">
+                                            <p class="tit">등록/부대비용</p>
+                                            <span class="no">미확인</span>
+                                        </div>
+                                        <ul class="txt-list form-wrap result">
+                                            <li class="form-group">
+                                                <span class="tit">지역</span>
+                                                <div class="select-wrap">
+                                                    <button class="btn-select">서울</button>
+                                                    <div class="select-list">
+                                                        <ul>
+                                                            <li><button type="button">서울</button></li>
+                                                            <li><button type="button">경기도</button></li>
+                                                            <li><button type="button">강원도</button></li>
+                                                            <li><button type="button">경상남도</button></li>
+                                                            <li><button type="button">전라남도</button></li>
+                                                            <li><button type="button">전라북도</button></li>
+                                                            <li><button type="button">충청남도</button></li>
+                                                            <li><button type="button">충청북도</button></li>
+                                                            <li><button type="button">제주도</button></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="form-group">
+                                                <span class="tit">취득세</span>
+                                                <span class="txt"><span>(7%) 4,225,450</span>원</span>
+                                            </li>
+                                            <li class="form-group radio-buttons">
+                                                <span class="tit">채권</span>
+                                                <div class="radio-group">
+                                                    <label for="radio-5" class="radio-button">
+                                                        <input type="radio" id="radio-5" name="terms3">
+                                                        <span class="custom-radio"></span>
+                                                        <span class="text">매입</span>
+                                                    </label>
+                                                    <span class="num">(20%) 12,075,000 원</span>
+                                                </div>
+                                                <div class="radio-group">
+                                                    <label for="radio-6" class="radio-button">
+                                                        <input type="radio" id="radio-6" name="terms3">
+                                                        <span class="custom-radio"></span>
+                                                        <span class="text">할인</span>
+                                                    </label>
+                                                    <div class="dp-inb">
+                                                        <div class="amount w140">
+                                                            <input id="" type="amount" class="form-control amount-num" placeholder="15" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                                            <span class="amount-txt">%</span>
+                                                        </div>
+                                                        <span class="num">1,811,250 원</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="form-group">
+                                                <span class="tit">기타</span>
+                                                <div class="select-wrap">
+                                                    <div class="select-group">
+                                                        <span class="tit">인지대/번호판/대행료</span>
+                                                        <div class="amount w140">
+                                                            <input id="" type="amount" class="form-control amount-num" placeholder="52,000" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                                            <span class="amount-txt">원</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="select-group">
+                                                        <span class="tit">의무보험료</span>
+                                                        <div class="amount w140">
+                                                            <input id="" type="amount" class="form-control amount-num" placeholder="1,900" inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                                            <span class="amount-txt">원</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="form-group">
+                                                <span class="tit">경비</span>
+                                                <div class="select-wrap">
+                                                    <button class="btn-select pop">Self(자가경비)</button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="txt-detail-footer">
+                                            <div class="footer-group">
+                                                <p class="tit">등록 합계</p>
+                                                <span class="txt"><span>0</span> 원</span>
+                                            </div>
+                                            <div class="footer-group key">
+                                                <p class="tit">총 소요비용</p>
+                                                <span class="txt"><span>72,490,600</span>원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>테이블-col</h4>
+                            <div class="guide-clr">
+                                <div class="txt-list-wrap">
+                                    <!-- 탁송정보 -->
+                                    <div class="txt-detail-area mo" onclick="openPopup('estimate7')">
+                                        <div class="table-type table-col form-wrap">
+                                            <table>
+                                                <caption>신용조회 동의 완료 고객 선택 테이블</caption>
+                                                <colgroup>
+                                                    <col width="20%">
+                                                    <col width="*">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="col" rowspan="2">
+                                                            탁송 정보
+                                                            <span class="no">미확인</span>
+                                                        </th>
+                                                        <td class="tit">
+                                                            <div class="form-group radio-buttons">
+                                                                <label for="radio-14" class="radio-button">
+                                                                    <input type="radio" id="radio-14" name="terms7">
+                                                                    <span class="custom-radio"></span>
+                                                                    <span class="text">배송</span>
+                                                                </label>
+                                                                <label for="radio-15" class="radio-button">
+                                                                    <input type="radio" id="radio-15" name="terms7">
+                                                                    <span class="custom-radio"></span>
+                                                                    <span class="text">본인출고</span>
+                                                                </label>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tit">
+                                                            <ul>
+                                                                <li class="form-group">
+                                                                    <div class="select-wrap">
+                                                                        <button class="btn-select pop w140">시/도</button>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="form-group">
+                                                                    <div class="select-wrap">
+                                                                        <button class="btn-select pop w140">시/군/구</button>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="form-group">
+                                                                    <div class="select-wrap">
+                                                                        <button class="btn-select pop w140">출고장</button>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+						</section>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
+	<script>
+        $(function(){
+            $('div[data-include-path]').each(function(){
+                var path = $(this).attr('data-include-path');
+                $(this).load(path,function(response,status,xhr){
+                    if(status == 'error'){
+                        var msg = 'Sory but there was an error:';
+                        $(this).html(msg + xhr.status + '' + xhr.statusText);
+                    }
+                })
+            })
+        })
+    </script>
+    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
+</body>
+</html>
+

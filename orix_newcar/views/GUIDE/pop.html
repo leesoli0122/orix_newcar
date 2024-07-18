@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords">
+    <meta name="description" content="ORIX Capital description">
+
+	<meta property="og:locale" content="ko_KR" />
+	<meta property="og:type" content="website" />
+
+	<link href="../../resources/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/renewal.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/content.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../../resources/js/jquery.js"></script>
+    <script type="text/javascript" src="../../resources/js/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
+
+
+</head>
+<style>
+    .contents.guide { padding:15px; }
+    .guide .code h4 { margin-bottom:5px; }
+    /* color css */
+    .guide .code .border { margin-bottom:20px; padding:20px; border:1px solid #33333323; border-radius:15px; }
+    .btn-wrap > span{  display:inline; font-weight:bold; }
+    .btn-wrap > button,
+    .btn-wrap > a {  margin-bottom:10px; }
+    .flex { display:flex; align-items: center; }
+    .onclick { padding:10px 0; color:#ffffff; text-align:center; background-color:#0F3862; border-radius:20px; cursor:pointer; }
+</style>
+<body>
+    <div class="wrap">
+        <div id="container" class="sub-content">
+            <div class="contents-wrap">
+                <div class="contents guide">
+					<div class="code">
+						<section>
+                            <h4>모바일 팝업(특정 id값만 열림-pc에서는 안 열림)</h4>
+							<div class="border">
+								<div class="onclick" onclick="openPopup('estimate1')">풀팝업</div>
+							</div>
+                            <h4>pc 팝업</h4>
+							<div class="border">
+								<div class="onclick" onclick="openPopup('select-arr1')">풀팝업</div>
+							</div>
+						</section>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
+	<script>
+        $(function(){
+            $('div[data-include-path]').each(function(){
+                var path = $(this).attr('data-include-path');
+                $(this).load(path,function(response,status,xhr){
+                    if(status == 'error'){
+                        var msg = 'Sory but there was an error:';
+                        $(this).html(msg + xhr.status + '' + xhr.statusText);
+                    }
+                })
+            })
+        })
+    </script>
+    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
+
+    <!-- 차량선택 -->
+    <div id="estimate1" class="layerpopup laypop-all" style="display:none;">
+        <div class="content-wrap txt-detail-area form">
+            <div class="pop-header">
+                <h2 class="pop-title">차량 선택</h2>
+                <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+            </div>
+
+            <div class="ly-con-wrap ly-scroll-con" id="">
+                <div class="txt-list-wrap">
+                    <ul class="txt-list form-wrap">
+                        <li class="form-group">
+                            <span class="tit">브랜드</span>
+                            <div class="select-wrap">
+                                <button class="btn-select pop img hd">현대</button>
+                            </div>
+                        </li>
+                        <li class="form-group">
+                            <span class="tit">모델</span>
+                            <div class="select-wrap">
+                                <button class="btn-select pop">디 올뉴그랜저</button>
+                            </div>
+                        </li>
+                        <li class="form-group">
+                            <span class="tit">라인업</span>
+                            <div class="select-wrap">
+                                <button class="btn-select pop">디 올뉴그랜저</button>
+                                <p>(개소세 환원)</p>
+                            </div>
+                        </li>
+                        <li class="form-group">
+                            <span class="tit">트림</span>
+                            <div class="select-wrap">
+                                <button class="btn-select pop">2WD</button>
+                                <p class="num">55,480,000 원</p>
+                            </div>
+                        </li>
+                        <li class="form-group">
+                            <span class="tit">만기</span>
+                            <div class="select-wrap">
+                                <button class="btn-select pop">선택형</button>
+                            </div>
+                        </li>
+                        <li class="form-group">
+                            <span class="tit">약정거리</span>
+                            <div class="select-wrap">
+                                <button class="btn-select pop">2만 km</button>
+                                <p class="num">0 원</p>
+                            </div>
+                        </li>
+                        <li class="form-group">
+                            <span class="tit">외장</span>
+                            <div class="select-wrap">
+                                <button class="btn-select pop">어비스 블랙 펄</button>
+                                <p class="num">0 원</p>
+                            </div>
+                        </li>
+                        <li class="form-group">
+                            <span class="tit">내장</span>
+                            <div class="select-wrap">
+                                <button class="btn-select pop">블랙</button>
+                                <p class="num">0 원</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="txt-detail-footer">
+                    <div class="footer-group">
+                        <p class="tit">기본가격(+색상)</p>
+                        <span class="txt"><span class="num">55,480,00</span> 원</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <a href="#none" class="btn btn-primary confirm">다음(옵션선택)</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 차량선택 -->
+    <div id="select-arr1" class="layerpopup laypop-all" style="display:none;">
+        <div class="content-wrap txt-detail-area form">
+            <div class="pop-header">
+                <h2 class="pop-title">pc버전</h2>
+                <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+            </div>
+
+            <div class="ly-con-wrap ly-scroll-con" id="">
+                
+            </div>
+        </div>
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <a href="#none" class="btn btn-primary confirm">다음(옵션선택)</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

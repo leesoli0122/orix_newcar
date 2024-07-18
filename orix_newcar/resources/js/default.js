@@ -205,77 +205,63 @@ $(document).ready(function() {
   function openPopup(id) {
     var _target = $('#' + id);
     var currentTop = $(window).scrollTop();
+    var isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    var isEstimate = id.startsWith('estimate');
 
-    // 모바일 기기인 경우에만 실행
-    if (/Mobi|Android/i.test(navigator.userAgent)) {
-        // 팝업이 열릴 때 body의 스크롤을 막습니다.
-        $('body').css('overflow', 'hidden');
-
+    // 팝업 열기 공통 함수
+    function showPopup() {
         layerFunc(_target);
-        _target.removeClass('close');
-        _target.addClass('on').show();
-        _target.focus();
+        _target.removeClass('close').addClass('on').show().focus();
+
         _target.find('.btn-layer-close, .btn-close, .confirm').on('click', function () {
-            closePopupUp(id);
-            // 팝업이 닫힐 때 body의 스크롤을 허용합니다.
-            $('body').css('overflow', '');
-            $(window).scrollTop(currentTop);
-            _target.removeClass('on');
+            closePopup(id);
         });
 
-        // data-focus가 btn-layer-close인 경우 레이어 팝업 닫기
         if (_target.attr('data-focus') === 'btn-layer-close') {
             _target.find('[data-focus="btn-layer-close"]').on('click', function () {
-                _target.hide(); // 레이어 감추기
-                closePopupUp(id);
-                // 팝업이 닫힐 때 body의 스크롤을 허용합니다.
-                $('body').css('overflow', '');
-                $(window).scrollTop(currentTop);
-                _target.removeClass('on');
+                closePopup(id);
             });
         }
 
         if (_target.has('.ly-select-list').length > 0) {
             _target.find('.ly-select-list > li > button').on('click', function () {
-                _target.hide(); // 레이어 감추기
-                closePopupUp(id);
-                // 팝업이 닫힐 때 body의 스크롤을 허용합니다.
-                $('body').css('overflow', '');
-                $(window).scrollTop(currentTop);
-                _target.removeClass('show');
+                closePopup(id);
             });
         }
 
         /** 테이블 팝업 **/
         if (_target.has('.ly-select > .table-type.check').length > 0) {
             _target.find('.ly-select .table-type.check tbody tr').on('click', function () {
-                _target.hide(); // 레이어 감추기
-                closePopupUp(id);
-                // 팝업이 닫힐 때 body의 스크롤을 허용합니다.
-                $('body').css('overflow', '');
-                $(window).scrollTop(currentTop);
-                _target.removeClass('show');
+                closePopup(id);
                 e.preventDefault();
             });
         }
+    }
+
+    // 모바일 기기이면서 id가 'estimate'로 시작하는 경우
+    if (isMobile && isEstimate) {
+        $('body').css('overflow', 'hidden');
+        showPopup();
+    } 
+    // 'estimate'로 시작하지 않는 경우 (모바일 및 PC)
+    else if (!isEstimate) {
+        showPopup();
     }
 }
 
 function closePopup(id) {
     var _target = $('#' + id);
     deleteBlock();
-    _target.fadeOut(600);
-    _target.removeClass('on');
-    $(window).scrollTop(currentTop);
+    _target.fadeOut(600).removeClass('on');
+    $('body').css('overflow', ''); // 모바일일 때 막았던 스크롤을 허용
+    $(window).scrollTop(currentTop); // 원래의 스크롤 위치로 되돌린다
 }
 
 function closePopupUp(id) {
     deleteBlock();
-    // ADD eunji 2020-10-05
-    $('#' + id).scrollTop(0);
-    $('#' + id).fadeOut(600);
+    $('#' + id).scrollTop(0).fadeOut(600);
 }
-  
+
   /**
   * 중앙정렬 위치
   * @param containerSize : 컨테이너의 크기

@@ -106,6 +106,7 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
 .quick-menu li.ca::before { background:url("../images/calculator_ico.png")no-repeat center center; }
 .quick-menu li.re::before { background:url("../images/release_ico.png")no-repeat center center; }
 /************ 일정관리 ************/
+.my-cont-wrap .my-group:last-child { width:100%; }
 .calendar-wrap { display:flex; padding:20px; border-radius:20px; background-color:var(--secondary); }
 .calendar-wrap .calendar { margin-right:20px; padding:20px 20px 43px; max-width:420px; width:100%; border-radius:20px; background-color:var(--white); }
 .calendar-wrap .calendar .btn-wrap { margin-bottom:20px; }
@@ -129,7 +130,11 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
 .my-group .btn-wrap .btn.modify:hover { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23757575' d='M0 0h15.42v19.05H0z' data-name='사각형 21870'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg data-name='그룹 44706'%3E%3Cpath fill='none' d='M0 0h24v24H0z' data-name='사각형 21845'/%3E%3Cpath fill='none' d='M5 0h14a5 5 0 0 1 5 5v14a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5Z' data-name='패스 52683'/%3E%3Cg data-name='그룹 44705'%3E%3Cg fill='%23757575' clip-path='url(%23a)' data-name='그룹 44704' transform='translate(4.3 2.48)'%3E%3Cpath d='M14.71 4.62a.7.7 0 0 1-.5-.2l-3.2-3.22a.7.7 0 0 1 1-1l3.2 3.21a.7.7 0 0 1-.5 1.2' data-name='패스 52680'/%3E%3Cpath d='M.7 15.42a.7.7 0 0 1-.7-.81l.55-3.76a.7.7 0 0 1 .2-.4l8.4-8.4a.7.7 0 0 1 1 0l3.2 3.21a.7.7 0 0 1 0 1l-8.4 8.4a.7.7 0 0 1-.4.2l-3.75.56a.68.68 0 0 1-.1 0m3.76-1.25ZM1.92 11.3l-.38 2.59 2.59-.38 7.74-7.74-2.21-2.21Z' data-name='패스 52681'/%3E%3Cpath d='M13.5 19.05H.75a.7.7 0 1 1 0-1.41H13.5a.7.7 0 1 1 0 1.4' data-name='패스 52682'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
 .calendar-wrap .list .to-list { display:flex; align-items:center; justify-content: space-between; padding:18px 15px 18px 10px; border-radius:10px; background-color:var(--white); }
 .calendar-wrap .list .to-list + .to-list { margin-top:20px; }
+.calendar-wrap .list .to-list .text { display:flex; gap:10px; }
 .calendar-wrap .list .to-list .text.ok { text-decoration:line-through; }
+.calendar-wrap .list .to-list .text .time { width: max-content; }
+.calendar-wrap .list .to-list .text .tit { display:inline-block; max-width:260px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.calendar-wrap .list .to-list .btn-wrap { gap:0; }
 /************ 공지사항 ************/
 .notice-wrap { display:block; border-top:1px solid var(--title); border-bottom:1px solid var(--title); }
 .notice-wrap li { padding:20px; }
@@ -140,7 +145,7 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
 .notice-wrap li .notice-tit-area + .text { margin-top:8px; }
 
 /*************************** 견적내기 **************************/
-.specifications-wrap .sfc-box .car-img .img.hd-01 { background:url("../images/car/hd_mb_001.png")no-repeat center; }
+.specifications-wrap .sfc-box .car-img .img.hd-01 { background-image:url("../images/car/hd_mb_001.png"); }
 
 /****** 리스트 footer ******/
 .txt-list-wrap .txt-detail-area .txt-detail-footer:not(.txt-detail-footer:has(.footer-group)) { display:flex; gap:5px; align-items:center; justify-content:space-between; padding:20px; font-size:var(--font-18); font-weight:var(--w-bold); color:var(--white); line-height:28px; background-color:#75757580; }
@@ -263,7 +268,7 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
     /* 견적내기 */
     .specifications-wrap { display:flex; flex-direction: column-reverse; align-items: center; }
     .specifications-wrap .sfc-box { flex-direction:column; width: 100%; }
-    .specifications-wrap .sfc-box .car-img { padding:30px 28px; text-align:center; }
+    .specifications-wrap .sfc-box .car-img { padding:30px 10px; text-align:center; }
     .specifications-wrap .sfc-box .car-img .img { display:block;        width:auto; }
     .specifications-wrap .sfc-box + .btn-wrap { margin-top:0; margin-bottom:20px; }
     .txt-list-wrap.estimate { display:flex; flex-direction:column; align-items:center; overflow-x:unset; }
@@ -297,6 +302,7 @@ ul.step.icon li.view.pre::after { background:url("../images/view_quotation_end.p
 
     /* 견적내기 */
     .txt-list-wrap.estimate .txt-detail-area { width:100%; }
+    .specifications-wrap .sfc-box .car-img .img { background-size:contain; }
 
     /* 마이페이지 */
     .notice-wrap li .text { max-width:200px; font-size:var(--font-12); }

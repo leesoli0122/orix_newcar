@@ -12,10 +12,10 @@
 
 	<link href="/resources/css/default.css" rel="stylesheet" type="text/css" />
     <link href="/resources/css/renewal.css" rel="stylesheet" type="text/css" />
-    
 
-    <script type="text/javascript" src="/resources/js/default.js"></script>
+
     <script type="text/javascript" src="/resources/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/resources/js/default.js"></script>
 
 </head>
 <style>
@@ -42,10 +42,11 @@
                         <a href="../../index.html">홈</a>
                     </div>
 					<div class="code">
+                        <p style="margin-bottom:20px; font-weight:700; color:#0F3862;">모든 form-group 너비는 410으로 맞춤</p>
 						<section>
                             <h4>INPUT</h4>
                             <div class="border">
-                                <p>기본(일반 인풋 W:410)</p>
+                                <p>기본</p>
                                 <div class="form-wrap">
                                     <div class="form-group">
                                         <label for="">성명</label>
@@ -175,13 +176,49 @@
                             <div class="border">
                                 <div class="form-wrap">
                                     <div class="form-group">
-                                        <label for="">select</label>
-                                        <input id="" type="text" name="" class="form-control select" placeholder="select"><!--select 클래스 추가 및 onclick 팝업 추가하기-->
+                                        <div class="select-wrap">
+                                            <button class="btn-select">내용을 선택해 주세요</button>
+                                            <div class="select-list">
+                                                <ul>
+                                                    <li><button type="button">선택사항 1번</button></li>
+                                                    <li><button type="button" class="select">선택사항 2번</button></li><!--기본값-->
+                                                    <li><button type="button">선택사항 3번</button></li>
+                                                    <li><button type="button">선택사항 4번</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-
+                                </div>
+                            </div>
+                            <h4>버튼형(form-control에 inputField 추가)</h4>
+                            <div class="border">
+                                <div class="form-wrap">
                                     <div class="form-group">
-                                        <label for="">Disabled select</label>
-                                        <input id="" type="text" name="" class="form-control select" placeholder="select" disabled=""><!--disalbed-->
+                                        <label for="" class="essential">기본</label><!--essential 필수일 경우-->
+                                        <div class="form-row"><!--onclick="openPopup('')"-->
+                                            <div class="col">
+                                                <input id="" type="text" class="form-control inputField" placeholder="내용을 선택해 주세요">
+                                            </div>
+                                            <button class="btn btn-input" type="button">버튼명</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="essential">비활성</label><!--essential 필수일 경우-->
+                                        <div class="form-row"><!--onclick="openPopup('')"-->
+                                            <div class="col">
+                                                <input id="" type="text" class="form-control inputField" placeholder="내용을 선택해 주세요" disabled>
+                                            </div>
+                                            <button class="btn btn-input" type="button">버튼명</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="essential">완료</label><!--essential 필수일 경우-->
+                                        <div class="form-row"><!--onclick="openPopup('')"-->
+                                            <div class="col">
+                                                <input id="" type="text" class="form-control inputField" value="내용을 입력 했습니다">
+                                            </div>
+                                            <button class="btn btn-input active" type="button">버튼명</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

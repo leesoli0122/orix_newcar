@@ -33,8 +33,8 @@
     .btn-wrap > a {  margin-bottom:10px; }
     .flex { display:flex; align-items: center; }
 </style>
-<body>
-    <div class="wrap">
+<body style="overflow-y:scroll;">
+    <div class="wrap" style="height:auto;">
         <div id="contentWrap" class="sub-content">
             <div class="contents-wrap">
                 <div class="contents guide">
@@ -108,6 +108,7 @@
                             </div>
                             <h4>라디오버튼</h4>
 							<div class="border">
+                                <p>style1</p>
 								<div class="form-wrap">
                                     <div class="form-group radio-buttons">
                                         <label for="radio-1" class="radio-button">
@@ -127,7 +128,45 @@
                                         </label>
                                     </div>
                                 </div>
+                                <p>style2(form-group에 radio-box 추가)</p>
+								<div class="form-wrap">
+                                    <div class="form-group radio-box radio-buttons">
+                                        <label for="radio-4" class="radio-button">
+                                            <input type="radio" id="radio-4" name="terms">
+                                            <span class="custom-radio"></span>
+                                            <span class="text">예</span>
+                                        </label>
+                                        <label for="radio-5" class="radio-button">
+                                            <input type="radio" id="radio-5" name="terms" checked>
+                                            <span class="custom-radio"></span>
+                                            <span class="text">아니오</span>
+                                        </label>
+                                    </div>
+                                </div>
 							</div>
+                            <h4>toggle</h4>
+                            <div class="border">
+                                <div class="toggle-wrap">
+                                    <input type="checkbox" id="check01">
+                                    <label for="check01">
+                                        <div class="switch-btn">
+                                            <span class="off"></span>
+                                            <span class="on"></span>
+                                            <div class="inside"></div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <!-- <div class="toggle-wrap">
+                                    <input type="checkbox" id="check01">
+                                    <label for="check01">
+                                        <div class="switch-btn">
+                                            <span class="off">OFF</span>
+                                            <span class="on">ON</span>
+                                            <div class="inside"></div>
+                                        </div>
+                                    </label>
+                                </div> -->
+                            </div>
 						</section>
 					</div>
 				</div>

@@ -12,7 +12,7 @@ $(document).ready(function() {
     this.value = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 정규식을 이용해서 3자리 마다 , 추가
   });
 
-  // 계산 완료
+  /** 계산 완료 **/
   $('.btn.btn-primary.result').on('click', function (e) {
     e.preventDefault();
     $('.contents-wrap').animate({
@@ -20,24 +20,60 @@ $(document).ready(function() {
     });
   });
 
-  //인풋에 value값 있을 때 버튼 활성화하기
+  /** datepicker **/
+  $(".datepicker").datepicker({
+      showOn: "button", // 버튼을 클릭하면 달력이 나타남
+      buttonImageOnly: true,
+      buttonText: "...", // 버튼에 표시될 텍스트
+      dateFormat: "yy-mm-dd" // 날짜 형식
+  });
+
+  // 시작 날짜 버튼 클릭 시 달력 표시
+  $(".startDateBtn").click(function() {
+      $(this).siblings(".start-date").datepicker("show");
+  });
+
+  // 종료 날짜 버튼 클릭 시 달력 표시
+  $(".endDateBtn").click(function() {
+      $(this).siblings(".end-date").datepicker("show");
+  });
+
+  //툴팁
+	$(".info-tooltip").on('click', function(){
+		var $this = $(this).parents(".tooltip-wrap");
+
+		$this.removeClass('on');
+		if($this.hasClass('on')){
+			$this.removeClass('on');
+		}else{
+			$this.addClass('on');
+		};
+	});
+
+	//툴팁 닫기
+	$(".tooltip-close").on('click', function(){
+		var $this = $(this).parents(".tooltip-wrap");
+		$this.removeClass('on');
+	});
+
+  /** 인풋에 value값 있을 때 버튼 활성화하기 **/
   const inputField = document.querySelector('.inputField');
   const myButton = document.querySelector('.btn-input');
 
-  // input에 변화가 생길 때마다 실행됩니다.
+  // input에 변화가 생길 때마다 실행
   inputField.addEventListener('input', function() {
       if (inputField.value.trim() !== "") {
-          // 입력 값이 있으면 버튼을 활성화합니다.
+          // 입력 값이 있으면 버튼을 활성화
           myButton.classList.add('active');
           myButton.disabled = false; // 버튼 활성화
       } else {
-          // 입력 값이 없으면 버튼을 비활성화합니다.
+          // 입력 값이 없으면 버튼을 비활성화
           myButton.classList.remove('active');
           myButton.disabled = true; // 버튼 비활성화
       }
   });
 
-  // 페이지 로드 시 초기 상태를 확인합니다.
+  // 페이지 로드 시 초기 상태를 확인
   document.addEventListener('DOMContentLoaded', function() {
       if (inputField.value.trim() !== "") {
           myButton.classList.add('active');
@@ -48,7 +84,7 @@ $(document).ready(function() {
       }
   });
 
-  // input focus
+  /** input focus **/ 
   $('.form-control, textarea').focus(function(){
     if (!$(this).hasClass('select') && !$(this).prop("readonly")) {
       $('.fixed-btn-wrap').hide();
@@ -61,7 +97,7 @@ $(document).ready(function() {
     }
   });
 
-  // keyboard focus
+  /** keyboard focus **/ 
   $(document).keydown(function(event){
     if (event.key === "Escape") {
       var inputField = $("input.form-control");
@@ -69,7 +105,7 @@ $(document).ready(function() {
     }
   });
 
-  // popup focus
+  /** popup focus **/
   $('.layerpopup.layer-up .form-control').focus(function(){
     $('.ly-cont-wrap.ly-scroll-con').removeClass('plus-height2').addClass('plus-height3');
   });

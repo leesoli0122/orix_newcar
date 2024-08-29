@@ -49,3 +49,6 @@ form { height:100%; }
 /* intro */
 .contents-wrap.loginLayout { display:flex; align-items:center; justify-content:center; margin-top:0; padding-bottom:0; }
 
+/******** UI ********/
+[class*='btn'] { display:inline-block; vertical-align:middle; }
+[class*='btn']:focus { outline-color:1px solid #0087D4; }

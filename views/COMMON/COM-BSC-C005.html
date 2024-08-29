@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords">
+    <meta name="description" content="ORIX Capital description">
+
+	<meta property="og:locale" content="ko_KR" />
+	<meta property="og:type" content="website" />
+
+	<link href="/resources/css/default.css" rel="stylesheet" type="text/css" />
+    <link href="/resources/css/renewal.css" rel="stylesheet" type="text/css" />
+    
+
+    <script type="text/javascript" src="/resources/js/default.js"></script>
+    <script type="text/javascript" src="/resources/js/jquery-1.9.1.min.js"></script>
+
+</head>
+<style>
+    .contents.guide { padding:15px; }
+    .guide .home { margin-bottom:10px; }
+    .guide .home a { display:block; width:24px; height:24px; font-size:0; background:url("../../index_home.png")no-repeat center center; }
+    .guide .code h4 { margin-bottom:5px; }
+    /* color css */
+    .guide .code .border { margin-bottom:20px; padding:20px; border:1px solid #33333323; border-radius:15px; }
+    .guide .code .border .form-wrap + p { margin-top:20px; }
+    .guide .code .border p { font-size:16px; font-weight:bold; }
+    .guide .code .border li { padding:10px; }
+    .btn-wrap > span{  display:inline; font-weight:bold; }
+    .btn-wrap > button,
+    .btn-wrap > a {  margin-bottom:10px; }
+    .flex { display:flex; align-items: center; }
+</style>
+<body>
+    <div class="wrap">
+        <div id="contentWrap" class="sub-content">
+            <div class="contents-wrap">
+                <div class="contents guide">
+                    <div class="home">
+                        <a href="../../index.html">홈</a>
+                    </div>
+					<div class="code">
+						<section>
+                            <h4>체크박스</h4>
+                            <div class="border">
+                                <p>다건선택 체크박스</p>
+                                <div class="form-wrap">
+                                    <div class="form-group check-buttons">
+                                        <label for="check-1" class="check-button">
+                                            <input type="checkbox" id="check-1" name="terms">
+                                            <span class="custom-check"></span>
+                                            <span class="text">Check Box OFF</span>
+                                        </label>
+                                        <label for="check-2" class="check-button">
+                                            <input type="checkbox" id="check-2" name="terms" checked>
+                                            <span class="custom-check"></span>
+                                            <span class="text">Check Box ON</span>
+                                        </label>
+                                        <label for="check-3" class="check-button">
+                                            <input type="checkbox" id="check-3" name="terms" disabled="">
+                                            <span class="custom-check"></span>
+                                            <span class="text">Check Box Disabled-checked</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <p>단건선택 체크박스(form-group에 one-chk 추가)</p>
+                                <div class="form-wrap">
+                                    <div class="form-group check-buttons one-chk">
+                                        <label for="check-4" class="check-button">
+                                            <input type="checkbox" id="check-4" name="terms">
+                                            <span class="custom-check"></span>
+                                            <span class="text">Check Box OFF</span>
+                                        </label>
+                                        <label for="check-5" class="check-button">
+                                            <input type="checkbox" id="check-5" name="terms" checked>
+                                            <span class="custom-check"></span>
+                                            <span class="text">Check Box ON</span>
+                                        </label>
+                                        <label for="check-6" class="check-button">
+                                            <input type="checkbox" id="check-6" name="terms" disabled="">
+                                            <span class="custom-check"></span>
+                                            <span class="text">Check Box Disabled-checked</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <p>기본 체크박스 항목에 속하는 부가 체크박스(form-group에 sub-chk 추가)</p>
+                                <div class="form-wrap">
+                                    <div class="form-group check-buttons sub-chk">
+                                        <label for="check-7" class="check-button">
+                                            <input type="checkbox" id="check-7" name="terms">
+                                            <span class="custom-check"></span>
+                                            <span class="text">Check Box OFF</span>
+                                        </label>
+                                        <label for="check-8" class="check-button">
+                                            <input type="checkbox" id="check-8" name="terms" checked>
+                                            <span class="custom-check"></span>
+                                            <span class="text">Check Box ON</span>
+                                        </label>
+                                        <label for="check-9" class="check-button">
+                                            <input type="checkbox" id="check-9" name="terms" disabled="">
+                                            <span class="custom-check"></span>
+                                            <span class="text">Check Box Disabled-checked</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>라디오버튼</h4>
+							<div class="border">
+								<div class="form-wrap">
+                                    <div class="form-group radio-buttons">
+                                        <label for="radio-1" class="radio-button">
+                                            <input type="radio" id="radio-1" name="terms">
+                                            <span class="custom-radio"></span>
+                                            <span class="text">Radio Button OFF</span>
+                                        </label>
+                                        <label for="radio-2" class="radio-button">
+                                            <input type="radio" id="radio-2" name="terms">
+                                            <span class="custom-radio"></span>
+                                            <span class="text">Radio Button ON</span>
+                                        </label>
+                                        <label for="radio-3" class="radio-button">
+                                            <input type="radio" id="radio-3" name="terms" disabled="">
+                                            <span class="custom-radio"></span>
+                                            <span class="text">Radio Button Disable</span>
+                                        </label>
+                                    </div>
+                                </div>
+							</div>
+						</section>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
+	<script>
+        $(function(){
+            $('div[data-include-path]').each(function(){
+                var path = $(this).attr('data-include-path');
+                $(this).load(path,function(response,status,xhr){
+                    if(status == 'error'){
+                        var msg = 'Sory but there was an error:';
+                        $(this).html(msg + xhr.status + '' + xhr.statusText);
+                    }
+                })
+            })
+        })
+    </script>
+    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
+</body>
+</html>
+

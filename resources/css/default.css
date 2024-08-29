@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/** 나눔고딕 **/
+@font-face {
+    font-family: 'NanumGothic';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumGothic/NanumGothic.eot);
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumGothic/NanumGothic.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumGothic/NanumGothic.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumGothic/NanumGothic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'NanumGothicBold';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumGothic/NanumGothicBold.otf) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumGothic/NanumGothicBold.ttf) format("truetype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumGothic/NanumGothicBold.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'NanumGothicLight';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumGothic/NanumGothicLight.otf) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumGothic/NanumGothicLight.ttf) format("truetype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumGothic/NanumGothicLight.woff) format("woff");
+}
+
+
+
+
+/*** font ***/
+
+/* @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+	font-family: 'Noto Sans KR', sans-serif;
+} */
+
+
+html { font-family: 'NanumGothic', 'Apple SD Gothic Neo', 'Noto Sans', sans-serif;/*-webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/ overflow-y:hidden; height:100%;  box-sizing:border-box; -ms-overflow-style:scrollbar;}
+body { width:100%; height:100%; margin: 0; font-family: 'NanumGothic', 'Apple SD Gothic Neo', 'Noto Sans', sans-serif; font-size:16px; font-weight: 400; line-height:1.188rem; color: #212529; text-align: left; background-color: #fff; }
+ul, ol { list-style:none; }
+*,
+*::before,
+*::after { -webkit-box-sizing: border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-text-size-adjust:none; max-height:1000000px; word-break:keep-all; word-wrap:break-word; outline:none; }
+.wrap { position:relative; display:block; margin:0; overflow-y:hidden;/*padding:50px 0 0;*/ width:100%; height:100%; min-height:420px;  }
+.contents-wrap { overflow-y:auto; overflow-x:hidden; margin:0; height:100%; padding-right:20px; padding-left:20px; padding-bottom:150px; margin-top:45px; margin-right:auto; margin-left:auto; }
+header { position:fixed; top:0; left:0; z-index:10; width:100%; min-height:45px; background-color: #FFFFFF; }
+form { height:100%; }
+
+.wrap.login .contents-wrap { margin-top:0; }
+.contents-wrap > .table-type { margin-top:28px; }
+
+/* .wrap.main .contents-wrap { padding:0; margin-top:128px; padding-bottom:0 ; } */
+/* .wrap.main .contents-wrap .tabs-wrap { margin-top:34px; } */
+/* .contents-wrap.main .tabs-wrap { margin-top:36px; } */
+/* intro */
+.contents-wrap.loginLayout { display:flex; align-items:center; justify-content:center; margin-top:0; padding-bottom:0; }
+

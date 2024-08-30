@@ -45,29 +45,13 @@
                     </div>
                     <div class="code">
                         <section>
-                            <h4>툴팁</h4>
+                            <h4>step</h4>
                             <div class="border">
-                                <div class="list-sub-tit tooltip-wrap">
-                                    <div class="info-tooltip">정보</div>
-                                    <div class="tooltip-box">
-                                        <p class="tit">안내문구 내용이 노출됩니다.</p>
-                                        <p class="txt">최대 3~5줄을 넘어가지 않도록 안내문구가 노출되어야 합니다.</p>
-                                        <button type="button" class="tooltip-close">닫기</button>
+                                <div class="fixed-btn-wrap">
+                                    <div class="btn-wrap" onclick="openPopup('lyAlert')"  tabindex="0">
+                                        <button type="button" class="btn btn-primary">다음</button>
                                     </div>
                                 </div>
-                            </div>
-                            <h4>라벨</h4>
-                            <div class="border">
-                                <p style="margin-bottom:20px;">상담내역 필터(badge01)</p>
-                                <span class="badge01 mip">할부</span>
-                                <span class="badge01 rcar">렌터카</span>
-                                <span class="badge01 undecided">미확정</span>
-                                <span class="badge01 lease">리스</span>
-                                <p style="margin:30px 0 20px">업무 카테고리(badge02)</p>
-                                <span class="badge02 personal">개인일정</span>
-                                <span class="badge02 company">사내일정</span>
-                                <span class="badge02 work">업무</span>
-                                <span class="badge02 meeting">회의</span>
                             </div>
                         </section>
                     </div>
@@ -93,5 +77,17 @@
     </script>
     <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
 </body>
-
+<div id="lyAlert" class="layerpopup type-alert" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">확인해주세요</h2>
+        </div>
+        <div class="ly-cont-wrap">
+            <p class="sub-title">필수 약관을 동의 해주세요.</p>
+        </div>
+        <div class="btn-wrap">
+            <a href="#none" class="btn btn-primary confirm" >확인</a>
+        </div>
+    </div>
+</div>
 </html>

@@ -57,6 +57,7 @@
 
     --background1:#EAEAEA;
     --background2:#F8F8F8;
+    --background3:#5474c0;
 }
 
 
@@ -296,7 +297,7 @@ input[type="checkbox"]:checked.custom-check + label:after { background: url("../
 .form-wrap + .btn-cont-wrap { margin-top:20px; }
 
 /* 인풋박스 + 버튼 */
-.form-group .btn.btn-input.active { color:var(--white); background-color:var(--primary); cursor: pointer; /* 활성화 상태에서 커서 모양 */ }
+.form-group .btn.btn-input.active { color:var(--white); background-color:var(--background3); cursor: pointer; /* 활성화 상태에서 커서 모양 */ }
 
 
 /** 공통 버튼 **/
@@ -437,7 +438,8 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .radio-buttons .radio-button .text { font-size:1rem; line-height:1.188rem; }
 
 /* form-group에 radio-box가 있을 경우 */
-.radio-buttons.radio-box .radio-button { padding:14px 0 14px 50px; width:calc((100% / 2) - 10px); border:1px solid var(--border1); border-radius:4px; }
+.radio-buttons.radio-box .radio-group {  width:calc((100% / 2) - 10px); }
+.radio-buttons.radio-box .radio-button { padding:14px 0 14px 50px; width:100%; border:1px solid var(--border1); border-radius:4px; }
 .radio-buttons.radio-box .radio-button .custom-radio { left:16px; }
 
 /* checkbox : on / off 스위치 토글 버튼 */
@@ -517,7 +519,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .layerpopup.layer-up .result-area.nodata::before { width:45px; height:45px; }
 .layerpopup.layer-up .result-area.nodata .txt-wrap .tit { font-size:1rem; line-height:1.188rem; }
 
-.layerpopup .btn-layer-close { position:absolute; /*top:0px;*/ right:0px; z-index:22; width:24px; height:24px; border:none; background:url("../../images/common/ic_btn_close.png") no-repeat 50%/24px auto; text-indent:-9999px; }
+.layerpopup .btn-layer-close { position:absolute; /*top:0px;*/ right:0px; z-index:22; width:22px; height:22px; border:none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cpath fill='%23666' d='M11 8.82 19.37.45a1.54 1.54 0 1 1 2.18 2.18L13.18 11l8.37 8.37a1.54 1.54 0 1 1-2.18 2.18L11 13.18l-8.37 8.37a1.54 1.54 0 1 1-2.18-2.18L8.82 11 .45 2.63A1.54 1.54 0 0 1 2.63.45Z'/%3E%3C/svg%3E") no-repeat center; text-indent:-9999px; }
 /* .layerpopup .btn-layer-close:after { content:''; position:absolute; top:50%; left:50%; width:150%; height:150%; transform:translate(-50%, -50%); } 필요없음 */
 .layerpopup .btn-wrap button { margin:0; }
 .layerpopup .content-wrap { z-index:20; padding:20px; background:var(--white); }
@@ -535,7 +537,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .layerpopup.laypop-all .pop-header {position:fixed; top:0; left:0; right:0;height:45px; padding:0 20px; background:var(--white);line-height:50px;z-index:5;}
 .layerpopup.laypop-all .pop-header:has(+.pop-con-wrap>.default-wrap>.txt-list-wrap:first-child) { border:0; }
 .layerpopup.laypop-all .pop-header .pop-title { text-align:center; font-size:1rem; font-weight:500; }
-.layerpopup.laypop-all .btn-layer-close{position:fixed; top:5px;right:12px;width:40px;height:40px; background: url(../../images/common/ic_btn_close.png) no-repeat 50%/24px auto;text-indent:-9999px;}
+.layerpopup.laypop-all .btn-layer-close{position:fixed; top:5px;right:12px;width:22px;height:22px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cpath fill='%23666' d='M11 8.82 19.37.45a1.54 1.54 0 1 1 2.18 2.18L13.18 11l8.37 8.37a1.54 1.54 0 1 1-2.18 2.18L11 13.18l-8.37 8.37a1.54 1.54 0 1 1-2.18-2.18L8.82 11 .45 2.63A1.54 1.54 0 0 1 2.63.45Z'/%3E%3C/svg%3E") no-repeat center;text-indent:-9999px;}
 .layerpopup.laypop-all .ly-con-wrap { padding-bottom:80px; }
 .layerpopup .btn-wrap.btn-primary .btn-layer-close { position:static; width:100%; padding:15px 0; height:49px; background-image: none; background-color: var(--secondary); text-indent:inherit; }
 /* .layerpopup .btn-wrap.btn-close .btn-layer-close { position:static; padding:15px 0; height:49px; background-image: none; background-color: var(--secondary); text-indent:inherit; } */
@@ -742,17 +744,15 @@ fieldset { border:none; }
 
 /** 툴팁 **/
 /* tooltip */
-.list-group .btn-set { position:absolute; right:0; }
-.like { width:20px; height:20px;  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.085' height='15.487'%3E%3Cpath fill='%23757575' d='M12.485 0h-.041a4.747 4.747 0 0 0-3.9 2.013A4.747 4.747 0 0 0 4.644 0H4.6A4.513 4.513 0 0 0 0 4.375a9.086 9.086 0 0 0 1.963 5.137 33.687 33.687 0 0 0 6.579 5.974 33.687 33.687 0 0 0 6.583-5.974 9.086 9.086 0 0 0 1.96-5.138A4.513 4.513 0 0 0 12.485 0Zm1.708 8.874a30.732 30.732 0 0 1-5.651 5.25A30.776 30.776 0 0 1 2.891 8.87 8.053 8.053 0 0 1 1.15 4.374a3.182 3.182 0 0 1 1.01-2.312 3.576 3.576 0 0 1 2.448-.972h.037a3.607 3.607 0 0 1 1.688.418 3.513 3.513 0 0 1 1.249 1.1 1.193 1.193 0 0 0 1.93 0 3.548 3.548 0 0 1 1.249-1.1 3.607 3.607 0 0 1 1.688-.418h.037a3.583 3.583 0 0 1 2.447.972 3.173 3.173 0 0 1 1.01 2.315 8.156 8.156 0 0 1-1.749 4.496Z' data-name='Icon ionic-ios-heart-empty'/%3E%3C/svg%3E")no-repeat center; color: transparent; text-indent: -9999px; }
-.like.on {  width:20px; height:20px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='red' d='M16.686 3.73h-.043a5.009 5.009 0 0 0-4.065 2.014A5.009 5.009 0 0 0 8.513 3.73H8.47a4.62 4.62 0 0 0-4.792 4.375 8.873 8.873 0 0 0 2.045 5.139 34.694 34.694 0 0 0 6.855 5.975 34.694 34.694 0 0 0 6.855-5.975 8.873 8.873 0 0 0 2.045-5.139 4.62 4.62 0 0 0-4.792-4.375Z' data-name='Icon ionic-ios-heart'/%3E%3C/svg%3E")no-repeat 50%/20px; }
-.list-group2 .like { display:block; position:absolute; top:10px; right:10px; width:20px; height:20px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.085' height='15.487'%3E%3Cpath fill='black' d='M12.485 0h-.041a4.747 4.747 0 0 0-3.9 2.013A4.747 4.747 0 0 0 4.644 0H4.6A4.513 4.513 0 0 0 0 4.375a9.086 9.086 0 0 0 1.963 5.137 33.687 33.687 0 0 0 6.579 5.974 33.687 33.687 0 0 0 6.583-5.974 9.086 9.086 0 0 0 1.96-5.138A4.513 4.513 0 0 0 12.485 0Zm1.708 8.874a30.732 30.732 0 0 1-5.651 5.25A30.776 30.776 0 0 1 2.891 8.87 8.053 8.053 0 0 1 1.15 4.374a3.182 3.182 0 0 1 1.01-2.312 3.576 3.576 0 0 1 2.448-.972h.037a3.607 3.607 0 0 1 1.688.418 3.513 3.513 0 0 1 1.249 1.1 1.193 1.193 0 0 0 1.93 0 3.548 3.548 0 0 1 1.249-1.1 3.607 3.607 0 0 1 1.688-.418h.037a3.583 3.583 0 0 1 2.447.972 3.173 3.173 0 0 1 1.01 2.315 8.156 8.156 0 0 1-1.749 4.496Z' data-name='Icon ionic-ios-heart-empty'/%3E%3C/svg%3E")no-repeat center; color: transparent; text-indent: -9999px; }
-.list-group2 .like.on {  width:20px; height:20px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='red' d='M16.686 3.73h-.043a5.009 5.009 0 0 0-4.065 2.014A5.009 5.009 0 0 0 8.513 3.73H8.47a4.62 4.62 0 0 0-4.792 4.375 8.873 8.873 0 0 0 2.045 5.139 34.694 34.694 0 0 0 6.855 5.975 34.694 34.694 0 0 0 6.855-5.975 8.873 8.873 0 0 0 2.045-5.139 4.62 4.62 0 0 0-4.792-4.375Z' data-name='Icon ionic-ios-heart'/%3E%3C/svg%3E")no-repeat 50%/20px; }
 .tooltip-wrap { position:relative; display:inline-block; }
-.tooltip-wrap .info-tooltip { display:inline-block; margin:-2px 0; width:16px; height:16px; text-indent:-9999px; overflow:hidden; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='16' viewBox='0 0 14 16'%3E%3Cg id='tooltip' transform='translate(-103 -360)'%3E%3Cg id='타원_484' data-name='타원 484' transform='translate(103 362)' fill='none' stroke='%239a9a9a' stroke-width='1'%3E%3Ccircle cx='7' cy='7' r='7' stroke='none'/%3E%3Ccircle cx='7' cy='7' r='6.5' fill='none'/%3E%3C/g%3E%3Ctext id='_' data-name='%3F' transform='translate(110 373)' fill='%239a9a9a' font-size='12' font-family='SegoeUI, Segoe UI' letter-spacing='-0.05em'%3E%3Ctspan x='-2.689' y='0'%3E%3F%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/svg%3E%0A")no-repeat center; }
-.tooltip-wrap .tooltip-txt { z-index:2; opacity:0; position:absolute; left:20px; bottom:30px; padding:20px 30px 20px 12px; white-space:nowrap; transition:all .2s ease; background:#F4F5FB; border-radius:10px; color:var(--text02); box-shadow:0px 7px 7px 0px #bebdbd; font-size:0.7rem; }
-.tooltip-wrap .tooltip-txt::before { content: ''; position: absolute; transform:translate(-50%, 0) rotate(90deg); bottom:-10px; left:50%; border-top:5px solid transparent; border-right:5px solid transparent; border-bottom:5px solid transparent; border-left:5px solid #F4F5FB; }
-.tooltip-wrap .tooltip-close { position:absolute; right:8px; top:8px; width:12px; height:12px; border:none; background:url("../../images/common/btn_close.png") no-repeat 50%/12px auto; font-size:0; }
-.tooltip-wrap.on .tooltip-txt { opacity:1; }
+.tooltip-wrap .info-tooltip { display:inline-block; margin:-2px 0; width:22px; height:22px; text-indent:-9999px; overflow:hidden; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cg data-name='그룹 65014'%3E%3Cg data-name='그룹 43503'%3E%3Cg fill='none' stroke='%23757575' data-name='타원 554'%3E%3Ccircle cx='11' cy='11' r='11' stroke='none'/%3E%3Ccircle cx='11' cy='11' r='10.5'/%3E%3C/g%3E%3Cg data-name='레이어 2'%3E%3Cg fill='%23757575' stroke='%23757575' data-name='그룹 65016' transform='translate(8 2.98)'%3E%3Cellipse cx='1.52' cy='1.53' rx='1.52' ry='1.53' transform='translate(2.8)'/%3E%3Cpath d='m2.62 14.04 1.95-8.21-1.06-.87L0 6.56l.63 1.38 2.1-.95-1.95 8.17 1.04.88 3.35-1.44-.6-1.4Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
+.tooltip-wrap .tooltip-box { z-index:2; display:none; position:absolute; top:40px; left:-20px; padding:32px 32px 24px 20px; transition:all .2s ease; background:var(--white); filter: drop-shadow(0px 0 12px rgba(0, 0, 0, 0.06)); }
+.tooltip-wrap .tooltip-box::before { content: ''; position: absolute; transform:rotate(270deg); top:-20px; left:20px; border-top:10px solid transparent; border-right:10px solid transparent; border-bottom:10px solid transparent; border-left:15px solid var(--white); }
+.tooltip-wrap .tooltip-close { position:absolute; right:8px; top:8px; width:22px; height:22px; border:none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23cccee4' d='M.3.3h18v18H.3z' data-name='사각형 3428'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)' transform='translate(1.7 1.7)'%3E%3Cg data-name='그룹 33768'%3E%3Cg data-name='그룹 1'%3E%3Cpath fill='none' stroke='rgba(102,102,102,0.8)' stroke-linecap='round' d='m4.3 4.3 10 10' data-name='선 113'/%3E%3C/g%3E%3Cg data-name='그룹 33767'%3E%3Cpath fill='none' stroke='rgba(102,102,102,0.8)' stroke-linecap='round' d='m14.3 4.3-10 10' data-name='선 113'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat center; font-size:0; }
+.tooltip-wrap.on .info-tooltip { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cg data-name='그룹 65014'%3E%3Cg data-name='그룹 43503'%3E%3Cg fill='none' stroke='%23056ED6' data-name='타원 554'%3E%3Ccircle cx='11' cy='11' r='11' stroke='none'/%3E%3Ccircle cx='11' cy='11' r='10.5'/%3E%3C/g%3E%3Cg data-name='레이어 2'%3E%3Cg fill='%23056ED6' stroke='%23056ED6' data-name='그룹 65016' transform='translate(8 2.98)'%3E%3Cellipse cx='1.52' cy='1.53' rx='1.52' ry='1.53' transform='translate(2.8)'/%3E%3Cpath d='m2.62 14.04 1.95-8.21-1.06-.87L0 6.56l.63 1.38 2.1-.95-1.95 8.17 1.04.88 3.35-1.44-.6-1.4Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
+.tooltip-wrap.on .tooltip-box { width:310px; display:block; }
+.tooltip-wrap.on .tooltip-box .tit { font-size:var(--font14); font-weight:var(--w-bold); color:var(--normal); }
+.tooltip-wrap.on .tooltip-box .txt { font-size:var(--font14); font-weight:var(--w-regular); color:var(--normal); }
 
 /* intro box */
 .intro-box-wrap { /*margin-top:97px;*/ width:100%; padding:76px 20px 40px 20px; border-radius:20px; background: linear-gradient(var(--secondary), #002C50); }
@@ -775,4 +775,30 @@ fieldset { border:none; }
 /* tit-main-area 아래 contents 마진 */
 .tit-main-area + .list-area { margin-top:40px; }
 
+/** badge **/
+.badge01, .badge02 { padding:6px 12px; border-radius:16px; font-size:var(--font14); font-weight:var(--w-bold); }
 
+.badge01.mip { border:1px solid var(--tag1); color:var(--tag1); }
+.badge01.rcar { border:1px solid var(--tag2); color:var(--tag2); }
+.badge01.undecided { border:1px solid var(--tag3); color:var(--tag3); }
+.badge01.lease { border:1px solid var(--tag4); color:var(--tag4); }
+
+.badge02.personal { background-color:var(--tag5); color:#2B66F6; }
+.badge02.company { background-color:var(--tag6); color:#802CE3; }
+.badge02.work { background-color:var(--tag7); color:#FF0000; }
+.badge02.meeting { background-color:var(--tag8); color:var(--inactive); }
+
+/** step **/
+ul.step.icon { display:flex; margin:0 auto; width:100%; max-width:922px; }
+ul.step.icon li { width:100%; padding:48px 10px 10px; }
+ul.step.icon li::before {  content:""; display:block; position:absolute; top:40px; width:100%; height:2px; background:var(--background); }
+ul.step.icon li:first-of-type::before { left:50%;  }
+ul.step.icon li:last-of-type::before {  right:50%; width:50%; }
+ul.step.icon li::after { content:"아이콘영역"; display:block; position:absolute; top:10px; left:50%; transform:translate(-50%, 0); width:34px; height:34px; line-height:34px; border-radius:50%; background:var(--background); font-size:0; text-align:center; }
+ul.step.icon li span{ display:block; padding:25px 10px; width:100%; text-align:center; color:var(--normal-op80); }
+ul.step.icon li.on::after { background:var(--main); font-weight:400; }
+ul.step.icon li.on span { color:var(--title); font-weight:700; }
+
+ul.step.icon li.prev::after { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34'%3E%3Cg data-name='그룹 64924'%3E%3Cg fill='%23fff' stroke='%230F3862' stroke-miterlimit='10' stroke-width='3'%3E%3Ccircle cx='17' cy='17' r='17' stroke='none'/%3E%3Ccircle cx='17' cy='17' r='15.5' fill='none'/%3E%3C/g%3E%3Cpath fill='%230F3862' d='m13.94 22.18-3.59-3.58a1.2 1.2 0 0 1 1.71-1.71l2.73 2.73 7.69-7.68a1.2 1.2 0 1 1 1.7 1.7l-8.53 8.54a1.2 1.2 0 0 1-1.71 0Z' data-name='Rectangle 2'/%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
+/* ul.step.icon li.on::after { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34'%3E%3Cg data-name='그룹 64926' transform='translate(-579 -259)'%3E%3Ccircle cx='17' cy='17' r='17' fill='%230f3862' transform='translate(579 259)'/%3E%3Cpath fill='%23fff' d='M603.41 283h-16v-2h2.41l-.02-1.94a1 1 0 0 1 .29-.72l9.64-9.63a1 1 0 0 1 1.41 0l2.57 2.56a1 1 0 0 1 0 1.42l-8.32 8.31h8.02v2Zm-11.6-3.54v1.14l1.14.01 1.31-1.3-1.15-1.16Zm3.16-.86 6.62-6.62-1.16-1.15-6.62 6.62Z'/%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
+ul.step.icon li.next::after { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34'%3E%3Cg data-name='그룹 64924'%3E%3Cg fill='%23fff' stroke='%23e2e2e2' stroke-miterlimit='10' stroke-width='3'%3E%3Ccircle cx='17' cy='17' r='17' stroke='none'/%3E%3Ccircle cx='17' cy='17' r='15.5' fill='none'/%3E%3C/g%3E%3Cpath fill='%23e2e2e2' d='m13.94 22.18-3.59-3.58a1.2 1.2 0 0 1 1.71-1.71l2.73 2.73 7.69-7.68a1.2 1.2 0 1 1 1.7 1.7l-8.53 8.54a1.2 1.2 0 0 1-1.71 0Z' data-name='Rectangle 2'/%3E%3C/g%3E%3C/svg%3E")no-repeat center; } */

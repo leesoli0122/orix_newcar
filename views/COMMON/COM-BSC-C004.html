@@ -15,12 +15,12 @@
     <link href="/resources/css/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link href="/resources/css/default.css" rel="stylesheet" type="text/css" />
     <link href="/resources/css/renewal.css" rel="stylesheet" type="text/css" />
-    <link href="/resources/css/datepicker.css" rel="stylesheet" type="text/css" />
 
 
     <script type="text/javascript" src="/resources/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="/resources/js/jquery-ui-1.12.1.js"></script>
     <script type="text/javascript" src="/resources/js/default.js"></script>
+    <!-- <script type="text/javascript" src="/resources/js/datepicker.js"></script> -->
 
 </head>
 <style>
@@ -108,22 +108,6 @@
                                             readonly=""><!--readonly-->
                                     </div>
 
-                                    <!--<div class="form-group">
-                                         <div class="form-tit">주민등록번호</div>
-                                        <label for="">주민등록번호</label>
-                                        <div class="form-row">
-                                            <div class="col">
-                                                <input id="" type="tel" class="form-control" name="" value="" maxlength="6" placeholder="" required="">
-                                            </div>
-                                            <div class="input-hyphen">-</div>
-                                            <div class="col">
-                                                <input id="" type="tel" class="form-control" maxlength="7" placeholder="●●●●●●●">
-                                                <input id="" type="tel" title="주민등록번호 뒷자리(첫번째 숫자)" class="form-control" name="jumin1" value="" maxlength="1" required="">
-                                                <span class="jumintext">●●●●●●</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <div class="form-group">
                                         <label for="">주민등록번호 뒷자리 번호 1하나만 노출일 경우</label>
                                         <div class="form-row">
@@ -136,19 +120,7 @@
                                                 <span class="jumintext">●●●●●●</span>
                                             </div>
                                         </div>
-                                    </div> -->
-
-                                    <!-- <div class="form-group">
-                                        <label for="">휴대폰 번호</label>
-                                        <div class="form-row">
-                                            <div class="col-3">
-                                                <input id="" type="text" class="form-control select" placeholder="통신사" onclick="openPopup('lySel2')">
-                                            </div>
-                                            <div class="col">
-                                                <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="- 없이 숫자만 입력">
-                                            </div>
-                                        </div>
-                                    </div> -->
+                                    </div>
 
                                     <div class="form-group">
                                         <label for="">아이디</label>
@@ -201,7 +173,24 @@
                                         </div>
                                     </div>
                                 </div>
-
+                            </div>
+                            <h4>datepicker</h4>
+                            <div class="border">
+                                <div class="form-wrap">
+                                    <div class="form-group">
+                                        <label for="">기본</label>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <input type="date" class="form-control datefrom" id="dateFrom" name="from">
+                                            </div>
+                                            <div class="input-hyphen">~</div>
+                                            <div class="col">
+                                                <input type="date" class="form-control datefrom" id="dateTo" name="to">
+                                            </div>
+                                            <button class="btn btn-input" name="btnSearch" id="btnSearch" type="button">조회</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <h4>SELECTBOX</h4>
                             <div class="border">
@@ -257,30 +246,50 @@
                                     </div>
                                 </div>
                             </div>
-                            <h4>datepicker</h4>
+                            <h4>예외 케이스</h4>
                             <div class="border">
                                 <div class="form-wrap">
-                                    <div class="form-group">
-                                        <!-- <div class="form-tit">방문 예정 일자</div> -->
-                                        <label for="">기본</label>
+                                    <div class="form-group phone">
+                                        <label for="">휴대폰 번호</label>
                                         <div class="form-row">
-                                            <div class="col">
-                                                <div class="input_wrap">
-                                                    <input type="text" class="form-control datepicker start-date"
-                                                        placeholder="" inputmode="none">
-                                                    <button type="button"
-                                                        class="ui-datepicker-trigger startDateBtn">...</button>
-                                                </div><!--readonly-->
+                                            <div class="select-wrap">
+                                                <button class="btn-select">통신사 선택</button>
+                                                <div class="select-list">
+                                                    <ul>
+                                                        <li><button type="button">선택사항 1번</button></li>
+                                                        <li><button type="button" class="select">선택사항 2번</button></li>
+                                                        <!--기본값-->
+                                                        <li><button type="button">선택사항 3번</button></li>
+                                                        <li><button type="button">선택사항 4번</button></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                             <div class="col">
-                                                <div class="input_wrap">
-                                                    <input type="text" class="form-control datepicker end-date"
-                                                        placeholder="" inputmode="none">
-                                                    <button type="button"
-                                                        class="ui-datepicker-trigger endDateBtn">...</button>
-                                                </div><!--readonly-->
+                                                <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="휴대폰번호 입력">
                                             </div>
-                                            <button class="btn btn-input" type="button">버튼명</button>
+                                            <button class="btn btn-input" type="button">인증번호 요청</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group phone">
+                                        <label for="">휴대폰 번호</label>
+                                        <div class="form-row">
+                                            <div class="select-wrap">
+                                                <button class="btn-select">선택사항 2번</button>
+                                                <div class="select-list">
+                                                    <ul>
+                                                        <li><button type="button">선택사항 1번</button></li>
+                                                        <li><button type="button" class="select">선택사항 2번</button></li>
+                                                        <!--기본값-->
+                                                        <li><button type="button">선택사항 3번</button></li>
+                                                        <li><button type="button">선택사항 4번</button></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="휴대폰번호 입력" value="01012345678">
+                                            </div>
+                                            <button class="btn btn-input active" type="button">인증번호 요청</button>
                                         </div>
                                     </div>
                                 </div>

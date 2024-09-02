@@ -21,24 +21,56 @@ $(document).ready(function() {
   });
 
   /** datepicker **/
-  $(".datepicker").datepicker({
-      showOn: "button", // 버튼을 클릭하면 달력이 나타남
-      buttonImageOnly: true,
-      buttonText: "...", // 버튼에 표시될 텍스트
-      dateFormat: "yy-mm-dd" // 날짜 형식
-  });
+  //날짜 유효성 검사
+$('#btnSearch').click(function(){
 
-  // 시작 날짜 버튼 클릭 시 달력 표시
-  $(".startDateBtn").click(function() {
-      $(this).siblings(".start-date").datepicker("show");
-  });
+  var dateFrom = document.getElementById('dateFrom');	//시작일
+  var dateTo = document.getElementById('dateTo');	//종료일
+  var today = new Date();				//오늘 날짜
 
-  // 종료 날짜 버튼 클릭 시 달력 표시
-  $(".endDateBtn").click(function() {
-      $(this).siblings(".end-date").datepicker("show");
-  });
+  dateFrom = new Date(dateFrom.value);
+  var fromYear = dateFrom.getFullYear();
+  var fromMonth = dateFrom.getMonth() + 1;
+  var fromDay = dateFrom.getDate();
 
-  //툴팁
+  //날짜 지정을 하지 않았을 때 NaN이 발생하여 0으로 처리
+  if (isNaN(fromYear) || isNaN(fromMonth) || isNaN(fromDay)){
+    fromYear  = 0;
+    fromMonth = 0;
+    fromDay   = 0;
+  }
+
+	dateFrom = fromYear +'/'+ fromMonth +'/'+fromDay; 
+
+  dateTo = new Date(dateTo.value);
+  var toYear  = dateTo.getFullYear();
+  var toMonth = dateTo.getMonth() + 1;
+  var toDay   = dateTo.getDate();
+
+  //날짜 지정을 하지 않았을 때 NaN이 발생하여 0으로 처리
+  if (isNaN(toYear) || isNaN(toMonth) || isNaN(toDay)){
+  toYear  = 0;
+  toMonth = 0;
+  toDay   = 0;
+  }
+
+    dateTo = toYear +'/'+ toMonth +'/'+toDay;
+
+  //오늘날짜 날짜 형식으로 지정
+  var todayYear  = today.getFullYear(); 	//2020
+  var todayMonth = today.getMonth() + 1;    	//06
+  var todayDay   = today.getDate();  		//11
+  today = todayYear +'/'+ todayMonth +'/'+todayDay;  // 2020/06/11 (형식 지정은 본인 자유)
+
+  //날짜 조회 시, 시작일이 오늘 날짜보다는 크고, 종료일이 시작일보다는 커야하기 때문에 조건을 걸어줌
+  if(dateFrom >= today && dateTo >= dateFrom){
+  	return true;
+  } else {
+ 	 alert("해당 기간의 조회가 불가능합니다.");
+  }
+});//click() end
+
+  /** 툴팁 **/
   $(".info-tooltip").on('click', function(){
     var $this = $(this).parents(".tooltip-wrap");
     $this.toggleClass('on');
@@ -181,95 +213,111 @@ $(document).ready(function() {
   });
 });
 
-// 레이어팝업 높이 판단하여 block와 position 컨트롤
+// 레이어팝업 높이 판단하여 block과 position 컨트롤
 function layerFunc(_target) {
   if (!_target.hasClass('laypop-all')) {
-    if (_target.outerHeight() > $(window).height()) {
-      _target.css({ 'position': 'absolute', 'top': '50px', 'left': getCenterAlignPos($(window).width(), _target.outerWidth()) });
-      addBlock('full');
-    } else {
-      _target.css({ 'position': 'fixed', 'top': getCenterAlignPos($(window).height(), _target.outerHeight()), 'left': getCenterAlignPos($(window).width(), _target.outerWidth()) });
-      addBlock(_target.attr('id') === "loadingLayer" ? 'removeEvent' : (_target.attr('id') === "customAlertLayer" ? "fixed" : ''));
-    }
+      if (_target.outerHeight() > $(window).height()) {
+          console.log('Full screen layer required');
+          addBlock('full');
+      } else {
+          if (_target.attr('id') === "loadingLayer") {
+              console.log('Loading layer detected');
+              addBlock('removeEvent');
+          } else if (_target.attr('id') === "customAlertLayer") {
+              console.log('Custom alert layer detected');
+              addBlock('fixed');
+          } else {
+              console.log('Regular layer');
+              addBlock();
+          }
+      }
+  } else {
+      console.log('Skipping laypop-all class');
   }
 }
 
-// block 처리
+// block 추가 및 삭제
 function addBlock(_full) {
+  console.log('Adding block:', _full);
+  // 블록 추가 로직 필요 시 구현
+  // 예: $('body').append('<div class="block"></div>');
+
+  // close 버튼에 이벤트 추가
   $('.close').on('click', function () {
-    $('.block').trigger('click');
+      $('.block').trigger('click');
   });
 }
 
 function deleteBlock(_full) {
+  console.log('Deleting block:', _full);
   if (_full === 'fixed') {
-    $('.block').fadeOut(300).remove();
+      $('.block').fadeOut(300).remove();
   }
   $('html, .wrap').css({ 'height': '', 'overflow': '' });
   $('body').removeAttr('style');
 }
 
-// messagePopup
+// 메시지 팝업
 function messagePopup(id) {
-  var _target = $('#' + id);
-  currentTop = $(window).scrollTop();
-  $('body').css({ 'position': 'fixed', 'top': -currentTop });
-
-  _target.find('.btn-layer-close, .btn-close, .confirm').on('click', function (e) {
-    e.preventDefault();
-    closePopup(id);
-    $('body').removeAttr('style');
-    $(window).scrollTop(currentTop);
+  const _target = $('#' + id);
+  const currentTop = $(window).scrollTop();
+  $('body').css({ 'position': 'fixed', 'top': -currentTop + 'px' });
+  
+  _target.find('.btn-layer-close, .btn-close, .confirm').on('click', function () {
+      closePopup(id);
+      $('body').css({ 'position': '', 'top': '' });
+      $(window).scrollTop(currentTop);
   });
 
-  if (_target.hasClass('layer-up') || _target.hasClass('type-alert')) {
-    _target.fadeIn(600).addClass("on").focus();
-  } else {
-    _target.fadeIn(600).addClass("on").focus();
-  }
+  _target.fadeIn(600).addClass('on').focus();
 }
 
-// popup
+// 팝업 열기 및 닫기
+let scrollPosition = 0;
+
 function openPopup(id) {
-  var _target = $('#' + id);
-  currentTop = $(window).scrollTop();
-  $('body').css({ 'position': 'fixed', 'top': -currentTop });
+  const $target = $('#' + id);
 
-  layerFunc(_target);
-  _target.removeClass('close').addClass('on').show().focus();
-  _target.find('.btn-layer-close, .btn-close, .confirm').on('click', function (e) {
-    e.preventDefault();
-    closePopupUp(id);
-    $('body').removeAttr('style');
-    $(window).scrollTop(currentTop);
-    _target.removeClass('on');
-  });
+  if ($target.length) {
+      // 현재 스크롤 위치 저장
+      scrollPosition = $(window).scrollTop();
+      console.log('Scroll position saved:', scrollPosition);
 
-  if (_target.has('.ly-select-list').length > 0) {
-    _target.find('.ly-select-list > li > button').on('click', function () {
-      closePopupUp(id);
-      $('body').removeAttr('style');
-      $(window).scrollTop(currentTop);
-      _target.removeClass('show');
-    });
+      showPopup($target);
+  } else {
+      console.error('Target element not found:', id);
   }
 
-  /** 테이블 팝업 **/
-  if (_target.has('.ly-select > .table-type.check').length > 0) {
-    _target.find('.ly-select .table-type.check tbody tr').on('click', function () {
-      closePopupUp(id);
-      $('body').removeAttr('style');
-      $(window).scrollTop(currentTop);
-      _target.removeClass('show');
-    });
+  function showPopup($target) {
+      layerFunc($target);
+      $target.removeClass('close').addClass('on').show().focus();
+
+      // close 버튼에 이벤트 추가
+      $target.find('.btn-layer-close, .btn-close, .confirm').on('click', function () {
+          closePopup(id);
+      });
   }
 }
 
 function closePopup(id) {
-  var _target = $('#' + id);
+  const $target = $('#' + id);
+
   deleteBlock();
-  _target.fadeOut(600).removeClass('on');
-  $(window).scrollTop(currentTop);
+  $target.fadeOut(600).removeClass('on');
+
+  // 스크롤 위치 복원 및 스타일 초기화
+  $('body').css({
+      'overflow': '',
+      'position': '',
+      'width': '',
+      'top': ''
+  });
+
+  if (scrollPosition) {
+      console.log('Restoring scroll position:', scrollPosition);
+      $(window).scrollTop(scrollPosition);
+      scrollPosition = 0; // 초기화
+  }
 }
 
 function closePopupUp(id) {

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datepicker Range with Icon Button</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="form-wrap">
+
+    <div class="datepicker-container">
+        <label for="from">From:</label>
+        <input type="text" id="from" class="datepicker">
+        <button type="button" class="datepicker-button" id="from-button"></button>
+    </div>
+
+    <div class="datepicker-container">
+        <label for="to">To:</label>
+        <input type="text" id="to" class="datepicker">
+        <button type="button" class="datepicker-button" id="to-button"></button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            var dateFormat = "mm/dd/yy",
+                from = $("#from").datepicker({
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    numberOfMonths: 1
+                }).on("change", function() {
+                    to.datepicker("option", "minDate", getDate(this));
+                }),
+                to = $("#to").datepicker({
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    numberOfMonths: 1
+                }).on("change", function() {
+                    from.datepicker("option", "maxDate", getDate(this));
+                });
+
+            function getDate(element) {
+                var date;
+                try {
+                    date = $.datepicker.parseDate(dateFormat, element.value);
+                } catch (error) {
+                    date = null;
+                }
+                return date;
+            }
+
+            // 달력 버튼 클릭 시 Datepicker 열기
+            $("#from-button").on("click", function() {
+                $("#from").datepicker("show");
+            });
+
+            $("#to-button").on("click", function() {
+                $("#to").datepicker("show");
+            });
+        });
+    </script>
+</body>
+</html>

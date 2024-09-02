@@ -45,10 +45,9 @@
                     </div>
                     <div class="code">
                         <section>
-                            <h4>alert</h4>
+                            <h4>popup</h4>
 							<div class="border">
-								<div class="onclick" onclick="messagePopup('lyAlert01')">알럿</div>
-								<div class="onclick" onclick="messagePopup('lyAlert02')">알럿-2button</div>
+								<div class="onclick" onclick="openPopup('PopUp01')">팝업</div>
 							</div>
                         </section>
                     </div>
@@ -73,26 +72,27 @@
     </script>
     <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
 </body>
-<div id="lyAlert01" class="layerpopup type-alert" tabindex="0">
+<div id="PopUp01" class="layerpopup laypop" tabindex="0">
     <div class="content-wrap">
-        <div class="ly-cont-wrap">
-            <p class="tit">Alert 메시지를 입력하세요. 문구가 길어지면 화면도 길어집니다.</p>
-            <p class="tit">꼭 줄바꿈이 필요한 경우 제외하고는 넣지 마세요</p>
+        <div class="pop-header">
+            <h2 class="pop-title">Title</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
         </div>
-        <div class="btn-wrap">
-            <button class="btn btn-bottom confirm" type="button" data-focus="btn-layer-close">확인</button>
+        <div class="ly-con-wrap ly-scroll-con">
+            <div class="scroll">
+                <dl>
+                    <dt class="tit">본문 타이틀 내용이 들어갑니다.</dt>
+                    <dd>
+                        본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다.
+                    </dd>
+                </dl>
+                <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
+            </div>
         </div>
-    </div>
-</div>
-<div id="lyAlert02" class="layerpopup type-alert" tabindex="0">
-    <div class="content-wrap">
-        <div class="ly-cont-wrap">
-            <p class="tit">Alert 메시지를 입력하세요. 문구가 길어지면 화면도 길어집니다.</p>
-            <p class="tit">꼭 줄바꿈이 필요한 경우 제외하고는 넣지 마세요</p>
-        </div>
-        <div class="btn-wrap">
-            <button class="btn btn-close" type="button" data-focus="btn-layer-close">취소</button>
-            <button class="btn btn-bottom confirm" type="button" data-focus="btn-layer-close">확인</button>
+        <div class="bottom-btn-wrap">
+            <div class="btn-wrap">
+                <a href="javascript:void(0);" class="btn btn-primary confirm" data-focus="btn-layer-close">확인</a>
+            </div>
         </div>
     </div>
 </div>

@@ -10,12 +10,12 @@
 	<meta property="og:locale" content="ko_KR" />
 	<meta property="og:type" content="website" />
 
-	<link href="/resources/css/default.css" rel="stylesheet" type="text/css" />
-    <link href="/resources/css/renewal.css" rel="stylesheet" type="text/css" />
+	<link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/renewal.css" rel="stylesheet" type="text/css" />
     
 
-    <script type="text/javascript" src="/resources/js/default.js"></script>
-    <script type="text/javascript" src="/resources/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
 
 </head>
 <style>
@@ -33,153 +33,141 @@
     .btn-wrap > a {  margin-bottom:10px; }
     .flex { display:flex; align-items: center; }
 </style>
-<body style="overflow-y:scroll;">
-    <div class="wrap" style="height:auto;">
+<body>
+    <div class="wrap">
         <div id="contentWrap" class="sub-content">
-            <div class="contents-wrap">
-                <div class="contents guide">
-                    <div class="home">
-                        <a href="../../index.html">홈</a>
-                    </div>
-					<div class="code">
-						<section>
-                            <h4>체크박스</h4>
-                            <div class="border">
-                                <p>다건선택 체크박스</p>
-                                <div class="form-wrap">
-                                    <div class="form-group check-buttons">
-                                        <label for="check-1" class="check-button">
-                                            <input type="checkbox" id="check-1" name="terms">
-                                            <span class="custom-check"></span>
-                                            <span class="text">Check Box OFF</span>
-                                        </label>
-                                        <label for="check-2" class="check-button">
-                                            <input type="checkbox" id="check-2" name="terms" checked>
-                                            <span class="custom-check"></span>
-                                            <span class="text">Check Box ON</span>
-                                        </label>
-                                        <label for="check-3" class="check-button">
-                                            <input type="checkbox" id="check-3" name="terms" disabled="">
-                                            <span class="custom-check"></span>
-                                            <span class="text">Check Box Disabled-checked</span>
+            <div class="contents guide">
+                <div class="home">
+                    <a href="../../index.html">홈</a>
+                </div>
+                <div class="code">
+                    <section>
+                        <h4>체크박스</h4>
+                        <div class="border">
+                            <p>다건선택 체크박스</p>
+                            <div class="form-wrap">
+                                <div class="form-group check-buttons">
+                                    <li>
+                                        <input type="checkbox" id="check-1" name="terms">
+                                        <label for="check-1" class="check-button">Check Box OFF</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="check-2" name="terms" checked>
+                                        <label for="check-2" class="check-button">Check Box ON</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="check-3" name="terms" disabled="">
+                                        <label for="check-3" class="check-button">Check Box Disabled-checked</label>
+                                    </li>
+                                </div>
+                            </div>
+                            <p>단건선택 체크박스(form-group에 one-chk 추가)</p>
+                            <div class="form-wrap">
+                                <ul class="form-group check-buttons">
+                                    <li class="one-chk">
+                                        <input type="checkbox" id="check-4" name="terms">
+                                        <label for="check-4" class="check-button">Check Box OFF</label>
+                                    </li>
+                                    <li class="one-chk">
+                                        <input type="checkbox" id="check-5" name="terms" checked>
+                                        <label for="check-5" class="check-button">Check Box ON</label>
+                                    </li>
+                                    <li class="one-chk">
+                                        <input type="checkbox" id="check-6" name="terms" disabled="">
+                                        <label for="check-6" class="check-button">Check Box Disabled-checked</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p>기본 체크박스 항목에 속하는 부가 체크박스(form-group에 sub-chk 추가)</p>
+                            <div class="form-wrap">
+                                <ul class="form-group check-buttons">
+                                    <li class="sub-chk">
+                                        <input type="checkbox" id="check-7" name="terms">
+                                        <label for="check-7" class="check-button">Check Box OFF</label>
+                                    </li>
+                                    <li class="sub-chk">
+                                        <input type="checkbox" id="check-8" name="terms" checked>
+                                        <label for="check-8" class="check-button">Check Box ON</label>
+                                    </li>
+                                    <li class="sub-chk">
+                                        <input type="checkbox" id="check-9" name="terms" disabled="">
+                                        <label for="check-9" class="check-button">Check Box Disabled-checked</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h4>라디오버튼</h4>
+                        <div class="border">
+                            <p>style1</p>
+                            <div class="form-wrap">
+                                <div class="form-group radio-buttons">
+                                    <div class="radio-group">
+                                        <label for="radio-1" class="radio-button">
+                                            <input type="radio" id="radio-1" name="terms">
+                                            <span class="custom-radio"></span>
+                                            <span class="text">Radio Button OFF</span>
                                         </label>
                                     </div>
-                                </div>
-                                <p>단건선택 체크박스(form-group에 one-chk 추가)</p>
-                                <div class="form-wrap">
-                                    <div class="form-group check-buttons one-chk">
-                                        <label for="check-4" class="check-button">
-                                            <input type="checkbox" id="check-4" name="terms">
-                                            <span class="custom-check"></span>
-                                            <span class="text">Check Box OFF</span>
-                                        </label>
-                                        <label for="check-5" class="check-button">
-                                            <input type="checkbox" id="check-5" name="terms" checked>
-                                            <span class="custom-check"></span>
-                                            <span class="text">Check Box ON</span>
-                                        </label>
-                                        <label for="check-6" class="check-button">
-                                            <input type="checkbox" id="check-6" name="terms" disabled="">
-                                            <span class="custom-check"></span>
-                                            <span class="text">Check Box Disabled-checked</span>
+                                    <div class="radio-group">
+                                        <label for="radio-2" class="radio-button">
+                                            <input type="radio" id="radio-2" name="terms" checked>
+                                            <span class="custom-radio"></span>
+                                            <span class="text">Radio Button ON</span>
                                         </label>
                                     </div>
-                                </div>
-                                <p>기본 체크박스 항목에 속하는 부가 체크박스(form-group에 sub-chk 추가)</p>
-                                <div class="form-wrap">
-                                    <div class="form-group check-buttons sub-chk">
-                                        <label for="check-7" class="check-button">
-                                            <input type="checkbox" id="check-7" name="terms">
-                                            <span class="custom-check"></span>
-                                            <span class="text">Check Box OFF</span>
-                                        </label>
-                                        <label for="check-8" class="check-button">
-                                            <input type="checkbox" id="check-8" name="terms" checked>
-                                            <span class="custom-check"></span>
-                                            <span class="text">Check Box ON</span>
-                                        </label>
-                                        <label for="check-9" class="check-button">
-                                            <input type="checkbox" id="check-9" name="terms" disabled="">
-                                            <span class="custom-check"></span>
-                                            <span class="text">Check Box Disabled-checked</span>
+                                    <div class="radio-group">
+                                        <label for="radio-3" class="radio-button">
+                                            <input type="radio" id="radio-3" name="terms" disabled="">
+                                            <span class="text">Radio Button Disable</span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
-                            <h4>라디오버튼</h4>
-							<div class="border">
-                                <p>style1</p>
-								<div class="form-wrap">
-                                    <div class="form-group radio-buttons">
-                                        <div class="radio-group">
-                                            <label for="radio-1" class="radio-button">
-                                                <input type="radio" id="radio-1" name="terms">
-                                                <span class="custom-radio"></span>
-                                                <span class="text">Radio Button OFF</span>
-                                            </label>
-                                        </div>
-                                        <div class="radio-group">
-                                            <label for="radio-2" class="radio-button">
-                                                <input type="radio" id="radio-2" name="terms" checked>
-                                                <span class="custom-radio"></span>
-                                                <span class="text">Radio Button ON</span>
-                                            </label>
-                                        </div>
-                                        <div class="radio-group">
-                                            <label for="radio-3" class="radio-button">
-                                                <input type="radio" id="radio-3" name="terms" disabled="">
-                                                <span class="custom-radio"></span>
-                                                <span class="text">Radio Button Disable</span>
-                                            </label>
-                                        </div>
+                            <p>style2(form-group에 radio-box 추가)</p>
+                            <div class="form-wrap">
+                                <div class="form-group radio-box radio-buttons">
+                                    <div class="radio-group">
+                                        <label for="radio-4" class="radio-button">
+                                            <input type="radio" id="radio-4" name="whether">
+                                            <span class="custom-radio"></span>
+                                            <span class="text">예</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio-group">
+                                        <label for="radio-5" class="radio-button">
+                                            <input type="radio" id="radio-5" name="whether" checked>
+                                            <span class="custom-radio"></span>
+                                            <span class="text">아니오</span>
+                                        </label>
                                     </div>
                                 </div>
-                                <p>style2(form-group에 radio-box 추가)</p>
-								<div class="form-wrap">
-                                    <div class="form-group radio-box radio-buttons">
-                                        <div class="radio-group">
-                                            <label for="radio-4" class="radio-button">
-                                                <input type="radio" id="radio-4" name="whether">
-                                                <span class="custom-radio"></span>
-                                                <span class="text">예</span>
-                                            </label>
-                                        </div>
-                                        <div class="radio-group">
-                                            <label for="radio-5" class="radio-button">
-                                                <input type="radio" id="radio-5" name="whether" checked>
-                                                <span class="custom-radio"></span>
-                                                <span class="text">아니오</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-							</div>
-                            <h4>toggle</h4>
-                            <div class="border">
-                                <div class="toggle-wrap">
-                                    <input type="checkbox" id="check01">
-                                    <label for="check01">
-                                        <div class="switch-btn">
-                                            <span class="off"></span>
-                                            <span class="on"></span>
-                                            <div class="inside"></div>
-                                        </div>
-                                    </label>
-                                </div>
-                                <!-- <div class="toggle-wrap">
-                                    <input type="checkbox" id="check01">
-                                    <label for="check01">
-                                        <div class="switch-btn">
-                                            <span class="off">OFF</span>
-                                            <span class="on">ON</span>
-                                            <div class="inside"></div>
-                                        </div>
-                                    </label>
-                                </div> -->
                             </div>
-						</section>
-					</div>
-				</div>
+                        </div>
+                        <h4>toggle</h4>
+                        <div class="border">
+                            <div class="toggle-wrap">
+                                <input type="checkbox" id="check01">
+                                <label for="check01">
+                                    <div class="switch-btn">
+                                        <span class="off"></span>
+                                        <span class="on"></span>
+                                        <div class="inside"></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <!-- <div class="toggle-wrap">
+                                <input type="checkbox" id="check01">
+                                <label for="check01">
+                                    <div class="switch-btn">
+                                        <span class="off">OFF</span>
+                                        <span class="on">ON</span>
+                                        <div class="inside"></div>
+                                    </div>
+                                </label>
+                            </div> -->
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
     </div>

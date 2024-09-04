@@ -12,15 +12,15 @@
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:type" content="website" />
 
-    <link href="/resources/css/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <link href="/resources/css/default.css" rel="stylesheet" type="text/css" />
-    <link href="/resources/css/renewal.css" rel="stylesheet" type="text/css" />
-    <link href="/resources/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/renewal.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/datepicker.css" rel="stylesheet" type="text/css" />
 
     
-    <script type="text/javascript" src="/resources/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="/resources/js/jquery-ui-1.12.1.js"></script>
-    <script type="text/javascript" src="/resources/js/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-ui-1.12.1.js"></script>
+    <script type="text/javascript" src="../../resources/js/default.js"></script>
 
 </head>
 <style>
@@ -35,77 +35,75 @@
     .guide .code .border > p { font-size: 14px; font-weight: bold; }
 </style>
 
-<body style="overflow-y:scroll;">
-    <div class="wrap" style="height:auto;">
+<body>
+    <div class="wrap">
         <div id="contentWrap" class="sub-content">
-            <div class="contents-wrap">
-                <div class="contents guide">
-                    <div class="home">
-                        <a href="../../index.html">홈</a>
-                    </div>
-                    <div class="code">
-                        <section>
-                            <h4>CTA : 화면의 프로세스를 진행하는
-                                버튼으로 컨텐츠 영역 하단에 사용</h4>
-                            <div class="border">
-                                <p>CTA02(btn-secondary) CAT01(btn-primary)</p>
-                                <div class="btn-wrap">
-                                    <button type="button" name="button" class="btn btn-primary">이전</button>
-                                    <button type="button" name="button" class="btn btn-secondary">다음</button>
-                                </div>
-                                <p>disabled(button에 disabled추가)</p>
-                                <div class="btn-wrap">
-                                    <button type="button" name="button" class="btn btn-primary disabled">버튼명</button>
-                                </div>
+            <div class="contents guide">
+                <div class="home">
+                    <a href="../../index.html">홈</a>
+                </div>
+                <div class="code">
+                    <section>
+                        <h4>CTA : 화면의 프로세스를 진행하는
+                            버튼으로 컨텐츠 영역 하단에 사용</h4>
+                        <div class="border">
+                            <p>CTA02(btn-secondary) CAT01(btn-primary)</p>
+                            <div class="btn-wrap">
+                                <button type="button" name="button" class="btn btn-primary">이전</button>
+                                <button type="button" name="button" class="btn btn-secondary">다음</button>
                             </div>
-                            <h4>Content Button : 뷰 페이지 에서 콘텐츠 하단에 이전 페이지로(목록) 돌아가는 경우 사용하는 버튼</h4>
-                            <div class="border">
-                                <div class="btn-cont-wrap">
-                                    <button type="button" name="button" class="btn btn-cont">버튼명1</button>
-                                    <button type="button" name="button" class="btn btn-cont">버튼명2</button>
-                                </div>
+                            <p>disabled(button에 disabled추가)</p>
+                            <div class="btn-wrap">
+                                <button type="button" name="button" class="btn btn-primary disabled">버튼명</button>
                             </div>
-                            <h4>Form Button : 인풋, 셀렉트 등의 폼 영역 또는 팝업에서 사용</h4>
-                            <div class="border">
-                                <p style="margin-bottom:20px;">disabled</p>
-                                <div class="form-group">
-                                    <button class="btn btn-input" type="button">버튼명1</button>
-                                </div>
-                                <p style="margin:20px 0">default</p>
-                                <div class="form-group">
-                                    <button class="btn btn-input active" type="button">버튼명2</button>
-                                </div>
+                        </div>
+                        <h4>Content Button : 뷰 페이지 에서 콘텐츠 하단에 이전 페이지로(목록) 돌아가는 경우 사용하는 버튼</h4>
+                        <div class="border">
+                            <div class="btn-cont-wrap">
+                                <button type="button" name="button" class="btn btn-cont">버튼명1</button>
+                                <button type="button" name="button" class="btn btn-cont">버튼명2</button>
                             </div>
-                            <h4>Popup,  Alert 하단에 사용 한다</h4>
-                            <div class="border">
-                                <p style="margin-bottom:20px;">1Button</p>
-                                <div class="btn-wrap">
-                                    <button class="btn btn-bottom" type="button" data-focus="btn-layer-close">확인</button>
-                                </div>
-                                <p style="margin:20px 0;">2Button</p>
-                                <div class="btn-wrap">
-                                    <button class="btn btn-close" type="button">취소</button>
-                                    <button class="btn btn-bottom" type="button" data-focus="btn-layer-close">확인</button>
-                                </div>
+                        </div>
+                        <h4>Form Button : 인풋, 셀렉트 등의 폼 영역 또는 팝업에서 사용</h4>
+                        <div class="border">
+                            <p style="margin-bottom:20px;">disabled</p>
+                            <div class="form-group">
+                                <button class="btn btn-input" type="button">버튼명1</button>
                             </div>
-                            <h4>Top Button 은 아이콘 버튼이며 화면 하단에 위치한다(나중에 고정 필요)</h4>
-                            <div class="border">
-                                <button class="btn btn-top" type="button">탑버튼</button>
+                            <p style="margin:20px 0">default</p>
+                            <div class="form-group">
+                                <button class="btn btn-input active" type="button">버튼명2</button>
                             </div>
-                            <h4>Text Button</h4>
-                            <div class="border">
-                                <p style="margin-bottom:20px;">small text button</p>
-                                <button class="btn btn-text small" type="button">버튼명</button>
-                                <p style="margin:20px 0;">medium text button</p>
-                                <button class="btn btn-text medium">버튼명</button>
+                        </div>
+                        <h4>Popup,  Alert 하단에 사용 한다</h4>
+                        <div class="border">
+                            <p style="margin-bottom:20px;">1Button</p>
+                            <div class="btn-wrap">
+                                <button class="btn btn-bottom" type="button" data-focus="btn-layer-close">확인</button>
                             </div>
-                        </section>
-                    </div>
+                            <p style="margin:20px 0;">2Button</p>
+                            <div class="btn-wrap">
+                                <button class="btn btn-close" type="button">취소</button>
+                                <button class="btn btn-bottom" type="button" data-focus="btn-layer-close">확인</button>
+                            </div>
+                        </div>
+                        <h4>Top Button 은 아이콘 버튼이며 화면 하단에 위치한다(나중에 고정 필요)</h4>
+                        <div class="border">
+                            <button class="btn btn-top" type="button">탑버튼</button>
+                        </div>
+                        <h4>Text Button</h4>
+                        <div class="border">
+                            <p style="margin-bottom:20px;">small text button</p>
+                            <button class="btn btn-text small" type="button">버튼명</button>
+                            <p style="margin:20px 0;">medium text button</p>
+                            <button class="btn btn-text medium">버튼명</button>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
     </div>
-    <script src="/resources/js/default2.js"></script>
+    <script src="../../resources/js/default2.js"></script>
 
     <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
     <script>

@@ -12,15 +12,15 @@
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:type" content="website" />
 
-    <link href="/resources/css/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <link href="/resources/css/default.css" rel="stylesheet" type="text/css" />
-    <link href="/resources/css/renewal.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/renewal.css" rel="stylesheet" type="text/css" />
 
 
-    <script type="text/javascript" src="/resources/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="/resources/js/jquery-ui-1.12.1.js"></script>
-    <script type="text/javascript" src="/resources/js/default.js"></script>
-    <!-- <script type="text/javascript" src="/resources/js/datepicker.js"></script> -->
+    <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-ui-1.12.1.js"></script>
+    <script type="text/javascript" src="../../resources/js/default.js"></script>
+    <!-- <script type="text/javascript" src="../../resources/js/datepicker.js"></script> -->
 
 </head>
 <style>
@@ -33,7 +33,7 @@
     .guide .code .border { margin-bottom: 20px; padding: 20px; border: 1px solid #33333323; border-radius: 15px; }
     .guide .code .border .form-wrap+p { margin-top: 20px; }
 
-    .guide .code .border p { font-size: 16px; font-weight: bold; }
+    .guide .code .border > p { font-size: 16px; font-weight: bold; }
 
     .guide .code .border li {
         padding: 10px;
@@ -56,148 +56,220 @@
     /* .datepicker-ico { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cg data-name='그룹 64955'%3E%3Cpath fill='%23fff' d='M0 0h20v20H0z' data-name='사각형 24327'/%3E%3Cpath fill='%23222' d='M6 11h2v1H6z'/%3E%3Cpath fill='%23222' d='M9 11h2v1H9zM12 11h2v1h-2z' data-name='Rectangle'/%3E%3Cpath fill='none' stroke='%23333' stroke-miterlimit='10' d='M3 7.31V3.37h12.44A1.57 1.57 0 0 1 17 4.95V16H4.56A1.57 1.57 0 0 1 3 14.42V8.9'/%3E%3Cpath fill='none' stroke='%23222' stroke-linecap='square' stroke-miterlimit='10' d='M3.39 6.92H16.6'/%3E%3Cpath fill='none' stroke='%23333' stroke-miterlimit='10' d='M6.11 1v3.16M13.11 1v3.16'/%3E%3C/g%3E%3C/svg%3E")no-repeat center; } */
 </style>
 
-<body style="overflow-y:scroll;">
-    <div class="wrap" style="height:auto;">
+<body>
+    <div class="wrap">
         <div id="contentWrap" class="sub-content">
-            <div class="contents-wrap">
-                <div class="contents guide">
-                    <div class="home">
-                        <a href="../../index.html">홈</a>
-                    </div>
-                    <div class="code">
-                        <p style="margin-bottom:20px; font-weight:700; color:#0F3862;">모든 form-group 너비는 410으로 맞춤</p>
-                        <section>
-                            <h4>INPUT</h4>
-                            <div class="border">
-                                <p>기본</p>
-                                <div class="form-wrap">
-                                    <div class="form-group">
-                                        <label for="">성명</label>
-                                        <input id="" type="text" name="" class="form-control" placeholder="성명">
+            <div class="contents guide">
+                <div class="home">
+                    <a href="../../index.html">홈</a>
+                </div>
+                <div class="code">
+                    <p style="margin-bottom:20px; font-weight:700; color:#0F3862;">모든 form-group 너비는 410으로 맞춤</p>
+                    <section>
+                        <h4>INPUT</h4>
+                        <div class="border">
+                            <p>기본</p>
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <label for="">성명</label>
+                                    <input id="" type="text" name="" class="form-control" placeholder="성명">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">valid</label>
+                                    <input id="" type="text" name="" class="form-control" value="오릭스">
+                                </div>
+                                <!-- <div class="form-group invalid">invalid시 invalid 클래스 적용 필요
+                                    <label for="">invalid</label>
+                                    <input id="" type="text" name="" class="form-control" placeholder="성명">
+                                    <div class="info-txt-wrap dp-none"> dp-none은 invalid 필요할 경우 기본으로 적용 필요
+                                        <p class="info">영문, 숫자, 특수문자를 조합한 8~12자리를 입력해 주세요</p>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="">valid</label>
-                                        <input id="" type="text" name="" class="form-control" value="오릭스">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="">이메일</label>
+                                    <input id="emailInput" type="text" name="" class="form-control" placeholder="이메일을 입력해주세요">
+                                    <div id="emailList"></div>
+                                    <div class="info-txt-wrap">
+                                        <p class="info">영문, 숫자, 특수문자를 조합한 8~12자리를 입력해 주세요</p>
                                     </div>
-                                    <!-- <div class="form-group invalid">invalid시 invalid 클래스 적용 필요
-                                        <label for="">invalid</label>
-                                        <input id="" type="text" name="" class="form-control" placeholder="성명">
-                                        <div class="info-txt-wrap dp-none"> dp-none은 invalid 필요할 경우 기본으로 적용 필요
-                                            <p class="info">영문, 숫자, 특수문자를 조합한 8~12자리를 입력해 주세요</p>
+                                </div> -->
+
+                                <div class="form-group">
+                                    <label for="">Disalbed</label>
+                                    <input id="" type="text" name="" class="form-control" placeholder="성명"
+                                        disabled=""><!--disalbed-->
+                                </div>
+
+                                <div class="form-group accuracy-n">
+                                    <!--invalid시 invalid 클래스 적용 필요-->
+                                    <label for="">오류</label>
+                                    <input id="" type="text" name="" class="form-control" placeholder="성명">
+                                    <div class="info-txt-wrap dp-none"> <!--dp-none은 invalid 필요할 경우 기본으로 적용 필요 -->
+                                        <p class="info">내용을 다시 입력해 주세요</p>
+                                    </div>
+                                </div>
+                                <div class="form-group accuracy-y">
+                                    <!--invalid시 invalid 클래스 적용 필요-->
+                                    <label for="">완료</label>
+                                    <input id="" type="text" name="아이디" class="form-control" value="abckd">
+                                    <div class="info-txt-wrap dp-none"> <!--dp-none은 invalid 필요할 경우 기본으로 적용 필요 -->
+                                        <p class="info">사용 가능한 아이디 입니다</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="">Readonly</label>
+                                    <input id="" type="text" name="" class="form-control" placeholder="성명"
+                                        readonly=""><!--readonly-->
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="">주민등록번호 뒷자리 번호 1하나만 노출일 경우</label>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input id="" type="number" class="form-control" maxlength="6" name="" value="" placeholder="" required="">
+                                        </div>
+                                        <div class="input-hyphen">-</div>
+                                        <div class="col">
+                                            <input id="" type="tel" class="form-control jumin" maxlength="1" placeholder="●" name="" value="" required="">
+                                            <span class="jumintext">●●●●●●</span>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div class="form-group">
-                                        <label for="">이메일</label>
-                                        <input id="emailInput" type="text" name="" class="form-control" placeholder="이메일을 입력해주세요">
-                                        <div id="emailList"></div>
-                                        <div class="info-txt-wrap">
-                                            <p class="info">영문, 숫자, 특수문자를 조합한 8~12자리를 입력해 주세요</p>
+                                <div class="form-group">
+                                    <label for="">아이디</label>
+                                    <input id="" type="text" class="form-control" placeholder="아이디를 입력해주세요">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">비밀번호</label>
+                                    <input id="" type="password" class="form-control" placeholder="비밀번호를 입력해주세요">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">비밀번호 확인</label>
+                                    <input id="" type="password" class="form-control" placeholder="비밀번호 확인해주세요">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="">금액</label>
+                                    <div class="amount">
+                                        <input id="" type="amount" class="form-control amount-num"
+                                            placeholder="금액을 입력해주세요"
+                                            inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                        <span class="amount-txt">원</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="">금액</label>
+                                    <div class="amount">
+                                        <input id="" type="amount" class="form-control amount-num"
+                                            placeholder="금액을 입력해주세요" inputmode="numeric"
+                                            disabled><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
+                                        <span class="amount-txt">원</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="amount">개월 - 입력일 경우</label>
+                                    <div class="amount">
+                                        <input type="number" class="form-control amount-num" id="amount"
+                                            placeholder="기간을 입력해주세요" maxlength="4" oninput="maxLengthCheck(this)">
+                                        <span class="amount-txt">개월</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="amount">%</label>
+                                    <div class="amount">
+                                        <input type="number" class="form-control amount-num" id="amount"
+                                            placeholder="예상 금리를 입력해주세요">
+                                        <span class="amount-txt">%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>datepicker</h4>
+                        <div class="border">
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <label for="">기본</label>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="date" class="form-control datefrom" id="dateFrom" name="from">
                                         </div>
-                                    </div> -->
-
-                                    <div class="form-group">
-                                        <label for="">Disalbed</label>
-                                        <input id="" type="text" name="" class="form-control" placeholder="성명"
-                                            disabled=""><!--disalbed-->
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="">Readonly</label>
-                                        <input id="" type="text" name="" class="form-control" placeholder="성명"
-                                            readonly=""><!--readonly-->
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="">주민등록번호 뒷자리 번호 1하나만 노출일 경우</label>
-                                        <div class="form-row">
-                                            <div class="col">
-                                                <input id="" type="number" class="form-control" maxlength="6" name="" value="" placeholder="" required="">
-                                            </div>
-                                            <div class="input-hyphen">-</div>
-                                            <div class="col">
-                                                <input id="" type="tel" class="form-control jumin" maxlength="1" placeholder="●" name="" value="" required="">
-                                                <span class="jumintext">●●●●●●</span>
-                                            </div>
+                                        <div class="input-hyphen">~</div>
+                                        <div class="col">
+                                            <input type="date" class="form-control datefrom" id="dateTo" name="to">
                                         </div>
+                                        <button class="btn btn-input" name="btnSearch" id="btnSearch" type="button">조회</button>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="">아이디</label>
-                                        <input id="" type="text" class="form-control" placeholder="아이디를 입력해주세요">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">비밀번호</label>
-                                        <input id="" type="password" class="form-control" placeholder="비밀번호를 입력해주세요">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">비밀번호 확인</label>
-                                        <input id="" type="password" class="form-control" placeholder="비밀번호 확인해주세요">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="">금액</label>
-                                        <div class="amount">
-                                            <input id="" type="amount" class="form-control amount-num"
-                                                placeholder="금액을 입력해주세요"
-                                                inputmode="numeric"><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
-                                            <span class="amount-txt">원</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="">금액</label>
-                                        <div class="amount">
-                                            <input id="" type="amount" class="form-control amount-num"
-                                                placeholder="금액을 입력해주세요" inputmode="numeric"
-                                                disabled><!--inputmode="numeric" : 세자리 수마다 콤마 적용-->
-                                            <span class="amount-txt">원</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="amount">개월 - 입력일 경우</label>
-                                        <div class="amount">
-                                            <input type="number" class="form-control amount-num" id="amount"
-                                                placeholder="기간을 입력해주세요" maxlength="4" oninput="maxLengthCheck(this)">
-                                            <span class="amount-txt">개월</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="amount">%</label>
-                                        <div class="amount">
-                                            <input type="number" class="form-control amount-num" id="amount"
-                                                placeholder="예상 금리를 입력해주세요">
-                                            <span class="amount-txt">%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>SELECTBOX</h4>
+                        <div class="border">
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <div class="select-wrap">
+                                        <button class="btn-select">내용을 선택해 주세요</button>
+                                        <div class="select-list">
+                                            <ul>
+                                                <li><button type="button">선택사항 1번</button></li>
+                                                <li><button type="button" class="select">선택사항 2번</button></li>
+                                                <!--기본값-->
+                                                <li><button type="button">선택사항 3번</button></li>
+                                                <li><button type="button">선택사항 4번</button></li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <h4>datepicker</h4>
-                            <div class="border">
-                                <div class="form-wrap">
-                                    <div class="form-group">
-                                        <label for="">기본</label>
-                                        <div class="form-row">
-                                            <div class="col">
-                                                <input type="date" class="form-control datefrom" id="dateFrom" name="from">
-                                            </div>
-                                            <div class="input-hyphen">~</div>
-                                            <div class="col">
-                                                <input type="date" class="form-control datefrom" id="dateTo" name="to">
-                                            </div>
-                                            <button class="btn btn-input" name="btnSearch" id="btnSearch" type="button">조회</button>
+                        </div>
+                        <h4>버튼형(form-control에 inputField 추가)</h4>
+                        <div class="border">
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <label for="" class="essential">기본</label><!--essential 필수일 경우-->
+                                    <div class="form-row"><!--onclick="openPopup('')"-->
+                                        <div class="col">
+                                            <input id="" type="text" class="form-control inputField"
+                                                placeholder="내용을 선택해 주세요">
                                         </div>
+                                        <button class="btn btn-input" type="button">버튼명</button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="essential">비활성</label><!--essential 필수일 경우-->
+                                    <div class="form-row"><!--onclick="openPopup('')"-->
+                                        <div class="col">
+                                            <input id="" type="text" class="form-control inputField"
+                                                placeholder="내용을 선택해 주세요" disabled>
+                                        </div>
+                                        <button class="btn btn-input" type="button" disabled>버튼명</button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="essential">완료</label><!--essential 필수일 경우-->
+                                    <div class="form-row"><!--onclick="openPopup('')"-->
+                                        <div class="col">
+                                            <input id="" type="text" class="form-control inputField"
+                                                value="내용을 입력 했습니다">
+                                        </div>
+                                        <button class="btn btn-input active" type="button">버튼명</button>
                                     </div>
                                 </div>
                             </div>
-                            <h4>SELECTBOX</h4>
-                            <div class="border">
-                                <div class="form-wrap">
-                                    <div class="form-group">
+                        </div>
+                        <h4>예외 케이스</h4>
+                        <div class="border">
+                            <div class="form-wrap">
+                                <div class="form-group phone">
+                                    <label for="">휴대폰 번호</label>
+                                    <div class="form-row">
                                         <div class="select-wrap">
-                                            <button class="btn-select">내용을 선택해 주세요</button>
+                                            <button class="btn-select">통신사 선택</button>
                                             <div class="select-list">
                                                 <ul>
                                                     <li><button type="button">선택사항 1번</button></li>
@@ -208,94 +280,37 @@
                                                 </ul>
                                             </div>
                                         </div>
+                                        <div class="col">
+                                            <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="휴대폰번호 입력">
+                                        </div>
+                                        <button class="btn btn-input" type="button">인증번호 요청</button>
                                     </div>
                                 </div>
-                            </div>
-                            <h4>버튼형(form-control에 inputField 추가)</h4>
-                            <div class="border">
-                                <div class="form-wrap">
-                                    <div class="form-group">
-                                        <label for="" class="essential">기본</label><!--essential 필수일 경우-->
-                                        <div class="form-row"><!--onclick="openPopup('')"-->
-                                            <div class="col">
-                                                <input id="" type="text" class="form-control inputField"
-                                                    placeholder="내용을 선택해 주세요">
-                                            </div>
-                                            <button class="btn btn-input" type="button">버튼명</button>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="" class="essential">비활성</label><!--essential 필수일 경우-->
-                                        <div class="form-row"><!--onclick="openPopup('')"-->
-                                            <div class="col">
-                                                <input id="" type="text" class="form-control inputField"
-                                                    placeholder="내용을 선택해 주세요" disabled>
-                                            </div>
-                                            <button class="btn btn-input" type="button">버튼명</button>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="" class="essential">완료</label><!--essential 필수일 경우-->
-                                        <div class="form-row"><!--onclick="openPopup('')"-->
-                                            <div class="col">
-                                                <input id="" type="text" class="form-control inputField"
-                                                    value="내용을 입력 했습니다">
-                                            </div>
-                                            <button class="btn btn-input active" type="button">버튼명</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>예외 케이스</h4>
-                            <div class="border">
-                                <div class="form-wrap">
-                                    <div class="form-group phone">
-                                        <label for="">휴대폰 번호</label>
-                                        <div class="form-row">
-                                            <div class="select-wrap">
-                                                <button class="btn-select">통신사 선택</button>
-                                                <div class="select-list">
-                                                    <ul>
-                                                        <li><button type="button">선택사항 1번</button></li>
-                                                        <li><button type="button" class="select">선택사항 2번</button></li>
-                                                        <!--기본값-->
-                                                        <li><button type="button">선택사항 3번</button></li>
-                                                        <li><button type="button">선택사항 4번</button></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="휴대폰번호 입력">
-                                            </div>
-                                            <button class="btn btn-input" type="button">인증번호 요청</button>
-                                        </div>
-                                    </div>
 
-                                    <div class="form-group phone">
-                                        <label for="">휴대폰 번호</label>
-                                        <div class="form-row">
-                                            <div class="select-wrap">
-                                                <button class="btn-select">선택사항 2번</button>
-                                                <div class="select-list">
-                                                    <ul>
-                                                        <li><button type="button">선택사항 1번</button></li>
-                                                        <li><button type="button" class="select">선택사항 2번</button></li>
-                                                        <!--기본값-->
-                                                        <li><button type="button">선택사항 3번</button></li>
-                                                        <li><button type="button">선택사항 4번</button></li>
-                                                    </ul>
-                                                </div>
+                                <div class="form-group phone">
+                                    <label for="">휴대폰 번호</label>
+                                    <div class="form-row">
+                                        <div class="select-wrap">
+                                            <button class="btn-select">선택사항 2번</button>
+                                            <div class="select-list">
+                                                <ul>
+                                                    <li><button type="button">선택사항 1번</button></li>
+                                                    <li><button type="button" class="select">선택사항 2번</button></li>
+                                                    <!--기본값-->
+                                                    <li><button type="button">선택사항 3번</button></li>
+                                                    <li><button type="button">선택사항 4번</button></li>
+                                                </ul>
                                             </div>
-                                            <div class="col">
-                                                <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="휴대폰번호 입력" value="01012345678">
-                                            </div>
-                                            <button class="btn btn-input active" type="button">인증번호 요청</button>
                                         </div>
+                                        <div class="col">
+                                            <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="휴대폰번호 입력" value="01012345678">
+                                        </div>
+                                        <button class="btn btn-input active" type="button">인증번호 요청</button>
                                     </div>
                                 </div>
                             </div>
-                        </section>
-                    </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>

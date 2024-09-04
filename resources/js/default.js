@@ -303,7 +303,7 @@ function closePopup(id) {
   const $target = $('#' + id);
 
   deleteBlock();
-  $target.fadeOut(600).removeClass('on');
+  $target.fadeOut(200).removeClass('on');
 
   // 스크롤 위치 복원 및 스타일 초기화
   $('body').css({
@@ -347,13 +347,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // 선택된 항목의 텍스트를 버튼의 텍스트로 설정
                 btn.innerText = event.target.innerText;
                 btn.classList.remove('action');
-                // 선택된 버튼에 "select-ok" 클래스 추가
-                const selectedBtn = document.querySelector('.btn-select.select-ok');
-                if (selectedBtn) {
-                    selectedBtn.classList.remove('select-ok');
-                }
-                btn.classList.add('select-ok');
-                
+
                 // 여기에 check 클래스 추가 로직을 삽입
                 const currentSelected = document.querySelector('.select-list button.check');
                 // 기존에 check 클래스가 적용된 버튼이 있으면 제거

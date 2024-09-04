@@ -12,15 +12,15 @@
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:type" content="website" />
 
-    <link href="/resources/css/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <link href="/resources/css/default.css" rel="stylesheet" type="text/css" />
-    <link href="/resources/css/renewal.css" rel="stylesheet" type="text/css" />
-    <link href="/resources/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/renewal.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/datepicker.css" rel="stylesheet" type="text/css" />
 
     
-    <script type="text/javascript" src="/resources/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="/resources/js/jquery-ui-1.12.1.js"></script>
-    <script type="text/javascript" src="/resources/js/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-ui-1.12.1.js"></script>
+    <script type="text/javascript" src="../../resources/js/default.js"></script>
 
 </head>
 <style>
@@ -31,27 +31,27 @@
 
     /* color css */
     .guide .code .border { margin-bottom: 20px; padding: 20px; border: 1px solid #33333323; border-radius: 15px; }
+    .guide .code .border .onclick { width:100%; color:var(--white); background:var(--primary); }
+    .guide .code .border .onclick + .onclick { margin-top:20px; }
     .guide .code .border .form-wrap+p { margin-top: 20px; }
     .guide .code .border > p { font-size: 14px; font-weight: bold; }
 </style>
 
-<body style="overflow-y:scroll;">
-    <div class="wrap" style="height:auto;">
+<body>
+    <div class="wrap">
         <div id="contentWrap" class="sub-content">
-            <div class="contents-wrap">
-                <div class="contents guide">
-                    <div class="home">
-                        <a href="../../index.html">홈</a>
-                    </div>
-                    <div class="code">
-                        <section>
-                            <h4>alert</h4>
-							<div class="border">
-								<div class="onclick" onclick="messagePopup('lyAlert01')">알럿</div>
-								<div class="onclick" onclick="messagePopup('lyAlert02')">알럿-2button</div>
-							</div>
-                        </section>
-                    </div>
+            <div class="contents guide">
+                <div class="home">
+                    <a href="../../index.html">홈</a>
+                </div>
+                <div class="code">
+                    <section>
+                        <h4>alert</h4>
+                        <div class="border">
+                            <button class="btn onclick" onclick="messagePopup('lyAlert01')">알럿</button>
+                            <button class="btn onclick" onclick="messagePopup('lyAlert02')">알럿-2button</button>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>

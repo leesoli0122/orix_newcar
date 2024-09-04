@@ -12,15 +12,15 @@
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:type" content="website" />
 
-    <link href="/resources/css/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <link href="/resources/css/default.css" rel="stylesheet" type="text/css" />
-    <link href="/resources/css/renewal.css" rel="stylesheet" type="text/css" />
-    <link href="/resources/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/renewal.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/datepicker.css" rel="stylesheet" type="text/css" />
 
     
-    <script type="text/javascript" src="/resources/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="/resources/js/jquery-ui-1.12.1.js"></script>
-    <script type="text/javascript" src="/resources/js/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-ui-1.12.1.js"></script>
+    <script type="text/javascript" src="../../resources/js/default.js"></script>
 
 </head>
 <style>
@@ -31,26 +31,30 @@
 
     /* color css */
     .guide .code .border { margin-bottom: 20px; padding: 20px; border: 1px solid #33333323; border-radius: 15px; }
+    .guide .code .border .onclick { width:100%; color:var(--white); background:var(--primary); }
+    .guide .code .border .onclick + .onclick { margin-top:20px; }
     .guide .code .border .form-wrap+p { margin-top: 20px; }
     .guide .code .border > p { font-size: 14px; font-weight: bold; }
 </style>
 
-<body style="overflow-y:scroll;">
-    <div class="wrap" style="height:auto;">
+<body>
+    <div class="wrap">
         <div id="contentWrap" class="sub-content">
-            <div class="contents-wrap">
-                <div class="contents guide">
-                    <div class="home">
-                        <a href="../../index.html">홈</a>
-                    </div>
-                    <div class="code">
-                        <section>
-                            <h4>popup</h4>
-							<div class="border">
-								<div class="onclick" onclick="openPopup('PopUp01')">팝업</div>
-							</div>
-                        </section>
-                    </div>
+            <div class="contents guide">
+                <div class="home">
+                    <a href="../../index.html">홈</a>
+                </div>
+                <div class="code">
+                    <section>
+                        <h4>팝업-기본</h4>
+                        <div class="border">
+                            <button class="btn onclick" onclick="openPopup('PopUp01')">팝업</button>
+                        </div>
+                        <h4>팝업-scroll</h4>
+                        <div class="border">
+                            <button class="btn onclick" onclick="openPopup('PopUp02')">팝업</button>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
@@ -78,21 +82,93 @@
             <h2 class="pop-title">Title</h2>
             <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
         </div>
-        <div class="ly-con-wrap ly-scroll-con">
-            <div class="scroll">
-                <dl>
-                    <dt class="tit">본문 타이틀 내용이 들어갑니다.</dt>
-                    <dd>
-                        본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다.
-                    </dd>
-                </dl>
-                <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
-            </div>
+        <div class="ly-con-wrap">
+            <dl>
+                <dt class="tit">본문 타이틀 내용이 들어갑니다.</dt>
+                <dd>
+                    본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다.
+                </dd>
+            </dl>
+            <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
         </div>
-        <div class="bottom-btn-wrap">
-            <div class="btn-wrap">
-                <a href="javascript:void(0);" class="btn btn-primary confirm" data-focus="btn-layer-close">확인</a>
-            </div>
+        <div class="btn-wrap">
+            <a href="javascript:void(0);" class="btn btn-primary confirm" data-focus="btn-layer-close">확인</a>
+        </div>
+    </div>
+</div>
+<div id="PopUp02" class="layerpopup laypop" tabindex="0">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">Title</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-con-wrap ly-scroll-con">
+            <dl>
+                <dt class="tit">본문 타이틀 내용이 들어갑니다.</dt>
+                <dd>
+                    본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다.
+                </dd>
+            </dl>
+            <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
+            <dl>
+                <dt class="tit">본문 타이틀 내용이 들어갑니다.</dt>
+                <dd>
+                    본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다.
+                </dd>
+            </dl>
+            <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
+            <dl>
+                <dt class="tit">본문 타이틀 내용이 들어갑니다.</dt>
+                <dd>
+                    본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다.
+                </dd>
+            </dl>
+            <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
+            <dl>
+                <dt class="tit">본문 타이틀 내용이 들어갑니다.</dt>
+                <dd>
+                    본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다.
+                </dd>
+            </dl>
+            <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
+            <dl>
+                <dt class="tit">본문 타이틀 내용이 들어갑니다.</dt>
+                <dd>
+                    본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다.
+                </dd>
+            </dl>
+            <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
+            <dl>
+                <dt class="tit">본문 타이틀 내용이 들어갑니다.</dt>
+                <dd>
+                    본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다.
+                </dd>
+            </dl>
+            <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
+            <dl>
+                <dt class="tit">본문 타이틀 내용이 들어갑니다.</dt>
+                <dd>
+                    본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다.
+                </dd>
+            </dl>
+            <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
+            <dl>
+                <dt class="tit">본문 타이틀 내용이 들어갑니다.</dt>
+                <dd>
+                    본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다.
+                </dd>
+            </dl>
+            <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
+            <dl>
+                <dt class="tit">본문 타이틀 내용이 들어갑니다.</dt>
+                <dd>
+                    본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다.
+                </dd>
+            </dl>
+            <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
+        </div>
+        <div class="btn-wrap">
+            <a href="javascript:void(0);" class="btn btn-primary confirm" data-focus="btn-layer-close">확인</a>
         </div>
     </div>
 </div>

@@ -1,9 +1,10 @@
 
 
-.form-row { display:-ms-flexbox; display:flex; -ms-flex-wrap:nowrap; flex-wrap:nowrap; justify-content:space-between;  /*margin-right:-5px; margin-left:-5px;*/ width:100%; }
+.form-row { display:-ms-flexbox; display:flex; -ms-flex-wrap:nowrap; flex-wrap:nowrap;  /*margin-right:-5px; margin-left:-5px;*/ width:100%; }
 .form-row + .form-row { margin-top:20px; }
 .form-row  + label { margin-top:24px; }
 .form-row + .form-control { margin-top:20px; }
+.form-row .col { width:auto; }
 /** 인풋 **/
 button,
 input { overflow: visible; }
@@ -17,7 +18,7 @@ input[type="month"],
 input[type="search"],
 input[type="email"],
 input[type="number"],
-input[type="amount"]{ display:block; padding:0 16px; min-height:46px; width:100%; box-sizing:border-box; font-size:1rem; line-height:1rem; font-weight:400; font-family:inherit; color:var(--subtitle); background-clip: padding-box; border: 1px solid var(--border2); background:var(--white); -webkit-appearance:none; -moz-appearance:none; appearance:none; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+input[type="amount"]{ display:block; padding:0 16px; min-height:46px; max-width:410px; width:100%; box-sizing:border-box; font-size:1rem; line-height:1rem; font-weight:400; font-family:inherit; color:var(--subtitle); background-clip: padding-box; border: 1px solid var(--border2); background:var(--white); -webkit-appearance:none; -moz-appearance:none; appearance:none; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
 select::-ms-expand { display:none }
 .select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none }
 select, .select-box { outline:none; -webkit-appearance:none; }
@@ -89,14 +90,15 @@ input:valid { color:var(--title); }
 .form-group.accuracy-n .form-control { border-color:var(--error); color:var(--error); }
 .form-group .info-txt-wrap { margin-top:8px; }
 .form-group.accuracy-n .info-txt-wrap .info:before{ content:""; position:absolute; top:50%; transform:translateY(-50%); left:0; display:inline-block; width:16px; height:16px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cg data-name='그룹 65500'%3E%3Cg fill='%23fff' stroke='red' stroke-miterlimit='10' data-name='Oval 2' transform='translate(1 1)'%3E%3Ccircle cx='7' cy='7' r='7' stroke='none'/%3E%3Ccircle cx='7' cy='7' r='7.5' fill='none'/%3E%3C/g%3E%3Cpath fill='red' d='M7 11a1 1 0 1 1 1 1 1 1 0 0 1-1-1Zm.6-2a1 1 0 0 1-.88-.53l-.49-.92A2 2 0 0 1 6 6.63V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.66a2 2 0 0 1-.24.96l-.48.86a1 1 0 0 1-.87.52Z' data-name='Combined Shape'/%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
-.form-group.accuracy-n .info { padding-left:24px; font-size:var(--font14); font-weight:var(--w-regular); line-height:1.31rem; color:var(--error); }
+.form-group.accuracy-n .info { padding-left:24px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--error); }
 .form-group .info-txt-wrap.dp-none { display:none; }
 .form-group.accuracy-n .info-txt-wrap.dp-none,
 .form-group.accuracy-y .info-txt-wrap.dp-none { display:block; }
 
 .form-group.accuracy-y .form-control { border-color:var(--secondary); color:var(--secondary); }
-.form-group.accuracy-y .info-txt-wrap .info:before{ content:""; position:absolute; top:50%; transform:translateY(-50%); left:0; display:inline-block; width:16px; height:16px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cg data-name='그룹 65500'%3E%3Cg fill='%23fff' stroke='%23056ED6' stroke-miterlimit='10' data-name='Oval 2' transform='translate(1 1)'%3E%3Ccircle cx='7' cy='7' r='7' stroke='none'/%3E%3Ccircle cx='7' cy='7' r='7.5' fill='none'/%3E%3C/g%3E%3Cpath fill='%23056ED6' d='M7 11a1 1 0 1 1 1 1 1 1 0 0 1-1-1Zm.6-2a1 1 0 0 1-.88-.53l-.49-.92A2 2 0 0 1 6 6.63V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.66a2 2 0 0 1-.24.96l-.48.86a1 1 0 0 1-.87.52Z' data-name='Combined Shape'/%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
-.form-group.accuracy-y .info { padding-left:24px; font-size:var(--font14); font-weight:var(--w-regular); line-height:1.31rem; color:var(--secondary); }
+.form-group.accuracy-y .info-txt-wrap .info:before,
+.caption::before{ content:""; position:absolute; top:50%; transform:translateY(-50%); left:0; display:inline-block; width:16px; height:16px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cg data-name='그룹 65500'%3E%3Cg fill='%23fff' stroke='%23056ED6' stroke-miterlimit='10' data-name='Oval 2' transform='translate(1 1)'%3E%3Ccircle cx='7' cy='7' r='7' stroke='none'/%3E%3Ccircle cx='7' cy='7' r='7.5' fill='none'/%3E%3C/g%3E%3Cpath fill='%23056ED6' d='M7 11a1 1 0 1 1 1 1 1 1 0 0 1-1-1Zm.6-2a1 1 0 0 1-.88-.53l-.49-.92A2 2 0 0 1 6 6.63V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.66a2 2 0 0 1-.24.96l-.48.86a1 1 0 0 1-.87.52Z' data-name='Combined Shape'/%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
+.form-group.accuracy-y .info { padding-left:24px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--secondary); }
 
 
 /* 기본 */
@@ -109,9 +111,9 @@ input::-webkit-search-results-decoration{ -webkit-appearance:none; display:none;
 
 /** input style **/
 .form-wrap { margin-top:20px; }
-.form-group:not(.form-group.phone, footer .form-group) { max-width:410px; }
+.form-group:not(.form-group.phone, footer .form-group, .form-wrap.table-type .form-group) { max-width:410px; }
 /* .form-group + .form-group:has(>label), */
-.form-group + .form-group { margin-top:24px; }
+.form-group + .form-group:not(.table-type .form-group + .form-group) { margin-top:24px; }
 .form-wrap .form-group + .accordion-cont-wrap { margin-top:20px; }
 .input-box-wrap + .txt-list-wrap { margin-top:20px; }
 
@@ -121,7 +123,7 @@ input::-webkit-search-results-decoration{ -webkit-appearance:none; display:none;
 .form-group.phone .col { max-width:300px; width:100%; }
 
 /* label style */
-.form-group label:not(.check-button,.radio-button) { margin-bottom:10px; }
+.form-group label:not(.check-button,.radio-button, .terms-wrap label) { margin-bottom:10px; }
 
 /** select style**/
 select { background: url('../../images/common/svg/ico_select.svg') no-repeat right 10px center / 16px auto; }
@@ -251,11 +253,11 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 /* 툴팁 */
 .tooltip-wrap { position:relative; display:inline-block; }
-.tooltip-wrap .info-tooltip { display:inline-block; margin:-2px 0; width:22px; height:22px; text-indent:-9999px; overflow:hidden; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cg data-name='그룹 65014'%3E%3Cg data-name='그룹 43503'%3E%3Cg fill='none' stroke='%23757575' data-name='타원 554'%3E%3Ccircle cx='11' cy='11' r='11' stroke='none'/%3E%3Ccircle cx='11' cy='11' r='10.5'/%3E%3C/g%3E%3Cg data-name='레이어 2'%3E%3Cg fill='%23757575' stroke='%23757575' data-name='그룹 65016' transform='translate(8 2.98)'%3E%3Cellipse cx='1.52' cy='1.53' rx='1.52' ry='1.53' transform='translate(2.8)'/%3E%3Cpath d='m2.62 14.04 1.95-8.21-1.06-.87L0 6.56l.63 1.38 2.1-.95-1.95 8.17 1.04.88 3.35-1.44-.6-1.4Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
+.tooltip-wrap .info-tooltip { display:inline-block; margin:-2px 0; width:18px; height:18px; text-indent:-9999px; overflow:hidden; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18'%3E%3Cg data-name='그룹 65014'%3E%3Cg data-name='그룹 43503'%3E%3Cg fill='none' stroke='%23757575' data-name='타원 554'%3E%3Ccircle cx='9' cy='9' r='9' stroke='none'/%3E%3Ccircle cx='9' cy='9' r='8.5'/%3E%3C/g%3E%3Cg data-name='레이어 2'%3E%3Cg fill='%23757575' stroke='%23757575' data-name='그룹 65016' transform='translate(6.27 2.06)'%3E%3Ccircle cx='1.28' cy='1.28' r='1.28' transform='translate(2.35)'/%3E%3Cpath d='m2.2 11.77 1.63-6.89-.9-.73L0 5.5l.53 1.16 1.75-.8-1.63 6.86.88.73 2.8-1.2-.5-1.17Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
 .tooltip-wrap .tooltip-box { z-index:2; display:none; position:absolute; top:40px; left:-20px; padding:32px 32px 24px 20px; transition:all .2s ease; background:var(--white); filter: drop-shadow(0px 0 12px rgba(0, 0, 0, 0.08)); }
 .tooltip-wrap .tooltip-box::before { content: ''; position: absolute; transform:rotate(270deg); top:-20px; left:20px; border-top:10px solid transparent; border-right:10px solid transparent; border-bottom:10px solid transparent; border-left:15px solid var(--white); }
 .tooltip-wrap .tooltip-close { position:absolute; right:8px; top:8px; width:22px; height:22px; border:none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23cccee4' d='M.3.3h18v18H.3z' data-name='사각형 3428'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)' transform='translate(1.7 1.7)'%3E%3Cg data-name='그룹 33768'%3E%3Cg data-name='그룹 1'%3E%3Cpath fill='none' stroke='rgba(102,102,102,0.8)' stroke-linecap='round' d='m4.3 4.3 10 10' data-name='선 113'/%3E%3C/g%3E%3Cg data-name='그룹 33767'%3E%3Cpath fill='none' stroke='rgba(102,102,102,0.8)' stroke-linecap='round' d='m14.3 4.3-10 10' data-name='선 113'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat center; font-size:0; }
-.tooltip-wrap.on .info-tooltip { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cg data-name='그룹 65014'%3E%3Cg data-name='그룹 43503'%3E%3Cg fill='none' stroke='%23056ED6' data-name='타원 554'%3E%3Ccircle cx='11' cy='11' r='11' stroke='none'/%3E%3Ccircle cx='11' cy='11' r='10.5'/%3E%3C/g%3E%3Cg data-name='레이어 2'%3E%3Cg fill='%23056ED6' stroke='%23056ED6' data-name='그룹 65016' transform='translate(8 2.98)'%3E%3Cellipse cx='1.52' cy='1.53' rx='1.52' ry='1.53' transform='translate(2.8)'/%3E%3Cpath d='m2.62 14.04 1.95-8.21-1.06-.87L0 6.56l.63 1.38 2.1-.95-1.95 8.17 1.04.88 3.35-1.44-.6-1.4Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
+.tooltip-wrap.on .info-tooltip { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18'%3E%3Cg data-name='그룹 65014'%3E%3Cg data-name='그룹 43503'%3E%3Cg fill='none' stroke='%23056ED6' data-name='타원 554'%3E%3Ccircle cx='9' cy='9' r='9' stroke='none'/%3E%3Ccircle cx='9' cy='9' r='8.5'/%3E%3C/g%3E%3Cg data-name='레이어 2'%3E%3Cg fill='%23757575' stroke='%23056ED6' data-name='그룹 65016' transform='translate(6.27 2.06)'%3E%3Ccircle cx='1.28' cy='1.28' r='1.28' transform='translate(2.35)'/%3E%3Cpath d='m2.2 11.77 1.63-6.89-.9-.73L0 5.5l.53 1.16 1.75-.8-1.63 6.86.88.73 2.8-1.2-.5-1.17Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
 .tooltip-wrap.on .tooltip-box { width:310px; display:block; }
 .tooltip-wrap.on .tooltip-box .tit { font-size:var(--font14); font-weight:var(--w-bold); color:var(--normal); }
 .tooltip-wrap.on .tooltip-box .txt { font-size:var(--font14); font-weight:var(--w-regular); color:var(--normal); }
@@ -270,7 +272,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
   }
 }
 
-.btn.btn-text.small { position:relative; padding-right:16px!important; font-size:var(--font14); line-height:1.31rem; font-weight:var(--w-regular); border-radius:0; width:initial; color:var(--subtitle); }
+.btn.btn-text.small { position:relative; padding-right:16px!important; height:auto; font-size:var(--font14); line-height:1.31rem; font-weight:var(--w-regular); border-radius:0; width:initial; color:var(--subtitle); }
 .btn.btn-text.small::after { content:""; position:absolute; transform:translateY(-50%); top:50%; right:0; width:14px; height:14px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' stroke='%23b7b7b7' stroke-width='1.5' d='M0 0h15v15H0z' data-name='사각형 3363'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)'%3E%3Cpath fill='none' stroke='%23757575' stroke-linecap='round' stroke-linejoin='round' d='m6.93 3 4.57 4.57-4.57 4.57' data-name='패스 20464'/%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
 .btn.btn-text.medium { position:relative; padding-right:16px!important; font-size:var(--font16); line-height:1.5rem; font-weight:var(--w-regular); border-radius:0; width:initial; color:var(--subtitle); }
 .btn.btn-text.medium::after { content:""; position:absolute; transform:translateY(-50%); top:50%; right:0; width:18px; height:18px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' stroke='%23b7b7b7' stroke-width='1.5' d='M0 0h15v15H0z' data-name='사각형 3363'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)'%3E%3Cpath fill='none' stroke='%23757575' stroke-linecap='round' stroke-linejoin='round' d='m6.93 3 4.57 4.57-4.57 4.57' data-name='패스 20464'/%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
@@ -293,13 +295,13 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .btn.logout-text { padding-top:0; padding:0; border-radius:0; border-bottom:1px solid var(--white);  color:var(--background1); font-size:1rem; line-height:1.188rem; font-weight:500;  }
 
 
-/** ratio/checkbox label 필요한 경우 **/
+/** ratio/checkbox **/
 
 /* ratio/checkbox absolute 필요 */
 .radio-buttons,
 .check-buttons {  display:flex; align-items:center; flex-wrap: wrap; gap:20px; }
 .radio-buttons .radio-button,
-.check-buttons .check-button { cursor:pointer; position:relative; padding-left:34px; font-size:1rem; line-height:1.188rem; color:var(--normal); }
+.check-buttons .check-button { cursor:pointer; position:relative; font-size:var(--font16); color:var(--normal); }
 
 
 /* 기존 ratio/checkbox 버튼 삭제 */
@@ -310,41 +312,104 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .check-buttons  { display:flex; flex-wrap:wrap;}
 .check-buttons > li:first-child { margin-top:0; }
 .check-buttons > li { width:inherit; margin-right:10px;}
-.check-buttons > li input[type="checkbox"] + label { position:relative; padding-left:25px; font-size:var(--font16); }
+.check-buttons > li input[type="checkbox"] + label span { position:relative; padding-left:34px; font-size:var(--font16); color:var(--normal); }
+.check-buttons > li input[type="checkbox"] + label span::before { content:""; position:absolute; left:0; top:50%; transform: translateY(-50%); padding:2px; width:24px; height:24px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg data-name='그룹 85'%3E%3Cg fill='%23fff' stroke='%23ddd' data-name='사각형 171'%3E%3Cpath stroke='none' d='M0 0h23.91v23.91H0z'/%3E%3Cpath fill='none' d='M.5.5h22.91v22.91H.5z'/%3E%3C/g%3E%3Cpath fill='none' d='M0 0h24v24H0Z'/%3E%3Cpath fill='none' d='M4.8 0h14.4A4.8 4.8 0 0 1 24 4.8v14.4a4.8 4.8 0 0 1-4.8 4.8H4.8A4.8 4.8 0 0 1 0 19.2V4.8A4.8 4.8 0 0 1 4.8 0Z' data-name='Vector'/%3E%3Cpath fill='none' stroke='%23ddd' stroke-width='1.5' d='m18.13 8.01-8.5 8.5-3.88-3.86' data-name='Icon feather-check'/%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
+
+/* checked */
 .check-buttons > li input[type="checkbox"]:checked + label { font-weight:var(--w-bold); color:var(--title); }
-.check-buttons > li input[type="checkbox"] + label::before,
-.check-buttons > li input[type="checkbox"]:checked + label::before { content:''; position:absolute; left:0; top:50%; transform: translateY(-50%); width:13px; height:13px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.43' height='10.1'%3E%3Cpath fill='none' stroke='%23086ED6' stroke-width='1.5' d='m12.9.53-8.5 8.5L.53 5.17' data-name='Icon feather-check'/%3E%3C/svg%3E")no-repeat center; }
-.check-buttons > li input[type="checkbox"] + label::before { content:""; position:absolute; left:0; top:50%; transform: translateY(-50%); width:13px; height:13px;; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.43' height='10.1'%3E%3Cpath fill='none' stroke='%23ccc' stroke-width='1.5' d='m12.9.53-8.5 8.5L.53 5.17' data-name='Icon feather-check'/%3E%3C/svg%3E") no-repeat center; }
+.check-buttons > li input[type="checkbox"]:checked + label span::before { content:''; position:absolute; left:0; top:50%; transform: translateY(-50%); width:24px; height:24px;  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg data-name='그룹 85'%3E%3Cg fill='%23056ED6' stroke='%23056ED6' data-name='사각형 171'%3E%3Cpath stroke='none' d='M0 0h23.91v23.91H0z'/%3E%3Cpath fill='none' d='M.5.5h22.91v22.91H.5z'/%3E%3C/g%3E%3Cpath fill='none' d='M0 0h24v24H0Z'/%3E%3Cpath fill='none' d='M4.8 0h14.4A4.8 4.8 0 0 1 24 4.8v14.4a4.8 4.8 0 0 1-4.8 4.8H4.8A4.8 4.8 0 0 1 0 19.2V4.8A4.8 4.8 0 0 1 4.8 0Z' data-name='Vector'/%3E%3Cpath fill='none' stroke='%23fff' stroke-width='1.5' d='m18.13 8.01-8.5 8.5-3.88-3.86' data-name='Icon feather-check'/%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
+
+/* disabled */
+.check-buttons > li input[type="checkbox"]:disabled + label span::before { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg data-name='그룹 85'%3E%3Cg fill='%23ccc' stroke='%23EAEAEA' data-name='사각형 171'%3E%3Cpath stroke='none' d='M0 0h23.91v23.91H0z'/%3E%3Cpath fill='none' d='M.5.5h22.91v22.91H.5z'/%3E%3C/g%3E%3Cpath fill='none' d='M0 0h24v24H0Z'/%3E%3Cpath fill='none' d='M4.8 0h14.4A4.8 4.8 0 0 1 24 4.8v14.4a4.8 4.8 0 0 1-4.8 4.8H4.8A4.8 4.8 0 0 1 0 19.2V4.8A4.8 4.8 0 0 1 4.8 0Z' data-name='Vector'/%3E%3Cpath fill='none' stroke='%23EAEAEA' stroke-width='1.5' d='m18.13 8.01-8.5 8.5-3.88-3.86' data-name='Icon feather-check'/%3E%3C/g%3E%3C/svg%3E")no-repeat center }
 
 /* checkbox가 단건선택일 경우 */
-.check-buttons .one-chk .check-button {  border-radius:50%; }
+.check-buttons > li.one-chk input[type="checkbox"] + label span::before { content:""; position:absolute; left:0; top:50%; transform: translateY(-50%); width:24px; height:24px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='%23fff'%3E%3Cpath d='M12 23.5c-3.07 0-5.96-1.2-8.13-3.37A11.42 11.42 0 0 1 .5 12c0-3.07 1.2-5.96 3.37-8.13A11.42 11.42 0 0 1 12 .5c3.07 0 5.96 1.2 8.13 3.37A11.42 11.42 0 0 1 23.5 12c0 3.07-1.2 5.96-3.37 8.13A11.42 11.42 0 0 1 12 23.5Z'/%3E%3Cpath fill='%23ddd' d='M12 1C9.06 1 6.3 2.14 4.22 4.22A10.93 10.93 0 0 0 1 12c0 2.94 1.14 5.7 3.22 7.78A10.93 10.93 0 0 0 12 23c2.94 0 5.7-1.14 7.78-3.22A10.93 10.93 0 0 0 23 12c0-2.94-1.14-5.7-3.22-7.78A10.93 10.93 0 0 0 12 1m0-1a12 12 0 1 1 0 24 12 12 0 0 1 0-24Z'/%3E%3C/g%3E%3Cpath fill='none' stroke='%23ddd' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' d='m8 13.07 2.75 2.72L16.73 9' data-name='Path 17'/%3E%3C/svg%3E")no-repeat center; }
+
+/* checked */
+.check-buttons > li.one-chk input[type="checkbox"]:checked + label span::before { content:''; position:absolute; left:0; top:50%; transform: translateY(-50%); width:24px; height:24px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='%23086ED6'%3E%3Cpath d='M12 23.5c-3.07 0-5.96-1.2-8.13-3.37A11.42 11.42 0 0 1 .5 12c0-3.07 1.2-5.96 3.37-8.13A11.42 11.42 0 0 1 12 .5c3.07 0 5.96 1.2 8.13 3.37A11.42 11.42 0 0 1 23.5 12c0 3.07-1.2 5.96-3.37 8.13A11.42 11.42 0 0 1 12 23.5Z'/%3E%3Cpath fill='%23086ED6' d='M12 1C9.06 1 6.3 2.14 4.22 4.22A10.93 10.93 0 0 0 1 12c0 2.94 1.14 5.7 3.22 7.78A10.93 10.93 0 0 0 12 23c2.94 0 5.7-1.14 7.78-3.22A10.93 10.93 0 0 0 23 12c0-2.94-1.14-5.7-3.22-7.78A10.93 10.93 0 0 0 12 1m0-1a12 12 0 1 1 0 24 12 12 0 0 1 0-24Z'/%3E%3C/g%3E%3Cpath fill='none' stroke='%23fff' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' d='m8 13.07 2.75 2.72L16.73 9' data-name='Path 17'/%3E%3C/svg%3E")no-repeat center; }
+
+/* disabled */
+.check-buttons > li.one-chk input[type="checkbox"]:disabled + label span::before { content:''; position:absolute; left:0; top:50%; transform: translateY(-50%); width:24px; height:24px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='%23ccc'%3E%3Cpath d='M12 23.5c-3.07 0-5.96-1.2-8.13-3.37A11.42 11.42 0 0 1 .5 12c0-3.07 1.2-5.96 3.37-8.13A11.42 11.42 0 0 1 12 .5c3.07 0 5.96 1.2 8.13 3.37A11.42 11.42 0 0 1 23.5 12c0 3.07-1.2 5.96-3.37 8.13A11.42 11.42 0 0 1 12 23.5Z'/%3E%3Cpath fill='%23EAEAEA' d='M12 1C9.06 1 6.3 2.14 4.22 4.22A10.93 10.93 0 0 0 1 12c0 2.94 1.14 5.7 3.22 7.78A10.93 10.93 0 0 0 12 23c2.94 0 5.7-1.14 7.78-3.22A10.93 10.93 0 0 0 23 12c0-2.94-1.14-5.7-3.22-7.78A10.93 10.93 0 0 0 12 1m0-1a12 12 0 1 1 0 24 12 12 0 0 1 0-24Z'/%3E%3C/g%3E%3Cpath fill='none' stroke='%23EAEAEA' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' d='m8 13.07 2.75 2.72L16.73 9' data-name='Path 17'/%3E%3C/svg%3E")no-repeat center; }
 
 /* checkbox가 기본 체크박스 항목에 속하는 부가 체크박스일 경우  - 적합성 적정성 */
 .check-buttons  { display:flex; flex-wrap:wrap;}
 .check-buttons > li.sub-chk:first-child { margin-top:0; }
 .check-buttons > li.sub-chk { width:inherit; margin-right:10px;}
 .check-buttons > li.sub-chk input[type="checkbox"] + label { position:relative; padding-left:25px; font-size:var(--font16); }
-.check-buttons > li.sub-chk input[type="checkbox"]:checked + label { font-weight:var(--w-bold); color:var(--title); }
-.check-buttons > li.sub-chk input[type="checkbox"] + label::before,
-.check-buttons > li.sub-chk input[type="checkbox"]:checked + label::before { content:''; position:absolute; left:0; top:50%; transform: translateY(-50%); width:13px; height:13px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.43' height='10.1'%3E%3Cpath fill='none' stroke='%23086ED6' stroke-width='1.5' d='m12.9.53-8.5 8.5L.53 5.17' data-name='Icon feather-check'/%3E%3C/svg%3E")no-repeat center; }
-.check-buttons > li.sub-chk input[type="checkbox"] + label::before { content:""; position:absolute; left:0; top:50%; transform: translateY(-50%); width:13px; height:13px;; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.43' height='10.1'%3E%3Cpath fill='none' stroke='%23ccc' stroke-width='1.5' d='m12.9.53-8.5 8.5L.53 5.17' data-name='Icon feather-check'/%3E%3C/svg%3E") no-repeat center; }
+.check-buttons > li.sub-chk input[type="checkbox"] + label::before { content:""; position:absolute; left:0; top:50%; transform: translateY(-50%); width:13px; height:13px;; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.43' height='10.1'%3E%3Cpath fill='none' stroke='%23ddd' stroke-width='1.5' d='m12.9.53-8.5 8.5L.53 5.17' data-name='Icon feather-check'/%3E%3C/svg%3E") no-repeat center; }
 
-/* ratio/checkbox checked 안됐을 경우 */
-.radio-buttons .radio-button .custom-radio { border:6px solid var(--border1); }
-.check-buttons .check-button .custom-check { border:1px solid var(--border1); }
-.radio-buttons .radio-button .custom-radio,
-.check-buttons .check-button .custom-check  { position:absolute; top:50%; left:0; transform:translateY(-50%); height:24px; width:24px; background-color:var(--white);}
-.radio-buttons .radio-button .custom-radio {  border-radius:50%; }
-.check-buttons .check-button .custom-check {  border-radius:4px; }
-.check-buttons .check-button .text,
-.radio-buttons .radio-button .text { font-size:1rem; line-height:1.188rem; }
+/* checked */
+.check-buttons > li.sub-chk input[type="checkbox"]:checked + label { font-weight:var(--w-bold); color:var(--title); }
+.check-buttons > li.sub-chk input[type="checkbox"]:checked + label::before { content:''; position:absolute; left:0; top:50%; transform: translateY(-50%); width:13px; height:13px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.43' height='10.1'%3E%3Cpath fill='none' stroke='%23086ED6' stroke-width='1.5' d='m12.9.53-8.5 8.5L.53 5.17' data-name='Icon feather-check'/%3E%3C/svg%3E")no-repeat center; }
+
+/* disabled */
+.check-buttons > li.sub-chk input[type="checkbox"]:disabled + label { font-weight:var(--w-regular); color:var(--subtitle); }
+.check-buttons > li.sub-chk input[type="checkbox"]:disabled + label::before { content:''; position:absolute; left:0; top:50%; transform: translateY(-50%); width:13px; height:13px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.43' height='10.1'%3E%3Cpath fill='none' stroke='%23ccc' stroke-width='1.5' d='m12.9.53-8.5 8.5L.53 5.17' data-name='Icon feather-check'/%3E%3C/svg%3E")no-repeat center; }
+
+/** 공통 - 약관 **/
+
+/* 약관동의 text */
+fieldset { border:none; }
+.refer-txt { font-size:0.8rem; color:#999999; }
+.refer-txt::before{ content:""; display:inline-block; position:absolute; margin-top:-10px; height:10px; width:100%; background: #F8F8FA; border-top: 1px solid #DDDFE9; }
+
+/*** 체크박스/라디오 ***/
+.terms-area { display:inline-block; max-width:557px; width:100%; border:1px solid var(--border3); }
+.terms-wrap input[type="checkbox"] { display:block; position:absolute; top:0; left:0; width:100%; height:100%; appearance:none; background-color:transparent; -webkit-appearance:none; cursor: pointer; }
+
+.terms-area + .form-group,
+.tit-main-area + .result-wrap { margin-top:40px; }
+
+/* [전체] - 전체체크 */
+.chk-all + .terms-wrap.level2 { margin-top:20px; }
+.terms-wrap.level1 { padding:12px 20px; border-bottom:1px solid var(--border3); }
+.terms-wrap.level1 label > span { padding-left:34px; font-weight:var(--w-regular); color:var(--normal); }
+.terms-wrap.level1 label::before { content:""; position:absolute; left:0; top:50%; transform: translateY(-50%); width:24px; height:24px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='%23fff'%3E%3Cpath d='M12 23.5c-3.07 0-5.96-1.2-8.13-3.37A11.42 11.42 0 0 1 .5 12c0-3.07 1.2-5.96 3.37-8.13A11.42 11.42 0 0 1 12 .5c3.07 0 5.96 1.2 8.13 3.37A11.42 11.42 0 0 1 23.5 12c0 3.07-1.2 5.96-3.37 8.13A11.42 11.42 0 0 1 12 23.5Z'/%3E%3Cpath fill='%23ddd' d='M12 1C9.06 1 6.3 2.14 4.22 4.22A10.93 10.93 0 0 0 1 12c0 2.94 1.14 5.7 3.22 7.78A10.93 10.93 0 0 0 12 23c2.94 0 5.7-1.14 7.78-3.22A10.93 10.93 0 0 0 23 12c0-2.94-1.14-5.7-3.22-7.78A10.93 10.93 0 0 0 12 1m0-1a12 12 0 1 1 0 24 12 12 0 0 1 0-24Z'/%3E%3C/g%3E%3Cpath fill='none' stroke='%23ddd' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' d='m8 13.07 2.75 2.72L16.73 9' data-name='Path 17'/%3E%3C/svg%3E")no-repeat center;; }
+.terms-wrap.level1 label > a { position:relative; z-index:1; }
+.terms-wrap.chk-all input[type="checkbox"]:checked + label::before { content:''; position:absolute; left:0; top:50%; transform: translateY(-50%); width:24px; height:24px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='%23086ED6'%3E%3Cpath d='M12 23.5c-3.07 0-5.96-1.2-8.13-3.37A11.42 11.42 0 0 1 .5 12c0-3.07 1.2-5.96 3.37-8.13A11.42 11.42 0 0 1 12 .5c3.07 0 5.96 1.2 8.13 3.37A11.42 11.42 0 0 1 23.5 12c0 3.07-1.2 5.96-3.37 8.13A11.42 11.42 0 0 1 12 23.5Z'/%3E%3Cpath fill='%23086ED6' d='M12 1C9.06 1 6.3 2.14 4.22 4.22A10.93 10.93 0 0 0 1 12c0 2.94 1.14 5.7 3.22 7.78A10.93 10.93 0 0 0 12 23c2.94 0 5.7-1.14 7.78-3.22A10.93 10.93 0 0 0 23 12c0-2.94-1.14-5.7-3.22-7.78A10.93 10.93 0 0 0 12 1m0-1a12 12 0 1 1 0 24 12 12 0 0 1 0-24Z'/%3E%3C/g%3E%3Cpath fill='none' stroke='%23fff' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' d='m8 13.07 2.75 2.72L16.73 9' data-name='Path 17'/%3E%3C/svg%3E")no-repeat center; }
+.terms-wrap.chk-all input[type="checkbox"]:checked + label span { font-weight:var(--w-bold); color:var(--title); }
+
+/* [필수] - 개별체크 */
+.terms-box { padding:20px; }
+.terms-wrap.level2 + .level2 { margin-top:16px; }
+.terms-wrap.level2 .btn.btn.btn-text.small { position:absolute; right:0; z-index:1; }
+.terms-wrap.level2 + .terms-wrap.bg-box { margin-top:40px; }
+.terms-wrap.level2 + .terms-wrap.bg-box + .terms-wrap.bg-box { margin-top:15px; }
+.terms-wrap.level2 label { padding-left:23px; }
+.terms-wrap.level2 label::before { content:""; position:absolute; left:0; top:50%; transform: translateY(-50%); width:24px; height:24px;; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.43' height='10.1'%3E%3Cpath fill='none' stroke='%23ddd' stroke-width='1.5' d='m12.9.53-8.5 8.5L.53 5.17' data-name='Icon feather-check'/%3E%3C/svg%3E") no-repeat center;  }
+.terms-wrap.level2 label > span { display:inline-block; width:100%; padding-right:26px; color:var(--normal); }
+.terms-wrap.level2 input[type="checkbox"]:checked + label::before { content:''; position:absolute; left:0; top:50%; transform: translateY(-50%); width:24px; height:24px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.43' height='10.1'%3E%3Cpath fill='none' stroke='%23086ED6' stroke-width='1.5' d='m12.9.53-8.5 8.5L.53 5.17' data-name='Icon feather-check'/%3E%3C/svg%3E")no-repeat center; }
+.terms-wrap.level2.no-ico label > span::after { display:none;}
+
+.terms-wrap.level2 fieldset { display:flex; justify-content:space-between; }
+
+
+/* [선택] - 개별체크 */
+.terms-wrap .level3 { width:100%; margin:10px 0; padding:0 30px; font-size:0; }
+.terms-wrap .level3 > div { width:50%; display:inline-block; }
+.terms-wrap .level3 label { width:100%; padding:0; padding-left:30px; }
+.terms-wrap .level3 label::after { display:none; }
+
+.terms-area .terms-agr-wrap { display:inline-block; width:100%; margin-top:50px; }
+.terms-area .terms-agr-wrap .terms-tit { font-weight:600; font-size:1rem; color:#000; margin-bottom:20px; }
+
+/** ratio-기본 **/
+/* .radio-buttons .radio-group { flex:1; position:relative; margin:10px 0; } */
+.radio-buttons .radio-group input { margin-right:10px; }
+.radio-buttons input[type="radio"] { display:none; }
+.radio-buttons input[type="radio"] + label { padding-left:34px; font-weight:var(--w-regular); }
+.radio-buttons input[type="radio"] + label::before { content:''; position:absolute; top:50%; transform: translateY(-50%); left:0; width:24px; height:24px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='%23eaeaea' d='M12 0A12 12 0 1 1 0 12 12 12 0 0 1 12 0Z' data-name='패스 44179'/%3E%3Ccircle cx='5' cy='5' r='5' fill='%23fff' data-name='타원 43' transform='translate(6.9 6.9)'/%3E%3C/svg%3E")no-repeat center; cursor:pointer; }
+
+/* checked */
+.radio-buttons input[type="radio"]:checked + label { font-weight:var(--w-bold); color:var(--title); }
+.radio-buttons input[type="radio"]:checked + label::before { content:''; position:absolute; top:50%; transform: translateY(-50%); left:0; width:24px; height:24px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='%23086ED6' d='M12 0A12 12 0 1 1 0 12 12 12 0 0 1 12 0Z' data-name='패스 44179'/%3E%3Ccircle cx='5' cy='5' r='5' fill='%23fff' data-name='타원 43' transform='translate(6.9 6.9)'/%3E%3C/svg%3E")no-repeat center; cursor:pointer; }
 
 /* form-group에 radio-box가 있을 경우 */
 .radio-buttons.radio-box .radio-group {  width:calc((100% / 2) - 10px); }
 .radio-buttons.radio-box .radio-button { padding:14px 0 14px 50px; width:100%; border:1px solid var(--border1); border-radius:4px; }
-.radio-buttons.radio-box .radio-button .custom-radio { left:16px; }
+.radio-buttons.radio-box input[type="radio"] + label::before { left:16px; }
 
-/* checkbox : on / off 스위치 토글 버튼 */
+/** checkbox : on / off 스위치 토글 버튼 **/
 .toggle-wrap .switch-btn  { display:inline-block; text-align:left; width:40px; height:27px; border-radius:25px; text-align:left; background-color:var(--background1); transition:all 0.2s; cursor:pointer; }
 .toggle-wrap .switch-btn .off { position:absolute; right:12px; font-size:0.66667rem; line-height:27px; color:#999999; }
 .toggle-wrap .switch-btn .on { /*margin-left:12px;*/ position:absolute; left:12px; font-size:0.66667rem;  color:#fff; line-height:27px; opacity:0; transition:all 0.2s; vertical-align:top; }
@@ -357,48 +422,6 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .toggle-wrap span { font-weight:400; color:#666666; font-size:0.77778rem; line-height:1.5;  }
 .toggle-wrap label { display:block; /*width:60px;*/ height:27px; }
 .toggle-wrap { margin-top:0; flex:1 1 auto; }
-
-@media screen and (max-width: 340px) {
-  .wrap.login .check-buttons .check-button .text {
-      font-size:0.875rem; line-height:1rem;
-  }
-}
-
-.radio-buttons .custom-radio:after { content:""; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:8px; height:8px; border-radius:50%; background:var(--white);}
-.check-buttons .custom-check:after { content:""; position:absolute; top:50%; left:50%; transform:translate( -50%, -50%); width:13px; height:13px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.43' height='10.1'%3E%3Cpath fill='none' stroke='%23ccc' stroke-width='1.5' d='m12.9.53-8.5 8.5L.53 5.17' data-name='Icon feather-check'/%3E%3C/svg%3E") no-repeat center; }
-
-/* ratio/checkbox checked 됐을 경우 */
-.radio-buttons .radio-button input[type="radio"]:checked ~ .custom-radio { border:6px solid var(--secondary); }
-.check-buttons .check-button input[type="checkbox"]:checked ~ .custom-check  { border:1px solid var(--secondary); }
-
-.radio-buttons .radio-button input[type="radio"]:checked ~ .custom-radio:after { background-color: var(--white); }
-
-.check-buttons .check-button input[type="checkbox"]:checked ~ .custom-check  { background-color:var(--secondary); }
-.check-buttons .check-button input[type="checkbox"]:checked ~ .custom-check:after {  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.43' height='10.1'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='1.5' d='m12.9.53-8.5 8.5L.53 5.17' data-name='Icon feather-check'/%3E%3C/svg%3E")no-repeat center;  }
-
-.radio-button input[type="radio"]:checked + .custom-radio + .text,
-.check-button input[type="checkbox"]:checked + .custom-check + .text { color:var(--title); font-weight:var(--w-bold); }
-
-/* ratio/checkbox disabed 됐을 경우 */
-.radio-button input[type="radio"]:disabled + .custom-radio + .text { color:var(--normal); }
-.check-buttons .check-button input[type="checkbox"]:disabled + .custom-check { border:1px solid #AAB0B8; background-color:var(--border1); }
-.check-buttons .check-button input[type="checkbox"]:disabled + .custom-check::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.43' height='10.1'%3E%3Cpath fill='none' stroke='%23AAB0B8' stroke-width='1.5' d='m12.9.53-8.5 8.5L.53 5.17' data-name='Icon feather-check'/%3E%3C/svg%3E"); }
-.check-button input[type="checkbox"]:disabled + .custom-check + .text { color:var(--normal); } 
-
-/* background 있는 radio 버튼 */
-.radio-bg-button input[type="radio"] { display:block; position: absolute; top:0; left:0; width:100%; height:100%; appearance:none; -webkit-appearance:none; cursor:pointer; }
-.radio-bg-button input[type="radio"] + label { width:100%; padding:13px 0; background:#FAFAFA; border:1px solid #E5E5E5; font-size:1rem; line-height:1.188rem; font-weight:500; color:var(--inactive); text-align:center; border-radius:8px; }
-.radio-bg-button input[type="radio"]:checked + label { background:#FAFAFA; border:1px solid #0766DD; color:#0766DD; }
-
-.radio-bg-button input[type="radio"] + label .img { position:relative; }
-.radio-bg-button input[type="radio"] + label .img::before { cursor: pointer; position:absolute; content:""; transform:translateY(-50%); top:40%; left:-36px;  width:36px; height:36px; }
-
-.radio-bg-button input[type="radio"] + label .img.businessman::before {  background:url(../../images/common/ic_businessman.png)no-repeat 50%/36px auto; }
-.radio-bg-button input[type="radio"]:checked + label .img.businessman::before {  background:url(../../images/common/ic_businessman_on.png)no-repeat 50%/36px auto; }
-
-.radio-bg-button input[type="radio"] + label .img.individual::before {  background:url(../../images/common/ic_individual.png)no-repeat 50%/36px auto; }
-.radio-bg-button input[type="radio"]:checked + label .img.individual::before {  background:url(../../images/common/ic_individual_on.png)no-repeat 50%/36px auto; }
-.radio-bg-button input[type="radio"] + label.img { padding-left:30px; }
 
 /*** 팝업 ***/
 .layerpopup { position:fixed; top:0; left:0; display:none; overflow-y:auto; width:100%; height:100%; z-index:22; /*background:var(--white);*/ -webkit-overflow-scrolling:touch; outline:none; }
@@ -466,9 +489,11 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .type-alert.on::before { content:''; z-index:-1; position:fixed; left:0; top:0; display:inline-block; width:100%; height:100%; background:#000; opacity:0.3;  }
 .layerpopup.on { z-index:105; }
 
-/****리스트 * pc form과 같이 씀****/
+/**** 리스트 ****/
 .list-wrap > div,
 .list-wrap > li {  padding:0; }
+
+.list-wrap .text-wrap { margin-top:40px; }
 
 .list-wrap > .box-type > div {  padding:30px 0; border-top:2px solid var(--title); background:var(--background2); }
 .list-wrap > .box-type ul > li {  border-left:1px solid var(--border3); font-weight:500; font-size:var(--font-size20); text-align:center; }
@@ -477,21 +502,23 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .list-wrap > .box-type ul > li em { font-size:2.22rem; font-weight:700; padding:0 5px; }
 
 .form-wrap > .table-type > div,
-.list-wrap > .table-type > div{ border-top:2px solid var(--title); }
+.list-wrap > .table-type > div{ border-top:1px solid var(--border3); border-bottom:1px solid var(--border3); }
 .form-wrap > .table-type > div label,
 .list-wrap > .table-type > div dt,
 .list-wrap > .table-type > .box-type div,
 .bulletin.table-type > .col .move { margin:0; padding:20px; background:var(--background2); color:var(--normal); font-weight:700; text-align:center; }
 .form-wrap > .table-type > div .form-group,
-.list-wrap > .table-type > div dd { padding:20px 10px; }
+.list-wrap > .table-type > div dd { padding:20px; }
 .list-wrap > .table-type > div dd.in-b > p{ display:inline-block; margin-left:20px; }
 .list-wrap > .table-type > div dd.in-b > p:first-child { margin-left:0; }
 .list-wrap > .table-type > .box-type div { text-align:left; }
 .box-tit { font-weight:500; }/*2024-03-19추가*/
 
-.form-wrap > .table-type > div.col  .form-group,
-.list-wrap > .table-type > div.col  dl,
+.form-wrap > .table-type > div.col .form-group,
+.list-wrap > .table-type > div.col dl,
 .bulletin.table-type > .col > ul { display:table; width:100%; border-bottom:1px solid var(--border); }
+.list-wrap > .table-type > div.col dl + dl{ border-top:1px solid var(--border3); }
+
 .form-wrap > .table-type > div.col label,
 .list-wrap > .table-type > div.col  dt,
 .list-wrap > .table-type > div.col  dd { width:auto; display:table-cell; }
@@ -606,6 +633,3 @@ input.datefrom:after{ position: absolute; top:50%; right:10px; content: ''; widt
 .tabs-wrap .tab-item.square { height:100%; }
 .tabs-wrap .tab-item.square li {  display:flex; align-items: center; justify-content: center; height:90px; border-radius:10px; }
 .tabs-wrap .tab-item.col-04 li { width: 50%; }
-
-/* tab-content */
-.tab-content-area { margin-top:40px; }

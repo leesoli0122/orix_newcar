@@ -27,7 +27,6 @@
     .guide .code .border { margin-bottom:20px; padding:20px; border:1px solid #33333323; border-radius:15px; }
     .guide .code .border .form-wrap + p { margin-top:20px; }
     .guide .code .border p { font-size:16px; font-weight:bold; }
-    .guide .code .border li { padding:10px; }
     .btn-wrap > span{  display:inline; font-weight:bold; }
     .btn-wrap > button,
     .btn-wrap > a {  margin-bottom:10px; }
@@ -49,15 +48,21 @@
                                 <div class="form-group check-buttons">
                                     <li>
                                         <input type="checkbox" id="check-1" name="terms">
-                                        <label for="check-1" class="check-button">Check Box OFF</label>
+                                        <label for="check-1" class="check-button">
+                                            <span>Check Box OFF</span>
+                                        </label>
                                     </li>
                                     <li>
                                         <input type="checkbox" id="check-2" name="terms" checked>
-                                        <label for="check-2" class="check-button">Check Box ON</label>
+                                        <label for="check-2" class="check-button">
+                                            <span>Check Box ON</span>
+                                        </label>
                                     </li>
                                     <li>
                                         <input type="checkbox" id="check-3" name="terms" disabled="">
-                                        <label for="check-3" class="check-button">Check Box Disabled-checked</label>
+                                        <label for="check-3" class="check-button">
+                                            <span>Check Box Disabled-checked</span>
+                                        </label>
                                     </li>
                                 </div>
                             </div>
@@ -66,15 +71,21 @@
                                 <ul class="form-group check-buttons">
                                     <li class="one-chk">
                                         <input type="checkbox" id="check-4" name="terms">
-                                        <label for="check-4" class="check-button">Check Box OFF</label>
+                                        <label for="check-4" class="check-button">
+                                            <span>Check Box OFF</span>
+                                        </label>
                                     </li>
                                     <li class="one-chk">
                                         <input type="checkbox" id="check-5" name="terms" checked>
-                                        <label for="check-5" class="check-button">Check Box ON</label>
+                                        <label for="check-5" class="check-button">
+                                            <span>Check Box ON</span>
+                                        </label>
                                     </li>
                                     <li class="one-chk">
                                         <input type="checkbox" id="check-6" name="terms" disabled="">
-                                        <label for="check-6" class="check-button">Check Box Disabled-checked</label>
+                                        <label for="check-6" class="check-button">
+                                            <span>Check Box Disabled-checked</span>
+                                        </label>
                                     </li>
                                 </ul>
                             </div>
@@ -102,24 +113,12 @@
                             <div class="form-wrap">
                                 <div class="form-group radio-buttons">
                                     <div class="radio-group">
-                                        <label for="radio-1" class="radio-button">
-                                            <input type="radio" id="radio-1" name="terms">
-                                            <span class="custom-radio"></span>
-                                            <span class="text">Radio Button OFF</span>
-                                        </label>
+                                        <input type="radio" id="radio-1" name="terms">
+                                        <label for="radio-1" class="radio-button">Radio Button1</label>
                                     </div>
                                     <div class="radio-group">
-                                        <label for="radio-2" class="radio-button">
-                                            <input type="radio" id="radio-2" name="terms" checked>
-                                            <span class="custom-radio"></span>
-                                            <span class="text">Radio Button ON</span>
-                                        </label>
-                                    </div>
-                                    <div class="radio-group">
-                                        <label for="radio-3" class="radio-button">
-                                            <input type="radio" id="radio-3" name="terms" disabled="">
-                                            <span class="text">Radio Button Disable</span>
-                                        </label>
+                                        <input type="radio" id="radio-2" name="terms">
+                                        <label for="radio-2" class="radio-button">Radio Button2</label>
                                     </div>
                                 </div>
                             </div>
@@ -127,18 +126,12 @@
                             <div class="form-wrap">
                                 <div class="form-group radio-box radio-buttons">
                                     <div class="radio-group">
-                                        <label for="radio-4" class="radio-button">
-                                            <input type="radio" id="radio-4" name="whether">
-                                            <span class="custom-radio"></span>
-                                            <span class="text">예</span>
-                                        </label>
+                                        <input type="radio" id="radio-3" name="yes/no">
+                                        <label for="radio-3" class="radio-button">예</label>
                                     </div>
                                     <div class="radio-group">
-                                        <label for="radio-5" class="radio-button">
-                                            <input type="radio" id="radio-5" name="whether" checked>
-                                            <span class="custom-radio"></span>
-                                            <span class="text">아니오</span>
-                                        </label>
+                                        <input type="radio" id="radio-4" name="yes/no">
+                                        <label for="radio-4" class="radio-button">아니요</label>
                                     </div>
                                 </div>
                             </div>

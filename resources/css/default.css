@@ -100,7 +100,6 @@ ul, ol, li, dl, dt, dd  { list-style:none; margin:0; padding:0; }
 
 
 label { display: inline-block; font-size:1rem; line-height:1.188rem; color:var(--normal); }
-label:not(label.check-button, .custom-check-label) { margin-bottom:10px; }/*수현*/
 .dp-none { display:none; }
 legend, caption{width:0; height:0; text-indent:-10000px; font-size:0; line-height:0; position:absolute; left:-99999px; }
 table{/*border-collapse:collapse;*/ border-spacing:0; width:100%}
@@ -128,6 +127,8 @@ textarea:valid { color: #212121 !important; }
 /** title **/
 .text-wrap h2 { font-size:var(--font28); font-weight:var(--w-bold); color:var(--title); }
 .text-wrap h3 { margin:10px 0 20px; font-size:var(--font20); font-weight:var(--w-bold); }
+.text-wrap h3.h3-style2 { margin:20px 0 10px; }
+.caption { padding-left:22px; font-size:var(--font14); }
 .text-wrap p.sub-tit { display:block; padding-top:27px; font-size:var(--font22); font-weight:var(--w-regular); color:var(--title); }
 
 

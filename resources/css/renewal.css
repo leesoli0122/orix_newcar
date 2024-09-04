@@ -1,6 +1,7 @@
 
 
 .form-row { display:-ms-flexbox; display:flex; -ms-flex-wrap:nowrap; flex-wrap:nowrap;  /*margin-right:-5px; margin-left:-5px;*/ width:100%; }
+.form-row:not(.form-row.phone) { max-width:410px; }
 .form-row + .form-row { margin-top:20px; }
 .form-row  + label { margin-top:24px; }
 .form-row + .form-control { margin-top:20px; }
@@ -110,7 +111,6 @@ input::-webkit-search-results-decoration{ -webkit-appearance:none; display:none;
 
 
 /** input style **/
-.form-wrap { margin-top:20px; }
 .form-group:not(.form-group.phone, footer .form-group, .form-wrap.table-type .form-group) { max-width:410px; }
 /* .form-group + .form-group:has(>label), */
 .form-group + .form-group:not(.table-type .form-group + .form-group) { margin-top:24px; }
@@ -182,7 +182,7 @@ select:not(.no-style) {
 .input-hyphen { display:flex; align-items:center; justify-content: center; font-size:var(--font14); }
 
 /* 주민등록번호 뒷자리 1개 노출일 경우 */
-.jumintext{ position:absolute; left:34px; top:50%; transform:translate(0, -50%); font-size:var(--font16); font-weight:var(--w-regular); line-height:1.5rem; color:var(--normal);  }
+.jumintext{ position:absolute; left:34px; top:50%; transform:translate(0, -50%); font-size:var(--font16); font-weight:var(--w-regular); color:var(--normal);  }
 
 /* 인풋박스 */
 .input-box-wrap { padding:20px 20px 30px; border:1px solid var(--background2); border-radius: 10px; }
@@ -493,33 +493,26 @@ fieldset { border:none; }
 .list-wrap > div,
 .list-wrap > li {  padding:0; }
 
-.list-wrap .text-wrap { margin-top:40px; }
-
 .list-wrap > .box-type > div {  padding:30px 0; border-top:2px solid var(--title); background:var(--background2); }
 .list-wrap > .box-type ul > li {  border-left:1px solid var(--border3); font-weight:500; font-size:var(--font-size20); text-align:center; }
 .list-wrap > .box-type ul > li span { display:block; }
 .list-wrap > .box-type ul > li span:first-child { margin-bottom:8px; }
 .list-wrap > .box-type ul > li em { font-size:2.22rem; font-weight:700; padding:0 5px; }
 
-.form-wrap > .table-type > div,
+.list-wrap > .table-type { margin-bottom:40px; }
 .list-wrap > .table-type > div{ border-top:1px solid var(--border3); border-bottom:1px solid var(--border3); }
-.form-wrap > .table-type > div label,
 .list-wrap > .table-type > div dt,
 .list-wrap > .table-type > .box-type div,
 .bulletin.table-type > .col .move { margin:0; padding:20px; background:var(--background2); color:var(--normal); font-weight:700; text-align:center; }
-.form-wrap > .table-type > div .form-group,
 .list-wrap > .table-type > div dd { padding:20px; }
 .list-wrap > .table-type > div dd.in-b > p{ display:inline-block; margin-left:20px; }
 .list-wrap > .table-type > div dd.in-b > p:first-child { margin-left:0; }
 .list-wrap > .table-type > .box-type div { text-align:left; }
 .box-tit { font-weight:500; }/*2024-03-19추가*/
-
-.form-wrap > .table-type > div.col .form-group,
 .list-wrap > .table-type > div.col dl,
 .bulletin.table-type > .col > ul { display:table; width:100%; border-bottom:1px solid var(--border); }
 .list-wrap > .table-type > div.col dl + dl{ border-top:1px solid var(--border3); }
 
-.form-wrap > .table-type > div.col label,
 .list-wrap > .table-type > div.col  dt,
 .list-wrap > .table-type > div.col  dd { width:auto; display:table-cell; }
 .list-wrap > .table-type > div.col  dt { width:190px; vertical-align:middle; font-size:var(--font16); font-weight:var(--w-bold); color:var(--title); }
@@ -633,3 +626,13 @@ input.datefrom:after{ position: absolute; top:50%; right:10px; content: ''; widt
 .tabs-wrap .tab-item.square { height:100%; }
 .tabs-wrap .tab-item.square li {  display:flex; align-items: center; justify-content: center; height:90px; border-radius:10px; }
 .tabs-wrap .tab-item.col-04 li { width: 50%; }
+
+/* tab-content */
+.tab-content-area { margin-top:40px; }
+
+/** 확인해 주세요 **/
+.check-plz { margin-top:20px; border-radius:20px 20px 0 0; color:var(--title); background:var(--background4); }
+.check-plz .plz-tit { padding:20px 0 20px 48px; border:1px solid var(--border1); border-radius:20px 20px 0 0; font-size:var(--font16); font-weight:var(--w-bold); background:var(--white); }
+.check-plz .plz-tit::before { content:""; position:absolute; top:50%; transform:translateY(-50%); left:24px; display:block; width:14px; height:18px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='18'%3E%3Cg fill='%23fff' stroke-miterlimit='10' data-name='Rectangle 5'%3E%3Cpath d='m13 16.28-5.5-3.15-.5-.28-.5.28L1 16.28V2a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14.28Z'/%3E%3Cpath fill='%23666' d='M2 2v12.55l5-2.85 5 2.85V2H2m0-2h10a2 2 0 0 1 2 2v16l-7-4-7 4V2C0 .9.9 0 2 0Z'/%3E%3C/g%3E%3Cpath fill='%23666' d='M4 10V8h6v2Zm0-4V4h6v2Z' data-name='Rectangle 6'/%3E%3C/svg%3E")no-repeat center; }
+.check-plz ul { padding:30px 0 30px 24px; }
+.check-plz ul li + li { margin-top:20px; }

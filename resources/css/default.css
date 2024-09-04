@@ -126,12 +126,16 @@ textarea:valid { color: #212121 !important; }
 
 /** title **/
 .text-wrap h2 { font-size:var(--font28); font-weight:var(--w-bold); color:var(--title); }
-.text-wrap h3 { margin:10px 0 20px; font-size:var(--font20); font-weight:var(--w-bold); }
-.text-wrap h3.h3-style2 { margin:20px 0 10px; }
-.caption { padding-left:22px; font-size:var(--font14); }
+.text-wrap h3 { padding:10px 0 20px; font-size:var(--font20); font-weight:var(--w-bold); }
+.text-wrap h3.h3-style2 { padding:20px 0 10px; }
+.caption { padding-left:22px; margin-bottom:20px; font-size:var(--font14); }
 .text-wrap p.sub-tit { display:block; padding-top:27px; font-size:var(--font22); font-weight:var(--w-regular); color:var(--title); }
 
+/** 블릿텍스트 **/
+.bul-hypn > li { display:inline-block; width:100%; padding-left:15px; }
+.bul-hypn > li::before{ content:'-'; position:absolute; left:0; }
 
+/** 헤더 **/
 header#header { position:fixed; top:0; z-index:2; width:100%; background-color:var(--white); border-bottom:1px solid var(--border1); /*box-shadow: 0px 0px 10px 2px #ddd;*/ }
 header#header.scroll { box-shadow: 0px 3px 6px #ddd; }
 header#header .top { padding:20px 0; margin: 0 auto; max-width: 1400px; width: 100%; /*min-width:1200px;*/ height:72px; }

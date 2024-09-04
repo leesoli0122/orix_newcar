@@ -24,8 +24,8 @@
     function toggleChkHandlers() {
         var toggles = document.querySelectorAll('.toggleChk');
 
-        toggles.forEach(function(ques) {
-            ques.addEventListener('click', function() {
+        toggles.forEach(function(toggle) {
+            toggle.addEventListener('click', function() {
                 var toggleCont = this.parentElement.querySelector('.ques-cont');
                 var isOpen = this.classList.toggle('active');
                 toggleCont.classList.toggle('active');

@@ -20,15 +20,13 @@
 </head>
 
 <script>
-  
-
     // toggle
     function toggleChkHandlers() {
         var toggles = document.querySelectorAll('.toggleChk');
 
         toggles.forEach(function(ques) {
             ques.addEventListener('click', function() {
-                var toggleCont = this.parentElement.querySelector('.ques-cont'); 
+                var toggleCont = this.parentElement.querySelector('.ques-cont');
                 var isOpen = this.classList.toggle('active');
                 toggleCont.classList.toggle('active');
 
@@ -43,14 +41,11 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         toggleChkHandlers();
-    });//너무 일찍 실행되어 DOM 요소들을 제대로 찾지 못하는 문제를 방지할 수 있음.
-
-
+    });
 </script>
 
 
 <style>
-
     /** toggle **/
     /* toggle 디폴트*/
     .board-view-wrap > .board-info:first-child { margin-top:0; }

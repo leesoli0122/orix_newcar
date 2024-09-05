@@ -1,0 +1,246 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords">
+    <meta name="description" content="ORIX Capital description">
+
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:type" content="website" />
+
+    <link href="../../resources/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/renewal.css" rel="stylesheet" type="text/css" />
+
+
+    <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-ui-1.12.1.js"></script>
+    <script type="text/javascript" src="../../resources/js/default.js"></script>
+    <!-- <script type="text/javascript" src="../../resources/js/datepicker.js"></script> -->
+
+</head>
+<body>
+    <div class="wrap">
+        <!-- s:header -->
+        <div data-include-path="../INCLUDE/header.html"></div>
+        <!-- //e:header -->
+         <!-- s:contentWrap -->
+        <div id="contentWrap" class="sub-content">
+            <!-- s:subvisual-wrap -->
+            <div class="subvisual-wrap">
+                <div class="breadcrumb-wrap">
+                    <ul>
+                        <li class="home"><a href="javascript:void(0);">홈</a></li>
+                        <li><a href="javascript:void(0);">1depth</a></li>
+                        <li><a href="javascript:void(0);">2depth</a></li>
+                        <li><a href="javascript:void(0);">3depth</a></li>
+                    </ul>
+                </div>
+                <div class="text-wrap">
+                    <h1>페이지 타이틀 </h1>
+                    <p class="sub-tit">페이지 보조 내용이 들어갑니다.</p>
+                </div>
+            </div>
+            <!-- //e:subvisual-wrap -->
+            <!-- s:contents -->
+            <div class="contents">
+                <div class="tabs-wrap">
+                    <div class="tabs">
+                        <ul class="tab-item">
+                            <li class="on" data-tab="tab-cont01"><a href="#none">TAB1</a></li>
+                            <li data-tab="tab-cont02" class=""><a href="#none">TAB2</a></li>
+                            <li data-tab="tab-cont03"><a href="#none">TAB3</a></li>
+                            <li data-tab="tab-cont04" class=""><a href="#none">TAB4</a></li>
+                            <li data-tab="tab-cont05" class=""><a href="#none">TAB5</a></li>
+                         </ul>
+                        <div class="tab-content-area">
+
+                            <div id="tab-cont01" class="tab-content">
+                                <form>
+                                    <div class="text-wrap">
+                                        <h3>1번 본문 타이틀</h3>
+                                    </div>
+                                    <div class="form-wrap table-type">
+                                        <div class="col">
+                                            <dl>
+                                                <dt>약관동의</dt>
+                                                <dd>
+                                                    <div class="terms-area">
+                                                        <div class="terms-wrap level1 chk-all">
+                                                            <fieldset>
+                                                                <input type="checkbox" id="allChk01" name="allChk01" value="" class="check all">
+                                                                <label for="allChk01"><span>휴대폰 폰인인증 약관 전체 동의</span></label>
+                                                            </fieldset>
+                                                        </div>
+                                                        <div class="terms-box">
+                                                            <div class="terms-wrap level2">
+                                                                <button class="btn btn-text small" type="button" onclick="openPopup('termsPop01')">자세히 보기</button>
+                                                                <fieldset>
+                                                                    <input type="checkbox" id="chkEach01" name="check" value="" class="check" terms-pop="lyPullPop02"><!--terms-pop 약관 팝업-->
+                                                                    <label for="chkEach01"><span>[필수] 개인정보 수집 이용 동의</span></label>
+                                                                </fieldset>
+                                                            </div>
+                                                            <div class="terms-wrap level2">
+                                                                <button class="btn btn-text small" type="button">자세히 보기</button>
+                                                                <fieldset>
+                                                                    <input type="checkbox" id="chkEach02" name="check" value="" class="check" terms-pop="lyPullPop01"><!--terms-pop 약관 팝업-->
+                                                                    <label for="chkEach02"><span>[필수] 고유식별 정보 처리 동의</span></label>
+                                                                </fieldset>
+                                                            </div>
+                                                            <div class="terms-wrap level2">
+                                                                <button class="btn btn-text small" type="button">자세히 보기</button>
+                                                                <fieldset>
+                                                                    <input type="checkbox" id="chkEach03" name="check" value="" class="check" terms-pop="lyPullPop03"><!--terms-pop 약관 팝업-->
+                                                                    <label for="chkEach03"><span>[필수] 통신사 이용약관 동의</span></label>
+                                                                </fieldset>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="text-wrap">
+                                        <h3 class="h3-style2">2번 본문 타이틀(caption있을 경우)</h3>
+                                        <p class="caption">2번 본문 타이틀에는 Caption이 들어갑니다</p>
+                                    </div>
+                                    <div class="table-type">
+                                        <div class="col">
+                                            <dl>
+                                                <dt>인증방법</dt>
+                                                <dd class="form-group">
+                                                    <div class="radio-buttons">
+                                                        <div class="radio-group">
+                                                            <input type="radio" id="radio-1" name="terms">
+                                                            <label for="radio-1" class="radio-button">핸드폰 인증</label>
+                                                        </div>
+                                                        <div class="radio-group">
+                                                            <input type="radio" id="radio-2" name="terms">
+                                                            <label for="radio-2" class="radio-button">금융인증서</label>
+                                                        </div>
+                                                        <div class="radio-group">
+                                                            <input type="radio" id="radio-3" name="terms">
+                                                            <label for="radio-3" class="radio-button">공동인증서</label>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>성명</dt>
+                                                <dd class="form-group">
+                                                    <input title="성명" id="" type="text" name="" class="form-control" placeholder="성명">
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>주민등록번호</dt>
+                                                <dd class="form-group">
+                                                    <div class="form-row">
+                                                        <div class="col">
+                                                            <input title="주민등록번호 앞자리" id="" type="number" class="form-control" maxlength="6" name="" value="" placeholder="" required="">
+                                                        </div>
+                                                        <div class="input-hyphen">-</div>
+                                                        <div class="col">
+                                                            <input title="주민등록번호 뒷자리" id="" type="tel" class="form-control jumin" maxlength="1" placeholder="●" name="" value="" required="">
+                                                            <span class="jumintext">●●●●●●</span>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>휴대폰번호</dt>
+                                                <dd class="form-group other">
+                                                    <div class="form-row other">
+                                                        <div class="select-wrap">
+                                                            <button class="btn-select">통신사 선택</button>
+                                                            <div class="select-list">
+                                                                <ul>
+                                                                    <li><button type="button">선택사항 1번</button></li>
+                                                                    <li><button type="button" class="select">선택사항 2번</button></li>
+                                                                    <!--기본값-->
+                                                                    <li><button type="button">선택사항 3번</button></li>
+                                                                    <li><button type="button">선택사항 4번</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <input title="핸드폰번호" id="" type="tel" name="" class="form-control" maxlength="11" placeholder="휴대폰번호 입력">
+                                                        </div>
+                                                        <button class="btn btn-input" type="button">인증번호 요청</button>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>인증번호</dt>
+                                                <dd class="form-group">
+                                                    <input title="인증번호" id="" type="text" name="" class="form-control" placeholder="인증번호 6자리를 입력해 주세요">
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="check-plz">
+                                    <p class="plz-tit">확인해 주세요</p>
+                                    <ul class="bul-hypn">
+                                        <li>이전에 사용했던 암호는 재사용 불가합니다.</li>
+                                        <li>비밀번호는 영문, 숫차 포함 8자리 이상 가능합니다.</li>
+                                    </ul>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button type="button" name="button" class="btn btn-secondary">이전</button>
+                                    <button type="button" name="button" class="btn btn-primary">다음</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //e:contents -->
+        </div>
+        <!-- //e:contentWrap -->
+        <!-- s:footer -->
+        <div data-include-path="../INCLUDE/footer.html"></div>
+        <!-- //e:footer -->
+    </div>
+
+    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
+    <script>
+        $(function () {
+            $('div[data-include-path]').each(function () {
+                var path = $(this).attr('data-include-path');
+                $(this).load(path, function (response, status, xhr) {
+                    if (status == 'error') {
+                        var msg = 'Sory but there was an error:';
+                        $(this).html(msg + xhr.status + '' + xhr.statusText);
+                    }
+                })
+            })
+        })
+    </script>
+    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
+    <div id="termsPop01" class="layerpopup laypop" tabindex="0">
+        <div class="content-wrap">
+            <div class="pop-header">
+                <h2 class="pop-title">개인정보 수집 이용 동의</h2>
+                <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+            </div>
+            <div class="ly-con-wrap">
+                <dl>
+                    <dt class="tit">본문 타이틀 내용이 들어갑니다.</dt>
+                    <dd>
+                        본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다. 본문 내용이 들어갑니다.
+                    </dd>
+                </dl>
+                <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
+            </div>
+            <div class="btn-wrap">
+                <a href="javascript:void(0);" class="btn btn-primary confirm" data-focus="btn-layer-close">확인</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

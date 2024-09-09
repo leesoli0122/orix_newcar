@@ -34,7 +34,7 @@
 
                 <dl>
                     <dt>메모사항</dt>
-                    <dd>2024-08-22 IA기능정의서 기준</dd>
+                    <dd>2024-09-03 IA기능정의서 기준</dd>
                 </dl>
             </div>
 
@@ -150,7 +150,7 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <td rowspan="3">common</td>
+                                <td rowspan="4">common</td>
                                 <td class="fileName"><a href="/views/COMMON/layout.html" target="_blank">layout.html</a></td>
                                 <td>Layout - group</td>
                                 <td>/views/COMMON/layout.html</td>
@@ -168,6 +168,13 @@
                                 <td class="fileName"><a href="/views/COMMON/result.html" target="_blank">result.html</a></td>
                                 <td>result</td>
                                 <td>/views/COMMON/result.html</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="fileName"><a href="/views/COMMON/table.html" target="_blank">table.html</a></td>
+                                <td>table</td>
+                                <td>/views/COMMON/table.html</td>
                                 <td></td>
                                 <td></td>
                             </tr>
@@ -269,14 +276,14 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>관리자신청</td>
+                                <td>사용자신청</td>
                                 <td></td>
                                 <td>휴대폰본인인증</td>
                                 <td class="fileName"><a href="" target="_blank"></a></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td>hidden button 또는 url 메일발송으로 처리</td>
+                                <td>등록된 전화번호로만 신청가능</td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -286,7 +293,7 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
+                                <td>완료안내 팝업</td>
                             </tr>
                         </tbody>
                     </table>
@@ -325,7 +332,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td rowspan="8">메인</td>
+                                <td rowspan="6">메인</td>
                                 <td>바로가기</td>
                                 <td></td>
                                 <td></td>
@@ -336,17 +343,7 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>리스</td>
-                                <td></td>
-                                <td></td>
-                                <td class="fileName"><a href="" target="_blank"></a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>렌터카</td>
+                                <td>견적</td>
                                 <td></td>
                                 <td></td>
                                 <td class="fileName"><a href="" target="_blank"></a></td>
@@ -366,7 +363,7 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>견적리스트</td>
+                                <td>상담진행</td>
                                 <td></td>
                                 <td></td>
                                 <td class="fileName"><a href="" target="_blank"></a></td>
@@ -383,20 +380,10 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
+                                <td>나의실적으로 이동</td>
                             </tr>
                             <tr>
                                 <td>공지사항</td>
-                                <td></td>
-                                <td></td>
-                                <td class="fileName"><a href="" target="_blank"></a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>나의일정</td>
                                 <td></td>
                                 <td></td>
                                 <td class="fileName"><a href="" target="_blank"></a></td>
@@ -410,9 +397,9 @@
                 </div>
                 <!-- e: 메인 -->
 
-                <!-- s: 신용조회동의요청 -->
+                <!-- s: 견적내기 -->
                 <div class="guide">
-                    <h3 class="tit">신용조회동의요청</h3>
+                    <h3 class="tit">견적내기</h3>
                     <summary></summary>
                     <table>
                         <caption></caption>
@@ -442,8 +429,8 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td rowspan="3">신용조회동의요청</td>
-                                <td>목록</td>
+                                <td rowspan="4">견적내기</td>
+                                <td>렌터카 견적내기</td>
                                 <td></td>
                                 <td></td>
                                 <td class="fileName"><a href="" target="_blank"></a></td>
@@ -452,77 +439,10 @@
                                 <td></td>
                                 <td>또는 견적리스트에 레이어 팝업 형식으로</td>
                             </tr>
-                            <tr>
-                                <td></td>
-                                <td>상세보기-견적신청</td>
-                                <td></td>
-                                <td class="fileName"><a href="" target="_blank"></a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>등록</td>
-                                <td></td>
-                                <td></td>
-                                <td class="fileName"><a href="" target="_blank"></a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- e: 신용조회동의요청 -->
-
-                <!-- s: 견적 -->
-                <div class="guide">
-                    <h3 class="tit">견적</h3>
-                    <summary></summary>
-                    <table>
-                        <caption></caption>
-                        <colgroup>
-                            <col width="12%">
-                            <col width="10%">
-                            <col width="8%">
-                            <col width="10%">
-                            <col width="15%">
-                            <col width="8%">
-                            <col width="8%">
-                            <col width="8%">
-                            <col width="*">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col">1depth</th>
-                                <th scope="col">2depth</th>
-                                <th scope="col">3depth</th>
-                                <th scope="col">step/tap</th>
-                                <th scope="col" class="fileName">화면ID</th>
-                                <th scope="col">담당</th>
-                                <th scope="col">날짜</th>
-                                <th scope="col">상태</th>
-                                <th scope="col">비고</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td rowspan="3">견적</td>
-                                <td>목록</td>
-                                <td></td>
-                                <td></td>
-                                <td class="fileName"><a href="" target="_blank"></a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
                             <br>
+                                <td>오토리스 견적내기</td>
                                 <td></td>
-                                <td>상세보기</td>
-                                <td>오릭스 신청 / 렌터카 신청</br>재견적</br>삭제</td>
+                                <td></td>
                                 <td class="fileName"><a href="" target="_blank"></a></td>
                                 <td></td>
                                 <td></td>
@@ -530,9 +450,18 @@
                                 <td></td>
                             </tr>
                             <tr>
+                                <td rowspan="2">선구매</td>
+                                <td>list</td>
                                 <td></td>
-                                <td>등록</td>
-                                <td>대상구분(특판/대리점)/고객구분(개인/개인사업자/법인)</br>오토리스 신청/렌터카 시청/가견적</td>
+                                <td class="fileName"><a href="" target="_blank"></a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>view</td>
+                                <td></td>
                                 <td class="fileName"><a href="" target="_blank"></a></td>
                                 <td></td>
                                 <td></td>
@@ -542,11 +471,11 @@
                         </tbody>
                     </table>
                 </div>
-                <!-- e: 견적 -->
+                <!-- e: 견적내기 -->
 
-                <!-- s: 오토리스 -->
+                <!-- s: 현황조회 -->
                 <div class="guide">
-                    <h3 class="tit">오토리스</h3>
+                    <h3 class="tit">현황조회</h3>
                     <summary></summary>
                     <table>
                         <caption></caption>
@@ -576,9 +505,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td rowspan="6">오토리스</td>
-                                <td>발주</td>
-                                <td>목록</td>
+                                <td rowspan="10">현황조회</td>
+                                <td rowspan="2">견젹</td>
+                                <td>view</td>
                                 <td></td>
                                 <td class="fileName"><a href="" target="_blank"></a></td>
                                 <td></td>
@@ -587,28 +516,7 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td>상세보기</td>
-                                <td></td>
-                                <td class="fileName"><a href="" target="_blank"></a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>실행</td>
-                                <td>목록</td>
-                                <td></td>
-                                <td class="fileName"><a href="" target="_blank"></a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>차량출고시점</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>상세보기</td>
+                                <td>list</td>
                                 <td></td>
                                 <td class="fileName"><a href="" target="_blank"></a></td>
                                 <td></td>
@@ -617,8 +525,8 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>완료</td>
-                                <td>목록</td>
+                                <td rowspan="2">심사</td>
+                                <td>list</td>
                                 <td></td>
                                 <td class="fileName"><a href="" target="_blank"></a></td>
                                 <td></td>
@@ -627,8 +535,64 @@
                                 <td></td>
                             </tr>
                             <tr>
+                                <td>view</td>
                                 <td></td>
-                                <td>상세보기</td>
+                                <td class="fileName"><a href="" target="_blank"></a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">발주</td>
+                                <td>list</td>
+                                <td></td>
+                                <td class="fileName"><a href="" target="_blank"></a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>view</td>
+                                <td></td>
+                                <td class="fileName"><a href="" target="_blank"></a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">펀딩</td>
+                                <td>list</td>
+                                <td></td>
+                                <td class="fileName"><a href="" target="_blank"></a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>view</td>
+                                <td></td>
+                                <td class="fileName"><a href="" target="_blank"></a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">인도</td>
+                                <td>list</td>
+                                <td></td>
+                                <td class="fileName"><a href="" target="_blank"></a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>view</td>
                                 <td></td>
                                 <td class="fileName"><a href="" target="_blank"></a></td>
                                 <td></td>
@@ -639,11 +603,11 @@
                         </tbody>
                     </table>
                 </div>
-                <!-- e: 오토리스 -->
+                <!-- e: 현황조회 -->
 
-                <!-- s: 렌터카 -->
+                <!-- s: 고객센터 -->
                 <div class="guide">
-                    <h3 class="tit">렌터카</h3>
+                    <h3 class="tit">고객센터</h3>
                     <summary></summary>
                     <table>
                         <caption></caption>
@@ -673,9 +637,47 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td rowspan="6">렌터카</td>
-                                <td>발주</td>
-                                <td>목록</td>
+                                <td rowspan="7">고객센터</td>
+                                <td rowspan="2">공지사항</td>
+                                <td>list</td>
+                                <td></td>
+                                <td class="fileName"><a href="/views/SERVICE/ORIX-NCR-NTE-001.html" target="_blank">ORIX-NCR-NTE-001</a></td>
+                                <td>이솔</td>
+                                <td>2024.09.09</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>view</td>
+                                <td></td>
+                                <td class="fileName"><a href="/views/SERVICE/ORIX-NCR-NTE-002.html" target="_blank">ORIX-NCR-NTE-002</a></td>
+                                <td>이솔</td>
+                                <td>2024.09.06</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">자료실</td>
+                                <td>list</td>
+                                <td></td>
+                                <td class="fileName"><a href="/views/SERVICE/ORIX-NCR-REF-001.html" target="_blank">ORIX-NCR-REF-001</a></td>
+                                <td>이솔</td>
+                                <td>2024.09.09</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>view</td>
+                                <td></td>
+                                <td class="fileName"><a href="/views/SERVICE/ORIX-NCR-REF-002.html" target="_blank">ORIX-NCR-REF-002</a></td>
+                                <td>이솔</td>
+                                <td>2024.09.09</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>FAQ</td>
+                                <td></td>
                                 <td></td>
                                 <td class="fileName"><a href="" target="_blank"></a></td>
                                 <td></td>
@@ -684,8 +686,8 @@
                                 <td></td>
                             </tr>
                             <tr>
+                                <td>자동차세 계산하기</td>
                                 <td></td>
-                                <td>상세보기</td>
                                 <td></td>
                                 <td class="fileName"><a href="" target="_blank"></a></td>
                                 <td></td>
@@ -694,38 +696,8 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>실행</td>
-                                <td>목록</td>
+                                <td>금융계산기</td>
                                 <td></td>
-                                <td class="fileName"><a href="" target="_blank"></a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>차량출고시점</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>상세보기</td>
-                                <td></td>
-                                <td class="fileName"><a href="" target="_blank"></a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>완료</td>
-                                <td>목록</td>
-                                <td></td>
-                                <td class="fileName"><a href="" target="_blank"></a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>상세보기</td>
                                 <td></td>
                                 <td class="fileName"><a href="" target="_blank"></a></td>
                                 <td></td>
@@ -736,7 +708,7 @@
                         </tbody>
                     </table>
                 </div>
-                <!-- e: 렌터카 -->
+                <!-- e: 고객센터 -->
 
                 <!-- s: 마이페이지 -->
                 <div class="guide">
@@ -770,7 +742,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td rowspan="24">마이페이지</td>
+                                <td rowspan="23">마이페이지</td>
                                 <td>실적조회</td>
                                 <td>팀실적조회</td>
                                 <td></td>
@@ -905,16 +877,6 @@
                                 <td>등록</td>
                                 <td></td>
                                 <td class="fileName"><a href="" target="_blank"></a></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>알럿</td>
-                                <td></td>
-                                <td class="fileName"><a href="" target="_blank"></a>ORIX-NCR-ETD-003_1</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>

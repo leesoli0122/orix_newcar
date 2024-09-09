@@ -12,104 +12,92 @@
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:type" content="website" />
 
-    <link href="../../resources/css/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
-    <link href="../../resources/css/renewal.css" rel="stylesheet" type="text/css" />
-    <link href="../../resources/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/ui_common.css" rel="stylesheet" type="text/css" />
 
-    
+    <script type="text/javascript" src="../../resources/js/jquery.js"></script>
     <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="../../resources/js/jquery-ui-1.12.1.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui_common.js"></script>
     <script type="text/javascript" src="../../resources/js/default.js"></script>
-
 </head>
 <style>
-    .contents.guide { padding: 15px; }
-    .guide .home { margin-bottom: 10px; }
-    .guide .home a { display: block; width: 24px; height: 24px; font-size: 0; background: url("../../index_home.png")no-repeat center center; }
-    .guide .code h4 { margin-bottom: 5px; }
+    h4 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #5474C0;
+        margin: 20px 0 !important;
+    }
+    h3 { font-size:18px; font-weight:600; margin:20px 0; }
 
-    /* color css */
-    .guide .code .border { margin-bottom: 20px; padding: 20px; border: 1px solid #33333323; border-radius: 15px; }
-    .guide .code .border .form-wrap+p { margin-top: 20px; }
-    .guide .code .border > p { font-size: 14px; font-weight: bold; }
+    .wrap {
+        padding: 30px;
+    }
 </style>
 
 <body>
     <div class="wrap">
         <div id="contentWrap" class="sub-content">
-            <div class="contents guide">
-                <div class="home">
-                    <a href="../../index.html">홈</a>
+            <div class="contents">
+
+                <h4>CTA02(btn-secondary) / CAT01(btn-primary) - 하단 버튼</h4>
+                <div class="btn-wrap bottom">
+                    <button type="button" name="button" class="btn btn-secondary">이전</button>
+                    <button type="button" name="button" class="btn btn-primary">다음</button>
                 </div>
-                <div class="code">
-                    <section>
-                        <h4>CTA : 화면의 프로세스를 진행하는
-                            버튼으로 컨텐츠 영역 하단에 사용</h4>
-                        <div class="border">
-                            <p>CTA02(btn-secondary) CAT01(btn-primary)</p>
-                            <div class="btn-wrap">
-                                <button type="button" name="button" class="btn btn-primary">이전</button>
-                                <button type="button" name="button" class="btn btn-secondary">다음</button>
-                            </div>
-                            <p>disabled(button에 disabled추가)</p>
-                            <div class="btn-wrap">
-                                <button type="button" name="button" class="btn btn-primary disabled">버튼명</button>
-                            </div>
-                        </div>
-                        <h4>Content Button : 뷰 페이지 에서 콘텐츠 하단에 이전 페이지로(목록) 돌아가는 경우 사용하는 버튼(btn-cont)</h4>
-                        <div class="border">
-                            <div class="btn-cont-wrap">
-                                <button type="button" name="button" class="btn btn-cont">버튼명1</button>
-                                <button type="button" name="button" class="btn btn-cont">버튼명2</button>
-                            </div>
-                        </div>
-                        <h4>Form Button : 인풋, 셀렉트 등의 폼 영역 또는 팝업에서 사용(btn-input)</h4>
-                        <div class="border">
-                            <p style="margin-bottom:20px;">disabled</p>
-                            <div class="form-group">
-                                <button class="btn btn-input" type="button">버튼명1</button>
-                            </div>
-                            <p style="margin:20px 0">default</p>
-                            <div class="form-group">
-                                <button class="btn btn-input active" type="button">버튼명2</button>
-                            </div>
-                        </div>
-                        <h4>Popup,  Alert 하단에 사용 한다(btn-bottom, btn-close)</h4>
-                        <div class="border">
-                            <p style="margin-bottom:20px;">1Button</p>
-                            <div class="btn-wrap">
-                                <button class="btn btn-bottom" type="button" data-focus="btn-layer-close">확인</button>
-                            </div>
-                            <p style="margin:20px 0;">2Button</p>
-                            <div class="btn-wrap">
-                                <button class="btn btn-close" type="button">취소</button>
-                                <button class="btn btn-bottom" type="button" data-focus="btn-layer-close">확인</button>
-                            </div>
-                        </div>
-                        <h4>Top Button 은 아이콘 버튼이며 화면 하단에 위치한다(나중에 고정 필요 btn-top)</h4>
-                        <div class="border">
-                            <button class="btn btn-top" type="button">탑버튼</button>
-                        </div>
-                        <h4>Text Button(btn-text)</h4>
-                        <div class="border">
-                            <p style="margin-bottom:10px;">text-underline-btn</p>
-                            <button class="btn btn-text">삭제</button>
-                            <p style="margin-bottom:20px;">small text button(.btn-text.small)</p>
-                            <button class="btn btn-text small" type="button">버튼명</button>
-                            <p style="margin:20px 0;">medium text button(.btn-text.medium)</p>
-                            <button class="btn btn-text medium">버튼명</button>
-                        </div>
-                        <h4>button안에 아이콘있을 경우(btn-icon)</h4>
-                        <div class="border">
-                            <button class="btn btn-icon">등록하기</button>
-                        </div>
-                    </section>
+
+                <h4>Disabled-CTA01(btn-primary.disabled) - 하단 버튼</h4>
+                <div class="btn-wrap bottom">
+                    <button type="button" name="button" class="btn btn-primary disabled">버튼명</button>
                 </div>
+
+                <h4>Contents Button(btn-cont) : 컨텐츠 버튼</h4>
+                <div class="btn-wrap cont">
+                    <button type="button" name="button" class="btn btn-cont">버튼명1</button>
+                    <button type="button" name="button" class="btn btn-cont">버튼명2</button>
+                </div>
+
+                <h4>Form Button(btn-input / btn-input.active) : 폼 버튼</h4>
+                <h3>* Default</h3>
+                <div class="form-group">
+                    <button type="button" name="button" class="btn btn-input" >버튼명2</button>
+                </div>
+                <h3>* Active</h3>
+                <div class="form-group">
+                    <button type="button" name="button" class="btn btn-input active" >버튼명2</button>
+                </div>
+
+                <h4>Popup Button(btn-close/btn-bottom) : 팝업 버튼</h4>
+                <div class="btn-wrap popup">
+                    <button type="button" name="button" class="btn btn-close" data-focus="btn-layer-close">취소</button>
+                    <button type="button" name="button" class="btn btn-bottom" >확인</button>
+                </div>
+
+                <h4>Alert Button(btn-close/btn-bottom) : 알럿 버튼</h4>
+                <div class="btn-wrap alert">
+                    <button type="button" name="button" class="btn btn-close" data-focus="btn-layer-close" >취소</button>
+                    <button type="button" name="button" class="btn btn-bottom" >확인</button>
+                </div>
+
+                <h4>Alert Button(btn-close/btn-bottom) : 알럿 버튼</h4>
+                <h3> *Text Underline Button(btn-text) : 텍스트 버튼</h3>
+                <button class="btn btn-text">삭제</button>
+
+                <h3>* Text Arrow Button(btn-text medium) : 텍스트 버튼</h3>
+                <button class="btn btn-text medium">버튼명</button>
+
+                <h3>* Text Arrow Button(btn-text small) : 텍스트 버튼</h3>
+                <button class="btn btn-text small">버튼명</button>
+
+                <h4>Icon Button(btn-icon) : 아이콘 버튼</h4>
+                <button class="btn btn-icon">등록하기</button>
+
+                <h4>Top Button(btn-top) : 탑 버튼</h4>
+                <button class="btn btn-top" type="button"><span class="ir">탑버튼</span></button>
+                
             </div>
         </div>
     </div>
-    <script src="../../resources/js/default2.js"></script>
 
     <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
     <script>

@@ -12,64 +12,6 @@ $(document).ready(function() {
     this.value = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 정규식을 이용해서 3자리 마다 , 추가
   });
 
-  /** 계산 완료 **/
-  $('.btn.btn-primary.result').on('click', function (e) {
-    e.preventDefault();
-    $('.contents-wrap').animate({
-        scrollTop: $('.txt-list-wrap').offset().top
-    });
-  });
-
-  /** datepicker **/
-  //날짜 유효성 검사
-$('#btnSearch').click(function(){
-
-  var dateFrom = document.getElementById('dateFrom');	//시작일
-  var dateTo = document.getElementById('dateTo');	//종료일
-  var today = new Date();				//오늘 날짜
-
-  dateFrom = new Date(dateFrom.value);
-  var fromYear = dateFrom.getFullYear();
-  var fromMonth = dateFrom.getMonth() + 1;
-  var fromDay = dateFrom.getDate();
-
-  //날짜 지정을 하지 않았을 때 NaN이 발생하여 0으로 처리
-  if (isNaN(fromYear) || isNaN(fromMonth) || isNaN(fromDay)){
-    fromYear  = 0;
-    fromMonth = 0;
-    fromDay   = 0;
-  }
-
-	dateFrom = fromYear +'/'+ fromMonth +'/'+fromDay; 
-
-  dateTo = new Date(dateTo.value);
-  var toYear  = dateTo.getFullYear();
-  var toMonth = dateTo.getMonth() + 1;
-  var toDay   = dateTo.getDate();
-
-  //날짜 지정을 하지 않았을 때 NaN이 발생하여 0으로 처리
-  if (isNaN(toYear) || isNaN(toMonth) || isNaN(toDay)){
-  toYear  = 0;
-  toMonth = 0;
-  toDay   = 0;
-  }
-
-    dateTo = toYear +'/'+ toMonth +'/'+toDay;
-
-  //오늘날짜 날짜 형식으로 지정
-  var todayYear  = today.getFullYear(); 	//2020
-  var todayMonth = today.getMonth() + 1;    	//06
-  var todayDay   = today.getDate();  		//11
-  today = todayYear +'/'+ todayMonth +'/'+todayDay;  // 2020/06/11 (형식 지정은 본인 자유)
-
-  //날짜 조회 시, 시작일이 오늘 날짜보다는 크고, 종료일이 시작일보다는 커야하기 때문에 조건을 걸어줌
-  if(dateFrom >= today && dateTo >= dateFrom){
-  	return true;
-  } else {
- 	 alert("해당 기간의 조회가 불가능합니다.");
-  }
-});//click() end
-
   /** 툴팁 **/
   $(".info-tooltip").on('click', function(){
     var $this = $(this).parents(".tooltip-wrap");
@@ -173,15 +115,6 @@ $('#btnSearch').click(function(){
     } else {
       agreeChek();
     }
-  });
-
-  /** accordion **/
-  $('.accordion .btn-accordion').click(function() {
-    var accordionCont = $(this).next('.accordion-cont');
-    $(this).toggleClass('on').attr('title', function(_, attr) {
-      return attr === '열림' ? '닫힘' : '열림';
-    });
-    accordionCont.toggleClass('on');
   });
 
   /** tab & tab scroll **/
@@ -324,60 +257,3 @@ function closePopupUp(id) {
   deleteBlock();
   $('#' + id).scrollTop(0).fadeOut(600);
 }
-
-/**selectbox***/
-document.addEventListener('DOMContentLoaded', function() {
-  // 버튼과 리스트를 가져오기
-  const btns = document.querySelectorAll('.btn-select');
-  const lists = document.querySelectorAll('.select-list');
-
-  // 각각의 버튼에 대해 이벤트 리스너 추가
-  btns.forEach((btn, index) => {
-      const list = lists[index];
-      btn.addEventListener('click', (event) => {
-          event.preventDefault(); // form의 기본 동작 중지
-          if (!btn.classList.contains('disabled')) {
-              btn.classList.toggle('action');
-          }
-      });
-
-      list.addEventListener('click', (event) => {
-        if (event.target.nodeName === "BUTTON") {
-            if (!btn.classList.contains('disabled')) {
-                // 선택된 항목의 텍스트를 버튼의 텍스트로 설정
-                btn.innerText = event.target.innerText;
-                btn.classList.remove('action');
-
-                // 여기에 check 클래스 추가 로직을 삽입
-                const currentSelected = document.querySelector('.select-list button.check');
-                // 기존에 check 클래스가 적용된 버튼이 있으면 제거
-                if (currentSelected) {
-                    currentSelected.classList.remove('check');
-                }
-                // 현재 선택된 버튼에 check 클래스 추가
-                event.target.classList.add('check');
-            }
-        }
-    });
-  });
-
-  // 선택된 항목을 btn-select에 표시
-  const selectedOption = document.querySelector('.select button');
-  if (selectedOption) {
-      btns[0].innerText = selectedOption.innerText;
-  }
-
-  // 외부 영역 클릭 시 모든 버튼의 action 클래스 제거
-  document.addEventListener('click', (event) => {
-      const targetElement = event.target;
-
-      btns.forEach((btn) => {
-          // 클릭된 요소가 버튼이거나 버튼의 자식 요소이면 이벤트를 처리하지 않음
-          if (targetElement.closest('.btn-select') === btn) {
-              return;
-          }
-          // 외부 영역을 클릭한 경우 action 클래스 제거
-          btn.classList.remove('action');
-      });
-  });
-});

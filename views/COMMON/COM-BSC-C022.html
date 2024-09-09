@@ -14,7 +14,7 @@
 
     <link href="../../resources/css/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
-    <link href="../../resources/css/renewal.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/ui_common.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/datepicker.css" rel="stylesheet" type="text/css" />
 
     
@@ -91,8 +91,8 @@
             </dl>
             <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
         </div>
-        <div class="btn-wrap">
-            <a href="javascript:void(0);" class="btn btn-primary confirm" data-focus="btn-layer-close">확인</a>
+        <div class="btn-wrap popup">
+            <button type="button" name="button" class="btn btn-bottom">확인</button>
         </div>
     </div>
 </div>
@@ -167,8 +167,9 @@
             </dl>
             <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
         </div>
-        <div class="btn-wrap">
-            <a href="javascript:void(0);" class="btn btn-primary confirm" data-focus="btn-layer-close">확인</a>
+        <div class="btn-wrap popup">
+            <button type="button" name="button" class="btn btn-close" data-focus="btn-layer-close">취소</button>
+            <button type="button" name="button" class="btn btn-bottom">확인</button>
         </div>
     </div>
 </div>

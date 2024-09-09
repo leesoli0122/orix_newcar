@@ -691,6 +691,12 @@ table #테이블
 .table-type > div.col  dd { width:auto; display:table-cell; }
 .table-type > div.col  dt { width:190px; vertical-align:middle; font-size:var(--font16); font-weight:var(--w-bold); color:var(--title); }
 
+/*---------------------------------------------
+    테이블 : table-scroll
+---------------------------------------------*/
+.table-type.table-scroll thead { position:sticky; top:0; z-index:1; background:var(--background2); }
+.table-type.table-scroll { overflow:auto; max-height:1200px; }
+
 /*********************************************************************
 #공지사항
 *********************************************************************/

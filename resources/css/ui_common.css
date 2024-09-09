@@ -30,74 +30,74 @@ SELECT #셀렉트
 /*---------------------------------------------
 	Select Reset
 ---------------------------------------------*/
-.select-box .se-select { position: relative;  display: inline-block; }
-.select-box .se-select select { line-height: initial; -webkit-appearance: none; -moz-appearance: none; -o-appearance:none; appearance: none;  border: none; border-radius: 0; background-color: none; outline: none; }
-.select-box .se-select select::-ms-expand { display: none; }
-.select-box .se-select select::-ms-value { background-color: transparent; color: var(--normal); }
+.select-box > .se-select { position: relative;  display: inline-block; }
+.select-box > .se-select select { line-height: initial; -webkit-appearance: none; -moz-appearance: none; -o-appearance:none; appearance: none;  border: none; border-radius: 0; background-color: none; outline: none; }
+.select-box > .se-select select::-ms-expand { display: none; }
+.select-box > .se-select select::-ms-value { background-color: transparent; color: var(--normal); }
 
 /*---------------------------------------------
 	Select Default
 ---------------------------------------------*/
-.select-box .se-select { width:100%; max-width:410px; }
-.select-box .se-select label { display:inline-block; font-size:var(--font14); color:var(--normal); }
-.select-box .se-select select { z-index:1; position:relative; width: 100%; height: 46px; padding: 14px 16px; line-height:1; font-size: var(--font16); font-weight:var(--w-regular); color:var(--subtitle); background-color:transparent; border: solid 1px var(--border1);  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-.select-box .se-select::after {  content:''; position:absolute; right:16px; top:50%; transform:translateY(-50%); background-image: var(--svg-select-arrow); background-repeat: no-repeat; background-position: center; width:20px; height:20px; }
-.select-box .se-select select option { background-color:var(--white);  color: var(--normal); }
-.select-box .se-select select:disabled,
-.select-box .se-select select[disabled=disabled] { border-color: var(--border2); background-color:var(--white); color: var(--subtitle); opacity: 1; }
-.select-box .se-select select:disabled[data-status=readonly],
-.select-box .se-select select[disabled=disabled][data-status=readonly] {  border-color: var(--border2); background-color:var(--white); }
-.select-box .se-select select:disabled[data-status=readonly]:focus,
-.select-box .se-select select[disabled=disabled][data-status=readonly]:focus { background-color:var(--white); }
-.select-box .se-select select[data-status=error] { border-color: var(--error); background-color:var(--white); opacity: 1; }
+.select-box > .se-select { width:100%; max-width:410px; }
+.select-box > .se-select label { display:inline-block; font-size:var(--font14); color:var(--normal); }
+.select-box > .se-select select { z-index:1; position:relative; width: 100%; height: 46px; padding: 14px 16px; line-height:1; font-size: var(--font16); font-weight:var(--w-regular); color:var(--subtitle); background-color:transparent; border: solid 1px var(--border1);  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+.select-box > .se-select::after {  content:''; position:absolute; right:16px; top:50%; transform:translateY(-50%); background-image: var(--svg-select-arrow); background-repeat: no-repeat; background-position: center; width:20px; height:20px; }
+.select-box > .se-select select option { background-color:var(--white);  color: var(--normal); }
+.select-box > .se-select select:disabled,
+.select-box > .se-select select[disabled=disabled] { border-color: var(--border2); background-color:var(--white); color: var(--subtitle); opacity: 1; }
+.select-box > .se-select select:disabled[data-status=readonly],
+.select-box > .se-select select[disabled=disabled][data-status=readonly] {  border-color: var(--border2); background-color:var(--white); }
+.select-box > .se-select select:disabled[data-status=readonly]:focus,
+.select-box > .se-select select[disabled=disabled][data-status=readonly]:focus { background-color:var(--white); }
+.select-box > .se-select select[data-status=error] { border-color: var(--error); background-color:var(--white); opacity: 1; }
 
 /*---------------------------------------------
 	Select Stove Custom
 ---------------------------------------------*/
-.select-box .se-select[data-stove=select] div.stove-dim { z-index: 100; display: none; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); }
-.select-box .se-select[data-stove=select] div.stove-dim.on { display: block; }
-.select-box .se-select[data-stove=select] div.stove-option-layer {z-index:101; overflow: hidden; position: absolute; left: 0px; width: 100%; background-color:var(--white); box-sizing: border-box; border: 1px solid transparent; border-color: var(--border2); outline: none; }
-.select-box .se-select[data-stove=select] div.stove-option-layer div.stove-options-title { display: none; }
-.select-box .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll { position: relative; width: 100%; height: 100%; max-height: 215px; overflow-y: auto; }
-.select-box .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option { width: 100%; height: 46px; padding: 14px 16px; font-size: var(--font16); line-height: 1; background-color:var(--white); border: none; text-align: left; color:var(--subtitle); box-sizing: border-box; cursor: pointer; }
-.select-box .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option.on { font-weight: var(--w-bold); }
-.select-box .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option:hover { background-color:var(--background2); color:var(--normal); }
-.select-box .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[disabled] { background-color: transparent; opacity: 0.5; cursor: default; }
-.select-box .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[disabled].on {  background-color: transparent; }
-.select-box .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[disabled]:hover { font-weight: var(--w-regular); }
-.select-box .se-select[data-stove=select] div.stove-option-layer button.stove-btn-close { opacity: 0; position: absolute; top: 10px; right: 10px; width: 24px; height: 24px; border: 1px solid transparent; background-color: transparent; background-repeat: no-repeat; background-size: 24px; background-position: center center; cursor: pointer; }
-.select-box .se-select[data-stove=select] div.stove-option-layer.va-slide { position: fixed; top: auto; bottom: -100%; transition: bottom 300ms; border-color: transparent; border-radius: 10px 10px 0 0; overflow: hidden; }
-.select-box .se-select[data-stove=select] div.stove-option-layer.va-slide div.stove-options-title { display: block; z-index: 9; position: absolute; top: 0; left: 0x; width: 100%; height: 40px; padding: 7px 30px 0px 15px; background-color: var(--white); font-size: var(--font18); }
-.select-box .se-select[data-stove=select] div.stove-option-layer.va-slide div.stove-option-scroll { max-height: 400px; }
-.select-box .se-select[data-stove=select] div.stove-option-layer.va-slide div.stove-option-scroll div.stove-options { padding: 35px 0 10px 0; }
-.select-box .se-select[data-stove=select] div.stove-option-layer.va-slide div.stove-option-scroll div.stove-options button.stove-option { height: 46px; }
-.select-box .se-select[data-stove=select] div.stove-option-layer.va-slide button.stove-btn-close { z-index: 10; opacity: 1; }
-.select-box .se-select[data-stove=select] div.stove-option-layer.va-slide.on { bottom: 0px; }
-.select-box .se-select[data-stove=select] div.stove-option-layer.va-upshow { top: auto; bottom: 100%; }
+.select-box > .se-select[data-stove=select] div.stove-dim { z-index: 100; display: none; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); }
+.select-box > .se-select[data-stove=select] div.stove-dim.on { display: block; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer {z-index:101; overflow: hidden; position: absolute; left: 0px; width: 100%; background-color:var(--white); box-sizing: border-box; border: 1px solid transparent; border-color: var(--border2); outline: none; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-options-title { display: none; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll { position: relative; width: 100%; height: 100%; max-height: 215px; overflow-y: auto; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option { width: 100%; height: 46px; padding: 14px 16px; font-size: var(--font16); line-height: 1; background-color:var(--white); border: none; text-align: left; color:var(--subtitle); box-sizing: border-box; cursor: pointer; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option.on { font-weight: var(--w-bold); }
+.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option:hover { background-color:var(--background2); color:var(--normal); }
+.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[disabled] { background-color: transparent; opacity: 0.5; cursor: default; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[disabled].on {  background-color: transparent; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option[disabled]:hover { font-weight: var(--w-regular); }
+.select-box > .se-select[data-stove=select] div.stove-option-layer button.stove-btn-close { opacity: 0; position: absolute; top: 10px; right: 10px; width: 24px; height: 24px; border: 1px solid transparent; background-color: transparent; background-repeat: no-repeat; background-size: 24px; background-position: center center; cursor: pointer; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer.va-slide { position: fixed; top: auto; bottom: -100%; transition: bottom 300ms; border-color: transparent; border-radius: 10px 10px 0 0; overflow: hidden; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer.va-slide div.stove-options-title { display: block; z-index: 9; position: absolute; top: 0; left: 0x; width: 100%; height: 40px; padding: 7px 30px 0px 15px; background-color: var(--white); font-size: var(--font18); }
+.select-box > .se-select[data-stove=select] div.stove-option-layer.va-slide div.stove-option-scroll { max-height: 400px; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer.va-slide div.stove-option-scroll div.stove-options { padding: 35px 0 10px 0; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer.va-slide div.stove-option-scroll div.stove-options button.stove-option { height: 46px; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer.va-slide button.stove-btn-close { z-index: 10; opacity: 1; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer.va-slide.on { bottom: 0px; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer.va-upshow { top: auto; bottom: 100%; }
 
 /*---------------------------------------------
 	Select Open
 ---------------------------------------------*/
-.select-box .se-select[data-stove=select][data-status=open]::after { transform:translate(0, -50%) rotate(-180deg); transition: all ease .2s; }
+.select-box > .se-select[data-stove=select][data-status=open]::after { transform:translate(0, -50%) rotate(-180deg); transition: all ease .2s; }
 
 /*---------------------------------------------
 	Select Readonly, Disabled
 ---------------------------------------------*/
-/* .select-box .se-select[data-stove=select] select[data-status=readonly],
-.select-box .se-select[data-stove=select] select[disabled]  {  } */
+/* .select-box > .se-select[data-stove=select] select[data-status=readonly],
+.select-box > .se-select[data-stove=select] select[disabled]  {  } */
 
 /*---------------------------------------------
 	Select Focus
 ---------------------------------------------*/
-.select-box .se-select[data-stove=select][data-status=open] select,
-.select-box .se-select[data-stove=select][data-status=open] select:focus,
-.select-box .se-select select:focus { border: 1px solid var(--normal); }
-.select-box .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option:focus { border: 1px solid var(--normal); }
+.select-box > .se-select[data-stove=select][data-status=open] select,
+.select-box > .se-select[data-stove=select][data-status=open] select:focus,
+.select-box > .se-select select:focus { border: 1px solid var(--normal); }
+.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option:focus { border: 1px solid var(--normal); }
 
 /*---------------------------------------------
 	Select select
 ---------------------------------------------*/
-.select-box .se-select[data-stove=select] select{ color:var(--normal); }
+.select-box > .se-select[data-stove=select] select{ color:var(--normal); }
 
 
 /*********************************************************************
@@ -188,38 +188,38 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 /*---------------------------------------------
 	Input_CheckBox/Radio Default
 ---------------------------------------------*/
-.form-group .check-box .check-button,
-.form-group .radio-box .radio-button { position:relative; }
-.form-group .check-box input[type='checkbox'] + .check-button span,
-.form-group .radio-box input[type='radio'] + .radio-button span { padding-left:34px; color:var(--normal); }/*TEXT*/
-.form-group .check-box input[type='checkbox']:checked + .check-button span,
-.form-group .radio-box input[type='radio']:checked + .radio-button span { color:var(--title); font-weight: var(--w-bold);} /*TEXT*/
+.form-group > .check-box .check-button,
+.form-group > .radio-box .radio-button { position:relative; }
+.form-group > .check-box input[type='checkbox'] + .check-button span,
+.form-group > .radio-box input[type='radio'] + .radio-button span { padding-left:34px; color:var(--normal); }/*TEXT*/
+.form-group > .check-box input[type='checkbox']:checked + .check-button span,
+.form-group > .radio-box input[type='radio']:checked + .radio-button span { color:var(--title); font-weight: var(--w-bold);} /*TEXT*/
 
 /*---------------------------------------------
 	Input_Checkbox Style
 ---------------------------------------------*/
-.form-group .check-box input[type='checkbox']:checked + .check-button span::before { border:1px solid var(--secondary); background:url(../images/common/ic_check_on.png)no-repeat var(--secondary) 50%/12px auto; }
-.form-group .check-box input[type='checkbox']:disabled + .check-button span::before { border:1px solid var(--border2);  background:url(../images/common/ic_check_off.png)no-repeat var(--background1) 50%/12px auto; }
-.form-group .check-box input[type='checkbox'] + .check-button span::before,
-.form-group .radio-box input[type='radio'] + .radio-button span::before { content:''; position:absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px;  }
-.form-group .check-box input[type='checkbox'] + .check-button span::before { border:1px solid var(--border1); background:var(--white); background:url(../images/common/ic_check_off.png)no-repeat 50%/12px auto; }
+.form-group > .check-box input[type='checkbox']:checked + .check-button span::before { border:1px solid var(--secondary); background:url(../images/common/ic_check_on.png)no-repeat var(--secondary) 50%/12px auto; }
+.form-group > .check-box input[type='checkbox']:disabled + .check-button span::before { border:1px solid var(--border2);  background:url(../images/common/ic_check_off.png)no-repeat var(--background1) 50%/12px auto; }
+.form-group > .check-box input[type='checkbox'] + .check-button span::before,
+.form-group > .radio-box input[type='radio'] + .radio-button span::before { content:''; position:absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px;  }
+.form-group > .check-box input[type='checkbox'] + .check-button span::before { border:1px solid var(--border1); background:var(--white); background:url(../images/common/ic_check_off.png)no-repeat 50%/12px auto; }
 
 /** 라운드일 경우 **/
-.form-group.round .check-box input[type='checkbox'] + .check-button span::before { border-radius: 50%; }
+.form-group.round > .check-box input[type='checkbox'] + .check-button span::before { border-radius: 50%; }
 
 /*---------------------------------------------
 	Input_Radio Style
 ---------------------------------------------*/
-.form-group .radio-box input[type='radio'] + .radio-button span::before { background:var(--white); border:6.5px solid var(--background1); border-radius:50%; }
-.form-group .radio-box input[type='radio']:checked + .radio-button span::before { border:6.5px solid var(--secondary); }
+.form-group > .radio-box input[type='radio'] + .radio-button span::before { background:var(--white); border:6.5px solid var(--background1); border-radius:50%; }
+.form-group > .radio-box input[type='radio']:checked + .radio-button span::before { border:6.5px solid var(--secondary); }
 
 /*---------------------------------------------
 	Input_Toggle style
 ---------------------------------------------*/
-.form-group .toggle-box input[type='checkbox'] + .toggle-button { display:inline-block; position:relative; width:40px; height:24px; border-radius:25px; background:var(--background1); transition: all 0.2s; }
-.form-group .toggle-box input[type='checkbox'] + .toggle-button::before { content:''; position:absolute; top:50%; left:3px; transform: translateY(-50%); width:20px; height:20px; border-radius: 50%; background: var(--white); box-shadow:0px 2px 5px 0px rgba(23,4,61,0.2); transition: all 0.5s; }
-.form-group .toggle-box input[type='checkbox']:checked + .toggle-button::before { right:3px; left:inherit; }
-.form-group .toggle-box input[type='checkbox']:checked + .toggle-button { background: var(--secondary);}
+.form-group > .toggle-box input[type='checkbox'] + .toggle-button { display:inline-block; position:relative; width:40px; height:24px; border-radius:25px; background:var(--background1); transition: all 0.2s; }
+.form-group > .toggle-box input[type='checkbox'] + .toggle-button::before { content:''; position:absolute; top:50%; left:3px; transform: translateY(-50%); width:20px; height:20px; border-radius: 50%; background: var(--white); box-shadow:0px 2px 5px 0px rgba(23,4,61,0.2); transition: all 0.5s; }
+.form-group > .toggle-box input[type='checkbox']:checked + .toggle-button::before { right:3px; left:inherit; }
+.form-group > .toggle-box input[type='checkbox']:checked + .toggle-button { background: var(--secondary);}
 
 /*********************************************************************
 Button #버튼

@@ -29,7 +29,7 @@
 <body>
     <div class="wrap">
         <!-- s:header -->
-        <div data-include-path="../INCLUDE/header.html"></div>
+        <div data-include-path="../INCLUDE/inc_header.html"></div>
         <!-- //e:header -->
          <!-- s:contentWrap -->
         <div id="contentWrap" class="sub-content">
@@ -49,7 +49,27 @@
             <!-- //e:subvisual-wrap -->
             <!-- s:contents -->
             <div class="contents">
-                <div class="search-wrap"></div>
+                <div class="form-wrap search">
+                    <div class="form-group other">
+                        <div class="form-row">
+                            <div class="select-box">
+                                <div class="stove-dim"></div>
+                                <div class="se-select ei-w160" data-stove="select">
+                                    <select class="" title="메뉴구분">
+                                        <option value="" disabled="" selected="" hidden="">구분</option>
+                                        <option value="0">제목</option>
+                                        <option value="1">내용</option>
+                                    </select>
+                                    <div class="e-select-dim"></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="검색어 입력">
+                            </div>
+                            <button class="btn btn-input" type="button">조회</button>
+                        </div>
+                    </div>
+                </div>
                 <div class="list-card-wrap">
                     <div class="result-area nodata">
                         <div class="text-wrap">
@@ -191,8 +211,8 @@
                             <li><a href="#" class="nb">9</a></li>
                             <li><a href="#" class="nb">10</a></li>
                         </ul>
-                        <a href="#" class="btn-pg next ir">다음</a>
-                        <a href="#" class="btn-pg last-next ir">마지막으로</a>
+                        <a href="#" class="btn-pg next">다음</a>
+                        <a href="#" class="btn-pg last-next">마지막으로</a>
                     </div>
                 </div>
             </div>
@@ -200,7 +220,7 @@
         </div>
         <!-- //e:contentWrap -->
         <!-- s:footer -->
-        <div data-include-path="../INCLUDE/footer.html"></div>
+        <div data-include-path="../INCLUDE/inc_footer.html"></div>
         <!-- //e:footer -->
     </div>
 

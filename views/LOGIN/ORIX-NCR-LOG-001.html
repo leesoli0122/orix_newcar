@@ -12,9 +12,12 @@
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:type" content="website" />
 
+    <title>고객센터 > 자료실</title>
+
     <link href="../../resources/css/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/ui_common.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/img.css" rel="stylesheet" type="text/css" />
 
 
     <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
@@ -24,51 +27,22 @@
 
 </head>
 <body>
-    <div class="wrap">
+    <div class="wrap login">
         <!-- s:header -->
-        <div data-include-path="../INCLUDE/inc_header.html"></div>
+        <div data-include-path="../INCLUDE/inc_login_header.html"></div>
         <!-- //e:header -->
-         <!-- s:contentWrap -->
+        <!-- s:contentWrap -->
         <div id="contentWrap" class="sub-content">
             <!-- s:subvisual-wrap -->
-            <div class="subvisual-wrap">
-                <div class="breadcrumb-wrap">
-                    <ul>
-                        <li class="home"><a href="javascript:void(0);">홈</a></li>
-                        <li><a href="javascript:void(0);">1depth</a></li>
-                        <li><a href="javascript:void(0);">2depth</a></li>
-                        <li><a href="javascript:void(0);">3depth</a></li>
-                    </ul>
-                </div>
-                <div class="text-wrap">
-                    <h2>결과</h2>
-                </div>
-            </div>
             <!-- //e:subvisual-wrap -->
             <!-- s:contents -->
             <div class="contents">
-                <div class="result-area nodata">
-                    <div class="text-wrap">
-                        <h3 class="result-no">조회 결과가 없습니다.</h3>
-                    </div>
-                </div>
-                <div class="result-area success">
-                    <div class="text-wrap result">
-                        <h3>견적서 작성 완료</h3>
-                        <ul>
-                            <li>부가적인 설명이 노출되는 문구 입니다</li>
-                            <li>자세한 사항은 <span class="blue">고객센터 02-2050-6700</span>으로 문의주시기 바랍니다.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="result-area fail">
-                    <div class="text-wrap result">
-                        <h3>승인 실패</h3>
-                        <ul>
-                            <li>부가적인 설명이 노출되는 문구 입니다</li>
-                            <li>자세한 사항은 <span class="blue">고객센터 02-2050-6700</span>으로 문의주시기 바랍니다.</li>
-                        </ul>
-                    </div>
+                <div class="check-plz">
+                    <p class="plz-tit">확인해 주세요</p>
+                    <ul class="bul-hypn">
+                        <li>이전에 사용했던 암호는 재사용 불가합니다.</li>
+                        <li>비밀번호는 영문, 숫차 포함 8자리 이상 가능합니다.</li>
+                    </ul>
                 </div>
             </div>
             <!-- //e:contents -->
@@ -94,7 +68,6 @@
         })
     </script>
     <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
-
 </body>
 
 </html>

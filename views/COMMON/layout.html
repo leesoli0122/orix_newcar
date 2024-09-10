@@ -27,7 +27,7 @@
 <body>
     <div class="wrap">
         <!-- s:header -->
-        <div data-include-path="../INCLUDE/header.html"></div>
+        <div data-include-path="../INCLUDE/inc_header.html"></div>
         <!-- //e:header -->
          <!-- s:contentWrap -->
         <div id="contentWrap" class="sub-content">
@@ -113,27 +113,27 @@
                                         <div class="col">
                                             <dl>
                                                 <dt>인증방법</dt>
-                                                <dd class="form-group">
-                                                    <div class="radio-buttons">
-                                                        <div class="radio-group">
-                                                            <input type="radio" id="radio-1" name="terms">
-                                                            <label for="radio-1" class="radio-button">핸드폰 인증</label>
-                                                        </div>
-                                                        <div class="radio-group">
-                                                            <input type="radio" id="radio-2" name="terms">
-                                                            <label for="radio-2" class="radio-button">금융인증서</label>
-                                                        </div>
-                                                        <div class="radio-group">
-                                                            <input type="radio" id="radio-3" name="terms">
-                                                            <label for="radio-3" class="radio-button">공동인증서</label>
-                                                        </div>
-                                                    </div>
+                                                <dd class="form-group radio">
+                                                    <ul class="radio-box">
+                                                        <li>
+                                                            <input type="radio" id="radio-1" name="radio">
+                                                            <label for="radio-1" class="radio-button"><span>핸드폰 인증</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio-2" name="radio" checked="">
+                                                            <label for="radio-2" class="radio-button"><span>금융인증서</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio-3" name="radio" checked="">
+                                                            <label for="radio-3" class="radio-button"><span>공동인증서</span></label>
+                                                        </li>
+                                                    </ul>
                                                 </dd>
                                             </dl>
                                             <dl>
                                                 <dt>성명</dt>
                                                 <dd class="form-group">
-                                                    <input title="성명" id="" type="text" name="" class="form-control" placeholder="성명">
+                                                    <input id="" type="text" name="" title="성명" class="form-control" placeholder="성명">
                                                 </dd>
                                             </dl>
                                             <dl>
@@ -141,11 +141,11 @@
                                                 <dd class="form-group">
                                                     <div class="form-row">
                                                         <div class="col">
-                                                            <input title="주민등록번호 앞자리" id="" type="number" class="form-control" maxlength="6" name="" value="" placeholder="" required="">
+                                                            <input id="" type="tel" title="주민등록번호 앞자리" class="form-control" maxlength="6" name="" value="" placeholder="">
                                                         </div>
                                                         <div class="input-hyphen">-</div>
                                                         <div class="col">
-                                                            <input title="주민등록번호 뒷자리" id="" type="tel" class="form-control jumin" maxlength="1" placeholder="●" name="" value="" required="">
+                                                            <input id="" type="tel" title="주민등록번호 뒷자리" class="form-control jumin" maxlength="1" placeholder="●" name="" value="">
                                                             <span class="jumintext">●●●●●●</span>
                                                         </div>
                                                     </div>
@@ -154,21 +154,25 @@
                                             <dl>
                                                 <dt>휴대폰번호</dt>
                                                 <dd class="form-group other">
-                                                    <div class="form-row other">
-                                                        <div class="select-wrap">
-                                                            <button class="btn-select">통신사 선택</button>
-                                                            <div class="select-list">
-                                                                <ul>
-                                                                    <li><button type="button">선택사항 1번</button></li>
-                                                                    <li><button type="button" class="select">선택사항 2번</button></li>
-                                                                    <!--기본값-->
-                                                                    <li><button type="button">선택사항 3번</button></li>
-                                                                    <li><button type="button">선택사항 4번</button></li>
-                                                                </ul>
+                                                    <div class="form-row">
+                                                        <div class="select-box">
+                                                            <div class="stove-dim"></div>
+                                                            <div class="se-select ei-w160" data-stove="select">
+                                                                <select class="" title="메뉴구분">
+                                                                    <option value="" disabled="" selected="" hidden="">선택하세요</option>
+                                                                    <option value="0">option 00</option>
+                                                                    <option value="1">option 01</option>
+                                                                    <option value="2">option 02</option>
+                                                                    <option value="3">option 03</option>
+                                                                    <option value="4">option 04</option>
+                                                                    <option value="5">option 05</option>
+                                                                    <option value="6">option 06</option>
+                                                                </select>
+                                                                <div class="e-select-dim"></div>
                                                             </div>
                                                         </div>
                                                         <div class="col">
-                                                            <input title="핸드폰번호" id="" type="tel" name="" class="form-control" maxlength="11" placeholder="휴대폰번호 입력">
+                                                            <input id="" type="tel" title="휴대폰번호입력" name="" class="form-control" maxlength="11" placeholder="휴대폰번호 입력">
                                                         </div>
                                                         <button class="btn btn-input" type="button">인증번호 요청</button>
                                                     </div>
@@ -190,7 +194,7 @@
                                         <li>비밀번호는 영문, 숫차 포함 8자리 이상 가능합니다.</li>
                                     </ul>
                                 </div>
-                                <div class="btn-wrap">
+                                <div class="btn-wrap bottom">
                                     <button type="button" name="button" class="btn btn-secondary">이전</button>
                                     <button type="button" name="button" class="btn btn-primary">다음</button>
                                 </div>
@@ -203,7 +207,7 @@
         </div>
         <!-- //e:contentWrap -->
         <!-- s:footer -->
-        <div data-include-path="../INCLUDE/footer.html"></div>
+        <div data-include-path="../INCLUDE/inc_footer.html"></div>
         <!-- //e:footer -->
     </div>
 

@@ -325,10 +325,10 @@ Button #버튼
 ---------------------------------------------*/
 .btn-wrap button.btn:first-child { margin-left:0; }/*공통*/
 .btn-wrap button.btn { margin-left:16px; }/*공통*/
-.btn-wrap.cont { margin:40px 0; }/* 컨테츠 버튼 */
+.btn-wrap.cont { margin:40px 0; width:100%; text-align:center; }/* 컨테츠 버튼 */
 .btn-wrap.bottom { margin:60px 0 40px; width:100%; text-align:center; }/* 컨테츠 하단 버튼 */
-.btn-wrap.popup { margin:28px 0; }/* 팝업 버튼 */
-.btn-wrap.alert { margin:40px 0 30px; }/* 알럿 버튼 */
+.btn-wrap.popup { margin:28px 0; width:100%; text-align:center; }/* 팝업 버튼 */
+.btn-wrap.alert { margin:40px 0 30px; width:100%; text-align:center; }/* 알럿 버튼 */
 
 /*---------------------------------------------
 	Button Default
@@ -485,6 +485,7 @@ popup #팝업
 .type-alert { display:none; overflow: hidden; width:100%; position: fixed; /*right:0 !important;*/ top:auto !important; bottom:15px !important; z-index:999; padding-bottom:0px; border-radius:20px; box-sizing:border-box; }
 .layerpopup.type-alert .content-wrap .ly-cont-wrap { font-size:var(--font16); font-weight:var(--w-regular); text-align:center; color:var(--title); }
 .layerpopup.type-alert .content-wrap .ly-cont-wrap .tit { line-height:1.5; }
+.layerpopup.type-alert .content-wrap .ly-cont-wrap .tit-bold { padding-top:16px; font-weight:var(--w-bold); color:var(--title); }
 
 /*********************************************************************
 페이지네이션
@@ -581,9 +582,9 @@ input.datefrom:after{ position: absolute; top:50%; right:10px; content: ''; widt
 .tab-content-area { margin-top:40px; }
 
 /*********************************************************************
-확인해 주세요
+#확인해 주세요
 *********************************************************************/
-.check-plz { margin-top:20px; border-radius:20px 20px 0 0; color:var(--title); background:var(--background4); }
+.check-plz { /*margin-top:20px;*/ border-radius:20px 20px 0 0; color:var(--title); background:var(--background4); }
 .check-plz .plz-tit { padding:20px 0 20px 48px; border:1px solid var(--border1); border-radius:20px 20px 0 0; font-size:var(--font16); font-weight:var(--w-bold); background:var(--white); }
 .check-plz .plz-tit::before { content:""; position:absolute; top:50%; transform:translateY(-50%); left:24px; display:block; width:14px; height:18px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='18'%3E%3Cg fill='%23fff' stroke-miterlimit='10' data-name='Rectangle 5'%3E%3Cpath d='m13 16.28-5.5-3.15-.5-.28-.5.28L1 16.28V2a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14.28Z'/%3E%3Cpath fill='%23666' d='M2 2v12.55l5-2.85 5 2.85V2H2m0-2h10a2 2 0 0 1 2 2v16l-7-4-7 4V2C0 .9.9 0 2 0Z'/%3E%3C/g%3E%3Cpath fill='%23666' d='M4 10V8h6v2Zm0-4V4h6v2Z' data-name='Rectangle 6'/%3E%3C/svg%3E")no-repeat center; }
 .check-plz ul { padding:30px 0 30px 24px; }
@@ -598,9 +599,6 @@ input.datefrom:after{ position: absolute; top:50%; right:10px; content: ''; widt
 .result-area .result ul { margin-top:16px; }
 .result-area .result ul li { font-weight:var(--w-regular); color:var(--normal); }
 .result-area .result ul li + li { margin-top:5px; }
-.result-area .result ul li .blue,
-.table-type div.col dl dd span.blue { color:var(--secondary); }
-.result-area .result ul li .red { color:var(--error); }
 /* 조회 결과가 없습니다 */
 .result-area.nodata { text-align:center; border:1px solid var(--border1); background:var(--white); }
 .result-area.nodata::before { position:initial; transform: unset; margin-bottom:32px; width:80px; height:80px; background:url(../images/nodata.png)no-repeat 50%/80px auto; }
@@ -612,9 +610,12 @@ input.datefrom:after{ position: absolute; top:50%; right:10px; content: ''; widt
 /*********************************************************************
 list #리스트
 *********************************************************************/
-.list-card-wrap + .list-card-wrap { margin-top:40px; }
+.list-card-wrap { padding-top:28px; }
+.sub-text-wrap + .list-card-wrap { padding-top:0; }
+.list-card-wrap + .list-card-wrap { margin-top:40px; padding-top:0; }
 .list-card-wrap + .list-card-wrap .caption2 { position:initial; display:block; margin-bottom:15px; text-align:right; }
 .list-card-wrap.record + .table-type { margin-top:40px; }
+
 /*---------------------------------------------
   list-card
 ---------------------------------------------*/
@@ -707,6 +708,7 @@ table #테이블
 
 /* 테이블 역할을 부여한 형식 */
 .table-type { margin-bottom:40px; }
+.table-type:last-child { margin-bottom:0; }
 .table-type > .col { border-top:1px solid var(--border3); border-bottom:1px solid var(--border3); }
 .table-type > div dt { margin:0; padding:20px; background:var(--background2); color:var(--normal); font-weight:700; text-align:center; }
 .table-type > div dd { padding:20px; }
@@ -729,7 +731,7 @@ table #테이블
 /*---------------------------------------------
     목록
 ---------------------------------------------*/
-.search { margin-bottom:68px; padding:40px 0; border-radius:20px; background:var(--background4); }
+.search { margin-bottom:40px; padding:40px 20px; border-radius:20px; background:var(--background4); }
 /*---------------------------------------------
     상세페이지
 ---------------------------------------------*/

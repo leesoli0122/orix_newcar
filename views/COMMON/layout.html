@@ -64,7 +64,7 @@
 
                             <div id="tab-cont01" class="tab-content">
                                 <form>
-                                    <div class="sub-text-wrap">
+                                    <div class="sub-text-wrap style1">
                                         <h4>1번 본문 타이틀</h4>
                                     </div>
                                     <div class="table-type">
@@ -107,9 +107,56 @@
                                             </dl>
                                         </div>
                                     </div>
-                                    <div class="sub-text-wrap">
-                                        <h4 class="h4-style2">2번 본문 타이틀(caption있을 경우)</h4>
-                                        <p class="caption">2번 본문 타이틀에는 Caption이 들어갑니다</p>
+                                    <div class="sub-text-wrap style2">
+                                        <div>
+                                            <h4>캡션과 버튼이 들어가는 타이틀</h4>
+                                            <p class="caption">현재 시점으로부터 3달간 내역만 유지되며, 이전의 내역은 자동 삭제됩니다.</p>
+                                        </div>
+                                        <button class="btn btn-icon">신규제출</button>
+                                    </div>
+                                    <div class="table-type">
+                                        <div class="col">
+                                            <dl>
+                                                <dt>약관동의</dt>
+                                                <dd>
+                                                    <div class="terms-area">
+                                                        <div class="terms-wrap level1 chk-all">
+                                                            <fieldset>
+                                                                <input type="checkbox" id="allChk01" name="allChk01" value="" class="check all">
+                                                                <label for="allChk01"><span>휴대폰 폰인인증 약관 전체 동의</span></label>
+                                                            </fieldset>
+                                                        </div>
+                                                        <div class="terms-box">
+                                                            <div class="terms-wrap level2">
+                                                                <button class="btn btn-text small" type="button" onclick="openPopup('termsPop01')">자세히 보기</button>
+                                                                <fieldset>
+                                                                    <input type="checkbox" id="chkEach01" name="check" value="" class="check" terms-pop="lyPullPop02"><!--terms-pop 약관 팝업-->
+                                                                    <label for="chkEach01"><span>[필수] 개인정보 수집 이용 동의</span></label>
+                                                                </fieldset>
+                                                            </div>
+                                                            <div class="terms-wrap level2">
+                                                                <button class="btn btn-text small" type="button">자세히 보기</button>
+                                                                <fieldset>
+                                                                    <input type="checkbox" id="chkEach02" name="check" value="" class="check" terms-pop="lyPullPop01"><!--terms-pop 약관 팝업-->
+                                                                    <label for="chkEach02"><span>[필수] 고유식별 정보 처리 동의</span></label>
+                                                                </fieldset>
+                                                            </div>
+                                                            <div class="terms-wrap level2">
+                                                                <button class="btn btn-text small" type="button">자세히 보기</button>
+                                                                <fieldset>
+                                                                    <input type="checkbox" id="chkEach03" name="check" value="" class="check" terms-pop="lyPullPop03"><!--terms-pop 약관 팝업-->
+                                                                    <label for="chkEach03"><span>[필수] 통신사 이용약관 동의</span></label>
+                                                                </fieldset>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="sub-text-wrap style2">
+                                        <h4>2번 본문 타이틀(caption있을 경우)</h4>
+                                        <p class="caption">2번 본문 타이틀에는 <span class="blue">Caption</span>이 들어갑니다</p>
                                     </div>
                                     <div class="table-type">
                                         <div class="col">

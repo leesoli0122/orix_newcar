@@ -203,8 +203,8 @@ input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; hei
 /*---------------------------------------------
 	Input footer
 ---------------------------------------------*/
-.form-group.footer { position:absolute; top:0; right:0; max-width:331px; width:100%; }
-.form-group.footer .select-box > .se-select[data-stove=select] div.stove-option-layer { bottom:46px; }
+.footer-wrap .form-group.footer { position:absolute; top:0; right:0; max-width:331px; width:100%; }
+.footer-wrap .form-group.footer .select-box > .se-select[data-stove=select] div.stove-option-layer { bottom:46px; }
 
 /*********************************************************************
 INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글

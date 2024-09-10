@@ -40,23 +40,21 @@
         <div id="contentWrap" class="sub-content">
             <!-- s:contents -->
             <div class="contents">
-                <form>
-                    <div class="form-wrap">
-                        <div class="form-group">
-                            <input id="" title="아이디" type="text" name="" class="form-control" placeholder="아이디 입력">
-                        </div>
-                        <div class="form-group">
-                            <input id="" title="패스워드" type="text" name="" class="form-control" placeholder="비밀번호 입력">
-                        </div>
-                        <ul>
-                            <li><a href="javascript:void(0);">아이디 찾기</a></li>
-                            <li><a href="javascript:void(0);">비밀번호 찾기</a></li>
-                        </ul>
-                        <div class="btn-wrap bottom">
-                            <button type="button" name="button" class="btn btn-primary">로그인</button>
-                        </div>
+                <div class="form-wrap">
+                    <div class="form-group">
+                        <input id="" title="아이디" type="text" name="" class="form-control" placeholder="아이디 입력">
                     </div>
-                </form>
+                    <div class="form-group">
+                        <input id="" title="패스워드" type="text" name="" class="form-control" placeholder="비밀번호 입력">
+                    </div>
+                    <ul>
+                        <li><a href="javascript:void(0);">아이디 찾기</a></li>
+                        <li><a href="javascript:void(0);">비밀번호 찾기</a></li>
+                    </ul>
+                    <div class="btn-wrap bottom">
+                        <button type="button" name="button" class="btn btn-primary onclick" onclick="messagePopup('lyAlert01')">로그인</button>
+                    </div>
+                </div>
                 <div class="check-plz">
                     <p class="plz-tit">확인해 주세요</p>
                     <ul class="bul-hypn">
@@ -91,3 +89,16 @@
 </body>
 
 </html>
+<div id="lyAlert01" class="layerpopup type-alert on" tabindex="0" style="display:block;">
+    <div class="content-wrap">
+        <div class="ly-cont-wrap">
+            <p class="tit">아이디 또는 비밀번호가 일치하지 않습니다.</br>
+                확인 후 다시 입력해 주세요</p>
+            <p class="tit-bold">[오류 누적 횟수 1회]</p>
+            <p class="tit">누적 5회 오류 시, 10분간 계정 잠금 처리 됩니다.</p>
+        </div>
+        <div class="btn-wrap alert">
+            <button type="button" name="button" class="btn btn-bottom">확인</button>
+        </div>
+    </div>
+</div>

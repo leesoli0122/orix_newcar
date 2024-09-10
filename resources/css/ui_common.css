@@ -130,11 +130,14 @@ FORM #폼
 .form-wrap.search .form-group.other .col { width:100%; max-width:712px; }
 .form-wrap.search .form-group.other .select-box { width:100%; max-width:132px; }
 .form-wrap.search .form-group.other .btn-input { color:var(--white); background:var(--background3); }
+/* Input_푸터 셀렉트 레이아웃 */
+.footer-wrap .form-group.footer { position:absolute; top:0; right:0; max-width:331px; width:100%; }
+.footer-wrap .form-group.footer .select-box > .se-select[data-stove=select] div.stove-option-layer { bottom:46px; }
+
 
 /*********************************************************************
 INPUT  #인풋
 *********************************************************************/
-
 /*---------------------------------------------
 	Input Reset
 ---------------------------------------------*/
@@ -154,11 +157,10 @@ input[type='checkbox'] { display:none; box-sizing: border-box; padding:0; }
 input::-ms-clear,
 input::-ms-reveal { display: none;}
 
-textarea { overflow-y:scroll; width:100%; max-width:700px; height:240px; padding:14px 16px; resize:none; white-space:pre-line; line-height:1.188rem; font-size:var(--font16); font-weight:var(--w-regular); color:var(--subtitle); border:1px solid var(--border2); background-color: var(--white); transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-
 /*---------------------------------------------
 	Input Default
 ---------------------------------------------*/
+textarea { overflow-y:scroll; width:100%; max-width:700px; height:240px; padding:14px 16px; resize:none; white-space:pre-line; line-height:1.188rem; font-size:var(--font16); font-weight:var(--w-regular); color:var(--subtitle); border:1px solid var(--border2); background-color: var(--white); transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
 input.form-control,
 .form-group .file-st { padding:0 16px; height:46px; line-height:1.188rem; font-size:var(--font16); font-weight:var(--w-regular); color:var(--subtitle); border:1px solid var(--border2); background-color: var(--white); transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;  }
 textarea::placeholder,
@@ -171,7 +173,6 @@ textarea:valid,
 input.form-control:valid { color:var(--normal); }
 input.form-control:disabled { background: var(--background2); }
 input.form-control:read-only { border:1px solid var(--border2); }
-
 
 /*********************************************************************
 INPUT_ ETC
@@ -213,12 +214,6 @@ input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; hei
 .form-group.error input.form-control { border:1px solid var(--error); }
 
 /*---------------------------------------------
-	Input_푸터 셀렉트 레이아웃
----------------------------------------------*/
-.footer-wrap .form-group.footer { position:absolute; top:0; right:0; max-width:331px; width:100%; }
-.footer-wrap .form-group.footer .select-box > .se-select[data-stove=select] div.stove-option-layer { bottom:46px; }
-
-/*---------------------------------------------
 	Input_인증번호 시간연장
 ---------------------------------------------*/
 .form-group .timeNum { position:absolute; transform: translateY(-50%); top:50%; right:34px; color:var(--error); }
@@ -226,7 +221,6 @@ input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; hei
 .form-group .timeNum::before { content:''; position: absolute; right:-24px; width:20px; height:20px; }
 .form-group .timeNum::before { background: url(../images/ic_time_off.png) no-repeat 100%/20px auto; }
 .form-group .timeNum.active::before { background: url(../images/ic_time_on.png) no-repeat 100%/20px auto; }
-
 
 /*********************************************************************
 INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
@@ -310,6 +304,7 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 .terms-area .terms-agr-wrap { display:inline-block; width:100%; margin-top:50px; }
 .terms-area .terms-agr-wrap .terms-tit { font-weight:600; font-size:1rem; color:#000; margin-bottom:20px; }
 
+
 /*********************************************************************
 Button #버튼
 *********************************************************************/
@@ -371,7 +366,10 @@ button.btn.btn-text.small:hover { color:var(--secondary); }
 button.btn.btn-text.medium:hover::after,
 button.btn.btn-text.small:hover::after { background:var(--svg-arrow-hover); }
 
-/** 아이콘 버튼 **/
+/** 검색 버튼 **/
+button.btn.btn-search { padding:0; height:46px; width:62px; background:url(../images/ic_search.png)no-repeat var(--background3) 50%/30px auto; }
+
+/** 등록하기 + 아이콘 버튼 **/
 button.btn.btn-icon { padding:0 44px 0 20px; height:44px; border:1px solid var(--border1); border-radius:6px; color:var(--normal); }
 button.btn.btn-icon:after { content:''; position:absolute; transform: translateY(-50%); top:50%; right:20px; width:20px; height:20px; background: url(../images/ic_plus.png)no-repeat 100%/20px auto; }
 
@@ -383,7 +381,6 @@ button.btn.btn-top:hover { border:1px solid var(--secondary); background: var(--
 /*********************************************************************
 TOGGLE_ACCORDION #토글_아코디언 [QnA]
 *********************************************************************/
-
 /*---------------------------------------------
 	Toggle_Accordion Default
 ---------------------------------------------*/

@@ -1,0 +1,30 @@
+
+<ul>
+    <li><a href="#contentsWrap" id="goContents">본문 바로가기</a></li>
+    <li><a href="#gnb" id="goGnb">주메뉴 바로가기</a></li>
+    <li><a href="#footerWrap" id="goFooter">하단 바로가기</a></li>
+</ul>
+
+<script>
+    $(function(){
+        /* 웹접근성 - focus 이동 */
+        $("#skipnavi a").keydown(function(e){
+            if(e.keyCode === 13){
+                if(this.id === "goContents"){	//본문 바로가기
+                    if ((location.href).indexOf('home') == -1) {
+                        location.href = "#gnb"
+                        $(".home.ir").focus();
+                    }else{
+                        location.href = "#contentsWrap"
+                    }
+                }else if(this.id === "goGnb"){	//주메뉴 바로가기
+                    location.href = "#gnb"
+                    $("#depthDeposit > a").focus();
+                }else{							//하단 바로가기
+                    location.href = "#footerWrap"
+                    $(".policy-link > a").eq(0).focus();
+                }
+            }
+        });
+    });
+</script>

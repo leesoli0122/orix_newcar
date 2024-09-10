@@ -239,8 +239,8 @@ sub-content
 .footer-wrap .list-wrap .address li + li { margin-top:7px; }
 .footer-wrap .list-wrap .address li span + span { margin-left:20px; }
 .footer-wrap .list-wrap .Copyright { margin-top:29px; font-weight:400; }
-.footer-wrap .form-wrap { position:absolute; top:0; right:0; max-width:331px; width:100%; }
-/* .footer-wrap .form-wrap .form-group { display:flex; gap:10px; max-width:331px; } */
+/* .footer-wrap .form-wrap { position:absolute; top:0; right:0; max-width:331px; width:100%; }
+.footer-wrap .form-wrap .form-group { display:flex; gap:10px; max-width:331px; }
 .footer-wrap .form-wrap .select-box > .se-select select { background:var(--white); }
 .footer-wrap .form-wrap .form-group .btn-input { color:var(--subtitle); background:var(--white); }
-.footer-wrap .form-wrap .form-group .form-row .col { width:100%; }
+.footer-wrap .form-wrap .form-group .form-row .col { width:100%; } */

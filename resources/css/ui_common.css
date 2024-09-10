@@ -154,57 +154,79 @@ input[type='checkbox'] { display:none; box-sizing: border-box; padding:0; }
 input::-ms-clear,
 input::-ms-reveal { display: none;}
 
+textarea { overflow-y:scroll; width:100%; max-width:700px; height:240px; padding:14px 16px; resize:none; white-space:pre-line; line-height:1.188rem; font-size:var(--font16); font-weight:var(--w-regular); color:var(--subtitle); border:1px solid var(--border2); background-color: var(--white); transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+
 /*---------------------------------------------
 	Input Default
 ---------------------------------------------*/
 input.form-control,
 .form-group .file-st { padding:0 16px; height:46px; line-height:1.188rem; font-size:var(--font16); font-weight:var(--w-regular); color:var(--subtitle); border:1px solid var(--border2); background-color: var(--white); transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;  }
+textarea::placeholder,
 input.form-control::placeholder { color:var(--subtitle); }
 input.form-control::-moz-placeholder,
 input.form-control::-ms-input-placeholder { color:var(--subtitle); }
+textarea:focus,
 input.form-control:focus { border-color:var(--normal); color:var(--normal); }
+textarea:valid,
 input.form-control:valid { color:var(--normal); }
 input.form-control:disabled { background: var(--background2); }
 input.form-control:read-only { border:1px solid var(--border2); }
 
+
+/*********************************************************************
+INPUT_ ETC
+*********************************************************************/
 /*---------------------------------------------
-	Input 첨부파일 File Custom
+	Input_첨부파일 File Custom
 ---------------------------------------------*/
 .form-group .file-st { display:flex; align-items: center; width:100%; max-width:410px; }
 input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; height:100%; opacity: 0; cursor: pointer; font-size:0; max-width:410px; z-index:1; }
 
 /*---------------------------------------------
-	Input 주민등록번호 Number Custom
+	Input_주민등록번호 Number Custom
 ---------------------------------------------*/
 .input-hyphen { display:flex; align-items: center; justify-content: center; font-size:var(--font14); }
 .jumintext { position:absolute; left:34px; top:50%; transform: translateY(-50%); font-size:var(--font16); font-weight: var(--w-regular); color:var(--normal); }
 /*---------------------------------------------
-	Input 원/개월/% Text Custom
+	Input_원/개월/% Text Custom
 ---------------------------------------------*/
 .amount { position:relative; }
 .amount .amount-txt { position:absolute; transform: translateY(-50%); top:50%; right:16px; font-size:var(--font16); font-weight:var(--w-bold); color:var(--normal); }
 
 /*---------------------------------------------
-	Input 유효성체크
+	Input_유효성체크
 ---------------------------------------------*/
+.form-group .info { display:none; }
 .form-group.error .info,
-.form-group.correct .info { padding-left:24px; margin-top:8px; font-size:var(--font14); font-weight:var(--w-regular); }
+.form-group.correct .info { display:block; }
+.form-group.error .info,
+.form-group .info { padding-left:24px; margin-top:8px; font-size:var(--font14); font-weight:var(--w-regular); }
 .form-group.error .info { color:var(--error); }
-.form-group.correct .info { color:var(--secondary); }
+.form-group .info { color:var(--secondary); }
 .form-group.error .info:before,
-.form-group.correct .info:before,
+.form-group .info:before,
 .caption:before { content:''; position:absolute; top:50%; left:0; transform:translateY(-50%); width:16px; height:16px; }
 .form-group.error .info:before { background: var(--svg-error-info);  }
-.form-group.correct .info:before,
+.form-group .info:before,
 .caption:before { background: var(--svg-correct-info); }
 .form-group input.form-control[data-status=error],
 .form-group.error input.form-control { border:1px solid var(--error); }
 
 /*---------------------------------------------
-	Input footer
+	Input_푸터 셀렉트 레이아웃
 ---------------------------------------------*/
 .footer-wrap .form-group.footer { position:absolute; top:0; right:0; max-width:331px; width:100%; }
 .footer-wrap .form-group.footer .select-box > .se-select[data-stove=select] div.stove-option-layer { bottom:46px; }
+
+/*---------------------------------------------
+	Input_인증번호 시간연장
+---------------------------------------------*/
+.form-group .timeNum { position:absolute; transform: translateY(-50%); top:50%; right:34px; color:var(--error); }
+.form-group .timeNum::before,
+.form-group .timeNum::before { content:''; position: absolute; right:-24px; width:20px; height:20px; }
+.form-group .timeNum::before { background: url(../images/ic_time_off.png) no-repeat 100%/20px auto; }
+.form-group .timeNum.active::before { background: url(../images/ic_time_on.png) no-repeat 100%/20px auto; }
+
 
 /*********************************************************************
 INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
@@ -225,7 +247,7 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 .form-group > .check-box input[type='checkbox']:checked + .check-button span::before { border:1px solid var(--secondary); background:url(../images/common/ic_check_on.png)no-repeat var(--secondary) 50%/12px auto; }
 .form-group > .check-box input[type='checkbox']:disabled + .check-button span::before { border:1px solid var(--border2);  background:url(../images/common/ic_check_off.png)no-repeat var(--background1) 50%/12px auto; }
 .form-group > .check-box input[type='checkbox'] + .check-button span::before,
-.form-group > .radio-box input[type='radio'] + .radio-button span::before { content:''; position:absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px;  }
+.form-group > .radio-box input[type='radio'] + .radio-button span::before { content:''; position:absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; }
 .form-group > .check-box input[type='checkbox'] + .check-button span::before { border:1px solid var(--border1); background:var(--white); background:url(../images/common/ic_check_off.png)no-repeat 50%/12px auto; }
 
 /** 라운드일 경우 **/
@@ -240,25 +262,23 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 /*---------------------------------------------
 	Input_Toggle style
 ---------------------------------------------*/
-.form-group > .toggle-box input[type='checkbox'] + .toggle-button { display:inline-block; position:relative; width:40px; height:24px; border-radius:25px; background:var(--background1); transition: all 0.2s; }
-.form-group > .toggle-box input[type='checkbox'] + .toggle-button::before { content:''; position:absolute; top:50%; left:3px; transform: translateY(-50%); width:20px; height:20px; border-radius: 50%; background: var(--white); box-shadow:0px 2px 5px 0px rgba(23,4,61,0.2); transition: all 0.5s; }
-.form-group > .toggle-box input[type='checkbox']:checked + .toggle-button::before { right:3px; left:inherit; }
+.form-group > .toggle-box input[type='checkbox'] + .toggle-button { display:inline-block; position:relative; width:40px; height:24px; border-radius:25px; background:var(--background1); transition: all 0.3s ease; }
+.form-group > .toggle-box input[type='checkbox'] + .toggle-button::before { content:''; position:absolute; top:50%; left:3px; transform: translateY(-50%); width:20px; height:20px; border-radius: 50%; background: var(--white); box-shadow:0px 2px 5px 0px rgba(23,4,61,0.2); transition: left 0.5s ease-in-out, right 0.5s ease-in-out; }
+.form-group > .toggle-box input[type='checkbox']:checked + .toggle-button::before { left:auto; right:3px;  }
 .form-group > .toggle-box input[type='checkbox']:checked + .toggle-button { background: var(--secondary);}
 
 /*---------------------------------------------
 	약관 체크박스
 ---------------------------------------------*/
+/** 약관 레이아웃 **/
 .terms-area { display:inline-block; max-width:557px; width:100%; border:1px solid var(--border3); }
 .terms-wrap input[type="checkbox"] { display:block; position:absolute; top:0; left:0; width:100%; height:100%; appearance:none; background-color:transparent; -webkit-appearance:none; cursor: pointer; }
-
-.terms-area + .form-group { margin-top:40px; }
+.terms-area + .form-group,
+.tit-main-area + .result-wrap { margin-top:40px; }
 
 /*** 체크박스/라디오 ***/
 .terms-area { display:inline-block; max-width:557px; width:100%; border:1px solid var(--border3); }
 .terms-wrap input[type="checkbox"] { display:block; position:absolute; top:0; left:0; width:100%; height:100%; appearance:none; background-color:transparent; -webkit-appearance:none; cursor: pointer; }
-
-.terms-area + .form-group,
-.tit-main-area + .result-wrap { margin-top:40px; }
 
 /* [전체] - 전체체크 */
 .chk-all + .terms-wrap.level2 { margin-top:20px; }
@@ -280,18 +300,16 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 .terms-wrap.level2 label > span { display:inline-block; width:100%; padding-right:26px; color:var(--normal); }
 .terms-wrap.level2 input[type="checkbox"]:checked + label::before { content:''; position:absolute; left:0; top:50%; transform: translateY(-50%); width:24px; height:24px; background:url(../images/common/ic_chk2_on.png)no-repeat 50%/12px auto; }
 .terms-wrap.level2.no-ico label > span::after { display:none;}
-
 .terms-wrap.level2 fieldset { display:flex; justify-content:space-between; }
-
 
 /* [선택] - 개별체크 */
 .terms-wrap .level3 { width:100%; margin:10px 0; padding:0 30px; font-size:0; }
 .terms-wrap .level3 > div { width:50%; display:inline-block; }
 .terms-wrap .level3 label { width:100%; padding:0; padding-left:30px; }
 .terms-wrap .level3 label::after { display:none; }
-
 .terms-area .terms-agr-wrap { display:inline-block; width:100%; margin-top:50px; }
 .terms-area .terms-agr-wrap .terms-tit { font-weight:600; font-size:1rem; color:#000; margin-bottom:20px; }
+
 /*********************************************************************
 Button #버튼
 *********************************************************************/

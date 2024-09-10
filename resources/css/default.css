@@ -114,10 +114,6 @@ table { border-collapse:collapse; }
 .revert-type-spread { margin:0 20px; }
 .essential { color:var(--subtitle); }
 .essential::after { content:"*"; color:var(--error); padding-left:3px; }
-textarea { overflow-y:scroll; width:100%; max-width:700px; height:240px; padding:14px 16px; resize:none; border-radius:4px; border:1px solid var(--border1); background:var(--white); font-size:0.875rem; line-height:1rem; color:var(--subtitle); font-weight:300; white-space:pre-line; }
-textarea::placeholder { color:var(--subtitle); }
-textarea:focus { color:#212121; font-size:0.875rem; font-weight:300; border-color:var(--secondary); outline:none; }
-textarea:valid { color: #212121 !important; }
 
 /* 폰트숨김 */
 .ir { position:absolute; clip:rect(1px 1px 1px 1px); width:1px; height:1px; margin:-1px; overflow: hidden;   }

@@ -121,7 +121,7 @@ textarea:focus { color:#212121; font-size:0.875rem; font-weight:300; border-colo
 textarea:valid { color: #212121 !important; }
 
 /* 폰트숨김 */
-.ir { /*position:absolute;*/clip:rect(1px 1px 1px 1px); width:1px; height:1px; margin:-1px; overflow: hidden;   }
+.ir { position:absolute; clip:rect(1px 1px 1px 1px); width:1px; height:1px; margin:-1px; overflow: hidden;   }
 
 /* skipnavi */
 #skipnavi li a { display:block; font-size:16px; font-size:1rem; width:100%; position:absolute; top:-10000px; left:0; text-align:center; z-index:999999; line-height:1; letter-spacing:0; }

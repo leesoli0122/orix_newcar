@@ -124,16 +124,15 @@ FORM #폼
 .form-group.check ul.check-box,
 .form-group.radio ul.radio-box { display:flex; flex-wrap:wrap; gap:20px; }
 /** Form Layout - footer에 들어갈 경우 **/
-.form-group.footer { position:absolute; top:0; right:0; width:100%; max-width:331px; }
-.form-group.footer .select-box { width:100%; max-width:263px; }
-.form-group.footer .select-box > .se-select[data-stove=select] div.stove-option-layer { bottom:46px; }
-.form-group.footer .form-row { display:flex; justify-content: flex-end; }
+.footer-wrap .form-group { position:absolute; top:0; right:0; width:100%; max-width:331px; }
+.footer-wrap .form-group .select-box { width:100%; max-width:263px; }
+.footer-wrap .form-group .select-box > .se-select[data-stove=select] div.stove-option-layer { bottom:46px; }
+.footer-wrap .form-group .form-row { display:flex; justify-content: flex-end; }
 /* Form Layout - search */
 .form-wrap.search > .form-group.other .form-row { justify-content: center; }
 .form-wrap.search > .form-group.other .col { width:100%; max-width:712px; }
 .form-wrap.search > .form-group.other .select-box { width:100%; max-width:132px; }
 .form-wrap.search > .form-group.other .btn-input { color:var(--white); background:var(--background3); }
-
 
 /*********************************************************************
 INPUT  #인풋

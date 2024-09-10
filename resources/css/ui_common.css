@@ -44,8 +44,8 @@ SELECT #셀렉트
 ---------------------------------------------*/
 .select-box > .se-select { width:100%; max-width:410px; }
 .select-box > .se-select label { display:inline-block; font-size:var(--font14); color:var(--normal); }
-.select-box > .se-select select { z-index:1; position:relative; width: 100%; height: 46px; padding: 14px 16px; line-height:1; font-size: var(--font16); font-weight:var(--w-regular); color:var(--subtitle); background-color:transparent; border: solid 1px var(--border1);  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-.select-box > .se-select::after {  content:''; position:absolute; right:16px; top:50%; transform:translateY(-50%); background-image: var(--svg-select-arrow); background-repeat: no-repeat; background-position: center; width:20px; height:20px; }
+.select-box > .se-select select { z-index:1; position:relative; width: 100%; height: 46px; padding: 14px 16px; line-height:1; font-size: var(--font16); font-weight:var(--w-regular); color:var(--subtitle); background-color:var(--white); border: solid 1px var(--border1);  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+.select-box > .se-select::after {  content:''; position:absolute; right:16px; top:50%; transform:translateY(-50%); background-image: var(--svg-select-arrow); background-repeat: no-repeat; background-position: center; width:20px; height:20px; z-index:1; }
 .select-box > .se-select select option { background-color:var(--white);  color: var(--normal); }
 .select-box > .se-select select:disabled,
 .select-box > .se-select select[disabled=disabled] { border-color: var(--border2); background-color:var(--white); color: var(--subtitle); opacity: 1; }
@@ -116,7 +116,7 @@ FORM #폼
 .form-group.radio label { margin-bottom:0; }/*체크, 라디오 라벨*/
 .form-wrap .form-group:first-child { margin-top:0; }
 .form-wrap .form-group { margin-top:24px; }
-.form-group:not(.form-group.other) { max-width:410px; }
+.form-group:not(.form-group.other) { display:block; max-width:410px; }
 .form-group .form-row { display:flex; flex-wrap:nowrap; width:100%; gap:10px; }
 /** Form Layout - 컨포넌트 3개 이상일 경우 **/
 .form-group.other .select-box { width:100%; max-width:162px; }
@@ -124,6 +124,13 @@ FORM #폼
 /** Form Layout - checkbox/radio **/
 .form-group.check ul.check-box,
 .form-group.radio ul.radio-box { display:flex; flex-wrap:wrap; gap:20px; }
+/** Form Layout - footer에 들어갈 경우 **/
+.form-group.footer .select-box { width:100%; max-width:263px; }
+/* Form Layout - search */
+.form-wrap.search .form-group.other .form-row { justify-content: center; }
+.form-wrap.search .form-group.other .col { width:100%; max-width:712px; }
+.form-wrap.search .form-group.other .select-box { width:100%; max-width:132px; }
+.form-wrap.search .form-group.other .btn-input { color:var(--white); background:var(--background3); }
 
 /*********************************************************************
 INPUT  #인풋
@@ -186,9 +193,11 @@ input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; hei
 .form-group.error .info { color:var(--error); }
 .form-group.correct .info { color:var(--secondary); }
 .form-group.error .info:before,
-.form-group.correct .info:before { content:''; position:absolute; top:50%; left:0; transform:translateY(-50%); width:16px; height:16px; }
+.form-group.correct .info:before,
+.caption:before { content:''; position:absolute; top:50%; left:0; transform:translateY(-50%); width:16px; height:16px; }
 .form-group.error .info:before { background: var(--svg-error-info);  }
-.form-group.correct .info:before { background: var(--svg-correct-info); }
+.form-group.correct .info:before,
+.caption:before { background: var(--svg-correct-info); }
 .form-group input.form-control[data-status=error],
 .form-group.error input.form-control { border:1px solid var(--error); }
 
@@ -253,7 +262,7 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 .terms-wrap.level1 label > span { padding-left:34px; font-weight:var(--w-regular); color:var(--normal); }
 .terms-wrap.level1 label::before { content:""; position:absolute; left:0; top:50%; transform: translateY(-50%); width:24px; height:24px; border:1px solid var(--border2); border-radius:50%; background:url(../images/common/ic_check_off.png)no-repeat 50%/12px auto; }
 .terms-wrap.level1 label > a { position:relative; z-index:1; }
-.terms-wrap.chk-all input[type="checkbox"]:checked + label::before { content:''; position:absolute; left:0; top:50%; transform: translateY(-50%); background:url(../images/common/ic_check_on.png)no-repeat var(--secondary) 50%/12px auto; }
+.terms-wrap.chk-all input[type="checkbox"]:checked + label::before { content:''; position:absolute; left:0; top:50%; transform: translateY(-50%); border:1px solid var(--secondary); background:url(../images/common/ic_check_on.png)no-repeat var(--secondary) 50%/12px auto; }
 .terms-wrap.chk-all input[type="checkbox"]:checked + label span { font-weight:var(--w-bold); color:var(--title); }
 
 /* [필수] - 개별체크 */
@@ -295,7 +304,7 @@ Button #버튼
 .btn-wrap button.btn:first-child { margin-left:0; }/*공통*/
 .btn-wrap button.btn { margin-left:16px; }/*공통*/
 .btn-wrap.cont { margin:40px 0; }/* 컨테츠 버튼 */
-.btn-wrap.bottom { margin:60px 0 40px; }/* 컨테츠 하단 버튼 */
+.btn-wrap.bottom { margin:60px 0 40px; width:100%; text-align:center; }/* 컨테츠 하단 버튼 */
 .btn-wrap.popup { margin:28px 0; }/* 팝업 버튼 */
 .btn-wrap.alert { margin:40px 0 30px; }/* 알럿 버튼 */
 
@@ -455,10 +464,6 @@ popup #팝업
 .layerpopup.type-alert .content-wrap .ly-cont-wrap { font-size:var(--font16); font-weight:var(--w-regular); text-align:center; color:var(--title); }
 .layerpopup.type-alert .content-wrap .ly-cont-wrap .tit { line-height:1.5; }
 
-
-
-
-
 /*********************************************************************
 페이지네이션
 *********************************************************************/
@@ -471,7 +476,8 @@ popup #팝업
 .pagination a + ul { margin-left:28px; }
 .pagination ul li { float:left; padding:0 12px; line-height:1.5; }
 .pagination ul li + li { margin-left:4px; }
-.pagination a { font-size:var(--font16); }
+.pagination ul li a { font-size:var(--font16); }
+.pagination a { font-size:0; }
 .pagination a:hover, .pagination a:focus { font-weight:var(--w-bold); color:var(--title); background-color:transparent; }
 .pagination a.active { font-weight:var(--w-bold); color:var(--title); text-decoration: underline; text-underline-offset:4px; }
 .pagination a.active:hover,.pagination a.active:focus { text-decoration: underline; text-underline-offset:4px; }
@@ -543,7 +549,6 @@ input.datefrom:after{ position: absolute; top:50%; right:10px; content: ''; widt
 .tabs-wrap .tab-list li.on { border:2px solid var(--normal); border-bottom:2px solid var(--white); font-weight:var(--w-bold); color:var(--title); }
 .tabs-wrap .tab-item li.on a,
 .tabs-wrap .tab-list li.on a { color:var(--normal); font-weight:var(--w-bold); }
-.tabs-wrap .tab-content > div  { margin-top:30px; }
 
 /** 스크립트x - tab **/
 .tabs-wrap.type2 .tab-item02 { display:flex; flex-wrap:wrap; align-items: center;gap:20px; }
@@ -625,12 +630,13 @@ list #리스트
 .list-card-wrap.download .list-card-group .card-right .txt-wrap li span { font-weight:var(--w-regular); color:var(--inactive); }
 
 /* 전년 대비 실적 / record */
+.list-card-wrap.record .list-card-group { border:1px solid var(--border3); }
 .list-card-wrap.record .list-card-group .txt-list li + li { margin-top:20px; }
 .list-card-wrap.record .list-card-group .txt-list li .tit { padding-left:30px; font-size:var(--font16); font-weight:var(--w-regular);line-height:1.5; }
-.list-card-wrap.record .list-card-group .txt-list li .tit::before { content:""; position: absolute; top:50%; transform: translateY(-50%); left:0; display:inline-block; width: 20px; height:20px; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cg data-name='그룹 64955'%3E%3Cpath fill='%23fff' d='M0 0h20v20H0z' data-name='사각형 24327'/%3E%3Cpath fill='%23222' d='M6 11h2v1H6z'/%3E%3Cpath fill='%23222' d='M9 11h2v1H9zM12 11h2v1h-2z' data-name='Rectangle'/%3E%3Cpath fill='none' stroke='%23333' stroke-miterlimit='10' d='M3 7.31V3.37h12.44A1.57 1.57 0 0 1 17 4.95V16H4.56A1.57 1.57 0 0 1 3 14.42V8.9'/%3E%3Cpath fill='none' stroke='%23222' stroke-linecap='square' stroke-miterlimit='10' d='M3.39 6.92H16.6'/%3E%3Cpath fill='none' stroke='%23333' stroke-miterlimit='10' d='M6.11 1v3.16M13.11 1v3.16'/%3E%3C/g%3E%3C/svg%3E") center center /contain; }
+.list-card-wrap.record .list-card-group .txt-list li .tit::before { content:""; position: absolute; top:50%; transform: translateY(-50%); left:0; display:inline-block; width: 20px; height:20px; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cg data-name='그룹 64955'%3E%3Cpath fill='%23fff' d='M0 0h20v20H0z' data-name='사각형 24327'/%3E%3Cpath fill='%23222' d='M6 11h2v1H6z'/%3E%3Cpath fill='%23222' d='M9 11h2v1H9zM12 11h2v1h-2z' data-name='Rectangle'/%3E%3Cpath fill='none' stroke='%23333' stroke-miterlimit='10' d='M3 7.31V3.37h12.44A1.57 1.57 0 0 1 17 4.95V16H4.56A1.57 1.57 0 0 1 3 14.42V8.9'/%3E%3Cpath fill='none' stroke='%23222' stroke-linecap='square' stroke-miterlimit='10' d='M3.39 6.92H16.6'/%3E%3Cpath fill='none' stroke='%23333' stroke-miterlimit='10' d='M6.11 1v3.16M13.11 1v3.16'/%3E%3C/g%3E%3C/svg%3E")no-repeat center /contain; }
 
 /* 리스트 안에 이미지가 있는 list / img */
-.list-card-wrap.img .list-card-group { display:flex; align-items:center; gap:16px; padding:20px; width:468px; }
+.list-card-wrap.img .list-card-group { display:flex; align-items:center; gap:16px; padding:20px; width:468px; border:1px solid var(--border3); }
 .list-card-wrap.img .list-card-group .car-img { padding:8px 10px; width:176px; height:94px; border-radius:8px; font-size:0; background:var(--background4) }
 .list-card-wrap.img .list-card-group .txt-list { width:236px; }
 .list-card-wrap.img .list-card-group .txt-list li .tit,
@@ -703,7 +709,7 @@ table #테이블
 /*---------------------------------------------
     목록
 ---------------------------------------------*/
-.search-wrap { margin-bottom:68px; padding:40px 0; border-radius:20px; background:var(--background4); }
+.search { margin-bottom:68px; padding:40px 0; border-radius:20px; background:var(--background4); }
 /*---------------------------------------------
     상세페이지
 ---------------------------------------------*/

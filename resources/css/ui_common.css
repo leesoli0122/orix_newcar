@@ -122,7 +122,7 @@ FORM #폼
 .form-group.style1 .col { max-width:300px; }
 .form-group.style1 .select-box { width:100%; max-width:162px; }
 /* Form Layout - search */
-.form-group.style2 { max-width:962px;}
+.form-group.style2 { width:100%; max-width:962px;}
 .form-group.style2 .select-box { width:100%; max-width:162px; }
 /** Form Layout - checkbox/radio **/
 .form-group.check ul.check-box,
@@ -715,7 +715,7 @@ table #테이블
 /*---------------------------------------------
     목록
 ---------------------------------------------*/
-.search { margin-bottom:40px; padding:40px 20px; border-radius:20px; background:var(--background4); }
+.search { display:flex; justify-content: center;  margin-bottom:40px; padding:40px 20px; border-radius:20px; background:var(--background4); }
 /*---------------------------------------------
     상세페이지
 ---------------------------------------------*/

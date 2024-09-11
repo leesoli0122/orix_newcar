@@ -1,8 +1,3 @@
-window.addEventListener('scroll', () => {
-	const bwLeft = window.scrollX;
-	document.querySelector('#header').style.transform = `translateX(-${bwLeft}px)`;
-});
-
 $(document).ready(function() {
 
   /**  3자리 수마다 콤마 적용 **/

@@ -4,26 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datepicker Range with Icon Button</title>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <style>
-        
-    </style>
+    <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/ui_common.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-ui-1.12.1.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui_common.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/default.js"></script>
 </head>
 <body>
-    <div class="form-wrap">
-
-    <div class="datepicker-container">
-        <label for="from">From:</label>
-        <input type="text" id="from" class="datepicker">
-        <button type="button" class="datepicker-button" id="from-button"></button>
-    </div>
-
-    <div class="datepicker-container">
-        <label for="to">To:</label>
-        <input type="text" id="to" class="datepicker">
-        <button type="button" class="datepicker-button" id="to-button"></button>
-    </div>
-
     <div class="movepage">
         <ul>
             <li>
@@ -57,46 +47,45 @@
                 </ul>
             </li>
         </ul>
-    </div>
+        <table class="thead">
+            <tr>
+                <td>제목1</td>
+                <td>제목2</td>
+            </tr>
+        </table>
+        
+        <table aria-hidden=“aria-hidden”>
+            <colgroup>
+                <col width="10%" />
+                <col width="*" />
+            </colgroup>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+        </table>
+        <div style="height:300px;">
+            <table summary="">
+                <caption></caption>
+                <colgroup>
+                    <col width="10%" />
+                    <col width="*" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope=“col”>1</th>
+                        <th scope=“col”>2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-        $(function() {
-            var dateFormat = "mm/dd/yy",
-                from = $("#from").datepicker({
-                    defaultDate: "+1w",
-                    changeMonth: true,
-                    numberOfMonths: 1
-                }).on("change", function() {
-                    to.datepicker("option", "minDate", getDate(this));
-                }),
-                to = $("#to").datepicker({
-                    defaultDate: "+1w",
-                    changeMonth: true,
-                    numberOfMonths: 1
-                }).on("change", function() {
-                    from.datepicker("option", "maxDate", getDate(this));
-                });
-
-            function getDate(element) {
-                var date;
-                try {
-                    date = $.datepicker.parseDate(dateFormat, element.value);
-                } catch (error) {
-                    date = null;
-                }
-                return date;
-            }
-
-            // 달력 버튼 클릭 시 Datepicker 열기
-            $("#from-button").on("click", function() {
-                $("#from").datepicker("show");
-            });
-
-            $("#to-button").on("click", function() {
-                $("#to").datepicker("show");
-            });
-        });
-    </script>
 </body>
 </html>

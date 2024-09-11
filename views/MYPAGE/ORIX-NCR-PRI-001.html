@@ -1,0 +1,380 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="ORIX Capital keywords">
+    <meta name="description" content="ORIX Capital description">
+
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:type" content="website" />
+
+    <title>마이페이지 > 실적조회 > 나의실적</title>
+
+    <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/ui_common.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-ui-1.12.1.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui_common.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/default.js"></script>
+
+</head>
+<body>
+    <div class="wrap">
+        <!-- s:header -->
+        <div id="headerWrap">
+            <script>
+                $(document).ready(function(){
+                    $("#headerWrap").load("../INCLUDE/inc_header.html");
+                });
+            </script>
+        </div>
+        <!-- //e:header -->
+         <!-- s:contentWrap -->
+        <div id="contentWrap" class="sub-content">
+            <!-- s:subvisual-wrap -->
+            <div class="subvisual-wrap">
+                <div class="breadcrumb-wrap">
+                    <ul>
+                        <li class="home"><a href="javascript:void(0);">홈</a></li>
+                        <li><a href="javascript:void(0);">마이페이지</a></li>
+                        <li><a href="javascript:void(0);">실적조회</a></li>
+                    </ul>
+                </div>
+                <div class="text-wrap">
+                    <h2>실적조회</h2>
+                </div>
+            </div>
+            <!-- //e:subvisual-wrap -->
+            <!-- s:contents -->
+            <div class="contents">
+                <div class="tabs-wrap">
+                    <div class="tabs">
+                        <ul class="tab-item">
+                            <li class="on" data-tab="tab-cont01"><a href="#none">나의 실적</a></li>
+                            <li data-tab="tab-cont02" class=""><a href="#none">월별실적 </a></li>
+                        </ul>
+                        <div class="tab-content-area">
+
+                            <div id="tab-cont01" class="tab-content">
+                                <form>
+                                    <div class="sub-text-wrap style1">
+                                        <h4><span>홍길동</span> 님의 실적을 확인해 보세요.</h4>
+                                    </div>
+                                    <div class="table-type">
+                                        <div class="col">
+                                            <dl>
+                                                <dt>기간</dt>
+                                                <dd class="dp-b-b">
+                                                    <div class="form-group radio">
+                                                        <ul class="radio-box">
+                                                            <li>
+                                                                <input type="radio" id="radio-1" name="radio">
+                                                                <label for="radio-1"class="radio-button"><span>1주</span></label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" id="radio-2" name="radio" checked="">
+                                                                <label for="radio-2"class="radio-button"><span>2주</span></label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" id="radio-3" name="radio" checked="">
+                                                                <label for="radio-3"class="radio-button"><span>1달</span></label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </dd>
+                                                <dd class="dp-b-b">
+                                                    <div class="form-group">
+                                                        <div class="form-row">
+                                                            <div class="col">
+                                                                <input type="date" class="form-control datefrom" id="dateFrom" name="from">
+                                                            </div>
+                                                            <div class="input-hyphen">~</div>
+                                                            <div class="col">
+                                                                <input type="date" class="form-control datefrom" id="dateTo" name="to">
+                                                            </div>
+                                                            <button class="btn btn-input" name="btnSearch" id="btnSearch" type="button">조회</button>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>실적금액</dt>
+                                                <dd class="result-num">
+                                                    총 <span class="blue">300,000,000</span>원
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="tabs type2">
+                                    <ul class="tab-item02">
+                                        <li class="on" data-tab="tab-cont001" data-id="teb1" id="">견적 <span class="blue">13</span> <span class="sub-tit">(리스 <span>8</span>/렌터 <span>5</span>)</span></li>
+                                        <li data-tab="tab-cont002" data-id="teb2" id="">상담심사 <span>5</span></li>
+                                        <li data-tab="tab-cont003" data-id="teb3" id="">발주예정<span>5</span></li>
+                                        <li data-tab="tab-cont004" data-id="teb4" id="">약정펀딩<span>5</span></li>
+                                        <li data-tab="tab-cont005" data-id="teb5" id="">인도<span>3</span></li>
+                                    </ul>
+                                    <div class="tab-content-area">
+                                        <div id="tab-cont001" class="tab-content on">
+                                            <div class="sub-text-wrap style2">
+                                                <h4>전년 대비 실적</h4>
+                                            </div>
+                                            <div class="grid-wrap list-card-wrap record">
+                                                <div class="result-area success">
+                                                    <div class="text-wrap result">
+                                                        <ul>
+                                                            <li>작년 동일기간 보다 <span class="blue">200,000</span>원 <span class="blue">높은</span> 실적을 기록했습니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!--S: 실패시
+                                                <div class="result-area fail">
+                                                    <div class="text-wrap result">
+                                                        <ul>
+                                                            <li>작년 동일기간 보다 <span class="red">200,000</span>원 <span class="red">낮은</span> 실적을 기록했습니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div> -->
+                                                <!--S: 실패시
+                                                <div class="list-card-group">
+                                                    <ul class="txt-list">
+                                                        <li>
+                                                            <div class="tit">2024.07.29 ~ 2024.08.28</div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="badge02 work">실패시 건수</span>
+                                                            <span class="num"><span>3,000,000,000</span> 원</span>
+                                                        </li>
+                                                    </ul>
+                                                </div> -->
+                                                <!--E: 실패시 -->
+                                                <!-- 성공시 -->
+                                                <div class="list-card-group">
+                                                    <ul class="txt-list">
+                                                        <li>
+                                                            <span class="tit">2024.07.29 ~ 2024.08.28</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="badge02 personal">성공시 건수</span>
+                                                            <span class="num"><span>2,000,000,000</span> 원</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="list-card-group">
+                                                    <ul class="txt-list">
+                                                        <li>
+                                                            <span class="tit">2024.07.29 ~ 2024.08.28</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="badge02 personal">성공시 건수</span>
+                                                            <span class="num"><span>2,000,000,000</span> 원</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="table-type">
+                                                <div class="col">
+                                                    <dl>
+                                                        <dt>기간</dt>
+                                                        <dd><span>2024.07.29 ~ 2024.08.24</span></dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>오토리스</dt>
+                                                        <dd><span>3,000,000,000</span> 원</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>렌터카</dt>
+                                                        <dd><span>3,000,000,000</span> 원</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>합계</dt>
+                                                        <dd class="result-num-s"><span class="blue">6,000,000,000</span> 원</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                            <div class="table-wrap">
+                                                <div class="sub-text-wrap style2">
+                                                    <h4>실적내역</h4>
+                                                </div>
+                                                <div class="table-type ta-c style2 table-scroll">
+                                                    <table aria-role="table">
+                                                        <caption>기간,실적금액에 대한 리스,렌터카,합계 테이블</caption>
+                                                        <colgroup>
+                                                            <col width="*%">
+                                                            <col width="*%">
+                                                            <col width="*%">
+                                                            <col width="*%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th rowspan="2">기간</th>
+                                                                <th colspan="3">실적금액</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>리스</th>
+                                                                <th>렌터카</th>
+                                                                <th>합계</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.08.28</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>3,000,000,000 원</td>
+                                                                <td>6,000,000,000 원</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //e:contents -->
+        </div>
+        <!-- //e:contentWrap -->
+        <!-- s:footer -->
+        <div id="footerWrap">
+            <script>
+                $(document).ready(function(){
+                    $("#footerWrap").load("../INCLUDE/inc_footer.html");
+                });
+            </script>
+        </div>
+        <!-- //e:footer -->
+    </div>
+</body>
+
+</html>

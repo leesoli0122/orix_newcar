@@ -12,7 +12,7 @@
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:type" content="website" />
 
-    <title>로그인 > 비밀번호 찾기 > 새 비밀번호 입력</title>
+    <title>마이페이지 > 비밀번호변경</title>
 
     <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/ui_common.css" rel="stylesheet" type="text/css" />
@@ -25,27 +25,48 @@
 
 </head>
 <body>
-    <div class="wrap login">
+    <div class="wrap">
         <!-- s:header -->
-        <div class="login-header">
-            <img src="../../resources/images/login_logo.png" alt="오릭스캐피탈코리아 로고">
-            <h2>
-                비밀번호 찾기
-                <span>오릭스캐피탈코리아 신차 영업 플랫폼 비밀번호 찾기 화면입니다.</span>
-            </h2>
+        <div id="headerWrap">
+            <script>
+                $(document).ready(function(){
+                    $("#headerWrap").load("../INCLUDE/inc_header.html");
+                });
+            </script>
         </div>
         <!-- //e:header -->
-        <!-- s:contentWrap -->
+         <!-- s:contentWrap -->
         <div id="contentWrap" class="sub-content">
+            <!-- s:subvisual-wrap -->
+            <div class="subvisual-wrap">
+                <div class="breadcrumb-wrap">
+                    <ul>
+                        <li class="home"><a href="javascript:void(0);">홈</a></li>
+                        <li><a href="javascript:void(0);">마이페이지</a></li>
+                        <li><a href="javascript:void(0);">비밀번호변경</a></li>
+                    </ul>
+                </div>
+                <div class="text-wrap">
+                    <h2>비밀번호 변경</h2>
+                </div>
+            </div>
+            <!-- //e:subvisual-wrap -->
             <!-- s:contents -->
             <div class="contents">
                 <form>
                     <div class="sub-text-wrap style1">
-                        <h4><span class="blue">abcdef</span> 님 새 비밀번호를 입력해 주세요.</h4>
+                        <h4><span class="blue">오릭스</span> 님 새 비밀번호를 입력해 주세요.</h4>
                     </div>
                     <div class="table-type">
                         <div class="col">
                             <!-- 유효성체크 시 form-group에 error 추가 -->
+                            <dl>
+                                <dt>기존 비밀번호</dt>
+                                <dd class="form-group">
+                                    <input id="" type="text" name="" title="기존 비밀번호" class="form-control" placeholder="기존 비밀번호 입력">
+                                    <p class="info">기존 비밀번호를 입력해 주세요.</p>
+                                </dd>
+                            </dl>
                             <dl>
                                 <dt>새 비밀번호</dt>
                                 <dd class="form-group">

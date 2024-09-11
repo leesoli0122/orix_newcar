@@ -14,15 +14,14 @@
 
     <title>로그인 > 아이디 찾기 > 아이디 찾기 실패</title>
 
-    <link href="../../resources/css/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/ui_common.css" rel="stylesheet" type="text/css" />
 
-
     <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="../../resources/js/jquery-ui-1.12.1.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui_common.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui_plugin.js"></script>
     <script type="text/javascript" src="../../resources/js/default.js"></script>
-    <!-- <script type="text/javascript" src="../../resources/js/datepicker.js"></script> -->
 
 </head>
 <body>
@@ -53,25 +52,15 @@
         </div>
         <!-- //e:contentWrap -->
         <!-- s:footer -->
-        <div data-include-path="../INCLUDE/inc_footer.html"></div>
+        <div id="footerWrap">
+            <script>
+                $(document).ready(function(){
+                    $("#footerWrap").load("../INCLUDE/inc_footer.html");
+                });
+            </script>
+        </div>
         <!-- //e:footer -->
     </div>
-
-    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
-    <script>
-        $(function () {
-            $('div[data-include-path]').each(function () {
-                var path = $(this).attr('data-include-path');
-                $(this).load(path, function (response, status, xhr) {
-                    if (status == 'error') {
-                        var msg = 'Sory but there was an error:';
-                        $(this).html(msg + xhr.status + '' + xhr.statusText);
-                    }
-                })
-            })
-        })
-    </script>
-    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
 </body>
 
 </html>

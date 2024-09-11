@@ -242,3 +242,15 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleChkHandlers();
 });
 
+/*********************************************************************
+	fillter #필터fixed [QnA]
+*********************************************************************/
+$(window).scroll(function() {
+	const scroll = $(window).scrollTop();
+
+	if (scroll > 400){
+		$(".fillter").addClass("fix");
+	}else{
+		$(".fillter").removeClass("fix");
+	}
+})

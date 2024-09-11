@@ -15,10 +15,10 @@
     <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/ui_common.css" rel="stylesheet" type="text/css" />
 
-    <script type="text/javascript" src="../../resources/js/jquery.js"></script>
     <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="../../resources/js/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-ui-1.12.1.js"></script>
     <script type="text/javascript" src="../../resources/js/ui_common.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui_plugin.js"></script>
     <script type="text/javascript" src="../../resources/js/default.js"></script>
 </head>
 <style>
@@ -33,13 +33,17 @@
     .wrap {
         padding: 30px;
     }
+    .home { margin-bottom:10px; }
+    .home a { display:block; width:24px; height:24px; font-size:0; background:url("../../index_home.png")no-repeat center center; }
 </style>
 
 <body>
     <div class="wrap">
         <div id="contentWrap" class="sub-content">
             <div class="contents">
-
+                <div class="home">
+                    <a href="../../index.html">홈</a>
+                </div>
                 <h4>CTA02(btn-secondary) / CAT01(btn-primary) - 하단 버튼</h4>
                 <div class="btn-wrap bottom">
                     <button type="button" name="button" class="btn btn-secondary">이전</button>

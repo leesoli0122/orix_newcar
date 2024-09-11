@@ -17,17 +17,23 @@
     <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/ui_common.css" rel="stylesheet" type="text/css" />
 
-    <script type="text/javascript" src="../../resources/js/jquery.js"></script>
     <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="../../resources/js/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-ui-1.12.1.js"></script>
     <script type="text/javascript" src="../../resources/js/ui_common.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui_plugin.js"></script>
     <script type="text/javascript" src="../../resources/js/default.js"></script>
 
 </head>
 <body>
     <div class="wrap">
         <!-- s:header -->
-        <div data-include-path="../INCLUDE/inc_header.html"></div>
+        <div id="headerWrap">
+            <script>
+                $(document).ready(function(){
+                    $("#headerWrap").load("../INCLUDE/inc_header.html");
+                });
+            </script>
+        </div>
         <!-- //e:header -->
          <!-- s:contentWrap -->
         <div id="contentWrap" class="sub-content">
@@ -48,7 +54,7 @@
             <!-- s:contents -->
             <div class="contents">
                 <div class="form-wrap search">
-                    <div class="form-group other">
+                    <div class="form-group style2">
                         <div class="form-row">
                             <div class="select-box">
                                 <div class="stove-dim"></div>
@@ -64,7 +70,7 @@
                             <div class="col">
                                 <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="검색어 입력">
                             </div>
-                            <button class="btn btn-input" type="button">조회</button>
+                            <button type="button" name="button" class="btn btn-search"><span class="ir">조회</span></button>
                         </div>
                     </div>
                 </div>
@@ -192,25 +198,15 @@
         </div>
         <!-- //e:contentWrap -->
         <!-- s:footer -->
-        <div data-include-path="../INCLUDE/inc_footer.html"></div>
+        <div id="footerWrap">
+            <script>
+                $(document).ready(function(){
+                    $("#footerWrap").load("../INCLUDE/inc_footer.html");
+                });
+            </script>
+        </div>
         <!-- //e:footer -->
     </div>
-
-    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
-    <script>
-        $(function () {
-            $('div[data-include-path]').each(function () {
-                var path = $(this).attr('data-include-path');
-                $(this).load(path, function (response, status, xhr) {
-                    if (status == 'error') {
-                        var msg = 'Sory but there was an error:';
-                        $(this).html(msg + xhr.status + '' + xhr.statusText);
-                    }
-                })
-            })
-        })
-    </script>
-    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
 </body>
 
 </html>

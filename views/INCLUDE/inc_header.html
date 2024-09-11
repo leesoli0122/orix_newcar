@@ -1,18 +1,18 @@
-<header id="header">
-    <div class="top">
-        <div>
-            <h1>
-                <a href="javascript:void(0);">
-                    <img src="../../resources/images/logo.png" alt="오릭스캐피탈코리아">
-                </a>
-            </h1>
-            <ul>
-                <li><a href="javascript:void(0);">비밀번호변경</a></li>
-                <li><a href="javascript:void(0);">로그아웃</a></li>
-            </ul>
-        </div>
+<div class="top">
+    <div>
+        <h1>
+            <a href="javascript:void(0);">
+                <img src="../../resources/images/logo.png" alt="오릭스캐피탈코리아">
+            </a>
+        </h1>
+        <ul>
+            <li><a href="javascript:void(0);">접속자정보</a></li>
+            <li><a href="javascript:void(0);">로그아웃</a></li>
+        </ul>
     </div>
-    <div class="h-menu on">
+</div>
+<div class="h-menu">
+    <div>
         <div class="nav-btn">
             <a href="javascript:void(0);" class="ham">
                 <img src="../../resources/images/nav_btn.png" alt="메뉴아이콘">
@@ -28,9 +28,78 @@
             <li class="on"><a href="javascript:void(0);">마이페이지</a></li>
         </ul>
         <ul class="menu-r">
-            <li><a href="javascript:void(0);">오릭스캐피탈 강남지점 <span>오릭스(orix)</span>님</a></li>
-            <!-- <li><a href="javascript:void(0);" class="btn-primary">로그아웃</a></li>로그인 했을 때 -->
-            <!--<li><a href="javascript:void(0);">로그인</a></li>로그인 전에-->
+            <li><a href="javascript:void(0);">오릭스캐피탈 강남지점 <span>오릭스(orix)</span>님</a> 환영합니다.</li>
         </ul>
     </div>
-</header>
+</div>
+
+<script>
+    $(document).ready(function () {
+        //스크롤시 헤더 fix
+        var lnb = $(".h-menu").offset().top;
+        $(window).scroll(function () {
+
+            var window = $(this).scrollTop();
+
+            if (lnb <= window) {
+                $(".h-menu").addClass("fix");
+            } else {
+                $(".h-menu").removeClass("fix");
+            }
+        });
+
+        // gnb action
+        $(".center-menu > li").mouseover(function () {
+            gnbShow($(this));
+        });
+        $(".center-menu > li").focusin(function () {
+            gnbShow($(this));
+        });
+        $(".gnb-sub-inner").mouseleave(function () {
+            gnbHide($(this));
+        });
+
+        // 전체메뉴 아이콘 클릭 시
+        $(".btnMenu").click(function () {
+            $(".right-menu > div").hide();
+            $(".menu-part").show();
+
+            $("body").css("overflow", "hidden");
+        });
+
+        $(".menu-con > .close").click(function () {
+            $(".menu-part").hide();
+            $("body").css("overflow", "");
+        });
+
+        // 메뉴 닫기
+        $('#menu_close_btn').click(function () {
+            $(".right-menu > div").hide();
+            $(".menu-part").hide();
+            $("body").css("overflow", "visible");
+        });
+
+        $('.close_btn').keydown(function (e) {
+            if (e.keyCode == 13) {
+                $(".right-menu > div").hide();
+                $(".menu-part").hide();
+                $("body").css("overflow", "visible");
+            }
+        });
+
+
+        // 검색 아이콘 클릭시
+        $(".btnSearch").click(function () {
+            $(".right-menu > div").hide();
+            $(".search-part").show();
+        });
+
+        $(".search-con > .close").click(function () {
+            $(".search-part").hide();
+            $("body").css("overflow", "");
+        });
+
+
+    });
+
+</script>

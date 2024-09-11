@@ -1,0 +1,134 @@
+<html lang="en">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Table Body with Sticky Header</title>
+    <style>
+        .table-wrapper {
+            overflow-y: auto;
+            border-collapse: collapse;
+            height: 500px;
+            padding-top: 0px;
+        }
+
+        .result-table {
+            margin: 0px;
+        }
+
+        .result-table td {
+            text-align: center;
+        }
+
+        .result-table thead .sticky-th {
+            position: sticky;
+            top: 0px;
+        }
+
+        .result-table thead .sticky-th-two {
+            position: sticky;
+            top: 38px;
+        }
+
+        .result-table thead .sticky-th:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 1px;
+            height: 76px;
+            background: #dee2e6;
+        }
+
+        .result-table thead .sticky-th:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #dee2e6;
+        }
+
+        .result-table thead .sticky-th:after {
+            top: 0px;
+        }
+
+        .result-table thead .sticky-th:before {
+            top: -1px;
+        }
+
+        .result-table thead .sticky-th-two:after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #dee2e6;
+        }
+
+        .result-table thead .sticky-th-two:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 1px;
+            height: 38px;
+            background: #dee2e6;
+        }
+
+        .result-table thead .sticky-th-two:after {
+            top: -2px;
+        }
+
+        .result-table thead .sticky-th-two:before {
+            bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table-wrapper">
+        <table width="100%" class="contentTable table-bordered result-table" style="max-height:36px;">
+            <colgroup>
+                <col width="8%" />
+                <col width="27%" />
+                <col width="13%" />
+                <col width="13%" />
+                <col width="13%" />
+                <col width="13%" />
+                <col width="13%" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th class="text-center fixedHeader sticky-th" rowspan="2"></th>
+                    <th class="text-center fixedHeader sticky-th" rowspan="2"></th>
+                    <th class="text-center fixedHeader sticky-th" colspan="2"></th>
+                    <th class="text-center fixedHeader sticky-th" colspan="2"></th>
+                    <th class="text-center fixedHeader sticky-th" rowspan="2"></th>
+                </tr>
+                <tr>
+                    <th class="text-center fixedHeader2 sticky-th-two"></th>
+                    <th class="text-center fixedHeader2 sticky-th-two"></th>
+                    <th class="text-center fixedHeader2 sticky-th-two"></th>
+                    <th class="text-center fixedHeader2 sticky-th-two"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <template v-for="(item, item_idx) in empListBySort">
+                    <tr v-if="lvStatus[item.finalLevel] || !item.finalLevel " :key="item_idx" class="emp-by-sort">
+                        <td class="text-center"></td>
+                        <td><img :src="item.avatarUrl" class="table_avatar" /></td>
+                        <td class="text-center"></td>
+                        <td class="text-center txt-700"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center txt-700"></td>
+                        <td class="text-center txt-700 text-primary"></td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

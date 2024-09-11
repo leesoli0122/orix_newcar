@@ -63,6 +63,16 @@ SELECT #셀렉트
 .select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option:focus { border: 1px solid var(--normal); }
 /* Select select */
 .select-box > .se-select[data-stove=select] select{ color:var(--normal); }
+/* Select disabled */
+/* .select-box > .se-select[data-stove=select] select[data-status=readonly], */
+.select-box > .se-select[data-stove=select] select[disabled]  { background: url(../../resources/images/common/ic_select_off.png)no-repeat var(--background1) top 50% right 16px/20px;; }
+/* Select focus */
+.select-box > .se-select[data-stove=select][data-status=open] select,
+.select-box > .se-select[data-stove=select][data-status=open] select:focus,
+.select-box > .se-select select:focus { border: 1px solid var(--normal); }
+.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option:focus { border: 1px solid var(--normal); }
+
+
 
 /*---------------------------------------------
 	Select Stove Custom
@@ -88,24 +98,8 @@ SELECT #셀렉트
 .select-box > .se-select[data-stove=select] div.stove-option-layer.va-slide.on { bottom: 0px; }
 .select-box > .se-select[data-stove=select] div.stove-option-layer.va-upshow { top: auto; bottom: 100%; }
 
-/*---------------------------------------------
-	Select Readonly, Disabled
----------------------------------------------*/
-/* .select-box > .se-select[data-stove=select] select[data-status=readonly],
-.select-box > .se-select[data-stove=select] select[disabled]  {  } */
 
-/*---------------------------------------------
-	Select Focus
----------------------------------------------*/
-.select-box > .se-select[data-stove=select][data-status=open] select,
-.select-box > .se-select[data-stove=select][data-status=open] select:focus,
-.select-box > .se-select select:focus { border: 1px solid var(--normal); }
-.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option:focus { border: 1px solid var(--normal); }
 
-/*---------------------------------------------
-	Select select
----------------------------------------------*/
-.select-box > .se-select[data-stove=select] select{ color:var(--normal); }
 
 /*********************************************************************
 FORM #폼

@@ -44,7 +44,10 @@ SELECT #셀렉트
 .select-box > .se-select { width:100%; max-width:410px; }
 .select-box > .se-select label { display:inline-block; font-size:var(--font14); color:var(--normal); }
 .select-box > .se-select select { z-index:1; position:relative; width: 100%; height: 46px; padding: 0px 16px; line-height:1; font-size: var(--font16); font-weight:var(--w-regular); color:var(--subtitle); background-color:var(--white); border: solid 1px var(--border1);  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-.select-box > .se-select::after {  content:''; position:absolute; right:16px; top:50%; transform:translateY(-50%); background-image: var(--svg-select-arrow); background-repeat: no-repeat; background-position: center; width:20px; height:20px; z-index:1; }
+.select-box > .se-select select,
+.select-box > .se-select[data-status=open] select { background-size: 20px; }
+.select-box > .se-select[data-status=open] select { background: url(../../resources/images/common/ic_select_on.png)no-repeat var(--white) top 50% right 16px/20px;  }
+.select-box > .se-select select { background: url(../../resources/images/common/ic_select_off.png)no-repeat var(--white) top 50% right 16px/20px; transition: all 0.2s ease; }
 .select-box > .se-select select option { background-color:var(--white);  color: var(--normal); }
 .select-box > .se-select select:disabled,
 .select-box > .se-select select[disabled=disabled] { border-color: var(--border2); background-color:var(--white); color: var(--subtitle); opacity: 1; }
@@ -53,6 +56,13 @@ SELECT #셀렉트
 .select-box > .se-select select:disabled[data-status=readonly]:focus,
 .select-box > .se-select select[disabled=disabled][data-status=readonly]:focus { background-color:var(--white); }
 .select-box > .se-select select[data-status=error] { border-color: var(--error); background-color:var(--white); opacity: 1; }
+/* Select focus */
+.select-box > .se-select[data-stove=select][data-status=open] select,
+.select-box > .se-select[data-stove=select][data-status=open] select:focus,
+.select-box > .se-select select:focus { border: 1px solid var(--normal); }
+.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option:focus { border: 1px solid var(--normal); }
+/* Select select */
+.select-box > .se-select[data-stove=select] select{ color:var(--normal); }
 
 /*---------------------------------------------
 	Select Stove Custom
@@ -79,28 +89,10 @@ SELECT #셀렉트
 .select-box > .se-select[data-stove=select] div.stove-option-layer.va-upshow { top: auto; bottom: 100%; }
 
 /*---------------------------------------------
-	Select Open
----------------------------------------------*/
-.select-box > .se-select[data-stove=select][data-status=open]::after { transform:translate(0, -50%) rotate(-180deg); transition: all ease .2s; }
-
-/*---------------------------------------------
 	Select Readonly, Disabled
 ---------------------------------------------*/
 /* .select-box > .se-select[data-stove=select] select[data-status=readonly],
 .select-box > .se-select[data-stove=select] select[disabled]  {  } */
-
-/*---------------------------------------------
-	Select Focus
----------------------------------------------*/
-.select-box > .se-select[data-stove=select][data-status=open] select,
-.select-box > .se-select[data-stove=select][data-status=open] select:focus,
-.select-box > .se-select select:focus { border: 1px solid var(--normal); }
-.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll div.stove-options button.stove-option:focus { border: 1px solid var(--normal); }
-
-/*---------------------------------------------
-	Select select
----------------------------------------------*/
-.select-box > .se-select[data-stove=select] select{ color:var(--normal); }
 
 
 /*********************************************************************

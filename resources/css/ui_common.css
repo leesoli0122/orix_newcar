@@ -293,7 +293,7 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 /* [필수] - 개별체크 */
 .terms-box { padding:20px; }
 .terms-wrap.level2 + .level2 { margin-top:16px; }
-.terms-wrap.level2 .btn.btn.btn-text.small { position:absolute; right:0; z-index:1; }
+.terms-wrap.level2 .btn.btn.btn-text.small { position:absolute; right:20px; z-index:1; }
 .terms-wrap.level2 + .terms-wrap.bg-box { margin-top:40px; }
 .terms-wrap.level2 + .terms-wrap.bg-box + .terms-wrap.bg-box { margin-top:15px; }
 .terms-wrap.level2 label { padding-left:23px; }

@@ -25,7 +25,13 @@
     <div id="skipnavi"  data-include-path="../INCLUDE/inc_skipnavi.html"></div>
     <div class="wrap">
         <!-- s:header -->
-        <div data-include-path="../INCLUDE/inc_header.html"></div>
+        <div id="headerWrap">
+            <script>
+                $(document).ready(function(){
+                    $("#headerWrap").load("../INCLUDE/inc_header.html");
+                });
+            </script>
+        </div>
         <!-- //e:header -->
          <!-- s:contentWrap -->
         <div id="contentWrap" class="sub-content">
@@ -252,25 +258,15 @@
         </div>
         <!-- //e:contentWrap -->
         <!-- s:footer -->
-        <div data-include-path="../INCLUDE/inc_footer.html"></div>
+        <div id="footerWrap">
+            <script>
+                $(document).ready(function(){
+                    $("#footerWrap").load("../INCLUDE/inc_footer.html");
+                });
+            </script>
+        </div>
         <!-- //e:footer -->
     </div>
-
-    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
-    <script>
-        $(function () {
-            $('div[data-include-path]').each(function () {
-                var path = $(this).attr('data-include-path');
-                $(this).load(path, function (response, status, xhr) {
-                    if (status == 'error') {
-                        var msg = 'Sory but there was an error:';
-                        $(this).html(msg + xhr.status + '' + xhr.statusText);
-                    }
-                })
-            })
-        })
-    </script>
-    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
     <div id="termsPop01" class="layerpopup laypop" tabindex="0">
         <div class="content-wrap">
             <div class="pop-header">

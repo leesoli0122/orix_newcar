@@ -189,8 +189,8 @@ input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; hei
 /*---------------------------------------------
 	Input_원/개월/% Text Custom
 ---------------------------------------------*/
-.amount { position:relative; }
-.amount .amount-txt { position:absolute; transform: translateY(-50%); top:50%; right:16px; font-size:var(--font16); font-weight:var(--w-bold); color:var(--normal); }
+/* .amount { position:relative; } */
+.amount-txt { position:absolute; transform: translateY(-50%); top:50%; right:16px; font-size:var(--font16); font-weight:var(--w-bold); color:var(--normal); }
 
 /*---------------------------------------------
 	Input_유효성체크

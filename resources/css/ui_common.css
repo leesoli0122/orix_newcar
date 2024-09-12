@@ -376,7 +376,7 @@ Button #버튼
 .btn-wrap button.btn:first-child { margin-left:0; }/*공통*/
 .btn-wrap button.btn { margin-left:16px; }/*공통*/
 .btn-wrap.cont { margin:40px 0; width:100%; text-align:center; }/* 컨테츠 버튼 */
-.btn-wrap.bottom { margin:60px 0 40px; width:100%; text-align:center; }/* 컨테츠 하단 버튼 */
+.btn-wrap.bottom { margin:20px 0 40px; width:100%; text-align:center; }/* 컨테츠 하단 버튼 */
 .btn-wrap.popup { margin:28px 0; width:100%; text-align:center; }/* 팝업 버튼 */
 .btn-wrap.alert { margin:40px 0 30px; width:100%; text-align:center; }/* 알럿 버튼 */
 

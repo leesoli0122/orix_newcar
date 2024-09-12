@@ -26,7 +26,13 @@
 <body>
     <div class="wrap">
         <!-- s:header -->
-        <div data-include-path="../INCLUDE/inc_header.html"></div>
+        <div id="headerWrap">
+            <script>
+                $(document).ready(function(){
+                    $("#headerWrap").load("../INCLUDE/inc_header.html");
+                });
+            </script>
+        </div>
         <!-- //e:header -->
          <!-- s:contentWrap -->
         <div id="contentWrap" class="sub-content">
@@ -81,6 +87,7 @@
                     <table>
                         <caption>테이블 리스트 예시</caption>
                         <colgroup>
+                            <col width="5%">
                             <col width="*%">
                             <col width="*%">
                             <col width="*%">
@@ -94,6 +101,7 @@
                         <thead>
                             <tr>
                                 <th scope="row">회차</th>
+                                <th scope="row">구분</th>
                                 <th scope="row">아이디</th>
                                 <th scope="row">성명</th>
                                 <th scope="row">부서</th>
@@ -107,30 +115,42 @@
                         <tbody>
                             <tr>
                                 <td>10</td>
+                                <td>
+                                    <div>중간</div>
+                                    <div>관리자</div>
+                                </td>
                                 <td>Abcded02</td>
                                 <td>김오릭</td>
                                 <td>부서명 노출</td>
                                 <td>010-12**-5678</td>
                                 <td>abc123@naver.com</td>
-                                <td>등록자 성명</br>
-                                    (ID)</td>
+                                <td>
+                                    <span>등록자 성명</span>
+                                    <p>(ID)</p>
+                                </td>
                                 <td>2024.09.09</td>
                                 <td>
-                                    <button class="btn btn-text">삭제</button>
+                                    <button class="btn btn-text" aria-label="삭제">삭제</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>9</td>
+                                <td>
+                                    <div>하위</div>
+                                    <div>관리자</div>
+                                </td>
                                 <td>Abcded02</td>
                                 <td>김오릭</td>
                                 <td>부서명 노출</td>
                                 <td>010-12**-5678</td>
                                 <td>abc123@naver.com</td>
-                                <td>등록자 성명</br>
-                                    (ID)</td>
+                                <td>
+                                    <span>등록자 성명</span>
+                                    <p>(ID)</p>
+                                </td>
                                 <td>2024.09.09</td>
                                 <td>
-                                    <button class="btn btn-text">삭제</button>
+                                    <button class="btn btn-text" aria-label="삭제">삭제</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -464,25 +484,15 @@
         </div>
         <!-- //e:contentWrap -->
         <!-- s:footer -->
-        <div data-include-path="../INCLUDE/inc_footer.html"></div>
+        <div id="footerWrap">
+            <script>
+                $(document).ready(function(){
+                    $("#footerWrap").load("../INCLUDE/inc_footer.html");
+                });
+            </script>
+        </div>
         <!-- //e:footer -->
     </div>
-
-    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
-    <script>
-        $(function () {
-            $('div[data-include-path]').each(function () {
-                var path = $(this).attr('data-include-path');
-                $(this).load(path, function (response, status, xhr) {
-                    if (status == 'error') {
-                        var msg = 'Sory but there was an error:';
-                        $(this).html(msg + xhr.status + '' + xhr.statusText);
-                    }
-                })
-            })
-        })
-    </script>
-    <!-- 인크루드 퍼블용 스크립트 :  개발에서는 사용안함-->
 </body>
 
 </html>

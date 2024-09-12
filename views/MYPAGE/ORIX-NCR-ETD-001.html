@@ -54,218 +54,256 @@
             <!-- s:contents -->
             <div class="contents">
                 <div class="form-wrap search">
-                    <div class="form-group style2">
+                    <div class="form-group">
                         <div class="form-row">
                             <div class="select-box">
                                 <div class="stove-dim"></div>
                                 <div class="se-select ei-w160" data-stove="select">
                                     <select class="" title="메뉴구분">
-                                        <option value="" disabled="" selected="" hidden="">구분</option>
+                                        <option value="" disabled="" selected="" hidden="">구분</option><!-- [D] : default - 셀렉트의 placeholder 기능-->
                                         <option value="0">제목</option>
                                         <option value="1">담당부서</option>
-                                        <option value="1">담당자명</option>
+                                        <option value="2">담당자명</option>
                                     </select>
                                     <div class="e-select-dim"></div>
                                 </div>
                             </div>
-                            <div class="col">
-                                <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="검색어 입력">
+                            <div class="col-10">
+                                <input id="" title="검색" type="tel" name="" class="form-control" maxlength="11" placeholder="검색어 입력">
                             </div>
-                            <button type="button" name="button" class="btn btn-search"><span class="ir">조회</span></button>
+                            <button class="btn btn-search" type="button"><span class="ir">검색</span></button>
                         </div>
                     </div>
+                </div>
+                <div class="sub-text-wrap style2">
+                    <div>
+                        <h4>총 <span>75</span>개</h4>
+                        <p class="caption">현재 시점으로부터 3달간 내역만 유지되며, 이전의 내역은 자동 삭제됩니다.</p>
+                    </div>
+                    <button class="btn btn-icon">신규제출</button>
                 </div>
                 <div class="result-area nodata">
                     <div class="text-wrap">
                         <h3 class="result-no">조회 결과가 없습니다.</h3>
                     </div>
                 </div>
-                <div class="list-card-wrap download">
+                <div class="list-card-wrap">
                     <div class="list-card-group">
-                        <div class="card-left">
-                            <p class="tit">오릭스캐피탈코리아 신차 영업플랫폼 사용자 메뉴얼</p>
-                            <div class="cont-txt">오릭스캐피탈코리아 신차 영업플랫폼 사용자 메뉴얼 입니다.</div>
-                        </div>
-                        <div class="card-right">
-                            <!-- 다운로드아이콘 최대 3개까지 -->
-                            <ul class="icon">
-                                <li>다운로드아이콘</li>
-                                <li>다운로드아이콘</li>
-                                <li>다운로드아이콘</li>
-                            </ul>
-                            <ul class="txt-wrap">
-                                <li>
-                                    <span>38</span> : 조회수
-                                </li>
-                                <li>
-                                    <span>2024-08-22</span> : 등록일
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="txt-list">
+                            <li>
+                                <div class="tit">홍길동 고객님 운전자보험 서류</div>
+                                <div class="txt">
+                                    <!-- 첨부파일아이콘 최대 3개까지 -->
+                                    <ul class="icon">
+                                        <li>첨부파일아이콘</li>
+                                        <li>첨부파일아이콘</li>
+                                        <li>첨부파일아이콘</li>
+                                    </ul>
+                                    <span>: 첨부파일</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="data">
+                                    <span>담당부서</span>
+                                    <span>담당자명</span>
+                                    <span>2024.09.02</span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="list-card-group">
-                        <div class="card-left">
-                            <p class="tit">타이틀</p>
-                            <div class="cont-txt">본문 내용이 들어갑니다/ 본문 내용을 입력해 주세요, 첨부파일을 다운로드 받으세요</div>
-                        </div>
-                        <div class="card-right">
-                            <ul class="icon">
-                                <li>다운로드아이콘</li>
-                            </ul>
-                            <ul class="txt-wrap">
-                                <li>
-                                    <span>38</span> : 조회수
-                                </li>
-                                <li>
-                                    <span>2024-08-22</span> : 등록일
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="txt-list">
+                            <li>
+                                <div class="tit">김오릭 고객님 운전자보험 서류</div>
+                                <div class="txt">
+                                    <ul class="icon">
+                                        <li>첨부파일아이콘</li>
+                                    </ul>
+                                    <span>: 첨부파일</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="data">
+                                    <span>담당부서</span>
+                                    <span>담당자명</span>
+                                    <span>2024.09.02</span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="list-card-group">
-                        <div class="card-left">
-                            <p class="tit">타이틀</p>
-                            <div class="cont-txt">첨부파일이 없는 경우 입니다.</div>
-                        </div>
-                        <div class="card-right">
-                            <ul class="txt-wrap">
-                                <li>
-                                    <span>38</span> : 조회수
-                                </li>
-                                <li>
-                                    <span>2024-08-22</span> : 등록일
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="txt-list">
+                            <li>
+                                <div class="tit">이길동 고객님 운전자보험 서류</div>
+                                <div class="txt">
+                                    <ul class="icon">
+                                        <li>첨부파일아이콘</li>
+                                    </ul>
+                                    <span>: 첨부파일</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="data">
+                                    <span>담당부서</span>
+                                    <span>담당자명</span>
+                                    <span>2024.09.02</span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="list-card-group">
-                        <div class="card-left">
-                            <p class="tit">타이틀</p>
-                            <div class="cont-txt">첨부파일이 없는 경우 입니다.</div>
-                        </div>
-                        <div class="card-right">
-                            <ul class="txt-wrap">
-                                <li>
-                                    <span>38</span> : 조회수
-                                </li>
-                                <li>
-                                    <span>2024-08-22</span> : 등록일
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="txt-list">
+                            <li>
+                                <div class="tit">오릭스 고객님 운전자보험 서류</div>
+                                <div class="txt">
+                                    <!-- 첨부파일아이콘 최대 3개까지 -->
+                                    <ul class="icon">
+                                        <li>첨부파일아이콘</li>
+                                        <li>첨부파일아이콘</li>
+                                        <li>첨부파일아이콘</li>
+                                    </ul>
+                                    <span>: 첨부파일</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="data">
+                                    <span>담당부서</span>
+                                    <span>담당자명</span>
+                                    <span>2024.09.02</span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="list-card-group">
-                        <div class="card-left">
-                            <p class="tit">타이틀</p>
-                            <div class="cont-txt">첨부파일이 2개인 경우에는 이렇게 보입니다.</div>
-                        </div>
-                        <div class="card-right">
-                            <ul class="icon">
-                                <li>다운로드아이콘</li>
-                                <li>다운로드아이콘</li>
-                            </ul>
-                            <ul class="txt-wrap">
-                                <li>
-                                    <span>38</span> : 조회수
-                                </li>
-                                <li>
-                                    <span>2024-08-22</span> : 등록일
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="txt-list">
+                            <li>
+                                <div class="tit">김철수 고객님 운전자보험 서류</div>
+                                <div class="txt">
+                                    <!-- 첨부파일아이콘 최대 3개까지 -->
+                                    <ul class="icon">
+                                        <li>첨부파일아이콘</li>
+                                        <li>첨부파일아이콘</li>
+                                    </ul>
+                                    <span>: 첨부파일</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="data">
+                                    <span>담당부서</span>
+                                    <span>담당자명</span>
+                                    <span>2024.09.02</span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="list-card-group">
-                        <div class="card-left">
-                            <p class="tit">오릭스캐피탈코리아 신차 영업플랫폼 사용자 메뉴얼</p>
-                            <div class="cont-txt">오릭스캐피탈코리아 신차 영업플랫폼 사용자 메뉴얼 입니다.</div>
-                        </div>
-                        <div class="card-right">
-                            <!-- 다운로드아이콘 최대 3개까지 -->
-                            <ul class="icon">
-                                <li>다운로드아이콘</li>
-                                <li>다운로드아이콘</li>
-                                <li>다운로드아이콘</li>
-                            </ul>
-                            <ul class="txt-wrap">
-                                <li>
-                                    <span>38</span> : 조회수
-                                </li>
-                                <li>
-                                    <span>2024-08-22</span> : 등록일
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="txt-list">
+                            <li>
+                                <div class="tit">박오릭 고객님 운전자보험 서류</div>
+                                <div class="txt">
+                                    <!-- 첨부파일아이콘 최대 3개까지 -->
+                                    <ul class="icon">
+                                        <!-- <li>첨부파일아이콘</li>
+                                        <li>첨부파일아이콘</li>
+                                        <li>첨부파일아이콘</li> -->
+                                    </ul>
+                                    <span>: 첨부파일</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="data">
+                                    <span>담당부서</span>
+                                    <span>담당자명</span>
+                                    <span>2024.09.02</span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="list-card-group">
-                        <div class="card-left">
-                            <p class="tit">타이틀</p>
-                            <div class="cont-txt">본문 내용이 들어갑니다/ 본문 내용을 입력해 주세요, 첨부파일을 다운로드 받으세요</div>
-                        </div>
-                        <div class="card-right">
-                            <ul class="icon">
-                                <li>다운로드아이콘</li>
-                            </ul>
-                            <ul class="txt-wrap">
-                                <li>
-                                    <span>38</span> : 조회수
-                                </li>
-                                <li>
-                                    <span>2024-08-22</span> : 등록일
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="txt-list">
+                            <li>
+                                <div class="tit">최민수 고객님 운전자보험 서류</div>
+                                <div class="txt">
+                                    <!-- 첨부파일아이콘 최대 3개까지 -->
+                                    <ul class="icon">
+                                        <li>첨부파일아이콘</li>
+                                        <li>첨부파일아이콘</li>
+                                    </ul>
+                                    <span>: 첨부파일</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="data">
+                                    <span>담당부서</span>
+                                    <span>담당자명</span>
+                                    <span>2024.09.02</span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="list-card-group">
-                        <div class="card-left">
-                            <p class="tit">타이틀</p>
-                            <div class="cont-txt">첨부파일이 없는 경우 입니다.</div>
-                        </div>
-                        <div class="card-right">
-                            <ul class="txt-wrap">
-                                <li>
-                                    <span>38</span> : 조회수
-                                </li>
-                                <li>
-                                    <span>2024-08-22</span> : 등록일
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="txt-list">
+                            <li>
+                                <div class="tit">오릭스 고객님 운전자보험 서류</div>
+                                <div class="txt">
+                                    <!-- 첨부파일아이콘 최대 3개까지 -->
+                                    <ul class="icon">
+                                        <li>첨부파일아이콘</li>
+                                    </ul>
+                                    <span>: 첨부파일</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="data">
+                                    <span>담당부서</span>
+                                    <span>담당자명</span>
+                                    <span>2024.09.02</span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="list-card-group">
-                        <div class="card-left">
-                            <p class="tit">타이틀</p>
-                            <div class="cont-txt">첨부파일이 없는 경우 입니다.</div>
-                        </div>
-                        <div class="card-right">
-                            <ul class="txt-wrap">
-                                <li>
-                                    <span>38</span> : 조회수
-                                </li>
-                                <li>
-                                    <span>2024-08-22</span> : 등록일
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="txt-list">
+                            <li>
+                                <div class="tit">이동길 고객님 운전자보험 서류</div>
+                                <div class="txt">
+                                    <!-- 첨부파일아이콘 최대 3개까지 -->
+                                    <ul class="icon">
+                                        <li>첨부파일아이콘</li>
+                                        <li>첨부파일아이콘</li>
+                                    </ul>
+                                    <span>: 첨부파일</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="data">
+                                    <span>담당부서</span>
+                                    <span>담당자명</span>
+                                    <span>2024.09.02</span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="list-card-group">
-                        <div class="card-left">
-                            <p class="tit">타이틀</p>
-                            <div class="cont-txt">첨부파일이 2개인 경우에는 이렇게 보입니다.</div>
-                        </div>
-                        <div class="card-right">
-                            <ul class="icon">
-                                <li>다운로드아이콘</li>
-                                <li>다운로드아이콘</li>
-                            </ul>
-                            <ul class="txt-wrap">
-                                <li>
-                                    <span>38</span> : 조회수
-                                </li>
-                                <li>
-                                    <span>2024-08-22</span> : 등록일
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="txt-list">
+                            <li>
+                                <div class="tit">홍길동 고객님 운전자보험 서류</div>
+                                <div class="txt">
+                                    <!-- 첨부파일아이콘 최대 3개까지 -->
+                                    <ul class="icon">
+                                        <!-- <li>첨부파일아이콘</li> -->
+                                    </ul>
+                                    <span>: 첨부파일</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="data">
+                                    <span>담당부서</span>
+                                    <span>담당자명</span>
+                                    <span>2024.09.02</span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="pagination-wrap">

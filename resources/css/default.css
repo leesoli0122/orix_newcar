@@ -129,7 +129,8 @@ title
 text-wrap
 ---------------------------------------------*/
 .text-wrap h2 { font-size:var(--font28); font-weight:var(--w-bold); color:var(--title); }
-.text-wrap p.sub-tit { display:block; padding-top:27px; font-size:var(--font22); font-weight:var(--w-regular); color:var(--title); }
+.text-wrap p.sub-tit { display:block; padding-top:27px; font-size:var(--font22); font-weight:var(--w-regular); color:var(--title); line-height:34px; }
+.text-wrap p.sub-tit span { font-weight:var(--w-bold); }
 .text-wrap h3 { font-size:var(--font22); font-weight:var(--w-bold); color:var(--normal); }
 
 /*---------------------------------------------
@@ -142,8 +143,9 @@ style2 = padding:20px 0;
 .sub-text-wrap h4 { font-size:var(--font20); font-weight:var(--w-bold); text-align:left; }
 .sub-text-wrap.style2 { padding:20px 0; }
 
-.caption { padding-left:22px; margin-top:10px; font-size:var(--font14); font-weight:var(--w-regular); }
+.caption { padding-left:22px; margin-top:10px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--subtitle); }
 .caption2 { position:absolute; top:-36px; right:0; display:inline-block; font-size:var(--font14); font-weight:var(--w-regular); color:var(--subtitle); }
+.caption3 { margin-bottom:14px; text-align:right; }/*테이블캡션(단위)*/
 
 .blue { color:var(--secondary)!important; }
 .red { color:var(--error)!important; }
@@ -172,11 +174,10 @@ login #로그인
 
 /* 로그인 인풋 */
 .wrap.login .form-wrap:not(.footer .form-wrap) { margin-top:30px; }
-.wrap.login .form-wrap .form-group:not(.form-group.footer) { margin:24px auto 0; }
-.wrap.login .form-wrap .form-group input.form-control { padding:0 20px; height:59px; }
+.wrap.login .form-wrap .form-group input.form-control { margin:0 auto; padding:0 20px; height:59px; }
 
 /* 로그인 버튼 */
-.wrap.login .form-wrap .btn-wrap.bottom { margin:50px 0 100px; }
+.wrap.login .form-wrap .btn-wrap.bottom { margin:50px 0 80px; }
 .wrap.login .form-wrap .btn-wrap.bottom .btn.btn-primary { width:410px; }
 
 /*********************************************************************

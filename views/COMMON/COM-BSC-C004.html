@@ -45,7 +45,7 @@
                 </div>
                 <h4>검색창 INPUT</h4>
                 <div class='form-wrap search'>
-                    <div class="form-group style2">
+                    <div class="form-group">
                         <div class="form-row">
                             <div class="select-box">
                                 <div class="stove-dim"></div>
@@ -63,7 +63,7 @@
                                     <div class="e-select-dim"></div>
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-10">
                                 <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="휴대폰번호 입력">
                             </div>
                             <button class="btn btn-search" type="button"><span class="ir">검색</span></button>
@@ -133,7 +133,7 @@
                                     <div class="e-select-dim"></div>
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-1">
                                 <input id="" type="tel" name="" class="form-control" maxlength="11" placeholder="휴대폰번호 입력">
                             </div>
                             <button class="btn btn-input" type="button">인증번호 요청</button>
@@ -141,7 +141,7 @@
                     </div>
 
                     <h4>푸터 셀렉트</h4>
-                    <div class="form-group style3">
+                    <div class="form-group style2">
                         <label for="">Family Site</label>
                         <div class="form-row">
                             <div class="select-box">
@@ -166,7 +166,7 @@
                     <div class="form-group correct time">
                         <label for="" class="">디폴트</label>
                         <div class="form-row">
-                            <div class="col">
+                            <div class="col-1">
                                 <input id="" type="text" class="form-control" name="" placeholder="숫자 6자리 입력">
                                 <span class="timeNum">3:00</span>
                             </div>
@@ -178,7 +178,7 @@
                     <div class="form-group correct">
                         <label for="" class="">시간연장 버튼 1회 누른 후 (active 클래스)</label>
                         <div class="form-row">
-                            <div class="col time">
+                            <div class="col-1 time">
                                 <input id="" type="text" class="form-control" name="" placeholder="숫자 6자리 입력">
                                 <span class="timeNum active">3:00</span><!-- [D] : 1회 - 시간 연장 버튼 누를 후 active 생성 -->
                             </div>
@@ -211,11 +211,11 @@
                     <div class="form-group">
                         <label for="">주민등록번호 뒷자리 하나만 노출될 경우</label>
                         <div class="form-row">
-                            <div class="col">
+                            <div class="col-2">
                                 <input id="" type="tel" class="form-control" maxlength="6" name="" value="" placeholder="" >
                             </div>
                             <div class="input-hyphen">-</div>
-                            <div class="col">
+                            <div class="col-2">
                                 <input id="" type="tel" class="form-control jumin" maxlength="1" placeholder="●" name="" value="">
                                 <span class="jumintext">●●●●●●</span>
                             </div>
@@ -225,7 +225,7 @@
                     <h4>Input 금액/개월/% Text Custom</h4>
                     <div class="form-group">
                         <label for="">금액</label>
-                        <div class="amount">
+                        <div class="amount col-1">
                             <input id="" type="amount" class="form-control amount-num" placeholder="금액을 입력해주세요"
                                 inputmode="numeric"><!-- [D] inputmode="numeric" : 세자리 수마다 콤마 적용  -->
                             <span class="amount-txt">원</span>
@@ -234,7 +234,7 @@
 
                     <div class="form-group">
                         <label for="">개월</label>
-                        <div class="amount">
+                        <div class="amount col-1">
                             <input id="" type="amount" class="form-control amount-num" placeholder="기간을 입력해주세요">
                             <span class="amount-txt">개월</span>
                         </div>
@@ -242,7 +242,7 @@
 
                     <div class="form-group">
                         <label for="">%</label>
-                        <div class="amount">
+                        <div class="amount col-1">
                             <input id="" type="amount" class="form-control amount-num" placeholder="예상금리를 입력해주세요">
                             <span class="amount-txt">%</span>
                         </div>
@@ -265,11 +265,11 @@
                     <div class="form-group">
                         <label for="">Datepicker</label>
                         <div class="form-row">
-                            <div class="col">
+                            <div class="col-2">
                                 <input type="date" class="form-control datefrom" id="dateFrom" name="from">
                             </div>
                             <div class="input-hyphen">~</div>
-                            <div class="col">
+                            <div class="col-2">
                                 <input type="date" class="form-control datefrom" id="dateTo" name="to">
                             </div>
                             <button class="btn btn-input" name="btnSearch" id="btnSearch" type="button">조회</button>
@@ -285,7 +285,7 @@
                     <div class="form-group">
                         <label for="" class="essential">기본</label><!-- [D] essential 클래스 : 필수 입력폼  -->
                         <div class="form-row"><!-- [D] 인풋/버튼 클릭 시 팝업 호출 영역  -->
-                            <div class="col">
+                            <div class="col-1">
                                 <input id="" type="text" class="form-control" name="" placeholder="내용을 선택해 주세요">
                             </div>
                             <button class="btn btn-input" type="button">버튼명</button>
@@ -295,7 +295,7 @@
                     <div class="form-group">
                         <label for="" class="essential">Disabled</label><!-- [D] essential 클래스 : 필수 입력폼  -->
                         <div class="form-row"><!-- [D] 인풋/버튼 클릭 시 팝업 호출 영역  -->
-                            <div class="col">
+                            <div class="col-1">
                                 <input id="" type="text" class="form-control" name="" placeholder="내용을 선택해 주세요" disabled="">
                             </div>
                             <button class="btn btn-input" type="button" disabled="">버튼명</button>
@@ -305,7 +305,7 @@
                     <div class="form-group">
                         <label for="" class="essential">완료</label><!-- [D] essential 클래스 : 필수 입력폼  -->
                         <div class="form-row"><!-- [D] 인풋/버튼 클릭 시 팝업 호출 영역  -->
-                            <div class="col">
+                            <div class="col-1">
                                 <input id="" type="text" class="form-control" name="" value="내용을 입력 했습니다">
                             </div>
                             <button class="btn btn-input active" type="button">버튼명</button><!-- [D] active 클래스 : 완료 됐을 경우 활성화 -->
@@ -393,7 +393,7 @@
                     </div>
 
                     <h4>Textarea</h4>
-                    <div class="form-group style4">
+                    <div class="form-group style3">
                         <textarea type="text" title="성명" id="ipt02" class="inp" name="" value="" placeholder="내용을 입력해주세요" maxlength="" required=""></textarea>
 					</div>
 

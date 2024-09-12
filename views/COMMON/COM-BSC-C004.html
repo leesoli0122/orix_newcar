@@ -225,7 +225,7 @@
                     <h4>Input 금액/개월/% Text Custom</h4>
                     <div class="form-group">
                         <label for="">금액</label>
-                        <div class="amount col-1">
+                        <div class="col-1">
                             <input id="" type="amount" class="form-control amount-num" placeholder="금액을 입력해주세요"
                                 inputmode="numeric"><!-- [D] inputmode="numeric" : 세자리 수마다 콤마 적용  -->
                             <span class="amount-txt">원</span>
@@ -234,7 +234,7 @@
 
                     <div class="form-group">
                         <label for="">개월</label>
-                        <div class="amount col-1">
+                        <div class="col-1">
                             <input id="" type="amount" class="form-control amount-num" placeholder="기간을 입력해주세요">
                             <span class="amount-txt">개월</span>
                         </div>
@@ -242,7 +242,7 @@
 
                     <div class="form-group">
                         <label for="">%</label>
-                        <div class="amount col-1">
+                        <div class="col-1">
                             <input id="" type="amount" class="form-control amount-num" placeholder="예상금리를 입력해주세요">
                             <span class="amount-txt">%</span>
                         </div>
@@ -266,19 +266,19 @@
                         <label for="">Datepicker</label>
                         <div class="form-row">
                             <div class="col-2">
-                                <input type="date" class="form-control datefrom" id="dateFrom" name="from">
+                                <input type="text" id="date01"  name="from"  class="form-control datepicker"  placeholder="0000.00.00" readonly ><!-- [D] : datepicker 클래스 : datepicker Custom-->
                             </div>
                             <div class="input-hyphen">~</div>
                             <div class="col-2">
-                                <input type="date" class="form-control datefrom" id="dateTo" name="to">
+                                <input type="text" id="date02"  name="to" class="form-control datepicker"  placeholder="0000.00.00" readonly><!-- [D] : datepicker 클래스 : datepicker Custom-->
                             </div>
-                            <button class="btn btn-input" name="btnSearch" id="btnSearch" type="button">조회</button>
+                            <button class="btn btn-input" name="btnSearch" type="button">조회</button>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="">Full Datepicker</label>
-                        <input type="date" class="form-control datefrom" id="dateTo" name="">
+                        <label for="date03">Full Datepicker</label>
+                        <input type="text" id="date03" class="form-control datepicker"  placeholder="0000.00.00" readonly><!-- [D] : datepicker 클래스 : datepicker Custom-->
                     </div>
 
                     <h4>Input Button</h4>

@@ -1,256 +1,347 @@
+$(document).ready(function() {
 
-/*********************************************************************
-	SELECT #셀렉트
-*********************************************************************/
-/*---------------------------------------------
-	Custom Select Functionn
----------------------------------------------*/
+	/*********************************************************************
+		SELECT #셀렉트
+	*********************************************************************/
+	/*---------------------------------------------
+		Custom Select Functionn
+	---------------------------------------------*/
+	function customSelect(element) {
+		var fnName = '[data-stove="select"]',
+			$this = $(element).closest(fnName),
+			$select = $this.find('select'),
+			$stage = $('body');
 
-var customSelect = function(element) {
-	
-	/* Funtion Define */
-	var fnName = '[data-stove="select"]'
-		$this = $(element).closest(fnName),
-		$select = $this.find('select');
-		$stage = $('body');
+		/* Class Define */
+		var onClass = 'on',
+			dimClass = 'stove-dim',
+			optionLayerClass = 'stove-option-layer',
+			optionLayerScrollClass = 'stove-option-scroll',
+			optionLayerCloseClass = 'stove-btn-close',
+			optionTitleClass = 'stove-options-title',
+			optionListClass = 'stove-options',
+			optionClass = 'stove-option';
 
-	/* Class Define */
-	var	onClass = 'on',
-		dimClass = 'stove-dim',
-		optionLayerClass = 'stove-option-layer',
-		optionLayerScrollClass = 'stove-option-scroll',
-		optionLayerCloseClass = 'stove-btn-close',
-		optionTitleClass = 'stove-options-title',
-		optionListClass= 'stove-options',
-		optionClass = 'stove-option';
+		/* Extend Define */
+		var nowStatus = $this.attr('data-status'),
+			statusDisabled = $select.attr('disabled'),
+			statusReadonly = $select.attr('readonly'),
+			uiCase = $this.attr('data-uicase'),
+			optionLength = $select.children('option').length;
 
-	/* Extend Define */
-	var	nowStatus = $this.attr('data-status'),
-		statusDisabled = $select.attr('disabled'),
-		statusReadonly = $select.attr('readonly'),
-		uiCase = $this.attr('data-uicase'),
-		optionLength = $select.children('option').length;
-		
+		/* Reset */
+		if (statusDisabled == 'disabled' || statusReadonly == 'readonly') return;
+		$(fnName).find('.' + dimClass + ', .' + optionLayerClass).remove();
 
-	/* Reset */
-	if ( statusDisabled == 'disabled' ||  statusReadonly == 'readonly' ) return;
-	$(fnName).find('.'+dimClass+', .'+optionLayerClass+'').remove();
+		/* Option Init */
+		initOptionLayer();
 
-	/* Option Init */
-	$select.before('<div class="'+dimClass+'"></div>');	
-	$select.after('<div class="'+optionLayerClass+'" role="dialog"></div>');
-	
-	var $dim = $this.find('.'+dimClass),
-		$optionLayer = $this.find('.'+optionLayerClass);
-	var $optionScroll = $('<div>', {
-			class: optionLayerScrollClass
-		}).appendTo($optionLayer);
-	var $optionList = $('<div>', {
-			class: optionListClass
-		}).appendTo($optionScroll);
-		
-	if ( uiCase == 'slide' ) {
-		$('<div>', {
-			class: optionTitleClass,
-			text: $select.attr('title')
-		}).appendTo($optionLayer);
-	}  
+		/* Event Bindings */
+		bindOptionEvents();
 
-	var $closeBtn = $('<button>', {
-		class: optionLayerCloseClass,
-		title: '닫기'
-	}).appendTo($optionLayer);
-
-	for ( var i = 0; i < optionLength; i++ ) {
-		var option = $select.children('option').eq(i);
-		if ( option.attr('hidden') ) {
- 
-		} else if ( option.attr('disabled') ) {
-			$('<button>', {
-				class: optionClass,
-				text: option.text(),
-				rel: option.val(),
-				disabled: 'disabled'
-			}).appendTo($optionList);
+		/* Init */
+		if (nowStatus == 'open') {
+			close();
 		} else {
-			$('<button>', {
-				class: optionClass,
-				text: option.text(),
-				rel: option.val()
-			}).appendTo($optionList);
+			open();
 		}
-	}
 
-	var $optionBtn = $optionList.find('button');
-	setTimeout(function(){
-		$optionBtn.each(function(){
-			var thisRel = $(this).attr('rel'),
-				thisValue = $select.val();
-			if ( thisRel == thisValue ) {
-				$(this).addClass(onClass);
+		/* Functions */
+		function initOptionLayer() {
+			$select.before('<div class="' + dimClass + '"></div>');
+			$select.after('<div class="' + optionLayerClass + '" role="dialog"></div>');
+
+			var $dim = $this.find('.' + dimClass),
+				$optionLayer = $this.find('.' + optionLayerClass),
+				$optionScroll = $('<div>', { class: optionLayerScrollClass }).appendTo($optionLayer),
+				$optionList = $('<div>', { class: optionListClass }).appendTo($optionScroll);
+
+			if (uiCase == 'slide') {
+				$('<div>', { class: optionTitleClass, text: $select.attr('title') }).appendTo($optionLayer);
 			}
-		})			
-	}, 0);
 
-		
-	/* Common Function */
-	function open(){
-		$optionLayer.addClass('va-'+uiCase);
-		if ( uiCase == 'slide' ) {
-			setTimeout(function(){
-				$dim.addClass(onClass);
-				$optionLayer.addClass(onClass)
-				$stage.css({'overflow':'hidden'})
+			$('<button>', { class: optionLayerCloseClass, title: '닫기' }).appendTo($optionLayer);
+			createOptionButtons($optionList, optionLength);
+			highlightSelectedOption();
+		}
+
+		function createOptionButtons($optionList, optionLength) {
+			for (var i = 0; i < optionLength; i++) {
+				var option = $select.children('option').eq(i);
+				if (option.attr('hidden')) {
+					continue;
+				} else if (option.attr('disabled')) {
+					$('<button>', { class: optionClass, text: option.text(), rel: option.val(), disabled: 'disabled' }).appendTo($optionList);
+				} else {
+					$('<button>', { class: optionClass, text: option.text(), rel: option.val() }).appendTo($optionList);
+				}
+			}
+		}
+
+		function highlightSelectedOption() {
+			setTimeout(function() {
+				$this.find('button').each(function() {
+					var thisRel = $(this).attr('rel'),
+						thisValue = $select.val();
+					if (thisRel == thisValue) {
+						$(this).addClass(onClass);
+					}
+				});
 			}, 0);
-			setTimeout(function(){
+		}
+
+		function open() {
+			var $dim = $this.find('.' + dimClass),
+				$optionLayer = $this.find('.' + optionLayerClass);
+
+			$optionLayer.addClass('va-' + uiCase);
+
+			if (uiCase == 'slide') {
+				setTimeout(function() {
+					$dim.addClass(onClass);
+					$optionLayer.addClass(onClass);
+					$stage.css({ overflow: 'hidden' });
+				}, 0);
+
+				setTimeout(function() {
+					$optionLayer.attr('tabindex', 0).focus();
+				}, 0);
+
+				$dim.click(function(e) {
+					e.stopPropagation();
+					close();
+				});
+			} else {
 				$optionLayer.attr('tabindex', 0).focus();
-			}, 0);
-			$dim.click(function(e) {
-				e.stopPropagation();
-				close();
-			});
-		} else {
-			$optionLayer.attr('tabindex', 0).focus();
-			$stage.on({ 
-				click: function(e) { 
-					if(!$(e.target).hasClass($this)) {
-						close();
-					};
-				}, keydown: function(e) { 
-					if ( e.keyCode==27 ) {
-						e.stopPropagation();
-						close();
-					};
+				bindGlobalEvents();
+			}
+
+			$this.attr('data-status', 'open');
+		}
+
+		function close() {
+			if (uiCase == 'slide') {
+				setTimeout(function() {
+					$this.find('.' + dimClass).remove();
+					$this.find('.' + optionLayerClass).remove();
+					$stage.css({ overflow: 'auto' });
+				}, 0);
+			} else {
+				$stage.off('click keydown');
+				setTimeout(function() {
+					$this.find('.' + optionLayerClass).remove();
+				}, 0);
+			}
+
+			setTimeout(function() {
+				$select.focus();
+				$this.removeAttr('data-status');
+			}, 1);
+		}
+
+		function bindOptionEvents() {
+			$select.on('keydown', function(e) {
+				if (e.keyCode === 27) { // ESC key
+					e.stopPropagation();
+					close();
 				}
 			});
-		};
-		$this.attr('data-status','open');
-	};
 
-	function close(){
-		if ( uiCase == 'slide' ) {
-			setTimeout(function(){
-				$dim.remove();
-				$optionLayer.remove();
-				$stage.css({'overflow':'auto'})
-			}, 0);
-		} else {
-			$stage.off('click keydown');
-			setTimeout(function(){
-				$optionLayer.remove();
-			}, 0);
-		};
-		setTimeout(function(){
-			$select.focus();
-			$this.removeAttr('data-status');
-		}, 1);
-		return;
-	};
+			$this.find('.' + optionLayerClass).on({
+				click: function(e) {
+					e.stopPropagation();
+				},
+				keydown: function(e) {
+					if (e.keyCode === 27) { // ESC key
+						e.stopPropagation();
+						close();
+					}
+				}
+			});
 
-	/* Event Binding */
-	$select.on({
-		keydown: function(e) {
-			if ( e.keyCode==27 ) {
+			$this.find('.' + optionLayerCloseClass).on({
+				click: function(e) {
+					e.stopPropagation();
+					close();
+				},
+				blur: function() {
+					$this.find('.' + optionLayerClass).addClass(onClass).attr('tabindex', 0).focus();
+				}
+			});
+
+			$this.find('.' + optionClass).on('click', function(e) {
 				e.stopPropagation();
+				$select.val($(this).attr('rel'));
 				close();
-			};
+			});
 		}
-	});
 
-	$optionLayer.on({
-		click: function(e) {
-			e.stopPropagation();
-		}, keydown: function(e) {
-			if ( e.keyCode==27 ) {
-				e.stopPropagation();
-				close();
-			};
+		function bindGlobalEvents() {
+			$stage.on({
+				click: function(e) {
+					if (!$(e.target).hasClass($this)) {
+						close();
+					}
+				},
+				keydown: function(e) {
+					if (e.keyCode === 27) { // ESC key
+						e.stopPropagation();
+						close();
+					}
+				}
+			});
 		}
-	});
-
-	$closeBtn.on({
-		click: function(e) {
-			e.stopPropagation();
-			close();
-		}, blur: function(e) { 	
-			$optionLayer.addClass(onClass).attr('tabindex', 0).focus();
-		}
-	});
-
-	$optionBtn.on({
-		click: function(e) {
-			e.stopPropagation();
-			$select.val($(this).attr('rel'));
-			close();
-		}
-	});
-		
-	/* Init */
-	if ( nowStatus == 'open' ) {
-		close();
-	} else {
-		open();
 	}
-	
-}
 
-/*---------------------------------------------
-	Custom Select Event
----------------------------------------------*/
+	/*---------------------------------------------
+		Custom Select  Event Binding
+	---------------------------------------------*/
+	$(document).on('mousedown', '.se-select[data-stove="select"] select', function(e) {
+		e.preventDefault();
+	});
 
-/* 셀렉트박스 이벤트바인딩*/
-$(document).on('mousedown','.se-select[data-stove="select"] select',function(e){
-	e.preventDefault();
-});
-$(document).on('keydown','.se-select[data-stove="select"] select',function(e){
-	if ( e.keyCode==13 || e.keyCode==32 ) {
+	$(document).on('keydown', '.se-select[data-stove="select"] select', function(e) {
+		if (e.keyCode === 13 || e.keyCode === 32) { // Enter or Space
+			e.preventDefault();
+			customSelect($(this));
+		}
+	});
+
+	$(document).on('click', '.se-select[data-stove="select"] select', function(e) {
 		e.preventDefault();
 		customSelect($(this));
-	}
-});
-$(document).on('click','.se-select[data-stove="select"] select',function(e){
-	e.preventDefault();
-	customSelect($(this));
-});
+	});
 
-/*********************************************************************
-	TOGGLE_ACCORDION #토글_아코디언 [QnA]
-*********************************************************************/
-/*---------------------------------------------
-	Toggle_Accordion [QnA]
----------------------------------------------*/
-document.addEventListener('DOMContentLoaded', function() {
-    function toggleChkHandlers() {
-        var toggles = document.querySelectorAll('.toggleChk');
-
-        toggles.forEach(function(toggle) {
-            toggle.addEventListener('click', function() {
-                var toggleCont = this.parentElement.querySelector('.ques-cont');
-                var isOpen = this.classList.toggle('active');
-                toggleCont.classList.toggle('active');
-
-                if (isOpen) {
-                    this.setAttribute('title', '닫힘');
-                } else {
-                    this.setAttribute('title', '열림');
-                }
+	/*********************************************************************
+		Datepicker #데이터피커
+	*********************************************************************/
+	/*---------------------------------------------
+		Custom Datepicker Functionn
+	---------------------------------------------*/
+	function datepickerHandlers(){
+        // 기본 설정
+        $.datepicker.setDefaults({
+            // showOn: "both",
+            // buttonImage:"/resources/images/ic_datepicker.png",
+            // buttonImageOnly:true,
+            // buttonText:"달력 선택",
+            closeText: "닫기",
+            prevText: "이전달",
+            nextText: "다음달",
+            currentText: "오늘",
+            monthNames: ["1월", "2월", "3월", "4월", "5월", "6월",
+            "7월", "8월", "9월", "10월", "11월", "12월"
+            ],
+            monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월",
+            "7월", "8월", "9월", "10월", "11월", "12월"
+            ],
+            dayNames: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
+            dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
+            dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+            weekHeader: "주",
+            dateFormat: "yy.mm.dd",
+            firstDay: 0,
+            isRTL: true,
+            showOtherMonths:true,
+            showMonthAfterYear: true,
+            showButtonPanel: true,
+            changeYear: true,
+            changeMonth: true,
+            yearSuffix: "년",
+            minDate:null, //null
+            yearRange:"c-5:c+5"//선택 범위
+        });
+        
+        // 위치 조절 함수
+        function repositionDatepicker(input, inst){
+            var inputOffset = $(input).offset(); // input의 위치값 가져오기
+            var inputHeight = $(input).outerHeight();
+            inst.dpDiv.css({
+                top: inputOffset.top + inputHeight + "px", // input 바로 아래
+                left: inputOffset.left + "-10px" // input의 왼쪽
             });
+        }
+        
+        $(".datepicker").datepicker({
+            beforeShow: function(input, inst) {
+                
+                repositionDatepicker(input, inst);
+    
+                $(window).on('scroll resize', function() {
+                    repositionDatepicker(input, inst);
+                });
+    
+            },
+            onClose: function() {
+                $(window).off('scroll resize');
+            }
+        });
+    
+		//오늘 버튼
+		var old_goToToday = $.datepicker._gotoToday;
+
+		$.datepicker._gotoToday = function(id) {
+
+		old_goToToday.call(this,id);
+
+		this._selectDate(id);
+
+		};
+    }
+    
+    // Datepicker 핸들러 실행
+    datepickerHandlers();
+
+	/*********************************************************************
+		TOGGLE_ACCORDION #토글_아코디언 [QnA]
+	*********************************************************************/
+	/*---------------------------------------------
+		Toggle_Accordion [QnA]
+	---------------------------------------------*/
+    function toggleChkHandlers() {
+        // .toggleChk 요소에 대해 클릭 이벤트 핸들러 추가
+        $('.toggleChk').on('click', function() {
+            handleToggleClick($(this));
         });
     }
 
-    // 이벤트 리스너가 로드된 후 함수 실행
+    function handleToggleClick($toggleElement) {
+        var $toggleCont = $toggleElement.parent().find('.ques-cont');
+        var isOpen = $toggleElement.toggleClass('active').hasClass('active');
+        $toggleCont.toggleClass('active');
+
+        // 버튼 상태에 따라 title 속성 설정
+        $toggleElement.attr('title', isOpen ? '닫힘' : '열림');
+    }
+
+    // 페이지 로드 후 토글 핸들러 실행
     toggleChkHandlers();
+
+	
+	/*********************************************************************
+		Filter_fixed #필터fixed
+	*********************************************************************/
+	/*---------------------------------------------
+		Filter_fixed [상담내역]
+	---------------------------------------------*/
+
+	function handleScroll() {
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop > 400) {
+            $(".filter").addClass("fix");
+        } else {
+            $(".filter").removeClass("fix");
+        }
+    }
+
+    function initScrollEvent() {
+        $(window).on('scroll', handleScroll);
+    }
+
+    // 이벤트 초기화 함수 실행
+    initScrollEvent();
+
 });
 
-/*********************************************************************
-	fillter #필터fixed [QnA]
-*********************************************************************/
-$(window).scroll(function() {
-	const scroll = $(window).scrollTop();
 
-	if (scroll > 400){
-		$(".fillter").addClass("fix");
-	}else{
-		$(".fillter").removeClass("fix");
-	}
-})

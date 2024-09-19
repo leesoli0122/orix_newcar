@@ -241,7 +241,7 @@ input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; hei
     Input_첨부파일_파일첨부했을 때 list
 ---------------------------------------------*/
 .add-file li { display:inline-flex; margin-top:20px; margin-right:20px; padding:11px 14px 12px; border:1px solid var(--border3); border-radius:4px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--title); background:var(--white); }
-.add-file li span.delete-file { display:inline-block; margin-left:8px; width:12px; height:12px; font-size:0; background:url(../images/ic_file_x.png)no-repeat 50%/12px auto; cursor: pointer;}
+.add-file li span.delete-file { display:inline-block; margin-left:8px; width:30px; height:16px; font-size:0; background:url(../images/ic_file_x.png)no-repeat 50%/12px auto; cursor: pointer;}
 
 /*---------------------------------------------
 	Input_주민등록번호 Number Custom

@@ -462,7 +462,7 @@ TOGGLE_ACCORDION #토글_아코디언 [QnA]
 ---------------------------------------------*/
 .accordion-wrap.ico > .accordion-info > .ques::before,
 .accordion-wrap.ico > .accordion-info > .ques-cont p::before { content:''; position:absolute; width:24px; height:24px; }
-.accordion-wrap.ico > .accordion-info > .ques::before { left:24px; background: url(../../resources/images/ic_question.png) no-repeat 100%/24px auto;  }
+.accordion-wrap.ico > .accordion-info > .ques::before { top:50%; transform: translateY(-50%); left:24px; background: url(../../resources/images/ic_question.png) no-repeat 100%/24px auto;  }
 .accordion-wrap.ico > .accordion-info > .ques { padding:30px 74px 30px 54px; }
 .accordion-wrap.ico > .accordion-info > .ques-cont p::before { left:0; background: url(../../resources/images/ic_answer.png) no-repeat 100%/24px auto; }
 .accordion-wrap.ico > .accordion-info > .ques-cont p { padding-left:34px; }

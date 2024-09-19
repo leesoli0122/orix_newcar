@@ -449,7 +449,7 @@ TOGGLE_ACCORDION #토글_아코디언 [QnA]
 	Toggle_Accordion Default
 ---------------------------------------------*/
 .accordion-wrap > .accordion-info:first-child { margin-top:0; }
-.accordion-wrap > .accordion-info { margin-top:20px; border:1px solid #DDDDDD; border-radius: 20px; }
+.accordion-wrap > .accordion-info { margin-top:20px; border:1px solid #DDDDDD; border-radius: 20px; overflow: hidden;}
 .accordion-wrap > .accordion-info > .ques { position:relative; display:flex; width:100%; justify-content:space-between; padding:30px; font-size: var(--font18); font-weight:var(--w-bold); color:var(--title);  }
 .accordion-wrap > .accordion-info > .ques::after { content:''; position:absolute; right:30px; top:50%; transform:translateY(-50%); background-image: var(--svg-select-arrow); background-repeat: no-repeat; background-position: center; background-size:30px; width:24px; height:24px; }
 .accordion-wrap > .accordion-info > .ques.active::after { transform:translate(0, -50%) rotate(-180deg); transition: all ease .2s; }

@@ -377,18 +377,62 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Input_File [파일 업로드]
 	---------------------------------------------*/
-	function setupFileInputHandlers() {
-		$(".btn-input").on('click', function() {
-			$(".plus-file").click();
-		});
-	
-		$("#file").on('change', function() {
-			var fileName = this.files[0] ? this.files[0].name : "파일첨부 내용";
-			$(".upload-name").text(fileName);
-		});
-	}
-	
-	setupFileInputHandlers();
+    function setupFileInputHandlers() {
+        const $fileInput = $('.plus-file');  // 파일 입력
+        const $addFileList = $('.add-file'); // 파일 리스트
+        const maxFiles = 3;                  // 최대 파일 개수
+        const maxFileSize = 300 * 1024 * 1024; // 300MB 제한 (바이트로 변환)
+
+        // "찾아보기" 버튼 트리거
+        $('.btn-input').on('click', function() {
+            $fileInput.click();
+        });
+
+        // 파일 선택
+        $fileInput.on('change', function() {
+            // 파일 3개 있는지 확인
+            if ($addFileList.children('li').length >= maxFiles) {
+                alert('최대 3개의 파일만 선택할 수 있습니다.');
+                return;
+            }
+
+            const files = Array.from(this.files);
+
+            // 선택 파일 검사
+            files.forEach(function(file) {
+                const fileType = file.type;
+                const fileSize = file.size;
+
+                // 파일 형식과 크기 검사 (JPG, PNG, 300MB 이하)
+                if (!fileType.match(/image\/(jpeg|png)/)) {
+                    alert('JPG 또는 PNG 파일만 업로드할 수 있습니다.');
+                    return;
+                }
+                if (fileSize > maxFileSize) {
+                    alert('파일 크기는 300MB를 초과할 수 없습니다.');
+                    return;
+                }
+
+                // 파일이 3개 미만일 때만 리스트에 추가
+                if ($addFileList.children('li').length < maxFiles) {
+                    const $newListItem = $('<li>').text(file.name);
+                    const $deleteButton = $('<span>').text('삭제').addClass('delete-file'); // 삭제 버튼 추가
+                    $newListItem.append($deleteButton);
+                    $addFileList.append($newListItem);
+                }
+            });
+
+            // 파일 입력을 초기화
+            $fileInput.val('');
+        });
+
+        // 파일 삭제
+        $addFileList.on('click', '.delete-file', function() {
+            $(this).parent('li').remove(); // 부모 li 요소 삭제
+        });
+    }
+
+    setupFileInputHandlers();
 });
 
 

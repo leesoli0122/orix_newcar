@@ -384,7 +384,7 @@ $(document).ready(function() {
         const maxFileSize = 300 * 1024 * 1024; // 300MB 제한 (바이트로 변환)
 
         // "찾아보기" 버튼 트리거
-        $('.btn-input').on('click', function() {
+        $('.file .btn-input').on('click', function() {
             $fileInput.click();
         });
 

@@ -137,6 +137,8 @@ text-wrap
 sub-text-wrap 본문 타이틀
 style1 = padding:10px 0 20px;
 style2 = padding:20px 0;
+style3 = caption만 들어갈 경우
+style4 = table 안에 들어갈 때
 ---------------------------------------------*/
 .sub-text-wrap { font-size:var(--font20); font-weight:var(--w-bold); text-align:left; }
 .sub-text-wrap.style1 { padding:10px 0 20px;  }
@@ -151,6 +153,7 @@ style2 = padding:20px 0;
 .blue { color:var(--secondary)!important; }
 .red { color:var(--error)!important; }
 .bold { font-weight:var(--w-bold)!important; }
+.now { background:var(--background4); }
 
 /* sub-text-wrap 안에 버튼 */
 .sub-text-wrap:has(.btn, .select-box) { display:flex; align-items: center; justify-content: space-between; }
@@ -158,11 +161,39 @@ style2 = padding:20px 0;
 /* text-align */
 .ta-c { text-align:center; }
 
+/*---------------------------------------------
+table-text-wrap 테이블 타이틀
+style1 = padding:20px 0;
+style2 = padding:20px 0 10px;
+---------------------------------------------*/
+.table-text-wrap.style1 { padding:20px 0; }
+.table-text-wrap.style1 h4 { font-size:var(--font18); font-weight:var(--w-bold); color:var(--normal); }
+
+.table-text-wrap.style2 { padding:20px 0 10px; }
+.table-text-wrap.style2 h4 { font-size:var(--font16); font-weight:var(--w-bold); color:var(--normal); }
+
 /*********************************************************************
 #블릿텍스트
 *********************************************************************/
-.bul-hypn > li { display:inline-block; width:100%; padding-left:15px; }
+.bul-hypn > li,
+.bul-dot > li,
+.bul-refer > li { display:inline-block; width:100%; padding-left:15px; }
+
+/* - */
 .bul-hypn > li::before{ content:'-'; position:absolute; left:0; }
+
+/* . */
+p + .bul-dot,
+.bul-dot + .bul-refer,
+.bul-refer + p { margin-top:10px; }
+
+.bul-dot > li { margin-bottom:10px; }
+.bul-dot > li:last-child { margin-bottom:0; }
+.bul-dot > li::before { content:'·'; position:absolute; left:0; }
+
+/* ※ */
+.bul-refer > li { padding-left:20px; }
+.bul-refer > li::before { content:'※'; position:absolute; left:0; }
 
 /*********************************************************************
 login #로그인
@@ -185,7 +216,7 @@ login #로그인
 /*********************************************************************
 header #헤더
 *********************************************************************/
-#headerWrap { position:fixed; top:0; z-index:2; width:100%; background-color:var(--white); border-bottom:1px solid var(--border1); /*box-shadow: 0px 0px 10px 2px #ddd;*/ }
+#headerWrap { position:fixed; top:0; z-index:10; width:100%; background-color:var(--white); border-bottom:1px solid var(--border1); /*box-shadow: 0px 0px 10px 2px #ddd;*/ }
 #headerWrap .top { padding:20px; margin: 0 auto; max-width:1400px; width: 100%; /*min-width:1200px;*/ height:72px; }
 #headerWrap .top div { display:flex; align-items:center; }
 #headerWrap .top > div > * { vertical-align:middle; }

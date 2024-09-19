@@ -12,7 +12,7 @@
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:type" content="website" />
 
-    <title>로그인 > 비밀번호 찾기 > 아이디 입력</title>
+    <title>견적내기 > 렌터카 견적내기</title>
 
     <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/ui_common.css" rel="stylesheet" type="text/css" />
@@ -25,40 +25,38 @@
 
 </head>
 <body>
-    <div class="wrap login">
+    <div class="wrap">
         <!-- s:header -->
-        <div class="login-header">
-            <img src="../../resources/images/login_logo.png" alt="오릭스캐피탈코리아 로고">
-            <h2>
-                비밀번호 찾기
-                <span>오릭스캐피탈코리아 신차 영업 플랫폼 비밀번호 찾기 화면입니다.</span>
-            </h2>
+        <div id="headerWrap">
+            <script>
+                $(document).ready(function(){
+                    $("#headerWrap").load("../INCLUDE/inc_header.html");
+                });
+            </script>
         </div>
         <!-- //e:header -->
-        <!-- s:contentWrap -->
+         <!-- s:contentWrap -->
         <div id="contentWrap" class="sub-content">
+            <!-- s:subvisual-wrap -->
+            <div class="subvisual-wrap">
+                <div class="breadcrumb-wrap">
+                    <ul>
+                        <li class="home"><a href="javascript:void(0);">홈</a></li>
+                        <li><a href="javascript:void(0);">견적내기</a></li>
+                        <li><a href="javascript:void(0);">렌터카 견적내기</a></li>
+                    </ul>
+                </div>
+                <div class="text-wrap">
+                    <h2>렌터카 견적내기</h2>
+                </div>
+            </div>
+            <!-- //e:subvisual-wrap -->
             <!-- s:contents -->
             <div class="contents">
-                <form>
-                    <div class="sub-text-wrap style1">
-                        <h4>아이디 확인 후 비밀번호를 재설정 할 수 있습니다.</h4>
-                    </div>
-                    <div class="table-type">
-                        <div class="col">
-                            <dl>
-                                <dt>아이디</dt>
-                                <dd class="form-group error">
-                                    <input id="" title="아이디" type="text" name="" class="form-control" placeholder="아이디 입력">
-                                    <p class="info">아이디를 입력해 주세요.</p>
-                                    <p class="info">아이디를 다시 확인해 주세요.</p>
-                                </dd>
-                            </dl>
-                        </div>
-                    </div>
-                </form>
-                <div class="btn-wrap bottom">
-                    <button type="button" name="button" class="btn btn-primary">확인</button>
+                <div class="btn-wrap no-icon">
+                    <button class="btn btn-icon">견적 기본 설정</button>
                 </div>
+                <div class="grid-wrap"></div>
             </div>
             <!-- //e:contents -->
         </div>

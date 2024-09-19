@@ -12,7 +12,7 @@
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:type" content="website" />
 
-    <title>고객센터 > 자동차세 계산하기</title>
+    <title>고객센터 > 자동차세 계산하기 > 자동차세</title>
 
     <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/ui_common.css" rel="stylesheet" type="text/css" />
@@ -185,26 +185,12 @@
                                                     <ul class="radio-box">
                                                         <li>
                                                             <input type="radio" id="radio-9" name="bus">
-                                                            <label for="radio-9"class="radio-button"><span>소형일반버스</span></label>
+                                                            <label for="radio-9"class="radio-button"><span>소형특수자동차</span></label>
                                                         </li>
-                                                        <li>
-                                                            <input type="radio" id="radio-10" name="bus" checked="">
-                                                            <label for="radio-10" class="radio-button"><span>대형일반버스</span></label>
-                                                        </li>
-                                                        <!--S: 승합/영업용일때 추가 -->
                                                         <li>
                                                             <input type="radio" id="radio-11" name="bus">
-                                                            <label for="radio-11"class="radio-button"><span>소형전세버스</span></label>
+                                                            <label for="radio-11"class="radio-button"><span>대형특수자동차</span></label>
                                                         </li>
-                                                        <li>
-                                                            <input type="radio" id="radio-12" name="bus" checked="">
-                                                            <label for="radio-12" class="radio-button"><span>대형전세버스</span></label>
-                                                        </li>
-                                                        <li>
-                                                            <input type="radio" id="radio-13" name="bus" checked="">
-                                                            <label for="radio-13" class="radio-button"><span>고속버스</span></label>
-                                                        </li>
-                                                        <!--E: 승합/영업용일때 추가 -->
                                                     </ul>
                                                 </dd>
                                             </dl>
@@ -216,6 +202,7 @@
                                     <button type="button" name="button" class="btn btn-primary">계산하기</button>
                                 </div>
                                 <div class="result-area car-calc">
+                                    <!-- S: 계산결과 -->
                                     <ul class="text-result">
                                         <li class="tit">
                                             <ul>
@@ -223,30 +210,17 @@
                                                 <li>승합</li>
                                                 <li>비영업용</li>
                                                 <li>배기량 <span>1988CC</span></li>
-                                                <!-- 승용/영업용 –전기차 제외에서 숨김처리 -->
-                                                <li>교육세 30% 포함된 금액</li>
-                                                <!-- 영업용에서만 -->
-                                                <li>영업용</li>
-                                                <!-- 승용/영업용 –전기차에만 해당 -->
-                                                <li>전기자동차</li>
-                                                <!-- 승합/비영업용/소형일반버스 -->
-                                                <li>소형일반버스</li>
-                                                <!-- 승합/비영업용/대형일반버스 -->
-                                                <li>대형일반버스</li>
-                                                <!-- 화물 -->
-                                                <li>적재량 1,000Kg</li>
-                                                <!-- 특수/비영업용/소형특수자동차 -->
-                                                <li>소형특수자동차</li>
                                             </ul>
                                         </li>
                                         <li class="txt bold">연간세액 <span>519,480 원</span></li>
                                     </ul>
+                                    <!-- E: 계산결과 -->
                                 </div>
                                 <div class="sub-text-wrap style2">
                                     <h4>과세기간별 납입금</h4>
-                                    <!-- 승용/비영업용/상반기 1월 ~ 6월/하반기 7월 ~ 12월 (전기차 제외) -->
+                                    <!-- 승용/비영업용/상반기 1월 ~ 6월/하반기 7월 ~ 12월 (전기차 제외)일 때 -->
                                     <p class="caption">교육세 포함된 납입할 금액입니다. 괄호안은 차량에 따른 감액 비율</p>
-                                    <!-- 승용/비영업용 – 전기차 -->
+                                    <!-- 승용/비영업용 – 전기차일 때 -->
                                     <p class="caption">차량에 따른 경감 적용 없이 매년 동일하면, 합계에는 교육세 30%가 포함되었습니다.</p>
                                     <!--  -->
                                     <p class="caption">차량 연식에 따른 경감 적용없이 매년 동일합니다.</p>

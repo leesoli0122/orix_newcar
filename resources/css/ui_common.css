@@ -266,7 +266,7 @@ input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; hei
 .form-group .info { color:var(--secondary); }
 .form-group.error .info:before,
 .form-group .info:before,
-.caption:before { content:''; position:absolute; top:50%; left:0; transform:translateY(-50%); width:16px; height:16px; }
+.caption:before { content:''; position:absolute;/*top:50%;*/ left:0; /*transform:translateY(-50%);*/ width:16px; height:16px; }
 .form-group.error .info:before { background: var(--svg-error-info);  }
 .form-group .info:before,
 .caption:before { background: var(--svg-correct-info); }
@@ -432,6 +432,11 @@ button.btn.btn-search { padding:0; height:46px; width:30px; padding:0 32px; back
 /** 등록하기 + 아이콘 버튼 **/
 button.btn.btn-icon { padding:0 44px 0 20px; height:44px; border:1px solid var(--border1); border-radius:6px; color:var(--normal); }
 button.btn.btn-icon:after { content:''; position:absolute; transform: translateY(-50%); top:50%; right:20px; width:20px; height:20px; background: url(../images/ic_plus.png)no-repeat 100%/20px auto; }
+
+/* 아이콘이 버튼에 없을 때 */
+.btn-wrap.no-icon { margin:20px 0; width:100%; text-align:right; }
+.btn-wrap.no-icon button.btn.btn-icon { padding:13px 20px; height:44px; border:1px solid var(--border1); border-radius:6px; font-size:var(--font16); color:var(--normal); line-height:16px; text-align:right; }
+.btn-wrap.no-icon button.btn.btn-icon::after { content:none; }
 
 /** 탑 버튼 **/
 button.btn.btn-top { padding:7px; width:42px; height:42px; border:1px solid var(--border1); border-radius: 50%; background: var(--svg-top); transform: rotate(-180deg); }
@@ -627,7 +632,7 @@ tab #탭
 .tabs-wrap .tab-item li,
 .tabs-wrap .tab-list li { display:inline-block; position:relative; padding:24px 20px; max-width:241px; width:100%; border:1px solid var(--border1); border-bottom: 1px solid var(--normal); font-size:var(--font18); color:var(--inactive); line-height:2.2; }
 .tabs-wrap .tab-item li.style2,
-.tabs-wrap .tab-list li.style2 { line-height:initial; }
+.tabs-wrap .tab-list li.style2 { /*padding:22px 20px 23px;*/ line-height:initial; }
 .tabs-wrap .tab-item li:last-child,
 .tabs-wrap .tab-list li:last-child { margin-right:0; }
 .tabs-wrap .tab-item li a,
@@ -734,7 +739,7 @@ list #리스트
 
 /* 다운로드 있는 list */
 .list-card-wrap.download .list-card-group { display:flex; justify-content: space-between; }
-.list-card-wrap.download .list-card-group .card-left .tit { margin-bottom:12px; font-size:var(--font18); font-weight:var(--w-bold); }
+.list-card-wrap.download .list-card-group .card-left .tit { display:inline-block; margin-bottom:12px; font-size:var(--font18); font-weight:var(--w-bold); }
 .list-card-wrap.download .list-card-group .card-right { display:flex;align-items: center; }
 .list-card-wrap.download .list-card-group .icon { margin-right:50px; }
 .list-card-wrap.download .list-card-group .icon li { display:inline-block; margin-left:10px; margin-right:0; font-size:0; }
@@ -865,6 +870,7 @@ table #테이블
 .nte-wrap .nte-view dt .nte-header .text-after.style4 li { font-size:var(--font16); color:var(--inactive); }
 
 .nte-wrap .nte-view .notice-contents { padding:30px 20px; min-height:320px; font-size:var(--font16); font-weight:var(--w-regular); color:var(--normal); }
+.nte-wrap .nte-view .notice-contents p { margin-bottom:10px; }
 
 /* 다운로드 */
 .download-wrap { position: relative; margin-top:30px; padding: 20px; width: 100%; border-radius: 10px; background: #F8F9FC; font-size:var(--font14); }
@@ -905,9 +911,9 @@ table #테이블
 .consultation .btn.btn-icon { width:100%; }
 .consultation button.btn.btn-icon:after { right:inherit; }
 /* 필터 */
-.fillter { position:absolute; top:70px; width:180px; }
-.fillter.fix { position:fixed; top:144px; }
-.fillter p { padding:22px 0; border-radius:12px 12px 0 0; font-size:var(--font20); font-weight:var(--w-bold); color:var(--white); text-align:center; background:var(--secondary); }
-.fillter.form-group.check ul.check-box { flex-direction:column; gap:28px; padding:24px; border:1px solid var(--border3); background:var(--white); }
+.filter { position:absolute; top:70px; width:180px; }
+.filter.fix { position:fixed; top:144px; }
+.filter p { padding:22px 0; border-radius:12px 12px 0 0; font-size:var(--font20); font-weight:var(--w-bold); color:var(--white); text-align:center; background:var(--secondary); }
+.filter.form-group.check ul.check-box { flex-direction:column; gap:28px; padding:24px; border:1px solid var(--border3); background:var(--white); }
 /* consultation */
 .consultation { margin-left:221px; }

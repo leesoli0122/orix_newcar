@@ -142,6 +142,7 @@ style2 = padding:20px 0;
 .sub-text-wrap.style1 { padding:10px 0 20px;  }
 .sub-text-wrap h4 { font-size:var(--font20); font-weight:var(--w-bold); text-align:left; }
 .sub-text-wrap.style2 { padding:20px 0; }
+.sub-text-wrap.style3 { padding:0 0 20px; }/*caption만 들어갈 경우*/
 
 .caption { padding-left:22px; margin-top:10px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--subtitle); }
 .caption2 { position:absolute; top:-36px; right:0; display:inline-block; font-size:var(--font14); font-weight:var(--w-regular); color:var(--subtitle); }
@@ -149,6 +150,7 @@ style2 = padding:20px 0;
 
 .blue { color:var(--secondary)!important; }
 .red { color:var(--error)!important; }
+.bold { font-weight:var(--w-bold)!important; }
 
 /* sub-text-wrap 안에 버튼 */
 .sub-text-wrap:has(.btn, .select-box) { display:flex; align-items: center; justify-content: space-between; }
@@ -191,7 +193,7 @@ header #헤더
 #headerWrap .top > div > ul { position:absolute; right:0; top:50%; transform:translateY(-50%); display:flex; letter-spacing:0; }
 #headerWrap .top > div > ul li { display:inline-block; }
 #headerWrap .top > div > ul li:first-child::after { content:""; display:inline-block; margin:0 16px; width:1px; height:14px; background:var(--border1); vertical-align: middle; }
-#headerWrap .top > div > ul li a { font-size:var(--font-14); font-weight:700; color:var(--subtitle); }
+#headerWrap .top > div > ul li a { font-size:var(--font14); font-weight:700; color:var(--subtitle); }
 
 #headerWrap > .h-menu { display:flex; align-items:center; padding:0 20px; }
 #headerWrap > .h-menu div { margin: 0 auto; max-width:1400px; width:100%; height:72px; }

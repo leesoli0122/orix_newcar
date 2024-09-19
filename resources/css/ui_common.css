@@ -618,15 +618,17 @@ tab #탭
 *********************************************************************/
 .tabs-wrap .tab-item,
 .tabs-wrap .tab-list { display:flex; align-items:center; position:relative; background:#fff; font-size:0; }
-.tabs-wrap .tab-item::after { content:""; display:inline-block; margin-top:69px; width:100%; height:1px; background:var(--normal); }
+.tabs-wrap .tab-item::after { content:""; display:inline-block; margin-top:89px; width:100%; height:1px; background:var(--normal); }
 .tabs-wrap .tab-item li,
-.tabs-wrap .tab-list li { display:inline-block; position:relative; padding:24px 20px; width:100%; border:1px solid var(--border1); border-bottom: 1px solid var(--normal); font-size:var(--font18); color:var(--inactive); }
+.tabs-wrap .tab-list li { display:inline-block; position:relative; padding:24px 20px; max-width:241px; width:100%; border:1px solid var(--border1); border-bottom: 1px solid var(--normal); font-size:var(--font18); color:var(--inactive); line-height:2.2; }
+.tabs-wrap .tab-item li.style2,
+.tabs-wrap .tab-list li.style2 { line-height:initial; }
 .tabs-wrap .tab-item li:last-child,
 .tabs-wrap .tab-list li:last-child { margin-right:0; }
 .tabs-wrap .tab-item li a,
 .tabs-wrap .tab-list li a { display:block; line-height:inherit; text-align:center; font-weight:var(--w-bold); color:var(--inactive); }
 .tabs-wrap .tab-item li.on,
-.tabs-wrap .tab-list li.on { border:2px solid var(--normal); border-bottom:2px solid var(--white); font-weight:var(--w-bold); color:var(--title); }
+.tabs-wrap .tab-list li.on { border:2px solid var(--normal); border-bottom:none; font-weight:var(--w-bold); color:var(--title); }
 .tabs-wrap .tab-item li.on a,
 .tabs-wrap .tab-list li.on a { color:var(--normal); font-weight:var(--w-bold); }
 
@@ -668,7 +670,7 @@ tab #탭
 .result-area.fail::before { background:url(../images/fail.png)no-repeat 50%/64px auto; }
 
 /*---------------------------------------------
-	개별소비세 계산하기 결과값
+	개별소비세 계산하기 결과값 calc
 ---------------------------------------------*/
 .result-area.calc { margin-top:20px; padding:30px; }
 .result-area.calc .text-list li,
@@ -680,6 +682,17 @@ tab #탭
 .result-area.calc .text-result { margin-top:25px; }
 .result-area.calc .text-result .tit { font-size:var(--font18); color:var(--normal); }
 .result-area.calc .text-result .txt { font-size:var(--font20); font-weight:var(--w-bold); }
+
+/*---------------------------------------------
+	자동차세 계산하기 결과값 car-calc
+---------------------------------------------*/
+.result-area.car-calc { padding:30px; margin:20px 0 40px; border-radius:0 0 20px 20px; }
+.result-area.car-calc .text-result { display:flex; align-items:center; justify-content:space-between; font-size:0; }
+.result-area.car-calc .text-result .tit { color:var(--inactive); }
+.result-area.car-calc .text-result .tit ul li { display:inline-block; font-size:var(--font18); }
+.result-area.car-calc .text-result .tit ul li::after { content:""; display:inline-block; margin:0 16px; width:1px; height:14px; background:var(--inactive); }
+.result-area.car-calc .text-result .tit ul li:last-child:after { content:none; }
+.result-area.car-calc .text-result .txt { font-size:var(--font18); }
 
 /*********************************************************************
 list #리스트
@@ -786,7 +799,7 @@ table #테이블
 .table-row tbody tr td { padding:20px 0; border-bottom:1px solid var(--border3); border-left:1px solid var(--border3); font-weight:var(--w-regular); line-height:1.5; color:var(--normal); }
 .table-row tbody tr td:first-child { border-left:none; }
 
-.table-row tfoot tr td { padding:20px 0; border-right:1px solid var(--border3); font-weight:var(--w-bold); color:var(--title); background:var(--background4); }
+.table-row tfoot tr td { padding:20px 0; border-top:1px solid var(--border3); border-right:1px solid var(--border3); font-weight:var(--w-bold); color:var(--title); background:var(--background4); }
 .table-row tfoot tr td:last-child { border-right:none; }
 
 /* 실적내역 테이블 */
@@ -798,7 +811,10 @@ table #테이블
 .table-type.style2 tbody td:last-child { border-right:none; }
 
 /* 개별소비세 계산하기-상세보기 테이블 */
-
+.table-type.style3 tbody td { border-left:none; border-right:1px solid var(--border3); }
+.table-type.style3 tbody td:last-child { border-right:none; }
+.table-type.style3 tfoot td { padding:20px; }
+.table-type.style3 tfoot td:last-child { text-align:right ; }
 
 /*---------------------------------------------
     테이블 : table-col

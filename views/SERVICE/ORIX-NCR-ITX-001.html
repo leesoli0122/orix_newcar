@@ -56,7 +56,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
             <div class="sub-text-wrap style2">
                 <h4>정보입력 및 안내</h4>
                 <p class="caption"><span class="red">개별소비세 계산하기</span>는 사용자의 편의를 위한 메뉴로, <span class="red">실제 차량구입시의 개별소비세와 차이가 있을 수</span> 있습니다.</p>
-                <p class="caption"><span>2023년 7월 1일</span>부터 개별소비세 <span class="red">30%감면</span>은 <span class="red">종료</span> 되었습니다.</p>
+                <p class="caption"><span class="bold">2023년 7월 1일</span>부터 개별소비세 <span class="red">30%감면</span>은 <span class="red">종료</span> 되었습니다.</p>
                 <p class="caption">수입차(쉐보레, 르노삼성차 수입차 포함)는 통관가격 기준으로 개별소비세 적용 시점이 계산되어 역산할 수 없어 아래의 계산 결과와 다릅니다.</p>
                 <p class="caption"><span class="red">개별소비세 과세기준</span>은 <span class="red">출고가격에서 18% 인하된 가격에 적용</span> 됩니다(2023년 7월 1일 부터 3년간)</p>
                 <p class="caption"><span class="red">개별소비세 부가 대상</span>은 <span class="red">경차를 제외</span>한 <span class="red">8인 이하 승용차</span> 입니다.</p>
@@ -134,7 +134,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
                     <span class="txt"><span class="blue">000,000원</span><span class="red">-000,000원</span></span>
                 </p>
             </div>
-            <div class="sub-text-wrap style2"></div>
+            <div class="sub-text-wrap style2">
                 <h4>상세안내</h4>
             </div>
             <div class="table-type style3 ta-c table-row">
@@ -157,14 +157,14 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
                     </thead>
                     <tbody>
                         <tr>
-                            <td colspan="2">출하가격(판매원가)(A)</td>
+                            <td colspan="2" class="bold">출하가격(판매원가)(A)</td>
                             <td>000,000 원</td>
                             <td>000,000 원</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td rowspan="5">개별소비세</td>
-                            <td>기준세액(5%)</td>
+                            <td class="bold">기준세액(5%)</td>
                             <td>000,000 원</td>
                             <td>000,000 원</td>
                             <td>8인 이하 승용(경차 제외)</td>
@@ -188,12 +188,36 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
                             <td>500만원 한도에서 개별소비세 면제</td>
                         </tr>
                         <tr>
-                            <td>결정세액(B)</td>
+                            <td class="bold">결정세액(B)</td>
                             <td>000,000 원</td>
                             <td>000,000 원</td>
-                            <td>8인 이하 승용(경차 제외)</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="bold">교육세(C)</td>
+                            <td>000,000 원</td>
+                            <td>000,000 원</td>
+                            <td>개별소비세 결정세액(B)의 30%</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="bold">교육세(C)</td>
+                            <td>000,000 원</td>
+                            <td>000,000 원</td>
+                            <td>출하가격(A)+개별소비세 결정세액(B)+교육세(C)의 10%</td>
                         </tr>
                     </tbody>
+                    <tfoot>
+                        <tr></tr>
+                            <td colspan="2" class="bold">최종가격(A+B+C+D)</td>
+                            <td>000,000 원</td>
+                            <td>000,000 원</td>
+                            <td>
+                                <span class="red">-000,000 원</span>
+                                <span class="blue">-000,000 원</span>
+                                (세율-비교세율)
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
         </div>

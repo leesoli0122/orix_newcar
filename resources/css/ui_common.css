@@ -216,7 +216,7 @@ input::-ms-reveal { display: none;}
 ---------------------------------------------*/
 textarea { overflow-y:scroll; width:100%; height:240px; padding:14px 16px; resize:none; white-space:pre-line; line-height:1.188rem; font-size:var(--font16); font-weight:var(--w-regular); color:var(--subtitle); border:1px solid var(--border2); background-color: var(--white); transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
 input.form-control,
-.form-group .file-st { padding:0 16px; height:46px; line-height:1.188rem; font-size:var(--font16); font-weight:var(--w-regular); color:var(--subtitle); border:1px solid var(--border2); background-color: var(--white); transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;  }
+.form-group .upload-name{ padding:0 16px; height:46px; line-height:1.188rem; font-size:var(--font16); font-weight:var(--w-regular); color:var(--subtitle); border:1px solid var(--border2); background-color: var(--white); transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;  }
 textarea::placeholder,
 input.form-control::placeholder { color:var(--subtitle); }
 input.form-control::-moz-placeholder,
@@ -234,7 +234,7 @@ INPUT_ ETC
 /*---------------------------------------------
 	Input_첨부파일 File Custom
 ---------------------------------------------*/
-.form-group .file-st { display:flex; align-items: center; width:100%; max-width:410px; }
+.form-group .upload-name { display:flex; align-items: center; width:100%; max-width:410px; }
 input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; height:100%; opacity: 0; cursor: pointer; font-size:0; max-width:512px; z-index:1; }
 
 

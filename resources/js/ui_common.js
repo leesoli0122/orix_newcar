@@ -371,6 +371,24 @@ $(document).ready(function() {
     // 이벤트 초기화 함수 실행
     initScrollEvent();
 
+	/*********************************************************************
+		Input_File #인풋_파일 업로드
+	*********************************************************************/
+	/*---------------------------------------------
+		Input_File [파일 업로드]
+	---------------------------------------------*/
+	function setupFileInputHandlers() {
+		$(".btn-input").on('click', function() {
+			$(".plus-file").click();
+		});
+	
+		$("#file").on('change', function() {
+			var fileName = this.files[0] ? this.files[0].name : "파일첨부 내용";
+			$(".upload-name").text(fileName);
+		});
+	}
+	
+	setupFileInputHandlers();
 });
 
 

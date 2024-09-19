@@ -125,7 +125,7 @@ input.form-control:read-only.datepicker:focus,
 .ui-datepicker .ui-datepicker-header { position: relative; margin-bottom:37px; background: var(--white); }
 .ui-datepicker .ui-datepicker-header .ui-datepicker-title .ui-datepicker-year,
 .ui-datepicker .ui-datepicker-header .ui-datepicker-title .ui-datepicker-month,
-.ui-datepicker .ui-datepicker-header .ui-datepicker-title { display:flex; justify-content: center; text-align: center; padding: 0px; font-size: var(--font18); font-weight: 700; color:var(--title); }
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title { display:flex; justify-content: center; align-items: center; text-align: center; padding: 0px; font-size: var(--font18); font-weight: 700; color:var(--title); background: var(--white); }
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next { cursor: pointer; }
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next { float: right; }

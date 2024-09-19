@@ -35,8 +35,7 @@ SELECT #셀렉트
 ---------------------------------------------*/
 .select-box > .se-select select::-ms-expand { display: none; }
 .select-box > .se-select { position: relative;  display: inline-block; }
-.select-box > .se-select select { line-height: initial; -webkit-appearance: none; -moz-appearance: none; -o-appearance:none; appearance: none;  border: none; border-radius: 0; background-color: none; outline: none; }
-.select-box > .se-select select::-ms-expand { display: none; }
+.select-box > .se-select select { line-height: initial;  -webkit-appearance: none; -moz-appearance: none; -o-appearance:none; appearance: none;  border: none; border-radius: 0; background-color: none; outline: none; }
 .select-box > .se-select select::-ms-value { background-color: transparent; color: var(--normal); }
 
 /*---------------------------------------------

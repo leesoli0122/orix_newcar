@@ -282,9 +282,14 @@ $(document).ready(function() {
 
 		$.datepicker._gotoToday = function(id) {
 
-		old_goToToday.call(this,id);
+			old_goToToday.call(this,id);
+			
+			var target = $(id); // input 포커스 설정
+			target.focus();
 
-		this._selectDate(id);
+			this._selectDate(id);
+
+			target.blur();
 
 		};
     }

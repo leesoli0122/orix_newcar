@@ -7,6 +7,11 @@ $(document).ready(function() {
 		Custom Select Functionn
 	---------------------------------------------*/
 	function customSelect(element) {
+		// Check iOS
+		if (isIOS()) {
+			return;
+		}
+
 		var fnName = '[data-stove="select"]',
 			$this = $(element).closest(fnName),
 			$select = $this.find('select'),
@@ -194,13 +199,28 @@ $(document).ready(function() {
 	}
 
 	/*---------------------------------------------
+		Check if the device is iOS
+	---------------------------------------------*/
+	function isIOS() {
+		return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+	}
+
+	/*---------------------------------------------
 		Custom Select  Event Binding
 	---------------------------------------------*/
 	$(document).on('mousedown', '.se-select[data-stove="select"] select', function(e) {
+		if (isIOS()) {
+			// iOS 기본 동작
+			return;
+		}
 		e.preventDefault();
 	});
 
 	$(document).on('keydown', '.se-select[data-stove="select"] select', function(e) {
+		if (isIOS()) {
+			// iOS 기본 동작
+			return;
+		}
 		if (e.keyCode === 13 || e.keyCode === 32) { // Enter or Space
 			e.preventDefault();
 			customSelect($(this));
@@ -208,6 +228,10 @@ $(document).ready(function() {
 	});
 
 	$(document).on('click', '.se-select[data-stove="select"] select', function(e) {
+		if (isIOS()) {
+			// iOS 기본 동작
+			return;
+		}
 		e.preventDefault();
 		customSelect($(this));
 	});

@@ -33,6 +33,7 @@ SELECT #셀렉트
 /*---------------------------------------------
 	Select Reset
 ---------------------------------------------*/
+.select-box > .se-select select::-ms-expand { display: none; }
 .select-box > .se-select { position: relative;  display: inline-block; }
 .select-box > .se-select select { line-height: initial; -webkit-appearance: none; -moz-appearance: none; -o-appearance:none; appearance: none;  border: none; border-radius: 0; background-color: none; outline: none; }
 .select-box > .se-select select::-ms-expand { display: none; }
@@ -195,7 +196,7 @@ INPUT  #인풋
 /*---------------------------------------------
 	Input Reset
 ---------------------------------------------*/
-input { display:block; width:100%; line-height:initial; box-sizing:border-box; border:none; border-radius: 0; background-color: none; -webkit-appearabce:none; -moz-appearance: none; appearance: none; white-space: nowrap; overflow:hidden; outline:none;  }
+input { display:block; width:100%; line-height:initial; box-sizing:border-box; border:none; border-radius: 0; background-color: none; -o-appearance:none; -webkit-appearance:none; -moz-appearance: none; appearance: none; white-space: nowrap; overflow:hidden; outline:none;  }
 /** Firefox Browser **/
 input[type=number],
 input[type=number] { -moz-appearance: textfield; }

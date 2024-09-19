@@ -416,7 +416,7 @@ $(document).ready(function() {
                 // 파일이 3개 미만일 때만 리스트에 추가
                 if ($addFileList.children('li').length < maxFiles) {
                     const $newListItem = $('<li>').text(file.name);
-                    const $deleteButton = $('<span>').text('삭제').addClass('delete-file'); // 삭제 버튼 추가
+                    const $deleteButton = $('<span>').addClass('delete-file').text('삭제'); // 삭제 버튼 추가
                     $newListItem.append($deleteButton);
                     $addFileList.append($newListItem);
                 }
@@ -426,10 +426,12 @@ $(document).ready(function() {
             $fileInput.val('');
         });
 
-        // 파일 삭제
-        $addFileList.on('click', '.delete-file', function() {
-            $(this).parent('li').remove(); // 부모 li 요소 삭제
-        });
+		// 삭제 버튼 클릭 이벤트 처리
+		$addFileList.on('click', '.delete-file', function() {
+			$(this).parent().remove();
+			// 파일 목록 업데이트
+			$uploadName.text(updatedFileNames.join(', '));
+		});
     }
 
     setupFileInputHandlers();

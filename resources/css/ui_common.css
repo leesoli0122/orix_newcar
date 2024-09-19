@@ -774,7 +774,7 @@ list #리스트
     파일첨부했을 때 list
 ---------------------------------------------*/
 .add-file li { display:inline-block; margin-top:20px; margin-right:20px; padding:11px 14px 12px; border:1px solid var(--border3); border-radius:4px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--title); background:var(--white); }
-.add-file li::before { content:""; display:inline-block; margin-right:8px; width:12px; height:12px; background:url(../images/ic_file_x.png)no-repeat 50%/12px auto; }
+.add-file li::before { content:""; display:inline-block; margin-right:8px; width:12px; height:12px; background:url(../images/ic_file_x.png)no-repeat 50%/12px auto; cursor: pointer;}
 
 /*---------------------------------------------
 	상환스케줄 list

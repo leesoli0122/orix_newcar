@@ -34,12 +34,6 @@ $(document).ready(function() {
 			uiCase = $this.attr('data-uicase'),
 			optionLength = $select.children('option').length;
 
-
-		// Form all reset prevention
-		$(element).closest('form').on('reset', function(e) {
-			e.preventDefault();
-		});
-
 		/* Reset */
 		if (statusDisabled == 'disabled' || statusReadonly == 'readonly') return;
 		$(fnName).find('.' + dimClass + ', .' + optionLayerClass).remove();
@@ -183,6 +177,7 @@ $(document).ready(function() {
 			$this.find('.' + optionClass).on('click', function(e) {
 				e.stopPropagation();
 				$select.val($(this).attr('rel'));
+				e.preventDefault(); //select 선택 시 기본 폼 리셋 x
 				close();
 			});
 		}
@@ -242,7 +237,7 @@ $(document).ready(function() {
 		customSelect($(this));
 	});
 
-	
+
 	/*********************************************************************
 		Datepicker #데이터피커
 	*********************************************************************/

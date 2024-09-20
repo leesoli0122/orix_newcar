@@ -95,7 +95,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="">달력-년도만</label>
+                        <label for="">달력-연도만</label>
                         <div class="select-box">
                             <div class="stove-dim"></div>
                             <div class="se-select ei-w160" data-stove="select">
@@ -300,11 +300,11 @@
                         <label for="">Datepicker</label>
                         <div class="form-row">
                             <div class="col-2">
-                                <input type="text" id="" title="기간" name="from" class="form-control datepicker" placeholder="0000.00.00" readonly ><!-- [D] : datepicker 클래스 : datepicker Custom-->
+                                <input type="text" id="" title="기간" name="from" class="form-control datepicker" placeholder="YYYY.MM.DD" readonly ><!-- [D] : datepicker 클래스 : datepicker Custom-->
                             </div>
                             <div class="input-hyphen">~</div>
                             <div class="col-2">
-                                <input type="text" id="" title="기간" name="to" class="form-control datepicker" placeholder="0000.00.00" readonly ><!-- [D] : datepicker 클래스 : datepicker Custom-->
+                                <input type="text" id="" title="기간" name="to" class="form-control datepicker" placeholder="YYYY.MM.DD" readonly ><!-- [D] : datepicker 클래스 : datepicker Custom-->
                             </div>
                             <button class="btn btn-input" name="btnSearch" type="button">조회</button>
                         </div>
@@ -312,12 +312,12 @@
 
                     <div class="form-group">
                         <label for="">Full Datepicker</label>
-                        <input type="text" id="" title="기간" name="date" class="form-control datepicker" placeholder="0000.00.00" readonly ><!-- [D] : datepicker 클래스 : datepicker Custom-->
+                        <input type="text" id="" title="기간" name="date" class="form-control datepicker" placeholder="YYYY.MM.DD" readonly ><!-- [D] : datepicker 클래스 : datepicker Custom-->
                     </div>
 
                     <div class="form-group">
-                        <label for="">Full Datepicker - 년도만 (팝업)</label>
-                        <input type="text" id="" title="기간" name="date" class="form-control yearpicker" placeholder="0000.00.00" onclick="openPopup('PopUp01')" readonly><!-- [D] : datepicker 클래스 : datepicker Custom-->
+                        <label for="">Full Datepicker - 연도만 (팝업)</label>
+                        <input type="text" id="" title="연도선택" name="date" class="form-control yearpicker" placeholder="YYYY" onclick="openPopup('yearDatePopup')" readonly><!-- [D] : yearpicker 클래스 : 팝업 형태-->
                     </div>
 
                     <h4>Input Button</h4>
@@ -445,8 +445,7 @@
         </div>
     </div>
 
-
-    <div id="PopUp01" class="layerpopup laypop" tabindex="0">
+    <div id="yearDatePopup" class="layerpopup laypop" tabindex="0">
         <div class="content-wrap">
             <div class="pop-header">
                 <h3 class="pop-title">Title</h3>
@@ -456,9 +455,9 @@
                 
                 <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
             </div>
-            <!-- <div class="btn-wrap popup">
+            <div class="btn-wrap popup">
                 <button type="button" name="button" class="btn btn-bottom confirm">확인</button>
-            </div> -->
+            </div>
         </div>
     </div>
 

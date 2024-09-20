@@ -142,7 +142,7 @@
                                                 </dd>
                                                 <dd class="dp-b-b">
                                                     <div class="form-group">
-                                                        <input type="text" id="date03" title="datepicker" class="form-control datepicker"  placeholder="2024" readonly><!-- [D] : datepicker 클래스 : datepicker Custom-->
+                                                        <input type="text" id="" title="연도선택" name="date" class="form-control yearpicker" placeholder="YYYY" onclick="openPopup('yearDatePopup')" readonly><!-- [D] : yearpicker 클래스 : 팝업 형태-->
                                                     </div>
                                                 </dd>
                                             </dl>
@@ -304,6 +304,23 @@
         </div>
         <!-- //e:footer -->
     </div>
+
+    <div id="yearDatePopup" class="layerpopup laypop" tabindex="0">
+        <div class="content-wrap">
+            <div class="pop-header">
+                <h3 class="pop-title">Title</h3>
+                <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+            </div>
+            <div class="ly-con-wrap">
+                
+                <p class="tit">본문 타이틀 내용이 들어갑니다.</p>
+            </div>
+            <div class="btn-wrap popup">
+                <button type="button" name="button" class="btn btn-bottom confirm">확인</button>
+            </div>
+        </div>
+    </div>
+    
 </body>
 
 </html>

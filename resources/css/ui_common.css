@@ -104,8 +104,10 @@ Datepicker #데이터피커
 /*---------------------------------------------
 	Datepicker Custom Default
 ---------------------------------------------*/
-input.form-control.datepicker { background:url(../../resources/images/ic_datepicker.png)no-repeat right 16px center/20px; }
+[class*='picker'].form-control { background:url(../../resources/images/ic_datepicker.png)no-repeat right 16px center/20px; }
+
 .ui-datepicker { display: none; top: 0; left: 0; margin-top: 10px; margin-left: 10px; margin-right: 0px; padding: 20px; border-radius: 16px; border: 1px solid var(--border1); background: var(--white); box-shadow: 10px 10px 40px rgba(0,0,0,0.1); } 
+.ui-datepicker table { width:100%; margin:0 0 16px; }
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active { background-color: transparent; font-size:var(--font16); font-weight: 400; text-align: center; }
 .ui-state-hover,
 .ui-widget-content .ui-state-hover,

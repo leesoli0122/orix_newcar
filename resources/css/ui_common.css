@@ -380,7 +380,7 @@ Button #버튼
 ---------------------------------------------*/
 .btn-wrap button.btn:first-child { margin-left:0; }/*공통*/
 .btn-wrap button.btn { margin-left:16px; }/*공통*/
-.btn-wrap.cont { margin:40px 0; width:100%; text-align:center; }/* 컨테츠 버튼 */
+.btn-wrap.cont { margin:20px 0 40px; width:100%; text-align:center; }/* 컨테츠 버튼 */
 .btn-wrap.bottom { margin:20px 0 40px; width:100%; text-align:center; }/* 컨테츠 하단 버튼 */
 .btn-wrap.popup { margin:28px 0; width:100%; text-align:center; }/* 팝업 버튼 */
 .btn-wrap.alert { margin:40px 0 30px; width:100%; text-align:center; }/* 알럿 버튼 */
@@ -875,12 +875,16 @@ table #테이블
 /* 다운로드 */
 .download-wrap { position: relative; margin-top:30px; padding: 20px; width: 100%; border-radius: 10px; background: #F8F9FC; font-size:var(--font14); }
 .download-wrap a { display:block; padding-left:28px; margin-bottom:15px; font-weight:var(--w-bold); color:var(--background3); text-decoration:underline; }
+.download-wrap a:last-child { margin-bottom:0; }
 .download-wrap a::before { content: ''; position: absolute; left:0; top: 50%; transform: translateY(-50%); display: inline-block; width:20px; height:20px; background: url(../images/ntc_attach.png) no-repeat 50%/20px auto; }
 
 .download-wrap.no a { color:var(--inactive); }
 
+/* table안에 download-wrap이 들어갈 경우 */
+dd.download-wrap { padding:0; background:transparent; }
+
 /* 이전/다음 */
-.nte-wrap .movepage { padding-top:20px; }
+.nte-wrap .movepage { margin:40px 0 60px; }
 .nte-wrap .movepage > ul { display:flex; justify-content:space-between; gap:24px; }
 .nte-wrap .movepage > ul > li { padding:24px; width:100%; border:1px solid var(--border1); border-radius:12px; font-size:var(--font16); color:var(--subtitle); }
 .nte-wrap .movepage > ul > li:first-child { text-align:right; }
@@ -917,3 +921,93 @@ table #테이블
 .filter.form-group.check ul.check-box { flex-direction:column; gap:28px; padding:24px; border:1px solid var(--border3); background:var(--white); }
 /* consultation */
 .consultation { margin-left:221px; }
+
+/*********************************************************************
+#견적내기
+*********************************************************************/
+.grid-list-wrap { max-height:534px; height:100%; }
+/*---------------------------------------------
+	grid-list-header 리스트 헤더
+---------------------------------------------*/
+.grid-list-header { padding:20px 0; border-radius:12px 12px 0 0; font-size:var(--font22); font-weight:var(--w-bold); color:var(--white); text-align:center; background:var(--secondary); }
+
+/*---------------------------------------------
+	grid-list-body 리스트 바디
+	style2 = 팝업창이 열리지 않는
+---------------------------------------------*/
+.grid-list-body { max-height:402px; height:100%; border-left:1px solid var(--border1); border-right:1px solid var(--border1); border-bottom:1px solid var(--border1); font-size:0; }
+.grid-list-body > ul > li { display:flex; align-items:center; border-bottom:1px solid var(--border3); }
+.grid-list-body li:last-child { border-bottom:none; }
+.grid-list-body li:hover { background:var(--background4); }
+.grid-list-body li:hover .pop { font-weight:var(--w-bold); color:var(--secondary); }
+.grid-list-body li .tit { padding:24px 0; max-width:120px; width:100%; font-size:var(--font16); font-weight:var(--w-bold); color:var(--normal); text-align:center; }
+.grid-list-body li .tit::after { content:""; position:absolute; top:50%; transform:translateY(-50%); right:0; display:inline-block; margin-left:37px; width:1px; height:14px; background:var(--border1); }
+.grid-list-body li .pop { padding:24px 20px 24px 24px; width:100%; font-size:var(--font16); font-weight:var(--w-regular); color:var(--subtitle); }
+.grid-list-body li .pop.form-group label { font-size:var(--font16); }
+
+.grid-list-body.style2 li .pop { padding:20px 24px; }
+.grid-list-body.style2 li:hover .pop { font-weight:var(--w-regular); }
+
+/* arr가 생기는 선택 */
+.grid-list-body li .pop.arr { padding:24px 54px 24px 24px; }
+.grid-list-body li .pop.arr::after { content:""; position:absolute; top:50%; transform:translateY(-50%); right:20px; display:inline-block; width:20px; height:20px; background:url(../images/ic_est_arr.png)no-repeat 50%/20px auto; cursor:pointer; }
+
+/* 옵션선택(scroll) */
+.grid-list-body.option ul { height:100%; overflow-y:auto; font-size:0; }
+
+/*---------------------------------------------
+	대리점 출고시
+---------------------------------------------*/
+.all-cost-area { margin-top:23px; padding:16px 20px; background-color:var(--background2); color:var(--inactive); }
+.all-cost-area .cost-group { display:flex; align-items:center; justify-content:space-between; line-height:21px; }
+.all-cost-area .cost-group + .cost-group { margin-top:12px; }
+.all-cost-area .cost-group .txt { font-size:var(--font-16); font-weight:var(--w-bold); color:var(--normal); }
+
+/*---------------------------------------------
+	그리드 안에 조회 결과가 없습니다.
+---------------------------------------------*/
+.grid-list-wrap .result-area.nodata { padding-top:136px; height:402px; border:none; border-radius:0; }
+.grid-wrap .grid-list-wrap .result-area.nodata::before { width:80px; height:80px; }
+.grid-wrap .grid-list-wrap .result-area.nodata .text-wrap h3 { font-size:var(--font18); font-weight:var(--w-regular); color:var(--normal); }
+
+/*---------------------------------------------
+	grid-list-footer 리스트 푸터
+	style2 = 출고선택(특판출고)
+	style2 .bill = 출고선택(대리점 출고)
+---------------------------------------------*/
+.grid-list-footer { display:flex; align-items:center; justify-content:space-between; padding:21px 24px; border:1px solid var(--border1); border-top:none; background:var(--background2); }
+.grid-list-footer .tit { font-size:var(--font16); font-weight:var(--w-bold); color:var(--inactive); }
+.grid-list-footer .txt { font-size:var(--font22); font-weight:var(--w-bold); color:var(--normal); }
+
+.grid-list-footer.style2 { border:none; background:var(--subtitle); }
+.grid-list-footer.style2 .tit { margin-right:14px; }
+.grid-list-footer.style2 .tit,
+.grid-list-footer.style2 .txt { color:var(--white); }
+
+.grid-list-footer.style2 .bill { font-size:0; }
+.grid-list-footer.style2 .bill p { display:inline-block; }
+.grid-list-footer.style2 .bill p.num { padding:5px 12px; margin-right:8px; border-radius:13px; font-size:var(--font14); font-weight:var(--w-bold); color:var(--secondary); background:var(--white); }
+.grid-list-footer.style2 .bill p.num:last-child { margin-right:0; }
+
+/*********************************************************************
+#선택
+*********************************************************************/
+.choose-wrap .choose-group { font-size:0; }
+.choose-wrap .choose-group .choose { display:flex; align-items:center; flex-wrap:wrap; gap:12px; max-width:534px; width:100%; }
+.choose-wrap .choose-group .choose li { display:inline-block; gap:12px; padding:9px 16px 9px 36px; border:1px solid var(--border2); border-radius:18px; font-size:var(--font14); }
+.choose-wrap .choose-group .choose li::before { content:none; }
+
+/* 아이콘 있을 때 */
+.choose-wrap .choose-group .choose.image li::before { content:""; display:inline-block; position:absolute; top:50%; transform:translateY(-50%); left:16px; width:18px; height:18px; border:1px solid; }
+
+/* 클릭 했을 때 */
+.choose-wrap .choose-group .choose li.on { border:1px solid var(--secondary); font-weight:var(--w-bold ); }
+
+/* 아이콘이 없을 때 */
+/*********************************************************************
+#미디어쿼리
+*********************************************************************/
+@media screen and (max-width: 1200px) {
+	.grid-wrap { grid-template-columns: 1fr 1fr; }
+	.grid-list-wrap:last-child { display:grid; grid-column-start:1; grid-column-end:3; }
+}

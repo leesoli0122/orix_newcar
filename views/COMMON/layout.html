@@ -22,7 +22,13 @@
     <script type="text/javascript" src="../../resources/js/default.js"></script>
 </head>
 <body>
-    <div id="skipnavi"  data-include-path="../INCLUDE/inc_skipnavi.html"></div>
+    <div id="skipnavi">
+        <script>
+            $(document).ready(function(){
+                $("#skipnavi").load("./INCLUDE/inc_skipnavi.html");
+            });
+        </script>
+    </div>
     <div class="wrap">
         <!-- s:header -->
         <div id="headerWrap">

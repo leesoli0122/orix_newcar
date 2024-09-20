@@ -846,8 +846,13 @@ table #테이블
 /*---------------------------------------------
     테이블 : table-scroll
 ---------------------------------------------*/
-.table-type.table-scroll { overflow:auto; overflow-x:hidden; max-height:1200px; }
+.table-type.table-scroll { overflow:auto; overflow-x:hidden; max-height:700px; }
 .table-type.table-scroll thead { position:sticky; top:0; z-index:1; background:var(--background2); }
+.table-type.table-scroll table {  border-collapse: separate; border-spacing: 0;}
+.table-type.table-scroll thead th { border:initial; border-right:1px solid var(--border3); }
+.table-type.table-scroll thead th:last-child {  border-right:0; }
+.table-type.table-scroll thead tr:first-child th { border-top:1px solid var(--border3); }
+.table-type.table-scroll thead tr:first-child th[colspan]:last-child { border-bottom:1px solid var(--border3); }
 
 /*********************************************************************
 #공지사항

@@ -91,7 +91,7 @@
                             <dl>
                                 <dt>성명</dt>
                                 <dd class="form-group">
-                                    <input id="" type="text" name="" title="성명" class="form-control" placeholder="성명">
+                                    <input id="" title="성명" type="text" name="" class="form-control" placeholder="성명">
                                 </dd>
                             </dl>
                             <dl>
@@ -99,11 +99,11 @@
                                 <dd class="form-group">
                                     <div class="form-row">
                                         <div class="col-2">
-                                            <input id="" type="tel" title="주민등록번호 앞자리" class="form-control" maxlength="6" name="" value="" placeholder="">
+                                            <input id="" title="주민등록번호 앞자리" type="tel" class="form-control" maxlength="6" name="" value="" placeholder="" >
                                         </div>
                                         <div class="input-hyphen">-</div>
                                         <div class="col-2">
-                                            <input id="" type="tel" title="주민등록번호 뒷자리" class="form-control jumin" maxlength="1" placeholder="●" name="" value="">
+                                            <input id="" title="주민등록번호 뒷자리" type="tel" class="form-control jumin" maxlength="1" placeholder="●" name="" value="">
                                             <span class="jumintext">●●●●●●</span>
                                         </div>
                                     </div>
@@ -111,13 +111,13 @@
                             </dl>
                             <dl>
                                 <dt>휴대폰번호</dt>
-                                <dd class="form-group">
+                                <dd class="form-group style1">
                                     <div class="form-row">
                                         <div class="select-box">
                                             <div class="stove-dim"></div>
-                                            <div class="se-select ei-w160" data-stove="select">
+                                            <div class="se-select" data-stove="select">
                                                 <select class="" title="메뉴구분">
-                                                    <option value="" disabled="" selected="" hidden="">통신사 선택</option>
+                                                    <option value="" disabled="" selected="" hidden="">선택하세요</option><!-- [D] : default - 셀렉트의 placeholder 기능-->
                                                     <option value="0">option 00</option>
                                                     <option value="1">option 01</option>
                                                     <option value="2">option 02</option>
@@ -130,13 +130,12 @@
                                             </div>
                                         </div>
                                         <div class="col-1">
-                                            <input id="" type="tel" title="휴대폰번호입력" name="" class="form-control" maxlength="11" placeholder="휴대폰번호 입력">
+                                            <input id="" title="" type="tel" name="" class="form-control" maxlength="11" placeholder="휴대폰번호 입력">
                                         </div>
                                         <button class="btn btn-input" type="button">인증번호 요청</button>
                                     </div>
                                 </dd>
                             </dl>
-                            <!--S: 인증번호 요청 누른 후 보여짐  -->
                             <dl>
                                 <dt>인증번호</dt>
                                 <dd class="form-group correct time">
@@ -145,13 +144,11 @@
                                             <input id="" title="인증번호입력" type="text" class="form-control" name="" placeholder="숫자 6자리 입력">
                                             <span class="timeNum">3:00</span>
                                         </div>
-                                        <!-- 시간연장 버튼 1회 누른 후 active 클래스 삭제 -->
                                         <button class="btn btn-input active" type="button">시간연장</button>
                                     </div>
                                     <p class="info">시간연장은 1회만 할 수 있습니다.</p>
                                 </dd>
                             </dl>
-                            <!--E: 인증번호 요청 누른 후 보여짐  -->
                         </div>
                     </div>
                 </form>

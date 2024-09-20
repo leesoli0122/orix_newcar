@@ -16,6 +16,7 @@
 
     <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/ui_common.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/img.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="../../resources/js/jquery-ui-1.12.1.js"></script>
@@ -56,7 +57,142 @@
                 <div class="btn-wrap no-icon">
                     <button class="btn btn-icon">견적 기본 설정</button>
                 </div>
-                <div class="grid-wrap"></div>
+                <form>
+                    <div class="grid-wrap">
+                        <div class="grid-list-wrap">
+                            <p class="grid-list-header">차량 선택</p>
+                            <div class="grid-list-body">
+                                <ul>
+                                    <li>
+                                        <span class="tit">브랜드</span>
+                                        <!-- arr 클래스 있을 때만 팝업 열림-->
+                                        <div class="pop arr" onclick="openPopup('PopUp01')">선택해 주세요</div>
+                                    </li>
+                                    <li>
+                                        <span class="tit">모델</span>
+                                        <div class="pop">브랜드를 선택해 주세요</div>
+                                    </li>
+                                    <li>
+                                        <span class="tit">세부차종</span>
+                                        <div class="pop">브랜드를 선택해 주세요</div>
+                                    </li>
+                                    <li>
+                                        <span class="tit">트림</span>
+                                        <div class="pop">브랜드를 선택해 주세요</div>
+                                    </li>
+                                    <li>
+                                        <span class="tit">외장 색상</span>
+                                        <div class="pop">브랜드를 선택해 주세요</div>
+                                    </li>
+                                    <li>
+                                        <span class="tit">내장 색상</span>
+                                        <div class="pop">브랜드를 선택해 주세요</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="grid-list-footer">
+                                <p class="tit">기본 가격</p>
+                                <span class="txt"><span>0</span>원</span>
+                            </div>
+                        </div>
+                        <div class="grid-list-wrap">
+                            <p class="grid-list-header">옵션 선택</p>
+                            <div class="grid-list-body option">
+                                <!-- 화면 진입 시 최초 Default 상태 -->
+                                <div class="result-area nodata">
+                                    <div class="text-wrap">
+                                        <h3 class="result-no">차량을 먼저 선택해주세요.</h3>
+                                    </div>
+                                </div>
+                                <!--S: 차량정보 선택 완료 시 , 차량에 해당하는 옵션 정보, 금액 노출
+                                <ul class="">
+                                    <li>
+                                    </li>
+                                </ul> -->
+                                <!--E: 차량정보 선택 완료 시 , 차량에 해당하는 옵션 정보, 금액 노출 -->
+                            </div>
+                            <div class="grid-list-footer">
+                                <p class="tit">총 옵션 가격</p>
+                                <span class="txt"><span>0</span>개 / <span>0</span>원</span>
+                            </div>
+                        </div>
+                        <div class="grid-list-wrap">
+                            <p class="grid-list-header">출고 선택</p>
+                            <ul class="grid-list-body style2">
+                                <li>
+                                    <span class="tit">출고구분</span>
+                                    <div class="pop form-group radio">
+                                        <ul class="radio-box">
+                                            <li>
+                                                <input type="radio" id="radio-1" name="radio" checked>
+                                                <label for="radio-1" class="radio-button"><span>특판출고</span></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="radio-2" name="radio">
+                                                <label for="radio-2" class="radio-button"><span>대리점출고</span></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!--S: 대리점 출고시 노출 -->
+                                <li>
+                                    <span class="tit">할인액</span>
+                                    <div class="pop form-group">
+                                        <div class="col-1">
+                                            <input id="" type="amount" class="form-control amount-num" placeholder="0"
+                                                inputmode="numeric"><!-- [D] inputmode="numeric" : 세자리 수마다 콤마 적용  -->
+                                            <span class="amount-txt">원</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--E: 대리점 출고시 노출  -->
+                                <li>
+                                    <span class="tit">제조사 탁송료</span>
+                                    <div class="pop form-group">
+                                        <div class="col-1">
+                                            <input id="" type="amount" class="form-control amount-num" placeholder="0"
+                                                inputmode="numeric"><!-- [D] inputmode="numeric" : 세자리 수마다 콤마 적용  -->
+                                            <span class="amount-txt">원</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!--S: 대리점 출고시 노출  -->
+                            <ul class="all-cost-area">
+                                <li class="cost-group">
+                                    <span class="tit">손수차량가격</span>
+                                    <span class="txt"><span>00,000,000</span> 원</span>
+                                </li>
+                                <li class="cost-group">
+                                    <span class="tit">면세가격</span>
+                                    <span class="txt"><span>00,000,000</span> 원</span>
+                                </li>
+                                <li class="cost-group">
+                                    <span class="tit">할인금액</span>
+                                    <span class="txt"><span>0</span> 원</span>
+                                </li>
+                                <li class="cost-group">
+                                    <span class="tit">제조사탁송료</span>
+                                    <span class="txt"><span>0</span> 원</span>
+                                </li>
+                            </ul>
+                            <div class="grid-list-footer style2">
+                                <div class="bill">
+                                    <p class="tit">출고가격(계산서)</p>
+                                    <p class="num">+1</p>
+                                    <p class="num">-1</p>
+                                </div>
+                                <span class="txt"><span>00,000,000</span> 원</span>
+                            </div>
+                            <!--E: 대리점 출고시 노출  -->
+                            <!--S: 특판출고시 노출
+                            <div class="grid-list-footer style2">
+                                <p class="tit">총 차량 가격</p>
+                                <span class="txt"><span>0</span>원</span>
+                            </div> -->
+                        </div>
+                    </div>
+                </form>
             </div>
             <!-- //e:contents -->
         </div>
@@ -70,6 +206,101 @@
             </script>
         </div>
         <!-- //e:footer -->
+    </div>
+    <!-- 브랜드/모델/세부차종/트림 -->
+    <div id="PopUp01" class="layerpopup laypop on" tabindex="0" style="display:block;">
+        <div class="content-wrap">
+            <div class="pop-header">
+                <h3 class="pop-title">차량선택</h3>
+                <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+            </div>
+            <div class="ly-con-wrap ly-scroll-con">
+                <div class="choose-wrap">
+                    <div class="sub-text-wrap style2">
+                        <h4>브랜드 선택</h4>
+                    </div>
+                    <div class="choose-group brand">
+                        <ul class="choose image">
+                            <li class="on hyu"><button type="button">현대</button></li>
+                            <li class="gen"><button type="button">제네시스</button></li>
+                            <li class="kia"><button type="button">기아</button></li>
+                            <li class="che"><button type="button">쉐보레</button></li>
+                            <li class="ren"><button type="button">르노코리아</button></li>
+                            <li class="gmc"><button type="button">GMC</button></li>
+                            <li class="kgm"><button type="button">KGM</button></li>
+                            <li class="dea"><button type="button">대창모터스</button></li>
+                            <li class="toy"><button type="button">토요타</button></li>
+                            <li class="lex"><button type="button">렉서스</button></li>
+                            <li class="hon"><button type="button">혼다</button></li>
+                            <li class="benz"><button type="button">벤츠</button></li>
+                            <li class="bmw"><button type="button">BMW</button></li>
+                            <li class="aud"><button type="button">아우디</button></li>
+                            <li class="vol"><button type="button">폭스바겐</button></li>
+                            <li class="min"><button type="button">미니</button></li>
+                            <li class="volv"><button type="button">볼보</button></li>
+                            <li class="pol"><button type="button">폴스타</button></li>
+                            <li class="por"><button type="button">포르쉐</button></li>
+                            <li class="fer"><button type="button">페라리</button></li>
+                            <li class="lam"><button type="button">람보르기니</button></li>
+                            <li class="mas"><button type="button">마세라티</button></li>
+                            <li class="mcl"><button type="button">멕라렌</button></li>
+                            <li class="ast"><button type="button">에스터마틴</button></li>
+                            <li class="peu"><button type="button">푸조</button></li>
+                            <li class="ds"><button type="button">DS</button></li>
+                            <li class="ben"><button type="button">벤틀리</button></li>
+                            <li class="rol"><button type="button">롤스로이스</button></li>
+                            <li class="ine"><button type="button">이네오스</button></li>
+                            <li class="cor"><button type="button">코릭세그</button></li>
+                            <li class="lin"><button type="button">링컨</button></li>
+                            <li class="jee"><button type="button">지프</button></li>
+                            <li class="cad"><button type="button">캐딜락</button></li>
+                            <li class="for"><button type="button">포드</button></li>
+                            <li class="tes"><button type="button">테슬라</button></li>
+                            <li class="riv"><button type="button">리비안</button></li>
+                            <li class="fis"><button type="button">피스커</button></li>
+                            <li class="byd"><button type="button">BYD</button></li>
+                            <li class="vin"><button type="button">빈페스트</button></li>
+                            <li class="luc"><button type="button">루시드</button></li>
+                        </ul>
+                    </div>
+                    <div class="sub-text-wrap style2">
+                        <h4>모델 선택</h4>
+                    </div>
+                    <div class="choose-group">
+                        <ul class="choose">
+                            <li><button type="button">i30</button></li>
+                            <li><button type="button">i40</button></li>
+                            <li class="on"><button type="button">그랜저</button></li>
+                            <li><button type="button">그레이스</button></li>
+                            <li><button type="button">넥쏘</button></li>
+                            <li><button type="button">맥스크루즈</button></li>
+                            <li><button type="button">베뉴</button></li>
+                            <li><button type="button">베라크루즈</button></li>
+                            <li><button type="button">베르나</button></li>
+                            <li><button type="button">벨로스터</button></li>
+                            <li><button type="button">스타렉스</button></li>
+                            <li><button type="button">싼타페</button></li>
+                            <li><button type="button">쏘나타</button></li>
+                            <li><button type="button">쏠라티</button></li>
+                            <li><button type="button">아반떼</button></li>
+                            <li><button type="button">아솔란</button></li>
+                            <li><button type="button">아이오닉</button></li>
+                            <li><button type="button">에쿠스</button></li>
+                            <li><button type="button">엑센트</button></li>
+                            <li><button type="button">제네시스</button></li>
+                            <li><button type="button">카운티</button></li>
+                            <li><button type="button">캐스퍼</button></li>
+                            <li><button type="button">코나</button></li>
+                            <li><button type="button">투싼</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-wrap popup">
+                <button type="button" name="button" class="btn btn-close" data-focus="btn-layer-close">취소</button>
+                <button type="button" name="button" class="btn btn-bottom" >확인</button>
+            </div>
+        </div>
     </div>
 </body>
 

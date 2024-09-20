@@ -28,10 +28,10 @@ header { position:fixed; top:0; left:0; z-index:10; width:100%; min-height:45px;
 form { height:100%; }
 html, body, div, ul, ol, dl, li, dt, dd, p, h1, h2, h3, h4, h5, h6, table, thead, tbody, tr, th, td, caption, address,
 canvas, details, figure, figcaption, footer, header, menu, nav, section, article, aside,
-form, fieldset, button, select, textarea, input, fieldset, legend, label, a, span, strong, em, address, dfn, small, i, b, ::before, ::after { font-family: 'NanumGothic', 'Apple SD Gothic Neo', 'Noto Sans', sans-serif; position:relative; margin:0; padding:0; border:0; list-style:none; word-break:break-all; word-wrap:inherit; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -ms-overflow-style:scrollbar; }
+form, fieldset, button, select, textarea, input, fieldset, legend, label, a, span, strong, em, address, dfn, small, i, b, ::before, ::after { font-family: 'NanumGothic', /*'Apple SD Gothic Neo',*/ 'Noto Sans', sans-serif; position:relative; margin:0; padding:0; border:0; list-style:none; word-break:break-all; word-wrap:inherit; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -ms-overflow-style:scrollbar; }
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section { display: block; }
 [tabindex="-1"]:focus { outline: 0 !important; }
-ul, ol, li, dl, dt, dd  { list-style:none; margin:0; padding:0; }
+ul, ol, li, dl, dt, dd  { list-style:none; margin:0; padding:0; box-sizing: border-box; }
 #contentWrap > .table-type { margin-top:28px; }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col { width:100%; }

@@ -992,10 +992,11 @@ dd.download-wrap { padding:0; background:transparent; }
 *********************************************************************/
 .choose-wrap .choose-group { font-size:0; }
 .choose-wrap .choose-group .choose { display:flex; align-items:center; flex-wrap:wrap; gap:12px; max-width:534px; width:100%; }
-.choose-wrap .choose-group .choose li { display:inline-block; gap:12px; padding:9px 16px 9px 36px; border:1px solid var(--border2); border-radius:18px; font-size:var(--font14); }
+.choose-wrap .choose-group .choose li { display:inline-block; gap:12px; padding:9px 16px; border:1px solid var(--border2); border-radius:18px; font-size:var(--font14); }
 .choose-wrap .choose-group .choose li::before { content:none; }
 
 /* 아이콘 있을 때 */
+.choose-wrap .choose-group .choose.image li { padding:9px 16px 9px 36px; }
 .choose-wrap .choose-group .choose.image li::before { content:""; display:inline-block; position:absolute; top:50%; transform:translateY(-50%); left:16px; width:18px; height:18px; border:1px solid; }
 
 /* 클릭 했을 때 */

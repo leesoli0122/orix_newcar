@@ -34,6 +34,12 @@ $(document).ready(function() {
 			uiCase = $this.attr('data-uicase'),
 			optionLength = $select.children('option').length;
 
+
+		// Form all reset prevention
+		$(element).closest('form').on('reset', function(e) {
+			e.preventDefault();
+		});
+
 		/* Reset */
 		if (statusDisabled == 'disabled' || statusReadonly == 'readonly') return;
 		$(fnName).find('.' + dimClass + ', .' + optionLayerClass).remove();
@@ -236,6 +242,7 @@ $(document).ready(function() {
 		customSelect($(this));
 	});
 
+	
 	/*********************************************************************
 		Datepicker #데이터피커
 	*********************************************************************/
@@ -253,11 +260,11 @@ $(document).ready(function() {
             prevText: "이전달",
             nextText: "다음달",
             currentText: "오늘",
-            monthNames: ["1월", "2월", "3월", "4월", "5월", "6월",
-            "7월", "8월", "9월", "10월", "11월", "12월"
+            monthNames: ["01", "02", "03", "04", "05", "06",
+            "07", "08", "09", "10", "11", "12"
             ],
-            monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월",
-            "7월", "8월", "9월", "10월", "11월", "12월"
+            monthNamesShort: ["01", "02", "03", "04", "05", "06",
+            "07", "08", "09", "10", "11", "12"
             ],
             dayNames: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
             dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
@@ -271,12 +278,13 @@ $(document).ready(function() {
             showButtonPanel: true,
             changeYear: true,
             changeMonth: true,
-            yearSuffix: "년",
+            // yearSuffix: "년",
+            monthSuffix: "월",
             minDate:null, //null
             yearRange:"c-5:c+5"//선택 범위
         });
         
-        // 위치 조절 함수
+        // 위치 조절
         function repositionDatepicker(input, inst){
             var inputOffset = $(input).offset(); // input의 위치값 가져오기
             var inputHeight = $(input).outerHeight();

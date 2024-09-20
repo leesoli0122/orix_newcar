@@ -511,7 +511,6 @@ popup #팝업
 /*팝업 버튼*/
 .layerpopup .btn-layer-close { position:absolute; /*top:0px;*/ right:0px; z-index:22; width:22px; height:22px; border:none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cpath fill='%23666' d='M11 8.82 19.37.45a1.54 1.54 0 1 1 2.18 2.18L13.18 11l8.37 8.37a1.54 1.54 0 1 1-2.18 2.18L11 13.18l-8.37 8.37a1.54 1.54 0 1 1-2.18-2.18L8.82 11 .45 2.63A1.54 1.54 0 0 1 2.63.45Z'/%3E%3C/svg%3E") no-repeat center; text-indent:-9999px; }
 .layerpopup.laypop .btn-wrap {position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); margin:28px 0; }
-.layerpopup .btn-wrap button { margin:0; }
 .layerpopup .btn-wrap .btn { padding:14px 60px; height:46px; font-size:var(--font16); font-weight:var(--w-bold); line-height:1rem; }
 
 .layerpopup .content-wrap { z-index:20; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); background:var(--white); }
@@ -994,7 +993,8 @@ dd.download-wrap { padding:0; background:transparent; }
 *********************************************************************/
 .choose-wrap .choose-group { font-size:0; }
 .choose-wrap .choose-group .choose { display:flex; align-items:center; flex-wrap:wrap; gap:12px; max-width:534px; width:100%; }
-.choose-wrap .choose-group .choose li { display:inline-block; gap:12px; padding:9px 16px; border:1px solid var(--border2); border-radius:18px; font-size:var(--font14); }
+.choose-wrap .choose-group .choose li { display:inline-block; gap:12px; padding:9px 16px; border:1px solid var(--border2); border-radius:18px; font-size:var(--font14); cursor:pointer; }
+.choose-wrap .choose-group .choose li button { background:transparent; cursor:pointer; }
 .choose-wrap .choose-group .choose li::before { content:none; }
 
 /* 아이콘 있을 때 */

@@ -246,7 +246,7 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Custom Datepicker Functionn
 	---------------------------------------------*/
-	function datepickerHandlers(){
+	function customDatepicker(){
         // 기본 설정
         $.datepicker.setDefaults({
             // showOn: "both",
@@ -313,7 +313,7 @@ $(document).ready(function() {
 		};
     }
     // Datepicker 핸들러 실행
-    datepickerHandlers();
+    customDatepicker();
 
 	/*********************************************************************
 		TOGGLE_ACCORDION #토글_아코디언 [QnA]

@@ -209,34 +209,37 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Custom Select  Event Binding
 	---------------------------------------------*/
-	$(document).on('mousedown', '.se-select[data-stove="select"] select', function(e) {
-		if (isIOS()) {
-			// iOS 기본 동작
-			return;
-		}
-		e.preventDefault();
-	});
+	function customEventBindingHandelrs() {
+		$(document).on('mousedown', '.se-select[data-stove="select"] select', function(e) {
+			if (isIOS()) {
+				// iOS 기본 동작
+				return;
+			}
+			e.preventDefault();
+		});
 
-	$(document).on('keydown', '.se-select[data-stove="select"] select', function(e) {
-		if (isIOS()) {
-			// iOS 기본 동작
-			return;
-		}
-		if (e.keyCode === 13 || e.keyCode === 32) { // Enter or Space
+		$(document).on('keydown', '.se-select[data-stove="select"] select', function(e) {
+			if (isIOS()) {
+				// iOS 기본 동작
+				return;
+			}
+			if (e.keyCode === 13 || e.keyCode === 32) { // Enter or Space
+				e.preventDefault();
+				customSelect($(this));
+			}
+		});
+
+		$(document).on('click', '.se-select[data-stove="select"] select', function(e) {
+			if (isIOS()) {
+				// iOS 기본 동작
+				return;
+			}
 			e.preventDefault();
 			customSelect($(this));
-		}
-	});
-
-	$(document).on('click', '.se-select[data-stove="select"] select', function(e) {
-		if (isIOS()) {
-			// iOS 기본 동작
-			return;
-		}
-		e.preventDefault();
-		customSelect($(this));
-	});
-
+		});
+	}
+	customEventBindingHandelrs();
+	
 	/*********************************************************************
 		Datepicker #데이터피커
 	*********************************************************************/
@@ -462,7 +465,7 @@ $(document).ready(function() {
 		scrollTop
 	---------------------------------------------*/
 
-	function handeScrollTop() {
+	function handleScrollTop() {
 
 		$(document).on('click', '.btn-top', function(e){
 			e.preventDefault();
@@ -473,6 +476,6 @@ $(document).ready(function() {
 
 
 	}
-	handeScrollTop();
+	handleScrollTop();
 
 });

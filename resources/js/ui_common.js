@@ -454,6 +454,25 @@ $(document).ready(function() {
 	handleButtonClick();
 	initButtonClickEvent();
 
+
+	/*********************************************************************
+		scrollTop Button
+	*********************************************************************/
+	/*---------------------------------------------
+		scrollTop
+	---------------------------------------------*/
+
+	function handeScrollTop() {
+
+		$(document).on('click', '.btn-top', function(e){
+			e.preventDefault();
+			$('body, html').animate({
+				scrollTop: 0
+			}, 450);
+		});
+
+
+	}
+	handeScrollTop();
+
 });
-
-

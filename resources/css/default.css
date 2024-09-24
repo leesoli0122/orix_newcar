@@ -52,10 +52,10 @@ ul, ol, li, dl, dt, dd  { list-style:none; margin:0; padding:0; box-sizing: bord
 .col-10 { max-width:initial; }
 
 :root {
-    --font14:0.88rem;
+    --font14:0.875rem;
     --font16:1rem;
-    --font18:1.13rem;
-    --font20:1.250rem;
+    --font18:1.125rem;
+    --font20:1.25rem;
     --font22:1.375rem;
     --font28:1.75rem;
 

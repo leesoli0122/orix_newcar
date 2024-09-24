@@ -220,6 +220,16 @@ function openPopup(id) {
       layerFunc($target);
       $target.removeClass('close').addClass('on').show().focus();
 
+      // swiper 추가
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+      });
+
       // close 버튼에 이벤트 추가
       $target.find('.btn-layer-close, .btn-close, .confirm').on('click', function () {
           closePopup(id);

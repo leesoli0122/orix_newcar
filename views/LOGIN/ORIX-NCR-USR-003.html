@@ -12,7 +12,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:type" content="website" />
 
-<title>슈퍼 관리자 신청 > 신청완료</title>
+<title>사용자신청 > 신청완료</title>
 
 <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
 <link href="../../resources/css/ui_common.css" rel="stylesheet" type="text/css" />
@@ -30,7 +30,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
     <div class="login-header">
         <img src="../../resources/images/login_logo.png" alt="오릭스캐피탈코리아 로고">
         <h2>
-            슈퍼 관리자 신청
+            사용자신청
             <span>오릭스캐피탈코리아 신차 영업 플랫폼 입니다.</span>
         </h2>
     </div>
@@ -46,11 +46,21 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
             </ul>
             <div class="result-area success">
                 <div class="text-wrap result">
-                    <h3>슈퍼 관리자 신청이 완료되었습니다.</h3>
+                    <h3>사용자신청이 완료되었습니다.</h3>
                     <ul>
                         <li>검토 후 입력하신 <span class="blue">승인여부</span> 문자가 발송 될 예정입니다.</li>
                     </ul>
                 </div>
+            </div>
+            <!--S: 사용자신청 실패했을 때
+            <div class="result-area fail">
+                <div class="text-wrap result">
+                    <h3>사용자신청에 <span class="red">실패</span>하였습니다.</h3>
+                    <ul>
+                        <li>입력하신 휴대폰 번호는 등록되지 않은 휴대폰번호 입니다.</li>
+                        <li><span class="red">등록된 휴대폰 번호로 다시 신청</span> 해주세요.</li>
+                    </ul>
+                </div> :E-->
             </div>
             <form>
                 <div class="sub-text-wrap style2">
@@ -65,23 +75,25 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
                             </dd>
                         </dl>
                         <dl>
-                            <dt>항목2</dt>
+                            <dt>성명</dt>
                             <dd>
-                                상세 설명이 들어갑니다.
+                                김오릭
                             </dd>
                         </dl>
                         <dl>
-                            <dt>항목3</dt>
+                            <dt>휴대폰번호</dt>
                             <dd>
-                                상세 설명이 들어갑니다.
+                                010-1234-5678
                             </dd>
                         </dl>
+                        <!--S: 사용자신청에 실패할 경우 숨김처리 -->
                         <dl>
-                            <dt>항목4</dt>
+                            <dt>소속</dt>
                             <dd>
-                                상세 설명이 들어갑니다.
+                                다인모빌스
                             </dd>
                         </dl>
+                        <!--E: 사용자신청에 실패할 경우 숨김처리 -->
                     </div>
                 </div>
             </form>

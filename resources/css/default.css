@@ -142,11 +142,11 @@ style4 = table 안에 들어갈 때
 ---------------------------------------------*/
 .sub-text-wrap { font-size:var(--font20); font-weight:var(--w-bold); text-align:left; }
 .sub-text-wrap.style1 { padding:10px 0 20px;  }
-.sub-text-wrap h4 { font-size:var(--font20); font-weight:var(--w-bold); text-align:left; }
+.sub-text-wrap h4 { font-size:var(--font20); font-weight:var(--w-bold); color:var(--title); text-align:left; }
 .sub-text-wrap.style2 { padding:20px 0; }
 .sub-text-wrap.style3 { padding:0 0 20px; }/*caption만 들어갈 경우*/
 
-.caption { padding-left:22px; margin-top:10px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--subtitle); }
+.caption { padding-left:22px; margin-top:10px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--normal); }
 .caption2 { position:absolute; top:-36px; right:0; display:inline-block; font-size:var(--font14); font-weight:var(--w-regular); color:var(--subtitle); }
 .caption3 { margin-bottom:14px; text-align:right; }/*테이블캡션(단위)*/
 

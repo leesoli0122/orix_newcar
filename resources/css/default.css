@@ -252,7 +252,7 @@ header #헤더
 /*********************************************************************
 sub-content
 *********************************************************************/
-.sub-content { padding:0 20px 80px; margin:0 auto; max-width:1400px; width:100%; min-height:calc(100vh - 235px); }
+.sub-content { padding:0 0 80px; margin:0 auto; max-width:1400px; width:100%; min-height:calc(100vh - 235px); }
 .sub-content > div { width:100%; }
 .subvisual-wrap{  padding:17px 0 50px; }
 
@@ -284,4 +284,8 @@ sub-content
     .footer-wrap .form-group.style2 { top:initial; bottom:0; }
     .footer-wrap .policy-link { gap:20px; }
     .footer-wrap .list-wrap .address li span + span { display:flex; flex-direction: column; margin: 10px 0; }
+}
+
+@media screen and (max-width:1200px) {
+	.sub-content { padding:0 20px 80px; }
 }

@@ -489,7 +489,7 @@ $(document).ready(function() {
 		$('.form-wrap.search .form-group').each(function(idx, obj) {
 			var formGroup = $(obj);
 	
-			// .col-10 안에 있는 .hasCancel 클래스를 가진 input 필드를 선택
+			// input 필드를 선택
 			formGroup.find('.col-10 .form-control.hasCancel').off('focus').on('focus', function() {
 				var inputElement = $(this);
 	
@@ -502,7 +502,7 @@ $(document).ready(function() {
 						var btnCancelContainer = inputElement.closest('.col-10'); // 부모
 						const btnCancel = $('<button type="button" class="btn btn-cancel"><span class="ir">입력취소</span></button>'); 
 	
-						// 입력값이 있으면
+						// 입력값이 있을 경우
 						if (inputValue !== '') {
 							if (btnCancelContainer.find('.btn-cancel').length === 0) {
 								

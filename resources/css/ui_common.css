@@ -156,6 +156,11 @@ input.form-control:read-only.datepicker:focus,
 .ui-datepicker-buttonpane .ui-datepicker-current { float:right; }
 .ui-datepicker-buttonpane button { cursor: pointer; color:var(--secondary); }
 
+/*---------------------------------------------
+	yeardatepicker popup Layout
+---------------------------------------------*/
+.layerpopup.laypop.yeardate .content-wrap { min-height:357px; }
+
 /*********************************************************************
 FORM #폼
 *********************************************************************/
@@ -1044,7 +1049,7 @@ dd.download-wrap { padding:0; background:transparent; }
 .choose-wrap .choose-group:last-child { padding-bottom:20px; border-bottom:none; }
 .choose-wrap .choose-group .choose { display:flex; align-items:center; flex-wrap:wrap; gap:12px; max-width:534px; width:100%; }
 .choose-wrap .choose-group .choose li { display:inline-block; gap:12px; padding:9px 16px; border:1px solid var(--border2); border-radius:18px; font-size:var(--font14); cursor:pointer; }
-.choose-wrap .choose-group .choose li button { background:transparent; cursor:pointer; }
+.choose-wrap .choose-group .choose li button { background:transparent; cursor:pointer; user-select: none}
 .choose-wrap .choose-group .choose li::before { content:none; }
 
 /* 아이콘 있을 때 */

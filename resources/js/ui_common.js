@@ -426,6 +426,34 @@ $(document).ready(function() {
     }
 
     setupFileInputHandlers();
+
+	/*********************************************************************
+		Select Popup [년도 선택 _ 팝업 형식]
+	*********************************************************************/
+	/*---------------------------------------------
+		Select Popup [년도 선택 _ 팝업 형식]
+	---------------------------------------------*/
+
+	function handleButtonClick() {
+		//초기화
+        $('.choose li').removeClass('on');
+
+        $('.choose button').each(function() {
+            $(this).attr('title', '');
+        });
+
+        $(this).parent().addClass('on');
+        $(this).attr('title', '선택됨');
+		
+        $(this).focus();
+    }
+
+    function initButtonClickEvent() {
+        $('.choose button').on('click', handleButtonClick);
+    }
+	handleButtonClick();
+	initButtonClickEvent();
+
 });
 
 

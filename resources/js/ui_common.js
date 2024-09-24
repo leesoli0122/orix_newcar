@@ -322,7 +322,6 @@ $(document).ready(function() {
 		Toggle_Accordion [QnA]
 	---------------------------------------------*/
     function toggleChkHandlers() {
-        // .toggleChk 요소에 대해 클릭 이벤트 핸들러 추가
         $('.toggleChk').on('click', function() {
             handleToggleClick($(this));
         });
@@ -333,11 +332,9 @@ $(document).ready(function() {
         var isOpen = $toggleElement.toggleClass('active').hasClass('active');
         $toggleCont.toggleClass('active');
 
-        // 버튼 상태에 따라 title 속성 설정
         $toggleElement.attr('title', isOpen ? '닫힘' : '열림');
     }
 
-    // 페이지 로드 후 토글 핸들러 실행
     toggleChkHandlers();
 
 	

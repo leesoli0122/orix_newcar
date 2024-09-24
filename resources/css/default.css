@@ -120,7 +120,7 @@ table { border-collapse:collapse; border-spacing:0; width:100%; }
 
 /** UI **/
 [class*='btn'] { display:inline-block; vertical-align:middle; }
-[class*='btn']:focus { border:2px solid var(--normal); }
+/* [class*='btn']:focus { border:1px solid var(--normal); }/ */
 
 /*********************************************************************
 title

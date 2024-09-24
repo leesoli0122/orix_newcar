@@ -269,10 +269,10 @@ sub-content
 /* footer */
 .footer-wrap { padding:30px 0 50px; color:var(--white); background-color:#3F3F3F; }
 .footer-wrap .footer { margin:0 auto; }
-.footer-wrap > div { display:block; margin:0 auto 0; width:90%; max-width:1400px; /*min-width:1200px;*/ }
-.footer-wrap .policy-link { display:block; font-size:var(--font16); font-weight:var(--w-bold); text-align:left; }
+.footer-wrap > div {  margin:0 auto 0; width:90%; max-width:1400px; /*min-width:1200px;*/ }
+.footer-wrap .policy-link { display:flex; gap:40px; font-size:var(--font16); font-weight:var(--w-bold); text-align:left; }
 .footer-wrap .btn-wrap.policy-link .btn.btn-text { padding:0; height:auto; font-weight:var(--w-bold); color:var(--white); }
-.footer-wrap .btn-wrap.policy-link .btn.btn-text + .btn.btn-text { margin-left:40px; }
+/* .footer-wrap .btn-wrap.policy-link .btn.btn-text + .btn.btn-text { margin-left:40px; } */
 .footer-wrap .list-wrap .address { margin-top:23px; font-size:var(--font14); font-weight:var(--w-regular); }
 .footer-wrap .list-wrap .address li + li { margin-top:7px; }
 .footer-wrap .list-wrap .address li span + span { margin-left:20px; }

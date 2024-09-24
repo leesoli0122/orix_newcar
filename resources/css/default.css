@@ -199,7 +199,7 @@ p + .bul-dot,
 login #로그인
 *********************************************************************/
 .wrap.login { padding-top:50px; }
-.wrap.login .sub-content { padding:50px 20px 80px; }
+.wrap.login .sub-content { padding:50px 20px 80px; min-height:calc( 100vh - 541px); }
 .wrap.login .login-header { padding-bottom:50px; border-bottom:1px solid var(--border1); text-align:center; }
 .wrap.login .login-header img { width:234px; margin-bottom:30px; }
 .wrap.login .login-header h2 { font-size:var(--font28); font-weight:var(--w-bold); color:var(--title); }
@@ -252,7 +252,7 @@ header #헤더
 /*********************************************************************
 sub-content
 *********************************************************************/
-.sub-content { padding:0 20px 80px; margin:0 auto; max-width:1400px; width:100%; }
+.sub-content { padding:0 20px 80px; margin:0 auto; max-width:1400px; width:100%; min-height:calc(100vh - 235px); }
 .sub-content > div { width:100%; }
 .subvisual-wrap{  padding:17px 0 50px; }
 
@@ -278,3 +278,10 @@ sub-content
 .footer-wrap .list-wrap .address li span + span { margin-left:20px; }
 .footer-wrap .list-wrap .Copyright { margin-top:29px; font-weight:400; }
 .footer-wrap .form-group.style2 {  position:absolute; top:0; right:0; }
+
+@media screen and (max-width:1230px) {
+	/* footer */
+    .footer-wrap .form-group.style2 { top:initial; bottom:0; }
+    .footer-wrap .policy-link { gap:20px; }
+    .footer-wrap .list-wrap .address li span + span { display:flex; flex-direction: column; margin: 10px 0; }
+} 

@@ -434,26 +434,25 @@ $(document).ready(function() {
 		Select Popup [년도 선택 _ 팝업 형식]
 	---------------------------------------------*/
 
-	function handleButtonClick() {
-		//초기화
-        $('.choose li').removeClass('on');
-
-        $('.choose button').each(function() {
-            $(this).attr('title', '');
-        });
-
-        $(this).parent().addClass('on');
-        $(this).attr('title', '선택됨');
+	function handleListClick(e) {
+		const li = e.currentTarget;
+		const button = $(li).find('button').get(0); // li 안의 첫 번째 button
 		
-        $(this).focus();
-    }
-
-    function initButtonClickEvent() {
-        $('.choose button').on('click', handleButtonClick);
-    }
-	handleButtonClick();
-	initButtonClickEvent();
-
+		// 초기화
+		$('.choose li').removeClass('on');
+		$('.choose button').attr('title', '');
+	
+		$(li).addClass('on');
+		$(button).attr('title', '선택됨');
+	
+		button.focus();
+	}
+	
+	function initListClickEvent() {
+		$('.choose li').on('click', handleListClick);
+	}
+	
+	initListClickEvent();
 
 	/*********************************************************************
 		scrollTop Button

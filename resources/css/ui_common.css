@@ -227,6 +227,8 @@ textarea:valid,
 input.form-control:valid { color:var(--normal); }
 input.form-control:disabled { background: var(--background2); color:var(--inactive); }
 input.form-control:read-only { border:1px solid var(--border2); }
+/*textarea error - default [현재는 form-group에 error 클래스를 추가하여 전체 스타일 적용상태]*/
+.form-group.error textarea { border:1px solid var(--error); }
 
 /*********************************************************************
 INPUT_ ETC
@@ -676,7 +678,7 @@ tab #탭
 .result-area .result ul li { font-weight:var(--w-regular); color:var(--normal); }
 .result-area .result ul li + li { margin-top:5px; }
 /* 조회 결과가 없습니다 */
-.result-area.nodata { text-align:center; border:1px solid var(--border1); background:var(--white); }
+.result-area.nodata { margin-top:20px; text-align:center; border:1px solid var(--border1); background:var(--white); }
 .result-area.nodata::before { position:initial; transform: unset; margin-bottom:32px; width:80px; height:80px; background:url(../images/nodata.png)no-repeat 50%/80px auto; }
 /* 완료 */
 .result-area.success::before { background:url(../images/success.png)no-repeat 50%/64px auto; }

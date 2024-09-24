@@ -12,7 +12,7 @@
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:type" content="website" />
 
-    <title>고객센터 > 자료실 > 자료실 등록하기</title>
+    <title>고객센터 > 공지사항 > 공지사항 수정하기</title>
 
     <link href="../../resources/css/default.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/ui_common.css" rel="stylesheet" type="text/css" />
@@ -43,11 +43,11 @@
                     <ul>
                         <li class="home"><a href="javascript:void(0);">홈</a></li>
                         <li><a href="javascript:void(0);">고객센터</a></li>
-                        <li><a href="javascript:void(0);">자료실</a></li>
+                        <li><a href="javascript:void(0);">공지사항</a></li>
                     </ul>
                 </div>
                 <div class="text-wrap">
-                    <h2>자료실</h2>
+                    <h2>공지사항</h2>
                 </div>
             </div>
             <!-- //e:subvisual-wrap -->
@@ -61,19 +61,22 @@
                                 <dd class="form-group style3">
                                     <div class="col-10">
                                         <input id="" title="제목" type="text" name=""  maxlength="50"  class="form-control" placeholder="제목 입력">
-                                        <!--S : 입력하지 않은 경우 form-group에 error 클래스 추가 -->
-                                        <p class="info">제목을 입력해주세요</p>
-                                        <!--E : 입력하지 않은 경우 form-group에 error 클래스 추가 -->
                                     </div>
                                 </dd>
                             </dl>
                             <dl>
                                 <dt class="essential">내용</dt>
                                 <dd class="form-group style3">
-                                    <textarea type="text" title="내용" id="ipt02" class="inp" name="" value="" placeholder="내용 입력" maxlength="" required=""></textarea>
-                                    <!--S : 입력하지 않은 경우 form-group에 error 클래스 추가 -->
-                                    <p class="info">내용을 입력해주세요</p>
-                                    <!--E : 입력하지 않은 경우 form-group에 error 클래스 추가 -->
+                                    <textarea type="text" title="내용" id="ipt02" class="inp" name="" value="" placeholder="본문 내용이 들어갑니다" maxlength="" required=""></textarea>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>기존파일</dt>
+                                <dd class="download-wrap">
+                                    <a href="javascript:void(0);" download="">첨부파일 한글명.jpeg</a>
+                                    <a href="javascript:void(0);" download="">첨부파일 첨부파일 첨부파일 첨부파일.pdf</a>
+                                    <a href="javascript:void(0);" download="">첨부파일 한글명.jpeg</a>
+                                    <p class="caption">기존파일명을 클릭하면, 해당하는 파일이 다운로드 됩니다.</p>
                                 </dd>
                             </dl>
                             <dl>
@@ -85,9 +88,7 @@
                                         <button class="btn btn-input active" type="button">찾아보기</button>
                                     </div>
                                     <p class="caption">50MB 이하의 xlsx, pdf, hwp, doc, pptx 파일 3개까지 업로드 가능합니다.</p>
-                                    <!--S : 첨부하지 않은 경우 form-group에 error 클래스 추가 -->
-                                    <p class="info">파일을 첨부해주세요.</p>
-                                    <!--E : 첨부하지 않은 경우 form-group에 error 클래스 추가 -->
+                                    <p class="caption">파일을 첨부하면, <span class="red">기존의 첨부파일은 모두 삭제</span> 됩니다.</p>
                                     <ul class="add-file"><!-- [D] : 파일 리스트 - 스크립트 적용되어있음 -->
                                     </ul>
                                 </dd>
@@ -97,7 +98,7 @@
                 </form>
                 <div class="btn-wrap cont bottom">
                     <button type="button" name="button" class="btn btn-cont">목록</button>
-                    <button type="button" name="button" class="btn btn-primary">등록하기</button>
+                    <button type="button" name="button" class="btn btn-primary">수정하기</button>
                 </div>
             </div>
             <!-- //e:contents -->

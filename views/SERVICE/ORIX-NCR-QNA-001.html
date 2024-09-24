@@ -53,43 +53,52 @@
             <!-- //e:subvisual-wrap -->
             <!-- s:contents -->
             <div class="contents">
-                <div class="form-wrap search">
-                    <div class="form-group">
-                        <div class="form-row">
-                            <div class="select-box">
-                                <div class="stove-dim"></div>
-                                <div class="se-select ei-w160" data-stove="select">
-                                    <select class="" title="메뉴구분">
-                                        <option value="" disabled="" selected="" hidden="">구분</option><!-- [D] : default - 셀렉트의 placeholder 기능-->
-                                        <option value="0">제목</option>
-                                        <option value="1">내용</option>
-                                    </select>
-                                    <div class="e-select-dim"></div>
+                <form>
+                    <div class="form-wrap search">
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="select-box">
+                                    <div class="stove-dim"></div>
+                                    <div class="se-select ei-w160" data-stove="select">
+                                        <select class="" title="메뉴구분">
+                                            <option value="" disabled="" selected="" hidden="">구분</option><!-- [D] : default - 셀렉트의 placeholder 기능-->
+                                            <option value="0">제목</option>
+                                            <option value="1">내용</option>
+                                        </select>
+                                        <div class="e-select-dim"></div>
+                                    </div>
                                 </div>
+                                <div class="col-10">
+                                    <input id="" title="검색" type="tel" name="" class="form-control hasCancel" maxlength="11" placeholder="검색어 입력">
+                                </div>
+                                <button class="btn btn-search" type="button"><span class="ir">검색</span></button>
                             </div>
-                            <div class="col-10">
-                                <input id="" title="검색" type="tel" name="" class="form-control" maxlength="11" placeholder="검색어 입력">
-                            </div>
-                            <button class="btn btn-search" type="button"><span class="ir">검색</span></button>
                         </div>
                     </div>
-                </div>
-                <div class="result-area nodata">
-                    <div class="text-wrap">
-                        <h3 class="result-no">조회 결과가 없습니다.</h3>
-                    </div>
-                </div>
+                </form>
                 <div class="list-card-wrap">
+                    <!--S: 조회 결과가 없을 때 노출 -->
+                    <div class="result-area nodata">
+                        <div class="text-wrap">
+                            <h3 class="result-no">조회 결과가 없습니다.</h3>
+                        </div>
+                    </div>
+                    <!--E: 조회 결과가 없을 때 노출 -->
+                    <!--S: QnA 등록권한이 있는 사용자가 로그인했을 경우 노출되는 버튼 -->
+                    <div class="btn-wrap right-btn">
+                        <button class="btn btn-icon">등록하기</button>
+                    </div>
+                    <!--E: QnA 등록권한이 있는 사용자가 로그인했을 경우 노출되는 버튼 -->
                     <ul class="accordion-wrap ico">
                         <li class="accordion-info">
                             <a href="#none" class="ques toggleChk"><span>질문 내용이 들어갑니다</span><span class="date">2024-08-22</span></a>
                             <div class="ques-cont">
                                 <p>
-                                    질문 내용이 들어가니다<br>
-                                    질문 내용이 들어가니다<br>
-                                    질문 내용이 들어가니다<br>
-                                    질문 내용이 들어가니다<br>
-                                    질문 내용이 들어가니다<br>
+                                    질문 내용이 들어갑니다<br>
+                                    질문 내용이 들어갑니다<br>
+                                    질문 내용이 들어갑니다<br>
+                                    질문 내용이 들어갑니다<br>
+                                    질문 내용이 들어갑니다<br>
                                 </p>
                             </div>
                         </li>
@@ -97,7 +106,7 @@
                         <li class="accordion-info">
                             <a href="#none" class="ques toggleChk"><span> 질문 내용이 들어갑니다</span><span class="date">2024-08-22</span></a>
                             <div class="ques-cont">
-                                <p>질문 내용이 들어가니다</p>
+                                <p>질문 내용이 들어갑니다</p>
                             </div>
                         </li>
     
@@ -105,35 +114,7 @@
                             <a href="#none" class="ques toggleChk"><span> 질문 내용이 들어갑니다</span><span class="date">2024-08-22</span></a>
                             <div class="ques-cont">
                                 <p>
-                                    질문 내용이 들어가니다
-                                </p>
-                            </div>
-                        </li>
-                        <li class="accordion-info">
-                            <a href="#none" class="ques toggleChk"><span>질문 내용이 들어갑니다</span><span class="date">2024-08-22</span></a>
-                            <div class="ques-cont">
-                                <p>
-                                    질문 내용이 들어가니다<br>
-                                    질문 내용이 들어가니다<br>
-                                    질문 내용이 들어가니다<br>
-                                    질문 내용이 들어가니다<br>
-                                    질문 내용이 들어가니다<br>
-                                </p>
-                            </div>
-                        </li>
-    
-                        <li class="accordion-info">
-                            <a href="#none" class="ques toggleChk"><span> 질문 내용이 들어갑니다</span><span class="date">2024-08-22</span></a>
-                            <div class="ques-cont">
-                                <p>질문 내용이 들어가니다</p>
-                            </div>
-                        </li>
-    
-                        <li class="accordion-info">
-                            <a href="#none" class="ques toggleChk"><span> 질문 내용이 들어갑니다</span><span class="date">2024-08-22</span></a>
-                            <div class="ques-cont">
-                                <p>
-                                    질문 내용이 들어가니다
+                                    질문 내용이 들어갑니다
                                 </p>
                             </div>
                         </li>
@@ -141,11 +122,11 @@
                             <a href="#none" class="ques toggleChk"><span>질문 내용이 들어갑니다</span><span class="date">2024-08-22</span></a>
                             <div class="ques-cont">
                                 <p>
-                                    질문 내용이 들어가니다<br>
-                                    질문 내용이 들어가니다<br>
-                                    질문 내용이 들어가니다<br>
-                                    질문 내용이 들어가니다<br>
-                                    질문 내용이 들어가니다<br>
+                                    질문 내용이 들어갑니다<br>
+                                    질문 내용이 들어갑니다<br>
+                                    질문 내용이 들어갑니다<br>
+                                    질문 내용이 들어갑니다<br>
+                                    질문 내용이 들어갑니다<br>
                                 </p>
                             </div>
                         </li>
@@ -153,7 +134,7 @@
                         <li class="accordion-info">
                             <a href="#none" class="ques toggleChk"><span> 질문 내용이 들어갑니다</span><span class="date">2024-08-22</span></a>
                             <div class="ques-cont">
-                                <p>질문 내용이 들어가니다</p>
+                                <p>질문 내용이 들어갑니다</p>
                             </div>
                         </li>
     
@@ -161,7 +142,35 @@
                             <a href="#none" class="ques toggleChk"><span> 질문 내용이 들어갑니다</span><span class="date">2024-08-22</span></a>
                             <div class="ques-cont">
                                 <p>
-                                    질문 내용이 들어가니다
+                                    질문 내용이 들어갑니다
+                                </p>
+                            </div>
+                        </li>
+                        <li class="accordion-info">
+                            <a href="#none" class="ques toggleChk"><span>질문 내용이 들어갑니다</span><span class="date">2024-08-22</span></a>
+                            <div class="ques-cont">
+                                <p>
+                                    질문 내용이 들어갑니다<br>
+                                    질문 내용이 들어갑니다<br>
+                                    질문 내용이 들어갑니다<br>
+                                    질문 내용이 들어갑니다<br>
+                                    질문 내용이 들어갑니다<br>
+                                </p>
+                            </div>
+                        </li>
+    
+                        <li class="accordion-info">
+                            <a href="#none" class="ques toggleChk"><span> 질문 내용이 들어갑니다</span><span class="date">2024-08-22</span></a>
+                            <div class="ques-cont">
+                                <p>질문 내용이 들어갑니다</p>
+                            </div>
+                        </li>
+    
+                        <li class="accordion-info">
+                            <a href="#none" class="ques toggleChk"><span> 질문 내용이 들어갑니다</span><span class="date">2024-08-22</span></a>
+                            <div class="ques-cont">
+                                <p>
+                                    질문 내용이 들어갑니다
                                 </p>
                             </div>
                         </li>
@@ -169,7 +178,7 @@
                             <a href="#none" class="ques toggleChk"><span> 질문 내용이 들어갑니다</span><span class="date">2024-08-22</span></a>
                             <div class="ques-cont">
                                 <p>
-                                    질문 내용이 들어가니다
+                                    질문 내용이 들어갑니다
                                 </p>
                             </div>
                         </li>

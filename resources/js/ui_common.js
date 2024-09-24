@@ -478,4 +478,52 @@ $(document).ready(function() {
 	}
 	handleScrollTop();
 
+	/*********************************************************************
+		Input_Delete Button
+	*********************************************************************/
+	/*---------------------------------------------
+		Input_Delete Button
+	---------------------------------------------*/
+	function delEvent() {
+
+		$('.form-wrap.search .form-group').each(function(idx, obj) {
+			var formGroup = $(obj);
+	
+			// .col-10 안에 있는 .hasCancel 클래스를 가진 input 필드를 선택
+			formGroup.find('.col-10 .form-control.hasCancel').off('focus').on('focus', function() {
+				var inputElement = $(this);
+	
+				// 클래스 확인
+				if (inputElement.hasClass('hasCancel')) {
+	
+					// 취소 버튼 표시 또는 숨기기
+					inputElement.off('keyup').on('keyup', function() {
+						var inputValue = inputElement.val().trim();
+						var btnCancelContainer = inputElement.closest('.col-10'); // 부모
+						const btnCancel = $('<button type="button" class="btn btn-cancel"><span class="ir">입력취소</span></button>'); 
+	
+						// 입력값이 있으면
+						if (inputValue !== '') {
+							if (btnCancelContainer.find('.btn-cancel').length === 0) {
+								
+								btnCancelContainer.append(btnCancel);
+							}
+						} else {
+							
+							btnCancelContainer.find('.btn-cancel').remove();
+						}
+					});
+				}
+			});
+	
+			// 동적으로 추가된 취소 버튼 클릭 이벤트 처리
+			formGroup.off('click', '.btn-cancel').on('click', '.btn-cancel', function() {
+				var inputElement = $(this).closest('.col-10').find('.form-control'); // 입력 필드
+				inputElement.val(''); // 입력 필드 비움
+				$(this).remove();     // 취소 버튼 제거
+			});
+		});
+	}
+	
+	delEvent();
 });

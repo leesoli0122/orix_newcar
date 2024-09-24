@@ -428,8 +428,9 @@ button.btn.btn-text.small:hover { color:var(--secondary); }
 button.btn.btn-text.medium:hover::after,
 button.btn.btn-text.small:hover::after { background:var(--svg-arrow-hover); }
 
-/** 검색 버튼 **/
+/** 검색 버튼 / 삭제 버튼**/
 button.btn.btn-search { padding:0; height:46px; width:30px; padding:0 32px; background:url(../images/ic_search.png)no-repeat var(--background3) 50%/30px auto; }
+button.btn.btn-cancel { content:''; position:absolute; z-index:11; transform: translateY(-50%); top:50%; right:16px; padding:0; width:24px; height:24px; background:url(../../resources/images/common/ic-cancel.png)no-repeat 100%/24px auto;}
 
 /** 오른쪽 버튼 **/
 .btn-wrap.right-btn { margin:20px 0; width:100%; text-align:right; }

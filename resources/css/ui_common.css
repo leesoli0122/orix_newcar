@@ -164,7 +164,7 @@ FORM #폼
 ---------------------------------------------*/
 .form-group label { margin-bottom:14px; line-height:1; font-size:var(--font14); color:var(--inactive); } /*라벨*/
 .form-group.check label,
-.form-group.radio label { margin-bottom:0; }/*체크, 라디오 라벨*/
+.form-group.radio label { margin-bottom:0; font-size:var(--font16); }/*체크, 라디오 라벨*/
 .form-wrap .form-group:first-child { margin-top:0; }
 .form-wrap .form-group { margin-top:24px; }
 .form-group { display:block; }

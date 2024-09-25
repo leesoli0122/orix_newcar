@@ -74,15 +74,15 @@
                                                     <div class="form-group radio">
                                                         <ul class="radio-box">
                                                             <li>
-                                                                <input type="radio" id="radio-1" name="radio">
+                                                                <input type="radio" id="radio-1" name="radio" checked="">
                                                                 <label for="radio-1"class="radio-button"><span>1주</span></label>
                                                             </li>
                                                             <li>
-                                                                <input type="radio" id="radio-2" name="radio" checked="">
+                                                                <input type="radio" id="radio-2" name="radio">
                                                                 <label for="radio-2"class="radio-button"><span>2주</span></label>
                                                             </li>
                                                             <li>
-                                                                <input type="radio" id="radio-3" name="radio" checked="">
+                                                                <input type="radio" id="radio-3" name="radio">
                                                                 <label for="radio-3"class="radio-button"><span>1달</span></label>
                                                             </li>
                                                         </ul>
@@ -98,7 +98,7 @@
                                                             <div class="col-2">
                                                                 <input type="text" id="" title="기간" name="to" class="form-control datepicker" placeholder="YYYY.MM.DD" readonly >
                                                             </div>
-                                                            <button class="btn btn-input" name="btnSearch" id="btnSearch" type="button">조회</button>
+                                                            <button class="btn btn-input active" name="btnSearch" id="btnSearch" type="button">조회</button>
                                                         </div>
                                                     </div>
                                                 </dd>
@@ -114,34 +114,26 @@
                                 </form>
                                 <div class="tabs type2">
                                     <ul class="tab-item02">
-                                        <li class="on" data-tab="tab-cont001" data-id="teb1" id="">견적 <span class="blue">13</span> <span class="sub-tit">(리스 <span>8</span>/렌터 <span>5</span>)</span></li>
-                                        <li data-tab="tab-cont002" data-id="teb2" id="">상담심사 <span>5</span></li>
-                                        <li data-tab="tab-cont003" data-id="teb3" id="">발주예정<span>5</span></li>
-                                        <li data-tab="tab-cont004" data-id="teb4" id="">약정펀딩<span>5</span></li>
-                                        <li data-tab="tab-cont005" data-id="teb5" id="">인도<span>3</span></li>
+                                        <li class="on" data-tab="tab-cont001" data-id="teb1" id=""><a href="#javascript:void(0);">견적 <span class="blue">13</span> <span class="sub-tit">(리스 <span>8</span>/렌터 <span>5</span>)</span></a></li>
+                                        <li data-tab="tab-cont002" data-id="teb2" id=""><a href="#javascript:void(0);">상담심사 <span>5</span></a></li>
+                                        <li data-tab="tab-cont003" data-id="teb3" id=""><a href="#javascript:void(0);">발주예정<span>5</span></a></li>
+                                        <li data-tab="tab-cont004" data-id="teb4" id=""><a href="#javascript:void(0);">약정펀딩<span>5</span></a></li>
+                                        <li data-tab="tab-cont005" data-id="teb5" id=""><a href="#javascript:void(0);">인도<span>3</span></a></li>
                                     </ul>
                                     <div class="tab-content-area">
                                         <div id="tab-cont001" class="tab-content on">
                                             <div class="sub-text-wrap style2">
                                                 <h4>전년 대비 실적</h4>
                                             </div>
-                                            <div class="grid-wrap list-card-wrap record">
-                                                <div class="result-area success">
-                                                    <div class="text-wrap result">
-                                                        <ul>
-                                                            <li>작년 동일기간 보다 <span class="blue">200,000</span>원 <span class="blue">높은</span> 실적을 기록했습니다.</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!--S: 실패시
+                                            <div class="grid-wrap list-card-wrap style2 record">
+                                                <!--S: 실패시 -->
                                                 <div class="result-area fail">
                                                     <div class="text-wrap result">
                                                         <ul>
                                                             <li>작년 동일기간 보다 <span class="red">200,000</span>원 <span class="red">낮은</span> 실적을 기록했습니다.</li>
                                                         </ul>
                                                     </div>
-                                                </div> -->
-                                                <!--S: 실패시
+                                                </div>
                                                 <div class="list-card-group">
                                                     <ul class="txt-list">
                                                         <li>
@@ -152,16 +144,34 @@
                                                             <span class="num"><span>3,000,000,000</span> 원</span>
                                                         </li>
                                                     </ul>
-                                                </div> -->
+                                                </div>
+                                                <div class="list-card-group">
+                                                    <ul class="txt-list">
+                                                        <li>
+                                                            <div class="tit">2024.07.29 ~ 2024.08.28</div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="badge02 work">실패시 건수</span>
+                                                            <span class="num"><span>3,000,000,000</span> 원</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                                 <!--E: 실패시 -->
-                                                <!-- 성공시 -->
-                                                <div class="list-card-group">
+                                                <!-- <div class="result-area success">
+                                                    <div class="text-wrap result">
+                                                        <ul>
+                                                            <li>작년 동일기간 보다 <span class="blue">200,000</span>원 <span class="blue">높은</span> 실적을 기록했습니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div> -->
+                                                <!-- 증가시 -->
+                                                <!-- <div class="list-card-group">
                                                     <ul class="txt-list">
                                                         <li>
                                                             <span class="tit">2024.07.29 ~ 2024.08.28</span>
                                                         </li>
                                                         <li>
-                                                            <span class="badge02 personal">성공시 건수</span>
+                                                            <span class="badge02 personal">증가시 건수</span>
                                                             <span class="num"><span>2,000,000,000</span> 원</span>
                                                         </li>
                                                     </ul>
@@ -172,31 +182,11 @@
                                                             <span class="tit">2024.07.29 ~ 2024.08.28</span>
                                                         </li>
                                                         <li>
-                                                            <span class="badge02 personal">성공시 건수</span>
+                                                            <span class="badge02 personal">증가시 건수</span>
                                                             <span class="num"><span>2,000,000,000</span> 원</span>
                                                         </li>
                                                     </ul>
-                                                </div>
-                                            </div>
-                                            <div class="table-type">
-                                                <div class="col">
-                                                    <dl>
-                                                        <dt>기간</dt>
-                                                        <dd><span>2024.07.29 ~ 2024.08.24</span></dd>
-                                                    </dl>
-                                                    <dl>
-                                                        <dt>오토리스</dt>
-                                                        <dd><span>3,000,000,000</span> 원</dd>
-                                                    </dl>
-                                                    <dl>
-                                                        <dt>렌터카</dt>
-                                                        <dd><span>3,000,000,000</span> 원</dd>
-                                                    </dl>
-                                                    <dl>
-                                                        <dt>합계</dt>
-                                                        <dd class="result-num-s"><span class="blue">6,000,000,000</span> 원</dd>
-                                                    </dl>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="table-wrap">
                                                 <div class="sub-text-wrap style2">
@@ -225,131 +215,292 @@
                                                         <tbody>
                                                             <tr>
                                                                 <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.27</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.26</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.25</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.24</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.23</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.22</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.21</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.20</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.19</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.18</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.17</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.16</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.15</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.14</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.13</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.12</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
-                                                            </tr>
-                                                            <tr class="now">
-                                                                <td>2024.08.28</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>3,000,000,000 원</td>
-                                                                <td>6,000,000,000 원</td>
+                                                                <td>2024.08.11</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
                                                             </tr>
                                                         </tbody>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <td>합계</td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>3,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details">
+                                                                    <div><span>14</span>건</div>
+                                                                    <div><span>2,000,000,000</span> 원</div>
+                                                                </td>
+                                                                <td class="details sum">
+                                                                    <div><span>28</span>건</div>
+                                                                    <div><span>5,000,000,000</span> 원</div>
+                                                                </td>
+                                                            </tr>
+                                                        </tfoot>
                                                     </table>
                                                 </div>
                                             </div>
@@ -363,6 +514,9 @@
                 </div>
             </div>
             <!-- //e:contents -->
+            <!--s: scrollTop-->
+            <button class="btn btn-top" type="button"><span class="ir">탑버튼</span></button>
+            <!--//e: scrollTop-->
         </div>
         <!-- //e:contentWrap -->
         <!-- s:footer -->

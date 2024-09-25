@@ -463,19 +463,36 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		scrollTop
 	---------------------------------------------*/
-
+	
+	//스크롤
 	function handleScrollTop() {
+		$(window).on("scroll", function(e) {
 
-		$(document).on('click', '.btn-top', function(e){
-			e.preventDefault();
-			$('body, html').animate({
-				scrollTop: 0
-			}, 450);
+			var scrollTop = $(this).scrollTop();
+			var windowHeight = $(this).height();
+			var footerTop = $("footer").offset().top;
+	
+			// 스크롤 위치가 400 이상일 때
+			if (scrollTop >= 300) {
+				$(".btn-top").stop(true, true).fadeIn(200);
+				
+				if (scrollTop + windowHeight > footerTop) {
+					$(".btn-top").css("bottom", 280);
+				} else {
+					$(".btn-top").css("bottom", 30);
+				}
+			} else {
+				$(".btn-top").stop(true, true).fadeOut(200);
+			}
 		});
-
-
+	
+		$(".btn-top").on("click", function() {
+			$("html, body").stop().animate({scrollTop: 0}, "linear");
+		});
 	}
+	
 	handleScrollTop();
+
 
 	/*********************************************************************
 		Input_Delete Button
@@ -525,4 +542,8 @@ $(document).ready(function() {
 	}
 	
 	delEvent();
+
+
+
 });
+

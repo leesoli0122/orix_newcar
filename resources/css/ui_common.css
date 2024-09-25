@@ -492,7 +492,7 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap.ico > .accordion-info > .ques .date { padding-left:25px; background: url(../../resources/images/ic_date.png) no-repeat left  50%/20px auto; }
 
 .accordion-wrap.ico > .accordion-info > .ques-cont p::before { left:0; background: url(../../resources/images/ic_answer.png) no-repeat 100%/24px auto; }
-.accordion-wrap.ico > .accordion-info > .ques-cont p { padding-left:34px; }
+.accordion-wrap.ico > .accordion-info > .ques-cont p { padding-left:44px; }
 
 /*********************************************************************
 Tooltip #툴팁

@@ -446,7 +446,7 @@ button.btn.btn-cancel { content:''; position:absolute; z-index:11; transform: tr
 .btn-wrap.right-btn button.btn.btn-no-icon::after { content:none; }
 
 /** 탑 버튼 **/
-button.btn.btn-top { display:none; transition: opacity 0.3s, bottom 0.3s; right:10px; bottom:30px; z-index:100; padding:7px; width:42px; height:42px; border:1px solid var(--border1); border-radius: 50%; background: var(--svg-top); cursor:pointer;  }
+button.btn.btn-top { display:none; transition: opacity 0.3s, bottom 0.s; right:10px; bottom:30px; z-index:100; padding:7px; width:42px; height:42px; border:1px solid var(--border1); border-radius: 50%; background: var(--svg-top); cursor:pointer;  }
 button.btn.btn-top:hover { border:1px solid var(--secondary); background: var(--svg-top-hover);}
 
 /*---------------------------------------------
@@ -460,27 +460,31 @@ ul.text-after li:first-child::after { content:""; display:inline-block; margin:0
 ul.text-after li a { font-size:var(--font14); font-weight:var(--w-regular); color:var(--title); }
 
 /*********************************************************************
-TOGGLE_ACCORDION #토글_아코디언 [QnA]
+TOGGLE_ACCORDION #토글_아코디언
 *********************************************************************/
 /*---------------------------------------------
-	Toggle_Accordion Default
+	Toggle_Accordion Default [QnA]
 ---------------------------------------------*/
 .accordion-wrap > .accordion-info:first-child { margin-top:0; }
 .accordion-wrap > .accordion-info { margin-top:20px; border:1px solid #DDDDDD; border-radius: 20px; overflow: hidden;}
-.accordion-wrap > .accordion-info > .ques { position:relative; display:flex; width:100%; justify-content:space-between; padding:30px; font-size: var(--font18); font-weight:var(--w-bold); color:var(--title);  }
+.accordion-wrap > .accordion-info > .ques { position:relative; display:flex; width:100%; justify-content:space-between; align-items:center; padding:30px 74px 30px 30px;  font-size: var(--font18); font-weight:var(--w-bold); color:var(--title);  }
 .accordion-wrap > .accordion-info > .ques::after { content:''; position:absolute; right:30px; top:50%; transform:translateY(-50%); background-image: var(--svg-select-arrow); background-repeat: no-repeat; background-position: center; background-size:30px; width:24px; height:24px; }
 .accordion-wrap > .accordion-info > .ques.active::after { transform:translate(0, -50%) rotate(-180deg); transition: all ease .2s; }
+.accordion-wrap > .accordion-info > .ques .left { width:77%;  overflow:hidden; text-overflow: ellipsis;  white-space:nowrap;}
+.accordion-wrap > .accordion-info > .ques .right { text-align: right;}
 .accordion-wrap > .accordion-info > .ques .date { font-size:var(--font16); font-weight:var(--w-regular); color:var(--inactive); }
 .accordion-wrap > .accordion-info > .ques-cont{ height:0; opacity: 0; overflow: hidden; padding-top:0; transition: height .2s ease, opacity .2s ease, padding-top .2s ease; }
 .accordion-wrap > .accordion-info > .ques-cont.active{ height:auto; opacity:1; background: #F9FAFC; padding:30px; font-size:var(--font16); font-weight:var(--w-bold); color:var(--inactive);}
 
 /*---------------------------------------------
-	Toggle_Accordion 아이콘있을 경우
+	Toggle_Accordion 아이콘있을 경우 [QnA]
 ---------------------------------------------*/
 .accordion-wrap.ico > .accordion-info > .ques::before,
 .accordion-wrap.ico > .accordion-info > .ques-cont p::before { content:''; position:absolute; width:24px; height:24px; }
-.accordion-wrap.ico > .accordion-info > .ques::before { top:50%; transform: translateY(-50%); left:24px; background: url(../../resources/images/ic_question.png) no-repeat 100%/24px auto;  }
-.accordion-wrap.ico > .accordion-info > .ques { padding:30px 74px 30px 54px; }
+.accordion-wrap.ico > .accordion-info > .ques::before { top:50%; transform: translateY(-50%); left:30px; background: url(../../resources/images/ic_question.png) no-repeat 100%/24px auto;  }
+.accordion-wrap.ico > .accordion-info > .ques { padding:30px 74px 30px; }
+.accordion-wrap.ico > .accordion-info > .ques .date { padding-left:25px; background: url(../../resources/images/ic_date.png) no-repeat left  50%/20px auto; }
+
 .accordion-wrap.ico > .accordion-info > .ques-cont p::before { left:0; background: url(../../resources/images/ic_answer.png) no-repeat 100%/24px auto; }
 .accordion-wrap.ico > .accordion-info > .ques-cont p { padding-left:34px; }
 

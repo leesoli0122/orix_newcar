@@ -446,7 +446,7 @@ button.btn.btn-cancel { content:''; position:absolute; z-index:11; transform: tr
 .btn-wrap.right-btn button.btn.btn-no-icon::after { content:none; }
 
 /** 탑 버튼 **/
-button.btn.btn-top { position:fixed; right:10px; bottom:30px; cursor:pointer; z-index:100; padding:7px; width:42px; height:42px; border:1px solid var(--border1); border-radius: 50%; background: var(--svg-top); transform: rotate(-180deg); }
+button.btn.btn-top { display:none; transition: opacity 0.4s, bottom 0.4s; right:10px; bottom:30px; cursor:pointer; z-index:100; padding:7px; width:42px; height:42px; border:1px solid var(--border1); border-radius: 50%; background: var(--svg-top); transform: rotate(-180deg); }
 button.btn.btn-top:hover { border:1px solid var(--secondary); background: var(--svg-top-hover);}
 
 /*---------------------------------------------

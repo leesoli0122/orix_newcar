@@ -466,33 +466,53 @@ $(document).ready(function() {
 	
 	//스크롤
 	function handleScrollTop() {
-		$(window).on("scroll", function(e) {
-
+		$(".btn-top").hide();
+	
+		$(window).on("scroll", function() {
 			var scrollTop = $(this).scrollTop();
 			var windowHeight = $(this).height();
 			var footerTop = $("footer").offset().top;
 	
-			// 스크롤 위치가 400 이상일 때
-			if (scrollTop >= 300) {
-				$(".btn-top").stop(true, true).fadeIn(200);
+			// 위치
+			if (scrollTop >= 400) {
 				
-				if (scrollTop + windowHeight > footerTop) {
-					$(".btn-top").css("bottom", 280);
+				if ($(".btn-top").css("display") === "none") {
+					$(".btn-top").css({
+						display: "block",
+						opacity: 0
+					}).stop(true, true).animate({
+						opacity: 1
+					}, 400);
+				}
+			
+				if (scrollTop + windowHeight >= footerTop) {
+
+					$(".btn-top").css({
+						position: "absolute",
+						bottom: `${30}px`
+					});
 				} else {
-					$(".btn-top").css("bottom", 30);
+					
+					$(".btn-top").css({
+						position: "fixed",
+						bottom: "30px"
+					});
 				}
 			} else {
-				$(".btn-top").stop(true, true).fadeOut(200);
+
+				$(".btn-top").css("display", "none");
 			}
 		});
 	
-		$(".btn-top").on("click", function() {
-			$("html, body").stop().animate({scrollTop: 0}, "linear");
+		$(document).on("click", ".btn-top", function() {
+			$("html, body").stop().animate({ scrollTop: 0 }, "linear");
 		});
 	}
 	
 	handleScrollTop();
-
+	
+	
+	
 
 	/*********************************************************************
 		Input_Delete Button

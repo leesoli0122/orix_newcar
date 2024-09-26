@@ -116,7 +116,7 @@ table { border-collapse:collapse; border-spacing:0; width:100%; }
 #contentWrap.loginLayout { display:flex; align-items:center; justify-content:center; margin-top:0; padding-bottom:0; }
 
 /** UI **/
-[class*='btn'] { display:inline-block; vertical-align:middle; }
+/* [class*='btn'] { display:inline-block; vertical-align:middle; } */
 /* [class*='btn']:focus { border:1px solid var(--normal); }/ */
 
 /*********************************************************************

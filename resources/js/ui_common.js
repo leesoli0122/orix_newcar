@@ -377,7 +377,7 @@ $(document).ready(function() {
             $fileInput.click();
         });
 
-        // 파일 선택
+        // 파일 선택 (300MB 이하의 JPG, PNG파일 3개까지 업로드)
         $fileInput.on('change', function() {
             // 파일 3개 있는지 확인
             if ($addFileList.children('li').length >= maxFiles) {

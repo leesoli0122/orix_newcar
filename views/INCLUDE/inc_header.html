@@ -22,16 +22,63 @@
             </a>
         </div>
         <ul class="menu col04">
-            <li><a href="javascript:void(0);">견적내기</a></li>
-            <li><a href="javascript:void(0);">현황조회</a></li>
-            <li><a href="javascript:void(0);">고객센터</a></li>
-            <li class="on"><a href="javascript:void(0);">마이페이지</a></li>
+            <li>
+                <!-- menu 1depth -->
+                <a href="javascript:void(0);">견적내기</a>
+                <!-- menu 2depth -->
+                <div class="menuitem-wrap">
+                    <ul class="menuitem">
+                        <li><a href="javascript:void(0);">렌터카 견적내기</a></li>
+                        <li><a href="javascript:void(0);">오토리스 견적내기</a></li>
+                        <li><a href="javascript:void(0);">선구매</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:void(0);">현황조회</a>
+                <div class="menuitem-wrap">
+                    <ul class="menuitem">
+                        <li><a href="javascript:void(0);">견적</a></li>
+                        <li><a href="javascript:void(0);">심사</a></li>
+                        <li><a href="javascript:void(0);">발주</a></li>
+                        <li><a href="javascript:void(0);">펀딩</a></li>
+                        <li><a href="javascript:void(0);">인도</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:void(0);">고객센터</a>
+                <div class="menuitem-wrap">
+                    <ul class="menuitem">
+                        <li><a href="javascript:void(0);">공지사항</a></li>
+                        <li><a href="javascript:void(0);">자료실</a></li>
+                        <li><a href="javascript:void(0);">QnA</a></li>
+                        <li><a href="javascript:void(0);">전기차보조금</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:void(0);">마이페이지</a>
+                <div class="menuitem-wrap">
+                    <ul class="menuitem">
+                        <li>
+                            <a href="javascript:void(0);">실적조회</a>
+                            <ul class="sub-menuitem bul-dot">
+                                <li><a href="javascript:void(0);">나의실적</a></li>
+                                <li><a href="javascript:void(0);">팀실적조회</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0);">비밀번호변경</a></li>
+                    </ul>
+                </div>
+            </li>
         </ul>
         <ul class="menu-r">
             <li><a href="javascript:void(0);">오릭스캐피탈 강남지점 <span>오릭스(orix)</span>님</a> 환영합니다.</li>
         </ul>
     </div>
 </div>
+<div class="ham-menu">메뉴버튼</div>
 
 <script>
     $(document).ready(function () {
@@ -48,56 +95,60 @@
             }
         });
 
+        
         // gnb action
-        $(".center-menu > li").mouseover(function () {
-            gnbShow($(this));
-        });
-        $(".center-menu > li").focusin(function () {
-            gnbShow($(this));
-        });
-        $(".gnb-sub-inner").mouseleave(function () {
-            gnbHide($(this));
+        $(".menu > li").on('click', function(e) {
+            e.preventDefault();
+
+            var $this = $(this).children(".menuitem-wrap");
+
+            $this.addClass('on');
+            $(this).siblings().children(".menuitem-wrap").removeClass('on');
+
+            $this.off('mouseleave').on('mouseleave', function() {
+                $this.removeClass('on');
+            });
         });
 
         // 전체메뉴 아이콘 클릭 시
-        $(".btnMenu").click(function () {
-            $(".right-menu > div").hide();
-            $(".menu-part").show();
+        // $(".btnMenu").click(function () {
+        //     $(".right-menu > div").hide();
+        //     $(".menu-part").show();
 
-            $("body").css("overflow", "hidden");
-        });
+        //     $("body").css("overflow", "hidden");
+        // });
 
-        $(".menu-con > .close").click(function () {
-            $(".menu-part").hide();
-            $("body").css("overflow", "");
-        });
+        // $(".menu-con > .close").click(function () {
+        //     $(".menu-part").hide();
+        //     $("body").css("overflow", "");
+        // });
 
-        // 메뉴 닫기
-        $('#menu_close_btn').click(function () {
-            $(".right-menu > div").hide();
-            $(".menu-part").hide();
-            $("body").css("overflow", "visible");
-        });
+        // // 메뉴 닫기
+        // $('#menu_close_btn').click(function () {
+        //     $(".right-menu > div").hide();
+        //     $(".menu-part").hide();
+        //     $("body").css("overflow", "visible");
+        // });
 
-        $('.close_btn').keydown(function (e) {
-            if (e.keyCode == 13) {
-                $(".right-menu > div").hide();
-                $(".menu-part").hide();
-                $("body").css("overflow", "visible");
-            }
-        });
+        // $('.close_btn').keydown(function (e) {
+        //     if (e.keyCode == 13) {
+        //         $(".right-menu > div").hide();
+        //         $(".menu-part").hide();
+        //         $("body").css("overflow", "visible");
+        //     }
+        // });
 
 
         // 검색 아이콘 클릭시
-        $(".btnSearch").click(function () {
-            $(".right-menu > div").hide();
-            $(".search-part").show();
-        });
+        // $(".btnSearch").click(function () {
+        //     $(".right-menu > div").hide();
+        //     $(".search-part").show();
+        // });
 
-        $(".search-con > .close").click(function () {
-            $(".search-part").hide();
-            $("body").css("overflow", "");
-        });
+        // $(".search-con > .close").click(function () {
+        //     $(".search-part").hide();
+        //     $("body").css("overflow", "");
+        // });
 
 
     });

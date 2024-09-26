@@ -113,7 +113,7 @@ $(document).ready(function() {
   });
 
   /** tab & tab scroll **/
-  $(".tab-item.type2 > li").click(function() {
+  $(".tab-item.type2 > li, .tab-item > li").click(function() {
     var tabCont = $(this).attr("data-tab");
 
     $(this).siblings().removeClass("on");

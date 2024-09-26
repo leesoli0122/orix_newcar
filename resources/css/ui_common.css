@@ -257,6 +257,14 @@ input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; hei
 .amount-txt { position:absolute; transform: translateY(-50%); top:50%; right:16px; font-size:var(--font16); font-weight:var(--w-bold); color:var(--normal); }
 
 /*---------------------------------------------
+	Input_원/개월/%_수수료 Text Custom
+---------------------------------------------*/
+.charge { display:flex; align-items: center; }
+.charge .col-2 { max-width:107px; }
+.charge .tit { font-size:var(--font16); font-weight:bold; padding-right:12px;}
+.charge .num { font-size:var(--font16); padding-left:112px; }
+
+/*---------------------------------------------
 	Input_유효성체크
 ---------------------------------------------*/
 .form-group .info { display:none; }
@@ -1132,8 +1140,8 @@ slide #스와이퍼
 .swiper-horizontal { margin:0 auto; width:408px; height:145px; overflow: hidden; }
 
 
-.swiper-slide { display:flex; justify-content:center; align-items:center; padding:10px; max-width:126px; width:100%; font-size:var(--font14); text-align:center; }
-.swiper-slide button { background:transparent; cursor: pointer;}
+.swiper-slide { display:flex; justify-content:center; align-items:center; /*padding:10px;*/ max-width:126px; width:100%; font-size:var(--font14); text-align:center; }
+.swiper-slide button { padding:10px; background:transparent; cursor: pointer;}
 .swiper-slide button img { display: block; width:106px; height:53px; object-fit:cover; }
 .swiper-slide button .tit { margin-top:8px; font-weight:var(--w-bold); line-height:21px; }
 

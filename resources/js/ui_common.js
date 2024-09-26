@@ -325,6 +325,11 @@ $(document).ready(function() {
         $('.toggleChk').on('click', function() {
             handleToggleClick($(this));
         });
+
+		$('.btn').on('click', function(e){
+			e.preventDefault();
+			e.stopPropagation();
+		});
     }
 
     function handleToggleClick($toggleElement) {
@@ -474,7 +479,7 @@ $(document).ready(function() {
         	var contentWrapWidth = $("#contentWrap").outerWidth(); // #contentWrap의 너비
 	
 			// 위치
-			if (scrollTop >= 300) {
+			if (scrollTop >= 200) {
 				
 				if ($(".btn-top").css("display") === "none") {
 					$(".btn-top").css({
@@ -482,7 +487,7 @@ $(document).ready(function() {
 						opacity: 0
 					}).stop(true, true).animate({
 						opacity: 1
-					}, 300);
+					}, 200);
 				}
 			
 				if (scrollTop + windowHeight >= footerTop) {

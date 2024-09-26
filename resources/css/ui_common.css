@@ -597,8 +597,8 @@ popup #팝업
 .pagination ul li + li { margin-left:4px; }
 .pagination ul li a { font-size:var(--font16); }
 .pagination a { font-size:0; }
-.pagination a.active,
-.pagination a:hover { padding:5px 9px; border-radius:50%; font-weight:var(--w-bold); color:var(--white); background:var(--primary); }
+.pagination a.on { padding:5px 9px; border-radius:50%; font-weight:var(--w-bold); color:var(--white); background:var(--primary); }
+.pagination a:hover { font-weight:var(--w-bold); color:var(--primary); }
 .pagination a.prev { transform:rotate(180deg); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.2' height='11.41'%3E%3Cpath fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' d='m.7.7 6 5-6 5' data-name='Path 5'/%3E%3C/svg%3E")no-repeat center; }
 .pagination a.next { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.2' height='11.41'%3E%3Cpath fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' d='m.7.7 6 5-6 5' data-name='Path 5'/%3E%3C/svg%3E")no-repeat center; }
 .pagination a.last-prev { transform:rotate(180deg); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.2' height='11.41'%3E%3Cg fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-name='그룹 65114'%3E%3Cpath d='m.7.7 6 5-6 5' data-name='Path 5'/%3E%3Cpath d='m6.7.7 6 5-6 5' data-name='Path 5'/%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
@@ -750,10 +750,10 @@ txt-list li -> txt-list(20240924 리스트 구조 변경에 따른 css 수정)
 .list-card-group + .table-type { margin-top:40px; }
 .list-card-group .txt-list { display:flex; justify-content: space-between; align-items:center; margin-top:14px; font-size:var(--font16); }
 .list-card-group .txt-list:first-child { margin-top:0; }
-.list-card-group .txt-list .tit { font-size:var(--font18); font-weight:var(--w-bold); }
+.list-card-group .txt-list .tit { font-size:var(--font18); font-weight:var(--w-bold); color:var(--title); }
 .list-card-group .txt-list .txt { display:flex; align-items:center; justify-content:flex-end; width:230px;
 font-weight:var(--w-regular); color:var(--subtitle); }
-.list-card-group .txt-list .txt span { color:var(--inactive); }
+.list-card-group .txt-list .txt span { color:var(--subtitle); }
 .list-card-group .txt-list .num { font-size:var(--font20); font-weight:var(--w-bold); color:var(--inactive); }
 .list-card-group .txt-list .num span { font-size:var(--font22); }
 .list-card-group .cont-txt { max-width:912px; width:100%; color:var(--inactive); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
@@ -766,9 +766,18 @@ icon li -> icon span(20240924 리스트 구조 변경에 따른 css 수정 li가
 .icon span { display:inline-block!important; margin-top:0!important; margin-right:10px; margin-left:4px; font-size:0!important; vertical-align:middle; }
 .icon span::before { content:""; display:inline-block; width:20px; height:20px; background:url(../images/attach.png)no-repeat 50%/20px auto; }
 .icon span:first-child { margin-top:0; }
-.list-card-group .txt-list .data { color:var(--inactive); }
-.list-card-group .txt-list .data span::after { content:""; display:inline-block; margin:0 16px; width:1px; height:14px; background:var(--inactive); }
-.list-card-group .txt-list .data span:last-child::after { content:none; }
+
+/* 첨부파일 있는 list */
+.list-card-wrap.attachment .list-card-group:hover { border:1px solid var(--secondary); }
+.list-card-wrap.attachment .list-card-group a { display:flex; justify-content:space-between; align-items:center; }
+.list-card-wrap.attachment .list-card-group .txt-list:first-child { flex-direction:column; justify-content:unset; align-items:flex-start; }
+.list-card-wrap.attachment .list-card-group .txt-list { margin-top:0; }
+.list-card-wrap.attachment .list-card-group .txt-list .cont-txt { margin:15px 0 18px; }
+.list-card-wrap.attachment .list-card-group .txt-list .data::before { content:""; display:inline-block; margin-right:8px; width:20px; height:20px; background:url(../images/ic_date.png)no-repeat 50%/20px auto; vertical-align:sub; }
+.list-card-wrap.attachment .list-card-group .txt-list .data,
+.list-card-wrap.attachment .list-card-group .txt-list .hits { color:var(--inactive); }
+.list-card-wrap.attachment .list-card-group .txt-list .hits { margin-left:20px; }
+.list-card-wrap.attachment .list-card-group .txt-list .hits::before { content:""; display:inline-block; margin-right:8px; width:20px; height:20px; background:url(../images/ic_hits.png)no-repeat 50%/20px auto; vertical-align:sub; }
 
 /* 다운로드 있는 list */
 .list-card-wrap.download .list-card-group:hover { border:1px solid var(--secondary); }
@@ -1132,7 +1141,8 @@ dd.download-wrap { padding:0; background:transparent; }
 .choose-group .form-group.radio ul.radio-box li { width:100%; }
 .choose-group .form-group.radio ul.radio-box li label { display:flex;justify-content:space-between; align-items:center; }
 .choose-group .form-group.radio ul.radio-box li p.num { display:inline-block; color:var(--subtitle); font-weight:var(--w-regular); }
-.choose-group .form-group.radio ul.radio-box li p.num span { font-weight:var(--w-bold); }
+.choose-group .form-group.radio ul.radio-box li p.num span { font-weight:var(--w-bold); color:var(--subtitle); }
+
 /*********************************************************************
 slide #스와이퍼
 *********************************************************************/
@@ -1156,17 +1166,3 @@ slide #스와이퍼
 .swiper-slide.on { border:1px solid var(--secondary); border-radius:3px; background:var(--background4); }
 .swiper-slide.on span,
 .swiper-slide.on .tit { color:var(--secondary); }
-
-/*********************************************************************
-#미디어쿼리
-*********************************************************************/
-@media screen and (max-width: 1200px) {
-	/* 다운로드 있는 list */
-	.list-card-wrap.download .list-card-group .card-left > div { max-width:700px; width:100%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
-	.list-card-wrap.download .list-card-group .icon { margin-right:20px; }
-	/*---------------------------------------------
-    grid-wrap 그리드 안에 있는 list
-	---------------------------------------------*/
-	.grid-wrap { grid-template-columns: 1fr 1fr; }
-	.grid-list-wrap:last-child { display:grid; grid-column-start:1; grid-column-end:3; }
-}

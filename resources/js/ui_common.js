@@ -474,7 +474,7 @@ $(document).ready(function() {
         	var contentWrapWidth = $("#contentWrap").outerWidth(); // #contentWrap의 너비
 	
 			// 위치
-			if (scrollTop >= 400) {
+			if (scrollTop >= 300) {
 				
 				if ($(".btn-top").css("display") === "none") {
 					$(".btn-top").css({
@@ -482,7 +482,7 @@ $(document).ready(function() {
 						opacity: 0
 					}).stop(true, true).animate({
 						opacity: 1
-					}, 400);
+					}, 300);
 				}
 			
 				if (scrollTop + windowHeight >= footerTop) {

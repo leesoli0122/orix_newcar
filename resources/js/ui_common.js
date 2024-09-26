@@ -367,7 +367,7 @@ $(document).ready(function() {
 		Input_File [파일 업로드]
 	---------------------------------------------*/
     function setupFileInputHandlers() {
-        const $fileInput = $('.plus-file');  // 파일 입력
+        const $fileInput = $('.attachmentFile');  // 파일 입력
         const $addFileList = $('.add-file'); // 파일 리스트
         const maxFiles = 3;                  // 최대 파일 개수
         const maxFileSize = 300 * 1024 * 1024; // 300MB 제한 (바이트로 변환)

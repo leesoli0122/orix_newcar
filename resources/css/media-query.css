@@ -1,0 +1,10 @@
+@media screen and (max-width: 1200px) {
+	/* 다운로드 있는 list */
+	.list-card-wrap.download .list-card-group .card-left > div { max-width:700px; width:100%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
+	.list-card-wrap.download .list-card-group .icon { margin-right:20px; }
+	/*---------------------------------------------
+    grid-wrap 그리드 안에 있는 list
+	---------------------------------------------*/
+	.grid-wrap { grid-template-columns: 1fr 1fr; }
+	.grid-list-wrap:last-child { display:grid; grid-column-start:1; grid-column-end:3; }
+}

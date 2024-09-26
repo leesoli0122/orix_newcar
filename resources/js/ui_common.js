@@ -209,7 +209,7 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Custom Select  Event Binding
 	---------------------------------------------*/
-	function customEventBindingHandelrs() {
+	function customEventBindingHandlers() {
 		$(document).on('mousedown', '.se-select[data-stove="select"] select', function(e) {
 			if (isIOS()) {
 				// iOS 기본 동작
@@ -238,7 +238,7 @@ $(document).ready(function() {
 			customSelect($(this));
 		});
 	}
-	customEventBindingHandelrs();
+	customEventBindingHandlers();
 	
 	/*********************************************************************
 		Datepicker #데이터피커
@@ -260,7 +260,7 @@ $(document).ready(function() {
             monthNames:["1월", "2월", "3월", "4월", "5월", "6월",
 			"7월", "8월", "9월", "10월", "11월", "12월"
 			],
-		monthNamesShort:  ["1월", "2월", "3월", "4월", "5월", "6월",
+			monthNamesShort:  ["1월", "2월", "3월", "4월", "5월", "6월",
 			"7월", "8월", "9월", "10월", "11월", "12월"
 			],
             dayNames: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
@@ -336,7 +336,6 @@ $(document).ready(function() {
     }
 
     toggleChkHandlers();
-
 	
 	/*********************************************************************
 		Filter_fixed #필터fixed
@@ -344,7 +343,6 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Filter_fixed [상담내역]
 	---------------------------------------------*/
-
 	function handleScroll() {
         var scrollTop = $(window).scrollTop();
 
@@ -433,7 +431,6 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Select Popup [년도 선택_팝업 / 차량 선택 _ 팝업/ 실적조회_테이블]
 	---------------------------------------------*/
-
 	function handleContainerClick(e) {
 		const container = e.currentTarget;
 		const button = $(container).find('button').get(0);
@@ -466,8 +463,6 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		scrollTop
 	---------------------------------------------*/
-	
-	//스크롤
 	function handleScrollTop() {
 		$(".btn-top").hide();
 	
@@ -533,9 +528,6 @@ $(document).ready(function() {
 	
 	handleScrollTop();
 	
-	
-	
-
 	/*********************************************************************
 		Input_Delete Button
 	*********************************************************************/
@@ -584,8 +576,6 @@ $(document).ready(function() {
 	}
 	
 	delEvent();
-
-
 
 });
 

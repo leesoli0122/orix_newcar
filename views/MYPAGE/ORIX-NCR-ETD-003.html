@@ -117,10 +117,13 @@
                                 <dd class="form-group file">
                                     <div class="form-row">
                                         <div class="upload-name" id="" type="file" tabindex="0">파일첨부 내용</div>
-                                        <input  title="file" type="file" class="form-control plus-file" name="" placeholder="내용을 선택해 주세요">
+                                        <input  title="file" type="file" class="form-control plus-file attachmentFile" name="" placeholder="내용을 선택해 주세요"><!--[D] [예시] attachmentFile 클래스 :: 첨부 파일 선택 시 리스트 뿌려짐 [ 300MB 이하의 JPG, PNG Case ]-->
                                         <button class="btn btn-input" type="button">찾아보기</button>
                                     </div>
                                     <p class="caption">300MB 이하의 JPG, PNG파일 3개까지 업로드 가능합니다.</p>
+                                    <!--S : 첨부하지 않은 경우 form-group에 error 클래스 추가 -->
+                                    <p class="info">파일을 첨부해주세요.</p>
+                                    <!--E : 첨부하지 않은 경우 form-group에 error 클래스 추가 -->
                                     <ul class="add-file"><!-- [D] : 파일 리스트 - 스크립트 적용되어있음 -->
                                     </ul>
                                 </dd>

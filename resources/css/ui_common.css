@@ -260,11 +260,11 @@ input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; hei
 /*---------------------------------------------
 	Input_원/개월/%_수수료 Text Custom
 ---------------------------------------------*/
-.charge { display:flex; align-items: center; }
+.charge { display:flex; align-items: center; width:100%; max-width:284px; }
 .charge .col-2 { max-width:107px; }
-.charge .tit { font-size:var(--font16); font-weight:bold; padding-right:12px;}
-.charge .num { font-size:var(--font16); padding-left:112px; }
-
+.charge .tit { padding-right:12px; font-size:var(--font16); font-weight:bold;}
+.charge .num { position:absolute; right:0; font-size:var(--font16); }
+.charge .num > span { padding-right:5px; }
 /*---------------------------------------------
 	Input_유효성체크
 ---------------------------------------------*/

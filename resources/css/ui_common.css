@@ -545,12 +545,16 @@ popup #팝업
 .layerpopup.laypop .pop-header .pop-title { font-size:var(--font22); font-weight:var(--w-bold); }
 .layerpopup.laypop .btn-layer-close{ position:absolute; top:50%; transform:translateY(-50%); right:24px; width:22px; height:22px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cpath fill='%23666' d='M11 8.82 19.37.45a1.54 1.54 0 1 1 2.18 2.18L13.18 11l8.37 8.37a1.54 1.54 0 1 1-2.18 2.18L11 13.18l-8.37 8.37a1.54 1.54 0 1 1-2.18-2.18L8.82 11 .45 2.63A1.54 1.54 0 0 1 2.63.45Z'/%3E%3C/svg%3E") no-repeat center;text-indent:-9999px; cursor: pointer;}
 .layerpopup.laypop .ly-con-wrap { margin-top:61px; padding-top:20px;  max-height:432px; height:100%; overflow-y:auto; }
-
 .layerpopup .ly-scroll-con { width:100%; height:100%; height:1px; overflow-y:auto; padding-right:30px; }
-.layerpopup .ly-scroll-con::-webkit-scrollbar { width:14px; }
-.layerpopup .ly-scroll-con::-webkit-scrollbar-thumb { width:11px; background-color:var(--border2); border-radius:2px; border-radius:2px; }
-.layerpopup .ly-scroll-con::-webkit-scrollbar-track { width:14px; background-color:var(--background2); border-radius:5px; }
-.layerpopup .ly-scroll-con::-webkit-scrollbar-button {  height:100%; }
+/* 레이어팝업, 테이블 - 스크롤 */
+.layerpopup .ly-scroll-con::-webkit-scrollbar,
+.table-scroll::-webkit-scrollbar { width:14px; }
+.layerpopup .ly-scroll-con::-webkit-scrollbar-thumb,
+.table-scroll::-webkit-scrollbar-thumb { width:11px; background-color:var(--border2); border-radius:2px; border-radius:2px; }
+.layerpopup .ly-scroll-con::-webkit-scrollbar-track,
+.table-scroll::-webkit-scrollbar-track { width:14px; background-color:var(--background2); border-radius:5px; }
+.layerpopup .ly-scroll-con::-webkit-scrollbar-button,
+.table-scroll::-webkit-scrollbar-button {  height:100%; }
 
 /*---------------------------------------------
 레이어 풀팝업

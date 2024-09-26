@@ -428,30 +428,33 @@ $(document).ready(function() {
     setupFileInputHandlers();
 
 	/*********************************************************************
-		Select Popup [년도 선택 / 차량 선택 _ 팝업 형식]
+		Select Popup [년도 선택_팝업 / 차량 선택 _ 팝업/ 실적조회_테이블]
 	*********************************************************************/
 	/*---------------------------------------------
-		Select Popup [년도 선택 / 차량 선택 _ 팝업 형식]
+		Select Popup [년도 선택_팝업 / 차량 선택 _ 팝업/ 실적조회_테이블]
 	---------------------------------------------*/
 
 	function handleContainerClick(e) {
 		const container = e.currentTarget;
 		const button = $(container).find('button').get(0);
-		
+		const a = $(container).find('a').get(0);
+
 		// 초기화
 		const parent = $(container).closest('.btnSelect');
-		parent.find('li, div').removeClass('on');
+		parent.find('li, div, tr td:first-child').removeClass('on');
 		parent.find('button').attr('title', '');
 	
 		$(container).addClass('on');
 		$(button).attr('title', '선택됨');
+		$(a).attr('title', '선택됨');
 
 		button.focus();
+		a.focus();
 	}
 	
 	function initContainerClickEvent() {
 		$('.btnSelect').each(function() {
-			$(this).find('li, div').on('click', handleContainerClick);
+			$(this).find('li, div, tr td:first-child').on('click', handleContainerClick);
 		});
 	}
 

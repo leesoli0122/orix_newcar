@@ -487,14 +487,14 @@ $(document).ready(function() {
 						opacity: 0
 					}).stop(true, true).animate({
 						opacity: 1
-					}, 100);
+					}, 300);
 				}
 			
 				if (scrollTop + windowHeight >= footerTop) {
 
 					$(".btn-top").css({
 						position: "absolute",
-						bottom: `${30}px`,
+						bottom: '30px',
 						right: "10px"
 					});
 				} else {
@@ -513,7 +513,7 @@ $(document).ready(function() {
 					// #contentWrap 밖으로 나갈 경우
 					if (buttonRightEdge > contentWrapRightEdge) {
 						$(".btn-top").css({
-							right: `${$(window).width() - contentWrapRightEdge}px`
+							right: '${$(window).width() - contentWrapRightEdge}px'
 						});
 					}
 				}

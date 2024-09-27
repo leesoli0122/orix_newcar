@@ -219,8 +219,8 @@ login #로그인
 /*********************************************************************
 header #헤더
 *********************************************************************/
-#headerWrap { position:fixed; top:0; z-index:10; width:100%; background-color:var(--white); border-bottom:1px solid var(--border1); }
-#headerWrap .top { padding:20px; margin: 0 auto; max-width:1400px; width: 100%; /*min-width:1200px;*/ height:72px; }
+#headerWrap { position:fixed; top:0; z-index:10; width:100%; height:146px; background-color:var(--white); border-bottom:1px solid var(--border1); }
+#headerWrap .top { padding:33px 20px 15px; margin: 0 auto; max-width:1400px; width: 100%; /*min-width:1200px;*/ }
 #headerWrap .top div { display:flex; align-items:center; }
 #headerWrap .top > div > * { vertical-align:middle; }
 #headerWrap .top > div > h1 { display:inline-block; margin-right:25px; width:100px; height:25px; }
@@ -229,12 +229,14 @@ header #헤더
 #headerWrap .top > div > ul li:first-child::after { content:""; display:inline-block; margin:0 16px; width:1px; height:14px; background:var(--border1); vertical-align: middle; }
 #headerWrap .top > div > ul li a { font-size:var(--font14); font-weight:700; color:var(--subtitle); }
 
-#headerWrap > .h-menu { display:flex; align-items:center; padding:0 20px; }
-#headerWrap > .h-menu div { margin: 0 auto; max-width:1400px; width:100%; height:71px; }
-#headerWrap > .h-menu div .nav-btn { display:none; width:40px; height:40px; }
+#headerWrap > .h-menu { padding:0 20px; }
+#headerWrap > .h-menu div { margin: 0 auto; display:flex; align-items:center; justify-content:space-between; max-width:1400px; width:100%; }
+#headerWrap > .h-menu .nav-btn { display:none; width:38px; height:38px; }
+#headerWrap > .h-menu .nav-btn .ham { display:inline-block; width:38px; height:38px; }
+#headerWrap > .h-menu .nav-btn .ham img { width:100; height:100%; }
 
 /* 1depth */
-#headerWrap > .h-menu div ul.menu { display:inline-block; margin:14px 0 28px; width:auto; }
+#headerWrap > .h-menu div ul.menu { display:inline-block; margin:20px 0 28px; width:auto; }
 #headerWrap > .h-menu div ul.menu > li { position:relative; display:inline-block; margin:0 20px; }
 #headerWrap > .h-menu div ul.menu > li a {  font-size:var(--font22); font-weight:var(--w-regular); color:var(--title); }
 #headerWrap > .h-menu div ul.menu > li:first-child { margin-left:0; }
@@ -254,18 +256,18 @@ header #헤더
 #headerWrap > .h-menu div ul.menu > li .menuitem-wrap .menuitem > li .sub-menuitem > li a { padding:9px 12px 9px 27px; }
 
 /* 메뉴 클릭 시 */
-#headerWrap > .h-menu div ul.menu > li.on::after { content:""; position:absolute; top:52px; left:50%; transform:translateX(-50%); display:inline-block; width:100%; height:5px; background:var(--primary); }
+#headerWrap > .h-menu div ul.menu > li.on::after { content:""; position:absolute; top:49px; left:50%; transform:translateX(-50%); display:inline-block; width:100%; height:5px; background:var(--primary); }
 #headerWrap > .h-menu div .menuitem-wrap.on { display:block; }
 
 /* header 오른쪽 */
-#headerWrap > .h-menu div ul.menu-r { position:absolute; right:20px; top:28px; display:flex; letter-spacing:0; }
+#headerWrap > .h-menu div ul.menu-r { display:flex; letter-spacing:0; }
 #headerWrap > .h-menu div ul.menu-r li { display:inline-block; margin:0 15px; }
 #headerWrap > .h-menu div ul.menu-r li:last-child { margin:0; }
 #headerWrap > .h-menu div ul.menu-r li a span { font-weight:var(--w-bold); color:var(--secondary); text-decoration:underline; text-underline-offset:4px; }
 #headerWrap > .h-menu div ul.menu-r li a.btn-primary { padding:4px 15px; line-height: 14px; color:var(--white); background-color:var(--primary);border-radius:14px; }
 
 /* fix */
-#headerWrap .h-menu.fix { /*position:fixed; top:0; width:100%; animation: down 0.5s ease;*/ background: var(--white); box-shadow: 0px 3px 6px #ddd; z-index:1000; }
+#headerWrap:has(.h-menu.fix) { /*position:fixed; top:0; width:100%; animation: down 0.5s ease;*/ background: var(--white); box-shadow: 0px 4px 6px #ddd; z-index:1; }/*20240927 z-index 수정*/
 /* @keyframes down {
   0%{ transform: translateY(-50px) }
   100%{ transform: translateY(0px) }
@@ -273,7 +275,7 @@ header #헤더
 /*********************************************************************
 sub-content
 *********************************************************************/
-.sub-content { padding:0 0 80px; margin:0 auto; max-width:1400px; width:100%; min-height:calc(100vh - 235px); }
+.sub-content { padding:0 0 80px; margin:0 auto; max-width:1400px; width:100%; min-height:calc(100vh - 208px); }
 .sub-content > div { width:100%; }
 .subvisual-wrap{  padding:17px 0 50px; }
 
@@ -309,8 +311,11 @@ sub-content
 
 @media screen and (max-width:1200px) {
     /* header menu */
-    #headerWrap .h-menu { display:none; }
-    #headerWrap .btm-header .h-menu div .nav-btn { display:block; width:40px; height:40px; }
+    #headerWrap > .h-menu { display:flex; justify-content:space-between; padding:15px 20px 20px; }
+    #headerWrap > .h-menu div ul.menu { display:none; }
+    #headerWrap > .h-menu div ul.menu-r li:first-child { margin-left:0; }
+    #headerWrap > .h-menu .nav-btn { display:block; }
+    #headerWrap > .h-menu .nav-btn .close { display:none; }
 
 	.sub-content { padding:0 20px 80px; }
 }

@@ -577,7 +577,7 @@ popup #팝업
 /*---------------------------------------------
 레이어팝업-기본
 ---------------------------------------------*/
-.layerpopup.laypop .content-wrap { padding:0 30px; max-width:650px; width:100%; min-height:595px; }
+.layerpopup.laypop .content-wrap { padding:0 30px; max-width:650px; width:100%; min-height:323px; }
 .layerpopup.laypop .pop-header { position:fixed; top:0; left:0; right:0; height:61px; padding:18px 24px 18px 30px; border-bottom:1px solid var(--border1); background:var(--white);z-index:5;}
 .layerpopup.laypop .pop-header .pop-title { font-size:var(--font22); font-weight:var(--w-bold); }
 .layerpopup.laypop .btn-layer-close{ position:absolute; top:50%; transform:translateY(-50%); right:24px; width:22px; height:22px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cpath fill='%23666' d='M11 8.82 19.37.45a1.54 1.54 0 1 1 2.18 2.18L13.18 11l8.37 8.37a1.54 1.54 0 1 1-2.18 2.18L11 13.18l-8.37 8.37a1.54 1.54 0 1 1-2.18-2.18L8.82 11 .45 2.63A1.54 1.54 0 0 1 2.63.45Z'/%3E%3C/svg%3E") no-repeat center;text-indent:-9999px; cursor: pointer;}
@@ -798,7 +798,6 @@ icon li -> icon span(20240924 리스트 구조 변경에 따른 css 수정 li가
 .icon span:first-child { margin-top:0; }
 
 /* 첨부파일 있는 list */
-.list-card-wrap.attachment .list-card-group:hover { border:1px solid var(--secondary); }
 .list-card-wrap.attachment .list-card-group a { display:flex; justify-content:space-between; align-items:center; }
 .list-card-wrap.attachment .list-card-group .txt-list:first-child { flex-direction:column; justify-content:unset; align-items:flex-start; }
 .list-card-wrap.attachment .list-card-group .txt-list { margin-top:0; }
@@ -933,7 +932,7 @@ tfoot tr td:last-child { border-right:none; }
 .table-type > div.col dt,
 .table-type > div.col dd { width:auto; display:table-cell; }
 .table-type > div.col dd.form-group:not(.form-group.style1, .form-group.file) { display:block; }
-.table-type > div.col dt { width:190px; vertical-align:middle; border-right:1px solid var(--border3); font-size:var(--font16); font-weight:var(--w-bold); color:var(--title); }
+.table-type > div.col dt { width:190px; vertical-align:middle; border-right:1px solid var(--border1); font-size:var(--font16); font-weight:var(--w-bold); color:var(--title); }
 
 .table-type > div.col  dd.result-num { font-size:var(--font22); font-weight:var(--w-bold); }
 .table-type > div.col  dd.result-num-s { font-size:var(--font16); font-weight:var(--w-bold); }
@@ -1072,7 +1071,7 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-body li .pop { padding:24px 20px 24px 24px; width:100%; font-size:var(--font16); font-weight:var(--w-regular); color:var(--subtitle); }
 .grid-list-body li .pop.form-group label { font-size:var(--font16); }
 
-.grid-list-body.style2 { height:auto; }
+.grid-list-body.style2 { height:auto; margin-bottom:20px; }
 .grid-list-body.style2 > li { display:flex; align-items:center; padding:20px 0; border-bottom:1px solid var(--border3); }
 .grid-list-body.style2 > li:last-child { border-bottom:0; }
 .grid-list-body.style2 > li .tit { padding:0; }
@@ -1084,7 +1083,7 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-body li .pop.arr::after { content:""; position:absolute; top:50%; transform:translateY(-50%); right:20px; display:inline-block; width:20px; height:20px; background:url(../images/ic_est_arr.png)no-repeat 50%/20px auto; cursor:pointer; }
 
 /** style2 **/
-.grid-list-wrap.style2 .grid-list-body { background:var(--background4); }
+.grid-list-wrap.style2 .grid-list-body { max-height:fit-content; border-right:0; border-left:0; background:var(--background4); }
 .grid-list-wrap.style2 .grid-list-body > ul > li { padding:24px 0; }
 .grid-list-wrap.style2 .grid-list-body li > .tit { padding:0; }
 .grid-list-wrap.style2 .grid-list-body li .pop { padding:0 20px 0 24px; }
@@ -1104,7 +1103,7 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-body.option { height:100%; overflow-y:auto; }
 .grid-list-body.option::-webkit-scrollbar { width:14px; }
 .grid-list-body.option::-webkit-scrollbar-thumb { width:11px; background-color:var(--border2); border-radius:2px; border-radius:2px; }
-.grid-list-body.option::-webkit-scrollbar-track { width:14px; background-color:var(--background2); border-radius:5px; }
+.grid-list-body.option::-webkit-scrollbar-track { width:14px; background-color:var(--background2); /*border-radius:5px;*/ }
 .grid-list-body.option::-webkit-scrollbar-button {  height:100%; }
 .grid-list-body.option .form-group.check ul.check-box { display:block; font-size:0; }
 .grid-list-body.option ul li { padding:24px 34px 24px 20px; border-bottom:1px solid var(--border3); }
@@ -1124,7 +1123,7 @@ dd.download-wrap { padding:0; background:transparent; }
 /*---------------------------------------------
 	대리점 출고시
 ---------------------------------------------*/
-.all-cost-area { margin-top:20px; padding:16px 20px; background-color:var(--background2); color:var(--inactive); }
+.all-cost-area { margin-top:49px; padding:16px 20px; background-color:var(--background2); color:var(--inactive); }
 .all-cost-area .cost-group { display:flex; align-items:center; justify-content:space-between; line-height:21px; }
 .all-cost-area .cost-group + .cost-group { margin-top:12px; }
 .all-cost-area .cost-group .txt { font-size:var(--font16); font-weight:var(--w-bold); color:var(--normal); }

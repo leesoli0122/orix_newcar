@@ -326,7 +326,7 @@ $(document).ready(function() {
             handleToggleClick($(this));
         });
 
-		$('.btn').on('click', function(e){
+		$('.toggleChk .btn').on('click', function(e){
 			e.preventDefault();
 			e.stopPropagation();
 		});
@@ -479,7 +479,7 @@ $(document).ready(function() {
         	var contentWrapWidth = $("#contentWrap").outerWidth(); // #contentWrap의 너비
 	
 			// 위치
-			if (scrollTop >= 200) {
+			if (scrollTop >= 100) {
 				
 				if ($(".btn-top").css("display") === "none") {
 					$(".btn-top").css({
@@ -487,7 +487,7 @@ $(document).ready(function() {
 						opacity: 0
 					}).stop(true, true).animate({
 						opacity: 1
-					}, 200);
+					}, 100);
 				}
 			
 				if (scrollTop + windowHeight >= footerTop) {

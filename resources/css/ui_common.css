@@ -490,28 +490,43 @@ TOGGLE_ACCORDION #토글_아코디언
 
 .accordion-wrap > .accordion-info > .ques-cont{ height:0; opacity: 0; overflow: hidden; padding-top:0; transition: height .2s ease, opacity .2s ease, padding-top .2s ease; }
 .accordion-wrap > .accordion-info > .ques-cont.active{ height:auto; opacity:1; background: #F9FAFC; padding:30px; font-size:var(--font16); font-weight:var(--w-bold); color:var(--inactive);}
-/* 날짜 icon [QnA] */
-.accordion-wrap > .accordion-info > .ques .date { font-size:var(--font16); font-weight:var(--w-regular); color:var(--inactive); }
-.accordion-wrap > .accordion-info > .ques .date {  margin-left:50px; background: url(../../resources/images/ic_date.png) no-repeat left  50%/20px auto;}
-/* 버튼 icon [QnA] */
-.accordion-wrap > .accordion-info > .ques .btn button { background: var(--white); font-size:var(--font18); cursor: pointer; }
-.accordion-wrap > .accordion-info > .ques .btn button:first-child::after { content:''; position: absolute; transform: translateY(-50%); top:50%; width:1px; height:14px; background: var(--border1); }
-.accordion-wrap > .accordion-info > .ques .btn button span { padding-left:25px; }
+
+/* after line */
+.accordion-wrap > .accordion-info > .ques .after-line span::after { content:''; position: absolute; transform: translateY(-50%); top:50%; width:1px; height:14px; margin-left:16px; background: var(--border1); }
+.accordion-wrap > .accordion-info > .ques .btn.after-line span { padding-left:25px; }
+.accordion-wrap > .accordion-info > .ques .after-line span { padding-right:32px; }
+.accordion-wrap > .accordion-info > .ques .after-line button:last-child span,
+.accordion-wrap > .accordion-info > .ques .left .after-line span:last-child{ padding-right:0; }
+.accordion-wrap > .accordion-info > .ques .left .after-line span:last-child::after,
+.accordion-wrap > .accordion-info > .ques .after-line button:last-child span::after { content: none; }
+.accordion-wrap > .accordion-info > .ques .left .tit .after-line span::after { background: var(--title); }
+
+/* 날짜 icon */
+.accordion-wrap > .accordion-info > .ques .date { padding-left:25px; font-size:var(--font16); font-weight:var(--w-regular); color:var(--inactive); }
+.accordion-wrap > .accordion-info > .ques .date { background: url(../../resources/images/ic_date.png) no-repeat left  50%/20px auto;}
+/* 버튼 icon */
+.accordion-wrap > .accordion-info > .ques .btn button { background: var(--white);  font-size:var(--font18); cursor: pointer; }
 .accordion-wrap > .accordion-info > .ques .btn button.modifi { background:url(.././images/ic_list_modifi.png)no-repeat left 50%/20px auto;  }
 .accordion-wrap > .accordion-info > .ques .btn button.delete { background:url(.././images/ic_list_delete.png)no-repeat left 50%/20px auto; }
-.accordion-wrap > .accordion-info > .ques .btn button.delete { margin-left:16px; }
-.accordion-wrap > .accordion-info > .ques .btn button.modifi span { margin-right:16px; }
+/* 현황조회 */
+.accordion-wrap > .accordion-info > .ques .left .tit { margin:18px 0; }
+.accordion-wrap > .accordion-info > .ques .left .tit em {  font-style: initial; margin-right:12px; }
+.accordion-wrap > .accordion-info > .ques .left .txt { color:var(--inactive); font-weight:var(--w-regular); }
+.accordion-wrap > .accordion-info > .ques .right .tit { color:var(--secondary); margin-right:15px; }
+.accordion-wrap > .accordion-info > .ques .right .btn button.del { width:25px; height:25px; }
+.accordion-wrap > .accordion-info > .ques .right .btn button.del::after { content: ''; position:absolute; transform: translateY(-30%); top:50%; left:0; width:25px; height:25px; background:url(.././images/ic_list_delete.png)no-repeat center 100%/25px auto; }
 
 /*---------------------------------------------
-	Toggle_Accordion 아이콘있을 경우 [QnA]
+	Toggle_Accordion  [QnA] 아이콘있을 경우
 ---------------------------------------------*/
 .accordion-wrap.ico > .accordion-info > .ques { padding:30px 74px 30px; }
 .accordion-wrap.ico > .accordion-info > .ques::before,
 .accordion-wrap.ico > .accordion-info > .ques-cont p::before { content:''; position:absolute; width:24px; height:24px; }
 .accordion-wrap.ico > .accordion-info > .ques::before { top:50%; transform: translateY(-50%); left:30px; background: url(../../resources/images/ic_question.png) no-repeat 100%/24px auto;  }
-.accordion-wrap.ico > .accordion-info > .ques .date { padding-left:25px; }
+
 .accordion-wrap.ico > .accordion-info > .ques-cont p::before { left:0; background: url(../../resources/images/ic_answer.png) no-repeat 100%/24px auto; }
 .accordion-wrap.ico > .accordion-info > .ques-cont p { padding-left:44px; }
+.accordion-wrap.ico > .accordion-info > .ques .date { margin-left:50px; }
 
 /*********************************************************************
 Tooltip #툴팁

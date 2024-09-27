@@ -69,7 +69,7 @@
                                 <ul>
                                     <li>
                                         <span class="tit">브랜드</span>
-                                        <div class="pop arr" onclick="openPopup('PopUp01')">선택해 주세요</div>
+                                        <div class="pop arr" onclick="openPopup('PopUp02')">선택해 주세요</div>
                                     </li>
                                     <li>
                                         <span class="tit">모델</span>
@@ -497,9 +497,34 @@
                                     </li>
                                     <li>
                                         <span class="tit">수수료</span>
-                                        <div class="form-group">
-                                            <p>한도 : CM+AG 8% 이내</p>
+                                        <div class="change-txt">
+                                            <p>CM+AG 10%이내</p>
+                                            <p>(단 CM 10% 이내, AG 10% 이내)</p>
+                                            <div class="form-group">
+                                                <div class="charge">
+                                                    <span class="tit">CM</span>
+                                                    <div class="col-2">
+                                                        <input id="" type="amount" class="form-control amount-num" placeholder="금액"
+                                                            inputmode="numeric"><!-- [D] inputmode="numeric" : 세자리 수마다 콤마 적용  -->
+                                                        <span class="amount-txt">%</span>
+                                                    </div>
+                                                    <span class="num">0<span></span>원</span>
+                                                </div>
+                                                <div class="charge">
+                                                    <span class="tit">AG</span>
+                                                    <div class="col-2">
+                                                        <input id="" type="amount" class="form-control amount-num" placeholder="금액"
+                                                            inputmode="numeric"><!-- [D] inputmode="numeric" : 세자리 수마다 콤마 적용  -->
+                                                        <span class="amount-txt">%</span>
+                                                    </div>
+                                                    <span class="num">0<span></span>원</span>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </li>
+                                    <li>
+                                        <span class="tit">CM</span>
+                                        <div class="pop arr" onclick="openPopup('PopUp08')">선택 없음</div>
                                     </li>
                                 </ul>
                             </div>
@@ -524,7 +549,7 @@
         <!-- //e:footer -->
     </div>
     <!-- 브랜드/모델/세부차종/트림 -->
-    <div id="PopUp01" class="layerpopup laypop" tabindex="0">
+    <div id="PopUp02" class="layerpopup laypop" tabindex="0">
         <div class="content-wrap">
             <div class="pop-header">
                 <h3 class="pop-title">차량선택</h3>
@@ -533,7 +558,7 @@
             <div class="ly-con-wrap ly-scroll-con">
                 <div class="choose-wrap">
                     <div class="choose-group brand">
-                        <div class="sub-text-wrap style2">
+                        <div class="popup-text-wrap style2">
                             <h4>브랜드 선택</h4>
                         </div>
                         <ul class="choose image btnSelect">
@@ -581,7 +606,7 @@
                     </div>
 
                     <div class="choose-group">
-                        <div class="sub-text-wrap style2">
+                        <div class="popup-text-wrap style2">
                             <h4>모델 선택</h4>
                         </div>
                         <ul class="choose btnSelect">
@@ -612,7 +637,7 @@
                         </ul>
                     </div>
                     <div class="choose-group">
-                        <div class="sub-text-wrap style2">
+                        <div class="popup-text-wrap style2">
                             <h4>세부차종 선택</h4>
                         </div>
                         <div class="swiper-container">
@@ -656,7 +681,7 @@
                         </div>
                     </div>
                     <div class="choose-group form-wrap">
-                        <div class="sub-text-wrap style2">
+                        <div class="popup-text-wrap style2">
                             <h4>트림 선택</h4>
                         </div>
                         <div class="form-group radio">
@@ -693,6 +718,35 @@
     </div>
     <!-- 보험 고객 구분 : 개인사업자/법인 조건부 업종 해당 -->
     <!-- 보험 고객 구분 : 개인사업자/법인 조건부 업종 해당없음 -->
+    <!-- 보험 고객 구분 : 개인사업자/법인 조건부 업종 해당없음 -->
+    <div id="PopUp08" class="layerpopup laypop" tabindex="0">
+        <div class="content-wrap">
+            <div class="pop-header">
+                <h3 class="pop-title">CM 검색</h3>
+                <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+            </div>
+            <div class="ly-con-wrap ly-scroll-con">
+                <div class="table-type">
+                    <div class="col">
+                        <dl>
+                            <dt>CM 이름</dt>
+                            <dd class="form-group">
+                                <div class="form-row"><!-- [D] 인풋/버튼 클릭 시 팝업 호출 영역  -->
+                                    <div class="col-1">
+                                        <input id="" title="이름 검색창" type="text" class="form-control hasCancel" name="이름" value="이름 검색">
+                                    </div>
+                                    <button class="btn btn-input active" type="button">버튼명</button><!-- [D] active 클래스 : 완료 됐을 경우 활성화 -->
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-wrap popup">
+                <button type="button" name="button" class="btn btn-bottom" >저장</button>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="../../resources/js/swiper-bundle.min.js"></script>
 </body>
 

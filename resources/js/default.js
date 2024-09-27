@@ -185,16 +185,13 @@ function deleteBlock(_full) {
   $('body').removeAttr('style');
 }
 
-// 메시지 팝업
 function messagePopup(id) {
   const _target = $('#' + id);
   const currentTop = $(window).scrollTop();
   $('body').css({ 'position': 'fixed', 'top': -currentTop + 'px' });
   
   _target.find('.btn-layer-close, .btn-close, .confirm').on('click', function () {
-      closePopup(id);
-      $('body').css({ 'position': '', 'top': '' });
-      $(window).scrollTop(currentTop);
+      closePopup(id, currentTop);
   });
 
   _target.fadeIn(600).addClass('on').focus();
@@ -237,7 +234,7 @@ function openPopup(id) {
   }
 }
 
-function closePopup(id) {
+function closePopup(id, storedScrollPosition) {
   const $target = $('#' + id);
 
   deleteBlock();
@@ -247,14 +244,13 @@ function closePopup(id) {
   $('body').css({
       'overflow': '',
       'position': '',
-      'width': '',
       'top': ''
   });
 
-  if (scrollPosition) {
-      console.log('Restoring scroll position:', scrollPosition);
-      $(window).scrollTop(scrollPosition);
-      scrollPosition = 0; // 초기화
+  // 스크롤 위치 복원
+  if (storedScrollPosition !== undefined) {
+      console.log('Restoring scroll position:', storedScrollPosition);
+      $(window).scrollTop(storedScrollPosition);
   }
 }
 

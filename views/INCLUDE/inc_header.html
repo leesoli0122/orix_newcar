@@ -5,10 +5,6 @@
                 <img src="../../resources/images/logo.png" alt="오릭스캐피탈코리아">
             </a>
         </h1>
-        <ul>
-            <li><a href="javascript:void(0);">접속자정보</a></li>
-            <li><a href="javascript:void(0);">로그아웃</a></li>
-        </ul>
     </div>
 </div>
 <div class="h-menu">
@@ -28,9 +24,9 @@
                 <!-- menu 2depth -->
                 <div class="menuitem-wrap">
                     <ul class="menuitem">
-                        <li><a href="javascript:void(0);">렌터카 견적내기</a></li>
-                        <li><a href="javascript:void(0);">오토리스 견적내기</a></li>
-                        <li><a href="javascript:void(0);">선구매</a></li>
+                        <li><a href="#javascript:void(0);">렌터카 견적내기</a></li>
+                        <li><a href="#javascript:void(0);">오토리스 견적내기</a></li>
+                        <li><a href="#javascript:void(0);">선구매</a></li>
                     </ul>
                 </div>
             </li>
@@ -38,11 +34,11 @@
                 <a href="javascript:void(0);">현황조회</a>
                 <div class="menuitem-wrap">
                     <ul class="menuitem">
-                        <li><a href="javascript:void(0);">견적</a></li>
-                        <li><a href="javascript:void(0);">심사</a></li>
-                        <li><a href="javascript:void(0);">발주</a></li>
-                        <li><a href="javascript:void(0);">펀딩</a></li>
-                        <li><a href="javascript:void(0);">인도</a></li>
+                        <li><a href="#javascript:void(0);">견적</a></li>
+                        <li><a href="#javascript:void(0);">심사</a></li>
+                        <li><a href="#javascript:void(0);">발주</a></li>
+                        <li><a href="#javascript:void(0);">펀딩</a></li>
+                        <li><a href="#javascript:void(0);">인도</a></li>
                     </ul>
                 </div>
             </li>
@@ -50,10 +46,10 @@
                 <a href="javascript:void(0);">고객센터</a>
                 <div class="menuitem-wrap">
                     <ul class="menuitem">
-                        <li><a href="javascript:void(0);">공지사항</a></li>
-                        <li><a href="javascript:void(0);">자료실</a></li>
-                        <li><a href="javascript:void(0);">QnA</a></li>
-                        <li><a href="javascript:void(0);">전기차보조금</a></li>
+                        <li><a href="#javascript:void(0);">공지사항</a></li>
+                        <li><a href="#javascript:void(0);">자료실</a></li>
+                        <li><a href="#javascript:void(0);">QnA</a></li>
+                        <li><a href="#javascript:void(0);">전기차보조금</a></li>
                     </ul>
                 </div>
             </li>
@@ -64,50 +60,58 @@
                         <li>
                             <a href="javascript:void(0);">실적조회</a>
                             <ul class="sub-menuitem bul-dot">
-                                <li><a href="javascript:void(0);">나의실적</a></li>
-                                <li><a href="javascript:void(0);">팀실적조회</a></li>
+                                <li><a href="#javascript:void(0);">나의실적</a></li>
+                                <li><a href="#javascript:void(0);">팀실적조회</a></li>
                             </ul>
                         </li>
-                        <li><a href="javascript:void(0);">비밀번호변경</a></li>
+                        <li><a href="#javascript:void(0);">비밀번호변경</a></li>
                     </ul>
                 </div>
             </li>
         </ul>
         <ul class="menu-r">
-            <li><a href="javascript:void(0);">오릭스캐피탈 강남지점 <span>오릭스(orix)</span>님</a> 환영합니다.</li>
+            <li><a href="#javascript:void(0);">오릭스캐피탈 강남지점 <span>오릭스(orix)</span>님</a> 환영합니다.</li>
+            <li><button href="#javascript:void(0);" class="btn btn-logout">로그아웃</button></li>
         </ul>
     </div>
 </div>
-<div class="ham-menu">메뉴버튼</div>
 
 <script>
     $(document).ready(function () {
         //스크롤시 헤더 fix
-        var lnb = $(".h-menu").offset().top;
+        var $lnb = $(".h-menu");
         $(window).scroll(function () {
 
-            var window = $(this).scrollTop();
-
-            if (lnb <= window) {
-                $(".h-menu").addClass("fix");
+            if ($(this).scrollTop() > 0) {
+                $lnb.addClass("fix");
             } else {
-                $(".h-menu").removeClass("fix");
+                $lnb.removeClass("fix");
             }
         });
 
-        
         // gnb action
         $(".menu > li").on('click', function(e) {
             e.preventDefault();
 
-            var $this = $(this).children(".menuitem-wrap");
+            var $menu = $(this).not($siblingsMenu);
+            var $siblingsMenu = $(this).siblings();
+            var $thisMenuWrap = $(this).children().siblings(".menuitem-wrap");
+            var $otherMenuWraps = $(".menuitem-wrap").not($thisMenuWrap);
 
-            $this.addClass('on');
-            $(this).siblings().children(".menuitem-wrap").removeClass('on');
+            // $menu 클릭 했을 때
+            $menu.toggleClass('on');
+            $siblingsMenu.removeClass('on');
 
-            $this.off('mouseleave').on('mouseleave', function() {
-                $this.removeClass('on');
-            });
+            // 클릭한 메뉴만 열림, 나머지는 닫힘
+            $thisMenuWrap.toggleClass('on');
+            $otherMenuWraps.removeClass('on');
+        });
+
+        // 메뉴 외 영역 클릭 시 메뉴 닫기
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('.menu').length) {
+                $(".menuitem-wrap").removeClass('on');
+            }
         });
 
         // 전체메뉴 아이콘 클릭 시

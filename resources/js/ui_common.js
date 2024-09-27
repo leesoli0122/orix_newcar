@@ -288,18 +288,18 @@ $(document).ready(function() {
             var inputOffset = $(input).offset(); // input의 위치값 가져오기
             var inputHeight = $(input).outerHeight();
             inst.dpDiv.css({
-                top: inputOffset.top + inputHeight + "px", // input 바로 아래
-                left: inputOffset.left + "-10px" // input의 왼쪽
+                top: inputOffset.top + inputHeight + 'px', // input 바로 아래
+                left: inputOffset.left + '-10px' // input의 왼쪽
             });
         }
         
-        $(".datepicker").datepicker({
+        $('.datepicker').datepicker({
 			showOtherMonths:true,
             showMonthAfterYear: true,
             showButtonPanel: true,
             changeYear: true,
             changeMonth: true,
-            yearRange:"c-5:c+5"//선택 범위
+            yearRange:'c-5:c+5'//선택 범위
         });
     
 		//오늘 버튼
@@ -352,9 +352,9 @@ $(document).ready(function() {
         var scrollTop = $(window).scrollTop();
 
         if (scrollTop > 400) {
-            $(".filter").addClass("fix");
+            $('.filter').addClass('fix');
         } else {
-            $(".filter").removeClass("fix");
+            $('.filter').removeClass('fix');
         }
     }
 
@@ -469,21 +469,21 @@ $(document).ready(function() {
 		scrollTop
 	---------------------------------------------*/
 	function handleScrollTop() {
-		$(".btn-top").hide();
+		$('.btn-top').hide();
 	
-		$(window).on("scroll", function() {
+		$(window).on('scroll', function() {
 			var scrollTop = $(this).scrollTop();
 			var windowHeight = $(this).height();
-			var footerTop = $("footer").offset().top;
-			var contentWrapOffset = $("#contentWrap").offset(); // #contentWrap의 위치
-        	var contentWrapWidth = $("#contentWrap").outerWidth(); // #contentWrap의 너비
+			var footerTop = $('footer').offset().top;
+			var contentWrapOffset = $('#contentWrap').offset(); // #contentWrap의 위치
+        	var contentWrapWidth = $('#contentWrap').outerWidth(); // #contentWrap의 너비
 	
 			// 위치
 			if (scrollTop >= 100) {
 				
-				if ($(".btn-top").css("display") === "none") {
-					$(".btn-top").css({
-						display: "block",
+				if ($('.btn-top').css('display') === 'none') {
+					$('.btn-top').css({
+						display: 'block',
 						opacity: 0
 					}).stop(true, true).animate({
 						opacity: 1
@@ -492,28 +492,32 @@ $(document).ready(function() {
 			
 				if (scrollTop + windowHeight >= footerTop) {
 
-					$(".btn-top").css({
-						position: "absolute",
+					$('.btn-top').css({
+						position: 'absolute',
 						bottom: `${30}px`,
-						right: "10px"
+						right: '10px'
 					});
 				} else {
 					
-					$(".btn-top").css({
-						position: "fixed",
-						bottom: "30px",
-						right: "10px"
+					$('.btn-top').css({
+						position: 'fixed',
+						bottom: '30px',
+						right: '10px'
 					});
 
 					// contentWrap
-					var buttonWidth = $(".btn-top").outerWidth();
+					var buttonWidth = $('.btn-top').outerWidth();
 					var contentWrapRightEdge = contentWrapOffset.left + contentWrapWidth;
 					var buttonRightEdge = $(window).width() - buttonWidth - 10;
 	
 					// #contentWrap 밖으로 나갈 경우
 					if (buttonRightEdge > contentWrapRightEdge) {
-						$(".btn-top").css({
-							right: `${$(window).width() - contentWrapRightEdge}px`
+						$('.btn-top').css({
+							right: `${$(window).width() - contentWrapRightEdge + 10}px`
+						});
+					} else {
+						$('.btn-top').css({
+							right: '10px' // 원래 위치
 						});
 					}
 				}
@@ -522,12 +526,12 @@ $(document).ready(function() {
 				
 			} else {
 
-				$(".btn-top").css("display", "none");
+				$('.btn-top').css('display', 'none');
 			}
 		});
 	
-		$(document).on("click", ".btn-top", function() {
-			$("html, body").stop().animate({ scrollTop: 0 }, "linear");
+		$(document).on('click', '.btn-top', function() {
+			$('html, body').stop().animate({ scrollTop: 0 }, 'linear');
 		});
 	}
 	
@@ -555,7 +559,7 @@ $(document).ready(function() {
 					inputElement.off('keyup').on('keyup', function() {
 						var inputValue = inputElement.val().trim();
 						var btnCancelContainer = inputElement.closest('.col-10'); // 부모
-						const btnCancel = $('<button type="button" class="btn btn-cancel"><span class="ir">입력취소</span></button>'); 
+						const btnCancel = $('<button type="button" class="btn btn-cancel"><span class="ir">입력취소</span></button>');
 	
 						// 입력값이 있을 경우
 						if (inputValue !== '') {

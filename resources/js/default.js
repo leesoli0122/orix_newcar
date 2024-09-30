@@ -18,6 +18,13 @@ $(document).ready(function() {
 		$this.removeClass('on');
 	});
 
+  // 견적추가 on/off
+  document.querySelectorAll('.grid-list-header').forEach(function(header) {
+    header.addEventListener('click', function() {
+        header.classList.toggle('on');
+    });
+  });
+
   // 페이지 로드 시 초기 상태를 확인
   document.addEventListener('DOMContentLoaded', function() {
       if (inputField.value.trim() !== "") {

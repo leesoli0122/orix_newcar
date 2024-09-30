@@ -40,7 +40,7 @@ ul, ol, li, dl, dt, dd  { list-style:none; margin:0; padding:0; box-sizing: bord
 .col-1 { max-width:410px; }
 .col-2 { /*-ms-flex: 0 0 20%; flex: 0 0 20%;*/  max-width:192px; }
 .col-3 { /*ms-flex: 0 0 30%; flex: 0 0 30%;*/ max-width:162px; }
-.col-4 {   max-width:45.3%; }
+.col-4 { /*max-width:45.3%;*/ max-width:111px; }
 .col-5 {  max-width:55.3%; }
 .col-6 { max-width:65.3%;}
 .col-7 { max-width:75.3%; }
@@ -105,6 +105,7 @@ table { border-collapse:collapse; border-spacing:0; width:100%; }
 .revert-type-spread { margin:0 20px; }
 .essential { color:var(--subtitle); }
 .essential::after { content:"*"; color:var(--error); padding-left:3px; }
+.flex { display:flex !important; }
 
 /* 폰트숨김 */
 .ir { position:absolute; clip:rect(1px 1px 1px 1px); width:1px; height:1px; margin:-1px; overflow: hidden;   }
@@ -146,6 +147,7 @@ style4 = table 안에 들어갈 때
 
 .caption { padding-left:22px; margin-top:10px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--normal); }
 .caption2 { position:absolute; top:-33px; right:0; }/*테이블캡션(단위)*/
+.caption3 { padding-left:22px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--secondary); }/*레이어팝업에서*/
 
 .blue { color:var(--secondary)!important; }
 .red { color:var(--error)!important; }
@@ -173,7 +175,9 @@ style2 = padding:20px 0 10px;
 popup-text-wrap 본문 타이틀
 ---------------------------------------------*/
 .popup-text-wrap { padding:20px 0; }
-.popup-text-wrap h4 { font-size:var(--font16); font-weight:var(--w-bold); color:var(--normal); }
+.popup-text-wrap.style2 { padding:10px 0 20px; }
+.popup-text-wrap h4,
+.popup-text-wrap.style2 h4 { font-size:var(--font16); font-weight:var(--w-bold); color:var(--normal); }
 
 /*********************************************************************
 #블릿텍스트
@@ -267,7 +271,7 @@ header #헤더
 #headerWrap > .h-menu div ul.menu-r li a.btn-primary { padding:4px 15px; line-height: 14px; color:var(--white); background-color:var(--primary);border-radius:14px; }
 
 /* fix */
-#headerWrap:has(.h-menu.fix) { /*position:fixed; top:0; width:100%; animation: down 0.5s ease;*/ background: var(--white); box-shadow: 0px 4px 6px #ddd; z-index:1; }/*20240927 z-index 수정*/
+#headerWrap:has(.h-menu.fix) { /*position:fixed; top:0; width:100%; animation: down 0.5s ease;*/ background: var(--white); box-shadow: 0px 4px 6px #ddd; z-index:999999; }/*20240927 z-index 수정*/
 /* @keyframes down {
   0%{ transform: translateY(-50px) }
   100%{ transform: translateY(0px) }

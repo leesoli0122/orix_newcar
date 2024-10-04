@@ -464,8 +464,10 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap > .accordion-info > .ques { position:relative; display:flex; width:100%; justify-content:space-between; align-items:center; padding:30px 74px 30px 30px;  font-size: var(--font18); font-weight:var(--w-bold); color:var(--title);  }
 .accordion-wrap > .accordion-info > .ques::after { content:''; position:absolute; right:30px; top:50%; transform:translateY(-50%); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h20v20H0z' data-name='사각형 22269'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)' data-name='그룹 45678'%3E%3Cg data-name='그룹 45677'%3E%3Cpath fill='none' stroke='%23666666' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 3.99 3.99L13.98 8' data-name='패스 53126'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");; background-repeat: no-repeat; background-position: center; background-size:30px; width:24px; height:24px; }
 .accordion-wrap > .accordion-info > .ques.active::after { transform:translate(0, -50%) rotate(-180deg); transition: all ease .2s; }
+.accordion-wrap > .accordion-info > .ques .left:not(:has(.date)) { width:calc(100% - 300px);}
+.accordion-wrap > .accordion-info > .ques .left:not(:has(.date),:has(+.right .after-line)) { width:calc(100% - 150px);}
+.accordion-wrap > .accordion-info > .ques .left { width:calc(100% - 100px);}
 /* column default */
-.accordion-wrap > .accordion-info > .ques .left { width:65%;}
 .accordion-wrap > .accordion-info > .ques .left .tit { overflow:hidden; text-overflow: ellipsis;  white-space:nowrap;}
 .accordion-wrap > .accordion-info > .ques .left,
 .accordion-wrap > .accordion-info > .ques .right { display:flex; flex-direction:column; }
@@ -512,7 +514,7 @@ TOGGLE_ACCORDION #토글_아코디언
 
 .accordion-wrap.ico > .accordion-info > .ques-cont p::before { left:0; background: url(../../resources/images/ic_answer.png) no-repeat 100%/24px auto; }
 .accordion-wrap.ico > .accordion-info > .ques-cont p { padding-left:44px; }
-.accordion-wrap.ico > .accordion-info > .ques .date { margin-left:50px; }
+.accordion-wrap.ico > .accordion-info > .ques .date { margin-left:30px; }
 
 /*********************************************************************
 Tooltip #툴팁

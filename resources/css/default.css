@@ -22,7 +22,7 @@ ul, ol { list-style:none; }
 *::after { -webkit-box-sizing: border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-text-size-adjust:none; max-height:1000000px; word-break:keep-all; word-wrap:break-word; outline:none; }
 .wrap { position:relative; display:block; padding-top:144px; }
 header { position:fixed; top:0; left:0; z-index:10; width:100%; min-height:45px; background-color: #FFFFFF; }
-form { height:100%; }
+/* form { height:100%; } 비밀번호 찾기 화면: 높이를 못 찾아서 주석 처리 */
 html, body, div, ul, ol, dl, li, dt, dd, p, h1, h2, h3, h4, h5, h6, table, thead, tbody, tr, th, td, caption, address,
 canvas, details, figure, figcaption, footer, header, menu, nav, section, article, aside,
 form, fieldset, button, select, textarea, input, fieldset, legend, label, a, span, strong, em, address, dfn, small, i, b, ::before, ::after { font-family: 'NanumGothic', /*'Apple SD Gothic Neo',*/ 'Noto Sans', sans-serif; position:relative; margin:0; padding:0; border:0; list-style:none; word-break:break-all; word-wrap:inherit; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -ms-overflow-style:scrollbar; }
@@ -41,7 +41,7 @@ ul, ol, li, dl, dt, dd  { list-style:none; margin:0; padding:0; box-sizing: bord
 .col-2 { /*-ms-flex: 0 0 20%; flex: 0 0 20%;*/  max-width:192px; }
 .col-3 { /*ms-flex: 0 0 30%; flex: 0 0 30%;*/ max-width:162px; }
 .col-4 { /*max-width:45.3%;*/ max-width:111px; }
-.col-5 {  max-width:55.3%; }
+.col-5 { /*max-width:55.3%;*/ max-width:280px; }
 .col-6 { max-width:65.3%;}
 .col-7 { max-width:75.3%; }
 .col-8 {max-width:85.3%; }
@@ -87,9 +87,6 @@ ul, ol, li, dl, dt, dd  { list-style:none; margin:0; padding:0; box-sizing: bord
     --background3:#5474c0;
     --background4:#F9FAFC;
     --background5:#FCF9F9;
-
-    --svg-image-select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h20v20H0z' data-name='사각형 22269'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)' data-name='그룹 45678'%3E%3Cg data-name='그룹 45677'%3E%3Cpath fill='none' stroke='%23666666' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 3.99 3.99L13.98 8' data-name='패스 53126'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    --svg-image-toggle-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h20v20H0z' data-name='사각형 22269'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)' data-name='그룹 45678'%3E%3Cg data-name='그룹 45677'%3E%3Cpath fill='none' stroke='%23111111' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 3.99 3.99L13.98 8' data-name='패스 53126'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 
@@ -106,6 +103,7 @@ table { border-collapse:collapse; border-spacing:0; width:100%; }
 .essential { color:var(--subtitle); }
 .essential::after { content:"*"; color:var(--error); padding-left:3px; }
 .flex { display:flex !important; }
+.mb0 { margin-bottom:0 !important; }
 
 /* 폰트숨김 */
 .ir { position:absolute; clip:rect(1px 1px 1px 1px); width:1px; height:1px; margin:-1px; overflow: hidden;   }
@@ -171,6 +169,14 @@ style2 = padding:20px 0 10px;
 .table-text-wrap.style2 { padding:20px 0 10px; }
 .table-text-wrap.style2 h4 { font-size:var(--font16); font-weight:var(--w-bold); color:var(--normal); }
 
+/*---------------------------------------------
+estimate-text-wrap 견적서 타이틀(h5) 및 안내문구(p)
+notice-word = 안내문구
+---------------------------------------------*/
+.notice-word { padding:8px 10px; font-size:var(--font12); font-weight:var(--w-regular); color:var(--inactive); }
+.estimate-text-wrap { padding:24px 0 10px; }
+.estimate-text-wrap h5 { font-size:var(--font16); font-weight:var(--w-bold); color:var(--normal); }
+.estimate-text-wrap h5::before { content:""; display:inline-block; margin-right:8px; width:10px; height:10px; border-radius:50%; background:var(--subtitle); }
 /*---------------------------------------------
 popup-text-wrap 본문 타이틀
 ---------------------------------------------*/
@@ -271,7 +277,7 @@ header #헤더
 #headerWrap > .h-menu div ul.menu-r li a.btn-primary { padding:4px 15px; line-height: 14px; color:var(--white); background-color:var(--primary);border-radius:14px; }
 
 /* fix */
-#headerWrap:has(.h-menu.fix) { /*position:fixed; top:0; width:100%; animation: down 0.5s ease;*/ background: var(--white); box-shadow: 0px 4px 6px #ddd; z-index:999999; }/*20240927 z-index 수정*/
+#headerWrap:has(.h-menu.fix) { /*position:fixed; top:0; width:100%; animation: down 0.5s ease;*/ background: var(--white); box-shadow: 0px 4px 6px #ddd; z-index:105; }/*20240927 z-index 수정*/
 /* @keyframes down {
   0%{ transform: translateY(-50px) }
   100%{ transform: translateY(0px) }

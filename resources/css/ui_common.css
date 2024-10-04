@@ -494,7 +494,8 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap > .accordion-info > .ques .btn button.modifi { background:url(.././images/ic_list_modifi.png)no-repeat left 50%/20px auto;  }
 .accordion-wrap > .accordion-info > .ques .btn button.delete { background:url(.././images/ic_list_delete.png)no-repeat left 50%/20px auto; }
 /* 현황조회 */
-.accordion-wrap > .accordion-info > .ques .left .tit { margin:18px 0; }
+.accordion-wrap > .accordion-info > .ques .left .date { margin-bottom:18px; }
+.accordion-wrap > .accordion-info > .ques .left .txt { margin-top:18px; }
 .accordion-wrap > .accordion-info > .ques .left .tit em {  font-style: initial; margin-right:12px; }
 .accordion-wrap > .accordion-info > .ques .left .txt { color:var(--inactive); font-weight:var(--w-regular); }
 .accordion-wrap > .accordion-info > .ques .right .tit { color:var(--secondary); margin-right:15px; }

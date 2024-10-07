@@ -14,78 +14,31 @@
     <script type="text/javascript" src="../../resources/js/ui_plugin.js"></script>
     <script type="text/javascript" src="../../resources/js/default.js"></script>
 </head>
+<style>
+    @media print {
+  /* 인쇄할 부분만 표시 */
+  #noPrint {
+    display: none; /* 이 요소는 인쇄되지 않음 */
+  }
+
+  #printArea {
+    display: block;
+  }
+}
+
+</style>
 <body>
-    <div class="movepage">
-        <ul>
-            <li>
-                이전 글
-                <ul>
-                    <li class="tit">이전글 제목</li>
-                    <li class="date">2024.08.24</li>
-                    <li class="left">
-                        <ul class="icon">
-                            <li>첨부파일아이콘</li>
-                            <li>첨부파일아이콘</li>
-                            <li>첨부파일아이콘</li>
-                        </ul>
-                        <span>: 첨부파일</span>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                다음 글
-                <ul>
-                    <li class="tit">다음글 제목</li>
-                    <li class="date">2024.09.02</li>
-                    <li class="right">
-                        <span>첨부파일 :</span>
-                        <ul class="icon">
-                            <li>첨부파일아이콘</li>
-                            <li>첨부파일아이콘</li>
-                            <li>첨부파일아이콘</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <table class="thead">
-            <tr>
-                <td>제목1</td>
-                <td>제목2</td>
-            </tr>
-        </table>
-        
-        <table aria-hidden=“aria-hidden”>
-            <colgroup>
-                <col width="10%" />
-                <col width="*" />
-            </colgroup>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-            </tr>
-        </table>
-        <div style="height:300px;">
-            <table summary="">
-                <caption></caption>
-                <colgroup>
-                    <col width="10%" />
-                    <col width="*" />
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th scope=“col”>1</th>
-                        <th scope=“col”>2</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div id="printArea">
+
+      <h1>이 부분만 인쇄</h1>
+      <p>인쇄할 내용입니다.</p>
+    </div>
+    <div id="noPrint">
+        <h1>이 부분은 인쇄되지 않음</h1>
+        <p>이 내용은 화면에서만 보입니다.</p>
+    </div>
+      
+      <button onclick="window.print()">인쇄하기</button>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </body>

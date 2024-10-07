@@ -12,6 +12,7 @@ $(document).ready(function() {
     var $this = $(this).parents(".tooltip-wrap");
     $this.toggleClass('on');
   });
+  
   //툴팁 닫기
 	$(".tooltip-close").on('click', function(){
 		var $this = $(this).parents(".tooltip-wrap");

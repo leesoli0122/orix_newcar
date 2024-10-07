@@ -148,6 +148,8 @@ style4 = table 안에 들어갈 때
 .caption3 { padding-left:22px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--secondary); }/*레이어팝업에서*/
 
 .blue { color:var(--secondary)!important; }
+.blue-p { color:var(--primary)!important; }
+.blue-bak3 { color:var(--background3)!important; }
 .red { color:var(--error)!important; }
 .bold { font-weight:var(--w-bold)!important; }
 .now { background:var(--background4); }
@@ -321,7 +323,9 @@ sub-content
 
 @media screen and (max-width:1200px) {
     /* header menu */
-    #headerWrap > .h-menu { display:flex; justify-content:space-between; padding:15px 20px 20px; }
+    #headerWrap {  display:flex; justify-content:flex-start; align-items:center; padding-left:30px; height:76px; }
+    #headerWrap .top { margin:0; padding:0; width:auto; }
+    #headerWrap > .h-menu { display:flex; justify-content:space-between; width:100%; }
     #headerWrap > .h-menu div ul.menu { display:none; }
     #headerWrap > .h-menu div ul.menu-r li:first-child { margin-left:0; }
     #headerWrap > .h-menu .nav-btn { display:block; }

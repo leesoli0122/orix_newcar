@@ -322,15 +322,14 @@ $(document).ready(function() {
 		Toggle_Accordion [QnA]
 	---------------------------------------------*/
     function toggleChkHandlers() {
-        $('.toggleChk').on('click', function() {
-            handleToggleClick($(this));
-        });
-
-		$('.toggleChk .btn').on('click', function(e){
+        $(document).on('click', '.toggleChk', function(e){
+			handleToggleClick($(this));
+		});
+		$(document).on('click','.toggleChk .btn', function(e){
 			e.preventDefault();
 			e.stopPropagation();
 		});
-    }
+    }//개발 수정
 
     function handleToggleClick($toggleElement) {
         var $toggleCont = $toggleElement.parent().find('.ques-cont');
@@ -375,14 +374,14 @@ $(document).ready(function() {
         const $fileInput = $('.attachmentFile');  // 파일 입력
         const $addFileList = $('.add-file'); // 파일 리스트
         const maxFiles = 3;                  // 최대 파일 개수
-        const maxFileSize = 300 * 1024 * 1024; // 300MB 제한 (바이트로 변환)
+        const maxFileSize = 50 * 1024 * 1024; // 50MB 제한 (바이트로 변환)
 
         // "찾아보기" 버튼 트리거
         $('.file .btn-input').on('click', function() {
             $fileInput.click();
         });
 
-        // 파일 선택 (300MB 이하의 JPG, PNG파일 3개까지 업로드)
+        // 파일 선택 (50MB 이하의 xlsx, pdf, hwp, pptx, doc파일 3개까지 업로드)
         $fileInput.on('change', function() {
             // 파일 3개 있는지 확인
             if ($addFileList.children('li').length >= maxFiles) {
@@ -397,13 +396,13 @@ $(document).ready(function() {
                 const fileType = file.type;
                 const fileSize = file.size;
 
-                // 파일 형식과 크기 검사 (JPG, PNG, 300MB 이하)
-                if (!fileType.match(/image\/(jpeg|png)/)) {
-                    alert('JPG 또는 PNG 파일만 업로드할 수 있습니다.');
+                // 파일 형식과 크기 검사 (xlsx, pdf, hwp, pptx, doc, 50MB 이하)
+                if (!fileType.match(/image\/(xlsx|pdf|hwp|doc|pptx)/)) {
+                    alert('xlsx, pdf, hwp, pptx, doc 파일만 업로드할 수 있습니다.');
                     return;
                 }
                 if (fileSize > maxFileSize) {
-                    alert('파일 크기는 300MB를 초과할 수 없습니다.');
+                    alert('파일 크기는 50MB를 초과할 수 없습니다.');
                     return;
                 }
 
@@ -479,7 +478,7 @@ $(document).ready(function() {
         	var contentWrapWidth = $('#contentWrap').outerWidth(); // #contentWrap의 너비
 	
 			// 위치
-			if (scrollTop >= 0) {
+			if (scrollTop > 0) {
 				
 				if ($('.btn-top').css('display') === 'none') {
 					$('.btn-top').css({

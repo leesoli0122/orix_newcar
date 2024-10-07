@@ -532,8 +532,8 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>ul>li{display: inline-block;  }
 
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div { display:flex; justify-content: space-between; width:100%; font-size:0; }
-.accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>ul>li:first-child { padding:0 16px 0 0; }
-.accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>ul>li { display:inline-block; padding:0 16px; font-size:var(--font18); font-weight: var(--w-regular); }
+.accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>ul>li { display:inline-block; padding-right:16px; margin-right:16px; font-size:var(--font18); font-weight: var(--w-regular); }
+.accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>ul>li:last-child { padding-right:0; margin-right:0; }
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>ul>li::after { content: ""; position:absolute; width:1px; height:16px; top:50%; right:0; transform: translateY(-50%); background:var(--title); }
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>ul>li:last-child::after { content: none; }
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>p:last-child { text-align: right; min-width:210px; }

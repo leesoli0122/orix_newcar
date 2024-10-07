@@ -299,8 +299,8 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 /*---------------------------------------------
 	Input_Radio Style
 ---------------------------------------------*/
-.form-group > .radio-box input[type='radio'] + .radio-button > span::before { background:var(--white); border:6.5px solid var(--background1); border-radius:50%; }
-.form-group > .radio-box input[type='radio']:checked + .radio-button > span::before { border:6.5px solid var(--secondary); }
+.form-group > .radio-box input[type='radio'] + .radio-button > span::before { background:var(--white); border:7.5px solid var(--background1); border-radius:50%; }
+.form-group > .radio-box input[type='radio']:checked + .radio-button > span::before { border:7.5px solid var(--secondary); }
 
 /*---------------------------------------------
 	Input_Toggle style
@@ -715,15 +715,15 @@ tab #탭
 *********************************************************************/
 .tabs-wrap .tab-item,
 .tabs-wrap .tab-list { display:flex; align-items:center; position:relative; background:#fff; font-size:0; }
-.tabs-wrap .tab-item::after { content:""; display:inline-block; margin-top:89px; width:100%; height:1px; background:var(--normal); }
+.tabs-wrap .tab-item::after { content:""; display:inline-block; margin-top:70px; width:100%; height:1px; background:var(--normal); }
 .tabs-wrap .tab-item li,
-.tabs-wrap .tab-list li { display:inline-block; position:relative; padding:24px 20px; max-width:241px; width:100%; border:1px solid var(--border1); border-bottom: 1px solid var(--normal); font-size:var(--font18); color:var(--inactive); line-height:2.2; }
+.tabs-wrap .tab-list li { display:inline-block; position:relative; padding:24px 0; max-width:241px; width:100%; border:1px solid var(--border1); border-bottom: 1px solid var(--normal); font-size:var(--font18); color:var(--inactive); line-height:2.2; }
 .tabs-wrap .tab-item li.style2,
 .tabs-wrap .tab-list li.style2 { /*padding:22px 20px 23px;*/ line-height:initial; }
 .tabs-wrap .tab-item li:last-child,
 .tabs-wrap .tab-list li:last-child { margin-right:0; }
 .tabs-wrap .tab-item li a,
-.tabs-wrap .tab-list li a { display:block; line-height:inherit; text-align:center; font-weight:var(--w-bold); color:var(--inactive); }
+.tabs-wrap .tab-list li a { display:block; line-height:initial; text-align:center; font-weight:var(--w-bold); color:var(--inactive); }
 .tabs-wrap .tab-item li.on,
 .tabs-wrap .tab-list li.on { border:2px solid var(--title); border-bottom:none; font-weight:var(--w-bold); color:var(--title); }
 .tabs-wrap .tab-item li.on a,
@@ -1215,7 +1215,7 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-body.option ul li.plus-option { display:flex; align-items:center; padding:20px 24px 20px 0; }
 .grid-list-body.option ul li.plus-option .form-group { padding-left:24px; }
 .grid-list-body.option ul li.plus-option .tit { padding:0; }
-.grid-list-body.option ul li.plus-option .form-group { padding-right:0; }
+.grid-list-body.option ul li.plus-option .form-group { padding-right:0; width:100%; }
 
 /*---------------------------------------------
 	대리점 출고시

@@ -425,10 +425,10 @@ button.btn.btn-cancel { content:''; position:absolute; z-index:11; transform: tr
 
 /* 현황조회 버튼 - 아코디언*/
 .accordion-wrap .btn-wrap { margin-top:50px; text-align: center; }
-.accordion-wrap .btn-wrap button.btn-cont { padding:0 16px; height:46px; }
-.accordion-wrap .btn-wrap button.btn-cont { pointer-events: none; }
-.accordion-wrap .btn-wrap button.btn-cont.view { border:1px solid var(--background3); color:var(--background3); }
-.accordion-wrap .btn-wrap button.btn-cont.active { background:var(--background3); border:1px solid var(--background3); color:var(--white); }
+.accordion-wrap .btn-wrap button.btn.btn-cont { padding:0 16px; height:46px; }
+.accordion-wrap .btn-wrap button.btn.btn-cont:hover { border:1px solid var(--normal); color:var(--normal);  }
+.accordion-wrap .btn-wrap button.btn.btn-cont.view { border:1px solid var(--background3); color:var(--background3); }
+.accordion-wrap .btn-wrap button.btn.btn-cont.active { background:var(--background3); border:1px solid var(--background3); color:var(--white); }
 
 /* 오른쪽 버튼 */
 .btn-wrap.right-btn { margin:20px 0; width:100%; text-align:right; }

@@ -424,7 +424,7 @@ button.btn.btn-search { padding:0; height:46px; width:30px; padding:0 32px; back
 button.btn.btn-cancel { content:''; position:absolute; z-index:11; transform: translateY(-50%); top:50%; right:16px; padding:0; width:24px; height:24px; background:url(../../resources/images/common/ic-cancel.png)no-repeat 100%/24px auto;}
 
 /* 현황조회 버튼 - 아코디언*/
-.accordion-wrap .btn-wrap { margin-top:50px; text-align: center; }
+.accordion-wrap .btn-wrap { margin:50px 0 10px; text-align: center; }
 .accordion-wrap .btn-wrap button.btn.btn-cont { padding:0 16px; height:46px; }
 .accordion-wrap .btn-wrap button.btn.btn-cont:hover { border:1px solid var(--normal); color:var(--normal);  }
 .accordion-wrap .btn-wrap button.btn.btn-cont.view { border:1px solid var(--background3); color:var(--background3); }
@@ -532,7 +532,7 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>ul>li{display: inline-block;  }
 
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div { display:flex; justify-content: space-between; width:100%; font-size:0; }
-.accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>ul>li { display:inline-block; padding-right:16px; margin-right:16px; font-size:var(--font18); font-weight: var(--w-regular); }
+.accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>ul>li { display:inline-block; padding-right:16px; margin-right:16px; font-size:var(--font18); font-weight: var(--w-regular); color:var(--title); }
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>ul>li:last-child { padding-right:0; margin-right:0; }
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>ul>li::after { content: ""; position:absolute; width:1px; height:16px; top:50%; right:0; transform: translateY(-50%); background:var(--title); }
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>ul>li:last-child::after { content: none; }

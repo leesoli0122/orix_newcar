@@ -504,13 +504,12 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap > .accordion-info > .ques .right .btn button.del { width:25px; height:25px; }
 .accordion-wrap > .accordion-info > .ques .right .btn button.del::after { content: ''; position:absolute; transform: translateY(-50%); top:50%; left:0; width:25px; height:25px; background:url(.././images/ic_list_delete.png)no-repeat center 100%/25px auto; }
 /* 현황조회 conts */
-.accordion-wrap > .accordion-info > .ques-cont.list-view ul { border-bottom:1px solid var(--border3); }
-.accordion-wrap > .accordion-info > .ques-cont.list-view ul:first-child>li { margin:0 0 32px 0; }
-/* .accordion-wrap > .accordion-info > .ques-cont.list-view ul>li:last-child {margin:32px 0;} */
-.accordion-wrap > .accordion-info > .ques-cont.list-view ul>li{margin:26px 0 32px 0; }
-.accordion-wrap > .accordion-info > .ques-cont.list-view ul>li>p { display:inline-block; }
-.accordion-wrap > .accordion-info > .ques-cont.list-view ul>li>p:first-child{ margin-left:20px; margin-right:80px; color:var(--normal); font-weight: var(--w-bold); }
-.accordion-wrap > .accordion-info > .ques-cont.list-view ul>li>p:last-child { color:var(--title); font-weight: var(--w-regular); }
+.accordion-wrap > .accordion-info > .ques-cont .list-view ul { border-bottom:1px solid var(--border3); }
+.accordion-wrap > .accordion-info > .ques-cont .list-view ul:first-child>li { margin:0 0 32px 0; }
+.accordion-wrap > .accordion-info > .ques-cont .list-view ul>li{ display:flex; align-items: flex-start; margin:26px 0 32px 0; }
+.accordion-wrap > .accordion-info > .ques-cont .list-view ul>li>p { display:inline-block; }
+.accordion-wrap > .accordion-info > .ques-cont .list-view ul>li>p:first-child{ width:168px; margin-left:20px; color:var(--normal); font-weight: var(--w-bold); }
+.accordion-wrap > .accordion-info > .ques-cont .list-view ul>li>p:last-child { width:100%; color:var(--title); font-weight: var(--w-regular); }
 /*---------------------------------------------
 	Toggle_Accordion  [QnA] 아이콘있을 경우
 ---------------------------------------------*/

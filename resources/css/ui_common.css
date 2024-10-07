@@ -515,7 +515,7 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap > .accordion-info > .ques-cont .list-view ul:first-child>li { margin:0 0 32px 0; }
 .accordion-wrap > .accordion-info > .ques-cont .list-view ul>li{ display:flex; align-items: flex-start; margin:26px 0 32px 0; }
 .accordion-wrap > .accordion-info > .ques-cont .list-view ul>li>p { display:inline-block; }
-.accordion-wrap > .accordion-info > .ques-cont .list-view ul>li>p:first-child{ width:168px; margin-left:20px; color:var(--normal); font-weight: var(--w-bold); }
+.accordion-wrap > .accordion-info > .ques-cont .list-view ul>li>p:first-child{ min-width:168px; margin-left:20px; color:var(--normal); font-weight: var(--w-bold); }
 .accordion-wrap > .accordion-info > .ques-cont .list-view ul>li>p:last-child { width:100%; color:var(--title); font-weight: var(--w-regular); }
 /* 차량가격 */
 .accordion-wrap > .accordion-info > .ques-cont .list-view ul>li>p.price { text-align: right; font-size:var(--font28); font-weight: var(--w-bold); color:var(--inactive); }
@@ -527,7 +527,7 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view ul>li>div p.price .num { margin-right:6px; color:var(--secondary); }
 /* 견적 */
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view { font-size:var(--font18); margin-top:32px; }
-.accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li p:first-child { width:130px; color:var(--primary); }
+.accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li p:first-child { min-width:130px; color:var(--primary); }
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li{ display: flex; align-items: center; margin-top:16px; padding:25px 30px; background:var(--white); border-top:1px solid var(--border1); border-bottom:1px solid  var(--border1); }
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>ul>li{display: inline-block;  }
 
@@ -536,7 +536,7 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>ul>li { display:inline-block; padding:0 16px; font-size:var(--font18); font-weight: var(--w-regular); }
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>ul>li::after { content: ""; position:absolute; width:1px; height:16px; top:50%; right:0; transform: translateY(-50%); background:var(--title); }
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>ul>li:last-child::after { content: none; }
-.accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>p:last-child { text-align: right; }
+.accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>p:last-child { text-align: right; min-width:210px; }
 
 
 /*---------------------------------------------

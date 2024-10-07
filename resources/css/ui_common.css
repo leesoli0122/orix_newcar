@@ -423,9 +423,10 @@ button.btn.btn-text.small:hover::after { background:url("data:image/svg+xml,%3Cs
 button.btn.btn-search { padding:0; height:46px; width:30px; padding:0 32px; background:url(../images/ic_search.png)no-repeat var(--background3) 50%/30px auto; }
 button.btn.btn-cancel { content:''; position:absolute; z-index:11; transform: translateY(-50%); top:50%; right:16px; padding:0; width:24px; height:24px; background:url(../../resources/images/common/ic-cancel.png)no-repeat 100%/24px auto;}
 
-/* 현황조회 아코디언 버튼*/
-.accordion-wrap .btn-wrap button.btn-cont { padding:0 16px; height:46px; }
+/* 현황조회 버튼 - 아코디언*/
 .accordion-wrap .btn-wrap { margin-top:50px; text-align: center; }
+.accordion-wrap .btn-wrap button.btn-cont { padding:0 16px; height:46px; }
+.accordion-wrap .btn-wrap button.btn-cont { pointer-events: none; }
 .accordion-wrap .btn-wrap button.btn-cont.view { border:1px solid var(--background3); color:var(--background3); }
 .accordion-wrap .btn-wrap button.btn-cont.active { background:var(--background3); border:1px solid var(--background3); color:var(--white); }
 

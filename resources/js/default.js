@@ -27,8 +27,8 @@ $(document).ready(function() {
   });
 
   // 견적서 보기
-  document.querySelector('.btn-estimate').addEventListener('click', function() {
-      var estimateSection = document.querySelector('.estimate');
+  $(document).on('click', '.show-estimate-wrap .btn-estimate', function(){
+    var estimateSection = document.querySelector('.estimate');
       var button = this;
 
       if (estimateSection.style.display === 'none') {

@@ -1170,6 +1170,9 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-body.style2 li .form-group { padding:0 24px; width:100%; }
 .grid-list-body.style2 li:hover .form-group { font-weight:var(--w-regular); }
 
+/* 인풋박스 위에 체크 */
+.grid-list-body.style2 .form-group.check ul.check-box + .col-1 { margin-top:14px;}
+
 /* arr가 생기는 선택 */
 .grid-list-body li .pop.arr { padding:23px 54px 23px 24px; }
 .grid-list-body li .pop.arr::after { content:""; position:absolute; top:50%; transform:translateY(-50%); right:20px; display:inline-block; width:20px; height:20px; background:url(../images/ic_est_arr.png)no-repeat 50%/20px auto; cursor:pointer; }
@@ -1201,7 +1204,8 @@ dd.download-wrap { padding:0; background:transparent; }
 
 .grid-list-wrap.style3 .grid-list-body.style2 { margin-bottom:0; }
 .grid-list-wrap.style3 .grid-list-body { max-height:fit-content; overflow:initial; }
-.grid-list-wrap.style3 .grid-list-body.style2 > ul > li { padding:0; }
+/* .grid-list-wrap.style3 .grid-list-body.style2 > ul > li { padding:0; } */
+.grid-list-wrap.style3 .grid-list-body.style2 li .pop { padding:0; padding-left:24px; }
 .grid-list-wrap.style3 .grid-list-body.style2 .change-txt { padding:0 20px 0 24px; }
 .grid-list-wrap.style3 .grid-list-body .change-txt.delivery { display:flex; justify-content:space-between; }
 .grid-list-wrap.style3 .grid-list-body .change-txt.delivery > div { font-size:var(--font16); font-weight:var(--w-bold); color:var(--title); }

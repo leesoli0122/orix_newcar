@@ -26,6 +26,26 @@ $(document).ready(function() {
     });
   });
 
+  // 견적서 보기
+  document.querySelector('.btn-estimate').addEventListener('click', function() {
+      var estimateSection = document.querySelector('.estimate');
+      var button = this;
+
+      if (estimateSection.style.display === 'none') {
+          estimateSection.style.display = 'block';
+          button.textContent = '견적서 접기';
+      } else {
+          estimateSection.style.display = 'none';
+          button.textContent = '견적서 보기';
+      }
+      // 이미지 방향 변경 로직
+      if (button.classList.contains('rotate')) {
+          button.classList.remove('rotate');
+      } else {
+          button.classList.add('rotate');
+      }
+  });
+
   // 페이지 로드 시 초기 상태를 확인
   document.addEventListener('DOMContentLoaded', function() {
       if (inputField.value.trim() !== "") {
@@ -59,13 +79,13 @@ $(document).ready(function() {
   });
 
   /** popup focus **/
-  $('.layerpopup.layer-up .form-control').focus(function(){
-    $('.ly-cont-wrap.ly-scroll-con').removeClass('plus-height2').addClass('plus-height3');
-  });
+  // $('.layerpopup.layer-up .form-control').focus(function(){
+  //   $('.ly-cont-wrap.ly-scroll-con').removeClass('plus-height2').addClass('plus-height3');
+  // });
 
-  $('.layerpopup.layer-up .form-control').blur(function(){
-    $('.ly-cont-wrap.ly-scroll-con').addClass('plus-height2').removeClass('plus-height3');
-  });
+  // $('.layerpopup.layer-up .form-control').blur(function(){
+  //   $('.ly-cont-wrap.ly-scroll-con').addClass('plus-height2').removeClass('plus-height3');
+  // });
 
   /** 리스트 선택이 필요한 경우 **/
   $(document).on('click', '.txt-list-wrap.click .txt-detail-area', function(){

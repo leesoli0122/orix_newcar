@@ -20,7 +20,7 @@ $(document).ready(function() {
 	});
 
   // 견적추가 on/off
-  document.querySelectorAll('.grid-list-header').forEach(function(header) {
+  document.querySelectorAll('.grid-list-wrap.style3 .grid-list-header').forEach(function(header) {
     header.addEventListener('click', function() {
         header.classList.toggle('on');
     });

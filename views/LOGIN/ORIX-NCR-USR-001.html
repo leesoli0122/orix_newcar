@@ -64,21 +64,21 @@
                                         </div>
                                         <div class="terms-box">
                                             <div class="terms-wrap level2">
-                                                <button class="btn btn-text small" type="button" onclick="openPopup('termsPop01')">자세히 보기</button>
+                                                <button class="btn btn-text small" type="button" onclick="openPopup('termsPop01')">약관보기</button>
                                                 <fieldset>
                                                     <input type="checkbox" id="chkEach01" name="check" value="" class="check" terms-pop="lyPullPop02"><!--terms-pop 약관 팝업-->
                                                     <label for="chkEach01"><span>[필수] 개인정보 수집 이용 동의</span></label>
                                                 </fieldset>
                                             </div>
                                             <div class="terms-wrap level2">
-                                                <button class="btn btn-text small" type="button">자세히 보기</button>
+                                                <button class="btn btn-text small" type="button">약관보기</button>
                                                 <fieldset>
                                                     <input type="checkbox" id="chkEach02" name="check" value="" class="check" terms-pop="lyPullPop01"><!--terms-pop 약관 팝업-->
                                                     <label for="chkEach02"><span>[필수] 고유식별 정보 처리 동의</span></label>
                                                 </fieldset>
                                             </div>
                                             <div class="terms-wrap level2">
-                                                <button class="btn btn-text small" type="button">자세히 보기</button>
+                                                <button class="btn btn-text small" type="button">약관보기</button>
                                                 <fieldset>
                                                     <input type="checkbox" id="chkEach03" name="check" value="" class="check" terms-pop="lyPullPop03"><!--terms-pop 약관 팝업-->
                                                     <label for="chkEach03"><span>[필수] 통신사 이용약관 동의</span></label>
@@ -127,13 +127,12 @@
                                             <div class="se-select ei-w160" data-stove="select">
                                                 <select class="" title="메뉴구분">
                                                     <option value="" disabled="" selected="" hidden="">통신사 선택</option>
-                                                    <option value="0">option 00</option>
-                                                    <option value="1">option 01</option>
-                                                    <option value="2">option 02</option>
-                                                    <option value="3">option 03</option>
-                                                    <option value="4">option 04</option>
-                                                    <option value="5">option 05</option>
-                                                    <option value="6">option 06</option>
+                                                    <option value="0">SKT</option>
+                                                    <option value="1">KT</option>
+                                                    <option value="2">LG</option>
+                                                    <option value="3">알뜰폰 SK</option>
+                                                    <option value="4">알뜰폰 KT</option>
+                                                    <option value="5">알뜰폰 LG</option>
                                                 </select>
                                                 <div class="e-select-dim"></div>
                                             </div>
@@ -193,6 +192,21 @@
             </script>
         </div>
         <!-- //e:footer -->
+    </div>
+    <!-- 견적저장 -->
+    <div id="termsPop01" class="layerpopup laypop" tabindex="0">
+        <div class="content-wrap">
+            <div class="pop-header">
+                <h3 class="pop-title">[필수] 개인정보 수집 이용 동의</h3>
+                <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+            </div>
+            <div class="ly-con-wrap">
+                <p class="terms-title">약관 내용 기재 - 중고차 휴대폰인증과 동일</p>
+            </div>
+            <div class="btn-wrap popup">
+                <button type="button" name="button" class="btn btn-bottom">확인했어요</button>
+            </div>
+        </div>
     </div>
 </body>
 

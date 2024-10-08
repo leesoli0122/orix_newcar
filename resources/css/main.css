@@ -1,4 +1,5 @@
 :root{
+    --img-q: url(../images/mian/ic_question.png);
     --color2:#EFF4FF;
     --color1:#056ED6;
 }
@@ -24,7 +25,7 @@
     mainSec-wrap05 contents Faq
 ---------------------------------------------*/
 .mainSec-wrap05 .introFaq-area .intro-con ul>li { padding:5px 0 5px 32px; }
-.mainSec-wrap05 .introFaq-area .intro-con ul>li:before { content:''; position:absolute;  transform: translateY(-50%); top:49%; left:0; width:24px; height:24px; background: url(../images/mian/ic_question.png)no-repeat 100%/24px auto; }
+.mainSec-wrap05 .introFaq-area .intro-con ul>li:before { content:''; position:absolute;  transform: translateY(-50%); top:49%; left:0; width:24px; height:24px; background: var(--img-q)no-repeat 100%/24px auto; }
 /*---------------------------------------------
     mainSec-wrap05 contents Tab
 ---------------------------------------------*/

@@ -2,7 +2,20 @@
     --img-q: url(../images/mian/ic_question.png);
     --color2:#EFF4FF;
     --color1:#056ED6;
+    --background: #E2ECF7;
 }
+
+.mainWrap .sub-content{ padding:0 0 80px; max-width:initial; }
+.inner {  max-width:1400px; margin:0 auto; }
+@media screen and (max-width: 1200px) {
+    .mainWrap { padding-top:76px; }
+    .inner { padding:0 20px; }
+}
+
+/*********************************************************************
+메인.01 ( mainSec-wrap01 ) - 메인베너/바로가기
+*********************************************************************/
+.mainSec-wrap01 { min-height:502px; padding-top:92px; background:var(--background); }
 
 /*********************************************************************
 메인.05 ( mainSec-wrap05 ) - 공지사항/자료실/FAQ

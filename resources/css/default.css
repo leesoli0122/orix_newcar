@@ -55,7 +55,9 @@ ul, ol, li, dl, dt, dd  { list-style:none; margin:0; padding:0; box-sizing: bord
     --font18:1.125rem;
     --font20:1.25rem;
     --font22:1.375rem;
+    --font24:1.5rem;
     --font28:1.75rem;
+    --font32:2rem;
 
     --w-regular:400;
     --w-bold:700;
@@ -255,12 +257,13 @@ header #헤더
 #headerWrap > .h-menu div ul.menu > li:last-child { margin-right:0; }
 
 /* 2depth */
-#headerWrap > .h-menu div .menuitem-wrap { position:absolute; top:85px; left:50%; transform:translateX(-50%); display:none; padding:20px 14px; width:220px; height:auto; border-radius:12px; background:var(--white); box-shadow:0 0 12px #00012217; z-index:1; }
+#headerWrap > .h-menu div .menuitem-wrap { position:absolute; top:85px; left:50%; transform:translateX(-50%); /*display:none;*/ padding:20px 14px; width:220px; height:auto; border-radius:12px; background:var(--white); box-shadow:0 0 12px #00012217; z-index:1; transform: scaleY(0)  translateX(-50%);  transform-origin: top;   transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);  }
 .menuitem-wrap::before { content: ''; position: absolute; transform:rotate(270deg); top:-20px; left:50%; transform:translateX(-50%); width:42px; height:32px; background:url(../images/triangle.png)no-repeat 50%/42px auto; }
+#headerWrap > .h-menu div ul.menu > li .menuitem-wrap .menuitem { display:inline-block; width:100%; }
 #headerWrap > .h-menu div ul.menu > li .menuitem-wrap .menuitem > li { display:block; margin:0 0 8px; text-align:left; }
 #headerWrap > .h-menu div ul.menu > li .menuitem-wrap .menuitem > li a { display:inline-block; padding:9px 12px; width:100%; border-radius:12px; font-size:var(--font18); font-weight:var(--w-regular); color:var(--title); }
 #headerWrap > .h-menu div ul.menu > li .menuitem-wrap .menuitem > li.on a,
-#headerWrap > .h-menu div ul.menu > li .menuitem-wrap .menuitem > li a:hover { color:var(--secondary); background:var(--background4); }
+#headerWrap > .h-menu div ul.menu > li .menuitem-wrap .menuitem > li a:hover { color:var(--secondary); background:var(--background4); font-weight: var(--w-bold); }
 #headerWrap > .h-menu div ul.menu > li .menuitem-wrap .menuitem > li .bul-dot > li::before { top:50%; transform:translateY(-50%); left:15px; z-index:1; }
 
 /* 3depth */
@@ -269,7 +272,7 @@ header #헤더
 
 /* 메뉴 클릭 시 */
 #headerWrap > .h-menu div ul.menu > li.on::after { content:""; position:absolute; top:49px; left:50%; transform:translateX(-50%); display:inline-block; width:100%; height:5px; background:var(--primary); }
-#headerWrap > .h-menu div .menuitem-wrap.on { display:block; }
+#headerWrap > .h-menu div .menuitem-wrap.on { transform: scaleY(1)  translateX(-50%);}
 
 /* header 오른쪽 */
 #headerWrap > .h-menu div ul.menu-r { display:flex; letter-spacing:0; }

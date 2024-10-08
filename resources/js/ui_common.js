@@ -385,7 +385,7 @@ $(document).ready(function() {
         $fileInput.on('change', function() {
             // 파일 3개 있는지 확인
             if ($addFileList.children('li').length >= maxFiles) {
-                alert('최대 3개의 파일만 선택할 수 있습니다.');
+                messageView('최대 3개의 파일만 선택할 수 있습니다.');
                 return;
             }
 
@@ -393,24 +393,33 @@ $(document).ready(function() {
 
             // 선택 파일 검사
             files.forEach(function(file) {
-                const fileType = file.type;
                 const fileSize = file.size;
+				const filename = file.name;
+				const allowFileNm = filename.split('.').pop().toLowerCase();
+				var allowFile = ['jpg','xlsx','pdf','doc','hwp','pptx'];
+				// 파일형식과 크기 검사 (JPC, PNG, 300MB 이하)
+				// 파일형식과 크기 검사 (jpg, xlsx, pdf, doc, hwp, pptx, 50MB 이하)
+				if($.inArray(allowFileNm , allowFile) === -1){
+					messageView(allowFileNm+"는 지원하지 않는 확장자입니다");
+					return;
+				}
+				if (fileSize > maxFileSize) {
+					messageView('파일크기는 50MB를 초과할 수 없습니다.');
+					return;
+				}
 
-                // 파일 형식과 크기 검사 (xlsx, pdf, hwp, pptx, doc, 50MB 이하)
-                if (!fileType.match(/image\/(xlsx|pdf|hwp|doc|pptx)/)) {
-                    alert('xlsx, pdf, hwp, pptx, doc 파일만 업로드할 수 있습니다.');
-                    return;
-                }
-                if (fileSize > maxFileSize) {
-                    alert('파일 크기는 50MB를 초과할 수 없습니다.');
-                    return;
-                }
-
-                // 파일이 3개 미만일 때만 리스트에 추가
+				// 파일이 3개 미만일 때만 리스트에 추가
                 if ($addFileList.children('li').length < maxFiles) {
                     const $newListItem = $('<li>').text(file.name);
                     const $deleteButton = $('<span>').addClass('delete-file').text('삭제'); // 삭제 버튼 추가
+					const $deleteButton2 = $deleteButton.on('click',function(){
+						//삭제버튼 추가
+						var indexToRemove = $(this).closest('li').index();
+						removeFiles(indexToRemove);
+						$(this).closest('li').remove();
+					})
                     $newListItem.append($deleteButton);
+                    $newListItem.append($deleteButton2);
                     $addFileList.append($newListItem);
                 }
             });

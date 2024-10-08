@@ -47,7 +47,7 @@
 .choose-group.brand .choose.image li.luc::before { background:url(../images/Brand_Logo/Lucid.png)no-repeat 50%/18px auto; }
 
 /* 선택 후 */
-.pop.arr .choose.hyu::before { background:url(../images/Brand_Logo/Hyundai.png)no-repeat 50%/32px auto; }
+.pop.arr .choose.hyu::before { background:url(../images/Brand_Logo/Hyundai.png)no-repeat 50%/18px auto; }
 .pop.arr .choose.gen::before { background:url(../images/Brand_Logo/Genesis.png)no-repeat 50%/18px auto; }
 .pop.arr .choose.kia::before { background:url(../images/Brand_Logo/kia.png)no-repeat 50%/18px auto; }
 .pop.arr .choose.che::before { background:url(../images/Brand_Logo/Chevrolet.png)no-repeat 50%/18px auto; }

@@ -196,11 +196,13 @@ function deleteBlock(_full) {
 function messagePopup(id) {
   const _target = $('#' + id);
   const currentTop = $(window).scrollTop();
+
+  // 스크롤 방지
   $('body').css({ 'position': 'fixed', 'top': -currentTop + 'px' });
   
-  _target.find('.btn-layer-close, .btn-close, .confirm').on('click', function () {
+  _target.find('.btn-layer-close, .btn-close, .confirm').off('click').on('click', function () {
       closePopup(id, currentTop);
-  });
+  });//off('click')추가(기존 이벤트를 제거한 뒤 바인딩)
 
   _target.fadeIn(600).addClass('on').focus();
 }

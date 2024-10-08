@@ -1,0 +1,35 @@
+:root{
+    --font24:1.5rem;
+    --color2:#EFF4FF;
+    --color1:#056ED6;
+}
+
+/*********************************************************************
+메인.05 ( mainSec-wrap05 ) - 공지사항/자료실/FAQ
+*********************************************************************/
+/*---------------------------------------------
+    mainSec-wrap05 contents Default
+---------------------------------------------*/
+.mainSec-wrap05 { display:flex; justify-content: space-between; margin-top:74px; }
+.mainSec-wrap05>div { width:calc((100%/2) - 13px); max-height:308px; padding:48px 40px 60px 40px; border-radius: 24px; border:1px solid var(--border1);  background: var(--white); }
+.mainSec-wrap05 .intro-tit h2 { font-size:var(--font24); font-weight: var(--w-bold); }
+.mainSec-wrap05 .intro-con { margin-top:50px; }
+.mainSec-wrap05 .intro-con ul>li + li{ margin-top:26px; }
+.mainSec-wrap05 .intro-con ul>li{ border-bottom:1px solid transparent; }
+.mainSec-wrap05 .intro-con ul>li:hover { background: var(--color2);}
+.mainSec-wrap05 .intro-con ul>li>a { display:flex; justify-content: space-between; gap:10px; }
+.mainSec-wrap05 .intro-con ul>li span.txt { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size:var(--font18); font-weight:var(--w-bold); color:var(--inactive); }
+.mainSec-wrap05 .intro-con ul>li span.date { min-width:88px; text-align: right; color:var(--subtitle);}
+.mainSec-wrap05 .intro-con .btn.btn-text { position:absolute; top:-81px; right:13px; }
+/*---------------------------------------------
+    mainSec-wrap05 contents Faq
+---------------------------------------------*/
+.mainSec-wrap05 .introFaq-area .intro-con ul>li { padding-left:32px; }
+.mainSec-wrap05 .introFaq-area .intro-con ul>li:after { content:''; position:absolute;  transform: translateY(-50%); top:50%; left:0; width:24px; height:24px; background: url(../images/mian/ic_question.png)no-repeat 100%/24px auto; }
+/*---------------------------------------------
+    mainSec-wrap05 contents Tab
+---------------------------------------------*/
+.mainSec-wrap05 ul.intro-tit>li { display:inline-block; position: relative; cursor: pointer;}
+.mainSec-wrap05 ul.intro-tit>li + li { margin-left:22px;  }
+.mainSec-wrap05 ul.intro-tit>li.on h2 { line-height: 35px; color:var(--color1); }
+.mainSec-wrap05 ul.intro-tit>li.on::after { content: ''; position: absolute; left:0; bottom:0; width:100%; height:2px; background: var(--color1); }

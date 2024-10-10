@@ -17,7 +17,7 @@
 메인.01 ( mainSec01 ) - 메인베너/바로가기
 *********************************************************************/
 .mainSec01 { min-height:502px; padding-top:92px; background:var(--m-background1); }
-
+.mainSec01 em { font-style:initial; }
 /*********************************************************************
 메인.05 ( mainSec05 ) - 공지사항/자료실/FAQ
 *********************************************************************/
@@ -33,7 +33,7 @@
 ---------------------------------------------*/
 .mainSec05>div { display:flex; justify-content: space-between; margin-top:74px; }
 .mainSec05 [class*="area"] { width:calc((100%/2) - 13px); max-height:308px; padding:48px 40px 55px 40px; border-radius: 24px; border:1px solid var(--border1);  background: var(--white); }
-.mainSec05 .intro-tit h2 { font-size:var(--font24); font-weight: var(--w-bold); }
+.mainSec05 .intro-tit h2 { line-height:35px; font-size:var(--font24); font-weight: var(--w-bold); }
 .mainSec05 .intro-con { margin-top:45px; }
 .mainSec05 .intro-con ul>li + li{ margin-top:18px; }
 .mainSec05 .intro-con ul>li{ border-bottom:1px solid transparent; padding:5px 0; }

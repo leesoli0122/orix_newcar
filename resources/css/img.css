@@ -97,29 +97,3 @@
     견적서 자동차 이미지
 ---------------------------------------------*/
 .specifications-wrap .car-img img { width:264px; }
-
-/*********************************************************************
-색상
-*********************************************************************/
-/*---------------------------------------------
-    자동차 이미지
----------------------------------------------*/
-.col-18171c { background:#18171C !important; }/*어비스 블랙 펄*/
-.col-f4f4ef { background:#f4f4ef !important; }/*세레나티 화이트 펄*/
-.col-8a8782 { background:#8a8782 !important; }/*유기 브론즈 매트*/
-.col-2e3337 { background:#2e3337 !important; }/*녹턴 그레이 매트*/
-.col-96959b { background:#96959b !important; }/*큐레이티드 실버 메탈릭*/
-.col-646873 { background:#646873 !important; }/*트랜스미션 블루 펄*/
-.col-24292d { background:#24292d !important; }/*녹턴 그레이 메탈릭*/
-.col-1b1e27 { background:#1b1e27 !important; }/*바이오필릭 블루 펄*/
-.col-746f6b { background:#746f6b !important; }/*유기 브론즈 메탈릭*/
-
-/*---------------------------------------------
-    내장
----------------------------------------------*/
-.col-1e1f1e { background:#1e1f1e !important; }/*블랙 모노톤*/
-
-/* 투톤 */
-.col2-0e1012 { background: linear-gradient(183deg, rgba(14,16,18,1) 0%, rgba(56,49,49,1) 100%) !important; }/*블랙/브라운 투톤*/
-.col2-282828 { background: linear-gradient(183deg, rgba(40,40,40,1) 0%, rgba(173,171,168,1) 100%) !important; }/*다크 그레이/라이트 그레이 투톤*/
-.col2-081214 { background: linear-gradient(183deg, rgba(8,18,20,1) 0%, rgba(102,69,45,1) 100%) !important; }/*인디고/브라운 투톤*/

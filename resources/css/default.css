@@ -234,7 +234,7 @@ login #로그인
 header #헤더
 *********************************************************************/
 #headerWrap { position:fixed; top:0; z-index:10; width:100%; height:146px; background-color:var(--white); border-bottom:1px solid var(--border1); }
-#headerWrap .top { padding:33px 20px 15px; margin: 0 auto; max-width:1400px; width: 100%; /*min-width:1200px;*/ }
+#headerWrap .top { padding:33px 0px 15px; margin: 0 auto; max-width:1400px; width: 100%; /*min-width:1200px;*/ }
 #headerWrap .top div { display:flex; align-items:center; }
 #headerWrap .top > div > * { vertical-align:middle; }
 #headerWrap .top > div > h1 { display:inline-block; margin-right:25px; width:100px; height:25px; }
@@ -243,7 +243,7 @@ header #헤더
 #headerWrap .top > div > ul li:first-child::after { content:""; display:inline-block; margin:0 16px; width:1px; height:14px; background:var(--border1); vertical-align: middle; }
 #headerWrap .top > div > ul li a { font-size:var(--font14); font-weight:700; color:var(--subtitle); }
 
-#headerWrap > .h-menu { padding:0 20px; max-width:1400px; width:100%; margin:0 auto; }
+#headerWrap > .h-menu { max-width:1400px; width:100%; margin:0 auto; }
 #headerWrap > .h-menu div { display:flex; align-items:center; justify-content:space-between; }
 #headerWrap > .h-menu .nav-btn { display:none; width:38px; height:38px; }
 #headerWrap > .h-menu .nav-btn .ham { display:inline-block; width:38px; height:38px; }

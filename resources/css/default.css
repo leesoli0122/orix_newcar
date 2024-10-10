@@ -326,7 +326,7 @@ sub-content
 
 @media screen and (max-width:1200px) {
     /* header menu */
-    #headerWrap {  display:flex; justify-content:flex-start; align-items:center; padding-left:30px; height:76px; }
+    #headerWrap {  display:flex; justify-content:flex-start; align-items:center; padding:0 20px; height:76px; }
     #headerWrap .top { margin:0; padding:0; width:auto; }
     #headerWrap > .h-menu { display:flex; justify-content:space-between; width:100%; }
     #headerWrap > .h-menu div ul.menu { display:none; }

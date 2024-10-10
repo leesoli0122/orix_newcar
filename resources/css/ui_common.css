@@ -1203,6 +1203,9 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-wrap.style2 .grid-list-body > ul >  li .change-txt .form-group .charge { margin-bottom:12px; }
 .grid-list-wrap.style2 .grid-list-body > ul >  li .change-txt .form-group .charge:last-child { margin-bottom:0; }
 
+/* 공채/부대비용 선택 */
+.grid-list-wrap.style2 .grid-list-body > ul >  li .form-group .radio-box { margin-bottom:20px; }
+
 /** 계약조건 **/
 .grid-list-wrap.style3 { max-height:904px; }
 .grid-list-wrap.style3 .grid-list-header { background:var(--primary); }
@@ -1327,7 +1330,7 @@ dd.download-wrap { padding:0; background:transparent; }
 /* 차량정보 */
 .specifications-wrap { display:flex; align-items:center; justify-content:space-between; padding:10px 0 10px 20px; background:var(--background2); }
 .specifications-wrap .car-img { text-align:center; }
-.specifications-wrap .car-img .tit { margin-bottom:6px; font-size:var(--font18); font-weight:var(--w-bold); color:var(--normal); }
+.specifications-wrap .car-img .tit { margin-top:10px; margin-bottom:6px; font-size:var(--font18); font-weight:var(--w-bold); color:var(--normal); }
 .specifications-wrap .car-img .txt { font-size:var(--font14); font-weight:var(--w-regular); color:var(--inactive); }
 .specifications-wrap .car-info { padding-top:12px; width:622px; }
 .specifications-wrap .car-info .info-text { display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding-right:20px; }
@@ -1344,15 +1347,18 @@ dd.download-wrap { padding:0; background:transparent; }
 
 /** 계약조건 **/
 /* 하나일 때 */
-.table-wrap.one { display:flex; align-items:flex-start; justify-content:space-between; }
-.table-wrap.one .table-col { width:451px; }
+.table-wrap.one,
+.table-wrap.auto { display:flex; align-items:flex-start; justify-content:space-between; }
+.table-wrap.one .table-col,
+.table-wrap.auto .table-col { width:451px; }
 /* 두개 이상 일 때 */
 .table-col tr.data td { border-top:1px solid var(--border2); font-weight:var(--w-bold); color:var(--secondary); }
 .estimate-body .table-col tr.num td { text-align:right; }
 .estimate-body .table-col.amount tr:first-child { border-top:1px solid var(--border2); }
 .estimate-body .table-col.amount th { border:1px solid var(--border2); border-left:none; background:var(--background1); }
 .estimate-body .table-col.amount tr:first-child td { border-top:0; font-weight:var(--w-regular); color:var(--normal); }
-.estimate-body .table-col.amount tr td .flex { justify-content:space-between; }
+.estimate-body .table-col.amount tr td .flex,
+.table-wrap.auto .table-col tr td .flex { justify-content:space-between; }
 .estimate-body .table-col.amount tr td .flex .red { font-weight:var(--w-bold); }
 .estimate-body .table-col.amount tr.num td { border-bottom:1px solid var(--border2); }
 
@@ -1360,6 +1366,15 @@ dd.download-wrap { padding:0; background:transparent; }
 .table-type.repair.style2 thead tr:first-child th:first-child { padding:5px 0 6px; }
 .table-type.repair.style2 tr th,
 .table-type.repair.style2 tr td { padding:4px 0 5px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--title); }
+
+/*---------------------------------------------
+	오토리스 견적서 body
+---------------------------------------------*/
+.table-wrap.auto .table-col th,
+.table-wrap.auto .table-col td { border-bottom:0; }
+.table-wrap.auto .table-col tr.total th { border-top:1px solid var(--border2); border-bottom:1px solid var(--border2); background:var(--background1); }
+.table-wrap.auto .table-col tr.total td { border-top:1px solid var(--border2); border-bottom:1px solid var(--border2); }
+.table-wrap.auto .table-col tr.total td .red { font-weight:var(--w-bold); }
 
 /*********************************************************************
 팝업에서 #선택

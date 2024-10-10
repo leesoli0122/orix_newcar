@@ -1,5 +1,6 @@
 :root{
     --m-img-q: url(../images/mian/ic_question.png);
+    --m-img-mainsec01: url(../images/mian/ic_mainSec01.png);
     --m-color1:#056ED6;
     --m-color2:#EFF4FF;
     --m-background1: #E2ECF7;
@@ -14,10 +15,61 @@
     .inner { padding:0 20px; }
 }
 /*********************************************************************
+메인 default animation
+*********************************************************************/
+.x-slide {
+    animation-name: x-slide;
+    animation-duration: 0.6s;
+    animation-timing-function: ease;
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateX(20px); }
+@keyframes x-slide {
+    0% {
+        transform: translateX("20px");
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.y-slide {
+    animation-name: y-slide;
+    animation-duration: 0.6s;
+    animation-timing-function: ease;
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(-20px); }
+@keyframes y-slide {
+    0% {
+        transform: translateX("-20px");
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/*********************************************************************
 메인.01 ( mainSec01 ) - 메인베너/바로가기
 *********************************************************************/
-.mainSec01 { min-height:502px; padding-top:92px; background:var(--m-background1); }
+/*---------------------------------------------
+    mainSec01 contents Default
+---------------------------------------------*/
+.mainSec01 { max-height:502px; background:var(--m-background1); }
+.mainSec01 .inner { display:flex; justify-content: space-between; height:502px; background: var(--m-img-mainsec01) no-repeat calc(100% - 368px) /579px auto; }
+.mainSec01 .img { width:579px; height:502px; right:368px; }
 .mainSec01 em { font-style:initial; }
+.mainSec01 .introMain-area { margin-top:92px; }
+.mainSec01 .shortcut-area { margin-top:60px; width:365px; height:382px; border:1px solid red; }
 /*********************************************************************
 메인.05 ( mainSec05 ) - 공지사항/자료실/FAQ
 *********************************************************************/

@@ -257,8 +257,8 @@ header #헤더
 #headerWrap > .h-menu div ul.menu > li:last-child { margin-right:0; }
 
 /* 2depth */
-#headerWrap > .h-menu li:first-child .menuitem-wrap { left:100px; }
-#headerWrap > .h-menu li:first-child .menuitem-wrap::before { left: 50px; }
+#headerWrap > .h-menu div li:first-child .menuitem-wrap { left:100px; }
+#headerWrap > .h-menu div li:first-child .menuitem-wrap::before { left: 50px; }
 #headerWrap > .h-menu div .menuitem-wrap { position:absolute; top:85px; left:50%; transform:translateX(-50%); /*display:none;*/ padding:20px 14px; width:220px; height:auto; border-radius:12px; background:var(--white); box-shadow:0 0 12px #00012217; z-index:1; transform: scaleY(0)  translateX(-50%);  transform-origin: top;   transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);  }
 .menuitem-wrap::before { content: ''; position: absolute; transform:rotate(270deg); top:-20px; left:50%; transform:translateX(-50%); width:42px; height:32px; background:url(../images/triangle.png)no-repeat 50%/42px auto; }
 #headerWrap > .h-menu div ul.menu > li .menuitem-wrap .menuitem { display:inline-block; width:100%; }

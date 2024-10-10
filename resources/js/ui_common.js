@@ -334,8 +334,8 @@ $(document).ready(function() {
     function handleToggleClick($toggleElement) {
         var $toggleCont = $toggleElement.parent().find('.ques-cont');
         var isOpen = $toggleElement.toggleClass('active').hasClass('active');
+		
         $toggleCont.toggleClass('active');
-
         $toggleElement.attr('title', isOpen ? '닫힘' : '열림');
     }
 

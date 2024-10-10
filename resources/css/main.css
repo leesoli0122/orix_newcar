@@ -9,10 +9,10 @@
 메인 default layout
 *********************************************************************/
 .mainWrap .sub-content{ padding:0 0 80px; max-width:initial; }
-.inner {  max-width:1400px; margin:0 auto; }
+.mainWrap .inner {  max-width:1400px; margin:0 auto; }
 @media screen and (max-width: 1200px) {
     .mainWrap { padding-top:76px; }
-    .inner { padding:0 20px; }
+    .mainWrap .inner { padding:0 20px; }
 }
 /*********************************************************************
 메인 default animation
@@ -59,7 +59,7 @@
     }
 }
 /*********************************************************************
-메인.01 ( mainSec01 ) - 메인베너/바로가기
+메인.01 - 메인베너/바로가기
 *********************************************************************/
 /*---------------------------------------------
     mainSec01 contents Default
@@ -71,7 +71,7 @@
 .mainSec01 .introMain-area { margin-top:92px; }
 .mainSec01 .shortcut-area { margin-top:60px; width:365px; height:382px; border:1px solid red; }
 /*********************************************************************
-메인.05 ( mainSec05 ) - 공지사항/자료실/FAQ
+메인.05 - 공지사항/자료실/FAQ
 *********************************************************************/
 /*---------------------------------------------
     mainSec05 contents Tab
@@ -83,7 +83,8 @@
 /*---------------------------------------------
     mainSec05 contents Default
 ---------------------------------------------*/
-.mainSec05>div { display:flex; justify-content: space-between; margin-top:74px; }
+.mainSec05 {  margin-top:74px; }
+.mainSec05>div { display:flex; justify-content: space-between;}
 .mainSec05 [class*="area"] { width:calc((100%/2) - 13px); padding:48px 40px 55px 40px; max-height:308px; border-radius: 24px; border:1px solid var(--border1);  background: var(--white); }
 .mainSec05 .intro-tit h2 { line-height:35px; font-size:var(--font24); font-weight: var(--w-bold); }
 .mainSec05 .intro-con { margin-top:45px; max-height:120px; }

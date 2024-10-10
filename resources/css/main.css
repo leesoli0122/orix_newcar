@@ -45,5 +45,6 @@
 /*---------------------------------------------
     mainSec05 contents Faq
 ---------------------------------------------*/
+.mainSec05 .introFaq-area .intro-tit h2 { display:inline-block; letter-spacing:-3.2px;}
 .mainSec05 .introFaq-area .intro-con ul>li { padding-left:32px; }
 .mainSec05 .introFaq-area .intro-con ul>li:before { content:''; position:absolute;  transform: translateY(-50%); top:50%; left:0; width:24px; height:24px; background: var(--m-img-q)no-repeat 100%/24px auto; }

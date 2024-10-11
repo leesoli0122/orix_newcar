@@ -282,6 +282,11 @@ Media Query
 /*********************************************************************
 메인.05 - 공지사항/자료실/FAQ
 *********************************************************************/
+    .mainSec05>div { flex-direction: column; }
+    .mainSec05 [class*="area"] { width:100%;  padding:30px;}
+    .mainSec05 .introFaq-area { margin-top: 20px; }
     .mainSec05 .intro-tit h2 { font-size:var(--font18); }
     .mainSec05 ul.intro-tit>li + li { margin-left:10px; }
+    .mainSec05 .intro-con { margin-top:30px; }
+    .mainSec05 .intro-con .btn.btn-text { top:-51px; }
 }

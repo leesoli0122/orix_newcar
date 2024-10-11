@@ -9,6 +9,10 @@
 </div>
 <div class="h-menu">
     <div>
+        <ul class="menu-r">
+            <li><a href="#javascript:void(0);">오릭스캐피탈 강남지점 <span>오릭스(orix)</span>님</a> 환영합니다.</li>
+            <li><button href="#javascript:void(0);" class="btn btn-logout">로그아웃</button></li>
+        </ul>
         <ul class="menu col04">
             <li>
                 <!-- menu 1depth -->
@@ -61,17 +65,13 @@
                 </div>
             </li>
         </ul>
-        <ul class="menu-r">
-            <li><a href="#javascript:void(0);">오릭스캐피탈 강남지점 <span>오릭스(orix)</span>님</a> 환영합니다.</li>
-            <li><button href="#javascript:void(0);" class="btn btn-logout">로그아웃</button></li>
-        </ul>
     </div>
     <div class="nav-btn">
         <a href="javascript:void(0);" class="ham">
             <img src="../../resources/images/nav_btn.png" alt="메뉴아이콘">
         </a>
         <a href="javascript:void(0);" class="close">
-            <img src="../../resources/images/close.png" alt="닫기버튼">
+            <img src="../../resources/images/common/ic_close.png" alt="닫기버튼">
         </a>
     </div>
 </div>
@@ -89,30 +89,34 @@
             }
         });
 
+        // 전체메뉴 버튼 상태 체크 변수
+        var isNavMenuOpen = false;
+
         // gnb action
-        $(".menu > li").on('click', function(e) {
+        $(".menu > li").on('click', function (e) {
+            // 전체메뉴가 열려 있을 때는 GNB 메뉴의 'on' 클래스가 추가되지 않도록 함
+            if (isNavMenuOpen) return;  // 전체메뉴가 열려 있을 때 클릭 무시
+
             var targetLink = $(e.target).attr('href');
 
             // 실제 링크가 있을 경우, 링크를 그대로 이동하게 함
             if (targetLink && targetLink !== "javascript:void(0);") {
-
                 // 새 창을 열도록 지정된 링크일 경우 메뉴 접기
                 if ($(e.target).attr('target') === '_blank') {
                     // 메뉴 접기
                     $(".menu > li, .menuitem-wrap").removeClass('on');
                 }
-
                 return;  // 링크 이동 후 더 이상 동작하지 않음
             }
 
             e.preventDefault();
 
-            var $menu = $(this).not($siblingsMenu);
             var $siblingsMenu = $(this).siblings();
+            var $menu = $(this).not($siblingsMenu);
             var $thisMenuWrap = $(this).children().siblings(".menuitem-wrap");
             var $otherMenuWraps = $(".menuitem-wrap").not($thisMenuWrap);
 
-            // $menu 클릭 했을 때
+            // $menu 클릭했을 때
             $menu.toggleClass('on');
             $siblingsMenu.removeClass('on');
 
@@ -122,53 +126,28 @@
         });
 
         // 메뉴 외 영역 클릭 시 메뉴 닫기
-        $(document).on('click', function(e) {
+        $(document).on('click', function (e) {
             if (!$(e.target).closest('.menu').length) {
                 $(".menu > li, .menuitem-wrap").removeClass('on');
             }
         });
 
         // 전체메뉴 아이콘 클릭 시
-        // $(".btnMenu").click(function () {
-        //     $(".right-menu > div").hide();
-        //     $(".menu-part").show();
+        $(".nav-btn").click(function () {
+            var $allmenu = $(".h-menu");
+            var $header = $("#headerWrap");
 
-        //     $("body").css("overflow", "hidden");
-        // });
+            $allmenu.toggleClass('on');
+            $header.toggleClass('on');
+            
+            // 전체메뉴가 열릴 때는 GNB 메뉴의 'on' 클래스가 동작하지 않도록 상태 관리
+            isNavMenuOpen = $allmenu.hasClass('on');
 
-        // $(".menu-con > .close").click(function () {
-        //     $(".menu-part").hide();
-        //     $("body").css("overflow", "");
-        // });
-
-        // // 메뉴 닫기
-        // $('#menu_close_btn').click(function () {
-        //     $(".right-menu > div").hide();
-        //     $(".menu-part").hide();
-        //     $("body").css("overflow", "visible");
-        // });
-
-        // $('.close_btn').keydown(function (e) {
-        //     if (e.keyCode == 13) {
-        //         $(".right-menu > div").hide();
-        //         $(".menu-part").hide();
-        //         $("body").css("overflow", "visible");
-        //     }
-        // });
-
-
-        // 검색 아이콘 클릭시
-        // $(".btnSearch").click(function () {
-        //     $(".right-menu > div").hide();
-        //     $(".search-part").show();
-        // });
-
-        // $(".search-con > .close").click(function () {
-        //     $(".search-part").hide();
-        //     $("body").css("overflow", "");
-        // });
-
-
+            // 전체메뉴가 열리면 GNB 메뉴와 menuitem-wrap의 'on' 클래스 제거
+            if (isNavMenuOpen) {
+                $(".menu > li, .menuitem-wrap").removeClass('on');  // 메뉴와 menuitem-wrap 모두에서 'on' 제거
+            }
+        });
     });
 
 </script>

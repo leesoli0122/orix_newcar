@@ -382,9 +382,8 @@ button.btn { display:inline-block; padding:0 40px; margin:0; height:54px; font-s
 /*---------------------------------------------
 	Button Style
 ---------------------------------------------*/
-
 /*로그아웃버튼*/
-button.btn.btn-logout { padding:4px 15px; height:auto; border-radius:14px; font-size:var(--font12); font-weight:var(--w-bold); color:var(--white); background:var(--primary)}
+button.btn.btn-logout { padding:0px 15px; height:26px; border-radius:14px; font-size:var(--font14); font-weight:var(--w-bold); color:var(--white); background:var(--primary)}
 
 /*하단버튼*/
 button.btn.btn-primary { color:var(--white); background:var(--primary); }

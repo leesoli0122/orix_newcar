@@ -209,19 +209,19 @@
 Media Query
 *********************************************************************/
 @media (max-width: 1200px) { /* DeskTop */
-/*---------------------------------------------
+/*********************************************************************
 메인 Layout
----------------------------------------------*/
+*********************************************************************/
     .mainWrap { padding-top:76px; }
     .mainWrap .inner { padding:0 20px; }
-/*---------------------------------------------
+/*********************************************************************
 메인.01 - 메인베너/바로가기
----------------------------------------------*/
+*********************************************************************/
 .mainSec01 .img { margin-top:70px; width:400px; height:342px; }
 .mainSec01 .introMain-area ul>li>p.tit { font-size:var(--font40); }
 .mainSec01 .introMain-area ul>li>p.txt { margin-top:30px; }
-.mainSec01 .shortcut-area { display:flex; align-items: center; flex-direction: row; gap:15px; padding:30px; position: absolute; bottom:30px; width:calc(100% - 40px); height:140px; transform: translateY(50%); }
-.mainSec01 .shortcut-area .btn-wrap button.btn { margin-left:10px; font-size:var(--font20); }
+.mainSec01 .shortcut-area { display:flex; align-items: center; flex-direction: row; gap:20px; padding:30px; position: absolute; bottom:30px; width:calc(100% - 40px); height:140px; transform: translateY(50%); }
+.mainSec01 .shortcut-area .btn-wrap button.btn { margin-left:15px; font-size:var(--font20); }
 .mainSec01 .shortcut-area .btn-wrap button.btn:nth-child(1) { padding:0 30px; }
 .mainSec01 .shortcut-area .btn-wrap button.btn:nth-child(2) { padding:0 20px; }
 .mainSec01 .shortcut-area ul { flex-wrap: initial; width:100%; margin-top:0; }
@@ -262,3 +262,22 @@ Media Query
 
 }
 
+@media (max-width: 760px) {
+/*********************************************************************
+메인.01 - 메인베너/바로가기
+*********************************************************************/
+    .mainSec01 .shortcut-area { gap:15px; }
+    .mainSec01 .shortcut-area .btn-wrap button.btn { margin-left:10px; font-size:var(--font18); }
+    .mainSec01 .shortcut-area .btn-wrap button.btn:nth-child(1) { padding:0 20px; }
+/*********************************************************************
+메인.04 - 견적서
+*********************************************************************/
+    .mainSec04 ul.introList-area >li>a { height:130px; }
+    .mainSec04 ul.introList-area >li .tit { font-size:var(--font16); }
+    .mainSec04 ul.introList-area >li .btn { font-size:var(--font18); }
+/*********************************************************************
+메인.05 - 공지사항/자료실/FAQ
+*********************************************************************/
+    .mainSec05 .intro-tit h2 { font-size:var(--font18); }
+    .mainSec05 ul.intro-tit>li + li { margin-left:10px; }
+}

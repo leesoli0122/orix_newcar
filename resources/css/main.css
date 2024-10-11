@@ -155,7 +155,7 @@
     mainSec04 Default
 ---------------------------------------------*/
 .mainSec04 { margin-top:74px; }
-.mainSec04 ul.introList-area {  display:flex; justify-content:space-between; gap:20px; margin-top:52px; }
+.mainSec04 ul.introList-area {  display:flex; justify-content:space-between; gap:10px; margin-top:52px; }
 .mainSec04 ul.introList-area >li { width:calc((100%/3 - 10px));  }
 .mainSec04 ul.introList-area >li>a { display:block; text-align: center; padding:36px 20px; height:138px; border-radius: 34px; background: var(--m-background2);}
 
@@ -238,7 +238,7 @@ Media Query
 .mainSec02 ul.introList-area>li.intro-box>a>.txt { font-size:var(--font20); }
 .mainSec02 ul.introList-area { flex-wrap: wrap; gap:14px; }
 .mainSec02 ul.introList-area>li { width:calc((100%/3) - 14px); }
-.mainSec02 ul.introList-area>li>a { height:150px; }
+.mainSec02 ul.introList-area>li>a { height:180px; }
 .mainSec02 ul.introList-area>li>a>.tit { font-size:var(--font18); }
 .mainSec02 ul.introList-area>li>a>.num { font-size:var(--font20); }
 

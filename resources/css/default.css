@@ -60,6 +60,7 @@ ul, ol, li, dl, dt, dd  { list-style:none; margin:0; padding:0; box-sizing: bord
     --font32:2rem;
     --font40:2.5rem;
     --font50: 3.125rem;
+    
     --w-regular:400;
     --w-bold:700;
 

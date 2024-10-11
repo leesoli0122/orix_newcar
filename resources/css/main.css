@@ -262,7 +262,7 @@ Media Query
 
 }
 
-@media (max-width: 760px) {
+@media (max-width: 780px) {
 /*********************************************************************
 메인.01 - 메인베너/바로가기
 *********************************************************************/
@@ -288,5 +288,5 @@ Media Query
     .mainSec05 .intro-tit h2 { font-size:var(--font18); }
     .mainSec05 ul.intro-tit>li + li { margin-left:10px; }
     .mainSec05 .intro-con { margin-top:30px; }
-    .mainSec05 .intro-con .btn.btn-text { top:-51px; }
+    .mainSec05 .intro-con .btn.btn-text { top:-71px; }
 }

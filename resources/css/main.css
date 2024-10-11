@@ -1,8 +1,17 @@
 :root{
+    --font50: 3.125rem;
+    --font22: 1.375rem;
     --m-img-q: url(../images/mian/ic_question.png);
-    --m-img-mainsec01: url(../images/mian/ic_mainSec01.png);
-    --m-color1:#056ED6;
-    --m-color2:#EFF4FF;
+    --m-img-mainsec01: url(../images/mian/ic_mainCar.png);
+    --m-img-shortCut01: url(../images/mian/ic_sc_quote.png);
+    --m-img-shortCut02: url(../images/mian/ic_sc_perfo.png);
+    --m-img-shortCut03: url(../images/mian/ic_sc_data.png);
+    --m-img-shortCut04: url(../images/mian/ic_sc_faq.png);
+    --m-color1:#1A3B6C;
+    --m-color2:#1168E6;
+    --m-color3:#2844C1;
+    --m-color4:#056ED6;
+    --m-color5:#EFF4FF;
     --m-background1: #E2ECF7;
 }
 /*********************************************************************
@@ -10,10 +19,7 @@
 *********************************************************************/
 .mainWrap .sub-content{ padding:0 0 80px; max-width:initial; }
 .mainWrap .inner {  max-width:1400px; margin:0 auto; }
-@media screen and (max-width: 1200px) {
-    .mainWrap { padding-top:76px; }
-    .mainWrap .inner { padding:0 20px; }
-}
+
 /*********************************************************************
 메인 default animation
 *********************************************************************/
@@ -58,6 +64,38 @@
         opacity: 1;
     }
 }
+
+/* .mainSec01 .shortcut-area.enlarge  ul>li { transition: all 0.2s ease; }
+.mainSec01 .shortcut-area.enlarge  ul>li:hover { transform: scale(1.1); } */
+
+.upAndDown ul>li:hover{ animation-name: upAndDown;  animation-duration: 0.34s;}
+
+@keyframes upAndDown {
+    0%, 20%, 100% {
+        padding-top: 65px;
+        background-position: center 8px;
+    }
+    25% {
+        padding-top: 66px;
+        background-position: center 9px;
+    }
+    40% {
+        padding-top: 68px;
+        background-position: center 11px;
+    }
+    55% {
+        padding-top: 72px;
+        background-position: center 15px;
+    }
+    70% {
+        padding-top: 70px;
+        background-position: center 13px;
+    }
+    85% {
+        padding-top: 65px;
+        background-position: center 8px;
+    }
+}
 /*********************************************************************
 메인.01 - 메인베너/바로가기
 *********************************************************************/
@@ -65,11 +103,32 @@
     mainSec01 contents Default
 ---------------------------------------------*/
 .mainSec01 { max-height:502px; background:var(--m-background1); }
-.mainSec01 .inner { display:flex; justify-content: space-between; height:502px; background: var(--m-img-mainsec01) no-repeat calc(100% - 368px) /579px auto; }
-.mainSec01 .img { width:579px; height:502px; right:368px; }
-.mainSec01 em { font-style:initial; }
+.mainSec01 .inner { display:flex; justify-content: space-between; height:502px; }
+/* .mainSec01 .inner.img {background: var(--m-img-mainsec01) no-repeat calc(100% - 368px) /579px auto;} */
+/* .mainSec01 .img { width:579px; height:502px; right:368px; } */
+.mainSec01 .shortcut-area ul { display:flex; flex-wrap:wrap; justify-content: space-between; margin-top:35px; gap:10px; }
+.mainSec01 .shortcut-area ul>li { width:calc((100%/2) -  5px); height:84px; text-align: center; padding-top:65px; cursor: pointer;}
+.mainSec01 .shortcut-area ul>li>a { font-weight: var(--w-bold); }
+
+/*---------------------------------------------
+    mainSec01 contents
+---------------------------------------------*/
 .mainSec01 .introMain-area { margin-top:92px; }
-.mainSec01 .shortcut-area { margin-top:60px; width:365px; height:382px; border:1px solid red; }
+.mainSec01 .introMain-area ul>li>em { font-style:initial;  font-size:var(--font24); font-weight: var(--w-bold); color:var(--m-color1); }
+.mainSec01 .introMain-area ul>li>p.tit { margin-top:18px; font-weight:var(--w-bold); font-size: var(--font50); }
+.mainSec01 .introMain-area ul>li>p.txt { margin-top:48px;  font-size: var(--font20);  line-height:1.5;}
+.mainSec01 .shortcut-area { margin-top:60px; padding:30px 36px; width:368px; height:382px; border-radius: 36px; background: var(--white); box-shadow: 0px 0px 10px rgba(0,12 ,44, 0.16); }
+
+.mainSec01 .shortcut-area .btn-wrap  { display:flex; }
+.mainSec01 .shortcut-area .btn-wrap button.btn { margin-left:10px; height:70px; border-radius: 8px; font-size: var(--font22); color:var(--white); }
+.mainSec01 .shortcut-area .btn-wrap button.btn:nth-child(1) { margin-left:0; padding:0 40px; background: var(--m-color2); }
+.mainSec01 .shortcut-area .btn-wrap button.btn:nth-child(2) { padding:0 30px; background: var(--m-color3); }
+
+.mainSec01 .shortcut-area ul>li:nth-of-type(1) { background: var(--m-img-shortCut01) no-repeat 50% 0px/50px auto;  }
+.mainSec01 .shortcut-area ul>li:nth-of-type(2) { background: var(--m-img-shortCut02) no-repeat 50% 0px/50px auto; }
+.mainSec01 .shortcut-area ul>li:nth-of-type(3) { margin-top:42px; background: var(--m-img-shortCut03) no-repeat 50% 0px/50px auto; }
+.mainSec01 .shortcut-area ul>li:nth-of-type(4) { margin-top:42px; background: var(--m-img-shortCut04) no-repeat 50% 0px/50px auto; }
+
 /*********************************************************************
 메인.05 - 공지사항/자료실/FAQ
 *********************************************************************/
@@ -78,8 +137,8 @@
 ---------------------------------------------*/
 .mainSec05 ul.intro-tit>li { display:inline-block; position: relative; cursor: pointer;}
 .mainSec05 ul.intro-tit>li + li { margin-left:22px;  }
-.mainSec05 ul.intro-tit>li.on h2 { line-height: 28px; color:var(--m-color1); }
-.mainSec05 ul.intro-tit>li.on::after { content: ''; position: absolute; left:0; bottom:-5px; width:100%; height:2px; background: var(--m-color1); }
+.mainSec05 ul.intro-tit>li.on h2 { line-height: 28px; color:var(--m-color4); }
+.mainSec05 ul.intro-tit>li.on::after { content: ''; position: absolute; left:0; bottom:-5px; width:100%; height:2px; background: var(--m-color4); }
 /*---------------------------------------------
     mainSec05 contents Default
 ---------------------------------------------*/
@@ -90,7 +149,7 @@
 .mainSec05 .intro-con { margin-top:45px; max-height:120px; }
 .mainSec05 .intro-con ul>li + li{ margin-top:24px; }
 .mainSec05 .intro-con ul>li{ border-bottom:1px solid transparent; line-height:1.4; max-height:24px; }
-.mainSec05 .intro-con ul>li:hover { background: var(--m-color2);}
+/* .mainSec05 .intro-con ul>li:hover { background: var(--m-color5);} */
 .mainSec05 .intro-con ul>li>a { display:flex; justify-content: space-between; gap:10px; }
 .mainSec05 .intro-con ul>li span.txt { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size:var(--font18); font-weight:var(--w-bold); color:var(--inactive); }
 .mainSec05 .intro-con ul>li span.date { text-align: right; min-width:88px; color:var(--subtitle);}
@@ -101,3 +160,33 @@
 .mainSec05 .introFaq-area .intro-tit h2 { display:inline-block; letter-spacing:-3.2px;}
 .mainSec05 .introFaq-area .intro-con ul>li { padding-left:32px; }
 .mainSec05 .introFaq-area .intro-con ul>li:before { content:''; position:absolute;  transform: translateY(-50%); top:50%; left:0; width:24px; height:24px; background: var(--m-img-q)no-repeat 100%/24px auto; }
+
+
+/* 데스크탑 */
+@media (max-width: 1200px) {
+/*********************************************************************
+메인 default layout
+*********************************************************************/
+    .mainWrap { padding-top:76px; }
+    .mainWrap .inner { padding:0 20px; }
+/*********************************************************************
+메인.01 - 메인베너/바로가기
+*********************************************************************/
+.mainSec01 .inner { margin-bottom:74px; }
+.mainSec01 .inner .img { margin-bottom:70px; }
+/* .mainSec01 .inner.img { background: var(--m-img-mainsec01) no-repeat right 0 bottom 80px /450px auto; } */
+.mainSec01 .shortcut-area { display:flex; align-items: center; flex-direction: row; gap:30px; padding:30px; position: absolute; bottom:30px; width:calc(100% - 40px); height:140px; transform: translateY(50%); }
+.mainSec01 .shortcut-area .btn-wrap button.btn { margin-left:20px; }
+.mainSec01 .shortcut-area ul { flex-wrap: initial; width:100%; margin-top:0; }
+.mainSec01 .shortcut-area ul>li { width:calc((100%/4) - 5px);}
+.mainSec01 .shortcut-area ul>li:nth-of-type(3) { margin-top:0px;}
+.mainSec01 .shortcut-area ul>li:nth-of-type(4) { width:18%; margin-top:0px;}
+}
+
+/* 태블릿*/
+@media (max-width: 1024px) {
+}
+
+/* 스마트폰 */
+@media (max-width: 767px) {
+}

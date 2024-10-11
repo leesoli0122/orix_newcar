@@ -233,16 +233,16 @@ Media Query
 /*********************************************************************
 메인.02 - 나의 현황조회
 *********************************************************************/
-.mainSec02 ul.introList-area>li.intro-box { width: calc((100% / 3) - 14px); margin-right:0; }
-.mainSec02 ul.introList-area>li.intro-box>a { background:var(--m-img-mainsec02) no-repeat var(--m-background2) right 20px bottom 20px /80px auto }
-.mainSec02 ul.introList-area>li.intro-box>a>.tit { font-size:var(--font18); }
-.mainSec02 ul.introList-area>li.intro-box>a>.txt { font-size:var(--font20); }
-.mainSec02 ul.introList-area { flex-wrap: wrap; gap:14px; }
+.mainSec02 ul.introList-area { flex-wrap: wrap; row-gap:14px;}
 .mainSec02 ul.introList-area>li { width:calc((100%/3) - 14px); }
 .mainSec02 ul.introList-area>li>a { height:180px; }
 .mainSec02 ul.introList-area>li>a>.tit { font-size:var(--font18); }
 .mainSec02 ul.introList-area>li>a>.num { font-size:var(--font20); }
 
+.mainSec02 ul.introList-area>li.intro-box { width: calc((100% / 3) - 14px); margin-right:0; }
+.mainSec02 ul.introList-area>li.intro-box>a { background:var(--m-img-mainsec02) no-repeat var(--m-background2) right 20px bottom 20px /80px auto }
+.mainSec02 ul.introList-area>li.intro-box>a>.tit { font-size:var(--font18); }
+.mainSec02 ul.introList-area>li.intro-box>a>.txt { font-size:var(--font20); }
 /*********************************************************************
 메인.03 - 나의 실적
 *********************************************************************/

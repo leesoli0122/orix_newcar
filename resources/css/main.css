@@ -166,8 +166,8 @@
     mainSec04 Contents
 ---------------------------------------------*/
 .mainSec04 ul.introList-area >li .tit { overflow: hidden; text-overflow:ellipsis; white-space: nowrap; font-size: var(--font20); }
-.mainSec04 ul.introList-area >li .btn { margin:18px 26px 0 0; font-size:var(--font24); font-weight: var(--w-bold); }
-.mainSec04 ul.introList-area >li .btn::after { content: ''; position: absolute; margin-left:3px; width:23px; height:23px; background:var(--m-img-arrow)no-repeat 100%/23px auto; }
+.mainSec04 ul.introList-area >li .btn { margin:18px 26px 0 0; line-height: 1.3; font-size:var(--font24); font-weight: var(--w-bold); }
+.mainSec04 ul.introList-area >li .btn::after { content: ''; display:inline-flex; align-items: center; position: absolute; margin-left:3px; width:23px; height:23px; background:var(--m-img-arrow)no-repeat 100%/23px auto; }
 
 
 /*********************************************************************

@@ -277,8 +277,8 @@ header #헤더
 #headerWrap > .h-menu div .menuitem-wrap.on { transform: scaleY(1)  translateX(-50%);}
 
 /* header 오른쪽 */
-#headerWrap > .h-menu div ul.menu-r { display:flex; letter-spacing:0; }
-#headerWrap > .h-menu div ul.menu-r li { display:inline-block; margin:0 15px; }
+#headerWrap > .h-menu div ul.menu-r { display:flex; align-items: center; letter-spacing:0; }
+#headerWrap > .h-menu div ul.menu-r li { display:inline-block; margin:0 15px; font-size:var(--font18); }
 #headerWrap > .h-menu div ul.menu-r li:last-child { margin:0; }
 #headerWrap > .h-menu div ul.menu-r li a span { font-weight:var(--w-bold); color:var(--secondary); text-decoration:underline; text-underline-offset:4px; }
 #headerWrap > .h-menu div ul.menu-r li a.btn-primary { padding:4px 15px; line-height: 14px; color:var(--white); background-color:var(--primary);border-radius:14px; }

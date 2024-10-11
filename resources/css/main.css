@@ -58,7 +58,8 @@
     }
 }
 
-.upAndDown ul>li:hover{ animation-name: upAndDown;  animation-duration: 0.34s; }
+.upAndDown ul>li:hover,
+.upAndDown ul>li:focus { animation-name: upAndDown;  animation-duration: 0.34s; }
 @keyframes upAndDown {
     0%, 20%, 100% {
         padding-top: 65px;
@@ -134,10 +135,14 @@
 .mainSec02 ul.introList-area>li>a { display:block; padding:30px 20px; background: var(--m-background3); }
 .mainSec02 ul.introList-area>li>a  { height:232px; border-radius:20px; }
 
-.mainSec02 ul.introList-area>li:not(.intro-box)>a:hover{ background: var(--m-color02); }
+.mainSec02 ul.introList-area>li:not(.intro-box)>a:hover,
+.mainSec02 ul.introList-area>li:not(.intro-box)>a:focus{ background: var(--m-color02); }
 .mainSec02 ul.introList-area>li:not(.intro-box)>a:hover>p,
 .mainSec02 ul.introList-area>li:not(.intro-box)>a:hover>.btn,
-.mainSec02 ul.introList-area>li:not(.intro-box)>a:hover>.btn::after  { color:var(--white); }
+.mainSec02 ul.introList-area>li:not(.intro-box)>a:hover>.btn::after,
+.mainSec02 ul.introList-area>li:not(.intro-box)>a:focus>p,
+.mainSec02 ul.introList-area>li:not(.intro-box)>a:focus>.btn,
+.mainSec02 ul.introList-area>li:not(.intro-box)>a:focus>.btn::after  { color:var(--white); }
 
 /*---------------------------------------------
     mainSec02 Contents
@@ -160,7 +165,8 @@
 .mainSec03 { margin-top:123px; }
 
 .mainSec03 a { transition: all 0.2s ease; }
-.mainSec03 a:hover { transform: scale(1.05); }
+.mainSec03 a:hover,
+.mainSec03 a:focus { transform: scale(1.05); }
 
 .mainSec03 a:nth-of-type(1) { display: block; }
 .mainSec03 a:nth-of-type(2) { display:none; }
@@ -185,7 +191,8 @@
 .mainSec04 ul.introList-area >li>a { display:block; text-align: center; padding:36px 20px; height:138px; border-radius: 34px; background: var(--m-background2);}
 
 .mainSec04 ul.introList-area >li>a { transition: 0.1s ease; }
-.mainSec04 ul.introList-area >li>a:hover { transform: scale(1.03); box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08); }
+.mainSec04 ul.introList-area >li>a:hover,
+.mainSec04 ul.introList-area >li>a:focus { transform: scale(1.03); box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08); }
 /*---------------------------------------------
     mainSec04 Contents
 ---------------------------------------------*/
@@ -214,7 +221,10 @@
 .mainSec05 .intro-con { margin-top:45px; max-height:120px; }
 .mainSec05 .intro-con ul>li + li{ margin-top:24px; }
 .mainSec05 .intro-con ul>li{ border-bottom:1px solid transparent; line-height:1.4; max-height:24px; }
-/* .mainSec05 .intro-con ul>li:hover { background: var(--m-color08);} */
+/* .mainSec05 .intro-con ul>li:hover,
+.mainSec05 .intro-con ul>li:focus { background: var(--m-color08);}
+
+*/
 .mainSec05 .intro-con ul>li>a { display:flex; justify-content: space-between; gap:10px; }
 .mainSec05 .intro-con ul>li span.txt { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size:var(--font18); font-weight:var(--w-bold); color:var(--inactive); }
 .mainSec05 .intro-con ul>li span.date { text-align: right; min-width:88px; color:var(--subtitle);}

@@ -270,6 +270,10 @@ Media Query
     .mainSec01 .shortcut-area .btn-wrap button.btn { margin-left:10px; font-size:var(--font18); }
     .mainSec01 .shortcut-area .btn-wrap button.btn:nth-child(1) { padding:0 20px; }
 /*********************************************************************
+메인.03 - 나의 실적
+*********************************************************************/
+    .mainSec03 a>.txt { padding-right:20px; }
+/*********************************************************************
 메인.04 - 견적서
 *********************************************************************/
     .mainSec04 ul.introList-area >li>a { height:130px; }

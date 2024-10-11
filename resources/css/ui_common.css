@@ -384,7 +384,7 @@ button.btn { display:inline-block; padding:0 40px; margin:0; height:54px; font-s
 ---------------------------------------------*/
 
 /*로그아웃버튼*/
-button.btn.btn-logout { padding:4px 15px; height:auto; border-radius:14px; font-size:var(--font12); font-weight:var(--w-bold); color:var(--white); background:var(--primary)}
+button.btn.btn-logout { padding:4px 15px; height:auto; border-radius:14px; font-size:var(--font14); font-weight:var(--w-bold); color:var(--white); background:var(--primary)}
 
 /*하단버튼*/
 button.btn.btn-primary { color:var(--white); background:var(--primary); }
@@ -1219,6 +1219,10 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-wrap.style3 .grid-list-body.style2 .change-txt { padding:0 20px 0 24px; }
 .grid-list-wrap.style3 .grid-list-body .change-txt.delivery { display:flex; justify-content:space-between; }
 .grid-list-wrap.style3 .grid-list-body .change-txt.delivery > div { font-size:var(--font16); font-weight:var(--w-bold); color:var(--title); }
+.grid-list-wrap.style3 .grid-list-body .change-txt.delivery.num > div span,
+.grid-list-wrap.style3 .grid-list-body .change-txt.delivery2.num > div span { font-size:var(--font16); font-weight:var(--w-bold); color:var(--error); }
+.grid-list-wrap.style3 .grid-list-body .change-txt.delivery2 { display:block; text-align:left; }
+.grid-list-wrap.style3 .grid-list-body .change-txt.delivery2 > div { margin-top:20px; font-size:var(--font16); font-weight:var(--w-bold); color:var(--title); text-align:right; }
 .grid-list-wrap.style3 .grid-list-body .change-txt.delivery.num > div span { font-size:var(--font16); font-weight:var(--w-bold); color:var(--error); }
 .grid-list-wrap.style3 .grid-list-footer { padding:10px 20px; height:67px; }
 .grid-list-wrap.style3 .grid-list-footer .num { font-size:var(--font22); font-weight:var(--w-bold); color:var(--secondary); }
@@ -1360,7 +1364,7 @@ dd.download-wrap { padding:0; background:transparent; }
 .estimate-body .table-col.amount tr td .flex,
 .table-wrap.auto .table-col tr td .flex { justify-content:space-between; }
 .estimate-body .table-col.amount tr td .flex .red { font-weight:var(--w-bold); }
-.estimate-body .table-col.amount tr.num td { border-bottom:1px solid var(--border2); }
+.estimate-body .table-col.amount tr:last-child td { border-bottom:1px solid var(--border2); }
 
 /** 정비상품 안내표 **/
 .table-type.repair.style2 thead tr:first-child th:first-child { padding:5px 0 6px; }
@@ -1370,11 +1374,19 @@ dd.download-wrap { padding:0; background:transparent; }
 /*---------------------------------------------
 	오토리스 견적서 body
 ---------------------------------------------*/
+.table-wrap.auto.no { display:block; }
+.table-wrap.auto.no .table-col { width:100%; }
 .table-wrap.auto .table-col th,
 .table-wrap.auto .table-col td { border-bottom:0; }
+.table-wrap.auto .table-col th { width:152px; }
 .table-wrap.auto .table-col tr.total th { border-top:1px solid var(--border2); border-bottom:1px solid var(--border2); background:var(--background1); }
 .table-wrap.auto .table-col tr.total td { border-top:1px solid var(--border2); border-bottom:1px solid var(--border2); }
 .table-wrap.auto .table-col tr.total td .red { font-weight:var(--w-bold); }
+
+.estimate-body .table-col.amount .num.auto th { border-right:1px solid var(--border3); border-bottom:1px solid var(--border3); background:var(--background2); }
+.estimate-body .table-col.amount .num.auto:last-child td { border-bottom:1px solid var(--border3); }
+.estimate-body .table-col.amount .num.auto:first-child td { border-top:1px solid var(--border3); }
+.table-col.amount tr.auto .now { border-bottom:1px solid var(--border2); }
 
 /*********************************************************************
 팝업에서 #선택
@@ -1508,3 +1520,13 @@ dd.download-wrap { padding:0; background:transparent; }
 		transform: scale(1);
 	}
 }
+
+/*---------------------------------------------
+	계약조건
+---------------------------------------------*/
+.loading-wrap2 { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:100%; height:100%; background:rgba(0,0,0,0.2); z-index:10; }
+.loading-wrap2 > div { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); }
+.loader2 { width:96px; --b:17px; aspect-ratio: 1; border-radius: 50%; padding: 1px; background: conic-gradient(#2363E7 10%, #4379E9 20%, #608DEC 30%, #789EEF 40%, #AFC6F6 50%, #E1E9FB 60%, #EDEDED 70%) content-box; -webkit-mask: repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg), radial-gradient(farthest-side,#0000 calc(100% - var(--b) - 1px),#000 calc(100% - var(--b))); -webkit-mask-composite: destination-in; mask-composite: intersect;
+animation:l4 1s infinite steps(10);}
+
+@keyframes l4 {to{transform: rotate(1turn)}}

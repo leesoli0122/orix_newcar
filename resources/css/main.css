@@ -1,6 +1,4 @@
 :root{
-    --font50: 3.125rem;
-    --font22: 1.375rem;
     --m-img-q: url(../images/mian/ic_question.png);
     --m-img-arrow: url(../images/mian/ic_m_arrow.png);
     --m-img-mainsec01: url(../images/mian/ic_mainCar.png);
@@ -10,6 +8,7 @@
     --m-img-shortCut02: url(../images/mian/ic_sc_perfo.png);
     --m-img-shortCut03: url(../images/mian/ic_sc_data.png);
     --m-img-shortCut04: url(../images/mian/ic_sc_faq.png);
+
     --m-color01:#1A3B6C;
     --m-color02:#1168E6;
     --m-color03:#2844C1;
@@ -17,7 +16,7 @@
     --m-color05:#255695;
     --m-color06:#377A6B;
     --m-color07:#056ED6;
-    /* --m-color8:#060a13; */
+    --m-color08:#060a13;
     
     --m-background1: #E2ECF7;
     --m-background2: #F2F6FC;
@@ -221,10 +220,9 @@
 .mainSec05 .intro-con { margin-top:45px; max-height:120px; }
 .mainSec05 .intro-con ul>li + li{ margin-top:24px; }
 .mainSec05 .intro-con ul>li{ border-bottom:1px solid transparent; line-height:1.4; max-height:24px; }
-/* .mainSec05 .intro-con ul>li:hover,
-.mainSec05 .intro-con ul>li:focus { background: var(--m-color08);}
+.mainSec05 .intro-con ul>li:hover,
+.mainSec05 .intro-con ul>li:focus { background: var(--m-background2);}
 
-*/
 .mainSec05 .intro-con ul>li>a { display:flex; justify-content: space-between; gap:10px; }
 .mainSec05 .intro-con ul>li span.txt { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size:var(--font18); font-weight:var(--w-bold); color:var(--inactive); }
 .mainSec05 .intro-con ul>li span.date { text-align: right; min-width:88px; color:var(--subtitle);}

@@ -28,7 +28,7 @@
 /*********************************************************************
 메인 Layout
 *********************************************************************/
-.mainWrap .sub-content{ padding:0 0 80px; max-width:initial; }
+/* .mainWrap .sub-content{ padding:0 0 80px; } */
 .mainWrap .inner {  max-width:1400px; margin:0 auto; }
 /*********************************************************************
 메인 Animation
@@ -63,7 +63,7 @@
 /*---------------------------------------------
     mainSec01 Default
 ---------------------------------------------*/
-.mainSec01 { max-height:502px; background:var(--m-background1); }
+.mainSec01 { width:99.5vw; margin-left:calc(-50vw + 50%); max-height:502px; background:var(--m-background1); }
 .mainSec01>div { display:flex; justify-content: space-between; height:502px; }
 .mainSec01 .shortcut-area ul { display:flex; flex-wrap:wrap; justify-content: space-between; gap:10px; margin-top:35px; }
 .mainSec01 .shortcut-area ul>li { flex:1 0 calc((100% - 2 * 14px) / 2); height:84px; text-align: center; padding-top:65px; cursor: pointer;}
@@ -213,7 +213,7 @@ Media Query
 메인 Layout
 *********************************************************************/
     .mainWrap { padding-top:76px; }
-    .mainWrap .inner { padding:0 20px; }
+    /* .mainWrap .inner { padding:0 20px; } */
 /*********************************************************************
 메인.01 - 메인베너/바로가기
 *********************************************************************/

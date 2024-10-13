@@ -155,9 +155,9 @@
     mainSec04 Default
 ---------------------------------------------*/
 .mainSec04 { margin-top:74px; }
-.mainSec04 ul.introList-area {  display:flex; gap:14px; margin-top:52px; }
-.mainSec04 ul.introList-area >li { flex:1; min-width:0; }
-.mainSec04 ul.introList-area >li>a { display:block; text-align: center; padding:36px 20px; height:138px; border-radius: 34px; background: var(--m-background2);}
+.mainSec04 ul.introList-area {  display:flex; flex-wrap: wrap; gap:14px; margin-top:52px; }
+.mainSec04 ul.introList-area >li { flex:1; min-width: 0; }
+.mainSec04 ul.introList-area >li>a { display:flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; padding:33px 20px; height:138px; border-radius: 34px; background: var(--m-background2);}
 
 .mainSec04 ul.introList-area >li>a { transition: 0.1s ease; }
 .mainSec04 ul.introList-area >li>a:hover,
@@ -184,7 +184,7 @@
     mainSec05 Default
 ---------------------------------------------*/
 .mainSec05 {  margin-top:74px; }
-.mainSec05>div { display:flex; justify-content: space-between; gap:14px;}
+.mainSec05>div { display:flex; justify-content: space-between; flex-wrap: wrap; gap:14px;}
 .mainSec05 [class*="area"] {flex:1; min-width: 0; padding:48px 40px 55px 40px; max-height:308px; border-radius: 24px; border:1px solid var(--border1);  background: var(--white); }
 .mainSec05 .intro-tit h2 { line-height:35px; font-size:var(--font24); font-weight: var(--w-bold); }
 .mainSec05 .intro-con { margin-top:45px; max-height:120px; }
@@ -229,7 +229,6 @@ Media Query
 .mainSec01 .shortcut-area ul>li:nth-of-type(1) { flex:1.2; }
 .mainSec01 .shortcut-area ul>li:nth-of-type(3) { margin-top:0px;}
 .mainSec01 .shortcut-area ul>li:nth-of-type(4) { margin-top:0px;}
-
 /*********************************************************************
 메인.02 - 나의 현황조회
 *********************************************************************/
@@ -238,7 +237,6 @@ Media Query
 .mainSec02 ul.introList-area>li>a { height:180px; }
 .mainSec02 ul.introList-area>li>a>.tit { font-size:var(--font18); }
 .mainSec02 ul.introList-area>li>a>.num { font-size:var(--font20); }
-
 .mainSec02 ul.introList-area>li.intro-box { flex: 1 0 calc((100% - 2 * 14px) / 3); margin-right:0; }
 .mainSec02 ul.introList-area>li.intro-box>a { background:var(--m-img-mainsec02) no-repeat var(--m-background2) right 20px bottom 20px /80px auto }
 .mainSec02 ul.introList-area>li.intro-box>a>.tit { font-size:var(--font18); }
@@ -252,14 +250,13 @@ Media Query
 .mainSec03 a>.tit { font-size:var(--font20); }
 .mainSec03 a>.txt { margin-left:0; font-size:var(--font18); }
 .mainSec03 a .img { width:200px; height:126px; }
-
-
 /*********************************************************************
 메인.04 - 견적서
 *********************************************************************/
+.mainSec04 ul.introList-area { flex-direction: column; }
 .mainSec04 ul.introList-area >li .tit { font-size:var(--font18); }
 .mainSec04 ul.introList-area >li .btn { font-size:var(--font20); }
-
+.mainSec04 ul.introList-area >li>a { height:120px; padding:20px; }
 }
 
 @media (max-width: 780px) {
@@ -274,17 +271,10 @@ Media Query
 *********************************************************************/
     .mainSec03 a>.txt { padding-right:20px; }
 /*********************************************************************
-메인.04 - 견적서
-*********************************************************************/
-    .mainSec04 ul.introList-area >li>a { height:130px; }
-    .mainSec04 ul.introList-area >li .tit { font-size:var(--font16); }
-    .mainSec04 ul.introList-area >li .btn { font-size:var(--font18); }
-/*********************************************************************
 메인.05 - 공지사항/자료실/FAQ
 *********************************************************************/
     .mainSec05>div { flex-direction: column; }
     .mainSec05 [class*="area"] { width:100%;  padding:30px;}
-    .mainSec05 .introFaq-area { margin-top: 20px; }
     .mainSec05 .intro-tit h2 { font-size:var(--font18); }
     .mainSec05 ul.intro-tit>li + li { margin-left:10px; }
     .mainSec05 .intro-con { margin-top:30px; }

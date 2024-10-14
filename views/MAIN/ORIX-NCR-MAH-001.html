@@ -101,7 +101,7 @@
                             var swiper = new Swiper(".introListSlider", {
                                 slidesPerView: 5, // 기본적으로 5개 슬라이드
                                 lazy: true,
-                                spaceBetween: 14,
+                                spaceBetween: 0,
                                 pagination: {
                                     el: ".swiper-pagination",
                                     clickable: true,
@@ -116,10 +116,13 @@
                             $(window).on('load resize', function() {
                                 if ($(window).width() <= 780) {
                                     swiper.params.slidesPerView = 1; // 화면 너비가 768px 이하일 때 슬라이드 개수 업데이트
+                                    swiper.params.spaceBetween = 10
                                 } else if ($(window).width() <= 1200) {
                                     swiper.params.slidesPerView = 3; // 화면 너비가 1200px 이하일 때 슬라이드 개수 업데이트
+                                    swiper.params.spaceBetween = 10
                                 } else {
                                     swiper.params.slidesPerView = 5; // 화면 너비가 1200px 초과일 때 기본 슬라이드 개수
+                                    swiper.params.spaceBetween = 0
                                 }
                         
                                 swiper.update(); // Swiper 업데이트

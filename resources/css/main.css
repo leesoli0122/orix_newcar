@@ -31,6 +31,8 @@
 *********************************************************************/
 .mainWrap .sub-content{ padding:0 0 80px; max-width: initial;}
 .mainWrap .inner {  max-width:1400px; margin:0 auto; }
+
+
 /*********************************************************************
 메인 Animation
 *********************************************************************/
@@ -39,13 +41,11 @@
     0% { transform: translateX("20px"); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
-
 .y-slide { animation-name: y-slide; animation-duration: 0.6s; animation-timing-function: ease; animation-delay: 0.2s; animation-iteration-count: 1; animation-direction: normal; animation-fill-mode: forwards; opacity: 0; transform: translateY(-20px); }
 @keyframes y-slide {
     0% { transform: translateX("-20px"); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
-
 .upAndDown ul>li:hover,
 .upAndDown ul>li:focus { animation-name: upAndDown;  animation-duration: 0.34s; }
 @keyframes upAndDown {
@@ -66,32 +66,31 @@
 ---------------------------------------------*/
 .mainSec01 { max-height:502px; background:var(--m-background1); }
 .mainSec01>div { display:flex; justify-content: space-between; height:502px; }
-.mainSec01 .shortcut-area ul { display:flex; flex-wrap:wrap; justify-content: space-between; gap:10px; margin-top:25px; }
-.mainSec01 .shortcut-area ul>li { flex:1 0 calc((100% - 2 * 14px) / 2); height:110px; text-align: center; padding-top:75px; cursor: pointer;}
-.mainSec01 .shortcut-area ul>li>a { font-weight: var(--w-bold); }
+.mainSec01 .shortcut-area>ul { display:flex; flex-wrap:wrap; justify-content: space-between; gap:10px; margin-top:25px; }
+.mainSec01 .shortcut-area>ul>li { flex:1 0 calc((100% - 2 * 14px) / 2); height:110px; text-align: center; padding-top:75px; cursor: pointer;}
+.mainSec01 .shortcut-area>ul>li>a { font-weight: var(--w-bold); }
 /*---------------------------------------------
     mainSec01 Contents
 ---------------------------------------------*/
 .mainSec01 .introMain-area { margin-top:92px; margin-left:10px; }
-.mainSec01 .introMain-area ul>li>em { font-style:initial;  font-size:var(--font24); font-weight: var(--w-bold); color:var(--m-color01); }
-.mainSec01 .introMain-area ul>li>p.tit { margin-top:18px; font-weight:var(--w-bold); font-size: var(--font50); }
-.mainSec01 .introMain-area ul>li>p.txt { margin-top:48px;  font-size: var(--font20);  line-height:1.5;}
+.mainSec01 .introMain-area>ul>li>em { font-style:initial;  font-size:var(--font24); font-weight: var(--w-bold); color:var(--m-color01); }
+.mainSec01 .introMain-area>ul>li>p.tit { margin-top:18px; font-weight:var(--w-bold); font-size: var(--font50); }
+.mainSec01 .introMain-area>ul>li>p.txt { margin-top:48px;  font-size: var(--font20);  line-height:1.5;}
 
 .mainSec01 .shortcut-area { margin-top:60px; padding:36px; width:368px; height:382px; border-radius: 36px; background: var(--white); box-shadow: 0px 0px 10px rgba(0,12 ,44, 0.16); }
-.mainSec01 .shortcut-area .btn-wrap  { display:flex; }
-.mainSec01 .shortcut-area .btn-wrap button.btn { margin-left:10px; height:70px; border-radius: 8px; font-size: var(--font22); color:var(--white); }
-.mainSec01 .shortcut-area .btn-wrap button.btn:nth-child(1) { margin-left:0; padding:0 40px; background: var(--m-color02); }
-.mainSec01 .shortcut-area .btn-wrap button.btn:nth-child(2) { padding:0 30px; background: var(--m-color03); }
-
-.mainSec01 .shortcut-area ul>li:nth-of-type(1) { background: var(--m-img-shortCut01) no-repeat 50% 10px/50px auto;  }
-.mainSec01 .shortcut-area ul>li:nth-of-type(2) { background: var(--m-img-shortCut02) no-repeat 50% 10px/50px auto; }
-.mainSec01 .shortcut-area ul>li:nth-of-type(3) { background: var(--m-img-shortCut03) no-repeat 50% 10px/50px auto; }
-.mainSec01 .shortcut-area ul>li:nth-of-type(4) { background: var(--m-img-shortCut04) no-repeat 50% 10px/50px auto; }
-.mainSec01 .shortcut-area ul>li:nth-of-type(1):hover,
-.mainSec01 .shortcut-area ul>li:nth-of-type(2):hover,
-.mainSec01 .shortcut-area ul>li:nth-of-type(3):hover,
-.mainSec01 .shortcut-area ul>li:nth-of-type(4):hover,
-.mainSec01 .shortcut-area ul>li:nth-of-type(5):hover { background-color: var(--m-background5); border-radius: 10px;}
+.mainSec01 .shortcut-area>.btn-wrap  { display:flex; }
+.mainSec01 .shortcut-area>.btn-wrap>button.btn { margin-left:10px; height:70px; border-radius: 8px; font-size: var(--font22); color:var(--white); }
+.mainSec01 .shortcut-area>.btn-wrap>button.btn:nth-child(1) { margin-left:0; padding:0 40px; background: var(--m-color02); }
+.mainSec01 .shortcut-area>.btn-wrap>button.btn:nth-child(2) { padding:0 30px; background: var(--m-color03); }
+.mainSec01 .shortcut-area>ul>li:nth-of-type(1) { background: var(--m-img-shortCut01) no-repeat 50% 10px/50px auto;  }
+.mainSec01 .shortcut-area>ul>li:nth-of-type(2) { background: var(--m-img-shortCut02) no-repeat 50% 10px/50px auto; }
+.mainSec01 .shortcut-area>ul>li:nth-of-type(3) { background: var(--m-img-shortCut03) no-repeat 50% 10px/50px auto; }
+.mainSec01 .shortcut-area>ul>li:nth-of-type(4) { background: var(--m-img-shortCut04) no-repeat 50% 10px/50px auto; }
+.mainSec01 .shortcut-area>ul>li:nth-of-type(1):hover,
+.mainSec01 .shortcut-area>ul>li:nth-of-type(2):hover,
+.mainSec01 .shortcut-area>ul>li:nth-of-type(3):hover,
+.mainSec01 .shortcut-area>ul>li:nth-of-type(4):hover,
+.mainSec01 .shortcut-area>ul>li:nth-of-type(5):hover { background-color: var(--m-background5); border-radius: 10px;}
 
 /*********************************************************************
 메인.02 - 나의 현황조회
@@ -101,14 +100,12 @@
 ---------------------------------------------*/
 .mainSec02 { margin-top:110px; }
 .mainSec02>div { display:flex; gap:20px; width:100%; }
-
 .mainSec02 ul.introList-area { display:flex; justify-content: space-between; gap:14px; width:100%; }
 .mainSec02 ul.introList-area>li.intro-box { flex:0 0 309px; margin-right:16px;  }
 .mainSec02 ul.introList-area>li.intro-box>a { padding:30px; font-weight: var(--w-bold); background: var(--m-img-mainsec02) no-repeat var(--m-background2) right 20px bottom 20px /97px auto; }
 .mainSec02 ul.introList-area>li { flex:1;  }
 .mainSec02 ul.introList-area>li>a { display:block; padding:30px 20px; background: var(--m-background3); }
 .mainSec02 ul.introList-area>li>a  { height:232px; border-radius:20px; }
-
 .mainSec02 ul.introList-area>li:not(.intro-box)>a:hover,
 .mainSec02 ul.introList-area>li:not(.intro-box)>a:focus{ background: var(--m-color02); }
 .mainSec02 ul.introList-area>li:not(.intro-box)>a:hover>p,
@@ -117,7 +114,6 @@
 .mainSec02 ul.introList-area>li:not(.intro-box)>a:focus>p,
 .mainSec02 ul.introList-area>li:not(.intro-box)>a:focus>.btn,
 .mainSec02 ul.introList-area>li:not(.intro-box)>a:focus>.btn::after  { color:var(--white); }
-
 /*---------------------------------------------
     mainSec02 Contents
 ---------------------------------------------*/
@@ -137,7 +133,6 @@
     mainSec03 Default
 ---------------------------------------------*/
 .mainSec03 { margin-top:123px; }
-
 .mainSec03 a { transition: all 0.2s ease; }
 .mainSec03 a:hover,
 .mainSec03 a:focus { transform: scale(1.05); }
@@ -145,9 +140,9 @@
     mainSec03 Contents
 ---------------------------------------------*/
 .mainSec03 a { display:flex; justify-content: center; gap:12px; padding:32px 0; font-weight: var(--w-bold); text-align: center; border-radius: 20px; color:var(--m-color06); background: var(--m-background4); }
-.mainSec03 a .tit { font-size: var(--font24); }
-.mainSec03 a .txt { font-size: var(--font20); }
-.mainSec03 a .img { position: absolute; bottom:0; right:0; width:212px; height:138px; }
+.mainSec03 a>.tit { font-size: var(--font24); }
+.mainSec03 a>.txt { font-size: var(--font20); }
+.mainSec03 a>.img { position: absolute; bottom:0; right:0; width:212px; height:138px; }
 
 
 /*********************************************************************
@@ -158,18 +153,17 @@
 ---------------------------------------------*/
 .mainSec04 { margin-top:74px; }
 .mainSec04 ul.introList-area {  display:flex; flex-wrap: wrap; gap:14px; margin-top:52px; }
-.mainSec04 ul.introList-area >li { flex:1; min-width: 0; }
-.mainSec04 ul.introList-area >li>a { display:flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; padding:33px 20px; height:138px; border-radius: 34px; background: var(--m-background2);}
-
-.mainSec04 ul.introList-area >li>a { transition: 0.1s ease; }
-.mainSec04 ul.introList-area >li>a:hover,
-.mainSec04 ul.introList-area >li>a:focus { transform: scale(1.03); box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08); }
+.mainSec04 ul.introList-area>li { flex:1; min-width: 0; }
+.mainSec04 ul.introList-area>li>a { display:flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; padding:33px 20px; height:138px; border-radius: 34px; background: var(--m-background2);}
+.mainSec04 ul.introList-area>li>a { transition: 0.1s ease; }
+.mainSec04 ul.introList-area>li>a:hover,
+.mainSec04 ul.introList-area>li>a:focus { transform: scale(1.03); box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08); }
 /*---------------------------------------------
     mainSec04 Contents
 ---------------------------------------------*/
-.mainSec04 ul.introList-area >li .tit { overflow: hidden; text-overflow:ellipsis; white-space: nowrap; font-size: var(--font20); }
-.mainSec04 ul.introList-area >li .btn { margin:18px 26px 0 0; line-height: 1.3; font-size:var(--font24); font-weight: var(--w-bold); }
-.mainSec04 ul.introList-area >li .btn::after { content: ''; display:inline-flex; align-items: center; position: absolute; margin-left:3px; width:23px; height:23px; background:var(--m-img-arrow)no-repeat 100%/23px auto; }
+.mainSec04 ul.introList-area>li>a>.tit { overflow: hidden; text-overflow:ellipsis; white-space: nowrap; font-size: var(--font20); }
+.mainSec04 ul.introList-area>li>a>.btn { margin:18px 26px 0 0; line-height: 1.3; font-size:var(--font24); font-weight: var(--w-bold); }
+.mainSec04 ul.introList-area>li>a>.btn::after { content: ''; display:inline-flex; align-items: center; position: absolute; margin-left:3px; width:23px; height:23px; background:var(--m-img-arrow)no-repeat 100%/23px auto; }
 
 
 /*********************************************************************
@@ -219,60 +213,58 @@ Media Query
 /*********************************************************************
 메인.01 - 메인베너/바로가기
 *********************************************************************/
-.mainSec01 .img { margin-top:70px; width:400px; height:342px; }
-.mainSec01 .introMain-area ul>li>p.tit { font-size:var(--font40); }
-.mainSec01 .introMain-area ul>li>p.txt { margin-top:30px; }
-.mainSec01 .shortcut-area { display:flex; align-items: center; flex-direction: row; flex-wrap: wrap; gap:20px; padding:30px; position: absolute; bottom:30px; width:calc(100% - 40px); height:auto; transform: translateY(50%); }
-.mainSec01 .shortcut-area .btn-wrap { flex:0 0 247px; }
-.mainSec01 .shortcut-area .btn-wrap button.btn { margin-left:15px; font-size:var(--font20); }
-.mainSec01 .shortcut-area .btn-wrap button.btn:nth-child(1) { padding:0 30px; }
-.mainSec01 .shortcut-area .btn-wrap button.btn:nth-child(2) { padding:0 20px; }
-.mainSec01 .shortcut-area ul { flex-wrap: initial; width:100%; flex:1; margin-top:0; }
-.mainSec01 .shortcut-area ul>li { flex:1; }
-.mainSec01 .shortcut-area ul>li:nth-of-type(1) { flex:1.2; }
-
-.mainSec01 .shortcut-area ul>li:nth-of-type(1):hover,
-.mainSec01 .shortcut-area ul>li:nth-of-type(2):hover,
-.mainSec01 .shortcut-area ul>li:nth-of-type(3):hover,
-.mainSec01 .shortcut-area ul>li:nth-of-type(4):hover,
-.mainSec01 .shortcut-area ul>li:nth-of-type(5):hover { background-color: var(--white); }
-
+    .mainSec01 .img { margin-top:70px; width:400px; height:342px; }
+    .mainSec01 .introMain-area ul>li>p.tit { font-size:var(--font40); }
+    .mainSec01 .introMain-area ul>li>p.txt { margin-top:30px; }
+    .mainSec01 .shortcut-area { display:flex; align-items: center; flex-direction: row; flex-wrap: wrap; gap:20px; padding:30px; position: absolute; bottom:30px; width:calc(100% - 40px); height:auto; transform: translateY(50%); }
+    .mainSec01 .shortcut-area>.btn-wrap { flex:0 0 247px; }
+    .mainSec01 .shortcut-area>.btn-wrap>button.btn { margin-left:15px; font-size:var(--font20); }
+    .mainSec01 .shortcut-area>.btn-wrap>button.btn:nth-child(1) { padding:0 30px; }
+    .mainSec01 .shortcut-area>.btn-wrap>button.btn:nth-child(2) { padding:0 20px; }
+    .mainSec01 .shortcut-area>ul { flex-wrap: initial; width:100%; flex:1; margin-top:0; }
+    .mainSec01 .shortcut-area>ul>li { flex:1; }
+    .mainSec01 .shortcut-area>ul>li:nth-of-type(1) {flex:1.2; }
+    .mainSec01 .shortcut-area>ul>li:nth-of-type(1):hover,
+    .mainSec01 .shortcut-area>ul>li:nth-of-type(2):hover,
+    .mainSec01 .shortcut-area>ul>li:nth-of-type(3):hover,
+    .mainSec01 .shortcut-area>ul>li:nth-of-type(4):hover,
+    .mainSec01 .shortcut-area>ul>li:nth-of-type(5):hover { background-color: var(--white); }
 /*********************************************************************
 메인.02 - 나의 현황조회
 *********************************************************************/
-.mainSec02 ul.introList-area { flex-wrap: wrap;}
-.mainSec02 ul.introList-area>li { flex: 1 0 calc((100% - 2 * 14px) / 3); }
-.mainSec02 ul.introList-area>li>a { height:180px; }
-.mainSec02 ul.introList-area>li>a>.tit { font-size:var(--font18); }
-.mainSec02 ul.introList-area>li>a>.num { font-size:var(--font20); }
-.mainSec02 ul.introList-area>li.intro-box { flex: 1 0 calc((100% - 2 * 14px) / 3); margin-right:0; }
-.mainSec02 ul.introList-area>li.intro-box>a { background:var(--m-img-mainsec02) no-repeat var(--m-background2) right 20px bottom 20px /80px auto }
-.mainSec02 ul.introList-area>li.intro-box>a>.tit { font-size:var(--font18); }
-.mainSec02 ul.introList-area>li.intro-box>a>.txt { font-size:var(--font20); }
+    .mainSec02 ul.introList-area { flex-wrap: wrap;}
+    .mainSec02 ul.introList-area>li { flex: 1 0 calc((100% - 2 * 14px) / 3); }
+    .mainSec02 ul.introList-area>li>a { height:180px; }
+    .mainSec02 ul.introList-area>li>a>.tit { font-size:var(--font18); }
+    .mainSec02 ul.introList-area>li>a>.num { font-size:var(--font20); }
+    .mainSec02 ul.introList-area>li.intro-box { flex: 1 0 calc((100% - 2 * 14px) / 3); margin-right:0; }
+    .mainSec02 ul.introList-area>li.intro-box>a { background:var(--m-img-mainsec02) no-repeat var(--m-background2) right 20px bottom 20px /80px auto }
+    .mainSec02 ul.introList-area>li.intro-box>a>.tit { font-size:var(--font18); }
+    .mainSec02 ul.introList-area>li.intro-box>a>.txt { font-size:var(--font20); }
 /*********************************************************************
 메인.03 - 나의 실적
 *********************************************************************/
-.mainSec03 a { flex-direction:column; padding:22px 0; }
-.mainSec03 a>.tit { font-size:var(--font20); }
-.mainSec03 a>.txt { font-size:var(--font18); }
-.mainSec03 a .img { width:200px; height:126px; }
+    .mainSec03 a { flex-direction:column; padding:22px 0; }
+    .mainSec03 a>.tit { font-size:var(--font20); }
+    .mainSec03 a>.txt { font-size:var(--font18); }
+    .mainSec03 a>.img { width:200px; height:126px; }
 /*********************************************************************
 메인.04 - 견적서
 *********************************************************************/
-.mainSec04 ul.introList-area { flex-direction: column; }
-.mainSec04 ul.introList-area >li .tit { font-size:var(--font18); }
-.mainSec04 ul.introList-area >li .btn { font-size:var(--font20); }
-.mainSec04 ul.introList-area >li>a { height:120px; padding:20px; }
+    .mainSec04 ul.introList-area { flex-direction: column; }
+    .mainSec04 ul.introList-area>li>a { height:120px; padding:20px; }
+    .mainSec04 ul.introList-area>li>a>.tit { font-size:var(--font18); }
+    .mainSec04 ul.introList-area>li>a>.btn { font-size:var(--font20); }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 780px) { /* Tablet */
 /*********************************************************************
 메인.01 - 메인베너/바로가기
 *********************************************************************/
     .mainSec01 .shortcut-area { gap:15px; }
-    .mainSec01 .shortcut-area .btn-wrap { flex: 0 0 210px; }
-    .mainSec01 .shortcut-area .btn-wrap button.btn { margin-left:10px; font-size:var(--font18); }
-    .mainSec01 .shortcut-area .btn-wrap button.btn:nth-child(1) { padding:0 20px; }
+    .mainSec01 .shortcut-area>.btn-wrap { flex: 0 0 210px; }
+    .mainSec01 .shortcut-area>.btn-wrap>button.btn { margin-left:10px; font-size:var(--font18); }
+    .mainSec01 .shortcut-area>.btn-wrap>button.btn:nth-child(1) { padding:0 20px; }
 /*********************************************************************
 메인.03 - 나의 실적
 *********************************************************************/

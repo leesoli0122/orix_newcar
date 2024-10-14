@@ -1,13 +1,13 @@
 :root{
-    --m-img-q: url(../images/mian/ic_question.png);
-    --m-img-arrow: url(../images/mian/ic_m_arrow.png);
-    --m-img-mainsec01: url(../images/mian/ic_mainCar.png);
-    --m-img-mainsec02: url(../images/mian/ic_my_current.png);
-    --m-img-mainSec03: url(../images/mian/ic_my_graph.png);
-    --m-img-shortCut01: url(../images/mian/ic_sc_quote.png);
-    --m-img-shortCut02: url(../images/mian/ic_sc_perfo.png);
-    --m-img-shortCut03: url(../images/mian/ic_sc_data.png);
-    --m-img-shortCut04: url(../images/mian/ic_sc_faq.png);
+    --m-img-q: url(../../images/main/ic_question.png);
+    --m-img-arrow: url(../../images/main/ic_m_arrow.png);
+    --m-img-mainsec01: url(../../images/main/ic_mainCar.png);
+    --m-img-mainsec02: url(../../images/main/ic_my_current.png);
+    --m-img-mainSec03: url(../../images/main/ic_my_graph.png);
+    --m-img-shortCut01: url(../../images/main/ic_sc_quote.png);
+    --m-img-shortCut02: url(../../images/main/ic_sc_perfo.png);
+    --m-img-shortCut03: url(../../images/main/ic_sc_data.png);
+    --m-img-shortCut04: url(../../images/main/ic_sc_faq.png);
 
     --m-color01:#1A3B6C;
     --m-color02:#1168E6;
@@ -128,7 +128,7 @@
 ---------------------------------------------*/
 .mainSec02 .introListSlider { flex:1; width:100%; min-width:0; }
 .mainSec02 .introListSlider { overflow: hidden; width:100%; }
-.mainSec02 .introListSlider .swiper-button-next:after, .introListSlider .swiper-button-prev:after { content: ''; position: absolute; width:45px; height:45px; background: url(../images/mian/ic_arror_right.png)no-repeat right -4px center/45px auto; border:3px solid #789EEF; border-radius: 50%;  }
+.mainSec02 .introListSlider .swiper-button-next:after, .introListSlider .swiper-button-prev:after { content: ''; position: absolute; width:45px; height:45px; background: url(../../images/main/ic_arror_right.png)no-repeat right -4px center/45px auto; border:3px solid #789EEF; border-radius: 50%;  }
 .mainSec02 .introListSlider .swiper-button-prev:after { transform: rotate(180deg); }
 .mainSec02 .introListSlider .swiper-button-next, .swiper-rtl .swiper-button-prev { right:var(--swiper-navigation-sides-offset, 20px); }
 .mainSec02 .introListSlider .swiper-button-prev, .swiper-rtl .swiper-button-next { left:var(--swiper-navigation-sides-offset, 20px); }

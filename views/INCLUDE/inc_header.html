@@ -67,10 +67,10 @@
         </ul>
     </div>
     <div class="nav-btn">
-        <a href="javascript:void(0);" class="ham">
+        <a href="#javascript:void(0);" class="ham">
             <img src="../../resources/images/nav_btn.png" alt="메뉴아이콘">
         </a>
-        <a href="javascript:void(0);" class="close">
+        <a href="#javascript:void(0);" class="close">
             <img src="../../resources/images/common/ic_close.png" alt="닫기버튼">
         </a>
     </div>
@@ -89,19 +89,27 @@
             }
         });
 
-        // 전체메뉴 버튼 상태 체크 변수
+        // 전역 변수로 선언 및 초기화
         var isNavMenuOpen = false;
 
-        // gnb action
         $(".menu > li").on('click', function (e) {
-            // 전체메뉴가 열려 있을 때는 GNB 메뉴의 'on' 클래스가 추가되지 않도록 함
-            if (isNavMenuOpen) return;  // 전체메뉴가 열려 있을 때 클릭 무시
-
             var targetLink = $(e.target).attr('href');
 
-            // 실제 링크가 있을 경우, 링크를 그대로 이동하게 함
+            // 전체메뉴가 열려 있을 때
+            if (isNavMenuOpen) {
+                // 클릭된 요소가 .menuitem-wrap 내부의 <a> 태그일 경우만 링크 이동 허용
+                if ($(e.target).is('a') && $(e.target).closest('.menuitem-wrap').length && targetLink && targetLink !== "javascript:void(0);") {
+                    // 링크가 정상적일 경우 링크 이동 허용
+                    return;
+                } else {
+                    // 그 외에는 링크 이동 방지
+                    e.preventDefault();
+                    return;
+                }
+            }
+
+            // 링크가 있을 경우, 새 창을 여는 링크일 경우 메뉴 접기
             if (targetLink && targetLink !== "javascript:void(0);") {
-                // 새 창을 열도록 지정된 링크일 경우 메뉴 접기
                 if ($(e.target).attr('target') === '_blank') {
                     // 메뉴 접기
                     $(".menu > li, .menuitem-wrap").removeClass('on');
@@ -137,6 +145,7 @@
             var $allmenu = $(".h-menu");
             var $header = $("#headerWrap");
 
+            // 전체메뉴 열고 닫기
             $allmenu.toggleClass('on');
             $header.toggleClass('on');
             
@@ -145,7 +154,11 @@
 
             // 전체메뉴가 열리면 GNB 메뉴와 menuitem-wrap의 'on' 클래스 제거
             if (isNavMenuOpen) {
-                $(".menu > li, .menuitem-wrap").removeClass('on');  // 메뉴와 menuitem-wrap 모두에서 'on' 제거
+                $(".menu > li, .menuitem-wrap").removeClass('on');
+                $('html').css({ 'overflow': 'hidden' });
+            } else {
+                // 전체메뉴가 닫힐 때 overflow: auto로 복구
+                $('html').css({ 'overflow': 'auto' });
             }
         });
     });

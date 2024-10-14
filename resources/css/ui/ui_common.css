@@ -1442,26 +1442,27 @@ dd.download-wrap { padding:0; background:transparent; }
 	slide #스와이퍼
 ---------------------------------------------*/
 .swiper-container { position:relative; }
-.mySwiper .swiper-horizontal { margin:0 auto; width:408px; height:145px; overflow: hidden; }
+.swiper-horizontal { margin:0 auto; width:408px; height:145px; overflow: hidden; }
 
-.mySwiper .swiper-slide { display:flex; justify-content:center; align-items:center; /*padding:10px;*/ max-width:126px; width:100%; font-size:var(--font14); text-align:center; }
-.mySwiper .swiper-slide button { padding:10px; background:transparent; cursor: pointer;}
-.mySwiper .swiper-slide button .img-box { margin:0 auto; width:95px; height:57px; }
-.mySwiper .swiper-slide button img { display:block; width:100%; height:100%; }
-.mySwiper .swiper-slide button { font-size:var(--font14); color:var(--normal); }
-.mySwiper .swiper-slide button .tit { margin-top:8px; font-size:var(--font14); font-weight:var(--w-bold); line-height:21px; }
 
-.mySwiper .navigation-wrapper { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display:flex;justify-content:space-between; margin:0 auto; width:512px; /*z-index:1;*/ }
-.mySwiper .navigation-wrapper .swiper-button-prev,
-.mySwiper .navigation-wrapper .swiper-button-next { position:static; margin-top:0; }
-.mySwiper .navigation-wrapper .swiper-button-prev { width:42px; height:42px; background:url(../images/swiper_l_arr.png)no-repeat 50%/42px auto; }
-.mySwiper .navigation-wrapper .swiper-button-next { width:42px; height:42px; background:url(../images/swiper_r_arr.png)no-repeat 50%/42px auto; }
-.mySwiper .navigation-wrapper .swiper-button-prev::after,
-.mySwiper.navigation-wrapper .swiper-button-next::after { content:none; }
+.swiper-slide { display:flex; justify-content:center; align-items:center; /*padding:10px;*/ max-width:126px; width:100%; font-size:var(--font14); text-align:center; }
+.swiper-slide button { padding:10px; background:transparent; cursor: pointer;}
+.swiper-slide button .img-box { margin:0 auto; width:95px; height:57px; }
+.swiper-slide button img { display:block; width:100%; height:100%; }
+.swiper-slide button { font-size:var(--font14); color:var(--normal); }
+.swiper-slide button .tit { margin-top:8px; font-size:var(--font14); font-weight:var(--w-bold); line-height:21px; }
 
-.mySwiper .swiper-slide.on { border:1px solid var(--secondary); border-radius:3px; background:var(--background4); }
-.mySwiper .swiper-slide.on span,
-.mySwiper .swiper-slide.on .tit { color:var(--secondary); }
+.navigation-wrapper { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display:flex;justify-content:space-between; margin:0 auto; width:512px; /*z-index:1;*/ }
+.navigation-wrapper .swiper-button-prev,
+.navigation-wrapper .swiper-button-next { position:static; margin-top:0; }
+.navigation-wrapper .swiper-button-prev { width:42px; height:42px; background:url(../images/swiper_l_arr.png)no-repeat 50%/42px auto; }
+.navigation-wrapper .swiper-button-next { width:42px; height:42px; background:url(../images/swiper_r_arr.png)no-repeat 50%/42px auto; }
+.navigation-wrapper .swiper-button-prev::after,
+.navigation-wrapper .swiper-button-next::after { content:none; }
+
+.swiper-slide.on { border:1px solid var(--secondary); border-radius:3px; background:var(--background4); }
+.swiper-slide.on span,
+.swiper-slide.on .tit { color:var(--secondary); }
 
 /*---------------------------------------------
 	조건부 업종 여부 확인

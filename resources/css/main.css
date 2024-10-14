@@ -72,7 +72,7 @@
 /*---------------------------------------------
     mainSec01 Contents
 ---------------------------------------------*/
-.mainSec01 .introMain-area { margin-top:92px; margin-left:10px; }
+.mainSec01 .introMain-area { margin-top:92px; }
 .mainSec01 .introMain-area>ul>li>em { font-style:initial;  font-size:var(--font24); font-weight: var(--w-bold); color:var(--m-color01); }
 .mainSec01 .introMain-area>ul>li>p.tit { margin-top:18px; font-weight:var(--w-bold); font-size: var(--font50); }
 .mainSec01 .introMain-area>ul>li>p.txt { margin-top:48px;  font-size: var(--font20);  line-height:1.5;}

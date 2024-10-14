@@ -78,9 +78,9 @@
 
 .mainSec01 .shortcut-area { margin-top:60px; padding:36px; width:368px; height:382px; border-radius: 36px; background: var(--white); box-shadow: 0px 0px 10px rgba(0,12 ,44, 0.16); }
 .mainSec01 .shortcut-area>.btn-wrap  { display:flex; }
-.mainSec01 .shortcut-area>.btn-wrap>button.btn { margin-left:10px; height:70px; border-radius: 8px; font-size: var(--font22); color:var(--white); }
-.mainSec01 .shortcut-area>.btn-wrap>button.btn:nth-child(1) { margin-left:0; padding:0 40px; background: var(--m-color02); }
-.mainSec01 .shortcut-area>.btn-wrap>button.btn:nth-child(2) { padding:0 30px; background: var(--m-color03); }
+.mainSec01 .shortcut-area>.btn-wrap>.btn { display:flex; align-items: center; word-break: keep-all; margin-left:10px; height:70px; border-radius: 8px; font-size: var(--font22); font-weight: var(--w-bold); color:var(--white); }
+.mainSec01 .shortcut-area>.btn-wrap>.btn:nth-child(1) { margin-left:0; padding:0 40px; background: var(--m-color02); }
+.mainSec01 .shortcut-area>.btn-wrap>.btn:nth-child(2) { padding:0 30px; background: var(--m-color03); }
 .mainSec01 .shortcut-area>ul>li:nth-of-type(1) { background: var(--m-img-shortCut01) no-repeat 50% 10px/50px auto;  }
 .mainSec01 .shortcut-area>ul>li:nth-of-type(2) { background: var(--m-img-shortCut02) no-repeat 50% 10px/50px auto; }
 .mainSec01 .shortcut-area>ul>li:nth-of-type(3) { background: var(--m-img-shortCut03) no-repeat 50% 10px/50px auto; }
@@ -238,9 +238,9 @@ Media Query
     .mainSec01 .introMain-area ul>li>p { margin-top:30px; }
     .mainSec01 .shortcut-area { display:flex; align-items: center; flex-direction: row; flex-wrap: wrap; gap:20px; padding:30px; position: absolute; bottom:30px; width:calc(100% - 40px); height:auto; transform: translateY(50%); }
     .mainSec01 .shortcut-area>.btn-wrap { flex:0 0 247px; }
-    .mainSec01 .shortcut-area>.btn-wrap>button.btn { margin-left:15px; font-size:var(--font20); }
-    .mainSec01 .shortcut-area>.btn-wrap>button.btn:nth-child(1) { padding:0 30px; }
-    .mainSec01 .shortcut-area>.btn-wrap>button.btn:nth-child(2) { padding:0 20px; }
+    .mainSec01 .shortcut-area>.btn-wrap>.btn { margin-left:15px; font-size:var(--font20); }
+    .mainSec01 .shortcut-area>.btn-wrap>.btn:nth-child(1) { padding:0 30px; }
+    .mainSec01 .shortcut-area>.btn-wrap>.btn:nth-child(2) { padding:0 20px; }
     .mainSec01 .shortcut-area>ul { flex-wrap: initial; width:100%; flex:1; margin-top:0; }
     .mainSec01 .shortcut-area>ul>li { flex:1; }
     .mainSec01 .shortcut-area>ul>li:nth-of-type(1) {flex:1.2; }
@@ -300,8 +300,8 @@ Media Query
 *********************************************************************/
     .mainSec01 .shortcut-area { gap:15px; }
     .mainSec01 .shortcut-area>.btn-wrap { flex: 0 0 210px; }
-    .mainSec01 .shortcut-area>.btn-wrap>button.btn { margin-left:10px; font-size:var(--font18); }
-    .mainSec01 .shortcut-area>.btn-wrap>button.btn:nth-child(1) { padding:0 20px; }
+    .mainSec01 .shortcut-area>.btn-wrap>.btn { margin-left:10px; font-size:var(--font18); }
+    .mainSec01 .shortcut-area>.btn-wrap>.btn:nth-child(1) { padding:0 20px; }
 /*********************************************************************
 메인.02 - 나의 현황조회
 *********************************************************************/

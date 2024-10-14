@@ -98,8 +98,8 @@
                     </div>
                     <script>
                         $(document).ready(function() {
-                            var swiper = new Swiper(".introListSlider", { // Default
-                                slidesPerView: 5,
+                            var swiper = new Swiper(".introListSlider", {
+                                slidesPerView: 5, // Default
                                 lazy: true,
                                 spaceBetween: 0,
                                 pagination: {
@@ -112,6 +112,7 @@
                                 },
                             });
                         
+                            // Resize
                             $(window).on('load resize', function() {
                                 if ($(window).width() <= 780) {
                                     swiper.params.slidesPerView = 1;

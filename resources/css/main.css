@@ -141,15 +141,12 @@
 .mainSec03 a { transition: all 0.2s ease; }
 .mainSec03 a:hover,
 .mainSec03 a:focus { transform: scale(1.05); }
-
-.mainSec03 a:nth-of-type(1) { display: block; }
-.mainSec03 a:nth-of-type(2) { display:none; }
 /*---------------------------------------------
     mainSec03 Contents
 ---------------------------------------------*/
-.mainSec03 a {width:100%; padding:32px 0; font-weight: var(--w-bold); text-align: center; border-radius: 20px; color:var(--m-color06); background: var(--m-background4); }
-.mainSec03 a>.tit { font-size: var(--font24); }
-.mainSec03 a>.txt { margin-left:12px; font-size: var(--font20); }
+.mainSec03 a { display:flex; justify-content: center; gap:12px; padding:32px 0; font-weight: var(--w-bold); text-align: center; border-radius: 20px; color:var(--m-color06); background: var(--m-background4); }
+.mainSec03 a .tit { font-size: var(--font24); }
+.mainSec03 a .txt { font-size: var(--font20); }
 .mainSec03 a .img { position: absolute; bottom:0; right:0; width:212px; height:138px; }
 
 
@@ -255,11 +252,9 @@ Media Query
 /*********************************************************************
 메인.03 - 나의 실적
 *********************************************************************/
-.mainSec03 a { padding:22px 0; }
-.mainSec03 a:nth-of-type(1) { display:none; }
-.mainSec03 a:nth-of-type(2) { display:block; }
+.mainSec03 a { flex-direction:column; padding:22px 0; }
 .mainSec03 a>.tit { font-size:var(--font20); }
-.mainSec03 a>.txt { margin-left:0; font-size:var(--font18); }
+.mainSec03 a>.txt { font-size:var(--font18); }
 .mainSec03 a .img { width:200px; height:126px; }
 /*********************************************************************
 메인.04 - 견적서

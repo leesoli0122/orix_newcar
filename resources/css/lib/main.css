@@ -121,7 +121,7 @@
 .mainSec02 ul.introList-area>li>a>p { font-weight: var(--w-bold); }
 .mainSec02 ul.introList-area>li>a>.tit { font-size:var(--font28); }
 .mainSec02 ul.introList-area>li>a>.num { margin-top:16px; padding-bottom:2px; text-decoration: underline; text-underline-offset:6px; font-size:var(--font24); }
-.mainSec02 ul.introList-area>li>a>.btn { display:flex; align-items: center; position: absolute; bottom:20px; right:37px; color:var(--title); }
+.mainSec02 ul.introList-area>li>a>.btn { display:flex; align-items: center; position: absolute; bottom:20px; right:16px; color:var(--title); }
 .mainSec02 ul.introList-area>li>a>.btn::after { display:inline-block; content: '>'; margin-left:6px; text-align: center; vertical-align: middle; font-size:var(--font16); color:var(--title); }
 /*---------------------------------------------
     mainSec02 Swiper

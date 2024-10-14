@@ -114,10 +114,10 @@
                         
                             // 페이지 로드 및 리사이즈 시 체크
                             $(window).on('load resize', function() {
-                                if ($(window).width() <= 768) {
+                                if ($(window).width() <= 780) {
                                     swiper.params.slidesPerView = 1; // 화면 너비가 768px 이하일 때 슬라이드 개수 업데이트
                                 } else if ($(window).width() <= 1200) {
-                                    swiper.params.slidesPerView = 2; // 화면 너비가 1200px 이하일 때 슬라이드 개수 업데이트
+                                    swiper.params.slidesPerView = 3; // 화면 너비가 1200px 이하일 때 슬라이드 개수 업데이트
                                 } else {
                                     swiper.params.slidesPerView = 5; // 화면 너비가 1200px 초과일 때 기본 슬라이드 개수
                                 }

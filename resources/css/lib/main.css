@@ -128,7 +128,7 @@
 ---------------------------------------------*/
 .mainSec02 .introListSlider { flex:1; width:100%; min-width:0; }
 .mainSec02 .introListSlider { overflow: hidden; width:100%; }
-.introListSlider .swiper-button-prev:after { content: ''; position: absolute; width:45px; height:45px; background: url(../../images/main/ic_arror_right.png)no-repeat left 8px center/45px auto; /*border:3px solid #789EEF; border-radius: 50%;*/  }
+.mainSec02 .introListSlider .swiper-button-prev:after { content: ''; position: absolute; width:45px; height:45px; background: url(../../images/main/ic_arror_right.png)no-repeat left 8px center/45px auto; /*border:3px solid #789EEF; border-radius: 50%;*/  }
 .mainSec02 .introListSlider .swiper-button-next:after { content: ''; position: absolute; width:45px; height:45px; background: url(../../images/main/ic_arror_right.png)no-repeat right 8px center/45px auto;  }
 
 .mainSec02 .introListSlider .swiper-button-prev:after { transform: rotate(180deg); }
@@ -269,11 +269,11 @@ Media Query
     /*---------------------------------------------
         mainSec02 Swiper
     ---------------------------------------------*/
-    .mainSec02 .introListSlider { padding:20px 45px; }
+    .mainSec02 .introListSlider { padding:20px 30px; }
     .mainSec02 .introListSlider::before,
-    .mainSec02 .introListSlider::after { content: ''; position: absolute; top: 0; bottom: 0; width: 50px; /* 블러 영역의 너비 */ z-index: 2; pointer-events: none; }
-    .mainSec02 .introListSlider::before { left: 0; background: linear-gradient(to right, rgba(255,255,255,0.6), rgba(255,255,255,0)); }
-    .mainSec02 .introListSlider::after { right: 0; background: linear-gradient(to left, rgba(255,255,255,0.6), rgba(255,255,255,0)); } 
+    .mainSec02 .introListSlider::after { content: ''; position: absolute; top: 0; bottom: 0; width: 53px; /* 블러 영역의 너비 */ z-index: 2; pointer-events: none; }
+    .mainSec02 .introListSlider::before { left: 0; background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0)); }
+    .mainSec02 .introListSlider::after { right: 0; background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0)); } 
 
 /*********************************************************************
 메인.03 - 나의 실적

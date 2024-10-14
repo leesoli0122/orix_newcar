@@ -16,8 +16,8 @@ SELECT #셀렉트
 .select-box > .se-select { width:100%; max-width:410px; }
 .select-box > .se-select label { display:inline-block; font-size:var(--font14); color:var(--normal); }
 .select-box > .se-select select { z-index:1; position:relative; width: 100%; height: 46px; padding: 0px 16px; line-height:1; font-size: var(--font16); font-weight:var(--w-regular); color:var(--subtitle); background-color:var(--white); border: solid 1px var(--border2);  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-.select-box > .se-select select { background: url(../../resources/images/common/ic_select_off.png)no-repeat var(--white) top 50% right 16px/20px; }
-.select-box > .se-select[data-status=open] select { background: url(../../resources/images/common/ic_select_on.png)no-repeat var(--white) top 50% right 16px/20px;}
+.select-box > .se-select select { background: url(../../images/common/ic_select_off.png)no-repeat var(--white) top 50% right 16px/20px; }
+.select-box > .se-select[data-status=open] select { background: url(../../images/common/ic_select_on.png)no-repeat var(--white) top 50% right 16px/20px;}
 .select-box > .se-select select option { background-color:var(--white);  color: var(--normal); }
 /* select disabled */
 .select-box > .se-select select:disabled,
@@ -71,7 +71,7 @@ Datepicker #데이터피커
 /*---------------------------------------------
 	Datepicker Custom Default
 ---------------------------------------------*/
-[class*='picker'].form-control { background:url(../../resources/images/ic_datepicker.png)no-repeat right 16px center/20px; }
+[class*='picker'].form-control { background:url(../../images/ic_datepicker.png)no-repeat right 16px center/20px; }
 
 .ui-datepicker { display: none; top: 0; left: 0; margin-top: 10px; margin-left: 10px; margin-right: 0px; padding: 20px; border-radius: 16px; border: 1px solid var(--border1); background: var(--white); box-shadow: 10px 10px 40px rgba(0,0,0,0.1); } 
 .ui-datepicker table { width:100%; margin:0 0 16px; }
@@ -112,8 +112,8 @@ input.form-control:read-only.datepicker:focus,
 .ui-datepicker-calendar>tbody>tr>td .ui-state-default.ui-state-active { display:flex; align-items:center; justify-content: center; width:30px; height:30px; line-height: 1; background: var(--secondary); border-radius: 50%; color:var(--white);}
 
 .ui-widget-header .ui-datepicker-next { right:0;}
-.ui-widget-header .ui-datepicker-next .ui-icon { right:0; background: url('../../resources/images/ic_cal_arrow.png')no-repeat 100%/24px auto; }
-.ui-widget-header .ui-datepicker-prev .ui-icon { left:0; background: url('../../resources/images/ic_cal_arrow.png')no-repeat 100%/24px auto; transform: rotate(180deg); }
+.ui-widget-header .ui-datepicker-next .ui-icon { right:0; background: url('../../images/ic_cal_arrow.png')no-repeat 100%/24px auto; }
+.ui-widget-header .ui-datepicker-prev .ui-icon { left:0; background: url('../../images/ic_cal_arrow.png')no-repeat 100%/24px auto; transform: rotate(180deg); }
 .ui-widget-header .ui-datepicker-next,
 .ui-widget-header .ui-datepicker-prev { z-index:1; position:absolute; top:-2px; width:30px; height:30px; }
 .ui-widget-header .ui-datepicker-next .ui-icon,
@@ -218,7 +218,7 @@ input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; hei
     Input_첨부파일_File Custom_파일첨부했을 때 list
 ---------------------------------------------*/
 .add-file li { display:inline-flex; margin-top:20px; margin-right:20px; padding:11px 14px 12px; border:1px solid var(--border3); border-radius:4px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--title); background:var(--white); }
-.add-file li span.delete-file { display:inline-block; margin-left:8px; width:30px; height:20px; font-size:0; background:url(../images/ic_file_x.png)no-repeat 50%/12px auto; cursor: pointer;}
+.add-file li span.delete-file { display:inline-block; margin-left:8px; width:30px; height:20px; font-size:0; background:url(../../images/ic_file_x.png)no-repeat 50%/12px auto; cursor: pointer;}
 
 /*---------------------------------------------
 	Input_주민등록번호 Number Custom
@@ -266,8 +266,8 @@ input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; hei
 .form-group .timeNum { position:absolute; transform: translateY(-50%); top:50%; right:34px; color:var(--error); }
 .form-group .timeNum::before,
 .form-group .timeNum::before { content:''; position: absolute; right:-24px; width:20px; height:20px; }
-.form-group .timeNum::before { background: url(../images/ic_time_off.png) no-repeat 100%/20px auto; }
-.form-group .timeNum.active::before { background: url(../images/ic_time_on.png) no-repeat 100%/20px auto; }
+.form-group .timeNum::before { background: url(../../images/ic_time_off.png) no-repeat 100%/20px auto; }
+.form-group .timeNum.active::before { background: url(../../images/ic_time_on.png) no-repeat 100%/20px auto; }
 
 /*********************************************************************
 INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
@@ -287,11 +287,11 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 /*---------------------------------------------
 	Input_Checkbox Style
 ---------------------------------------------*/
-.form-group > .check-box input[type='checkbox']:checked + .check-button span::before { border:1px solid var(--secondary); background:url(../images/common/ic_check_on.png)no-repeat var(--secondary) 50%/12px auto; }
-.form-group > .check-box input[type='checkbox']:disabled + .check-button span::before { border:1px solid var(--border2);  background:url(../images/common/ic_check_off.png)no-repeat var(--background1) 50%/12px auto; }
+.form-group > .check-box input[type='checkbox']:checked + .check-button span::before { border:1px solid var(--secondary); background:url(../../images/common/ic_check_on.png)no-repeat var(--secondary) 50%/12px auto; }
+.form-group > .check-box input[type='checkbox']:disabled + .check-button span::before { border:1px solid var(--border2);  background:url(../../images/common/ic_check_off.png)no-repeat var(--background1) 50%/12px auto; }
 .form-group > .check-box input[type='checkbox'] + .check-button span::before,
 .form-group > .radio-box input[type='radio'] + .radio-button span::before { content:''; position:absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; }
-.form-group > .check-box input[type='checkbox'] + .check-button span::before { border:1px solid var(--border1); background:var(--white); background:url(../images/common/ic_check_off.png)no-repeat 50%/12px auto; }
+.form-group > .check-box input[type='checkbox'] + .check-button span::before { border:1px solid var(--border1); background:var(--white); background:url(../../images/common/ic_check_off.png)no-repeat 50%/12px auto; }
 
 /** 라운드일 경우 **/
 .form-group.round > .check-box input[type='checkbox'] + .check-button span::before { border-radius: 50%; }
@@ -327,9 +327,9 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 .chk-all + .terms-wrap.level2 { margin-top:20px; }
 .terms-wrap.level1 { padding:12px 20px; border-bottom:1px solid var(--border3); }
 .terms-wrap.level1 label > span { padding-left:34px; font-weight:var(--w-regular); color:var(--normal); }
-.terms-wrap.level1 label::before { content:""; position:absolute; left:0; top:50%; transform: translateY(-50%); width:24px; height:24px; border:1px solid var(--border2); border-radius:50%; background:url(../images/common/ic_check_off.png)no-repeat 50%/12px auto; }
+.terms-wrap.level1 label::before { content:""; position:absolute; left:0; top:50%; transform: translateY(-50%); width:24px; height:24px; border:1px solid var(--border2); border-radius:50%; background:url(../../images/common/ic_check_off.png)no-repeat 50%/12px auto; }
 .terms-wrap.level1 label > a { position:relative; z-index:1; }
-.terms-wrap.chk-all input[type="checkbox"]:checked + label::before { content:''; position:absolute; left:0; top:50%; transform: translateY(-50%); border:1px solid var(--secondary); background:url(../images/common/ic_check_on.png)no-repeat var(--secondary) 50%/12px auto; }
+.terms-wrap.chk-all input[type="checkbox"]:checked + label::before { content:''; position:absolute; left:0; top:50%; transform: translateY(-50%); border:1px solid var(--secondary); background:url(../../images/common/ic_check_on.png)no-repeat var(--secondary) 50%/12px auto; }
 .terms-wrap.chk-all input[type="checkbox"]:checked + label span { font-weight:var(--w-bold); color:var(--title); }
 
 /* [필수] - 개별체크 */
@@ -339,9 +339,9 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 .terms-wrap.level2 + .terms-wrap.bg-box { margin-top:40px; }
 .terms-wrap.level2 + .terms-wrap.bg-box + .terms-wrap.bg-box { margin-top:15px; }
 .terms-wrap.level2 label { padding-left:32px; }
-.terms-wrap.level2 label::before { content:""; position:absolute; left:0; top:50%; transform: translateY(-50%); width:24px; height:24px;; background:url(../images/common/ic_check_off.png)no-repeat 50%/12px auto; }
+.terms-wrap.level2 label::before { content:""; position:absolute; left:0; top:50%; transform: translateY(-50%); width:24px; height:24px;; background:url(../../images/common/ic_check_off.png)no-repeat 50%/12px auto; }
 .terms-wrap.level2 label > span { display:inline-block; width:100%; padding-right:26px; color:var(--normal); }
-.terms-wrap.level2 input[type="checkbox"]:checked + label::before { content:''; position:absolute; left:0; top:50%; transform: translateY(-50%); width:24px; height:24px; background:url(../images/common/ic_chk2_on.png)no-repeat 50%/12px auto; }
+.terms-wrap.level2 input[type="checkbox"]:checked + label::before { content:''; position:absolute; left:0; top:50%; transform: translateY(-50%); width:24px; height:24px; background:url(../../images/common/ic_chk2_on.png)no-repeat 50%/12px auto; }
 .terms-wrap.level2.no-ico label > span::after { display:none;}
 .terms-wrap.level2 fieldset { display:flex; justify-content:space-between; }
 
@@ -420,8 +420,8 @@ button.btn.btn-text.medium:hover::after,
 button.btn.btn-text.small:hover::after { background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' stroke='%23056ED6' stroke-width='1.5' d='M0 0h15v15H0z' data-name='사각형 3363'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)'%3E%3Cpath fill='none' stroke='%23056ED6' stroke-linecap='round' stroke-linejoin='round' d='m6.93 3 4.57 4.57-4.57 4.57' data-name='패스 20464'/%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
 
 /* 검색 버튼 / 삭제 버튼*/
-button.btn.btn-search { padding:0; height:46px; width:30px; padding:0 32px; background:url(../images/ic_search.png)no-repeat var(--background3) 50%/30px auto; }
-button.btn.btn-cancel { content:''; position:absolute; z-index:11; transform: translateY(-50%); top:50%; right:16px; padding:0; width:24px; height:24px; background:url(../../resources/images/common/ic-cancel.png)no-repeat 100%/24px auto;}
+button.btn.btn-search { padding:0; height:46px; width:30px; padding:0 32px; background:url(../../images/ic_search.png)no-repeat var(--background3) 50%/30px auto; }
+button.btn.btn-cancel { content:''; position:absolute; z-index:11; transform: translateY(-50%); top:50%; right:16px; padding:0; width:24px; height:24px; background:url(../../images/common/ic-cancel.png)no-repeat 100%/24px auto;}
 
 /* 현황조회 버튼 - 아코디언*/
 .accordion-wrap .btn-wrap { margin:50px 0 10px; text-align: center; }
@@ -435,13 +435,13 @@ button.btn.btn-cancel { content:''; position:absolute; z-index:11; transform: tr
 
 /* 등록하기 + 아이콘 버튼 */
 .btn-wrap.right-btn button.btn.btn-icon { padding:0 44px 0 20px; height:44px; border:1px solid var(--border1); border-radius:6px; font-size:var(--font16); color:var(--normal); }
-.btn-wrap.right-btn button.btn.btn-icon:after { content:''; position:absolute; transform: translateY(-50%); top:50%; right:20px; width:20px; height:20px; background: url(../images/ic_plus.png)no-repeat 100%/20px auto; transition: transform 0.3s; }
+.btn-wrap.right-btn button.btn.btn-icon:after { content:''; position:absolute; transform: translateY(-50%); top:50%; right:20px; width:20px; height:20px; background: url(../../images/ic_plus.png)no-repeat 100%/20px auto; transition: transform 0.3s; }
 .btn-wrap.right-btn button.btn.btn-icon.rotate:after { transform: translateY(-50%) rotate(0deg); }
 
 /* 견적서 접기 버튼 */
 .show-estimate-wrap .btn-wrap { margin:20px 0 40px; text-align:center; }
 .show-estimate-wrap .btn-wrap button.btn.btn-estimate { padding:0 139px; height:65px;  border-radius:6px; font-size:var(--font20); font-weight:var(--w-bold); color:var(--white); background:var(--primary); }
-.show-estimate-wrap .btn-wrap button.btn.btn-estimate:after { content:''; display:inline-block; margin-left:10px; width:24px; height:24px; background: url(../images/ic_top_arr.png)no-repeat 100%/24px auto; vertical-align:inherit; transform:rotate(180deg); }
+.show-estimate-wrap .btn-wrap button.btn.btn-estimate:after { content:''; display:inline-block; margin-left:10px; width:24px; height:24px; background: url(../../images/ic_top_arr.png)no-repeat 100%/24px auto; vertical-align:inherit; transform:rotate(180deg); }
 .show-estimate-wrap .btn-wrap button.btn.btn-estimate.rotate:after { transform:rotate(0deg); }
 
 /* 아이콘이 버튼에 없을 때 */
@@ -499,11 +499,11 @@ TOGGLE_ACCORDION #토글_아코디언
 
 /* 날짜 icon */
 .accordion-wrap > .accordion-info > .ques .date { padding-left:25px; font-size:var(--font16); font-weight:var(--w-regular); color:var(--inactive); }
-.accordion-wrap > .accordion-info > .ques .date { background: url(../../resources/images/ic_date.png) no-repeat left  50%/20px auto;}
+.accordion-wrap > .accordion-info > .ques .date { background: url(../../images/ic_date.png) no-repeat left  50%/20px auto;}
 /* 버튼 icon */
 .accordion-wrap > .accordion-info > .ques .btn button { background: var(--white);  font-size:var(--font18); cursor: pointer; }
-.accordion-wrap > .accordion-info > .ques .btn button.modifi { background:url(.././images/ic_list_modifi.png)no-repeat left 50%/20px auto;  }
-.accordion-wrap > .accordion-info > .ques .btn button.delete { background:url(.././images/ic_list_delete.png)no-repeat left 50%/20px auto; }
+.accordion-wrap > .accordion-info > .ques .btn button.modifi { background:url(../../images/ic_list_modifi.png)no-repeat left 50%/20px auto;  }
+.accordion-wrap > .accordion-info > .ques .btn button.delete { background:url(../../images/ic_list_delete.png)no-repeat left 50%/20px auto; }
 /* 현황조회 */
 .accordion-wrap > .accordion-info > .ques .left .date { margin-bottom:18px; }
 .accordion-wrap > .accordion-info > .ques .left .txt { margin-top:18px; }
@@ -511,7 +511,7 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap > .accordion-info > .ques .left .txt { color:var(--inactive); font-weight:var(--w-regular); }
 .accordion-wrap > .accordion-info > .ques .right .tit { color:var(--secondary); margin-right:15px; }
 .accordion-wrap > .accordion-info > .ques .right .btn button.del { width:25px; height:25px; }
-.accordion-wrap > .accordion-info > .ques .right .btn button.del::after { content: ''; position:absolute; transform: translateY(-50%); top:50%; left:0; width:25px; height:25px; background:url(.././images/ic_list_delete.png)no-repeat center 100%/25px auto; }
+.accordion-wrap > .accordion-info > .ques .right .btn button.del::after { content: ''; position:absolute; transform: translateY(-50%); top:50%; left:0; width:25px; height:25px; background:url(../../images/ic_list_delete.png)no-repeat center 100%/25px auto; }
 /** 현황조회 conts **/
 .accordion-wrap > .accordion-info > .ques-cont .list-view ul { font-size:var(--font18); border-bottom:1px solid var(--border3); }
 .accordion-wrap > .accordion-info > .ques-cont .list-view ul:first-child>li { margin:0 0 32px 0; }
@@ -547,9 +547,9 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap.ico > .accordion-info > .ques { padding:32px 74px 31px; }
 .accordion-wrap.ico > .accordion-info > .ques::before,
 .accordion-wrap.ico > .accordion-info > .ques-cont p::before { content:''; position:absolute; width:24px; height:24px; }
-.accordion-wrap.ico > .accordion-info > .ques::before { top:50%; transform: translateY(-50%); left:30px; background: url(../../resources/images/ic_question.png) no-repeat 100%/24px auto;  }
+.accordion-wrap.ico > .accordion-info > .ques::before { top:50%; transform: translateY(-50%); left:30px; background: url(../../images/ic_question.png) no-repeat 100%/24px auto;  }
 
-.accordion-wrap.ico > .accordion-info > .ques-cont p::before { left:0; background: url(../../resources/images/ic_answer.png) no-repeat 100%/24px auto; }
+.accordion-wrap.ico > .accordion-info > .ques-cont p::before { left:0; background: url(../../images/ic_answer.png) no-repeat 100%/24px auto; }
 .accordion-wrap.ico > .accordion-info > .ques-cont p { padding-left:44px; }
 .accordion-wrap.ico > .accordion-info > .ques .date { margin-left:30px; }
 
@@ -792,14 +792,14 @@ tab #탭
 .result-area .result ul li + li { margin-top:5px; }
 /* 조회 결과가 없습니다 */
 .result-area.nodata { margin-top:20px; text-align:center; border:1px solid var(--border1); background:var(--white); }
-.result-area.nodata::before { position:initial; transform: unset; margin-bottom:32px; width:80px; height:80px; background:url(../images/nodata.png)no-repeat 50%/80px auto; }
+.result-area.nodata::before { position:initial; transform: unset; margin-bottom:32px; width:80px; height:80px; background:url(../../images/nodata.png)no-repeat 50%/80px auto; }
 /* 차량을 먼저 선택해 주세요 */
 .grid-list-wrap.style3 .result-area.nodata.frist-car { border:none; border-bottom:1px solid var(--border2); border-radius:0; }
 /* 완료 */
-.result-area.success::before { background:url(../images/success.png)no-repeat 50%/64px auto; }
+.result-area.success::before { background:url(../../images/success.png)no-repeat 50%/64px auto; }
 /* 실패 */
 .result-area.fail { background:var(--background5); }
-.result-area.fail::before { background:url(../images/fail.png)no-repeat 50%/64px auto; }
+.result-area.fail::before { background:url(../../images/fail.png)no-repeat 50%/64px auto; }
 /*---------------------------------------------
 	팝업 안에서
 ---------------------------------------------*/
@@ -877,7 +877,7 @@ icon li -> icon span(20240924 리스트 구조 변경에 따른 css 수정 li가
 .icon { display:inline-block; }
 .icon span { display:inline-block!important; margin-top:0!important; margin-right:4px; margin-left:4px; font-size:0!important; vertical-align:middle; }
 .icon span:last-child { margin-right:10px; }
-.icon span::before { content:""; display:inline-block; width:20px; height:20px; background:url(../images/attach.png)no-repeat 50%/20px auto; }
+.icon span::before { content:""; display:inline-block; width:20px; height:20px; background:url(../../images/attach.png)no-repeat 50%/20px auto; }
 .icon span:first-child { margin-top:0; }
 
 /* 첨부파일 있는 list */
@@ -885,11 +885,11 @@ icon li -> icon span(20240924 리스트 구조 변경에 따른 css 수정 li가
 .list-card-wrap.attachment .list-card-group .txt-list:first-child { flex-direction:column; justify-content:unset; align-items:flex-start; }
 .list-card-wrap.attachment .list-card-group .txt-list { margin-top:0; }
 .list-card-wrap.attachment .list-card-group .txt-list .cont-txt { margin:15px 0 18px; }
-.list-card-wrap.attachment .list-card-group .txt-list .data::before { content:""; display:inline-block; margin-right:8px; width:20px; height:20px; background:url(../images/ic_date.png)no-repeat 50%/20px auto; vertical-align:sub; }
+.list-card-wrap.attachment .list-card-group .txt-list .data::before { content:""; display:inline-block; margin-right:8px; width:20px; height:20px; background:url(../../images/ic_date.png)no-repeat 50%/20px auto; vertical-align:sub; }
 .list-card-wrap.attachment .list-card-group .txt-list .data,
 .list-card-wrap.attachment .list-card-group .txt-list .hits { color:var(--inactive); }
 .list-card-wrap.attachment .list-card-group .txt-list .hits { margin-left:20px; }
-.list-card-wrap.attachment .list-card-group .txt-list .hits::before { content:""; display:inline-block; margin-right:8px; width:20px; height:20px; background:url(../images/ic_hits.png)no-repeat 50%/20px auto; vertical-align:sub; }
+.list-card-wrap.attachment .list-card-group .txt-list .hits::before { content:""; display:inline-block; margin-right:8px; width:20px; height:20px; background:url(../../images/ic_hits.png)no-repeat 50%/20px auto; vertical-align:sub; }
 
 /* 다운로드 있는 list */
 .list-card-wrap.download .list-card-group:hover { border:1px solid var(--secondary); }
@@ -899,7 +899,7 @@ icon li -> icon span(20240924 리스트 구조 변경에 따른 css 수정 li가
 .list-card-wrap.download .list-card-group .card-right { display:flex;align-items: center; }
 .list-card-wrap.download .list-card-group .icon { margin-right:50px; }
 .list-card-wrap.download .list-card-group .icon span { display:inline-block; margin-left:10px; margin-right:0; font-size:0; }
-.download .icon span::before { content:""; display:inline-block; width:32px; height:32px; background:url(../images/download.png)no-repeat 50%/32px auto; }
+.download .icon span::before { content:""; display:inline-block; width:32px; height:32px; background:url(../../images/download.png)no-repeat 50%/32px auto; }
 .list-card-wrap.download .list-card-group .card-right .txt-wrap div { margin-top:14px; font-weight:var(--w-regular); color:var(--subtitle); text-align:right; }
 .list-card-wrap.download .list-card-group .card-right .txt-wrap div:first-child { margin-top:0; }
 .list-card-wrap.download .list-card-group .card-right .txt-wrap div span { font-weight:var(--w-regular); color:var(--inactive); }
@@ -948,9 +948,9 @@ font-weight:var(--w-regular); color:var(--subtitle); }
 .grid-wrap.list-card-wrap .list-card-group + .list-card-group { margin-top:0; }
 
 /* 완료 */
-.grid-wrap .result-area.success::before { background:url(../images/success.png)no-repeat 50%/58px auto; }
+.grid-wrap .result-area.success::before { background:url(../../images/success.png)no-repeat 50%/58px auto; }
 /* 실패 */
-.grid-wrap .result-area.fail::before { background:url(../images/fail.png)no-repeat 50%/58px auto; }
+.grid-wrap .result-area.fail::before { background:url(../../images/fail.png)no-repeat 50%/58px auto; }
 
 /*---------------------------------------------
 	상환스케줄 list
@@ -1089,7 +1089,7 @@ tfoot tr td:last-child { border-right:none; }
 .download-wrap { position: relative; margin-top:30px; margin-bottom:60px; padding: 20px; width: 100%; border-radius: 10px; background: #F8F9FC; font-size:var(--font14); }
 .download-wrap a { display:block; padding-left:28px; margin-bottom:15px; font-weight:var(--w-bold); color:var(--background3); text-decoration:underline; }
 .download-wrap a:last-child { margin-bottom:0; }
-.download-wrap a::before { content: ''; position: absolute; left:0; top: 50%; transform: translateY(-50%); display: inline-block; width:20px; height:20px; background: url(../images/ntc_attach.png) no-repeat 50%/20px auto; }
+.download-wrap a::before { content: ''; position: absolute; left:0; top: 50%; transform: translateY(-50%); display: inline-block; width:20px; height:20px; background: url(../../images/ntc_attach.png) no-repeat 50%/20px auto; }
 
 .download-wrap.no a { color:var(--inactive); }
 
@@ -1103,8 +1103,8 @@ dd.download-wrap { padding:0; background:transparent; }
 .nte-wrap .movepage > ul > li:first-child { text-align:right; }
 .nte-wrap .movepage > ul > li:first-child::before,
 .nte-wrap .movepage > ul > li:last-child::after { content:""; position:absolute; display:inline-block; width:24px; height:24px; }
-.nte-wrap .movepage > ul > li:first-child::before { left:24px; top:50%; transform:translateY(-50%); background:url(../images/arr_right.png)no-repeat 50%/24px auto; }
-.nte-wrap .movepage > ul > li:last-child::after { right:24px; top:50%; transform:translateY(-50%) rotate(180deg); background:url(../images/arr_right.png)no-repeat 50%/24px auto; }
+.nte-wrap .movepage > ul > li:first-child::before { left:24px; top:50%; transform:translateY(-50%); background:url(../../images/arr_right.png)no-repeat 50%/24px auto; }
+.nte-wrap .movepage > ul > li:last-child::after { right:24px; top:50%; transform:translateY(-50%) rotate(180deg); background:url(../../images/arr_right.png)no-repeat 50%/24px auto; }
 .nte-wrap .movepage > ul > li ul li.tit { margin:14px 0 12px; }
 .nte-wrap .movepage > ul > li ul li.tit a { font-size:var(--font18); color:var(--title); }
 .nte-wrap .movepage > ul > li ul li.date { font-size:var(--font14); color:var(--normal); }
@@ -1182,7 +1182,7 @@ dd.download-wrap { padding:0; background:transparent; }
 
 /* arr가 생기는 선택 */
 .grid-list-body li .pop.arr { padding:23px 54px 23px 24px; }
-.grid-list-body li .pop.arr::after { content:""; position:absolute; top:50%; transform:translateY(-50%); right:20px; display:inline-block; width:20px; height:20px; background:url(../images/ic_est_arr.png)no-repeat 50%/20px auto; cursor:pointer; }
+.grid-list-body li .pop.arr::after { content:""; position:absolute; top:50%; transform:translateY(-50%); right:20px; display:inline-block; width:20px; height:20px; background:url(../../images/ic_est_arr.png)no-repeat 50%/20px auto; cursor:pointer; }
 
 /* 차량 선택 완료 */
 .grid-list-body li .pop.arr .choose { padding-left:28px; }
@@ -1209,8 +1209,8 @@ dd.download-wrap { padding:0; background:transparent; }
 /** 계약조건 **/
 .grid-list-wrap.style3 { max-height:904px; }
 .grid-list-wrap.style3 .grid-list-header { background:var(--primary); }
-.grid-list-wrap.style3 .grid-list-header::before { content:""; position:absolute; left:24px; top:50%; transform:translateY(-50%); display:inline-block; width:24px; height:24px; background:url(../images/ic_star.png)no-repeat 50%/24px auto; }
-.grid-list-wrap.style3 .grid-list-header.on::before { background:url(../images/ic_star_on.png)no-repeat 50%/24px auto; }
+.grid-list-wrap.style3 .grid-list-header::before { content:""; position:absolute; left:24px; top:50%; transform:translateY(-50%); display:inline-block; width:24px; height:24px; background:url(../../images/ic_star.png)no-repeat 50%/24px auto; }
+.grid-list-wrap.style3 .grid-list-header.on::before { background:url(../../images/ic_star_on.png)no-repeat 50%/24px auto; }
 
 .grid-list-wrap.style3 .grid-list-body.style2 { margin-bottom:0; }
 .grid-list-wrap.style3 .grid-list-body { max-height:fit-content; overflow:initial; }
@@ -1415,7 +1415,7 @@ dd.download-wrap { padding:0; background:transparent; }
 .choose-wrap .choose-group .choose.color li .num { font-size:var(--font14); font-weight:var(--w-bold); color:var(--normal); }
 
 .choose-wrap .choose-group .choose.color li.on button { border:1px solid var(--secondary); }
-.choose-wrap .choose-group .choose.color li.on button::after { content:""; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display:inline-block; width:14px; height:14px; background:url(../images/color_chk.png)no-repeat 50%/14px auto; }
+.choose-wrap .choose-group .choose.color li.on button::after { content:""; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display:inline-block; width:14px; height:14px; background:url(../../images/color_chk.png)no-repeat 50%/14px auto; }
 .choose-wrap .choose-group .choose.color li.on span,
 .choose-wrap .choose-group .choose.color li.on .num { color:var(--secondary); }
 
@@ -1455,8 +1455,8 @@ dd.download-wrap { padding:0; background:transparent; }
 .navigation-wrapper { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display:flex;justify-content:space-between; margin:0 auto; width:512px; /*z-index:1;*/ }
 .navigation-wrapper .swiper-button-prev,
 .navigation-wrapper .swiper-button-next { position:static; margin-top:0; }
-.navigation-wrapper .swiper-button-prev { width:42px; height:42px; background:url(../images/swiper_l_arr.png)no-repeat 50%/42px auto; }
-.navigation-wrapper .swiper-button-next { width:42px; height:42px; background:url(../images/swiper_r_arr.png)no-repeat 50%/42px auto; }
+.navigation-wrapper .swiper-button-prev { width:42px; height:42px; background:url(../../images/swiper_l_arr.png)no-repeat 50%/42px auto; }
+.navigation-wrapper .swiper-button-next { width:42px; height:42px; background:url(../../images/swiper_r_arr.png)no-repeat 50%/42px auto; }
 .navigation-wrapper .swiper-button-prev::after,
 .navigation-wrapper .swiper-button-next::after { content:none; }
 

@@ -250,7 +250,7 @@ Media Query
 메인.02 - 나의 현황조회
 *********************************************************************/
     .mainSec02>div { gap:initial; }
-    .mainSec02 .intro-box { margin-right:0; flex:0 0 239px;}
+    .mainSec02 .intro-box { margin-right:0; flex:0 0 219px;}
     .mainSec02 .intro-box>a { height:222px; }
     .mainSec02 .intro-box>a>.tit { font-size:var(--font20); }
     .mainSec02 .intro-box>a>.txt { font-size:var(--font24); }

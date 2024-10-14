@@ -72,9 +72,9 @@
     mainSec01 Contents
 ---------------------------------------------*/
 .mainSec01 .introMain-area { margin-top:92px; }
-.mainSec01 .introMain-area>ul>li>em { font-style:initial;  font-size:var(--font24); font-weight: var(--w-bold); color:var(--m-color01); }
-.mainSec01 .introMain-area>ul>li>p.tit { margin-top:18px; font-weight:var(--w-bold); font-size: var(--font50); }
-.mainSec01 .introMain-area>ul>li>p.txt { margin-top:48px;  font-size: var(--font20);  line-height:1.5;}
+.mainSec01 .introMain-area>ul>li>h2>em { font-style:initial;  font-size:var(--font24); font-weight: var(--w-bold); color:var(--m-color01); }
+.mainSec01 .introMain-area>ul>li>h2>.tit { margin-top:18px; font-weight:var(--w-bold); font-size: var(--font50); }
+.mainSec01 .introMain-area>ul>li>h2>.txt { margin-top:48px;  font-size: var(--font20);  line-height:1.5;}
 
 .mainSec01 .shortcut-area { margin-top:60px; padding:36px; width:368px; height:382px; border-radius: 36px; background: var(--white); box-shadow: 0px 0px 10px rgba(0,12 ,44, 0.16); }
 .mainSec01 .shortcut-area>.btn-wrap  { display:flex; }

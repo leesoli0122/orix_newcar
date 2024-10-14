@@ -203,8 +203,8 @@
 .mainSec05 .intro-con { margin-top:45px; max-height:120px; }
 .mainSec05 .intro-con ul>li + li{ margin-top:24px; }
 .mainSec05 .intro-con ul>li{ border-bottom:1px solid transparent; line-height:1.4; max-height:24px; }
-/* .mainSec05 .intro-con ul>li:hover,
-.mainSec05 .intro-con ul>li:focus { background: var(--m-background2);} */
+.mainSec05 .intro-con ul>li:hover,
+.mainSec05 .intro-con ul>li:focus { background: var(--m-background2);}
 
 .mainSec05 .intro-con ul>li>a { display:flex; justify-content: space-between; gap:10px; }
 .mainSec05 .intro-con ul>li span.txt { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size:var(--font18); font-weight:var(--w-bold); color:var(--inactive); }

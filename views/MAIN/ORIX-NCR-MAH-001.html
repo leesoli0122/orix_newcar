@@ -99,8 +99,9 @@
                     <script>
                         $(document).ready(function() {
                             var swiper = new Swiper(".introListSlider", {
-                                slidesPerView: 2,
+                                slidesPerView: 5, // 기본적으로 5개 슬라이드
                                 lazy: true,
+                                spaceBetween: 14,
                                 pagination: {
                                     el: ".swiper-pagination",
                                     clickable: true,
@@ -110,21 +111,28 @@
                                     prevEl: ".swiper-button-prev",
                                 },
                             });
-
+                        
                             // 페이지 로드 및 리사이즈 시 체크
                             $(window).on('load resize', function() {
-                                // 화면 너비가 1100px 이하일 때
+                                if ($(window).width() <= 768) {
+                                    swiper.params.slidesPerView = 1; // 화면 너비가 768px 이하일 때 슬라이드 개수 업데이트
+                                } else if ($(window).width() <= 1200) {
+                                    swiper.params.slidesPerView = 2; // 화면 너비가 1200px 이하일 때 슬라이드 개수 업데이트
+                                } else {
+                                    swiper.params.slidesPerView = 5; // 화면 너비가 1200px 초과일 때 기본 슬라이드 개수
+                                }
+                        
+                                swiper.update(); // Swiper 업데이트
+                        
+                                // 버튼 및 페이지네이션 표시 설정
                                 if ($(window).width() <= 1200) {
-                                    swiper.params.slidesPerView = 2; // 슬라이드 개수 업데이트
-                                    swiper.update(); // Swiper 업데이트
                                     $(".swiper-button-next, .swiper-button-prev, .swiper-pagination").css("display", "block");
                                 } else {
                                     $(".swiper-button-next, .swiper-button-prev, .swiper-pagination").css("display", "none");
-                                    swiper.params.slidesPerView = 5;
                                 }
                             });
                         });
-                    </script>
+                        </script>
                 </section>
 
                 <section class="mainSec03">

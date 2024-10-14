@@ -5,7 +5,6 @@
     로고 이미지
 ---------------------------------------------*/
 /* 팝업 */
-.choose-group.brand .choose.image li.hyu::before { background:url(../images/Brand_Logo/Hyundai.png)no-repeat 50%/18px auto; }
 .choose-group.brand .choose.image li.gen::before { background:url(../images/Brand_Logo/Genesis.png)no-repeat 50%/18px auto; }
 .choose-group.brand .choose.image li.kia::before { background:url(../images/Brand_Logo/kia.png)no-repeat 50%/18px auto; }
 .choose-group.brand .choose.image li.che::before { background:url(../images/Brand_Logo/Chevrolet.png)no-repeat 50%/18px auto; }

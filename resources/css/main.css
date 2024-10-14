@@ -67,7 +67,7 @@
 .mainSec01 { max-height:502px; background:var(--m-background1); }
 .mainSec01>div { display:flex; justify-content: space-between; height:502px; }
 .mainSec01 .shortcut-area ul { display:flex; flex-wrap:wrap; justify-content: space-between; gap:10px; margin-top:25px; }
-.mainSec01 .shortcut-area ul>li { flex:1 0 calc((100% - 2 * 14px) / 2); height:104px; text-align: center; padding-top:75px; cursor: pointer;}
+.mainSec01 .shortcut-area ul>li { flex:1 0 calc((100% - 2 * 14px) / 2); height:110px; text-align: center; padding-top:75px; cursor: pointer;}
 .mainSec01 .shortcut-area ul>li>a { font-weight: var(--w-bold); }
 /*---------------------------------------------
     mainSec01 Contents

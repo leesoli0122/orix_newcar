@@ -1475,23 +1475,9 @@ dd.download-wrap { padding:0; background:transparent; }
 .mySwiper .navigation-wrapper .swiper-button-prev::after,
 .mySwiper.navigation-wrapper .swiper-button-next::after { content:none; }
 
-<<<<<<< HEAD:resources/css/ui_common.css
 .mySwiper .swiper-slide.on { border:1px solid var(--secondary); border-radius:3px; background:var(--background4); }
 .mySwiper .swiper-slide.on span,
 .mySwiper .swiper-slide.on .tit { color:var(--secondary); }
-=======
-.navigation-wrapper { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display:flex;justify-content:space-between; margin:0 auto; width:512px; /*z-index:1;*/ }
-.navigation-wrapper .swiper-button-prev,
-.navigation-wrapper .swiper-button-next { position:static; margin-top:0; }
-.navigation-wrapper .swiper-button-prev { width:42px; height:42px; background:url(../../images/swiper_l_arr.png)no-repeat 50%/42px auto; }
-.navigation-wrapper .swiper-button-next { width:42px; height:42px; background:url(../../images/swiper_r_arr.png)no-repeat 50%/42px auto; }
-.navigation-wrapper .swiper-button-prev::after,
-.navigation-wrapper .swiper-button-next::after { content:none; }
-
-.swiper-slide.on { border:1px solid var(--secondary); border-radius:3px; background:var(--background4); }
-.swiper-slide.on span,
-.swiper-slide.on .tit { color:var(--secondary); }
->>>>>>> f1414a3ee8366345d08fe6c27b5a72a6def1c77f:resources/css/ui/ui_common.css
 
 /*---------------------------------------------
 	조건부 업종 여부 확인

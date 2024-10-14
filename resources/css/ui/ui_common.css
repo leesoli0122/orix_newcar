@@ -1,4 +1,4 @@
-/*********************************************************************
+ㅠb/*********************************************************************
 SELECT #셀렉트
 *********************************************************************/
 
@@ -370,7 +370,8 @@ Button #버튼
 .btn-wrap button.btn:first-child { margin-left:0; }/*공통*/
 .btn-wrap button.btn { margin-left:16px; }/*공통*/
 .btn-wrap.cont { margin:20px 0 40px; width:100%; text-align:center; }/* 컨테츠 버튼 */
-.btn-wrap.bottom { margin:20px 0 40px; width:100%; text-align:center; }/* 컨테츠 하단 버튼 */
+.btn-wrap.bottom,
+.btn-wrap.error { margin:20px 0 40px; width:100%; text-align:center; }/* 컨테츠 하단 버튼 / 에러 버튼 */
 .btn-wrap.popup { margin:28px 0; width:100%; text-align:center; }/* 팝업 버튼 */
 .btn-wrap.alert { margin:40px 0 30px; width:100%; text-align:center; }/* 알럿 버튼 */
 
@@ -398,6 +399,8 @@ button.btn.btn-cont { border:1px solid var(--normal); color:var(--normal); backg
 /*폼버튼*/
 button.btn.btn-input { height:46px; padding:0 16px; font-size:var(--font16); color:var(--inactive); background:var(--background1); }
 button.btn.btn-input.active { color:var(--white); background: var(--background3); }
+button.btn.btn-input:disabled { cursor:unset; }
+
 
 /* 팝업 및 알럿 버튼 */
 button.btn.btn-close { padding:0 60px; color:var(--normal); background:var(--background2); }
@@ -449,8 +452,11 @@ button.btn.btn-cancel { content:''; position:absolute; z-index:11; transform: tr
 .btn-wrap.right-btn button.btn.btn-no-icon::after { content:none; }
 
 /** 탑 버튼 **/
-button.btn.btn-top { display:none; transition: opacity 0.3s, bottom 0.s; right:10px; bottom:30px; z-index:100; padding:7px; width:42px; height:42px; border:1px solid var(--border1); border-radius: 50%; background:url("../images/common/ic_scrollTop_off.png")no-repeat #FFFFFF 50%/28px auto; cursor:pointer;  }
-button.btn.btn-top:hover { border:1px solid var(--secondary); background:url("../images/common/ic_scrollTop_on.png")no-repeat #FFFFFF  50%/28px auto; }
+button.btn.btn-top { display:none; transition: opacity 0.3s, bottom 0.s; right:10px; bottom:30px; z-index:100; padding:7px; width:42px; height:42px; border:1px solid var(--border1); border-radius: 50%; background:url("../../images/common/ic_scrollTop_off.png")no-repeat #FFFFFF 50%/28px auto; cursor:pointer;  }
+button.btn.btn-top:hover { border:1px solid var(--secondary); background:url("../../images/common/ic_scrollTop_on.png")no-repeat #FFFFFF  50%/28px auto; }
+
+/* 에러 화면 버튼 */
+.btn-wrap.error button.btn { width:338px; }
 
 /*---------------------------------------------
 	a태그 버튼
@@ -800,6 +806,16 @@ tab #탭
 /* 실패 */
 .result-area.fail { background:var(--background5); }
 .result-area.fail::before { background:url(../../images/fail.png)no-repeat 50%/64px auto; }
+
+/* 404,500 에러 */
+.result-area.error { margin-top:80px; text-align:center; background:transparent; }
+.result-area.error::before { position:initial; transform:unset; margin-bottom:38px; width:118px; height:118px; background:url(../../images/fail.png)no-repeat 50%/118px auto; }
+.result-area.error .text-wrap { margin:0 auto; max-width:558px; width:100%; }
+.result-area.error .text-wrap h3 { margin-bottom:48px; font-size:var(--font28); font-weight:var(--w-bold); line-height:36px; }
+.result-area.error .text-wrap .txt { margin-bottom:26px; font-size:var(--font18); font-weight:var(--w-regular); color:var(--normal); }
+.result-area.error .text-wrap .txt:last-child { margin-bottom:0; }
+
+
 /*---------------------------------------------
 	팝업 안에서
 ---------------------------------------------*/

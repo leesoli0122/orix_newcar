@@ -12,10 +12,10 @@
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:type" content="website" />
 
+    <title>로그인 > 아이디 찾기 > 휴대폰본인인증</title>
+
     <link href="../../resources/css/lib/default.css" rel="stylesheet" type="text/css" />
-    <link href="../../resources/css/lib/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/ui/ui_common.css" rel="stylesheet" type="text/css" />
-    <link href="../../resources/css/lib/img.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/ui/media-query.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="../../resources/js/lib/jquery-1.9.1.min.js"></script>
@@ -26,60 +26,32 @@
 
 </head>
 <body>
-    <div class="wrap">
+    <div class="wrap login">
         <!-- s:header -->
-        <div id="headerWrap">
-            <script>
-                $(document).ready(function(){
-                    $("#headerWrap").load("../INCLUDE/inc_header.html");
-                });
-            </script>
-        </div>
         <!-- //e:header -->
-         <!-- s:contentWrap -->
+        <!-- s:contentWrap -->
         <div id="contentWrap" class="sub-content">
-            <!-- s:subvisual-wrap -->
-            <div class="subvisual-wrap">
-                <div class="breadcrumb-wrap">
-                    <ul>
-                        <li class="home"><a href="javascript:void(0);">홈</a></li>
-                        <li><a href="javascript:void(0);">1depth</a></li>
-                        <li><a href="javascript:void(0);">2depth</a></li>
-                        <li><a href="javascript:void(0);">3depth</a></li>
-                    </ul>
-                </div>
-                <div class="text-wrap">
-                    <h2>결과</h2>
-                </div>
-            </div>
-            <!-- //e:subvisual-wrap -->
             <!-- s:contents -->
             <div class="contents">
-                <div class="result-area nodata">
+                <div class="result-area error">
                     <div class="text-wrap">
-                        <h3 class="result-no">조회 결과가 없습니다.</h3>
+                        <h3 class="result-no">오류가 발생했습니다.</h3>
+                        <p class="txt">오류코드 :  오류메시지 노출</br>오류가 계속 되시면 고객센터(02-2050-6700)에 문의 부탁드립니다.</p>
                     </div>
                 </div>
-                <div class="result-area nodata frist-car">
-                    <div class="text-wrap">
-                        <h3>차량을 먼저 선택해 주세요.</h3>
-                    </div>
+                <div class="btn-wrap error">
+                    <button type="button" name="button" class="btn btn-primary">홈으로 가기</button>
                 </div>
             </div>
             <!-- //e:contents -->
+            <!--s: scrollTop-->
+            <button class="btn btn-top" type="button"><span class="ir">탑버튼</span></button>
+            <!--//e: scrollTop-->
         </div>
         <!-- //e:contentWrap -->
         <!-- s:footer -->
-        <div id="footerWrap">
-            <script>
-                $(document).ready(function(){
-                    $("#footerWrap").load("../INCLUDE/inc_footer.html");
-                });
-            </script>
-        </div>
         <!-- //e:footer -->
     </div>
-
 </body>
 
 </html>

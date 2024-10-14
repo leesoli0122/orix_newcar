@@ -269,7 +269,7 @@ Media Query
     /*---------------------------------------------
         mainSec02 Swiper
     ---------------------------------------------*/
-    .mainSec02 .introListSlider { padding:20px 30px; }
+    .mainSec02 .introListSlider { padding:20px 45px; }
     .mainSec02 .introListSlider::before,
     .mainSec02 .introListSlider::after { content: ''; position: absolute; top: 0; bottom: 0; width: 50px; /* 블러 영역의 너비 */ z-index: 2; pointer-events: none; }
     .mainSec02 .introListSlider::before { left: 0; background: linear-gradient(to right, rgba(255,255,255,0.6), rgba(255,255,255,0)); }

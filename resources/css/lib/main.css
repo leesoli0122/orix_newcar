@@ -159,7 +159,7 @@
 .mainSec04 { margin-top:74px; }
 .mainSec04 ul.introList-area {  display:flex; flex-wrap: wrap; gap:14px; margin-top:52px; }
 .mainSec04 ul.introList-area>li { flex:1; min-width: 0; }
-.mainSec04 ul.introList-area>li>a { display:block; text-align: center; padding:36px 20px; height:138px; border-radius: 34px; background: var(--m-background2);}
+.mainSec04 ul.introList-area>li>a { display:flex; flex-direction: column; text-align: center; padding:36px 20px; height:138px; border-radius: 34px; background: var(--m-background2);}
 .mainSec04 ul.introList-area>li>a { transition: 0.1s ease; }
 .mainSec04 ul.introList-area>li>a:hover,
 .mainSec04 ul.introList-area>li>a:focus { transform: scale(1.03); box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08); }

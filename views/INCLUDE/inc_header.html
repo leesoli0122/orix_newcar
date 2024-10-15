@@ -8,7 +8,7 @@
     </div>
 </div>
 <div class="h-menu">
-    <div>
+    <div class="mo-menu">
         <ul class="menu-r">
             <li><a href="#javascript:void(0);">오릭스캐피탈 강남지점 <span>오릭스(orix)</span>님</a> 환영합니다.</li>
             <li><button href="#javascript:void(0);" class="btn btn-logout">로그아웃</button></li>
@@ -155,10 +155,11 @@
             // 전체메뉴가 열리면 GNB 메뉴와 menuitem-wrap의 'on' 클래스 제거
             if (isNavMenuOpen) {
                 $(".menu > li, .menuitem-wrap").removeClass('on');
-                $('html').css({ 'overflow': 'hidden' });
+                $("html").css({ 'overflow': 'hidden' });
+                
             } else {
                 // 전체메뉴가 닫힐 때 overflow: auto로 복구
-                $('html').css({ 'overflow': 'auto' });
+                $("html").css({ 'overflow': 'auto' });
             }
         });
     });

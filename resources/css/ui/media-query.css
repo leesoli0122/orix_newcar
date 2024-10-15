@@ -19,6 +19,18 @@
 	/* 팝업 */
 	.layerpopup.laypop .ly-con-wrap { margin-bottom:100px; max-height:425px; overflow-y:auto; }
 
+	/*********************************************************************
+	TOGGLE_ACCORDION #토글_아코디언
+	*********************************************************************/
+	/*---------------------------------------------
+		Toggle_Accordion Default [QnA]
+	---------------------------------------------*/
+	.accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li { flex-direction: column; }
+	.accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li p:first-child { flex:0; width:100%; }
+	.accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div { width:100%; margin-top:20px;   flex-direction: column; }
+	.accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>ul { width:100%; }
+	.accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>p:last-child { flex:0; width:100%; margin-top:20px; }
+
 }
 
 @media screen and (max-width:980px) {

@@ -121,7 +121,12 @@ table { border-collapse:collapse; border-spacing:0; width:100%; }
 
 /** UI **/
 /* [class*='btn'] { display:inline-block; vertical-align:middle; } */
-/* [class*='btn']:focus { border:1px solid var(--normal); }/ */
+/* [class*='btn']:focus { border:2px solid var(--normal); } */
+
+/** focus **/
+button:focus,
+a:focus,
+.header-wrap.side > .h-menu ul.menu > li .menuitem-wrap .menuitem > li > a:focus { outline: 2px solid #000; }
 
 /*********************************************************************
 title
@@ -250,10 +255,10 @@ header #헤더
 .header-wrap > .h-menu { max-width:1400px; width:100%; margin:0 auto; }
 .header-wrap > .h-menu { display:flex; align-items:center; justify-content:space-between; flex-direction: row-reverse; }
 .header-wrap > .nav-btn { display:none; width:37px; height:37px; }
-.header-wrap > .nav-btn .ham { display:inline-block; width:37px; height:37px; background:transparent; }
+.header-wrap > .nav-btn .ham { display:inline-block; width:37px; height:37px; background:transparent; cursor:pointer; }
 .header-wrap > .nav-btn .ham img,
 .header-wrap > .nav-btn .close img { width:100%; height:100%; }
-.header-wrap > .nav-btn .close { display:none; width:37px; height:37px; }
+.header-wrap > .nav-btn .close { display:none; width:37px; height:37px; cursor:pointer; }
 
 /* 1depth */
 .header-wrap > .h-menu ul.menu { display:block; margin:20px 0 28px; width:auto; }
@@ -296,6 +301,28 @@ header #헤더
   0%{ transform: translateY(-50px) }
   100%{ transform: translateY(0px) }
 } */
+
+/*********************************************************************
+header(태블릿) .side
+*********************************************************************/
+/* menu open */
+.header-wrap.side { display:block; padding:0; width:100%; height:100%; overflow-y:auto; }
+.header-wrap.side .top { display:none; }
+.header-wrap.side > .h-menu { position:absolute; top:0; left:0; display:block; margin:0; transform: translateX(0); opacity: 1; visibility: visible; transition: transform 0.5s ease-in-out, visibility 0s; }
+.header-wrap.side > .h-menu ul.menu-r { padding:26px 0 32px 20px; border-bottom:6px solid var(--background4); }
+
+/* 버튼 */
+.header-wrap.side > .nav-btn { top:40px; right:20px; }
+.header-wrap.side > .nav-btn .ham { display:none; }
+.header-wrap.side > .nav-btn .close { display:block; }
+
+/* 2depth */
+.header-wrap.side > .h-menu ul.menu > li .menuitem-wrap::before { content:none; }
+.header-wrap.side > .h-menu ul.menu > li .menuitem-wrap .menuitem > li { margin:0; }
+.header-wrap.side > .h-menu ul.menu > li .menuitem-wrap .menuitem > li::after,
+.header-wrap.side > .h-menu ul.menu > li .menuitem-wrap .menuitem > li .sub-menuitem > li::after { content:""; position:absolute; top:50%; transform:translateY(-50%); right:0; display:inline-block; width:19px; height:19px; background:url(../../images/common/ic-arrow-right.png)no-repeat 50%/19px auto; }
+.header-wrap.side > .h-menu ul.menu > li .menuitem-wrap .menuitem > li > a {  padding:15px 0; }
+
 /*********************************************************************
 sub-content
 *********************************************************************/
@@ -356,29 +383,6 @@ sub-content
     .header-wrap > .h-menu ul.menu > li .menuitem-wrap .menuitem > li .sub-menuitem > li { margin:0; }
     .header-wrap > .h-menu ul.menu > li .menuitem-wrap .menuitem > li .sub-menuitem > li a { padding:15px 12px 15px 27px; }
 
-    /* menu open */
-    /* .header-wrap.on { display:block; padding:0; width:100%; height:100%; overflow-y:auto; }
-    .header-wrap.on .top { display:none; }
-    .header-wrap.on > .h-menu.on { position:absolute; top:0; left:0; display:block; margin:0; transform: translateX(0); opacity: 1; visibility: visible; transition: transform 0.5s ease-in-out, visibility 0s; }
-    .header-wrap.on > .h-menu.on ul.menu-r { padding:26px 0 32px 20px; border-bottom:6px solid var(--background4); } */
-
-    /* 버튼 */
-    /* .header-wrap.on > .nav-btn { top:40px; right:20px; }
-    .header-wrap.on > .nav-btn .ham { display:none; }
-    .header-wrap.on > .nav-btn .close { display:block; } */
-
-    /* 2depth */
-    /* .header-wrap.on > .h-menu.on .menuitem-wrap::before { content:none; }
-    .header-wrap.on > .h-menu.on ul.menu > li .menuitem-wrap .menuitem > li { margin:0; }
-    .header-wrap.on > .h-menu.on ul.menu > li .menuitem-wrap .menuitem > li::after,
-    .header-wrap > .h-menu ul.menu > li .menuitem-wrap .menuitem > li .sub-menuitem > li::after { content:""; position:absolute; top:50%; transform:translateY(-50%); right:0; display:inline-block; width:19px; height:19px; background:url(../../images/common/ic-arrow-right.png)no-repeat 50%/19px auto; }
-    .header-wrap.on > .h-menu.on ul.menu > li .menuitem-wrap .menuitem > li > a {  padding:15px 0; }
-    .header-wrap.on > .h-menu.on ul.menu > li:last-child .menuitem-wrap .menuitem li:first-child { padding-bottom:0; }
-    .header-wrap.on > .h-menu.on ul.menu > li:last-child .menuitem-wrap .menuitem > li:first-child::after { content:none; } */
-
-    /* 전체메뉴가 열렸을 때 hover 효과 제거 */
-    /* .header-wrap.on > .h-menu.on ul.menu > li .menuitem-wrap .menuitem > li.on a,
-    .header-wrap.on > .h-menu.on ul.menu > li .menuitem-wrap .menuitem > li a:hover { background-color:inherit; font-weight:inherit; color:inherit;  } */
 
 	.sub-content { padding:0 20px 80px; }
 }

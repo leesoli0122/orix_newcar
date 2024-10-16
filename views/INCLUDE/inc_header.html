@@ -8,7 +8,7 @@
             </h1>
         </div>
     </div>
-    <div class="h-menu">
+    <div class="h-menu" aria-label="Main navigation">
         <ul class="menu-r">
             <li><a href="#javascript:void(0);">오릭스캐피탈 강남지점 <span>오릭스(orix)</span>님</a> 환영합니다.</li>
             <li><button href="#javascript:void(0);" class="btn btn-logout">로그아웃</button></li>
@@ -20,7 +20,7 @@
                 <!-- menu 2depth -->
                 <div class="menuitem-wrap">
                     <ul class="menuitem">
-                        <li><a href="#javascript:void(0);">렌터카 견적내기</a></li>
+                        <li><a href="#javascript:void(0);" data-dep2-index="2">렌터카 견적내기</a></li>
                         <li><a href="#javascript:void(0);">오토리스 견적내기</a></li>
                         <li><a href="#javascript:void(0);">선구매</a></li>
                     </ul>
@@ -54,7 +54,7 @@
                 <div class="menuitem-wrap">
                     <ul class="menuitem">
                         <li>
-                            <a href="#javascript:void(0);">실적조회</a>
+                            <a href="#javascript:void(0);" tabindex="-1">실적조회</a>
                             <ul class="sub-menuitem bul-dot">
                                 <li><a href="#javascript:void(0);">나의실적</a></li>
                                 <li><a href="#javascript:void(0);">팀실적조회</a></li>
@@ -67,96 +67,55 @@
         </ul>
     </div>
     <div class="nav-btn">
-        <a href="#javascript:void(0);" class="ham">
+        <button aria-label="메뉴 열기" class="ham">
             <img src="../../resources/images/nav_btn.png" alt="메뉴아이콘">
-        </a>
-        <a href="#javascript:void(0);" class="close">
+        </button>
+        <button aria-label="메뉴 닫기" class="close">
             <img src="../../resources/images/common/ic_close.png" alt="닫기버튼">
-        </a>
+        </button>
     </div>
 </div>
 
 <script>
     $(document).ready(function () {
-        //스크롤시 헤더 fix
+        // 전역 변수
+        var isNavMenuOpen = false;
+        var $header = $(".header-wrap");
         var $lnb = $(".h-menu");
-        $(window).scroll(function () {
 
-            if ($(this).scrollTop() > 0) {
-                $lnb.addClass("fix");
-            } else {
-                $lnb.removeClass("fix");
-            }
+        // 스크롤시 헤더 fix
+        $(window).scroll(function () {
+            $lnb.toggleClass('fix', $(this).scrollTop() > 0);
         });
 
-        // window.matchMedia("미디어쿼리구문")
+        // 미디어쿼리
         var checkmedia = window.matchMedia("screen and (max-width:1200px)");
 
         checkScreen();
-
         checkmedia.addEventListener("change", checkScreen);
 
-        function checkScreen(){
-            if(checkmedia.matches){ 
+        function checkScreen() {
+            if (checkmedia.matches) {
                 menuTablet();
-            }else{
+            } else {
                 menuDesktop();
             }
         }
 
-        // 전역 변수로 선언 및 초기화
-        var isNavMenuOpen = false;
-        
-        // 데스크 탑 메뉴
-        function menuDesktop(){
-            // 기존 이벤트 리스너 제거
+        // 데스크탑 메뉴
+        function menuDesktop() {
+            // 기존 이벤트 리스너 제거 및 초기화
             $(".menu > li").off('click');
-
-            // 초기화
-            $(".h-menu").css({'right':'0', 'opacity':'1', 'overflow': 'visible'});
             $("html").css({ 'overflow': 'auto' });
+            $lnb.css({'right':'0','display':'flex', 'opacity':'1', 'overflow': 'visible'});
+            $header.removeClass('side');
 
-            // 전체 메뉴 아이콘이 사라질 때 메뉴 상태를 초기화
-            $(".h-menu").removeClass('on');
-            $(".menu > li, .menuitem-wrap").removeClass('on');
-
-            $(".menu > li").on('click', function (e) {
-                var targetLink = $(e.target).attr('href');
-
-                // 전체메뉴가 열려 있을 때
-                if (isNavMenuOpen) {
-                    // 클릭된 요소가 .menuitem-wrap 내부의 <a> 태그일 경우만 링크 이동 허용
-                    if ($(e.target).is('a') && $(e.target).closest('.menuitem-wrap').length && targetLink && targetLink !== "javascript:void(0);") {
-                        // 링크가 정상적일 경우 링크 이동 허용
-                        return;
-                    } else {
-                        // 그 외에는 링크 이동 방지
-                        e.preventDefault();
-                        return;
-                    }
-                }
-
-                // 링크가 있을 경우, 새 창을 여는 링크일 경우 메뉴 접기
-                if (targetLink && targetLink !== "javascript:void(0);") {
-                    if ($(e.target).attr('target') === '_blank') {
-                        // 메뉴 접기
-                        $(".menu > li, .menuitem-wrap").removeClass('on');
-                    }
-                    return;  // 링크 이동 후 더 이상 동작하지 않음
-                }
-
-                e.preventDefault();
-
-                var $siblingsMenu = $(this).siblings();
-                var $menu = $(this).not($siblingsMenu);
+            $(".menu > li").on('click', function () {
                 var $thisMenuWrap = $(this).children().siblings(".menuitem-wrap");
                 var $otherMenuWraps = $(".menuitem-wrap").not($thisMenuWrap);
 
-                // $menu 클릭했을 때
-                $menu.toggleClass('on');
-                $siblingsMenu.removeClass('on');
-
-                // 클릭한 메뉴만 열림, 나머지는 닫힘
+                // 클릭한 메뉴만 열고 나머지는 닫기
+                $(this).toggleClass('on').siblings().removeClass('on');
                 $thisMenuWrap.toggleClass('on');
                 $otherMenuWraps.removeClass('on');
             });
@@ -167,46 +126,65 @@
                     $(".menu > li, .menuitem-wrap").removeClass('on');
                 }
             });
-        };
 
-        // 테블릿 및 모바일 메뉴
-        function menuTablet(){
-            // 기존 이벤트 리스너 제거
-            $(".nav-btn").off('click');
+            // Tab 키로 메뉴 내비게이션 가능하게 설정
+            $(".menu > li > a").on('keydown', function (e) {
+                if (e.key === 'Tab' && $(this).hasClass('on')) {
+                    // 포커스가 현재 열린 메뉴 내에서 서브메뉴로 이동하도록 처리
+                    var $thisMenuWrap = $(this).next(".menuitem-wrap");
+                    var $firstSubMenuItem = $thisMenuWrap.find('a').first();
 
-            // 초기화
-            $(".h-menu").css({'right':'-100%', 'opacity':'0'});
-
-            // 전체메뉴 아이콘 클릭 시
-            $(".nav-btn").click(function () {
-                var $allmenu = $(".h-menu");
-                var $header = $(".header-wrap");
-
-                // 전체메뉴 열고 닫기
-                $allmenu.toggleClass('on');
-                $header.toggleClass('on');
-                
-                // 전체메뉴가 열릴 때는 GNB 메뉴의 'on' 클래스가 동작하지 않도록 상태 관리
-                isNavMenuOpen = $allmenu.hasClass('on');
-
-                // 전체메뉴가 열리면 GNB 메뉴와 menuitem-wrap의 'on' 클래스 제거
-                if (isNavMenuOpen) {
-                    $(".menu > li, .menuitem-wrap").removeClass('on');
-                    $("html").css({ 'overflow': 'hidden' });
-                    $allmenu.stop(true, true).animate({
-                    right : "0",
-                    opacity : "1"
-                    }, 1000);
-                } else {
-                    // 전체메뉴가 닫힐 때 overflow: auto로 복구
-                    $("html").css({ 'overflow': 'auto' });
-                    $allmenu.stop(true, true).animate({
-                    right : "-100%",
-                    opacity : "0"
-                    }, 1000);
+                    if ($firstSubMenuItem.length) {
+                        e.preventDefault(); // 기본 Tab 동작 방지
+                        $firstSubMenuItem.focus(); // 서브메뉴의 첫 항목에 포커스 이동
+                    }
                 }
             });
-        };
+
+            // 서브메뉴에서 Shift+Tab을 누르면 상위 메뉴로 포커스 이동
+            $(".menuitem-wrap a").on('keydown', function (e) {
+                if (e.key === 'Tab' && e.shiftKey) {
+                    var $parentMenu = $(this).closest('.menuitem-wrap').prev('a');
+                    if ($parentMenu.length) {
+                        e.preventDefault();
+                        $parentMenu.focus(); // 상위 메뉴로 포커스 이동
+                    }
+                }
+            });
+        }
+
+        // 테블릿 및 모바일 메뉴
+        function menuTablet() {
+            // 변수 초기화 및 기존 이벤트 리스너 제거
+            var $sideMenu = $(".header-wrap.side .menu > li");
+            $lnb.css({'right': '-100%'}).hide(); // 메뉴 초기 상태로 숨김 처리
+            $(".nav-btn").off('click');
+            $header.removeClass('side');
+            $sideMenu.removeClass('on');
+
+            // 전체메뉴 아이콘 클릭 시
+            $(".nav-btn").click(function (e) {
+                e.preventDefault();
+                isNavMenuOpen = $lnb.is(":visible"); // 전역 변수를 사용하여 상태 추적
+
+                // 전체메뉴가 열리지 않은 상태라면 메뉴 열기
+                if (!isNavMenuOpen) {
+                    $(this).attr('aria-expanded', 'true');
+                    $("html").css({ 'overflow': 'hidden' }); // 스크롤 비활성화
+                    $lnb.css({'right':'0','display':'block', 'opacity':'1'}).fadeIn(1000); // 메뉴 나타남
+                    $header.addClass('side');
+                    $allmenu.find("a:first").focus(); // 첫 번째 메뉴 항목에 포커스 이동
+                } else {
+                    // 전체메뉴가 열려 있다면 닫기
+                    $(this).attr('aria-expanded', 'false');
+                    $("html").css({ 'overflow': 'auto' }); // 스크롤 활성화
+                    $lnb.fadeOut(1000, function() {
+                        $(this).css({'right': '-100%', 'opacity': '0'}); // 닫힌 후 상태 재설정
+                    });
+                    $header.removeClass('side');
+                }
+            });
+        }
     });
 
 </script>

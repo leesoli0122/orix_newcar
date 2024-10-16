@@ -360,8 +360,9 @@ Button #버튼
 /*---------------------------------------------
 	Button
 ---------------------------------------------*/
-[class*='btn']:focus { outline:none; }/*웹접근성 고려 시 색상 변경 필요*/
-/* [class*='btn-primary']:not(.disabled):focus{ outline:2px solid var(--secondary); } */
+/* [class*='btn']:focus { outline:none; }웹접근성 고려 시 색상 변경 필요 */
+[class*='btn']:focus { outline:2px solid var(--normal); }
+[class*='btn-primary']:not(.disabled):focus{ outline:2px solid var(--secondary); }
 .btn-wrap { font-size:0; }/* Button Reset */
 
 /*---------------------------------------------
@@ -877,6 +878,7 @@ txt-list li -> txt-list(20240924 리스트 구조 변경에 따른 css 수정)
 .list-card-group { padding:30px; border:1px solid var(--border1); border-radius:20px; background:var(--white); }
 .list-card-group + .list-card-group { margin-top:28px; }
 .list-card-group + .table-type { margin-top:40px; }
+.list-card-group a { display:block; }
 .list-card-group .txt-list { display:flex; justify-content: space-between; align-items:center; margin-top:14px; font-size:var(--font16); }
 .list-card-group .txt-list:first-child { margin-top:0; }
 .list-card-group .txt-list .tit { font-size:var(--font18); font-weight:var(--w-bold); color:var(--title); }

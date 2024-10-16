@@ -126,7 +126,10 @@ table { border-collapse:collapse; border-spacing:0; width:100%; }
 /** focus **/
 button:focus,
 a:focus,
-.header-wrap.side > .h-menu ul.menu > li .menuitem-wrap .menuitem > li > a:focus { outline: 2px solid #000; }
+.header-wrap.side > .h-menu ul.menu > li .menuitem-wrap .menuitem > li > a:focus { outline:none; }
+button:focus-visible,
+a:focus-visible,
+.header-wrap.side > .h-menu ul.menu > li .menuitem-wrap .menuitem > li > a:focus-visible { outline: 2px solid #000; }
 
 /*********************************************************************
 title

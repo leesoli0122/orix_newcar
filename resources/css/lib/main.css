@@ -18,6 +18,7 @@
     --m-color06:#377A6B;
     --m-color07:#056ED6;
     --m-color08:#060a13;
+    --m-color09:#7CA1EF;
     
     --m-background1: #E2ECF7;
     --m-background2: #F2F6FC;
@@ -128,8 +129,8 @@
 .mainSec02 div.introListSlider { overflow: hidden; width:100%; }
 .mainSec02 div.introListSlider .swiper-button-prev,
 .mainSec02 div.introListSlider .swiper-button-next { transition: transform 0.3s ease; }
-.mainSec02 div.introListSlider .swiper-button-prev:after { transform: rotate(180deg); content: ''; position: absolute; width:41px; height:41px; background: var(--m-img-swiper) no-repeat left 11px center/16px auto; border: 3px solid #7CA1EF; border-radius:50%;   }
-.mainSec02 div.introListSlider .swiper-button-next:after { content: ''; position: absolute; width:41px; height:41px; background: var(--m-img-swiper) no-repeat right 6px center/16px auto;  border: 3px solid #7CA1EF; border-radius:50%; }
+.mainSec02 div.introListSlider .swiper-button-prev:after { transform: rotate(180deg); content: ''; position: absolute; width:41px; height:41px; background: var(--m-img-swiper) no-repeat left 11px center/16px auto; border: 3px solid var(--m-color09); border-radius:50%;   }
+.mainSec02 div.introListSlider .swiper-button-next:after { content: ''; position: absolute; width:41px; height:41px; background: var(--m-img-swiper) no-repeat right 6px center/16px auto;  border: 3px solid var(--m-color09); border-radius:50%; }
 .mainSec02 div.introListSlider .swiper-button-next, .swiper-rtl .swiper-button-prev { right:var(--swiper-navigation-sides-offset, 20px); }
 .mainSec02 div.introListSlider .swiper-button-prev, .swiper-rtl .swiper-button-next { left:var(--swiper-navigation-sides-offset, 3px); }
 .mainSec02 div.introListSlider .swiper-button-prev:hover,

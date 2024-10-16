@@ -309,7 +309,7 @@ header #헤더
 header(태블릿) .side
 *********************************************************************/
 /* menu open */
-.header-wrap.side { display:block; padding:0; width:100%; height:100%; overflow-y:auto; }
+.header-wrap.side { display:block; padding:0; width:100%; height:100%; /*overflow-y:auto;*/ }
 .header-wrap.side .top { display:none; }
 .header-wrap.side > .h-menu { position:absolute; top:0; left:0; display:block; margin:0; transform: translateX(0); opacity: 1; visibility: visible; transition: transform 0.5s ease-in-out, visibility 0s; }
 .header-wrap.side > .h-menu ul.menu-r { padding:26px 0 32px 20px; border-bottom:6px solid var(--background4); }
@@ -369,7 +369,7 @@ sub-content
     .header-wrap {  display:flex; justify-content:flex-start; padding:0 20px; height:76px; }
     .header-wrap .top { margin:0; padding:24px 0; width:auto; }
     .header-wrap > .h-menu { display:block; height:100vh; transform: translateX(100%); opacity:0; visibility: hidden; transition: transform 0.5s ease-in-out, visibility 0s 0.5s; background:var(--white); }
-    .header-wrap > .h-menu ul.menu { margin:0; padding-top:41px; padding-bottom:29px;  background:var(--white); }
+    .header-wrap > .h-menu ul.menu { min-height:100%; margin:0; padding-top:41px; padding-bottom:70px;  background:var(--white); overflow-y: auto; }
     .header-wrap > .h-menu ul.menu-r { padding:26px 0 32px 20px; background:var(--white); }
     .header-wrap > .h-menu ul.menu-r li:first-child { margin-left:0; }
     .header-wrap > .nav-btn { position:absolute; top:50%; transform:translateY(-50%); right:20px; display:block; }

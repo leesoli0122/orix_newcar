@@ -164,8 +164,11 @@
 
             // 전체메뉴 아이콘 클릭 시
             $(".nav-btn").click(function (e) {
+                var $allmenu = $(".menu");
+
                 e.preventDefault();
                 isNavMenuOpen = $lnb.is(":visible"); // 전역 변수를 사용하여 상태 추적
+                $allmenu.find("a:first").focus(); // 첫 번째 메뉴 항목에 포커스 이동
 
                 // 전체메뉴가 열리지 않은 상태라면 메뉴 열기
                 if (!isNavMenuOpen) {
@@ -173,12 +176,11 @@
                     $("html").css({ 'overflow': 'hidden' }); // 스크롤 비활성화
                     $lnb.css({'right':'0','display':'block', 'opacity':'1'}).fadeIn(1000); // 메뉴 나타남
                     $header.addClass('side');
-                    $allmenu.find("a:first").focus(); // 첫 번째 메뉴 항목에 포커스 이동
                 } else {
                     // 전체메뉴가 열려 있다면 닫기
                     $(this).attr('aria-expanded', 'false');
                     $("html").css({ 'overflow': 'auto' }); // 스크롤 활성화
-                    $lnb.fadeOut(1000, function() {
+                    $lnb.fadeOut(500, function() {
                         $(this).css({'right': '-100%', 'opacity': '0'}); // 닫힌 후 상태 재설정
                     });
                     $header.removeClass('side');

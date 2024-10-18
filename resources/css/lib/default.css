@@ -13,7 +13,6 @@
     src: local('NanumGothic Bold'), url(../../font/NanumFontSetup_OTF_GOTHIC/NanumGothicBold.otf) format("opentype"), url(../../font/NanumFontSetup_TTF_GOTHIC/NanumGothicBold.ttf) format("truetype");
 }
 
-
 html { overflow-y:auto; }
 body { width:100%; height:100%; font-size:16px; font-weight:400; color:var(--normal); text-align: left; background-color: #fff; }
 ul, ol { list-style:none; }
@@ -108,6 +107,7 @@ table { border-collapse:collapse; border-spacing:0; width:100%; }
 .essential::after { content:"*"; color:var(--error); padding-left:3px; }
 .flex { display:flex !important; }
 .mb0 { margin-bottom:0 !important; }
+.mt14 { margin-top:14px !important; }
 
 /* 폰트숨김 */
 .ir { position:absolute; clip:rect(1px 1px 1px 1px); width:1px; height:1px; margin:-1px; overflow: hidden;   }
@@ -155,7 +155,7 @@ style4 = table 안에 들어갈 때
 .sub-text-wrap.style2 { padding:20px 0; }
 .sub-text-wrap.style3 { padding:0 0 20px; }/*caption만 들어갈 경우*/
 
-.caption { padding-left:22px; margin-top:10px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--normal); }
+.caption { padding-left:22px; margin-top:10px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--subtitle); }
 .caption2 { position:absolute; top:-33px; right:0; }/*테이블캡션(단위)*/
 .caption3 { padding-left:22px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--secondary); }/*레이어팝업에서*/
 
@@ -197,8 +197,10 @@ popup-text-wrap 본문 타이틀
 ---------------------------------------------*/
 .popup-text-wrap { padding:20px 0; }
 .popup-text-wrap.style2 { padding:10px 0 20px; }
+.popup-text-wrap.style3 { padding:0 0 20px 0; }
 .popup-text-wrap h4,
 .popup-text-wrap.style2 h4 { font-size:var(--font16); font-weight:var(--w-bold); color:var(--normal); }
+.popup-text-wrap.style3 h4.tit { font-size:var(--font18); line-height:27px; }
 
 /*********************************************************************
 #블릿텍스트
@@ -244,7 +246,7 @@ login #로그인
 /*********************************************************************
 header #헤더
 *********************************************************************/
-.header-wrap { position:fixed; top:0; z-index:10; padding:0 20px; width:100%; height:146px; border-bottom:1px solid var(--border1); z-index:999px; }
+.header-wrap { position:fixed; top:0; z-index:10; padding:0 20px; width:100%; height:146px; border-bottom:1px solid var(--border1); background:var(--white); z-index:999; }
 .header-wrap .top { padding:33px 0px 15px; margin: 0 auto; max-width:1400px; width: 100%; /*min-width:1200px;*/ }
 .header-wrap .top div { display:flex; align-items:center; }
 .header-wrap .top > div > * { vertical-align:middle; }

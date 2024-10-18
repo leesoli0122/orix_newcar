@@ -17,7 +17,7 @@
 	.grid-list-wrap:last-child { display:grid; grid-column-start:1; grid-column-end:3; }
 
 	/* 팝업 */
-	.layerpopup.laypop .ly-con-wrap { margin-bottom:100px; max-height:425px; overflow-y:auto; }
+	.layerpopup.laypop .ly-con-wrap { margin-bottom:100px; max-height:426px; overflow-y:auto; }
 
 	/*********************************************************************
 	TOGGLE_ACCORDION #토글_아코디언

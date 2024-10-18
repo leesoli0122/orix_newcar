@@ -395,6 +395,7 @@ button.btn.btn-secondary { color:var(--normal); background:var(--border3); }
 /*컨텐츠버튼*/
 button.btn.btn-cont:hover{ border:1px solid var(--secondary); color:var(--secondary); }
 button.btn.btn-cont { border:1px solid var(--normal); color:var(--normal); background:var(--white); }
+button.btn.btn-cont.disabled { border:0; color:var(--inactive); background: var(--background1); }
 
 /*폼버튼*/
 button.btn.btn-input { height:46px; padding:0 16px; font-size:var(--font16); color:var(--inactive); background:var(--background1); }

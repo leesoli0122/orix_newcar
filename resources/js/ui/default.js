@@ -152,6 +152,7 @@ $(document).ready(function () {
     }
 
     // 상위 탭 콘텐츠만 업데이트 (상위 탭 콘텐츠만 처리)
+    $(this).closest(".introNews-area").find(".tab-content").addClass("dp-none");// 메인 탭 추가
     $(this).closest(".tabs-wrap").find(".tab-content-area > .tab-content").addClass("dp-none");
     $("#" + tabCont).removeClass("dp-none"); // 선택된 상위 탭 콘텐츠 표시
   });

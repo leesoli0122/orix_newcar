@@ -131,14 +131,14 @@
                         <div class="grid-list-wrap">
                             <p class="grid-list-header">옵션 선택</p>
                             <div class="grid-list-body option">
-                                <!-- 화면 진입 시 최초 Default 상태
+                                <!-- 화면 진입 시 최초 Default 상태 -->
                                 <div class="result-area nodata">
                                     <div class="text-wrap">
                                         <h3 class="result-no">차량을 먼저 선택해주세요.</h3>
                                     </div>
-                                </div> -->
+                                </div>
                                 <!--S: 차량정보 선택 완료 시 , 차량에 해당하는 옵션 정보, 금액 노출 -->
-                                <div class="form-group check">
+                                <!-- <div class="form-group check">
                                     <ul class="check-box">
                                         <li>
                                             <div class="check-top">
@@ -217,7 +217,7 @@
                                             </div>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> -->
                                 <!--E: 차량정보 선택 완료 시 , 차량에 해당하는 옵션 정보, 금액 노출 -->
                             </div>
                             <div class="grid-list-footer">
@@ -363,9 +363,9 @@
                                                 <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
-                                                        <option value="" disabled="" selected="" hidden="">단순운용오토리스</option>
+                                                        <option value="" disabled="" selected="" hidden="">상품구분 선택</option>
                                                         <option value="0">단순운용오토리스</option>
-                                                        <option value="1">M/T운용오토리스</option>
+                                                        <option value="1">M/T운용오토리스</option><!--[D]:수입차일 때 제외-->
                                                         <option value="2">금융리스</option>
                                                     </select>
                                                     <div class="e-select-dim"></div>
@@ -413,7 +413,8 @@
                                     <!--E: 개인사업자/법인사업자 -->
                                     <li>
                                         <span class="tit">보험등록명의</span>
-                                        <div><span class="change-txt">오릭스캐피탈코리아 (피보험자 : 이용자)</span></div><!--[D]:오릭스캐피탈코리아 (피보험자 : 이용자)로 고정-->
+                                        <div><span class="change-txt">이용자명의(피보험자 : 이용자)
+                                        </span></div><!--[D]:이용자명의(피보험자 : 이용자)로 고정-->
                                     </li>
                                     <li>
                                         <span class="tit">차세환경부담</span>
@@ -552,8 +553,8 @@
                                 <ul>
                                     <li>
                                         <span class="tit">공채지역</span>
-                                        <div><span class="change-txt">차량을 먼저 선택해주세요</span></div>
-                                    </li>
+                                        <div><span class="change-txt">부산</span></div>
+                                    </li><!--[D]:부산으로 고정 -->
                                     <li>
                                         <span class="tit">공채할인</span>
                                         <div class="form-group radio">
@@ -576,7 +577,8 @@
                                                 </div>
                                                 <span class="num">0<span></span>원</span>
                                             </div>
-                                        </div>
+                                        </div><!--[D]:국산차일 때 -->
+                                        <!-- <div class="change-txt num"><span>0</span>원</div> --><!--[D]:수입차일 때 -->
                                     </li>
                                     <li>
                                         <span class="tit">취등록세</span>
@@ -656,8 +658,14 @@
                     <section class="grid-wrap btnSelec">
                         <!-- case1 국산차 -->
                         <div class="grid-list-wrap style3">
-                            <p class="grid-list-header on">계약조건 01</p>
+                            <p class="grid-list-header">계약조건 01</p>
                             <div class="grid-list-body style2">
+                                <!--S: 차량 선택 전 default -->
+                                <!-- <div class="result-area nodata frist-car">
+                                    <div class="text-wrap">
+                                        <h3>차량을 먼저 선택해 주세요.</h3>
+                                    </div>
+                                </div> -->
                                 <ul>
                                     <li>
                                         <span class="tit">상품구분</span>
@@ -705,13 +713,14 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!--<div class="change-txt">없음</div> [D]:금융리스일 때 고정-->
                                     </li>
                                     <li>
-                                        <span class="tit">선납금</span>
-                                        <div class="pop arr" onclick="openPopup('PopUp09')">0% / 0원</div>
+                                        <span class="tit">자기부담금</span><!--2024.10.21 text 변경-->
+                                        <div class="pop arr" onclick="openPopup('PopUp13')">0% / 0원</div><!--2024.10.21 팝업변경-->
                                     </li>
                                     <li>
-                                        <span class="tit">선납금 리스료</span>
+                                        <span class="tit">선납 리스료</span>
                                         <div class="pop arr" onclick="openPopup('PopUp12')">0% / 0원</div>
                                     </li>
                                     <li>
@@ -800,9 +809,9 @@
                                     <li class="num">
                                         <span class="tit">출고전납입</span>
                                         <div class="change-txt num"><span>0</span> 원</div>
-                                        <!-- 선납금+보증금 입력한 상태인 경우
+                                        <!-- 자기부담금+보증금 입력한 상태인 경우
                                         <div class="change-txt delivery num">
-                                            <span>선납금+보증금</span>
+                                            <span>자기부담금+보증금</span>
                                             <div><span>0</span> 원</div>
                                         </div> -->
                                         <!-- 보증금만 입력한 상태인 경우
@@ -810,13 +819,15 @@
                                             <span>보증금</span>
                                             <div><span>0</span> 원</div>
                                         </div> -->
-                                        <!-- 선납금만 입력한 상태인 경우
+                                        <!-- 자기부담금만 입력한 상태인 경우
                                         <div class="change-txt delivery num">
-                                            <span>선납금</span>
+                                            <span>자기부담금</span>
                                             <div><span>0</span> 원</div>
                                         </div> -->
                                     </li>
                                 </ul>
+                                <!--S: 계약조건 로딩 페이지 -->
+                                <!--E: 계약조건 로딩 페이지 -->
                             </div>
                             <!-- 차량 선택 전에는 display:none; -->
                             <div class="grid-list-footer">
@@ -827,8 +838,14 @@
                         </div>
                         <!-- case2 수입차 -->
                         <div class="grid-list-wrap style3">
-                            <p class="grid-list-header on">계약조건 02</p>
+                            <p class="grid-list-header">계약조건 02</p>
                             <div class="grid-list-body style2">
+                                <!--S: 차량 선택 전 default -->
+                                <!-- <div class="result-area nodata frist-car">
+                                    <div class="text-wrap">
+                                        <h3>차량을 먼저 선택해 주세요.</h3>
+                                    </div>
+                                </div> -->
                                 <ul>
                                     <li>
                                         <span class="tit">상품구분</span>
@@ -876,13 +893,14 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!--<div class="change-txt">없음</div> [D]:금융리스일 때 고정-->
                                     </li>
                                     <li>
-                                        <span class="tit">선납금</span>
-                                        <div class="pop arr" onclick="openPopup('PopUp09')">0% / 0원</div>
+                                        <span class="tit">자기부담금</span><!--2024.10.21 text 변경-->
+                                        <div class="pop arr" onclick="openPopup('PopUp13')">0% / 0원</div><!--2024.10.21 팝업변경-->
                                     </li>
                                     <li>
-                                        <span class="tit">선납금 리스료</span>
+                                        <span class="tit">선납 리스료</span>
                                         <div class="pop arr" onclick="openPopup('PopUp12')">0% / 0원</div>
                                     </li>
                                     <li>
@@ -982,9 +1000,9 @@
                                     <li class="num">
                                         <span class="tit">출고전납입</span>
                                         <div class="change-txt num"><span>0</span> 원</div>
-                                        <!-- 선납금+보증금 입력한 상태인 경우
+                                        <!-- 자기부담금+보증금 입력한 상태인 경우
                                         <div class="change-txt delivery num">
-                                            <span>선납금+보증금</span>
+                                            <span>자기부담금+보증금</span>
                                             <div><span>0</span> 원</div>
                                         </div> -->
                                         <!-- 보증금만 입력한 상태인 경우
@@ -992,13 +1010,15 @@
                                             <span>보증금</span>
                                             <div><span>0</span> 원</div>
                                         </div> -->
-                                        <!-- 선납금만 입력한 상태인 경우
+                                        <!-- 자기부담금만 입력한 상태인 경우
                                         <div class="change-txt delivery num">
-                                            <span>선납금</span>
+                                            <span>자기부담금</span>
                                             <div><span>0</span> 원</div>
                                         </div> -->
                                     </li>
                                 </ul>
+                                <!--S: 계약조건 로딩 페이지 -->
+                                <!--E: 계약조건 로딩 페이지 -->
                             </div>
                             <!-- 차량 선택 전에는 display:none; -->
                             <div class="grid-list-footer">
@@ -1009,8 +1029,14 @@
                         </div>
                         <!-- case3 금융리스일 때 -->
                         <div class="grid-list-wrap style3">
-                            <p class="grid-list-header on">계약조건 03</p>
+                            <p class="grid-list-header">계약조건 03</p>
                             <div class="grid-list-body style2">
+                                <!--S: 차량 선택 전 default -->
+                                <!-- <div class="result-area nodata frist-car">
+                                    <div class="text-wrap">
+                                        <h3>차량을 먼저 선택해 주세요.</h3>
+                                    </div>
+                                </div> -->
                                 <ul>
                                     <li>
                                         <span class="tit">상품구분</span>
@@ -1018,8 +1044,8 @@
                                     </li>
                                     <li>
                                         <span class="tit">만기</span>
-                                        <div class="change-txt">재리스/인수/반납</div><!--[D]:운용리스일 때 고정-->
-                                        <!-- <div class="change-txt">인수</div> [D]:금융리스일 때 고정-->
+                                        <!--<div class="change-txt">재리스/인수/반납</div>[D]:운용리스일 때 고정-->
+                                        <div class="change-txt">인수</div><!-- [D]:금융리스일 때 고정-->
                                     </li>
                                     <li>
                                         <span class="tit">기간</span>
@@ -1042,30 +1068,11 @@
                                     </li>
                                     <li>
                                         <span class="tit">약정거리</span>
-                                        <div class="form-group">
-                                            <div class="select-box">
-                                                <div class="stove-dim"></div>
-                                                <div class="se-select ei-w160" data-stove="select">
-                                                    <select class="" title="메뉴구분">
-                                                        <option value="" disabled="" selected="" hidden="">2만 Km</option>
-                                                        <option value="0">1만 Km</option>
-                                                        <!--<option value="1">1.5만 Km</option>[D]: 국산차 일때만 노출 -->
-                                                        <option value="2">2만 Km</option>
-                                                        <option value="3">3만 Km</option>
-                                                        <!--<option value="4">4만 Km</option>[D]: 국산차 일때만 노출 -->
-                                                    </select>
-                                                    <div class="e-select-dim"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <div class="change-txt">없음</div><!-- [D]:금융리스일 때 고정-->
                                     </li>
                                     <li>
-                                        <span class="tit">선납금</span>
-                                        <div class="pop arr" onclick="openPopup('PopUp09')">0% / 0원</div>
-                                    </li>
-                                    <li>
-                                        <span class="tit">선납금 리스료</span>
-                                        <div class="pop arr" onclick="openPopup('PopUp12')">0% / 0원</div>
+                                        <span class="tit">자기부담금</span><!--2024.10.21 text 변경-->
+                                        <div class="pop arr" onclick="openPopup('PopUp13')">0% / 0원</div><!--2024.10.21 팝업변경-->
                                     </li>
                                     <!--S:상품구분 : M/T운용오토리스일 때만 오릭스 정비 Premium로 고정 노출-->
                                     <!-- <li>
@@ -1086,7 +1093,7 @@
                                     </li> -->
                                     <!--E:M/T운용오토리스일 때만 오릭스 정비 Premium로 고정 노출-->
                                     <!--S:수입차에서만 노출-->
-                                    <li>
+                                    <!-- <li>
                                         <span class="tit">이손금</span>
                                         <div class="form-group">
                                             <div class="col-1">
@@ -1094,7 +1101,7 @@
                                                 <span class="amount-txt">원</span>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li> -->
                                     <!--E:수입차에서만 노출-->
                                     <li class="num">
                                         <span class="tit">적용금리</span>
@@ -1103,10 +1110,10 @@
                                     </li>
                                     <li class="num">
                                         <span class="tit">출고전납입</span>
-                                        <div class="change-txt num"><span>0</span> 원</div>
-                                        <!-- 선납금+보증금 입력한 상태인 경우
+                                        <!-- <div class="change-txt num"><span>0</span> 원</div> -->
+                                        <!-- 자기부담금+보증금 입력한 상태인 경우
                                         <div class="change-txt delivery num">
-                                            <span>선납금+보증금</span>
+                                            <span>자기부담금+보증금</span>
                                             <div><span>0</span> 원</div>
                                         </div> -->
                                         <!-- 보증금만 입력한 상태인 경우
@@ -1114,13 +1121,20 @@
                                             <span>보증금</span>
                                             <div><span>0</span> 원</div>
                                         </div> -->
-                                        <!-- 선납금만 입력한 상태인 경우
+                                        <!-- 자기부담금만 입력한 상태인 경우
                                         <div class="change-txt delivery num">
-                                            <span>선납금</span>
+                                            <span>자기부담금</span>
                                             <div><span>0</span> 원</div>
                                         </div> -->
+                                        <!-- 자기부담금+선납리스료+보증금 입력한 상태인 경우 -->
+                                        <div class="change-txt delivery2 num">
+                                            <span>자기부담금+선납리스료+보증금</span>
+                                            <div><span>463,344</span> 원</div>
+                                        </div>
                                     </li>
                                 </ul>
+                                <!--S: 계약조건 로딩 페이지 -->
+                                <!--E: 계약조건 로딩 페이지 -->
                             </div>
                             <!-- 차량 선택 전에는 display:none; -->
                             <div class="grid-list-footer">
@@ -1166,7 +1180,7 @@
                                 <div class="estimate-header">
                                     <div class="top">
                                         <img src="../../resources/images/logo.png" alt="오릭스캐피탈코리아 로고">
-                                        <p class="tit">렌터카 견적서</p>
+                                        <p class="tit">오토리스 견적서</p>
                                         <!--[D]: 연락처 숨김 처리 시 미노출 customer-info에 dp-none 추가 -->
                                         <div class="customer-info">
                                             <ul>
@@ -1224,7 +1238,7 @@
                                                             <span class="num">+<span>000,000</span>원</span>
                                                         </li>
                                                         <li>
-                                                            <span>현대 스마트 센스 패키지 l</span>
+                                                            <span>JBL 사운드 패키지</span>
                                                             <span class="num">+<span>000,000</span>원</span>
                                                         </li>
                                                     </ul>
@@ -1238,13 +1252,99 @@
                                     </div>
                                     <p class="notice-word">※ 위 참고 이미지는 실제 판매모델과 다를 수 있습니다.</p>
                                     <div class="estimate-text-wrap">
+                                        <h5>취득원가</h5>
+                                    </div>
+                                    <div class="table-wrap auto">
+                                        <div class="table-type table-col ta-c">
+                                            <table>
+                                                <caption>취득원가에 대한 기본가격,옵션가격,할인액,최종 차량가 테이블</caption>
+                                                <colgroup>
+                                                    <col width="40%">
+                                                    <col width="*">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr class="num">
+                                                        <th scope="col">기본가격</th>
+                                                        <td><span>96,000,000</span> 원</td>
+                                                    </tr>
+                                                    <tr class="num">
+                                                        <th scope="col">옵션가격</th>
+                                                        <td><span>3,050,000</span> 원</td>
+                                                    </tr>
+                                                    <tr class="num"><!--[D]:국산차-특판 출고 인 경우 미노출-->
+                                                        <th scope="col">할인액</th>
+                                                        <td>(-)<span>1,000,000</span>원 </td>
+                                                    </tr>
+                                                    <tr class="total num">
+                                                        <th scope="col">① 최종 차량가</th>
+                                                        <td><span class="red">98,050,000</span> 원</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="table-type table-col">
+                                            <table>
+                                                <caption>취득세, 공채비용, 부대비용, 원가포함 합계, 최종 차량가+원가포함 합계에 대한 테이블</caption><!-- 2024.10.21 caption 수정 -->
+                                                <colgroup>
+                                                    <col width="40%">
+                                                    <col width="*">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr class="num">
+                                                        <th scope="col">취득세</th>
+                                                        <td>
+                                                            <div class="flex">
+                                                                <span>포함</span>
+                                                                <span><span>6,239,530</span> 원</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="num">
+                                                        <th scope="col">공채비용</th>
+                                                        <td>
+                                                            <div class="flex">
+                                                                <span>포함</span>
+                                                                <span><span>445,500</span> 원</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="num">
+                                                        <th scope="col">부대비용</th>
+                                                        <td>
+                                                            <div class="flex">
+                                                                <span>포함</span>
+                                                                <span><span>60,000</span> 원</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="num">
+                                                        <th scope="col">②원가포함 합계</th>
+                                                        <td class="now">
+                                                            <span class="bold">6,745,030</span> 원
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="total num">
+                                                        <th scope="col">취득원가</th>
+                                                        <td>
+                                                            <div class="flex">
+                                                                <span>①+②</span>
+                                                                <span><span class="red">104,795,030</span> 원</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="estimate-text-wrap">
                                         <h5>계약조건</h5>
                                     </div>
                                     <!-- [D]: 계약조건 하나일 때 table-wrap에 one 클래스 추가 -->
-                                    <div class="table-wrap">
+                                    <div class="table-wrap atuo">
                                         <div class="table-type table-col ta-c">
                                             <table>
-                                                <caption>계약조건에 대한 렌트기간, 만기처리, 약정거리, 정비상품, 선납금, 보증금, 만기 인수가격 테이블</caption>
+                                                <caption>계약조건에 대한 리스기간, 상품명,  만기처리, 약정거리, 자기부담금, 보증금, 만기 인수가격 테이블</caption><!--[D] 둘 이상일 때 만기인수가격->잔존가치로 변경-->
                                                 <colgroup>
                                                     <col width="19%">
                                                     <col width="27%">
@@ -1253,55 +1353,57 @@
                                                 </colgroup>
                                                 <tbody>
                                                     <tr class="data">
-                                                        <th scope="col">렌트기간</th>
-                                                        <td>36개월</td>
-                                                        <td>48개월</td>
-                                                        <td>60개월</td>
+                                                        <th scope="col">리스기간</th>
+                                                        <td class="blue">36개월</td>
+                                                        <td class="blue">48개월</td>
+                                                        <td class="blue">60개월</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">상품명</th>
+                                                        <td>단순운용오토리스</td>
+                                                        <td>단순운용오토리스</td>
+                                                        <td>단순운용오토리스</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="col">만기처리</th>
-                                                        <td>개인인수형(국산차-정비제외)</td>
-                                                        <td>개인인수형</td>
-                                                        <td>개인인수형</td>
+                                                        <td>재리스/인수/반납</td>
+                                                        <td>재리스/인수/반납</td>
+                                                        <td>재리스/인수/반납</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="col">약정거리</th>
-                                                        <td>2만Km</td>
-                                                        <td>2만Km</td>
-                                                        <td>2만Km</td>
+                                                        <td>2만Km/년</td>
+                                                        <td>2만Km/년</td>
+                                                        <td>2만Km/년</td>
                                                     </tr>
-                                                    <!--S: 계약조건 하나 일 때 숨김처리-->
-                                                    <tr>
-                                                        <th scope="col">정비상품</th>
-                                                        <td>정비(미포함)</td>
-                                                        <td>오릭스 정비 Premium</td>
-                                                        <td>오릭스 정비 Premium</td>
-                                                    </tr>
-                                                    <!--E: 계약조건 하나 일 때 숨김처리-->
                                                     <tr class="num">
-                                                        <th scope="col">선납금</th>
-                                                        <td><span>0</span> 원</td>
-                                                        <td><span>0</span> 원</td>
-                                                        <td><span>0</span> 원</td>
+                                                        <th scope="col">자기부담금</th><!-- 2024.10.21 text 변경 -->
+                                                        <td><span>5</span>% / <span>5,240,000</span> 원</td>
+                                                        <td><span>10</span>% / <span>10,480,000</span> 원</td>
+                                                        <td><span>29</span>% / <span>10,480,000</span> 원</td>
                                                     </tr>
                                                     <tr class="num">
                                                         <th scope="col">보증금</th>
-                                                        <td><span>0</span> 원</td>
-                                                        <td><span>0</span> 원</td>
-                                                        <td><span>0</span> 원</td>
+                                                        <td><span>10</span>% / <span>10,480,000</span> 원</td>
+                                                        <td><span>29</span>% / <span>30,391,000</span> 원</td>
+                                                        <td><span>35</span>% / <span>30,391,000</span> 원</td>
                                                     </tr>
-                                                    <tr class="num">
+                                                    <tr class="num"><!--[D]:2개 이상일 때 노출-->
+                                                        <th scope="col">잔존가치</th>
+                                                        <td><span>62</span>% / <span>64,973,000</span> 원</td>
+                                                        <td><span>54</span>% / <span>56,589,000</span> 원</td>
+                                                        <td><span>35</span>% / <span>56,589,000</span> 원</td>
+                                                    </tr>
+                                                    <!--<tr class="num">[D]: 1개일때만 노출
                                                         <th scope="col">만기 인수가격</th>
                                                         <td><span>64</span>% / <span>14,707,000</span> 원</td>
-                                                        <td><span>64</span>% / <span>14,707,000</span> 원</td>
-                                                        <td><span>48</span>% / <span>10,327,000</span> 원</td>
-                                                    </tr>
+                                                    </tr>-->
                                                 </tbody>
                                             </table>
                                         </div>
                                         <div class="table-type table-col amount">
                                             <table>
-                                                <caption>계약조건에 대한 매회 렌트료, 선납 렌트료, 납입 렌트료, 초기 납입액 테이블</caption>
+                                                <caption>계약조건에 대한 매회 리스료, 선납 리스료, 납입 리스료, 자기부담금 할인, 보증금 할인 테이블</caption>
                                                 <colgroup>
                                                     <col width="19%">
                                                     <col width="27%">
@@ -1310,185 +1412,138 @@
                                                 </colgroup>
                                                 <tbody>
                                                     <tr>
-                                                        <th scope="col" rowspan="2">매회 렌트료</th>
+                                                        <th scope="col" rowspan="2">매회 리스료</th>
                                                         <td>
                                                             <div class="flex">
-                                                                <span>① 공급가</span>
+                                                                <span>① 리스료</span>
                                                                 <span><span>393,352</span> 원</span>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="flex">
-                                                                <span>① 공급가</span>
-                                                                <span><span>369,549</span> 원</span>
+                                                                <span>① 리스료</span>
+                                                                <span><span>393,523</span> 원</span>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="flex">
-                                                                <span>① 공급가</span>
-                                                                <span><span>330,000</span> 원</span>
+                                                                <span>① 리스료</span>
+                                                                <span><span>393,523</span> 원</span>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             <div class="flex">
-                                                                <span>② 부가세</span>
-                                                                <span><span>39,352</span> 원</span>
+                                                                <span>② 자동차세</span>
+                                                                <span>포함</span>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="flex">
-                                                                <span>② 부가세</span>
-                                                                <span><span>36,854</span> 원</span>
+                                                                <span>② 자동차세</span>
+                                                                <span>고객별도</span>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="flex">
-                                                                <span>② 부가세</span>
-                                                                <span><span>33,000</span> 원</span>
+                                                                <span>② 자동차세</span>
+                                                                <span><span>36,954</span> 원</span>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <th scope="col">선납 렌트료</th>
+                                                        <th scope="col">선납 리스료</th><!-- 2024.10.21 text 변경 -->
                                                         <td>
                                                             <div class="flex">
-                                                                <span>③ 선납금(월)</span>
+                                                                <span>③ (월)</span><!-- 2024.10.21 text 변경 -->
                                                                 <span>(-) <span>0</span> 원</span>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="flex">
-                                                                <span>③ 선납금(월)</span>
+                                                                <span>③ (월)</span><!-- 2024.10.21 text 변경 -->
                                                                 <span>(-) <span>0</span> 원</span>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="flex">
-                                                                <span>③ 선납금(월)</span>
+                                                                <span>③ (월)</span><!-- 2024.10.21 text 변경 -->
                                                                 <span>(-) <span>0</span> 원</span>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <th scope="col">납입 렌트료</th>
-                                                        <td>
+                                                        <th scope="col">납입 리스료</th><!-- 2024.10.21 text 변경 -->
+                                                        <td class="now dpb2">
                                                             <div class="flex">
                                                                 <span>①+②+③</span>
-                                                                <span><span class="red">432,875</span> 원</span>
+                                                                <span><span class="red">계산 대기중</span> 원</span>
                                                             </div>
                                                         </td>
-                                                        <td>
+                                                        <td class="now dpb2">
                                                             <div class="flex">
                                                                 <span>①+②+③</span>
                                                                 <span><span class="red">406,503</span> 원</span>
                                                             </div>
                                                         </td>
-                                                        <td>
+                                                        <td class="now dpb2">
                                                             <div class="flex">
                                                                 <span>①+②+③</span>
-                                                                <span class="red">계산 대기중 </span>
+                                                                <span><span class="red">406,503</span> 원</span>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr class="num">
-                                                        <th scope="col">초기 납입액</th>
-                                                        <td><span>0</span> 원</td>
-                                                        <td><span>0</span> 원</td>
-                                                        <td><span>0</span> 원</td>
+                                                        <th scope="col">자기부담금 할인</th><!-- 2024.10.21 text 변경 -->
+                                                        <td><span>0.9</span>% / <span>12,361</span> 원</td>
+                                                        <td><span>2.1</span>% / <span>24,835</span> 원</td>
+                                                        <td><span>2.1</span>% / <span>24,835</span> 원</td>
+                                                    </tr>
+                                                    <tr class="num">
+                                                        <th scope="col">보증금 할인</th>
+                                                        <td><span>3.3</span>% / <span>46,982</span> 원</td>
+                                                        <td><span>10.5</span>% / <span>136,115</span> 원</td>
+                                                        <td><span>10.5</span>% / <span>136,115</span> 원</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
-                                    <div class="estimate-text-wrap">
-                                        <h5>보험 조건</h5>
-                                    </div>
-                                    <div class="table-wrap">
+                                    <div class="table-wrap auto no">
                                         <div class="table-type table-col">
                                             <table>
-                                                <caption>보험 조건에 대한 고객구분, 운전연령, 보험종류, 의무가입, 필수가입 테이블</caption>
+                                                <caption>등록/부대비용, 자기부담금/보증금, 고객 조기납입 합계에 대한 테이블</caption><!-- 2024.10.21 caption 수정 -->
                                                 <colgroup>
-                                                    <col width="20%">
-                                                    <col width="*">
-                                                    <col width="*">
-                                                    <col width="*">
+                                                    <col width="19%">
+                                                    <col width="27%">
+                                                    <col width="27%">
+                                                    <col width="27%">
                                                 </colgroup>
                                                 <tbody>
-                                                    <tr>
-                                                        <th scope="col">고객구분</th>
-                                                        <td colspan="3">개인</td>
+                                                    <tr class="num">
+                                                        <th scope="col">등록/부대비용</th>
+                                                        <td><span>505,500</span> 원</td>
+                                                        <td><span>505,500</span> 원</td>
+                                                        <td><span>505,500</span> 원</td>
                                                     </tr>
-                                                    <tr>
-                                                        <th scope="col">운전연령</th>
-                                                        <td>26세 이상 ~. 5세 이하</td>
-                                                        <th>보험종류</th>
-                                                        <td>영업용</td><!--[D]:영업용 고정-->
+                                                    <tr class="num">
+                                                        <th scope="col">자기부담금/보증금</th><!-- 2024.10.21 text 변경 -->
+                                                        <td><span>15,643,300</span> 원</td>
+                                                        <td><span>40,673,000</span> 원</td>
+                                                        <td><span>40,673,000</span> 원</td>
                                                     </tr>
-                                                    <tr>
-                                                        <th scope="col">의무가입</th>
-                                                        <td>무보험차상해, 긴급출동</td>
-                                                        <th>필수가입</th>
-                                                        <td>대물 : <span>1억</span>, 자손 : <span>1억</span>, 면책금 : <span>30만원</span></td>
+                                                    <tr class="total num">
+                                                        <th scope="col">고객 조기납입 합계</th>
+                                                        <td class="now"><span>16,148,500</span> 원</td>
+                                                        <td class="now"><span>41,178,500</span> 원</td>
+                                                        <td class="now"><span>41,178,500</span> 원</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
-                                    <div class="estimate-text-wrap">
-                                        <h5>정비상품 안내표</h5>
-                                    </div>
-                                    <div class="table-wrap">
-                                        <div class="table-type ta-c repair style2 mb0">
-                                            <table>
-                                                <caption>정비상품(정비-순회정비, 입고정비/소모품 교환-타이어,소모품/고장 및 사고-일반수리, 대차/door to door 서비스-정비, 자도차검사),오릭스 정비 Slim에 대한 정비상품 안내표</caption>
-                                                <colgroup>
-                                                    <col width="*%">
-                                                    <col width="10%">
-                                                    <col width="10%">
-                                                    <col width="10%">
-                                                    <col width="10%">
-                                                    <col width="10%">
-                                                    <col width="10%">
-                                                    <col width="10%">
-                                                    <col width="10%">
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th rowspan="2">정비상품</th>
-                                                        <th colspan="2">정비</th>
-                                                        <th colspan="2">소모품 교환</th>
-                                                        <th colspan="2">고장/사고</th>
-                                                        <th colspan="2">Door to Door 서비스</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>순회정비</th>
-                                                        <th>입고정비</th>
-                                                        <th>타이어</th>
-                                                        <th>소모품</th>
-                                                        <th>일반수리</th>
-                                                        <th>대차</th>
-                                                        <th>정비</th>
-                                                        <th>자동차검사</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th>오릭스 정비 Premium</th>
-                                                        <td>미제공</td>
-                                                        <td>미제공</td>
-                                                        <td>미제공</td>
-                                                        <td>미제공</td>
-                                                        <td>미제공</td>
-                                                        <td>미제공</td>
-                                                        <td>미제공</td>
-                                                        <td>제공</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="estimate-text-wrap">
                                         <h5>구비서류</h5>
                                     </div>
@@ -1549,7 +1604,7 @@
         <!-- //e:footer -->
     </div>
     <!-- 선납 리스료 입력 -->
-    <div id="PopUp09" class="layerpopup laypop on" style="display:block;" tabindex="0">
+    <div id="PopUp12" class="layerpopup laypop on" style="display:block;" tabindex="0"><!--2024.10.21 팝업 아이디 변경-->
         <div class="content-wrap">
             <div class="pop-header">
                 <h3 class="pop-title">선납 리스료 입력</h3>

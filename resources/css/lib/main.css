@@ -70,8 +70,8 @@
     mainSec01 Contents
 ---------------------------------------------*/
 .mainSec01 div.introMain-area { margin-top:92px; }
-.mainSec01 div.introMain-area>ul>li>h2>em { font-size:var(--font24); font-weight: var(--w-bold); color:var(--m-color01); }
-.mainSec01 div.introMain-area>ul>li>h2>strong {display:block; margin-top:18px; font-weight:var(--w-bold); font-size: var(--font50); }
+.mainSec01 div.introMain-area>ul>li>em { font-size:var(--font24); font-weight: var(--w-bold); color:var(--m-color01); }
+.mainSec01 div.introMain-area>ul>li>strong {display:block; margin-top:18px; font-weight:var(--w-bold); font-size: var(--font50); }
 .mainSec01 div.introMain-area>ul>li>p { margin-top:48px;  font-size: var(--font20);  line-height:1.5;}
 
 .mainSec01 div.shortcut-area { margin-top:60px; padding:36px; width:368px; height:382px; border-radius: 36px; background: var(--white); box-shadow: 0px 0px 10px rgba(0,12 ,44, 0.16); }
@@ -150,9 +150,9 @@
 /*---------------------------------------------
     mainSec03 Contents
 ---------------------------------------------*/
-.mainSec03 a>h2{ display:flex; justify-content: center; gap:12px; padding:32px 0; font-weight: var(--w-bold); text-align: center; border-radius: 20px; color:var(--m-color06); background: var(--m-background4); }
-.mainSec03 a>h2>em { font-size: var(--font24); }
-.mainSec03 a>h2>strong { font-size: var(--font20); }
+.mainSec03 a{ display:flex; justify-content: center; gap:12px; padding:32px 0; font-weight: var(--w-bold); text-align: center; border-radius: 20px; color:var(--m-color06); background: var(--m-background4); }
+.mainSec03 a>em { font-size: var(--font24); }
+.mainSec03 a>strong { font-size: var(--font20); }
 .mainSec03 a>.img { position: absolute; bottom:0; right:0; width:212px; height:138px; }
 /*********************************************************************
 메인.04 - 견적서
@@ -181,7 +181,8 @@
 ---------------------------------------------*/
 .mainSec05 ul.intro-tit>li { display:inline-block; position: relative; cursor: pointer;}
 .mainSec05 ul.intro-tit>li + li { margin-left:22px;  }
-.mainSec05 ul.intro-tit>li.on a{ line-height: 28px; color:var(--m-color07); }
+.mainSec05 ul.intro-tit>li button { cursor: pointer; }
+.mainSec05 ul.intro-tit>li.on button{ line-height: 28px; color:var(--m-color07); }
 .mainSec05 ul.intro-tit>li.on::after { content: ''; position: absolute; left:0; bottom:-5px; width:100%; height:2px; background: var(--m-color07); }
 /*---------------------------------------------
     mainSec05 Default
@@ -190,7 +191,7 @@
 .mainSec05>div { display:flex; justify-content: space-between; flex-wrap: wrap; gap:14px;}
 .mainSec05 div[class*="area"] {flex:1; min-width: 0; padding:48px 40px 55px 40px; max-height:308px; border-radius: 24px; border:1px solid var(--border1);  background: var(--white); }
 .mainSec05 div.intro-tit h2,
-.mainSec05 ul.intro-tit a { line-height:35px; font-size:var(--font24); font-weight: var(--w-bold); }
+.mainSec05 ul.intro-tit button { line-height:35px; font-size:var(--font24); font-weight: var(--w-bold); background: var(--white); }
 
 .mainSec05 div.intro-con { margin-top:45px; max-height:120px; }
 .mainSec05 div.intro-con ul>li + li{ margin-top:24px; }
@@ -223,7 +224,7 @@ Media Query
 메인.01 - 메인베너/바로가기
 *********************************************************************/
 .mainSec01 .img { margin-top:70px; width:400px; height:342px; }
-.mainSec01 div.introMain-area>ul>li>h2>strong { font-size:var(--font40); }
+.mainSec01 div.introMain-area>ul>li>strong { font-size:var(--font40); }
 .mainSec01 div.introMain-area>ul>li>p { margin-top:30px; }
 
 .mainSec01 div.shortcut-area { display:flex; align-items: center; flex-direction: row; flex-wrap: wrap; gap:20px; padding:20px 30px; position: absolute; bottom:30px; width:calc(100% - 40px); height:auto; transform: translateY(50%); }
@@ -261,9 +262,9 @@ Media Query
 /*********************************************************************
 메인.03 - 나의 실적
 *********************************************************************/
-.mainSec03 a>h2 { flex-direction:column; padding:22px 0; }
-.mainSec03 a>h2>em { font-size:var(--font20); }
-.mainSec03 a>h2>strong { font-size:var(--font18); }
+.mainSec03 a { flex-direction:column; padding:22px 0; }
+.mainSec03 a>em { font-size:var(--font20); }
+.mainSec03 a>strong { font-size:var(--font18); }
 .mainSec03 a>.img { width:200px; height:126px; }
 }
 

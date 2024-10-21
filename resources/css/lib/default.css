@@ -108,6 +108,7 @@ table { border-collapse:collapse; border-spacing:0; width:100%; }
 .flex { display:flex !important; }
 .mb0 { margin-bottom:0 !important; }
 .mt14 { margin-top:14px !important; }
+.sr-only { position:absolute; margin:-1px; padding: 0; width:1px; height:1px; border: 0; overflow: hidden; clip: rect(0, 0, 0, 0); }
 
 /* 폰트숨김 */
 .ir { position:absolute; clip:rect(1px 1px 1px 1px); width:1px; height:1px; margin:-1px; overflow: hidden;   }
@@ -127,9 +128,11 @@ table { border-collapse:collapse; border-spacing:0; width:100%; }
 button:focus,
 a:focus,
 .header-wrap.side > .h-menu ul.menu > li .menuitem-wrap .menuitem > li > a:focus { outline:none; }
-button:focus-visible,
+button:not(button.stove-option):focus-visible,
 a:focus-visible,
 .header-wrap.side > .h-menu ul.menu > li .menuitem-wrap .menuitem > li > a:focus-visible { outline: 2px solid #000; }
+.footer-wrap a:focus-visible,
+.footer-wrap button:not(.footer-wrap button.stove-option):focus-visible { outline:2px solid #f00; }
 
 /*********************************************************************
 title
@@ -155,7 +158,7 @@ style4 = table 안에 들어갈 때
 .sub-text-wrap.style2 { padding:20px 0; }
 .sub-text-wrap.style3 { padding:0 0 20px; }/*caption만 들어갈 경우*/
 
-.caption { padding-left:22px; margin-top:10px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--subtitle); }
+.caption { padding-left:22px; margin-top:10px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--subtitle); line-height:18px; }
 .caption2 { position:absolute; top:-33px; right:0; }/*테이블캡션(단위)*/
 .caption3 { padding-left:22px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--secondary); }/*레이어팝업에서*/
 
@@ -230,17 +233,18 @@ login #로그인
 *********************************************************************/
 .wrap.login { padding-top:50px; }
 .wrap.login .sub-content { padding:50px 20px 80px; min-height:calc( 100vh - 484px); }
-.wrap.login .login-header { padding-bottom:50px; border-bottom:1px solid var(--border1); text-align:center; }
+.wrap.login .login-header { padding-bottom:54px; border-bottom:1px solid var(--border1); text-align:center; }
 .wrap.login .login-header img { width:234px; margin-bottom:30px; }
 .wrap.login .login-header h2 { font-size:var(--font28); font-weight:var(--w-bold); color:var(--title); }
-.wrap.login .login-header span { display:block; padding-top:15px; font-size:var(--font22); font-weight:var(--w-regular); color:var(--normal); }
+.wrap.login .login-header span { display:block; padding-top:17px; font-size:var(--font22); font-weight:var(--w-regular); color:var(--normal); }
 
 /* 로그인 인풋 */
 .wrap.login .form-wrap:not(.footer .form-wrap) { margin-top:30px; }
-.wrap.login .form-wrap .form-group input.form-control { margin:0 auto; padding:0 20px; height:59px; }
+.wrap.login .form-wrap .form-group { margin-top:16px; }
+.wrap.login .form-wrap .form-group input.form-control { margin:0 auto; padding:0 20px; height:61px; font-size:var(--font18); }
 
 /* 로그인 버튼 */
-.wrap.login .form-wrap .btn-wrap.bottom { margin:50px 0 80px; }
+.wrap.login .form-wrap .btn-wrap.bottom { margin:50px 0 100px; }
 .wrap.login .form-wrap .btn-wrap.bottom .btn.btn-primary { width:410px; }
 
 /*********************************************************************
@@ -346,17 +350,19 @@ sub-content
 .subvisual-wrap .text-wrap { padding-top:37px; }
 
 /* footer */
-.footer-wrap { padding:30px 0 50px; color:var(--white); background-color:#3F3F3F; }
+.footer-wrap { padding:26px 0 50px; color:var(--white); background-color:#3F3F3F; }
 .footer-wrap .footer { margin:0 auto; }
 .footer-wrap > div {  margin:0 auto 0; /*width:90%;*/ max-width:1400px; /*min-width:1200px;*/ }
-.footer-wrap .policy-link { display:flex; flex-wrap:wrap; gap:40px; font-size:var(--font16); font-weight:var(--w-bold); text-align:left; }
-.footer-wrap .btn-wrap.policy-link .btn.btn-text { padding:0; height:auto; font-weight:var(--w-bold); color:var(--white); }
+.footer-wrap .policy-link { display:flex; flex-wrap:wrap; gap:32px; font-size:var(--font16); font-weight:var(--w-bold); text-align:left; }
+.footer-wrap .btn-wrap.policy-link .btn.btn-text { padding:4px; height:auto; font-weight:var(--w-bold); color:var(--white); }
 /* .footer-wrap .btn-wrap.policy-link .btn.btn-text + .btn.btn-text { margin-left:40px; } */
 .footer-wrap .list-wrap .address { margin-top:23px; font-size:var(--font14); font-weight:var(--w-regular); }
 .footer-wrap .list-wrap .address li + li { margin-top:7px; }
 .footer-wrap .list-wrap .address li span + span { margin-left:20px; }
-.footer-wrap .list-wrap .Copyright { margin-top:29px; font-weight:400; }
+.footer-wrap .list-wrap .Copyright { margin-top:29px; font-size:var(--font14); font-weight:400; }
 .footer-wrap .form-group.style2 {  position:absolute; top:0; right:0; }
+
+.footer-wrap .select-box > .se-select select:focus-visible { outline:2px solid #f00; }
 
 @media screen and (max-width:1230px) {
     /* footer */

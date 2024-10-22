@@ -206,9 +206,9 @@
 /*---------------------------------------------
     mainSec05 Contents Faq
 ---------------------------------------------*/
-.mainSec05 div.introFaq-area>div.intro-tit h2 { display:inline-block; letter-spacing:-3.2px;}
-.mainSec05 div.introFaq-area>div.intro-con ul>li { padding-left:32px; }
-.mainSec05 div.introFaq-area>div.intro-con ul>li:before { content:''; position:absolute;  transform: translateY(-50%); top:50%; left:0; width:24px; height:24px; background: var(--m-img-q)no-repeat 100%/24px auto; }
+.mainSec05 div.introNotice-area>div.intro-tit h2 { display:inline-block; letter-spacing:-3.2px;}
+.mainSec05 div.introNotice-area>div.intro-con.ico ul>li { padding-left:32px; }
+.mainSec05 div.introNotice-area>div.intro-con.ico ul>li:before { content:''; position:absolute;  transform: translateY(-50%); top:50%; left:0; width:24px; height:24px; background: var(--m-img-q)no-repeat 100%/24px auto; }
 
 
 /*********************************************************************

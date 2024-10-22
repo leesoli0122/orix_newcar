@@ -179,11 +179,11 @@
 /*---------------------------------------------
     mainSec05 Tab
 ---------------------------------------------*/
-.mainSec05 ul.intro-tit>li { display:inline-block; position: relative; cursor: pointer;}
-.mainSec05 ul.intro-tit>li + li { margin-left:22px;  }
-.mainSec05 ul.intro-tit>li button { cursor: pointer; }
-.mainSec05 ul.intro-tit>li.on button{ line-height: 28px; color:var(--m-color07); }
-.mainSec05 ul.intro-tit>li.on::after { content: ''; position: absolute; left:0; bottom:-5px; width:100%; height:2px; background: var(--m-color07); }
+.mainSec05 ul.tab-item>li { display:inline-block; position: relative; cursor: pointer;}
+.mainSec05 ul.tab-item>li + li { margin-left:22px;  }
+.mainSec05 ul.tab-item>li button { cursor: pointer; }
+.mainSec05 ul.tab-item>li.on button{ line-height: 28px; color:var(--m-color07); }
+.mainSec05 ul.tab-item>li.on::after { content: ''; position: absolute; left:0; bottom:-5px; width:100%; height:2px; background: var(--m-color07); }
 /*---------------------------------------------
     mainSec05 Default
 ---------------------------------------------*/
@@ -204,7 +204,7 @@
 .mainSec05 div.intro-con a.btn:hover,
 .mainSec05 div.intro-con a.btn:hover::after { color:var(--secondary); }
 /*---------------------------------------------
-    mainSec05 Contents Faq
+    mainSec05 Contents
 ---------------------------------------------*/
 .mainSec05 div.introNotice-area>div.intro-tit h2 { display:inline-block; letter-spacing:-3.2px;}
 .mainSec05 div.introNotice-area>div.intro-con.ico ul>li { padding-left:32px; }

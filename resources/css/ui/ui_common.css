@@ -429,7 +429,7 @@ button.btn.btn-cancel { content:''; position:absolute; z-index:11; transform: tr
 
 /* 현황조회 버튼 - 아코디언*/
 .accordion-wrap .btn-wrap { margin:50px 0 10px; text-align: center; }
-.accordion-wrap .btn-wrap button.btn.btn-cont { padding:0 16px; height:46px; }
+.accordion-wrap .btn-wrap button.btn.btn-cont { padding:0 16px; height:46px; font-size:var(--font16); }
 .accordion-wrap .btn-wrap button.btn.btn-cont:not(.disabled, .active):hover { border:1px solid var(--background3); color:var(--background3);  }
 .accordion-wrap .btn-wrap button.btn.btn-cont.active { background:var(--background3); border:1px solid var(--background3); color:var(--white); }
 
@@ -489,6 +489,10 @@ TOGGLE_ACCORDION #토글_아코디언
 /* inline */
 .accordion-wrap > .accordion-info > .ques .right.inline,
 .accordion-wrap > .accordion-info > .ques .right.inline { display:flex; flex-direction: row; justify-content: center; align-items: center; }
+
+/* 현황조회-약정펀딩 */
+.accordion-wrap > .accordion-info > .ques .right.inqu-fo .tit { margin-right:0; margin-bottom:14px; }
+.accordion-wrap > .accordion-info > .ques .right.i     nqu-fo { max-width:270px; width:100%; text-align:right; }
 
 .accordion-wrap > .accordion-info > .ques-cont{ height:0; opacity: 0; overflow: hidden; padding-top:0; transition: height .2s ease, opacity .3s ease, padding-top .2s ease; }
 .accordion-wrap > .accordion-info > .ques-cont.active{ height:auto; opacity:1; background: var(--background4); padding:30px; font-size:var(--font16); font-weight:var(--w-bold); color:var(--inactive);}
@@ -598,7 +602,7 @@ popup #팝업
 .layerpopup.type-alert .ly-cont-wrap.has-height2 { min-height:450px; }/*개발 test용*/
 
 .laypop.on::before,
-.type-alert.on::before { content:''; z-index:-1; position:fixed; left:0; top:0; display:inline-block; width:100%; height:100%; background:#000; opacity:0.3;  }
+.type-alert.on::before { content:''; z-index:-1; position:fixed; left:0; top:0; display:inline-block; width:100%; height:100%; background:#000; opacity:0.6;  }
 /* .layerpopup.on { z-index:105; } */
 
 
@@ -649,12 +653,12 @@ popup #팝업
 /*---------------------------------------------
 레이어 풀팝업
 ---------------------------------------------*/
-.layerpopup.laypop-all {position:fixed; top:0;left:0;right:0;bottom:0;width:100%;border-top:none;background:#000; opacity:0.3;z-index:21;}
-.layerpopup.laypop-all .content-wrap {z-index:20; padding:20px; margin-top:45px;  border-radius:20px 20px 0 0; /*padding-bottom:150px;*/ background:var(--white);}
+/* .layerpopup.laypop-all {position:fixed; top:0;left:0;right:0;bottom:0;width:100%;border-top:none;background:#000; opacity:0.3;z-index:21;}
+.layerpopup.laypop-all .content-wrap {z-index:20; padding:20px; margin-top:45px;  border-radius:20px 20px 0 0; background:var(--white);}
 .layerpopup.laypop-all .pop-header {position:fixed; top:0; left:0; right:0;height:45px; padding:0 20px; background:var(--white);line-height:50px;z-index:5;}
 .layerpopup.laypop-all .pop-header:has(+.pop-con-wrap>.default-wrap>.txt-list-wrap:first-child) { border:0; }
 .layerpopup.laypop-all .pop-header .pop-title { text-align:center; font-size:1rem; font-weight:500; }
-.layerpopup.laypop-all .ly-con-wrap { padding-bottom:80px; }
+.layerpopup.laypop-all .ly-con-wrap { padding-bottom:80px; } */
 
 /*---------------------------------------------
 알럿팝업
@@ -672,6 +676,9 @@ popup #팝업
 .layerpopup.laypop.status .ly-con-wrap { padding:0; max-height:668px; }
 .layerpopup.laypop.status .show-estimate-wrap { padding:0; }
 .layerpopup.laypop.status .show-estimate-wrap .estimate { padding-bottom:113px; }
+
+/* input+check */
+.form-group .col-1 + .check-box { margin-top:12px; }
 /*---------------------------------------------
 	#용품 선택
 	select style3
@@ -783,6 +790,7 @@ tab #탭
 .tabs.type2 .tab-item02 { display:flex; flex-wrap:wrap; align-items: center; gap:20px; margin:20px 0 40px; }
 .tabs.type2 .tab-item02 li { display:inline-block; padding:29px 20px; min-width:120px; border:1px solid var(--border2); border-radius:6px; font-size:var(--font18); color:var(--normal); text-align: center; background:var(--white); }
 .tabs.type2 .tab-item02 li.on { border:2px solid var(--background3); font-weight:var(--w-bold); color:var(--title); background:var(--white); }
+.tabs.type2 .tab-item02 li.on span { color:var(--secondary); }
 
 .tabs.type2 .tab-item02 li .sub-tit { font-weight:var(--w-regular); }
 
@@ -1587,6 +1595,7 @@ animation:l4 1s infinite steps(10);}
 /* 견적,상담심사,발주예정,약정펀딩,인도 */
 .perf-data { display:flex; flex-wrap:wrap; align-items: center; gap:20px; margin:20px 0 40px; padding-top:20px; }
 .perf-data li { display:inline-block; padding:29px 20px; min-width:120px; border:1px solid var(--border2); border-radius:6px; font-size:var(--font18); color:var(--normal); text-align: center; background:var(--white); }
-.perf-data li.on { border:2px solid var(--background3); font-weight:var(--w-bold); color:var(--title); background:var(--white); }
+.perf-data li:hover { border:2px solid var(--background3); font-weight:var(--w-bold); color:var(--title); background:var(--white); }
+.perf-data li:hover span { color:var(--secondary); }
 
 .perf-data li .sub-tit { font-weight:var(--w-regular); }

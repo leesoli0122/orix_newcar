@@ -159,8 +159,11 @@ style4 = table 안에 들어갈 때
 .sub-text-wrap.style3 { padding:0 0 20px; }/*caption만 들어갈 경우*/
 
 .caption { padding-left:22px; margin-top:10px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--subtitle); line-height:18px; }
-.caption2 { position:absolute; top:-33px; right:0; }/*테이블캡션(단위)*/
+.caption2 { position:absolute; top:-33px; right:0; font-size:var(--font14); color:var(--inactive); }/*테이블캡션(단위)*/
 .caption3 { padding-left:22px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--secondary); }/*레이어팝업에서*/
+
+.inquiry-info { font-size:var(--font16); font-weight:var(--w-regular); color:var(--tag3); }/*현황조회 인포 삭제될 수도 있음*/
+.inquiry-info::before { content:''; display:inline-block; margin-right:8px; width:17px; height:17px; background:url(../../images/common/inquiry-info.png)no-repeat 50%/17px auto; }
 
 .blue { color:var(--secondary)!important; }
 .blue-p { color:var(--primary)!important; }

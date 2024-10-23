@@ -65,19 +65,35 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
                             </dd>
                         </dl>
                         <dl>
+                            <dt>사업지점</dt>
+                            <dd class="form-group">
+                                <div class="form-row"><!-- [D] 인풋/버튼 클릭 시 팝업 호출 영역  -->
+                                    <div class="col-1">
+                                        <input id="" title="사업지점" type="text" class="form-control" name="" value="사업지점 입력">
+                                    </div>
+                                    <button class="btn btn-input active" type="button">지점 검색</button><!-- [D] active 클래스 : 완료 됐을 경우 활성화 -->
+                                </div>
+                                <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
+                                    <p class="info">사업지점을 입력 후, 지점 검색을 해주세요</p>
+                                    <p class="info">사업지점이 검색되지 않았습니다.(사업지점을 정확히 입력해주세요)</p>
+                                -->
+                            </dd>
+                        </dl>
+                        <dl>
                             <dt>아이디</dt>
-                            <dd class="form-group correct">
+                            <dd class="form-group">
                                 <div class="form-row"><!-- [D] 인풋/버튼 클릭 시 팝업 호출 영역  -->
                                     <div class="col-1">
                                         <input id="" title="아이디" type="text" class="form-control" name="" value="아이디 입력">
-                                        <!-- form-group에 correct가 있을 때/사용 가능할 경우 -->
-                                        <p class="info">사용 가능한 아이디 입니다.</p>
-                                        <!-- form-group에 error가 있을 때/사용 불가능할 경우
-                                        <p class="info">이미 사용중인 아이디 입니다.</p> -->
-                                        <!-- form-group에 error가 있을 때/아이디를 입력하지 않은 경우
-                                        <p class="info">아이디를 입력해 주세요.</p> -->
-                                        <!-- form-group에 error가 있을 때/아이디를 입력하지 않은 경우
-                                        <p class="info">아이디 중복체크를 진행해 주세요.</p> -->
+                                        <!-- form-group에 correct가 있을 때/사용 가능할 경우
+                                            <p class="info">사용 가능한 아이디 입니다.</p>
+                                        -->
+
+                                        <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
+                                            <p class="info">이미 사용중인 아이디 입니다.</p>
+                                            <p class="info">아이디를 입력해 주세요.</p>
+                                            <p class="info">아이디 중복체크를 진행해 주세요.</p>
+                                        -->
                                     </div>
                                     <button class="btn btn-input active" type="button">중복체크</button><!-- [D] active 클래스 : 완료 됐을 경우 활성화 -->
                                 </div>
@@ -85,18 +101,38 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
                         </dl>
                         <dl>
                             <dt>비밀번호</dt>
-                            <dd class="form-group error">
+                            <dd class="form-group">
                                 <input id="" title="비밀번호" type="text" name="" class="form-control" placeholder="영문/숫자 포함 8자리 이상 입력">
-                                <p class="info">비밀번호를 입력해 주세요.</p>
+                                <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
+                                    <p class="info">비밀번호를 입력해 주세요.</p>
+                                -->
                             </dd>
                         </dl>
                         <dl>
                             <dt>비밀번호 확인</dt>
-                            <dd class="form-group error">
+                            <dd class="form-group">
                                 <input id="" title="비밀번호 확인" type="text" name="" class="form-control" placeholder="비밀번호 확인 입력">
-                                <p class="info">비밀번호 확인에 비밀번호를 입력해 주세요.</p>
-                                <!-- 비밀번호와 비밀번호 확인이 불일치 할 경우
-                                <p class="info">비밀번호화 일치하지 않아요, 비밀번호확인을 다시 해주세요.</p> -->
+                                <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
+                                    <p class="info">비밀번호 확인에 비밀번호를 입력해 주세요.</p>
+                                    <p class="info">비밀번호화 일치하지 않아요, 비밀번호확인을 다시 해주세요.</p>
+                                -->
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>이메일</dt>
+                            <dd class="form-group">
+                                <div class="form-row">
+                                    <div class="col-2">
+                                        <input id="" title="이메일" type="text" class="form-control" name="" value="" placeholder="직접입력" >
+                                    </div>
+                                    <div class="input-hyphen">@</div>
+                                    <div class="col-2">
+                                        <input id="" title="이메일" type="text" class="form-control" name="" value="" placeholder="" >
+                                    </div>
+                                </div>
+                                <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
+                                    <p class="info">이메일을 정확히 입력해주세요.</p>
+                                -->
                             </dd>
                         </dl>
                     </div>

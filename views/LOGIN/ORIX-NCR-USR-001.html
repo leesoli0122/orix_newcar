@@ -98,14 +98,16 @@
                         <div class="col">
                             <dl>
                                 <dt>성명</dt>
-                                <dd class="form-group error">
+                                <dd class="form-group">
                                     <input id="" title="성명" type="text" name="" class="form-control" placeholder="성명">
-                                    <p class="info">성명을 입력해 주세요.</p>
+                                    <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
+                                        <p class="info">성명을 입력해 주세요.</p>
+                                    -->
                                 </dd>
                             </dl>
                             <dl>
                                 <dt>주민등록번호</dt>
-                                <dd class="form-group error">
+                                <dd class="form-group">
                                     <div class="form-row">
                                         <div class="col-2">
                                             <input id="" type="tel" title="주민등록번호 앞자리" class="form-control" maxlength="6" name="" value="" placeholder="">
@@ -116,12 +118,14 @@
                                             <span class="jumintext">●●●●●●</span>
                                         </div>
                                     </div>
-                                    <p class="info">주민등록 번호를 정확히 입력해 주세요.</p>
+                                    <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
+                                        <p class="info">주민등록 번호를 정확히 입력해 주세요.</p>
+                                    -->
                                 </dd>
                             </dl>
                             <dl>
                                 <dt>휴대폰번호</dt>
-                                <dd class="form-group error">
+                                <dd class="form-group">
                                     <div class="form-row">
                                         <div class="select-box">
                                             <div class="stove-dim"></div>
@@ -145,6 +149,7 @@
                                         <!-- 인증번호 요청하면 변경
                                             <button class="btn btn-input" type="button">재요청</button> -->
                                     </div>
+                                    <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가) -->
                                     <!-- 통신사를 선택하지 않은 경우 -->
                                     <p class="info">통신사를 선택해 주세요.</p>
                                     <!-- 휴대폰번호를 정확히 입력하지 않은 경우 -->
@@ -156,7 +161,7 @@
                             <!--S: 인증번호 요청 누른 후 보여짐  -->
                             <dl>
                                 <dt>인증번호</dt>
-                                <dd class="form-group error time">
+                                <dd class="form-group time">
                                     <div class="form-row">
                                         <div class="col-1">
                                             <input id="" title="인증번호입력" type="text" class="form-control" name="" placeholder="숫자 6자리 입력">
@@ -166,8 +171,9 @@
                                         <button class="btn btn-input active" type="button">시간연장</button>
                                     </div>
                                     <p class="caption">시간연장은 1회만 할 수 있습니다.</p>
-                                    <!-- 인증번호 입력없이 "확인" 버튼을 클릭한 경우 -->
-                                    <p class="info">인증번호를 입력해 주세요</p>
+                                    <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
+                                        <p class="info">인증번호를 입력해 주세요</p>
+                                    -->
                                 </dd>
                             </dl>
                             <!--E: 인증번호 요청 누른 후 보여짐  -->

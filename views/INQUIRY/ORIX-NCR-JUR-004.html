@@ -74,7 +74,7 @@
         <!-- //e:footer -->
     </div>
     <!-- (법인)전자약정 요청 -->
-    <div id="PopUp12" class="layerpopup laypop on" style="display:block;" tabindex="0">
+    <div id="PopUp12" class="layerpopup laypop on" style="display:block; z-index:999;" tabindex="0">
         <div class="content-wrap">
             <div class="pop-header">
                 <h3 class="pop-title">전자약정 요청</h3>
@@ -108,16 +108,7 @@
                         <dl>
                             <dt>법인 설립일자</dt>
                             <dd class="form-group">
-                                <div class="form-row">
-                                    <div class="col-2">
-                                        <input id="" title="앞 6자리" type="tel" class="form-control" maxlength="6" name="" value="" placeholder="숫자만 입력" >
-                                    </div>
-                                    <div class="input-hyphen">-</div>
-                                    <div class="col-2">
-                                        <input id="" title="뒷자리" type="tel" class="form-control jumin" maxlength="1" placeholder="●" name="" value="">
-                                        <span class="jumintext">●●●●●●</span>
-                                    </div>
-                                </div>
+                                <input type="text" id="" title="개업일자" name="date" class="form-control datepicker" placeholder="YYYY.MM.DD" readonly ><!-- [D] : datepicker 클래스 : datepicker Custom-->
                                 <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
                                     <p class="info">법인 설립일자를 입력해주세요.</p>
                                 -->
@@ -126,16 +117,7 @@
                         <dl>
                             <dt>법인대표 취임일자</dt>
                             <dd class="form-group">
-                                <div class="form-row">
-                                    <div class="col-2">
-                                        <input id="" title="앞 6자리" type="tel" class="form-control" maxlength="6" name="" value="" placeholder="숫자만 입력" >
-                                    </div>
-                                    <div class="input-hyphen">-</div>
-                                    <div class="col-2">
-                                        <input id="" title="뒷자리" type="tel" class="form-control jumin" maxlength="1" placeholder="●" name="" value="">
-                                        <span class="jumintext">●●●●●●</span>
-                                    </div>
-                                </div>
+                                <input type="text" id="" title="개업일자" name="date" class="form-control datepicker" placeholder="YYYY.MM.DD" readonly ><!-- [D] : datepicker 클래스 : datepicker Custom-->
                             </dd>
                         </dl>
                         <dl>
@@ -212,7 +194,7 @@
                             <dd class="form-group">
                                 <div class="form-row">
                                     <div class="col-2">
-                                        <input id="" title="앞 6자리" type="tel" class="form-control" maxlength="6" name="" value="" placeholder="숫자만 입력" >
+                                        <input id="" title="앞 6자리" type="tel" class="form-control" maxlength="6" name="" value="" placeholder="숫자6자리 입력" >
                                     </div>
                                     <div class="input-hyphen">-</div>
                                     <div class="col-2">
@@ -241,11 +223,11 @@
                             <dd class="form-group">
                                 <div class="form-row">
                                     <div class="col-2">
-                                        <input id="" title="이메일" type="text" class="form-control" name="" value="" placeholder="직접입력" >
+                                        <input id="" title="이메일" type="text" class="form-control" name="" value="" placeholder="아이디 입력" >
                                     </div>
                                     <div class="input-hyphen">@</div>
                                     <div class="col-2">
-                                        <input id="" title="이메일" type="text" class="form-control" name="" value="" placeholder="" >
+                                        <input id="" title="이메일" type="text" class="form-control" name="" value="" placeholder="주소입력" >
                                     </div>
                                 </div>
                                 <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
@@ -258,7 +240,7 @@
                             <dd class="form-group">
                                 <div class="form-row">
                                     <div class="col-1">
-                                        <input id="" title="집 주소" type="text" class="form-control" name="" placeholder="" readonly="readonly">
+                                        <input id="" title="집 주소" type="text" class="form-control" name="" placeholder="주소검색" readonly="readonly">
                                     </div>
                                     <button class="btn btn-input active" type="button">검색</button>
                                 </div>
@@ -275,7 +257,7 @@
                             <dd class="form-group">
                                 <div class="form-row">
                                     <div class="col-1">
-                                        <input id="" title="근무처 주소" type="text" class="form-control" name="" placeholder="" readonly="readonly">
+                                        <input id="" title="근무처 주소" type="text" class="form-control" name="" placeholder="주소검색" readonly="readonly">
                                     </div>
                                     <button class="btn btn-input active" type="button">검색</button>
                                 </div>
@@ -295,10 +277,6 @@
                                         <li>
                                             <input type="radio" id="radio-7" name="sns" checked="">
                                             <label for="radio-7"class="radio-button"><span>이메일</span></label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" id="radio-8" name="sns">
-                                            <label for="radio-8"class="radio-button"><span>카카오톡 알림톡</span></label>
                                         </li>
                                         <li>
                                             <input type="radio" id="radio-9" name="sns">

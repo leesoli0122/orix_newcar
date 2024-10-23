@@ -74,7 +74,7 @@
         <!-- //e:footer -->
     </div>
     <!-- 신용조회 동의요청(개인) -->
-    <div id="PopUp06" class="layerpopup laypop on" style="display:block;" tabindex="0">
+    <div id="PopUp06" class="layerpopup laypop on" style="display:block; z-index:999;" tabindex="0">
         <div class="content-wrap">
             <div class="pop-header">
                 <h3 class="pop-title">신용조회 동의요청</h3>
@@ -95,8 +95,15 @@
                         <dl>
                             <dt>생년월일</dt>
                             <dd class="form-group">
-                                <div class="col-1">
-                                    <input id="" title="생년월일" type="text" name="" class="form-control" maxlength="8" placeholder="숫자8자리 입력">
+                                <div class="form-row">
+                                    <div class="col-2">
+                                        <input id="" title="" type="tel" class="form-control" maxlength="6" name="" value="" placeholder="숫자6자리 입력" >
+                                    </div>
+                                    <div class="input-hyphen">-</div>
+                                    <div class="col-2">
+                                        <input id="" title="" type="tel" class="form-control jumin" maxlength="1" placeholder="●" name="" value="">
+                                        <span class="jumintext">●●●●●●</span>
+                                    </div>
                                 </div>
                                 <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
                                     <p class="info">생년월일을 입력해주세요.</p>

@@ -7,6 +7,9 @@ $(document).ready(function () {
     this.value = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 정규식을 이용해서 3자리 마다 , 추가
   });
 
+  /*********************************************************************
+  on/off 기능
+  *********************************************************************/
   /** 툴팁 **/
   $(".info-tooltip").on('click', function () {
     var $this = $(this).parents(".tooltip-wrap");
@@ -56,6 +59,17 @@ $(document).ready(function () {
       myButton.disabled = true; // 버튼 비활성화
     }
   });
+
+  // 다중 선택(checkbox 사용 안함)
+  document.querySelectorAll('.choose-group.model .choose li').forEach(function(li) {
+    li.addEventListener('click', function () {
+      li.classList.toggle('chk');
+    });
+  });
+
+  /*********************************************************************
+  input
+  *********************************************************************/
 
   /** input focus **/
   $('.form-control, textarea').focus(function () {
@@ -140,6 +154,9 @@ $(document).ready(function () {
     }
   });
 
+  /*********************************************************************
+  tab
+  *********************************************************************/
   /** tab & tab scroll **/
   // 상위 탭 클릭 처리 (견적, 심사 등 상위 탭)
   $(".tab-item > li").click(function() {
@@ -152,7 +169,7 @@ $(document).ready(function () {
     }
 
     // 상위 탭 콘텐츠만 업데이트 (상위 탭 콘텐츠만 처리)
-    $(this).closest(".tab-area").find(".tab-content").addClass("dp-none");// 메인 탭 추가
+    $(this).closest(".introNews-area").find(".tab-content").addClass("dp-none");// 메인 탭 추가
     $(this).closest(".tabs-wrap").find(".tab-content-area > .tab-content").addClass("dp-none");
     $("#" + tabCont).removeClass("dp-none"); // 선택된 상위 탭 콘텐츠 표시
   });
@@ -185,6 +202,9 @@ $(document).ready(function () {
   $(".tab-item > li.on, .tab-item02 > li.on").attr("aria-selected", "true");
 });
 
+/*********************************************************************
+팝업 #popup
+*********************************************************************/
 // 레이어팝업 높이 판단하여 block과 position 컨트롤
 function layerFunc(_target) {
   if (!_target.hasClass('laypop-all')) {

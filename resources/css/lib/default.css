@@ -125,14 +125,14 @@ table { border-collapse:collapse; border-spacing:0; width:100%; }
 /* [class*='btn']:focus { border:2px solid var(--normal); } */
 
 /** focus **/
-button:focus,
+/* button:focus,
 a:focus,
 .header-wrap.side > .h-menu ul.menu > li .menuitem-wrap .menuitem > li > a:focus { outline:none; }
 button:not(button.stove-option):focus-visible,
 a:focus-visible,
 .header-wrap.side > .h-menu ul.menu > li .menuitem-wrap .menuitem > li > a:focus-visible { outline: 2px solid #000; }
-.footer-wrap a:focus-visible,
-.footer-wrap button:not(.footer-wrap button.stove-option):focus-visible { outline:2px solid #f00; }
+.footer-wrap a:focus-visible, */
+/* .footer-wrap button:not(.footer-wrap button.stove-option):focus-visible { outline:2px solid #f00; } */
 
 /*********************************************************************
 title
@@ -365,7 +365,7 @@ sub-content
 .footer-wrap .list-wrap .Copyright { margin-top:29px; font-size:var(--font14); font-weight:400; }
 .footer-wrap .form-group.style2 {  position:absolute; top:0; right:0; }
 
-.footer-wrap .select-box > .se-select select:focus-visible { outline:2px solid #f00; }
+/* .footer-wrap .select-box > .se-select select:focus-visible { outline:2px solid #f00; } */
 
 @media screen and (max-width:1230px) {
     /* footer */

@@ -211,7 +211,7 @@
 .mainSec05 div.intro-con ul>li>a>span.txt { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size:var(--font18); font-weight:var(--w-bold); color:var(--inactive); }
 .mainSec05 div.intro-con ul>li>a>span.date { text-align: right; min-width:88px; color:var(--subtitle);}
 
-.mainSec05 div.intro-con a.btn{ display:flex; align-items: center; position:absolute; top:-81px; right:13px; font-size:var(--font16); color:var(--subtitle); }
+.mainSec05 div.intro-con a.btn{ display:flex; align-items: center; position:absolute; top:-81px; right:0; font-size:var(--font16); color:var(--subtitle); }
 .mainSec05 div.intro-con a.btn::after { content:'>'; margin-left:6px; font-size:var(--font14); color:var(--subtitle);  }
 .mainSec05 div.intro-con a.btn:hover,
 .mainSec05 div.intro-con a.btn:hover::after { color:var(--secondary); }

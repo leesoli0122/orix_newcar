@@ -91,9 +91,11 @@
                                 <li class="swiper-slide"><a href="javascript:void(0);"><p class="tit">약정펀딩</p><p class="num">3건</p><span class="btn">자세히보기</span></a></li>
                                 <li class="swiper-slide"><a href="javascript:void(0);"><p class="tit">인도</p><p class="num">3건</p><span class="btn">자세히보기</span></a></li>
                             </ul>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
+                            <div class="swiper-controller">
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
                         </div>
                     </div>
                     <script>
@@ -104,7 +106,7 @@
                                 spaceBetween: 0,
                                 pagination: {
                                     el: ".swiper-pagination",
-                                    clickable: true,
+                                    type: "fraction"
                                 },
                                 navigation: {
                                     nextEl: ".swiper-button-next",
@@ -116,10 +118,10 @@
                             $(window).on('load resize', function() {
                                 if ($(window).width() <= 780) {
                                     swiper.params.slidesPerView = 1;
-                                    swiper.params.spaceBetween = 14;
+                                    swiper.params.spaceBetween = 0;
                                 } else if ($(window).width() <= 1200) {
                                     swiper.params.slidesPerView = 2;
-                                    swiper.params.spaceBetween = 14;
+                                    swiper.params.spaceBetween = 20;
                                 } else {
                                     swiper.params.slidesPerView = 5;
                                     swiper.params.spaceBetween = 0

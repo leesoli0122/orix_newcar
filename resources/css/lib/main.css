@@ -263,7 +263,7 @@ Media Query
 .mainWrap .mainSec02 .inner { padding:30px 20px 0px; background:var(--m-background2);  }
 
 .mainSec02 { margin-top:149px; }
-.mainSec02 div.intro-box { height:210px; flex:0 0 219px; padding:20px 20px 20px 0;}
+.mainSec02 div.intro-box { height:232px; flex:0 0 219px; padding:20px 20px 20px 0;}
 .mainSec02 div.intro-box>h2>strong { font-size:var(--font28); }
 
 .mainSec02 ul.introList-area { flex:initial; gap:initial; }

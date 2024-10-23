@@ -118,13 +118,10 @@
                             $(window).on('load resize', function() {
                                 if ($(window).width() <= 860) {
                                     swiper.params.slidesPerView = 1;
-                                    swiper.params.spaceBetween = 0;
                                 } else if ($(window).width() <= 1200) {
                                     swiper.params.slidesPerView = 2;
-                                    swiper.params.spaceBetween = 20;
                                 } else {
                                     swiper.params.slidesPerView = 5;
-                                    swiper.params.spaceBetween = 0
                                 }
                         
                                 swiper.update();

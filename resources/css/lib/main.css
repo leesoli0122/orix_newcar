@@ -268,7 +268,7 @@ Media Query
 
 .mainSec02 ul.introList-area { flex:initial; gap:initial; }
 .mainSec02 ul.introList-area>li  { flex:none; }
-.mainSec02 ul.introList-area>li>a { height:210px; background: var(--white);}
+.mainSec02 ul.introList-area>li>a { height:210px; margin:10px; background: var(--white); box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.06) }
 /*---------------------------------------------
     mainSec02 Swiper
 ---------------------------------------------*/

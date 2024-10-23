@@ -293,6 +293,10 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 .form-group > .radio-box input[type='radio'] + .radio-button span::before { content:''; position:absolute; left: 0; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; }
 .form-group > .check-box input[type='checkbox'] + .check-button span::before { border:1px solid var(--border1); background:var(--white); background:url(../../images/common/ic_check_off.png)no-repeat 50%/12px auto; }
 
+/* span안에 span을 넣어야하는 경우 */
+.form-group > .radio-box input[type='radio'] + .radio-button span span { padding:0; }
+.form-group > .radio-box input[type='radio'] + .radio-button span span::before { content:none; }
+
 /** 라운드일 경우 **/
 .form-group.round > .check-box input[type='checkbox'] + .check-button span::before { border-radius: 50%; }
 
@@ -492,7 +496,7 @@ TOGGLE_ACCORDION #토글_아코디언
 
 /* 현황조회-약정펀딩 */
 .accordion-wrap > .accordion-info > .ques .right.inqu-fo .tit { margin-right:0; margin-bottom:14px; }
-.accordion-wrap > .accordion-info > .ques .right.i     nqu-fo { max-width:270px; width:100%; text-align:right; }
+.accordion-wrap > .accordion-info > .ques .right.inqu-fo { max-width:270px; width:100%; text-align:right; }
 
 .accordion-wrap > .accordion-info > .ques-cont{ height:0; opacity: 0; overflow: hidden; padding-top:0; transition: height .2s ease, opacity .3s ease, padding-top .2s ease; }
 .accordion-wrap > .accordion-info > .ques-cont.active{ height:auto; opacity:1; background: var(--background4); padding:30px; font-size:var(--font16); font-weight:var(--w-bold); color:var(--inactive);}
@@ -724,7 +728,7 @@ popup #팝업
 /*********************************************************************
 라벨
 *********************************************************************/
-.badge01, .badge02 { padding:6px 12px; border-radius:16px; font-size:var(--font14); font-weight:var(--w-bold); }
+.badge01, .badge02 { display:inline-block; padding:6px 12px; border-radius:16px; font-size:var(--font14); font-weight:var(--w-bold); }
 
 .badge01.mip { border:1px solid var(--tag1); color:var(--tag1); }
 .badge01.rcar { border:1px solid var(--tag2); color:var(--tag2); }
@@ -732,8 +736,8 @@ popup #팝업
 .badge01.lease { border:1px solid var(--tag4); color:var(--tag4); }
 
 .badge02.success { background-color:var(--tag5); color:#2B66F6; }
-.badge02.company { background-color:var(--tag6); color:#802CE3; }
-.badge02.fail { background-color:var(--tag7); color:var(--error); }
+.badge02.promotions { background-color:var(--tag6); color:#802CE3; }
+.badge02.event { background-color:var(--tag7); color:var(--error); }
 
 /*********************************************************************
 스탭
@@ -1442,6 +1446,11 @@ dd.download-wrap { padding:0; background:transparent; }
 .estimate-body .table-col.amount .num.auto:first-child td { border-top:1px solid var(--border3); }
 .table-col.amount tr.auto .now { border-bottom:1px solid var(--border2); }
 
+/*---------------------------------------------
+	선구매
+---------------------------------------------*/
+.choose-wrap .choose-group.model:last-child { margin:0; padding:0; }
+.choose-wrap .choose-group.model .choose li.chk { border:1px solid var(--secondary); }
 /*********************************************************************
 팝업에서 #선택
 *********************************************************************/

@@ -253,7 +253,7 @@ login #로그인
 /*********************************************************************
 header #헤더
 *********************************************************************/
-.header-wrap { position:fixed; top:0; z-index:10; padding:0 20px; width:100%; height:146px; border-bottom:1px solid var(--border1); background:var(--white); z-index:999; }
+.header-wrap { position:fixed; top:0; z-index:200; padding:0 20px; width:100%; height:146px; border-bottom:1px solid var(--border1); background:var(--white); }
 .header-wrap .top { padding:33px 0px 15px; margin: 0 auto; max-width:1400px; width: 100%; /*min-width:1200px;*/ }
 .header-wrap .top div { display:flex; align-items:center; }
 .header-wrap .top > div > * { vertical-align:middle; }

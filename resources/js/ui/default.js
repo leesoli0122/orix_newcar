@@ -275,7 +275,7 @@ function openPopup(id) {
     console.log('Scroll position saved:', scrollPosition);
 
     // header-wrap before 뒤로가게
-    $('.header-wrap').css('z-index', '1');
+    $('.layerpopup').css('z-index', '201');
 
     showPopup($target);
   } else {
@@ -310,7 +310,7 @@ function closePopup(id, storedScrollPosition) {
   $target.fadeOut(200).removeClass('on');
 
   // header-wrap의 z-index 복원
-  $('.header-wrap').css('z-index', '999');
+  // $('.header-wrap').css('z-index', '999');
 
   // 스크롤 위치 복원 및 스타일 초기화
   $('body').css({

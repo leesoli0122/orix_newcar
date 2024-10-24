@@ -495,8 +495,12 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap > .accordion-info > .ques .right.inline { display:flex; flex-direction: row; justify-content: center; align-items: center; }
 
 /* 현황조회-약정펀딩 */
-.accordion-wrap > .accordion-info > .ques .right.inqu-fo .tit { margin-right:0; margin-bottom:14px; }
 .accordion-wrap > .accordion-info > .ques .right.inqu-fo { max-width:270px; width:100%; text-align:right; }
+.accordion-wrap > .accordion-info > .ques .right.inqu-fo .tit { margin-right:0; margin-bottom:14px; }
+
+/* 현황조회 삭제버튼 없을 때 */
+.accordion-wrap > .accordion-info > .ques .right.no-del { max-width:270px; width:100%; text-align:right; }
+.accordion-wrap > .accordion-info > .ques .righ.no-del .tit { margin-right:0; }
 
 .accordion-wrap > .accordion-info > .ques-cont{ height:0; opacity: 0; overflow: hidden; padding-top:0; transition: height .2s ease, opacity .3s ease, padding-top .2s ease; }
 .accordion-wrap > .accordion-info > .ques-cont.active{ height:auto; opacity:1; background: var(--background4); padding:30px; font-size:var(--font16); font-weight:var(--w-bold); color:var(--inactive);}
@@ -823,12 +827,13 @@ tab #탭
 .check-plz ul li:last-child { margin-bottom:0; }
 
 /* 견적서 안에 '확인하세요' */
-.estimate-body .check-plz { position:absolute; bottom:0; margin-top:45px; border-radius:0; color:var(--normal); background:transparent; }
-.estimate-body .check-plz .plz-tit { padding:0; border:0; border-radius:0; font-size:var(--font14); }
-.estimate-body .check-plz .plz-tit::before { content:none; }
-.estimate-body .check-plz ul { padding:10px; padding-bottom:0; }
-.estimate-body .check-plz ul li { margin-bottom:8px; font-size:var(--font12); }
-.estimate-body .check-plz ul li:last-child { margin-bottom:0; }
+/* 2024.10.23 estimate-body -> estimate로 수정 */
+.estimate .check-plz { margin-top:40px; border-radius:0; color:var(--normal); background:transparent; }
+.estimate .check-plz .plz-tit { padding:0; border:0; border-radius:0; font-size:var(--font14); background:transparent; }
+.estimate .check-plz .plz-tit::before { content:none; }
+.estimate .check-plz ul { padding:10px; padding-bottom:0; }
+.estimate .check-plz ul li { margin-bottom:8px; font-size:var(--font12); }
+.estimate .check-plz ul li:last-child { margin-bottom:0; }
 /*********************************************************************
 결과값
 *********************************************************************/
@@ -1242,10 +1247,11 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-body li .pop.arr { padding:23px 54px 23px 24px; }
 .grid-list-body li .pop.arr::after { content:""; position:absolute; top:50%; transform:translateY(-50%); right:20px; display:inline-block; width:20px; height:20px; background:url(../../images/ic_est_arr.png)no-repeat 50%/20px auto; cursor:pointer; }
 
+
 /* 차량 선택 완료 */
 .grid-list-body li .pop.arr .choose { padding-left:28px; }
 .grid-list-body li .pop.arr .choose::before { content:""; position:absolute; top:50%; transform:translateY(-50%); left:0; display:inline-block; width:18px; height:18px; }
-/* .grid-list-body li .pop.arr span { display:inline-block; max-width:226px; width:100%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; } */
+.grid-list-body li .pop.arr span { display:inline-block; max-width:226px; width:100%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
 
 /** style2 **/
 .grid-list-wrap.style2 .grid-list-body { max-height:fit-content; border-right:0; border-left:0; background:var(--background4); }
@@ -1365,7 +1371,7 @@ dd.download-wrap { padding:0; background:transparent; }
 .show-estimate-wrap .contact .tit { margin-right:26px; font-size:var(--font18); font-weight:var(--w-bold); color:var(--title); }
 .show-estimate-wrap .contact .radio-box li:last-child { margin-right:10px; }
 .show-estimate-wrap .estimate { padding-top:48px; background:var(--background2); }
-.show-estimate-wrap .estimate .estimate-box { padding:33px 25px 20px; margin:0 auto; max-width:992px; width:100%; height:1403px; background:var(--white); }
+.show-estimate-wrap .estimate .estimate-box { padding:33px 25px 20px; margin:0 auto; max-width:992px; width:100%; min-height:1403px; height:100%; background:var(--white); }
 .show-estimate-wrap .estimate .btn-wrap.bottom { margin:0; }
 .show-estimate-wrap .estimate .btn-wrap.bottom button { margin:40px 0; }
 
@@ -1388,7 +1394,7 @@ dd.download-wrap { padding:0; background:transparent; }
 /*---------------------------------------------
 	견적서 body
 ---------------------------------------------*/
-.estimate-body { height:1218px; }
+.estimate-body { min-height:1096px; height:100%; }
 /* 차량정보 */
 .specifications-wrap { display:flex; align-items:center; justify-content:space-between; padding:10px 0 10px 20px; background:var(--background2); }
 .specifications-wrap .car-img { text-align:center; }
@@ -1451,6 +1457,10 @@ dd.download-wrap { padding:0; background:transparent; }
 ---------------------------------------------*/
 .choose-wrap .choose-group.model:last-child { margin:0; padding:0; }
 .choose-wrap .choose-group.model .choose li.chk { border:1px solid var(--secondary); }
+
+/* 선구매에서 오토리스,렌터카 견적내기 화면 들어갈 때 */
+.grid-list-body.deactive li:hover { background:transparent; }
+.grid-list-body.deactive li:hover .pop { font-weight:var(--w-regular); color:var(--subtitle); }
 /*********************************************************************
 팝업에서 #선택
 *********************************************************************/

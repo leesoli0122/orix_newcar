@@ -28,6 +28,15 @@
 
 </head>
 <body>
+    <!-- S: skipnavi -->
+    <div id="skipnavi">
+        <script>
+            $(document).ready(function(){
+                $("#skipnavi").load("../INCLUDE/inc_skipnavi.html");
+            });
+        </script>
+    </div>
+    <!-- E: skipnavi -->
     <div class="wrap">
         <!-- s:header -->
         <div id="headerWrap">
@@ -58,6 +67,7 @@
             <div class="contents">
                 <form>
                     <!-- 차량/옵션/출고 -->
+                    <!-- [D]: 선구매일 때 차량/옵션/출고 grid-list-body에 deactive 클래스 추가 -->
                     <section class="grid-wrap">
                         <!-- 차량 선택 -->
                         <div class="grid-list-wrap">
@@ -1569,15 +1579,15 @@
                                         </div>
                                     </div>
                                     <p class="notice-word">※ (개인/법인)인감증명서, 주민등록등본, 법인등기부등본은 계약체결시점 1개월 이내 발급분만 인정합니다.</p>
-                                    <div class="check-plz">
-                                        <p class="plz-tit">[꼭 확인하세요!]</p>
-                                        <ul class="bul-refer">
-                                            <li class="red">상기 견적금액은 유효기간까지 적용 가능하며, 차량가 변동, 정부 시책에 따라 변동될 수 있습니다.</li>
-                                            <li>건설/토목, 보험사/보험대리점/정비업, 방송/엔터테인먼트, 렌터카업/셔틀업 업종은 렌트료가 변동되거나 취급이 제한될 수 있습니다.</li>
-                                            <li>상기 견적에는 보험료, 차량검사비, 세금이 모두 포함되어 있으며 정비상품 선택 시, 차량점검, 소모품 교체비용이 포함될 수 있습니다.</li>
-                                            <li>차량등급별 세부 옵션 사항을 반드시 확인하시기 바라며, 각 차종별 세부옵션사항은 차량 제조사 홈페이지에서 확인 가능합니다.</li>
-                                        </ul>
-                                    </div>
+                                </div>
+                                <div class="check-plz">
+                                    <p class="plz-tit">[꼭 확인하세요!]</p>
+                                    <ul class="bul-refer">
+                                        <li class="red">상기 견적금액은 유효기간까지 적용 가능하며, 차량가 변동, 정부 시책에 따라 변동될 수 있습니다.</li>
+                                        <li>건설/토목, 보험사/보험대리점/정비업, 방송/엔터테인먼트, 렌터카업/셔틀업 업종은 렌트료가 변동되거나 취급이 제한될 수 있습니다.</li>
+                                        <li>상기 견적에는 보험료, 차량검사비, 세금이 모두 포함되어 있으며 정비상품 선택 시, 차량점검, 소모품 교체비용이 포함될 수 있습니다.</li>
+                                        <li>차량등급별 세부 옵션 사항을 반드시 확인하시기 바라며, 각 차종별 세부옵션사항은 차량 제조사 홈페이지에서 확인 가능합니다.</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="btn-wrap bottom">

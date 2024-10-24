@@ -28,6 +28,15 @@
 
 </head>
 <body>
+    <!-- S: skipnavi -->
+    <div id="skipnavi">
+        <script>
+            $(document).ready(function(){
+                $("#skipnavi").load("../INCLUDE/inc_skipnavi.html");
+            });
+        </script>
+    </div>
+    <!-- E: skipnavi -->
     <div class="wrap">
         <!-- s:header -->
         <div id="headerWrap">
@@ -57,9 +66,6 @@
             <!-- s:contents -->
             <div class="contents">
                 <form>
-                    <div class="sub-text-wrap style1">
-                        <h4><span class="blue-p">홍길동</span> 님의 실적을 확인해 보세요.</h4>
-                    </div>
                     <div class="table-type">
                         <div class="col">
                             <dl>
@@ -84,7 +90,7 @@
                                 </dd>
                             </dl>
                             <dl>
-                                <dt>특기차량</dt>
+                                <dt>특가차량</dt>
                                 <dd>
                                     <div class="form-group radio">
                                         <ul class="radio-box">
@@ -133,13 +139,28 @@
                     </div>
                 </form>
                 <div>
+                    <div class="sub-text-wrap style2">
+                        <h4>선구매 차량 목록</h4>
+                        <div class="select-box">
+                            <div class="stove-dim"></div>
+                            <div class="se-select ei-w160" data-stove="select">
+                                <select class="" title="가나다순">
+                                    <option value="" disabled="" selected="" hidden="">가나다순</option>
+                                    <option value="0">가나다순</option>
+                                    <option value="1">낮은 가격순</option>
+                                    <option value="2">높은 가격순</option>
+                                </select>
+                                <div class="e-select-dim"></div>
+                            </div>
+                        </div>
+                    </div>
                     <ul class="accordion-wrap">
                         <li class="accordion-info">
                             <a href="#none" class="ques toggleChk">
                                 <div class="left">
                                     <span class="tit"><em class="badge01 rcar">렌터카</em><span class="after-line"><span>디 올 뉴 스포티지 HEV(NQ5)</span>
                                 </div>
-                                <div class="right inqu-fo">
+                                <div class="right no-del">
                                     <span><span class="tit posit">40,160,000</span> 원 / (<span>2</span>대)</span>
                                 </div>
                             </a>
@@ -168,7 +189,7 @@
                                 <div class="left">
                                     <span class="tit"><em class="badge01 rcar">렌터카</em><span class="after-line"><span>디 올 뉴 스포티지 HEV(NQ5)</span>
                                 </div>
-                                <div class="right inqu-fo">
+                                <div class="right no-del">
                                     <span><span class="tit posit">40,160,000</span> 원 / (<span>60</span>대)</span>
                                 </div>
                             </a>
@@ -197,7 +218,7 @@
                                 <div class="left">
                                     <span class="tit"><em class="badge01 rcar">렌터카</em><em class="badge02 event">이벤트</em><span class="after-line"><span>더 뉴 셀토스</span>
                                 </div>
-                                <div class="right inqu-fo">
+                                <div class="right no-del">
                                     <span><span class="tit posit">25,110,000</span> 원 / (<span>25</span>대)</span>
                                 </div>
                             </a>
@@ -226,7 +247,7 @@
                                 <div class="left">
                                     <span class="tit"><em class="badge01 lease">오토리스</em><em class="badge02 event">이벤트</em><span class="after-line"><span>더 뉴 아반떼</span>
                                 </div>
-                                <div class="right inqu-fo">
+                                <div class="right no-del">
                                     <span><span class="tit posit">27,290,000</span> 원 / (<span>3</span>대)</span>
                                 </div>
                             </a>
@@ -255,7 +276,7 @@
                                 <div class="left">
                                     <span class="tit"><em class="badge01 rcar">렌터카</em><em class="badge02 promotions">프로모션</em><span class="after-line"><span>디 올 뉴 산타페 HEV(MXS)</span>
                                 </div>
-                                <div class="right inqu-fo">
+                                <div class="right no-del">
                                     <span><span class="tit posit">40,160,000</span> 원 / (<span>60</span>대)</span>
                                 </div>
                             </a>
@@ -284,7 +305,7 @@
                                 <div class="left">
                                     <span class="tit"><em class="badge01 rcar">렌터카</em><span class="after-line"><span>GV70</span>
                                 </div>
-                                <div class="right inqu-fo">
+                                <div class="right no-del">
                                     <span><span class="tit posit">61,250,000</span> 원 / (<span>17</span>대)</span>
                                 </div>
                             </a>
@@ -313,7 +334,7 @@
                                 <div class="left">
                                     <span class="tit"><em class="badge01 lease">오토리스</em><em class="badge02 promotions">프로모션</em><span class="after-line"><span>GV70</span>
                                 </div>
-                                <div class="right inqu-fo">
+                                <div class="right no-del">
                                     <span><span class="tit posit">61,250,000</span> 원 / (<span>60</span>대)</span>
                                 </div>
                             </a>
@@ -342,7 +363,7 @@
                                 <div class="left">
                                     <span class="tit"><em class="badge01 lease">오토리스</em><span class="after-line"><span>디 올 뉴 싼타페(MXS)</span>
                                 </div>
-                                <div class="right inqu-fo">
+                                <div class="right no-del">
                                     <span><span class="tit posit">48,410,000</span> 원 / (<span>1</span>대)</span>
                                 </div>
                             </a>

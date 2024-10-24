@@ -28,6 +28,15 @@
 
 </head>
 <body>
+    <!-- S: skipnavi -->
+    <div id="skipnavi">
+        <script>
+            $(document).ready(function(){
+                $("#skipnavi").load("../INCLUDE/inc_skipnavi.html");
+            });
+        </script>
+    </div>
+    <!-- E: skipnavi -->
     <div class="wrap">
         <!-- s:header -->
         <div id="headerWrap">
@@ -1498,7 +1507,7 @@
         <!-- //e:footer -->
     </div>
     <!-- 브랜드/모델/세부차종/트림 -->
-    <div id="PopUp02" class="layerpopup laypop on" style="display:block;" tabindex="0">
+    <div id="PopUp02" class="layerpopup laypop" tabindex="0">
         <div class="content-wrap">
             <div class="pop-header">
                 <h3 class="pop-title">차량선택</h3>

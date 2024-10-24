@@ -1494,7 +1494,7 @@ dd.download-wrap { padding:0; background:transparent; }
 
 /* 보험 선택 */
 .table-type > div dd.choose-wrap { padding:20px 7px 20px 20px; }
-.choose-wrap .choose-group.insurance { padding:0; border-bottom:0; }
+.choose-wrap .choose-group.insurance { padding:0; margin:0; border-bottom:0; }
 .choose-group.insurance .choose li { padding:20px 24px; border-radius:0; text-align:center; }
 .choose-group.insurance .choose li.w100 { width:100%; }
 .choose-group.insurance .choose li button { font-size:var(--font16); }

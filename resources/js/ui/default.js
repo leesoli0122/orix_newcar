@@ -288,12 +288,16 @@ function openPopup(id) {
 
     // swiper 추가
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+      slidesPerView: 'auto', // Default
+      spaceBetween: 10,
+      pagination: {
+          el: ".swiper-pagination",
+          type: "fraction"
       },
+      navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+      }
     });
 
     // close 버튼에 이벤트 추가

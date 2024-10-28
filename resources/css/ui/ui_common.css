@@ -1512,35 +1512,36 @@ dd.download-wrap { padding:0; background:transparent; }
 	choose-group안에 라디오 버튼
 ---------------------------------------------*/
 .choose-group .form-group.radio ul.radio-box li { width:100%; }
-.choose-group .form-group.radio ul.radio-box li label { display:flex;justify-content:space-between; align-items:center; }
-.choose-group .form-group.radio ul.radio-box li p.num { display:inline-block; color:var(--subtitle); font-weight:var(--w-regular); }
+.choose-group .form-group.radio ul.radio-box li label { display:flex; flex:1; justify-content:space-between; align-items:center; }
+.choose-group .form-group.radio ul.radio-box li p.num { display:flex; flex: 0 0 140px; color:var(--subtitle); font-weight:var(--w-regular); }
 .choose-group .form-group.radio ul.radio-box li p.num span { font-weight:var(--w-bold); color:var(--subtitle); }
 
 /*---------------------------------------------
 	slide #스와이퍼
 ---------------------------------------------*/
-.swiper-container { position:relative; }
-.mySwiper .swiper-horizontal { margin:0 auto; width:408px; height:145px; overflow: hidden; }
+.mySwiper  { margin:0 auto;  overflow: hidden;}
+.mySwiper .swiper-wrapper { max-width:403px; margin:0 auto; display:flex; align-items:center; width:100%; }
+.mySwiper .swiper-slide { flex:0 0 126px;  padding:10px; font-size:var(--font14); text-align:center; background:transparent; cursor: pointer; }
 
-.mySwiper .swiper-slide { display:flex; justify-content:center; align-items:center; /*padding:10px;*/ max-width:126px; width:100%; font-size:var(--font14); text-align:center; }
-.mySwiper .swiper-slide button { padding:10px; background:transparent; cursor: pointer;}
-.mySwiper .swiper-slide button .img-box { margin:0 auto; width:95px; height:57px; }
+.mySwiper .swiper-slide button .img-box { margin:0 auto; width:106px; height:53px; }
 .mySwiper .swiper-slide button img { display:block; width:100%; height:100%; }
-.mySwiper .swiper-slide button { font-size:var(--font14); color:var(--normal); }
+.mySwiper .swiper-slide button { font-size:var(--font14); color:var(--normal); background: var(--white); }
 .mySwiper .swiper-slide button .tit { margin-top:8px; font-size:var(--font14); font-weight:var(--w-bold); line-height:21px; }
 
-.mySwiper .navigation-wrapper { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display:flex;justify-content:space-between; margin:0 auto; width:512px; /*z-index:1;*/ }
-.mySwiper .navigation-wrapper .swiper-button-prev,
-.mySwiper .navigation-wrapper .swiper-button-next { position:static; margin-top:0; }
-.mySwiper .navigation-wrapper .swiper-button-prev { width:42px; height:42px; background:url(../images/swiper_l_arr.png)no-repeat 50%/42px auto; }
-.mySwiper .navigation-wrapper .swiper-button-next { width:42px; height:42px; background:url(../images/swiper_r_arr.png)no-repeat 50%/42px auto; }
-.mySwiper .navigation-wrapper .swiper-button-prev::after,
-.mySwiper.navigation-wrapper .swiper-button-next::after { content:none; }
-
-.mySwiper .swiper-slide.on { border:1px solid var(--secondary); border-radius:3px; background:var(--background4); }
+.mySwiper .swiper-slide.on { border:1px solid var(--secondary); border-radius:3px; background:var(--background4);}
+.mySwiper .swiper-slide.on button {  background:var(--background4);}
 .mySwiper .swiper-slide.on span,
 .mySwiper .swiper-slide.on .tit { color:var(--secondary); }
 
+.mySwiper .navigation-wrapper { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display:flex; justify-content:space-between; margin:0 auto; width:512px; z-index:11; }
+.mySwiper .navigation-wrapper .swiper-button-prev { left:-10px; width:42px; height:42px; background:url(../../images/swiper_l_arr.png)no-repeat 50%/42px auto; }
+.mySwiper .navigation-wrapper .swiper-button-next { right:-10px; width:42px; height:42px; background:url(../../images/swiper_r_arr.png)no-repeat 50%/42px auto; }
+.mySwiper .navigation-wrapper .swiper-button-prev::after,
+.mySwiper .navigation-wrapper .swiper-button-next::after { content:none; }
+
+.mySwiper::before, .mySwiper::after { content:''; position: absolute; top:0; bottom:0; width:90px; z-index:10; background:var(--white); }
+.mySwiper::before { left:-30px; }
+.mySwiper::after  { right:-30px; }
 /*---------------------------------------------
 	조건부 업종 여부 확인
 ---------------------------------------------*/

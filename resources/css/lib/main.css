@@ -181,8 +181,8 @@
 /*---------------------------------------------
     mainSec04 Contents
 ---------------------------------------------*/
-.mainSec04 ul.introList-area>li>a>p.tit { overflow: hidden; line-height: 20px; text-overflow:ellipsis; white-space: nowrap; font-size: var(--font20); }
-.mainSec04 ul.introList-area>li>a>p.btn { margin:18px 26px 0 0; line-height: 28px; font-size:var(--font24); font-weight: var(--w-bold); }
+.mainSec04 ul.introList-area>li>a>p.tit { overflow: hidden; line-height: 21px; text-overflow:ellipsis; white-space: nowrap; font-size: var(--font20); }
+.mainSec04 ul.introList-area>li>a>p.btn { margin:15px 26px 0 0; line-height: 28px; font-size:var(--font24); font-weight: var(--w-bold); }
 .mainSec04 ul.introList-area>li>a>p.btn::after { content: ''; display:inline-flex; align-items: center; position: absolute; margin-left:3px; width:23px; height:23px; background:var(--m-img-arrow)no-repeat 100%/23px auto; }
 /*********************************************************************
 메인.05 - 공지사항/자료실/FAQ

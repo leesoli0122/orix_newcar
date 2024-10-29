@@ -1513,7 +1513,7 @@ dd.download-wrap { padding:0; background:transparent; }
 ---------------------------------------------*/
 .choose-group .form-group.radio ul.radio-box li { width:100%; }
 .choose-group .form-group.radio ul.radio-box li label { display:flex; flex:1; justify-content:space-between; align-items:center; }
-.choose-group .form-group.radio ul.radio-box li p.num { display:flex; flex: 0 0 140px; color:var(--subtitle); font-weight:var(--w-regular); }
+.choose-group .form-group.radio ul.radio-box li p.num { display:flex; justify-content: flex-end; flex: 0 0 140px; color:var(--subtitle); font-weight:var(--w-regular); }
 .choose-group .form-group.radio ul.radio-box li p.num span { font-weight:var(--w-bold); color:var(--subtitle); }
 
 /*---------------------------------------------

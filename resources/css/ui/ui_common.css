@@ -1204,9 +1204,8 @@ dd.download-wrap { padding:0; background:transparent; }
 	.grid-list-wrap.style2 = 보험선택, 탁송정보 선택, 용품/수수료/CM 선택
 	.grid-list-wrap.style3 = 계약조건1,2,3
 *********************************************************************/
-/* .grid-wrap + .grid-wrap { margin-top:40px; } */
 .grid-list-wrap { max-height:558px; height:100%; }
-.grid-list-wrap.no { max-height:unset; height:100%; }
+.grid-list-wrap.no { max-height:unset; }
 /*---------------------------------------------
 	grid-list-header 리스트 헤더
 ---------------------------------------------*/
@@ -1234,17 +1233,15 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-body .change-txt { padding-left:24px; width:100%; font-size:var(--font16); font-weight:var(--w-regular); color:var(--normal); }
 .grid-list-wrap .grid-list-body .change-txt.num { color:var(--title); text-align:right; }
 
+/* 출고 선택 */
 .grid-list-body.style2 { height:fit-content; margin-bottom:20px; }
-.grid-list-body.style2 > ul > li > .tit { padding:0; }
 .grid-list-body.style2 li:hover .form-group { font-weight:var(--w-regular); }
 
 /* 인풋박스 위에 체크 */
 .grid-list-body.style2 .form-group.check ul.check-box + .col-1 { margin-top:14px;}
 
 /* arr가 생기는 선택 */
-/* .grid-list-body li .pop.arr { padding:23px 54px 23px 24px; } */
 .grid-list-body li .pop.arr::after { content:""; position:absolute; top:50%; transform:translateY(-50%); right:20px; display:inline-block; width:20px; height:20px; background:url(../../images/ic_est_arr.png)no-repeat 50%/20px auto; cursor:pointer; }
-
 
 /* 차량 선택 완료 */
 .grid-list-body li .pop.arr .choose { padding-left:28px; }
@@ -1253,9 +1250,6 @@ dd.download-wrap { padding:0; background:transparent; }
 
 /** style2 **/
 .grid-list-wrap.style2 .grid-list-body { border-right:0; border-left:0; background:var(--background4); }
-.grid-list-wrap.style2 .grid-list-body > ul > li { padding:24px 0; }
-.grid-list-wrap.style2 .grid-list-body li .pop { padding:0 20px 0 24px; }
-.grid-list-wrap.style2 .grid-list-body li .pop.arr { padding:0 54px 0 24px; }
 
 /* 용품/수수료/CM선택 */
 .grid-list-wrap.style2 .grid-list-body > ul >  li .change-txt p { margin-bottom:10px; font-size:var(--font16); color:var(--title); }
@@ -1273,11 +1267,7 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-wrap.style3 .grid-list-header::before { content:""; position:absolute; left:24px; top:50%; transform:translateY(-50%); display:inline-block; width:24px; height:24px; background:url(../../images/ic_star.png)no-repeat 50%/24px auto; }
 .grid-list-wrap.style3 .grid-list-header.on::before { background:url(../../images/ic_star_on.png)no-repeat 50%/24px auto; }
 
-.grid-list-wrap.style3 .grid-list-body.style2 { margin-bottom:0; }
 .grid-list-wrap.style3 .grid-list-body { max-height:fit-content; overflow:initial; }
-/* .grid-list-wrap.style3 .grid-list-body.style2 > ul > li { padding:0; } */
-.grid-list-wrap.style3 .grid-list-body.style2 li .pop { padding:0; padding-left:24px; }
-.grid-list-wrap.style3 .grid-list-body.style2 .change-txt { padding:0 20px 0 24px; }
 .grid-list-wrap.style3 .grid-list-body .change-txt.delivery { display:flex; justify-content:space-between; }
 .grid-list-wrap.style3 .grid-list-body .change-txt.delivery > div { font-size:var(--font16); font-weight:var(--w-bold); color:var(--title); }
 .grid-list-wrap.style3 .grid-list-body .change-txt.delivery.num > div span,
@@ -1289,9 +1279,9 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-wrap.style3 .grid-list-footer .num { font-size:var(--font22); font-weight:var(--w-bold); color:var(--secondary); }
 
 /* 잔존가치 */
-.grid-list-body.style2 li .residual { display:flex; align-items:center; justify-content:space-between; padding:0 24px; width:100%; }
-.grid-list-body.style2 li .residual .form-group { padding:0; }
-.grid-list-body.style2 li .residual .num { display:inline-block; width:200px; font-size:var(--font16); font-weight:var(--w-regular); color:var(--title); text-align:right; }
+.grid-list-body li .residual { display:flex; align-items:center; justify-content:space-between; padding:0 24px; width:100%; }
+.grid-list-body li .residual .form-group { padding:0; }
+.grid-list-body li .residual .num { display:inline-block; width:200px; font-size:var(--font16); font-weight:var(--w-regular); color:var(--title); text-align:right; }
 /*---------------------------------------------
 	옵션선택(scroll)
 ---------------------------------------------*/

@@ -163,7 +163,7 @@ style4 = table 안에 들어갈 때
 .caption3 { padding-left:22px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--secondary); }/*레이어팝업에서*/
 
 .inquiry-info { font-size:var(--font16); font-weight:var(--w-regular); color:var(--tag3); }/*현황조회 인포 삭제될 수도 있음*/
-.inquiry-info::before { content:''; display:inline-block; margin-right:8px; width:17px; height:17px; background:url(../../images/common/inquiry-info.png)no-repeat 50%/17px auto; }
+.inquiry-info::before { content:''; position:absolute; top:50%; transform:translateY(-50%); left:6px; display:inline-block; width:17px; height:17px; background:url(../../images/common/inquiry-info.png)no-repeat 50%/17px auto; }
 
 .blue { color:var(--secondary)!important; }
 .blue-p { color:var(--primary)!important; }

@@ -602,7 +602,7 @@ Tooltip #툴팁
 /*********************************************************************
 popup #팝업
 *********************************************************************/
-.layerpopup { position:fixed; top:0; left:0; display:none; overflow-y:auto; width:100%; height:100%; z-index:22; /*background:var(--white);*/ -webkit-overflow-scrolling:touch; outline:none; }
+.layerpopup { position:fixed; top:0; left:0; display:none; overflow-y:auto; width:100%; height:100%; z-index:201; /*background:var(--white);*/ -webkit-overflow-scrolling:touch; outline:none; }
 .layerpopup.type-alert .ly-cont-wrap + .btn-wrap { margin-top:40px; margin-bottom:0; }
 
 .layerpopup.type-alert .ly-cont-wrap.has-height { min-height:350px; }

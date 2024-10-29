@@ -1205,7 +1205,7 @@ dd.download-wrap { padding:0; background:transparent; }
 	.grid-list-wrap.style3 = 계약조건1,2,3
 *********************************************************************/
 /* .grid-wrap + .grid-wrap { margin-top:40px; } */
-.grid-list-wrap { max-height:534px; height:100%; }
+.grid-list-wrap { max-height:558px; height:100%; }
 .grid-list-wrap.no { max-height:unset; height:100%; }
 /*---------------------------------------------
 	grid-list-header 리스트 헤더
@@ -1219,7 +1219,7 @@ dd.download-wrap { padding:0; background:transparent; }
 	grid-list-body 리스트 바디
 	style2 = 팝업창이 열리지 않는(안 열리는것들은 pop 빼야함)
 ---------------------------------------------*/
-.grid-list-body { max-height:402px; height:100%; border-left:1px solid var(--border1); border-right:1px solid var(--border1); border-bottom:1px solid var(--border1); font-size:0; }
+.grid-list-body { max-height:426px; height:100%; border-left:1px solid var(--border1); border-right:1px solid var(--border1); border-bottom:1px solid var(--border1); font-size:0; }
 .grid-list-body > ul > li { display:flex; align-items:center; padding:20px 0; border-bottom:1px solid var(--border3); }
 .grid-list-body li:last-child { border-bottom:none; }
 .grid-list-body li:hover { background:var(--background4); }
@@ -1227,16 +1227,15 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-body li > .tit { display:inline-block; padding:4px 0; max-width:120px; width:100%; font-size:var(--font16); font-weight:var(--w-bold); color:var(--normal); text-align:center; }
 .grid-list-body li > .tit::after { content:""; position:absolute; top:50%; transform:translateY(-50%); right:0; display:inline-block; margin-left:37px; width:1px; height:14px; background:var(--border1); }
 .grid-list-body li .pop { padding:4px 54px 4px 24px; width:100%; font-size:var(--font16); font-weight:var(--w-regular); color:var(--subtitle); }
-.grid-list-body li .pop.form-group label { font-size:var(--font16); }
+.grid-list-body li .form-group { padding:0 24px; width:100%; }
+/* .grid-list-body li .pop.form-group label { font-size:var(--font16); } */
 .grid-list-wrap.style2 .grid-list-body > ul >  li.num,
 .grid-list-wrap .grid-list-body > ul >  li.num { justify-content:space-between; padding-right:20px; }
 .grid-list-body .change-txt { padding-left:24px; width:100%; font-size:var(--font16); font-weight:var(--w-regular); color:var(--normal); }
 .grid-list-wrap .grid-list-body .change-txt.num { color:var(--title); text-align:right; }
 
 .grid-list-body.style2 { height:fit-content; margin-bottom:20px; }
-.grid-list-body.style2 > ul > li:last-child { border-bottom:0; }
 .grid-list-body.style2 > ul > li > .tit { padding:0; }
-.grid-list-body.style2 li .form-group { padding:0 24px; width:100%; }
 .grid-list-body.style2 li:hover .form-group { font-weight:var(--w-regular); }
 
 /* 인풋박스 위에 체크 */
@@ -1253,9 +1252,8 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-body li .pop.arr span { display:inline-block; max-width:226px; width:100%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
 
 /** style2 **/
-.grid-list-wrap.style2 .grid-list-body { max-height:fit-content; border-right:0; border-left:0; background:var(--background4); }
+.grid-list-wrap.style2 .grid-list-body { border-right:0; border-left:0; background:var(--background4); }
 .grid-list-wrap.style2 .grid-list-body > ul > li { padding:24px 0; }
-.grid-list-wrap.style2 .grid-list-body li > .tit { padding:0; }
 .grid-list-wrap.style2 .grid-list-body li .pop { padding:0 20px 0 24px; }
 .grid-list-wrap.style2 .grid-list-body li .pop.arr { padding:0 54px 0 24px; }
 
@@ -1267,7 +1265,7 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-wrap.style2 .grid-list-body > ul >  li .change-txt .form-group .charge:last-child { margin-bottom:0; }
 
 /* 공채/부대비용 선택 */
-.grid-list-wrap.style2 .grid-list-body > ul >  li .form-group .radio-box { margin-bottom:20px; }
+/* .grid-list-wrap.style2 .grid-list-body > ul >  li .form-group .radio-box { margin-bottom:20px; } */
 
 /** 계약조건 **/
 .grid-list-wrap.style3 { max-height:904px; }

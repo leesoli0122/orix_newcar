@@ -1230,7 +1230,7 @@ dd.download-wrap { padding:0; background:transparent; }
 /* .grid-list-body li .pop.form-group label { font-size:var(--font16); } */
 .grid-list-wrap.style2 .grid-list-body > ul >  li.num,
 .grid-list-wrap .grid-list-body > ul >  li.num { justify-content:space-between; padding-right:20px; }
-.grid-list-body .change-txt { padding-left:24px; width:100%; font-size:var(--font16); font-weight:var(--w-regular); color:var(--normal); }
+.grid-list-body .change-txt { padding:0 24px; width:100%; font-size:var(--font16); font-weight:var(--w-regular); color:var(--normal); }
 .grid-list-wrap .grid-list-body .change-txt.num { color:var(--title); text-align:right; }
 
 /* 출고 선택 */
@@ -1240,6 +1240,11 @@ dd.download-wrap { padding:0; background:transparent; }
 /* 인풋박스 위에 체크 */
 .grid-list-body.style2 .form-group.check ul.check-box + .col-1 { margin-top:14px;}
 
+/* 탁송정보/용품/수수료 선택 */
+.grid-list-wrap.no .grid-list-body.style2 { max-height:unset; }
+
+/* 공채/부대비용 선택 */
+.grid-list-body.style2 .form-group.radio .radio-box + .charge { margin-top:20px; }
 /* arr가 생기는 선택 */
 .grid-list-body li .pop.arr::after { content:""; position:absolute; top:50%; transform:translateY(-50%); right:20px; display:inline-block; width:20px; height:20px; background:url(../../images/ic_est_arr.png)no-repeat 50%/20px auto; cursor:pointer; }
 

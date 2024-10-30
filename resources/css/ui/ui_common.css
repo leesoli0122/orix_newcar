@@ -1448,7 +1448,8 @@ dd.download-wrap { padding:0; background:transparent; }
 	선구매
 ---------------------------------------------*/
 .choose-wrap .choose-group.model:last-child { margin:0; padding:0; }
-.choose-wrap .choose-group.model .choose li.chk { border:1px solid var(--secondary); }
+.choose-wrap .choose-group.model .choose li.chk { border:1px solid var(--secondary); color:var(--normal); font-weight:var(--w-bold); }
+.choose-wrap .choose-group.model .choose li.chk button { color:var(--normal); font-size:var(--font14); font-weight:var(--w-bold); }
 
 /* 선구매에서 오토리스,렌터카 견적내기 화면 들어갈 때 */
 .grid-list-body.deactive li:hover { background:transparent; }

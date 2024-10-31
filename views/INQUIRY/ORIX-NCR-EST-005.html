@@ -12,7 +12,7 @@
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:type" content="website" />
 
-    <title>QnA 수정하기 < QnA < 고객센터</title>
+    <title>견적확정 < 견적 < 현황조회</title>
 
     <link href="../../resources/css/lib/default.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/lib/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
@@ -54,48 +54,18 @@
                 <div class="breadcrumb-wrap">
                     <ul>
                         <li class="home"><a href="javascript:void(0);">홈</a></li>
-                        <li><a href="javascript:void(0);">고객센터</a></li>
-                        <li><a href="javascript:void(0);">QnA</a></li>
-                        <li><a href="javascript:void(0);">QnA 수정하기</a></li>
+                        <li><a href="javascript:void(0);">현황조회</a></li>
+                        <li><a href="javascript:void(0);">견적</a></li>
+                        <li><a href="javascript:void(0);">견적확정</a></li>
                     </ul>
                 </div>
                 <div class="text-wrap">
-                    <h2>QnA</h2>
+                    <h2>현황조회</h2>
                 </div>
             </div>
             <!-- //e:subvisual-wrap -->
             <!-- s:contents -->
             <div class="contents">
-                <form>
-                    <div class="table-type">
-                        <div class="col">
-                            <dl>
-                                <dt class="essential">제목</dt>
-                                <dd class="form-group style3">
-                                    <div class="col-10">
-                                        <input id="" title="제목" type="text" name=""  maxlength="50"  class="form-control" placeholder="제목 입력">
-                                        <!--S : 입력하지 않은 경우 form-group에 error 클래스 추가 -->
-                                        <p class="info">제목 내용이 들어갑니다.</p>
-                                        <!--E : 입력하지 않은 경우 form-group에 error 클래스 추가 -->
-                                    </div>
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt class="essential">내용</dt>
-                                <dd class="form-group style3">
-                                    <textarea type="text" title="내용" id="ipt02" class="inp" name="" value="" placeholder="본문 내용이 들어갑니다." maxlength="" required=""></textarea>
-                                    <!--S : 입력하지 않은 경우 form-group에 error 클래스 추가 -->
-                                    <p class="info">내용을 입력해주세요</p>
-                                    <!--E : 입력하지 않은 경우 form-group에 error 클래스 추가 -->
-                                </dd>
-                            </dl>
-                        </div>
-                    </div>
-                </form>
-                <div class="btn-wrap cont bottom">
-                    <button type="button" name="button" class="btn btn-cont">목록</button>
-                    <button type="button" name="button" class="btn btn-primary">수정하기</button>
-                </div>
             </div>
             <!-- //e:contents -->
             <!--s: scrollTop-->
@@ -113,6 +83,34 @@
         </div>
         <!-- //e:footer -->
     </div>
+    <!-- 실차주 확인요청 -->
+    <div id="PopUp15" class="layerpopup laypop on" style="display:block; z-index:999;" tabindex="0">
+        <div class="content-wrap">
+            <div class="pop-header">
+                <h3 class="pop-title">실차주 확인요청</h3>
+                <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+            </div>
+            <div class="ly-con-wrap ly-scroll-con">
+                <div class="table-type">
+                    <div class="col">
+                        <dl>
+                            <dt>고객명</dt>
+                            <dd class="form-group error">
+                                <div class="col-1">
+                                    <input id="" title="고객명" type="text" name="" class="form-control" placeholder="고객명 입력">
+                                </div>
+                                <p class="info">고객명을 입력해주세요.</p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-wrap popup">
+                <button type="button" name="button" class="btn btn-bottom" >동의 요청하기</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../resources/js/lib/swiper-bundle.min.js"></script>
 </body>
 
 </html>

@@ -12,7 +12,7 @@
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:type" content="website" />
 
-    <title>견적내기 > 렌터카 견적내기</title>
+    <title>렌터카 견적내기 < 견적내기</title>
 
     <link href="../../resources/css/lib/default.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/lib/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
@@ -99,7 +99,11 @@
                                     </li>
                                     <li>
                                         <span class="tit">내장 색상</span>
-                                        <div class="pop"><span>브랜드를 선택해 주세요</span></div>
+                                        <div class="form-group">
+                                            <div class="col-1">
+                                                <input id="" type="amount" title="내장 색상" class="form-control" placeholder="직접 입력">
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
                                 <!-- S:브랜드/모델/세부차종/트림/색상까지 선택 완료 -->
@@ -126,7 +130,11 @@
                                     </li>
                                     <li>
                                         <span class="tit">내장 색상</span>
-                                        <div class="pop arr" onclick="openPopup('PopUp03')"><span>블랙/브라운 투톤</span></div>
+                                        <div class="form-group">
+                                            <div class="col-1">
+                                                <input id="" type="amount" title="내장 색상" class="form-control" placeholder="블랙/브라운 투톤">
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul> -->
                                 <!-- E:브랜드/모델/세부차종/트림/색상까지 선택 완료 -->
@@ -294,7 +302,6 @@
                                         <span class="tit">딜러사</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">선택없음</option>
@@ -434,7 +441,6 @@
                                         <span class="tit">탁송방법</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">탁송방법 선택</option><!-- [D] : default - 셀렉트의 placeholder 기능-->
@@ -456,7 +462,6 @@
                                         <span class="tit">도착지</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">도착지 선택</option><!-- [D] : default - 셀렉트의 placeholder 기능-->
@@ -541,7 +546,7 @@
                         <!-- case1 국산차/개인인수형(국산차-정비제외) -->
                         <div class="grid-list-wrap style3">
                             <p class="grid-list-header on">계약조건 01</p>
-                            <div class="grid-list-body style2">
+                            <div class="grid-list-body">
                                 <!--S: 차량 선택 전 default -->
                                 <!-- <div class="result-area nodata frist-car">
                                     <div class="text-wrap">
@@ -558,7 +563,6 @@
                                         <span class="tit">상품명</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">개인인수형(국산차-정비제외)</option>
@@ -575,7 +579,6 @@
                                         <span class="tit">기간</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">36개월</option>
@@ -593,7 +596,6 @@
                                         <span class="tit">약정거리</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">2만 Km</option>
@@ -627,9 +629,8 @@
                                             <div class="form-group">
                                                 <div class="col-4">
                                                     <div class="select-box">
-                                                        <div class="stove-dim"></div>
                                                         <div class="se-select" data-stove="select">
-                                                            <div class="stove-dim"></div><select class="" title="메뉴구분">
+                                                            <select class="" title="메뉴구분">
                                                                 <option value="" disabled="" selected="" hidden="">64%</option>
                                                                 <option value="0">64%</option>
                                                                 <option value="1">63%</option>
@@ -681,7 +682,6 @@
                                         <span class="tit">정비</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분" disabled>
                                                         <option value="" disabled="" selected="" hidden="">정비(미포함)</option>
@@ -724,7 +724,7 @@
                         <!-- case2 국산차/개인인수형 -->
                         <div class="grid-list-wrap style3">
                             <p class="grid-list-header on">계약조건 02</p>
-                            <div class="grid-list-body style2">
+                            <div class="grid-list-body">
                                 <!--S: 차량 선택 전 default -->
                                 <!-- <div class="result-area nodata frist-car">
                                     <div class="text-wrap">
@@ -741,7 +741,6 @@
                                         <span class="tit">상품명</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">개인인수형</option>
@@ -758,7 +757,6 @@
                                         <span class="tit">기간</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">48개월</option>
@@ -776,7 +774,6 @@
                                         <span class="tit">약정거리</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">2만 Km</option>
@@ -810,9 +807,8 @@
                                             <div class="form-group">
                                                 <div class="col-4">
                                                     <div class="select-box">
-                                                        <div class="stove-dim"></div>
                                                         <div class="se-select" data-stove="select">
-                                                            <div class="stove-dim"></div><select class="" title="메뉴구분">
+                                                            <select class="" title="메뉴구분">
                                                                 <option value="" disabled="" selected="" hidden="">57%</option>
                                                                 <option value="0">64%</option>
                                                                 <option value="1">63%</option>
@@ -864,7 +860,6 @@
                                         <span class="tit">정비</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">오릭스 정비 Premium</option>
@@ -907,7 +902,7 @@
                         <!-- case3 수입차/만기인수형(수입차, 소비자가) -->
                         <div class="grid-list-wrap style3">
                             <p class="grid-list-header on">계약조건 03</p>
-                            <div class="grid-list-body style2">
+                            <div class="grid-list-body">
                                 <!--S: 차량 선택 전 default -->
                                 <!-- <div class="result-area nodata frist-car">
                                     <div class="text-wrap">
@@ -924,7 +919,6 @@
                                         <span class="tit">상품명</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">만기인수형(수입차-소비자가)</option>
@@ -941,7 +935,6 @@
                                         <span class="tit">기간</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">60개월</option>
@@ -959,7 +952,6 @@
                                         <span class="tit">약정거리</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">2만 Km</option>
@@ -993,9 +985,8 @@
                                             <div class="form-group">
                                                 <div class="col-4">
                                                     <div class="select-box">
-                                                        <div class="stove-dim"></div>
                                                         <div class="se-select" data-stove="select">
-                                                            <div class="stove-dim"></div><select class="" title="메뉴구분">
+                                                            <select class="" title="메뉴구분">
                                                                 <option value="" disabled="" selected="" hidden="">49%</option>
                                                                 <option value="0">64%</option>
                                                                 <option value="1">63%</option>
@@ -1047,7 +1038,6 @@
                                         <span class="tit">정비</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">정비(미포함)</option>
@@ -1366,7 +1356,7 @@
                                     <div class="table-wrap">
                                         <div class="table-type table-col">
                                             <table>
-                                                <caption>보험 조건에 대한 고객구분, 운전연령, 의무가입, 필수가입 테이블</caption><!-- 2024.10.21 caption 수정 -->
+                                                <caption>보험 조건에 대한 고객구분, 운전연령, 의무가입에 대한 테이블</caption><!-- [20241030] caption 수정 -->
                                                 <colgroup>
                                                     <col width="20%">
                                                     <col width="*">
@@ -1506,11 +1496,11 @@
         </div>
         <!-- //e:footer -->
     </div>
-    <!-- 외장/내장 색상 선택 -->
+    <!-- 외장 색상 선택 -->
     <div id="PopUp02" class="layerpopup laypop on" style="display:block;" tabindex="0">
         <div class="content-wrap">
             <div class="pop-header">
-                <h3 class="pop-title">외장/내장 색상 선택</h3>
+                <h3 class="pop-title">외장 색상 선택</h3>
                 <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
             </div>
             <div class="ly-con-wrap ly-scroll-con">
@@ -1576,39 +1566,6 @@
                                     <img src="../../resources/images/color/col-24292d.png" alt="녹턴 그레이 메탈릭">
                                 </button>
                                 <span>녹턴 그레이 메탈릭</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="choose-group">
-                        <div class="popup-text-wrap style2">
-                            <h4>내장 선택</h4>
-                        </div>
-                        <ul class="choose color btnSelect">
-                            <li class="on">
-                                <button type="button">
-                                    <img src="../../resources/images/color/col-1e1f1e.png" alt="블랙 모노톤">
-                                </button>
-                                <span>블랙 모노톤</span>
-                                <p></p>
-                            </li>
-                            <li>
-                                <button type="button" class="col2-0e1012">
-                                    <img src="../../resources/images/color/col2-0e1012.png" alt="블랙/브라운 투톤">
-                                </button>
-                                <span>블랙/브라운 투톤</span>
-                            </li>
-                            <li>
-                                <button type="button" class="col2-282828">
-                                    <img src="../../resources/images/color/col2-282828.png" alt="다크 그레이/라이트 그레이 투톤">
-                                </button>
-                                <span>다크 그레이/라이트 그레이 투톤</span>
-                            </li>
-                            <li>
-                                <button type="button" class="col2-081214">
-                                    <img src="../../resources/images/color/col2-081214.png" alt="인디고/브라운 투톤">
-                                </button>
-                                <span>인디고/브라운 투톤</span>
                             </li>
                         </ul>
                     </div>

@@ -102,19 +102,19 @@ $(document).ready(function () {
   // });
 
   /** 리스트 선택이 필요한 경우 **/
-  $(document).on('click', '.txt-list-wrap.click .txt-detail-area', function () {
-    $('.txt-list-wrap.click .txt-detail-area').not(this).removeClass('on');
-    $(this).toggleClass('on');
-    $('.txt-list-wrap.click .txt-detail-area').not(this).find('input').removeClass('on');
-    $(this).find('input').toggleClass('on');
-  });
+  // $(document).on('click', '.txt-list-wrap.click .txt-detail-area', function () {
+  //   $('.txt-list-wrap.click .txt-detail-area').not(this).removeClass('on');
+  //   $(this).toggleClass('on');
+  //   $('.txt-list-wrap.click .txt-detail-area').not(this).find('input').removeClass('on');
+  //   $(this).find('input').toggleClass('on');
+  // });
 
   /** 테이블 상세현황 **/
-  $(".table-type.check tbody tr").click(function () {
-    $(".table-type.check tbody tr").not(this).removeClass("checked");
-    $(this).toggleClass("checked");
-    $(".table-type.result").css("display", $(this).hasClass("checked") ? "block" : "none");
-  });
+  // $(".table-type.check tbody tr").click(function () {
+  //   $(".table-type.check tbody tr").not(this).removeClass("checked");
+  //   $(this).toggleClass("checked");
+  //   $(".table-type.result").css("display", $(this).hasClass("checked") ? "block" : "none");
+  // });
 
   /** 전체동의 **/
   $('.check.all').on('click', function () {
@@ -288,16 +288,8 @@ function openPopup(id) {
 
     // swiper 추가
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 'auto', // Default
-      spaceBetween: 10,
-      pagination: {
-          el: ".swiper-pagination",
-          type: "fraction"
-      },
       navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-      }
+      },
     });
 
     // close 버튼에 이벤트 추가

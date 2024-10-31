@@ -12,7 +12,7 @@
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:type" content="website" />
 
-    <title>견적내기 > 오토리스 견적내기</title>
+    <title>오토리스 견적내기 < 견적내기</title>
 
     <link href="../../resources/css/lib/default.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/lib/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
@@ -100,7 +100,11 @@
                                     </li>
                                     <li>
                                         <span class="tit">내장 색상</span>
-                                        <div class="pop"><span>브랜드를 선택해 주세요</span></div>
+                                        <div class="form-group">
+                                            <div class="col-1">
+                                                <input id="" type="amount" title="내장 색상" class="form-control" placeholder="직접 입력">
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
                                 <!-- S:브랜드/모델/세부차종/트림/색상까지 선택 완료 -->
@@ -127,7 +131,11 @@
                                     </li>
                                     <li>
                                         <span class="tit">내장 색상</span>
-                                        <div class="pop arr" onclick="openPopup('PopUp03')"><span>블랙/브라운 투톤</span></div>
+                                        <div class="form-group">
+                                            <div class="col-1">
+                                                <input id="" type="amount" title="내장 색상" class="form-control" placeholder="블랙/브라운 투톤">
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul> -->
                                 <!-- E:브랜드/모델/세부차종/트림/색상까지 선택 완료 -->
@@ -312,7 +320,6 @@
                                         <span class="tit">딜러사</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">선택없음</option>
@@ -370,7 +377,6 @@
                                         <span class="tit">상품구분</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">상품구분 선택</option>
@@ -454,7 +460,6 @@
                                         <span class="tit">탁송방법</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">탁송방법 선택</option>
@@ -476,7 +481,6 @@
                                         <span class="tit">도착지</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">도착지 선택</option><!-- [D] : default - 셀렉트의 placeholder 기능-->
@@ -669,7 +673,7 @@
                         <!-- case1 국산차 -->
                         <div class="grid-list-wrap style3">
                             <p class="grid-list-header">계약조건 01</p>
-                            <div class="grid-list-body style2">
+                            <div class="grid-list-body">
                                 <!--S: 차량 선택 전 default -->
                                 <!-- <div class="result-area nodata frist-car">
                                     <div class="text-wrap">
@@ -690,7 +694,6 @@
                                         <span class="tit">기간</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">36개월</option>
@@ -709,7 +712,6 @@
                                         <span class="tit">약정거리</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">2만 Km</option>
@@ -743,9 +745,8 @@
                                             <div class="form-group">
                                                 <div class="col-4">
                                                     <div class="select-box">
-                                                        <div class="stove-dim"></div>
                                                         <div class="se-select" data-stove="select">
-                                                            <div class="stove-dim"></div><select class="" title="메뉴구분">
+                                                            <select class="" title="메뉴구분">
                                                                 <option value="" disabled="" selected="" hidden="">64%</option>
                                                                 <option value="0">64%</option>
                                                                 <option value="1">63%</option>
@@ -798,7 +799,6 @@
                                         <span class="tit">정비</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분" disabled>
                                                         <option value="" disabled="" selected="" hidden="">오릭스 정비 Premium</option>
@@ -849,7 +849,7 @@
                         <!-- case2 수입차 -->
                         <div class="grid-list-wrap style3">
                             <p class="grid-list-header">계약조건 02</p>
-                            <div class="grid-list-body style2">
+                            <div class="grid-list-body">
                                 <!--S: 차량 선택 전 default -->
                                 <!-- <div class="result-area nodata frist-car">
                                     <div class="text-wrap">
@@ -870,7 +870,6 @@
                                         <span class="tit">기간</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">36개월</option>
@@ -889,7 +888,6 @@
                                         <span class="tit">약정거리</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">2만 Km</option>
@@ -923,9 +921,8 @@
                                             <div class="form-group">
                                                 <div class="col-4">
                                                     <div class="select-box">
-                                                        <div class="stove-dim"></div>
                                                         <div class="se-select" data-stove="select">
-                                                            <div class="stove-dim"></div><select class="" title="메뉴구분">
+                                                            <select class="" title="메뉴구분">
                                                                 <option value="" disabled="" selected="" hidden="">57%</option>
                                                                 <option value="0">64%</option>
                                                                 <option value="1">63%</option>
@@ -978,7 +975,6 @@
                                         <span class="tit">정비</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분" disabled>
                                                         <option value="" disabled="" selected="" hidden="">오릭스 정비 Premium</option>
@@ -1040,7 +1036,7 @@
                         <!-- case3 금융리스일 때 -->
                         <div class="grid-list-wrap style3">
                             <p class="grid-list-header">계약조건 03</p>
-                            <div class="grid-list-body style2">
+                            <div class="grid-list-body">
                                 <!--S: 차량 선택 전 default -->
                                 <!-- <div class="result-area nodata frist-car">
                                     <div class="text-wrap">
@@ -1061,7 +1057,6 @@
                                         <span class="tit">기간</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">36개월</option>
@@ -1089,7 +1084,6 @@
                                         <span class="tit">정비</span>
                                         <div class="form-group">
                                             <div class="select-box">
-                                                <div class="stove-dim"></div>
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분" disabled>
                                                         <option value="" disabled="" selected="" hidden="">오릭스 정비 Premium</option>
@@ -1294,7 +1288,7 @@
                                         </div>
                                         <div class="table-type table-col">
                                             <table>
-                                                <caption>취득세, 공채비용, 부대비용, 원가포함 합계, 최종 차량가+원가포함 합계에 대한 테이블</caption><!-- 2024.10.21 caption 수정 -->
+                                                <caption>취득세, 공채비용, 부대비용, 원가포함 합계, 취득원가에 대한 테이블</caption><!-- [20241030] caption 수정 -->
                                                 <colgroup>
                                                     <col width="40%">
                                                     <col width="*">
@@ -1612,115 +1606,6 @@
             </script>
         </div>
         <!-- //e:footer -->
-    </div>
-    <!-- 자기부담금 -->
-    <div id="PopUp11" class="layerpopup laypop" tabindex="0">
-        <div class="content-wrap">
-            <div class="pop-header">
-                <h3 class="pop-title">자기부담금 입력</h3>
-                <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-            </div>
-            <div class="ly-con-wrap">
-                <div class="table-type">
-                    <div class="col">
-                        <dl>
-                            <dt>비율 선택</dt>
-                            <dd class="dp-b-b choose-wrap">
-                                <div class="choose-group insurance">
-                                    <ul class="choose btnSelect">
-                                        <li class="on"><button type="button" title="선택됨">0%</button></li>
-                                        <li><button type="button" title="">5%</button></li>
-                                        <li><button type="button" title="">10%</button></li>
-                                        <li><button type="button" title="">15%</button></li>
-                                        <li><button type="button" title="">20%</button></li>
-                                        <li><button type="button" title="">25%</button></li>
-                                        <li><button type="button" title="">30%</button></li>
-                                        <li><button type="button" title="">35%</button></li>
-                                        <li><button type="button" title="">40%</button></li>
-                                        <li><button type="button" title="">50%</button></li>
-                                    </ul>
-                                </div>
-                            </dd>
-                            <dd class="dp-b-b form-group style3">
-                                <div class="select-box">
-                                    <div class="stove-dim"></div>
-                                    <div class="se-select" data-stove="select">
-                                        <select class="" title="메뉴구분">
-                                            <option value="" disabled="" selected="" hidden="">직접 선택</option><!-- [D] : default - 셀렉트의 placeholder 기능-->
-                                            <option value="0">0%</option>
-                                            <option value="1">1%</option>
-                                            <option value="2">2%</option>
-                                            <option value="3">3%</option>
-                                            <option value="4">4%</option>
-                                            <option value="5">5%</option>
-                                            <option value="6">6%</option>
-                                            <option value="7">7%</option>
-                                            <option value="8">8%</option>
-                                            <option value="9">9%</option>
-                                            <option value="10">10%</option>
-                                            <option value="11">11%</option>
-                                            <option value="12">12%</option>
-                                            <option value="13">13%</option>
-                                            <option value="14">14%</option>
-                                            <option value="15">15%</option>
-                                            <option value="16">16%</option>
-                                            <option value="17">17%</option>
-                                            <option value="18">18%</option>
-                                            <option value="19">19%</option>
-                                            <option value="20">20%</option>
-                                            <option value="21">21%</option>
-                                            <option value="22">22%</option>
-                                            <option value="23">23%</option>
-                                            <option value="24">24%</option>
-                                            <option value="25">25%</option>
-                                            <option value="26">26%</option>
-                                            <option value="27">27%</option>
-                                            <option value="28">28%</option>
-                                            <option value="29">29%</option>
-                                            <option value="30">30%</option>
-                                            <option value="31">31%</option>
-                                            <option value="32">32%</option>
-                                            <option value="33">33%</option>
-                                            <option value="34">34%</option>
-                                            <option value="35">35%</option>
-                                            <option value="36">36%</option>
-                                            <option value="37">37%</option>
-                                            <option value="38">38%</option>
-                                            <option value="39">39%</option>
-                                            <option value="40">40%</option>
-                                            <option value="41">41%</option>
-                                            <option value="42">42%</option>
-                                            <option value="43">43%</option>
-                                            <option value="44">44%</option>
-                                            <option value="45">45%</option>
-                                            <option value="46">46%</option>
-                                            <option value="47">47%</option>
-                                            <option value="48">48%</option>
-                                            <option value="49">49%</option>
-                                            <option value="50">50%</option>
-                                        </select>
-                                        <div class="e-select-dim"></div>
-                                    </div>
-                                </div>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>금액 직접 입력</dt>
-                            <dd class="form-group">
-                                <div class="col-1">
-                                    <input id="" title="금액" type="amount" class="form-control amount-num" placeholder="직접입력"
-                                        inputmode="numeric"><!-- [D] inputmode="numeric" : 세자리 수마다 콤마 적용  -->
-                                    <span class="amount-txt">원</span>
-                                </div>
-                            </dd>
-                        </dl>
-                    </div>
-                </div>
-            </div>
-            <div class="btn-wrap popup">
-                <button type="button" name="button" class="btn btn-bottom" >저장</button>
-            </div>
-        </div>
     </div>
     <script type="text/javascript" src="../../resources/js/lib/swiper-bundle.min.js"></script>
 </body>

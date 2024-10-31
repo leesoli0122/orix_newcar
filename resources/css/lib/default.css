@@ -133,7 +133,6 @@ a:focus-visible,
 .header-wrap.side > .h-menu ul.menu > li .menuitem-wrap .menuitem > li > a:focus-visible { outline: 2px solid #000; }
 .footer-wrap a:focus-visible, */
 /* .footer-wrap button:not(.footer-wrap button.stove-option):focus-visible { outline:2px solid #f00; } */
-
 /*********************************************************************
 title
 *********************************************************************/
@@ -283,7 +282,7 @@ header #헤더
 .header-wrap > .h-menu li:first-child .menuitem-wrap { left:100px; }
 .header-wrap > .h-menu li:first-child .menuitem-wrap::before { left: 50px; }
 .header-wrap > .h-menu .menuitem-wrap { position:absolute; top:85px; left:50%; padding:20px 14px; width:220px; height:auto; border-radius:12px; background:var(--white); box-shadow:0 0 12px #00012217; z-index:1; transform: scaleY(0)  translateX(-50%);  transform-origin: top; transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);  }
-.menuitem-wrap::before { content: ''; position: absolute; transform:rotate(270deg); top:-20px; left:50%; transform:translateX(-50%); width:42px; height:32px; background:url(../../images/triangle.png)no-repeat 50%/42px auto; }
+.menuitem-wrap::before { content: ''; position: absolute; transform:rotate(270deg); top:-32px; left:50%; transform:translateX(-50%); width:115px; height:53px; background:url(../../images/triangle.png)no-repeat 50%/42px auto; }
 .header-wrap > .h-menu ul.menu > li .menuitem-wrap .menuitem { display:inline-block; width:100%; }
 .header-wrap > .h-menu ul.menu > li .menuitem-wrap .menuitem > li { display:block; margin:0 0 8px; text-align:left; }
 .header-wrap > .h-menu ul.menu > li .menuitem-wrap .menuitem > li a { display:inline-block; padding:9px 12px; width:100%; border-radius:12px; font-size:var(--font18); font-weight:var(--w-regular); color:var(--title); }

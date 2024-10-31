@@ -1,4 +1,4 @@
-ㅠb/*********************************************************************
+/*********************************************************************
 SELECT #셀렉트
 *********************************************************************/
 
@@ -580,7 +580,7 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap.ico > .accordion-info > .ques::before { top:50%; transform: translateY(-50%); left:30px; background: url(../../images/ic_question.png) no-repeat 100%/24px auto;  }
 
 .accordion-wrap.ico > .accordion-info > .ques-cont p::before { left:0; background: url(../../images/ic_answer.png) no-repeat 100%/24px auto; }
-.accordion-wrap.ico > .accordion-info > .ques-cont p { padding-left:44px; }
+.accordion-wrap.ico > .accordion-info > .ques-cont p { padding-left:44px; line-height:24px; white-space:pre-wrap; }
 .accordion-wrap.ico > .accordion-info > .ques .date { margin-left:30px; }
 
 /*********************************************************************
@@ -1146,7 +1146,7 @@ tfoot tr td:last-child { border-right:none; }
 .nte-wrap .nte-view dt .nte-header .text-after.style4 li { font-size:var(--font16); color:var(--inactive); }
 
 .nte-wrap .nte-view .notice-contents { padding:30px 20px; min-height:320px; font-size:var(--font16); font-weight:var(--w-regular); color:var(--normal); }
-.nte-wrap .nte-view .notice-contents p { margin-bottom:10px; }
+.nte-wrap .nte-view .notice-contents p { margin-bottom:10px; white-space:pre-wrap; }
 
 /* 다운로드 */
 .download-wrap { position: relative; margin-top:30px; margin-bottom:60px; padding: 20px; width: 100%; border-radius: 10px; background: #F8F9FC; font-size:var(--font14); }

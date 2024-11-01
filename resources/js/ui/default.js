@@ -258,6 +258,30 @@ function messagePopup(id) {
 
   _target.find('.btn-layer-close, .btn-close, .confirm').off('click').on('click', function () {
     closePopup(id, currentTop);
+
+    let isEmptyField = false;
+
+    $('input, textarea, select').each(function() {
+      if ($(this).val().trim() === "") {
+        // 포커스 설정
+        $(this).focus();
+
+        // 포커스된 인풋으로 스크롤 이동
+        let $this = $('input, textarea, select').on('focus', function() {
+          let offset = $(this).offset();
+          console.log('Focused input position:', offset.top, offset.left);
+        });
+
+        setTimeout(function() {
+          $('html, body').animate({
+            scrollTop: $this.offset().top
+          }, 500);
+        }, 0);
+
+        isEmptyField = true;
+        return false; // 루프 중지
+      }
+    });
   });//off('click')추가(기존 이벤트를 제거한 뒤 바인딩)
 
   _target.fadeIn(600).addClass('on').focus();

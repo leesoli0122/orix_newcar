@@ -183,6 +183,7 @@
 .swiper.introListSlider { flex:1; width:100%; min-width:0; }
 .swiper.introListSlider { overflow: hidden; width:100%; }
 
+.swiper.introListSlider .swiper-controller, div.introListSlider .swiper-controller { display: none; }
 .swiper.introListSlider .swiper-controller { width:200px; margin-top:20px; }
 .swiper.introListSlider .swiper-controller .swiper-button-prev,
 .swiper.introListSlider .swiper-controller .swiper-button-next { z-index:11; width:41px; height:41px; transition: transform 0.3s ease;  top:var(--swiper-navigation-top-offset, 22px); bottom:0; }
@@ -282,11 +283,6 @@
 .mainSec-notice div.introNotice-area>div.intro-con.ico ul>li { padding-left:32px; }
 .mainSec-notice div.introNotice-area>div.intro-con.ico ul>li:before { content:''; position:absolute;  transform: translateY(-50%); top:50%; left:0; width:24px; height:24px; background: var(--m-img-q)no-repeat 100%/24px auto; }
 
-/* hover case */
-/* .mainSec-notice div.intro-con ul>li:hover>a>span.txt,
-.mainSec-notice div.intro-con ul>li:hover>a>span.date { color:var(--secondary); } */
-
-
 /*********************************************************************
 Media Query
 *********************************************************************/
@@ -336,12 +332,12 @@ Media Query
 /*---------------------------------------------
     mainSec-myStatus Swiper
 ---------------------------------------------*/
-.mainSec-myStatus div.introListSlider { display:flex; flex-direction: column; align-items: center; padding-bottom:62px; }
-.mainSec-myStatus div.introListSlider::before,
-.mainSec-myStatus div.introListSlider::after { content: ''; position: absolute; top: -30px; bottom: 0; width:100px; /* 블러 영역의 너비 */ z-index: 2; /*pointer-events: none;*/ }
-/* .mainSec-myStatus div.introListSlider::before { left: 0; background: linear-gradient(to right, rgba(242, 246, 252, 0.6), rgba(242, 246, 252, 0)); } */
-.mainSec-myStatus div.introListSlider::after {  right: 0; background: linear-gradient(to left, rgba(242, 246, 252, 1), rgba(242, 246, 252, 0)); }
+.swiper.introListSlider { display:flex; flex-direction: column; align-items: center; padding-bottom:62px; }
+.swiper.introListSlider::before,
+.swiper.introListSlider::after { content: ''; position: absolute; top: -30px; bottom: 0; width:100px; z-index: 2; }
+.swiper.introListSlider::after {  right: 0; background: linear-gradient(to left, rgba(242, 246, 252, 1), rgba(242, 246, 252, 0)); }
 
+.swiper.introListSlider .swiper-controller, div.introListSlider .swiper-controller { display: block; }
 /*********************************************************************
 메인.04 - 나의 실적
 *********************************************************************/

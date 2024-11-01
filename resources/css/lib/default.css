@@ -234,7 +234,7 @@ p + .bul-dot,
 login #로그인
 *********************************************************************/
 .wrap.login { padding-top:50px; }
-.wrap.login .sub-content { padding:50px 20px 80px; min-height:calc( 100vh - 484px); }
+.wrap.login .sub-content { padding:50px 20px 80px; min-height:calc( 100vh - 484px); max-width:1000px; }
 .wrap.login .login-header { padding-bottom:54px; border-bottom:1px solid var(--border1); text-align:center; }
 .wrap.login .login-header img { width:234px; margin-bottom:30px; }
 .wrap.login .login-header h2 { font-size:var(--font28); font-weight:var(--w-bold); color:var(--title); }

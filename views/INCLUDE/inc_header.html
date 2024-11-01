@@ -106,68 +106,53 @@
 
         // 데스크탑 메뉴
         function menuDesktop() {
-            // 기존 이벤트 리스너 제거 및 초기화
+            let hideMenuTimer;
+
+            // 초기화
             $(".menu > li").off('mouseenter mouseleave');
             $("html").css({ 'overflow': 'auto' });
-            $lnb.css({'right':'0','display':'flex', 'opacity':'1', 'overflow':'visible'});
+            $lnb.css({ 'right': '0', 'display': 'flex', 'opacity': '1', 'overflow': 'visible' });
             $header.removeClass('side');
 
-            // 메뉴 항목에 마우스를 올렸을 때 서브메뉴 보이기
+            // 메뉴에 마우스가 올라가면 서브메뉴 보이기
             $(".menu > li").on('mouseenter', function () {
-                var $thisMenuWrap = $(this).children(".menuitem-wrap");
-                var $otherMenuWraps = $(".menuitem-wrap").not($thisMenuWrap);
-
-                // 현재 hover된 메뉴만 열고 나머지는 닫기
-                $(this).addClass('on').siblings().removeClass('on');
-                $thisMenuWrap.addClass('on');
-                $otherMenuWraps.removeClass('on');
+                clearTimeout(hideMenuTimer);
+                $(this).addClass('on').siblings().removeClass('on').find(".menuitem-wrap").removeClass('on');
+                $(this).children(".menuitem-wrap").addClass('on');
             });
 
-            // menuitem-wrap에서 마우스가 벗어나면 on 클래스 삭제
-            $(".menuitem-wrap").on('mouseleave', function () {
-                $(this).removeClass('on');
-                $(this).closest('li').removeClass('on'); // 부모 li에서도 on 클래스 제거
+            // 메뉴 전체를 벗어났을 때 일정 시간 후 서브메뉴 닫기
+            $(".menu").on('mouseleave', function () {
+                hideMenuTimer = setTimeout(() => $(".menu > li, .menuitem-wrap").removeClass('on'), 300);
             });
 
-            // Tab 키로 메뉴 내비게이션 가능하게 설정
+            // 서브메뉴에 마우스가 들어오면 닫힘 타이머 제거
+            $(".menuitem-wrap").on('mouseenter', () => clearTimeout(hideMenuTimer));
+
+            // 포커스 이벤트로 접근성 설정
+            $(".menu > li > a, .menuitem-wrap a").on('focus', function () {
+                clearTimeout(hideMenuTimer);
+                $(this).closest('li').addClass('on').find(".menuitem-wrap").addClass('on');
+            }).on('blur', function () {
+                hideMenuTimer = setTimeout(() => $(".menu > li, .menuitem-wrap").removeClass('on'), 300);
+            });
+
+            // Tab 키로 서브메뉴로 이동 가능하게 설정
             $(".menu > li > a").on('keydown', function (e) {
                 if (e.key === 'Tab' && $(this).hasClass('on')) {
-                    // 포커스가 현재 열린 메뉴 내에서 서브메뉴로 이동하도록 처리
-                    var $thisMenuWrap = $(this).next(".menuitem-wrap");
-                    var $firstSubMenuItem = $thisMenuWrap.find('a').first();
-
+                    const $firstSubMenuItem = $(this).next(".menuitem-wrap").find('a').first();
                     if ($firstSubMenuItem.length) {
-                        e.preventDefault(); // 기본 Tab 동작 방지
-                        $firstSubMenuItem.focus(); // 서브메뉴의 첫 항목에 포커스 이동
+                        e.preventDefault();
+                        $firstSubMenuItem.focus();
                     }
                 }
             });
 
-            // 메뉴 내에서 포커스가 가면 border에 1px 적용
-            $(".menu > li > a, .menuitem-wrap a").on('focus', function () {
-                $(this).css('border', '1px solid #000'); // 포커스 시 1px 테두리 추가
-
-                // 해당 li 및 menuitem-wrap에만 on 클래스 추가
-                $(this).closest('li').addClass('on'); // 해당 li에 on 추가
-                $(this).closest('.menuitem-wrap').addClass('on'); // 해당 서브메뉴에 on 추가
-            });
-
-            // 포커스가 해제되면 border 제거
-            $(".menu > li > a, .menuitem-wrap a").on('blur', function () {
-                $(this).css('border', 'none'); // 포커스 해제 시 테두리 제거
-
-                // 포커스가 해제된 li 및 menuitem-wrap에서 on 클래스 제거
-                $(this).closest('li').removeClass('on'); // 해당 li에서 on 제거
-                $(this).closest('.menuitem-wrap').removeClass('on'); // 해당 서브메뉴에서 on 제거
-            });
-            // 서브메뉴에서 Shift+Tab을 누르면 상위 메뉴로 포커스 이동
+            // Shift+Tab으로 상위 메뉴로 포커스 이동
             $(".menuitem-wrap a").on('keydown', function (e) {
                 if (e.key === 'Tab' && e.shiftKey) {
-                    var $parentMenu = $(this).closest('.menuitem-wrap').prev('a');
-                    if ($parentMenu.length) {
-                        e.preventDefault();
-                        $parentMenu.focus(); // 상위 메뉴로 포커스 이동
-                    }
+                    e.preventDefault();
+                    $(this).closest('.menuitem-wrap').prev('a').focus();
                 }
             });
         }

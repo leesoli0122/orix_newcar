@@ -48,7 +48,7 @@
         <div id="contentWrap" class="sub-content">
             <!-- s:contents -->
             <div class="contents">
-                <section class="mainSec01">
+                <section class="mainSec-banner">
                     <div class="inner">
                         <div class="introMain-area x-slide">
                             <ul>
@@ -75,7 +75,92 @@
                     </div>
                 </section>
 
-                <section class="mainSec02">
+                <section class="mainSec-myTodoList">
+                    <div class="inner">
+                        <div class="intro-box">
+                            <h2>TO-DO-LIST!</h2>
+                            <p>나의 선구매 선점요청 차량 업무 현황을<br/>확인하고 관리하실 수 있습니다.</p>
+                        </div>
+                        <!--S: 결과 있을 경우-->
+                        <div class="introTodoSlider swiper">
+                            <ul class="introToList-area swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="javascript:void(0);">
+                                        <p  class="intro-tit">선점요청완료</p>
+                                        <div class="intro-con">
+                                            <p>
+                                                <em>선구매</em>
+                                                <strong>현대 캐스퍼 2023년형 가솔린 1.0 스마트</strong>
+                                            </p>
+                                            <ul>
+                                                <li class="date"><span class="tit">선점날짜 :</span><span class="txt">2024.10.27</span></li>
+                                                <li class="deadline"><span class="tit">확보가능기한 :</span><span class="txt">2024.10.29&nbsp;&nbsp;&nbsp;&nbsp;23:59:59</span></li>
+                                                <li class="num"><span class="tit">견적번호 :</span><span class="txt">RM02938-000002</span>&nbsp;·&nbsp;<span class="tit">제조사 계약번호 : </span><span class="txt">AAAAA0</span></li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="swiper-slide">
+                                    <a href="javascript:void(0);">
+                                        <p  class="intro-tit">선점기한만료</p>
+                                        <div class="intro-con">
+                                            <p>
+                                                <em>선구매</em>
+                                                <strong>현대 캐스퍼 2023년형 가솔린 1.0 스마트</strong>
+                                            </p>
+                                            <ul>
+                                                <li class="date"><span class="tit">선점날짜 :</span><span class="txt">2024.10.27</span></li>
+                                                <li class="deadline"><span class="txt">다시 선점요청을 진행해주세요.</span></li>
+                                                <li class="num"><span class="tit">견적번호 :</span><span class="txt">RM02938-000002</span>&nbsp;·&nbsp;<span class="tit">제조사 계약번호 : </span><span class="txt">AAAAA0</span></li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="swiper-slide">
+                                    <a href="javascript:void(0);">
+                                        <p  class="intro-tit">배정완료</p>
+                                        <div class="intro-con">
+                                            <p>
+                                                <strong>현대 캐스퍼 2023년형 가솔린 1.0 스마트</strong>
+                                            </p>
+                                            <ul>
+                                                <li class="date"><span class="tit">선점날짜 :</span><span class="txt">2024.10.27</span></li>
+                                                <li class="deadline"><span class="tit">예시일 :</span><span class="txt">2024.10.29&nbsp;&nbsp;&nbsp;&nbsp;23:59:59</span></li>
+                                                <li class="num"><span class="tit">견적번호 :</span><span class="txt">RM02938-000002</span>&nbsp;·&nbsp;<span class="tit">제조사 계약번호 : </span><span class="txt">AAAAA0</span></li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <div class="swiper-controller">
+                                <div class="swiper-scrollbar-area">
+                                    <div class="swiper-scrollbar"></div>
+                                </div>
+                                <div class="swiper-button-area">
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--E: 결과 있을 경우-->
+
+                        <!--S: 결과 없을 경우-->
+                        <!-- <div class="introResult-area noData">
+                            <div class="con">
+                                <p>선구매 차량, 배정완료 차량이 있을 경우<br/>
+                                    To-Do List에 노출됩니다.</p>
+                            </div>
+                        </div> -->
+                        <!--E: 결과 없을 경우-->
+
+                    </div>
+                </section>
+
+                <section class="mainSec-myStatus">
                     <div class="inner">
                         <div class="intro-box">
                             <h2>
@@ -83,7 +168,7 @@
                                 <strong>나의 현황조회</strong>
                             </h2>
                         </div>
-                        <div class="introListSlider">
+                        <div class="introListSlider swiper">
                             <ul class="introList-area swiper-wrapper">
                                 <li class="swiper-slide"><a href="javascript:void(0);"><p class="tit">견적</p><p class="num">3건</p><span class="btn">자세히보기</span></a></li>
                                 <li class="swiper-slide"><a href="javascript:void(0);"><p class="tit">심사</p><p class="num">3건</p><span class="btn">자세히보기</span></a></li>
@@ -98,58 +183,22 @@
                             </div>
                         </div>
                     </div>
-                    <script>
-                        $(document).ready(function() {
-                            var swiper = new Swiper(".introListSlider", {
-                                slidesPerView: 5, // Default
-                                lazy: true,
-                                spaceBetween: 0,
-                                pagination: {
-                                    el: ".swiper-pagination",
-                                    type: "fraction"
-                                },
-                                navigation: {
-                                    nextEl: ".swiper-button-next",
-                                    prevEl: ".swiper-button-prev",
-                                },
-                            });
-                        
-                            // Resize
-                            $(window).on('load resize', function() {
-                                if ($(window).width() <= 860) {
-                                    swiper.params.slidesPerView = 1;
-                                } else if ($(window).width() <= 1200) {
-                                    swiper.params.slidesPerView = 2;
-                                } else {
-                                    swiper.params.slidesPerView = 5;
-                                }
-                        
-                                swiper.update();
-                        
-                                if ($(window).width() <= 1200) {
-                                    $(".swiper-button-next, .swiper-button-prev, .swiper-pagination").css("display", "block");
-                                } else {
-                                    $(".swiper-button-next, .swiper-button-prev, .swiper-pagination").css("display", "none");
-                                }
-                            });
-                        });
-                        </script>
                 </section>
 
-                <section class="mainSec03">
+                <section class="mainSec-myPerfo">
                     <div class="inner">
                         <h2 class="ir">나의 실적 보기</h2>
                         <a href="javascript:void(0);"><em>나의 실적을 한눈에!</em><strong>최근 1달, 나의 실적과 전체 실적을 확인해 보세요</strong><img class="img" src="../../resources/images/main/ic_my_graph.png" alt=""></a>
                         <div class="introList-area">
                             <ul>
-                                <li><strong class="tit">렌터카<span>( 2024.10.11 ~ 2024.11.10 )</span></strong><strong class="txt">00.000.000<span>원</span></strong></li>
-                                <li><strong class="tit">오토리스<span>( 2024.10.21 ~ 2024.11.10 )</span></strong><strong class="txt">00.000.000<span>원</span></strong></li>
+                                <li><strong class="tit">렌터카<span>(2024.10.11 ~ 2024.11.10)</span></strong><strong class="txt">00.000.000<span>원</span></strong></li>
+                                <li><strong class="tit">오토리스<span>(2024.10.21 ~ 2024.11.10)</span></strong><strong class="txt">00.000.000<span>원</span></strong></li>
                             </ul>
                         </div>
                     </div>
                 </section>
 
-                <section class="mainSec04">
+                <section class="mainSec-myEstimate">
                     <div class="inner">
                         <h2>어떤 견적서를 작성하시겠어요?</h2>
                         <ul class="introList-area">
@@ -160,9 +209,9 @@
                     </div>
                 </section>
 
-                <section class="mainSec05">
+                <section class="mainSec-notice">
                     <div class="inner">
-                        <div class="introNotice-area">
+                        <div class="introList-area">
                             <div class="intro-tit">
                                 <h2>공지사항</h2>
                             </div>
@@ -187,7 +236,7 @@
                                 <a href="javascript:void(0);" class="btn"><span class="ir">자료실</span>더보기</a>
                             </div>
                         </div>
-                        <div class="introNotice-area">
+                        <div class="introList-area">
                             <div class="intro-tit">
                                 <h2>자료실</h2>
                             </div>
@@ -233,5 +282,73 @@
         <!-- //e:footer -->
     </div>
 </body>
+
+<script>
+    $(document).ready(function() {
+
+        //TO-DO-LIST
+        var introTodoSwiper  = new Swiper(".introTodoSlider", {
+            slidesPerView: 2, // Default
+            spaceBetween: 24,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        //나의 현황조회
+        var introListSlider = new Swiper(".introListSlider", {
+            slidesPerView: 5, // Default
+            lazy: true,
+            spaceBetween: 0,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction"
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+        
+        // Resize
+        $(window).on('load resize', function() {
+
+            //TO-DO-LIST
+            if ($(window).width() <= 1200) {
+                introTodoSwiper.params.slidesPerView = 1;
+            } else {
+                introTodoSwiper.params.slidesPerView = 2;
+            }
+            introTodoSwiper.update();
+    
+
+            //나의 현황조회
+            if ($(window).width() <= 860) {
+                introListSlider.params.slidesPerView = 1;
+            } else if ($(window).width() <= 1200) {
+                introListSlider.params.slidesPerView = 2;
+            } else {
+                introListSlider.params.slidesPerView = 5;
+            }
+            introListSlider.update();
+    
+            if ($(window).width() <= 1200) {
+                $(".swiper-button-next, .swiper-button-prev, .swiper-pagination").find(".introListSlider").show();
+            } else {
+                $(".swiper-button-next, .swiper-button-prev, .swiper-pagination").find(".introListSlider").hide;
+            }
+        });
+        
+    });
+
+</script>
 
 </html>

@@ -80,17 +80,15 @@
 .mainSec-banner div.shortcut-area { margin-top:60px; padding:36px; width:368px; height:382px; border-radius: 36px; background: var(--white); box-shadow: 0px 0px 10px rgba(0,12 ,44, 0.16); }
 .mainSec-banner div.shortcut-area>.btn-wrap { display:flex; }
 .mainSec-banner div.shortcut-area>.btn-wrap>.btn { display:flex; align-items: center; word-break: keep-all; margin-left:10px; height:70px; border-radius: 8px; font-size: var(--font22); font-weight: var(--w-bold); color:var(--white); }
+.mainSec-banner div.shortcut-area>.btn-wrap>.btn:focus { outline:2px solid var(--title); }
 .mainSec-banner div.shortcut-area>.btn-wrap>.btn:nth-child(1) { margin-left:0; padding:0 40px; background: var(--m-color02); }
 .mainSec-banner div.shortcut-area>.btn-wrap>.btn:nth-child(2) { padding:0 30px; background: var(--m-color03); }
 .mainSec-banner div.shortcut-area>ul>li:nth-of-type(1) { background: var(--m-img-shortCut01) no-repeat 50% 10px/50px auto;  }
 .mainSec-banner div.shortcut-area>ul>li:nth-of-type(2) { background: var(--m-img-shortCut02) no-repeat 50% 10px/50px auto; }
 .mainSec-banner div.shortcut-area>ul>li:nth-of-type(3) { background: var(--m-img-shortCut03) no-repeat 50% 10px/50px auto; }
 .mainSec-banner div.shortcut-area>ul>li:nth-of-type(4) { background: var(--m-img-shortCut04) no-repeat 50% 10px/50px auto; }
-.mainSec-banner div.shortcut-area>ul>li:nth-of-type(1):hover,
-.mainSec-banner div.shortcut-area>ul>li:nth-of-type(2):hover,
-.mainSec-banner div.shortcut-area>ul>li:nth-of-type(3):hover,
-.mainSec-banner div.shortcut-area>ul>li:nth-of-type(4):hover,
-.mainSec-banner div.shortcut-area>ul>li:nth-of-type(5):hover { background-color: var(--m-background5); border-radius: 10px;}
+.mainSec-banner div.shortcut-area>ul>li:hover { background-color: var(--m-background5); border-radius: 10px;}
+.mainSec-banner div.shortcut-area>ul>li>a:focus { border:1px solid var(--secondary); }
 /*********************************************************************
 메인.02 - To-Do-List
 *********************************************************************/
@@ -142,6 +140,7 @@
 .swiper.introTodoSlider .swiper-controller .swiper-button-area  {  flex-shrink: 0; position:absolute; right:0; width:132px; }
 .swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next, .swiper-controller .swiper-button-area .swiper-button-prev { top:initial; }
 .swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next:after, .swiper-controller .swiper-button-area .swiper-button-prev:after { font-size:var(--font22); color:var(--title); }
+.swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next:focus, .swiper-controller .swiper-button-area .swiper-button-prev:focus { border:1px solid var(--secondary); }
 .swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-pagination { top:-11px; }
 
 /*********************************************************************
@@ -191,6 +190,8 @@
 .swiper.introListSlider .swiper-controller .swiper-button-next:after { content: ''; position: absolute; width:41px; height:41px; background: var(--m-img-swiper) no-repeat right 8px center/16px auto;  border: 3px solid var(--m-color09); border-radius:50%; }
 .swiper.introListSlider .swiper-controller .swiper-button-prev:hover,
 .swiper.introListSlider .swiper-controller .swiper-button-next:hover { transform: scale(1.1); }
+.swiper.introListSlider .swiper-controller .swiper-button-prev:focus,
+.swiper.introListSlider .swiper-controller .swiper-button-next:focus { border:1px solid var(--secondary); }
 
 .swiper.introListSlider .swiper-controller .swiper-pagination { width:auto; transform: translateX(-50%); top:var(--swiper-pagination-top, 8px); left:50%; bottom:0px; font-size:var(--font24); font-weight:var(--w-bold); color:var(--inactive); }
 .swiper.introListSlider .swiper-controller .swiper-pagination .swiper-pagination-current { color:var(--normal); }
@@ -275,7 +276,12 @@
 .mainSec-notice div.intro-con a.btn{ display:flex; align-items: center; position:absolute; top:-81px; right:0; font-size:var(--font16); color:var(--subtitle); }
 .mainSec-notice div.intro-con a.btn::after { content:'>'; margin-left:6px; font-size:var(--font14); color:var(--subtitle);  }
 .mainSec-notice div.intro-con a.btn:hover,
-.mainSec-notice div.intro-con a.btn:hover::after { color:var(--secondary); }
+.mainSec-notice div.intro-con a.btn:hover::after,
+.mainSec-notice div.intro-con a.btn:focus,
+.mainSec-notice div.intro-con a.btn:focus::after { color:var(--secondary); }
+.mainSec-notice div.intro-con a.btn:focus { border:1px solid var(--secondary); }
+
+
 /*---------------------------------------------
     mainSec-notice Contents Q 아이콘
 ---------------------------------------------*/
@@ -306,15 +312,11 @@ Media Query
 .mainSec-banner div.shortcut-area>ul { flex-wrap: initial; width:100%; flex:1; margin-top:0; }
 .mainSec-banner div.shortcut-area>ul>li { flex:1; }
 .mainSec-banner div.shortcut-area>ul>li:nth-of-type(1) {flex:1.2; }
-.mainSec-banner div.shortcut-area>ul>li:nth-of-type(1):hover,
-.mainSec-banner div.shortcut-area>ul>li:nth-of-type(2):hover,
-.mainSec-banner div.shortcut-area>ul>li:nth-of-type(3):hover,
-.mainSec-banner div.shortcut-area>ul>li:nth-of-type(4):hover,
-.mainSec-banner div.shortcut-area>ul>li:nth-of-type(5):hover { background-color: var(--white); }
+.mainSec-banner div.shortcut-area>ul>li:hover  { background-color: var(--white); }
 
 .mainSec-banner .img { margin-top:84px; width:400px; height:342px; }
 
-/*********************************************************************
+/************************************************************           *********
 메인.02 - TO-DO-LIST
 *********************************************************************/
 .mainSec-myTodoList { margin-top:175px; }

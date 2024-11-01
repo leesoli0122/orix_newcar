@@ -129,6 +129,7 @@
 /*---------------------------------------------
     mainSec-myTodoList Swiper
 ---------------------------------------------*/
+.swiper.introTodoSlider { padding:1px; }
 .swiper.introTodoSlider ul.introToList-area { padding:3px 0 59px 0; }
 .swiper.introTodoSlider ul.introToList-area,
 .swiper.introTodoSlider ul.introToList-area>li { height:322px; }

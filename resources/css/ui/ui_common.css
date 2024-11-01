@@ -204,7 +204,8 @@ input.form-control:disabled { background: var(--background2); color:var(--inacti
 input.form-control:read-only { border:1px solid var(--border2); }
 /*textarea error - default [현재는 form-group에 error 클래스를 추가하여 전체 스타일 적용상태]*/
 .form-group.error textarea { border:1px solid var(--error); }
-
+input.form-control[type="password"] { font-size:var(--font28); letter-spacing: -10px; }
+input.form-control[type="password"]::placeholder { font-size:var(--font28); }
 /*********************************************************************
 INPUT_ ETC
 *********************************************************************/

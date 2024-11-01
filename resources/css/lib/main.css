@@ -367,6 +367,9 @@ Media Query
 /*********************************************************************
 메인.03 - 나의 현황조회
 *********************************************************************/
+.mainSec-myTodoList>div { gap:20px; }
+.mainSec-myTodoList div.intro-box { flex:0 0 320px; background: var(--m-img-todo) no-repeat right 0px bottom 4px/ 300px auto, linear-gradient(#404040, #ABBCD0);}
+.mainSec-myTodoList ul.introToList-area>li>a>div.intro-con { height:290px; }
 .mainSec-myStatus div.introListSlider::before,
 .mainSec-myStatus div.introListSlider::after { width:0; }
 /*********************************************************************

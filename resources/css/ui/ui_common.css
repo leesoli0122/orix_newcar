@@ -543,9 +543,10 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap > .accordion-info > .ques-cont .list-view ul>li>p:last-child, .accordion-wrap > .accordion-info > .ques-cont .Pre-purchase ul>li>p:last-child { flex:1; color:var(--title); font-weight: var(--w-regular); }
 
 /* 선구매-심사승인(선점완료) */
-.accordion-wrap > .accordion-info > .ques-cont .Pre-purchase { padding:29px 30px; border-radius:20px; background:var(--white); }
+.accordion-wrap > .accordion-info > .ques-cont .Pre-purchase { margin-bottom:50px; padding:29px 30px; border-radius:20px; background:var(--white); }
 .accordion-wrap > .accordion-info > .ques-cont .Pre-purchase .tit { padding-bottom:30px; border-bottom:1px solid var(--border3); font-size:var(--font20); font-weight:var(--w-bold); color:var(--title); }
 .accordion-wrap > .accordion-info > .ques-cont .Pre-purchase ul { font-size:var(--font18); }
+.accordion-wrap > .accordion-info > .ques-cont .Pre-purchase ul>li:last-child { margin-bottom:0; }
 .accordion-wrap > .accordion-info > .ques-cont .Pre-purchase ul>li>p:first-child{ flex:0 0 168px; color:var(--normal); font-weight: var(--w-bold); }
 
 /* 차량가격 */
@@ -700,9 +701,9 @@ popup #팝업
 /*---------------------------------------------
 약관 팝업
 ---------------------------------------------*/
-.rule-wrap .terms-tit { margin-bottom:15px; font-size:var(--font16); font-weight:var(--w-regular); color:var(--normal); }
+.rule-wrap .terms-tit { margin-bottom:32px; font-size:var(--font16); font-weight:var(--w-regular); color:var(--normal); }
 .rule-wrap .terms-title { margin-bottom:15px; font-size:var(--font18); font-weight:var(--w-bold); color:var(--normal); }
-.rule-wrap ul { margin-bottom:15px; }
+.rule-wrap ul { margin-bottom:32px; }
 .rule-wrap ul li { padding-left:10px; padding-bottom:10px; }
 .rule-wrap ul li:last-child { padding-bottom:0; }
 .rule-wrap ul li .ListType { margin-bottom:0; margin-top:10px; }
@@ -1507,7 +1508,8 @@ dd.download-wrap { padding:0; background:transparent; }
 .choose-group .form-group.radio ul.radio-box li { width:100%; }
 .choose-group .form-group.radio ul.radio-box li label { display:flex; flex:1; justify-content:space-between; align-items:center; }
 .choose-group .form-group.radio ul.radio-box li p.num { display:flex; justify-content: flex-end; flex: 0 0 140px; color:var(--subtitle); font-weight:var(--w-regular); }
-.choose-group .form-group.radio ul.radio-box li p.num span { font-weight:var(--w-bold); color:var(--subtitle); }
+.choose-group .form-group.radio ul.radio-box li p.num span { padding-left:0; font-weight:var(--w-bold); color:var(--subtitle); }
+.choose-group .form-group.radio ul.radio-box li p.num span::before { content:none; }
 
 /*---------------------------------------------
 	slide #스와이퍼

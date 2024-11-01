@@ -135,7 +135,7 @@
 .swiper.introTodoSlider ul.introToList-area,
 .swiper.introTodoSlider ul.introToList-area>li { height:322px; }
 
-.swiper.introTodoSlider .swiper-controller { margin:17px 0; }
+.swiper.introTodoSlider .swiper-controller { margin:17px 0; padding-bottom: 4px; }
 .swiper.introTodoSlider .swiper-controller .swiper-scrollbar-area .swiper-scrollbar {  flex-grow: 1; bottom:var(--swiper-scrollbar-bottom, -4px); max-width: calc(100% - 164px); width: calc(85.85% - 2 * var(--swiper-scrollbar-sides-offset, 1%)); margin-right:32px; }
 .swiper.introTodoSlider .swiper-controller .swiper-button-area  {  flex-shrink: 0; position:absolute; right:0; width:132px; }
 .swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next, .swiper-controller .swiper-button-area .swiper-button-prev { top:initial; }

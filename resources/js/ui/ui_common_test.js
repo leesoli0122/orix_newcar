@@ -383,7 +383,7 @@ $(document).ready(function() {
 
         // 파일 선택 (50MB 이하의 xlsx, pdf, hwp, pptx, doc파일 3개까지 업로드)
         $fileInput.on('change', function() {
-			
+            // 파일 3개 있는지 확인
             if ($addFileList.children('li').length >= maxFiles) {
                 messageView('최대 3개의 파일만 선택할 수 있습니다.');
                 return;
@@ -413,7 +413,7 @@ $(document).ready(function() {
                     const $newListItem = $('<li>').text(file.name);
                     const $deleteButton = $('<span>').addClass('delete-file').text('삭제'); // 삭제 버튼 추가
 					const $deleteButton2 = $deleteButton.on('click',function(){
-
+						//삭제버튼 추가
 						var indexToRemove = $(this).closest('li').index();
 						removeFiles(indexToRemove);
 						$(this).closest('li').remove();
@@ -424,11 +424,14 @@ $(document).ready(function() {
                 }
             });
 
+            // 파일 입력을 초기화
             $fileInput.val('');
         });
 
+		// 삭제 버튼 클릭 이벤트 처리
 		$addFileList.on('click', '.delete-file', function() {
 			$(this).parent().remove();
+			// 파일 목록 업데이트
 			$uploadName.text(updatedFileNames.join(', '));
 		});
     }
@@ -559,11 +562,13 @@ $(document).ready(function() {
 	
 				if (inputElement.hasClass('hasCancel')) {
 	
+					// 취소 버튼 표시 또는 숨기기
 					inputElement.off('keyup').on('keyup', function() {
 						var inputValue = inputElement.val().trim();
 						var btnCancelContainer = inputElement.closest('.col-10'); // 부모
 						const btnCancel = $('<button type="button" class="btn btn-cancel"><span class="ir">입력취소</span></button>');
 	
+						// 입력값이 있을 경우
 						if (inputValue !== '') {
 							if (btnCancelContainer.find('.btn-cancel').length === 0) {
 								
@@ -577,6 +582,7 @@ $(document).ready(function() {
 				}
 			});
 	
+			// 동적으로 추가된 취소 버튼 클릭 이벤트 처리
 			formGroup.off('click', '.btn-cancel').on('click', '.btn-cancel', function() {
 				var inputElement = $(this).closest('.col-10').find('.form-control');
 				inputElement.val('');

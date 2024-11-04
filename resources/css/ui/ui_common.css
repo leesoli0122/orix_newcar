@@ -364,7 +364,7 @@ Button #버튼
 /*---------------------------------------------
 	Button
 ---------------------------------------------*/
-[class*='btn']:focus { outline:none; }/*웹접근성 고려 시 색상 변경 필요*/
+/* [class*='btn']:focus { outline:none; } */
 /* [class*='btn-primary']:not(.disabled):focus{ outline:2px solid var(--secondary); } */
 .btn-wrap { font-size:0; }/* Button Reset */
 

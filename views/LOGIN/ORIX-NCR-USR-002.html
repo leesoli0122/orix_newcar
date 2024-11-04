@@ -71,8 +71,8 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
                             </dl>
                             <dl>
                                 <dt>휴대폰번호</dt>
-                                <dd class="form-group">
-                                    <input id="" type="tel" title="휴대폰번호입력" name="" class="form-control" maxlength="11" placeholder="휴대폰번호 입력" value="010-1234-5678" disabled>
+                                <dd class="form-group"><!--[20241104] input 수정-->
+                                    <input id="" type="number" title="휴대폰번호입력" name="" class="form-control" maxlength="11" oninput="this.value = this.value.slice(0,11)" placeholder="휴대폰번호 입력" value="010-1234-5678" disabled>
                                 </dd>
                             </dl>
                             <dl>
@@ -112,8 +112,8 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
                             </dl>
                             <dl>
                                 <dt>비밀번호</dt>
-                                <dd class="form-group">
-                                    <input id="" title="비밀번호" type="text" name="" class="form-control" placeholder="영문/숫자 포함 8자리 이상 입력">
+                                <dd class="form-group"><!--[20241104] input 수정-->
+                                    <input id="" title="비밀번호" type="password" name="" class="form-control" placeholder="영문/숫자 포함 8자리 이상 입력">
                                     <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
                                         <p class="info">비밀번호를 입력해 주세요.</p>
                                     -->
@@ -121,8 +121,8 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
                             </dl>
                             <dl>
                                 <dt>비밀번호 확인</dt>
-                                <dd class="form-group">
-                                    <input id="" title="비밀번호 확인" type="text" name="" class="form-control" placeholder="비밀번호 확인 입력">
+                                <dd class="form-group"><!--[20241104] input 수정-->
+                                    <input id="" title="비밀번호 확인" type="password" name="" class="form-control" placeholder="비밀번호 확인 입력">
                                     <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
                                         <p class="info">비밀번호 확인에 비밀번호를 입력해 주세요.</p>
                                         <p class="info">비밀번호화 일치하지 않아요, 비밀번호확인을 다시 해주세요.</p>

@@ -132,10 +132,10 @@
 .swiper.introTodoSlider ul.introToList-area>li { height:322px; }
 .swiper.introTodoSlider .swiper-controller { margin:17px 0; padding-bottom: 4px; }
 .swiper.introTodoSlider .swiper-controller .swiper-scrollbar-area .swiper-scrollbar {  flex-grow: 1; bottom:var(--swiper-scrollbar-bottom, -4px); max-width: calc(100% - 164px); width: calc(85.85% - 2 * var(--swiper-scrollbar-sides-offset, 1%)); margin-right:32px; }
-.swiper.introTodoSlider .swiper-controller .swiper-button-area  {  flex-shrink: 0; position:absolute; right:0; width:132px; }
-.swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next, .swiper-controller .swiper-button-area .swiper-button-prev { top:initial; }
+.swiper.introTodoSlider .swiper-controller .swiper-button-area  { position:absolute; right:0; width:132px; }
+.swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next, .swiper-controller .swiper-button-area .swiper-button-prev { top:initial; height:43px; }
 .swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next:after, .swiper-controller .swiper-button-area .swiper-button-prev:after { font-size:var(--font22); color:var(--title); }
-.swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next:focus, .swiper-controller .swiper-button-area .swiper-button-prev:focus { border:1px solid var(--secondary); }
+.swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next:focus, .swiper-controller .swiper-button-area .swiper-button-prev:focus { outline:1px solid var(--secondary); }
 .swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-pagination { top:-11px; }
 
 /*********************************************************************
@@ -183,7 +183,7 @@
 .swiper.introListSlider .swiper-controller .swiper-button-prev:hover,
 .swiper.introListSlider .swiper-controller .swiper-button-next:hover { transform: scale(1.1); }
 .swiper.introListSlider .swiper-controller .swiper-button-prev:focus,
-.swiper.introListSlider .swiper-controller .swiper-button-next:focus { border:1px solid var(--secondary); }
+.swiper.introListSlider .swiper-controller .swiper-button-next:focus { outline:1px solid var(--secondary); }
 .swiper.introListSlider .swiper-controller .swiper-pagination { width:auto; transform: translateX(-50%); top:var(--swiper-pagination-top, 8px); left:50%; bottom:0px; font-size:var(--font24); font-weight:var(--w-bold); color:var(--inactive); }
 .swiper.introListSlider .swiper-controller .swiper-pagination .swiper-pagination-current { color:var(--normal); }
 /*********************************************************************

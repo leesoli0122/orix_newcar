@@ -264,7 +264,7 @@ header #헤더
 .header-wrap .top > div > ul li a { font-size:var(--font14); font-weight:700; color:var(--subtitle); }
 
 .header-wrap > .h-menu { max-width:1400px; width:100%; margin:0 auto; }
-.header-wrap > .h-menu { display:flex; align-items:center; justify-content:space-between; flex-direction: row-reverse; }
+.header-wrap > .h-menu { display:flex; align-items:center; justify-content:space-between;}
 .header-wrap > .nav-btn { display:none; width:37px; height:37px; z-index:999px; }
 .header-wrap > .nav-btn .ham { display:inline-block; width:37px; height:37px; background:transparent; cursor:pointer; }
 .header-wrap > .nav-btn .ham img,
@@ -349,6 +349,8 @@ sub-content
 .subvisual-wrap .breadcrumb-wrap ul > li::after { content:""; display:inline-block; position:absolute; top:50%; right:0; transform:translateY(-50%); width:30px; height:30px; background: url(../../images/breadcrumb_arrow.png)no-repeat 50%/30px auto; }
 .subvisual-wrap .breadcrumb-wrap ul > li:last-of-type::after { display:none; width:0; background:transparent; }
 .subvisual-wrap .breadcrumb-wrap ul > li.home a{ display:inline-block; width:30px; height:30px; font-size:0; background: url(../../images/home.png)no-repeat 50%/30px auto;}
+.subvisual-wrap .breadcrumb-wrap ul > li a:hover,
+.subvisual-wrap .breadcrumb-wrap ul > li a:focus { outline:1px solid var(--secondary); }
 .subvisual-wrap .text-wrap { padding-top:37px; }
 
 /* footer */

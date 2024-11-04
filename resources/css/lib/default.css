@@ -357,14 +357,17 @@ sub-content
 .footer-wrap > div {  margin:0 auto 0; /*width:90%;*/ max-width:1400px; /*min-width:1200px;*/ }
 .footer-wrap .policy-link { display:flex; flex-wrap:wrap; gap:32px; font-size:var(--font16); font-weight:var(--w-bold); text-align:left; }
 .footer-wrap .btn-wrap.policy-link .btn.btn-text { padding:4px; height:auto; font-weight:var(--w-bold); color:var(--white); }
-/* .footer-wrap .btn-wrap.policy-link .btn.btn-text + .btn.btn-text { margin-left:40px; } */
+.footer-wrap .btn-wrap.policy-link .btn:focus { outline:1px solid var(--white); }
+
 .footer-wrap .list-wrap .address { margin-top:23px; font-size:var(--font14); font-weight:var(--w-regular); }
 .footer-wrap .list-wrap .address li + li { margin-top:7px; }
 .footer-wrap .list-wrap .address li span + span { margin-left:20px; }
 .footer-wrap .list-wrap .Copyright { margin-top:29px; font-size:var(--font14); font-weight:400; }
 .footer-wrap .form-group.style2 {  position:absolute; top:0; right:0; }
-
-/* .footer-wrap .select-box > .se-select select:focus-visible { outline:2px solid #f00; } */
+.footer-wrap .form-group.style2 .select-box > .se-select[data-status="open"] select,
+.footer-wrap .form-group.style2 .select-box > .se-select select:hover,
+.footer-wrap .form-group.style2 .select-box > .se-select select:focus,
+.footer-wrap .form-group.style2  button:focus  { border:1px solid var(--normal); outline: 2px solid var(--white); }
 
 @media screen and (max-width:1230px) {
     /* footer */

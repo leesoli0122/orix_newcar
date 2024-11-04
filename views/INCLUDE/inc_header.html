@@ -123,18 +123,25 @@
 
             // 메뉴 전체를 벗어났을 때 일정 시간 후 서브메뉴 닫기
             $(".menu").on('mouseleave', function () {
-                hideMenuTimer = setTimeout(() => $(".menu > li, .menuitem-wrap").removeClass('on'), 300);
+                hideMenuTimer = setTimeout(function () {
+                    $(".menu > li, .menuitem-wrap").removeClass('on');
+                }, 300);
             });
 
             // 서브메뉴에 마우스가 들어오면 닫힘 타이머 제거
-            $(".menuitem-wrap").on('mouseenter', () => clearTimeout(hideMenuTimer));
+            $(".menuitem-wrap").on('mouseenter', function () {
+                clearTimeout(hideMenuTimer);
+            });
 
             // 포커스 이벤트로 접근성 설정
             $(".menu > li > a, .menuitem-wrap a").on('focus', function () {
                 clearTimeout(hideMenuTimer);
-                $(this).closest('li').addClass('on').find(".menuitem-wrap").addClass('on');
+                $(this).closest('li').addClass('on').siblings().removeClass('on').find(".menuitem-wrap").removeClass('on');
+                $(this).closest('li').find(".menuitem-wrap").addClass('on');
             }).on('blur', function () {
-                hideMenuTimer = setTimeout(() => $(".menu > li, .menuitem-wrap").removeClass('on'), 300);
+                hideMenuTimer = setTimeout(function () {
+                    $(".menu > li, .menuitem-wrap").removeClass('on');
+                }, 300);
             });
 
             // Tab 키로 서브메뉴로 이동 가능하게 설정

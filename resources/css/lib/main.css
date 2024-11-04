@@ -266,7 +266,7 @@
 .mainSec-notice div.intro-con a.btn:hover::after,
 .mainSec-notice div.intro-con a.btn:focus,
 .mainSec-notice div.intro-con a.btn:focus::after { color:var(--secondary); }
-.mainSec-notice div.intro-con a.btn:focus { border:1px solid var(--secondary); }
+.mainSec-notice div.intro-con a.btn:focus { outline:1px solid var(--secondary); }
 /*---------------------------------------------
     mainSec-notice Contents Q 아이콘
 ---------------------------------------------*/

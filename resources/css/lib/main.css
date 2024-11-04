@@ -193,13 +193,13 @@
     mainSec-myPerfo Default
 ---------------------------------------------*/
 .mainSec-myPerfo { margin-top:122px; }
-.mainSec-myPerfo a { display:block; transition: all 0.2s ease; }
+.mainSec-myPerfo a { display:flex; justify-content: center; align-items:center; gap:12px; padding:32px 0; font-weight: var(--w-bold); text-align: center; border-radius: 20px; transition: all 0.2s ease;  }
 .mainSec-myPerfo a:hover,
 .mainSec-myPerfo a:focus { transform: scale(1.05); }
 /*---------------------------------------------
     mainSec-myPerfo Contents
 ---------------------------------------------*/
-.mainSec-myPerfo a{ display:flex; justify-content: center; gap:12px; padding:32px 0; font-weight: var(--w-bold); text-align: center; border-radius: 20px; color:var(--m-color06); background: var(--m-background4); }
+.mainSec-myPerfo a{ color:var(--m-color06); background: var(--m-background4); }
 .mainSec-myPerfo a>em { font-size: var(--font24); }
 .mainSec-myPerfo a>strong { font-size: var(--font20); }
 .mainSec-myPerfo a>.img { position: absolute; bottom:0; right:0; width:212px; height:138px; }

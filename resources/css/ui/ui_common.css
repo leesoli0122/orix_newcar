@@ -1462,7 +1462,7 @@ dd.download-wrap { padding:0; background:transparent; }
 .choose-wrap .choose-group:last-child { padding-bottom:20px; border-bottom:none; }
 .choose-wrap .choose-group .choose { display:flex; align-items:center; flex-wrap:wrap; gap:12px; max-width:540px; width:100%; }
 .choose-wrap .choose-group .choose li { display:inline-block; gap:12px; padding:9px 16px; border:1px solid var(--border2); border-radius:18px; font-size:var(--font14); cursor:pointer; }
-.choose-wrap .choose-group .choose li button { background:transparent; color:var(--inactive); cursor:pointer; user-select: none}
+.choose-wrap .choose-group .choose li button { background:transparent; color:var(--inactive); cursor:pointer; user-select:none; }
 .choose-wrap .choose-group .choose li::before { content:none; }
 
 /* 아이콘 있을 때 */

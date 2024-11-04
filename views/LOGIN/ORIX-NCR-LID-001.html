@@ -110,13 +110,13 @@
                             <dl>
                                 <dt>주민등록번호</dt>
                                 <dd class="form-group">
-                                    <div class="form-row">
+                                    <div class="form-row"><!--[20241104] input 수정-->
                                         <div class="col-2">
-                                            <input id="" type="tel" title="주민등록번호 앞자리" class="form-control" maxlength="6" name="" value="" placeholder="">
+                                            <input id="" title="주민등록번호 앞자리" type="number" class="form-control" min="0" step="1" maxlength="6" oninput="this.value = this.value.slice(0, 6)" name="" value="" placeholder="" >
                                         </div>
                                         <div class="input-hyphen">-</div>
                                         <div class="col-2">
-                                            <input id="" type="tel" title="주민등록번호 뒷자리" class="form-control jumin" maxlength="1" placeholder="●" name="" value="">
+                                            <input id="" title="주민등록번호 뒷자리" type="number" class="form-control jumin" min="0" step="1" maxlength="1" oninput="this.value = this.value.slice(0, 1)" placeholder="●" name="" value="">
                                             <span class="jumintext">●●●●●●</span>
                                         </div>
                                     </div>
@@ -141,8 +141,8 @@
                                                 <div class="e-select-dim"></div>
                                             </div>
                                         </div>
-                                        <div class="col-1">
-                                            <input id="" type="tel" title="휴대폰번호입력" name="" class="form-control" maxlength="11" placeholder="휴대폰번호 입력">
+                                        <div class="col-1"><!--[20241104] input 수정-->
+                                            <input id="" title="" type="number" name="" class="form-control" maxlength="11" oninput="this.value = this.value.slice(0,11)" placeholder="휴대폰번호 입력">
                                         </div>
                                         <button class="btn btn-input" type="button">인증번호 요청</button>
                                     </div>
@@ -153,8 +153,8 @@
                                 <dt>인증번호</dt>
                                 <dd class="form-group correct time">
                                     <div class="form-row">
-                                        <div class="col-1">
-                                            <input id="" title="인증번호입력" type="text" class="form-control" name="" placeholder="숫자 6자리 입력">
+                                        <div class="col-1"><!--[20241104] input 수정-->
+                                            <input id="" title="인증번호입력" type="number" class="form-control" name="" placeholder="숫자 6자리 입력" oninput="this.value = this.value.slice(0,6)">
                                             <span class="timeNum">3:00</span>
                                         </div>
                                         <!-- 시간연장 버튼 1회 누른 후 active 클래스 삭제 -->

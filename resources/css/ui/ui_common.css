@@ -358,17 +358,17 @@ Button #버튼
 /*---------------------------------------------
 	Button Focus
 ---------------------------------------------*/
-button.btn.btn-close:focus,
-button.btn.btn-input:focus,
-button.btn.btn-secondary:focus,
-.btn-wrap.right-btn button.btn:focus,
-.btn.btn-num:focus,
-.terms-wrap.level2 .btn.btn.btn-text:focus { outline:1px solid var(--secondary); }
-button.btn.btn-logout:focus,
-button.btn.btn-bottom:focus,
-button.btn.btn-input.active:focus,
-button.btn.btn-search:focus,
-button.btn.btn-primary:focus { outline:1px solid var(--secondary); border:1px solid var(--white); }
+button.btn.btn-close:focus-visible,
+button.btn.btn-input:focus-visible,
+button.btn.btn-secondary:focus-visible,
+.btn-wrap.right-btn button.btn:focus-visible,
+.btn.btn-num:focus-visible,
+.terms-wrap.level2 .btn.btn.btn-text:focus-visible { outline:1px solid var(--secondary); }
+button.btn.btn-logout:focus-visible,
+button.btn.btn-bottom:focus-visible,
+button.btn.btn-input.active:focus-visible,
+button.btn.btn-search:focus-visible,
+button.btn.btn-primary:focus-visible { outline:1px solid var(--secondary); border:1px solid var(--white); }
 
 /*---------------------------------------------
 	Button Default
@@ -716,6 +716,7 @@ popup #팝업
 .pagination ul li + li { margin-left:6px; }
 .pagination ul li a { font-size:var(--font16); }
 .pagination a { display:inline-block; padding:5px 0; width:34px; height:34px; font-size:0; }
+.pagination a:focus-visible { outline:1px solid var(--secondary); }
 .pagination a.on { border-radius:50%; font-weight:var(--w-bold); color:var(--white); background:var(--primary); }
 .pagination a.on:hover { color:var(--white); }
 .pagination a:hover { font-weight:var(--w-bold); color:var(--primary); }
@@ -783,6 +784,8 @@ tab #탭
 .tabs-wrap .tab-list li:last-child { margin-right:0; }
 .tabs-wrap .tab-item li a,
 .tabs-wrap .tab-list li a { display:block; line-height:initial; text-align:center; font-weight:var(--w-bold); color:var(--inactive); }
+.tabs-wrap .tab-item li a:focus-visible,
+.tabs-wrap .tab-list li a:focus-visible { outline:1px solid var(--secondary); }
 .tabs-wrap .tab-item li.on,
 .tabs-wrap .tab-list li.on { border:2px solid var(--title); border-bottom:none; font-weight:var(--w-bold); color:var(--title); }
 .tabs-wrap .tab-item li.on a,
@@ -810,6 +813,7 @@ tab #탭
 
 .tabs-wrap.status .tabs.type2 .tab-item02 { margin-top:0; }
 .tabs-wrap.status .tabs.type2 .tab-item02 li a { display:inline-block; min-width:120px; width:100%; }
+.tabs-wrap.status .tabs.type2 .tab-item02 li a:focus-visible { outline:1px solid var(--secondary); }
 .tabs-wrap.status .tabs.type2 .tab-item02 li a .num { margin-left:5px; }
 /*********************************************************************
 #확인해 주세요
@@ -1606,7 +1610,7 @@ animation:l4 1s infinite steps(10);}
 .perf-data { display:flex; flex-wrap:wrap; align-items: center; gap:20px; margin:20px 0 40px; padding-top:20px; }
 .perf-data li { display:inline-block; padding:29px 20px; min-width:120px; border:1px solid var(--border2); border-radius:6px; font-size:var(--font18); color:var(--normal); text-align: center; background:var(--white); }
 .perf-data li:hover { border:2px solid var(--background3); font-weight:var(--w-bold); color:var(--title); background:var(--white); }
-.perf-data li a:focus { border:1px solid var(--secondary); }
+.perf-data li a:focus-visible { outline:1px solid var(--secondary); }
 .perf-data li:hover span { color:var(--secondary); }
 
 .perf-data li .sub-tit { font-weight:var(--w-regular); }

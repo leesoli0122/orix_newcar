@@ -379,6 +379,20 @@ Button #버튼
 .btn-wrap.alert { margin:40px 0 30px; width:100%; text-align:center; }/* 알럿 버튼 */
 
 /*---------------------------------------------
+	Button Focus
+---------------------------------------------*/
+button.btn.btn-close:focus,
+button.btn.btn-input:focus,
+button.btn.btn-secondary:focus,
+.btn-wrap.right-btn button.btn:focus,
+.btn.btn-num:focus { outline:1px solid var(--secondary); }
+button.btn.btn-logout:focus,
+button.btn.btn-bottom:focus,
+button.btn.btn-input.active:focus,
+button.btn.btn-search:focus,
+button.btn.btn-primary:focus { outline:1px solid var(--secondary); border:1px solid var(--white); }
+
+/*---------------------------------------------
 	Button Default
 ---------------------------------------------*/
 button.btn { display:inline-block; padding:0 40px; margin:0; height:54px; font-size:var(--font20); font-weight:var(--w-bold); text-align:center; vertical-align:middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;  user-select: none; background: transparent; border: transparent; border-radius: 6px;  word-break: keep-all; cursor: pointer; }

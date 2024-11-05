@@ -79,7 +79,7 @@
 .mainSec-banner div.shortcut-area { margin-top:60px; padding:36px; width:368px; height:382px; border-radius: 36px; background: var(--white); box-shadow: 0px 0px 10px rgba(0,12 ,44, 0.16); }
 .mainSec-banner div.shortcut-area>.btn-wrap { display:flex; }
 .mainSec-banner div.shortcut-area>.btn-wrap>.btn { display:flex; align-items: center; word-break: keep-all; margin-left:10px; height:70px; border-radius: 8px; font-size: var(--font22); font-weight: var(--w-bold); color:var(--white); }
-.mainSec-banner div.shortcut-area>.btn-wrap>.btn:focus { outline:2px solid var(--title); }
+.mainSec-banner div.shortcut-area>.btn-wrap>.btn:focus { outline:1px solid var(--secondary); border:1px solid var(--white); }
 .mainSec-banner div.shortcut-area>.btn-wrap>.btn:nth-child(1) { margin-left:0; padding:0 40px; background: var(--m-color02); }
 .mainSec-banner div.shortcut-area>.btn-wrap>.btn:nth-child(2) { padding:0 30px; background: var(--m-color03); }
 .mainSec-banner div.shortcut-area>ul>li:nth-of-type(1) { background: var(--m-img-shortCut01) no-repeat 50% 10px/50px auto;  }

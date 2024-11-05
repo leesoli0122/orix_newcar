@@ -944,6 +944,7 @@ icon li -> icon span(20240924 리스트 구조 변경에 따른 css 수정 li가
 
 /* 첨부파일 있는 list */
 .list-card-wrap.attachment .list-card-group a { display:flex; justify-content:space-between; align-items:center; }
+.list-card-wrap.attachment .list-card-group a:focus-visible { outline:1px solid var(--secondary); }
 .list-card-wrap.attachment .list-card-group .txt-list:first-child { flex-direction:column; justify-content:unset; align-items:flex-start; }
 .list-card-wrap.attachment .list-card-group .txt-list { margin-top:0; }
 .list-card-wrap.attachment .list-card-group .txt-list .cont-txt { margin:15px 0 18px; }

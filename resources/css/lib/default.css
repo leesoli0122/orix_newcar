@@ -349,7 +349,6 @@ sub-content
 .subvisual-wrap .breadcrumb-wrap ul > li::after { content:""; display:inline-block; position:absolute; top:50%; right:0; transform:translateY(-50%); width:30px; height:30px; background: url(../../images/breadcrumb_arrow.png)no-repeat 50%/30px auto; }
 .subvisual-wrap .breadcrumb-wrap ul > li:last-of-type::after { display:none; width:0; background:transparent; }
 .subvisual-wrap .breadcrumb-wrap ul > li.home a{ display:inline-block; width:30px; height:30px; font-size:0; background: url(../../images/home.png)no-repeat 50%/30px auto;}
-.subvisual-wrap .breadcrumb-wrap ul > li a:hover,
 .subvisual-wrap .breadcrumb-wrap ul > li a:focus { outline:1px solid var(--secondary); }
 .subvisual-wrap .text-wrap { padding-top:37px; }
 

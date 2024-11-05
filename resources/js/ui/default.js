@@ -190,14 +190,13 @@ $(document).ready(function () {
   });
 
   // 초기화: 모든 탭에 role과 tabindex 속성 추가
-  $(".tab-item > li, .tab-item02 > li").each(function() {
-    $(this).attr({
-        role: "tab",
-        tabindex: "0", 
-        "aria-selected": "false"
-    });
-    $(this).find("a").attr("tabindex", "-1");
-  });
+  // $(".tab-item > li, .tab-item02 > li").each(function() {
+  //   $(this).attr({
+  //       role: "tab",
+  //       tabindex: "0", 
+  //       "aria-selected": "false"
+  //   });
+  // });
 
   // 활성화된 탭에 대한 aria-selected 업데이트
   $(".tab-item > li.on, .tab-item02 > li.on").attr("aria-selected", "true");

@@ -358,6 +358,7 @@ Button #버튼
 /*---------------------------------------------
 	Button Focus
 ---------------------------------------------*/
+button.btn.btn-cancel:focus-visible,
 button.btn.btn-close:focus-visible,
 button.btn.btn-input:focus-visible,
 button.btn.btn-secondary:focus-visible,

@@ -299,7 +299,7 @@ function openPopup(id) {
     console.log('Scroll position saved:', scrollPosition);
 
     // header-wrap before 뒤로가게
-    $('.layerpopup').css('z-index', '201');
+    // $('.layerpopup').css('z-index', '201');
 
     showPopup($target);
   } else {

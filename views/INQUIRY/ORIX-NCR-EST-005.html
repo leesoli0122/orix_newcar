@@ -94,18 +94,61 @@
                 <div class="table-type">
                     <div class="col">
                         <dl>
-                            <dt>실차주여부</dt>
-                            <dd class="form-group radio">
-                                <ul class="radio-box">
-                                    <li>
-                                        <input type="radio" id="radio-1" name="whether" checked>
-                                        <label for="radio-1" class="radio-button"><span>예</span></label>
-                                    </li>
-                                    <li>
-                                        <input type="radio" id="radio-2" name="whether">
-                                        <label for="radio-2" class="radio-button"><span>아니오</span></label>
-                                    </li>
-                                </ul>
+                            <dt>고객명</dt>
+                            <dd class="form-group">
+                                <div class="col-1">
+                                    <input id="" title="고객명" type="text" name="" class="form-control" placeholder="고객명 입력">
+                                </div>
+                                <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
+                                    <p class="info">고객명을 입력해주세요.</p>
+                                -->
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>운전면허번호</dt>
+                            <dd class="form-group">
+                                <div class="col-1">
+                                    <input id="" title="운전면허번호" type="number" oninput="this.value = this.value.slice(0,12)" name="" class="form-control" placeholder="숫자 12자리 입력">
+                                </div>
+                                <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
+                                    <p class="info">운전면허번호를 입력해주세요.</p>
+                                -->
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>면허종별</dt>
+                            <dd class="form-group">
+                                <div class="select-box">
+                                    <div class="se-select" data-stove="select">
+                                        <select class="" title="면허종별">
+                                            <option value="" disabled="" selected="" hidden="">면허종별 선택</option><!-- [D] : default - 셀렉트의 placeholder 기능-->
+                                            <option value="0">1종 대형</option>
+                                            <option value="1">1종 보통</option>
+                                            <option value="2">1종 특수</option>
+                                            <option value="3">2종 보통</option>
+                                            <option value="4">2종 소형</option>
+                                            <option value="5">2종 원동기장치자전거</option>
+                                        </select>
+                                        <div class="e-select-dim"></div>
+                                    </div>
+                                </div>
+                                <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
+                                    <p class="info">면허종별을 입력해주세요.</p>
+                                -->
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>대여기간</dt>
+                            <dd class="form-group">
+                                <div class="form-row">
+                                    <div class="col-2">
+                                        <input type="text" id="" title="기간" name="from" class="form-control datepicker" placeholder="YYYY.MM.DD" readonly ><!-- [D] : datepicker 클래스 : datepicker Custom-->
+                                    </div>
+                                    <div class="input-hyphen">~</div>
+                                    <div class="col-2">
+                                        <input type="text" id="" title="기간" name="to" class="form-control datepicker" placeholder="YYYY.MM.DD" readonly ><!-- [D] : datepicker 클래스 : datepicker Custom-->
+                                    </div>
+                                </div>
                             </dd>
                         </dl>
                     </div>

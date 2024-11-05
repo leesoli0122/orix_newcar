@@ -193,9 +193,10 @@ $(document).ready(function () {
   $(".tab-item > li, .tab-item02 > li").each(function() {
     $(this).attr({
         role: "tab",
-        tabindex: "0", // 탭이 포커스를 받을 수 있도록 설정
-        "aria-selected": "false" // 기본적으로 비활성 상태로 설정
+        tabindex: "0", 
+        "aria-selected": "false"
     });
+    $(this).find("a").attr("tabindex", "-1");
   });
 
   // 활성화된 탭에 대한 aria-selected 업데이트

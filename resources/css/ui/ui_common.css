@@ -776,14 +776,14 @@ tab #탭
 .tabs-wrap .tab-item::after { content:""; display:inline-block; margin-top:70px; width:100%; height:1px; background:var(--normal); }
 .tabs-wrap .tab-item li,
 .tabs-wrap .tab-list li { display:inline-block; position:relative; padding:24px 0; max-width:241px; width:100%; border:1px solid var(--border1); border-bottom: 1px solid var(--normal); font-size:var(--font18); color:var(--inactive); line-height:2.2; }
+.tabs-wrap .tab-item li:focus-visible,
+.tabs-wrap .tab-list li:focus-visible { outline:1px solid var(--secondary); }
 .tabs-wrap .tab-item li.style2,
 .tabs-wrap .tab-list li.style2 { /*padding:22px 20px 23px;*/ line-height:initial; }
 .tabs-wrap .tab-item li:last-child,
 .tabs-wrap .tab-list li:last-child { margin-right:0; }
 .tabs-wrap .tab-item li a,
 .tabs-wrap .tab-list li a { display:block; line-height:initial; text-align:center; font-weight:var(--w-bold); color:var(--inactive); }
-.tabs-wrap .tab-item li a:focus-visible,
-.tabs-wrap .tab-list li a:focus-visible { outline:1px solid var(--secondary); }
 .tabs-wrap .tab-item li.on,
 .tabs-wrap .tab-list li.on { border:2px solid var(--title); border-bottom:none; font-weight:var(--w-bold); color:var(--title); }
 .tabs-wrap .tab-item li.on a,

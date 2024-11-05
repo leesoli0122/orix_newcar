@@ -365,7 +365,8 @@ button.btn.btn-logout:focus-visible,
 button.btn.btn-bottom:focus-visible,
 button.btn.btn-input.active:focus-visible,
 button.btn.btn-search:focus-visible,
-button.btn.btn-primary:focus-visible { outline:1px solid var(--secondary); border:1px solid var(--white); }
+button.btn.btn-primary:focus-visible,
+button.btn.btn-estimate:focus-visible { outline:1px solid var(--secondary); border:1px solid var(--white); }
 
 /*---------------------------------------------
 	Button Default
@@ -1459,7 +1460,7 @@ dd.download-wrap { padding:0; background:transparent; }
 .choose-wrap .choose-group:last-child { padding-bottom:20px; border-bottom:none; }
 .choose-wrap .choose-group .choose { display:flex; align-items:center; flex-wrap:wrap; gap:12px; max-width:540px; width:100%; }
 .choose-wrap .choose-group .choose li { display:inline-block; gap:12px; padding:9px 16px; border:1px solid var(--border2); border-radius:18px; font-size:var(--font14); cursor:pointer; }
-.choose-wrap .choose-group .choose li button { background:transparent; color:var(--inactive); cursor:pointer; user-select:none; }
+.choose-wrap .choose-group .choose li button { background:transparent; color:var(--inactive); cursor:pointer; }
 .choose-wrap .choose-group .choose li::before { content:none; }
 
 /* 아이콘 있을 때 */
@@ -1499,6 +1500,8 @@ dd.download-wrap { padding:0; background:transparent; }
 .choose-group .preoccupation .tit { font-size:var(--font18); font-weight:var(--w-regular); color:var(--normal); }
 .choose-group .preoccupation .blue { font-size:var(--font20); font-weight:var(--w-bold); }
 
+ul.btnSelect li button:focus-visible { outline: 1px solid var(--secondary); }
+
 /*---------------------------------------------
 	choose-group안에 라디오 버튼
 ---------------------------------------------*/
@@ -1530,6 +1533,9 @@ dd.download-wrap { padding:0; background:transparent; }
 .mySwiper .navigation-wrapper .swiper-button-next { right:-10px; width:42px; height:42px; background:url(../../images/swiper_r_arr.png)no-repeat 50%/42px auto; }
 .mySwiper .navigation-wrapper .swiper-button-prev::after,
 .mySwiper .navigation-wrapper .swiper-button-next::after { content:none; }
+
+.mySwiper .navigation-wrapper .swiper-button-prev:focus-visible,
+.mySwiper .navigation-wrapper .swiper-button-next:focus-visible { outline: 1px solid var(--secondary); }
 
 .mySwiper::before, .mySwiper::after { content:''; position: absolute; top:0; bottom:0; width:90px; z-index:10; background:var(--white); }
 .mySwiper::before { left:-30px; }

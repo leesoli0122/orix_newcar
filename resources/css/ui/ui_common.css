@@ -358,13 +358,9 @@ Button #버튼
 /*---------------------------------------------
 	Button Focus
 ---------------------------------------------*/
-button.btn.btn-cancel:focus-visible,
-button.btn.btn-close:focus-visible,
-button.btn.btn-input:focus-visible,
-button.btn.btn-secondary:focus-visible,
-.btn-wrap.right-btn button.btn:focus-visible,
-.btn.btn-num:focus-visible,
-.terms-wrap.level2 .btn.btn.btn-text:focus-visible { outline:1px solid var(--secondary); }
+button:focus-visible,
+.btn:focus-visible { outline:1px solid var(--secondary); }
+.accordion-wrap .btn-wrap button.btn.btn-cont.active:focus-visible,
 button.btn.btn-logout:focus-visible,
 button.btn.btn-bottom:focus-visible,
 button.btn.btn-input.active:focus-visible,
@@ -564,8 +560,8 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>ul>li:last-child::after { content: none; }
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>p:last-child { text-align: right; flex:0 0 210px; }
 
-/* .accordion-wrap > .accordion-info:has(.toggleChk + .ques-cont.active) { border:1px solid var(--secondary); } */
-
+.accordion-wrap > .accordion-info > a:focus-visible { border: 1px solid var(--secondary); }
+.accordion-wrap > .accordion-info > .ques .right .btn button:focus { outline: 1px solid var(--secondary); }
 /*---------------------------------------------
 	Toggle_Accordion  [QnA] 아이콘있을 경우
 ---------------------------------------------*/
@@ -814,7 +810,7 @@ tab #탭
 
 .tabs-wrap.status .tabs.type2 .tab-item02 { margin-top:0; }
 .tabs-wrap.status .tabs.type2 .tab-item02 li a { display:inline-block; min-width:120px; width:100%; }
-.tabs-wrap.status .tabs.type2 .tab-item02 li a:focus-visible { outline:1px solid var(--secondary); }
+.tabs-wrap.status .tabs.type2 .tab-item02 li:focus-visible { outline:1px solid var(--secondary); }
 .tabs-wrap.status .tabs.type2 .tab-item02 li a .num { margin-left:5px; }
 /*********************************************************************
 #확인해 주세요

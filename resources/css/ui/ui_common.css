@@ -812,7 +812,7 @@ tab #탭
 
 .tabs-wrap.status .tabs.type2 .tab-item02 { margin-top:0; }
 .tabs-wrap.status .tabs.type2 .tab-item02 li a { display:inline-block; min-width:120px; width:100%; }
-.tabs-wrap.status .tabs.type2 .tab-item02 li:focus-visible { outline:1px solid var(--secondary); }
+.tabs-wrap.status .tabs.type2 .tab-item02 li a:focus-visible { outline:1px solid var(--secondary); }
 .tabs-wrap.status .tabs.type2 .tab-item02 li a .num { margin-left:5px; }
 /*********************************************************************
 #확인해 주세요

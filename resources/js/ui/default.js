@@ -163,10 +163,10 @@ $(document).ready(function () {
     var tabCont = $(this).attr("data-tab");
 
     // 상위 탭 상태 업데이트
-    $(this).siblings().removeClass("on").attr("aria-selected", "false"); // 비활성화된 상위 탭
-    if (!$(this).hasClass('swiper')) {
-        $(this).addClass("on").attr("aria-selected", "true"); // 활성화된 상위 탭
-    }
+    // $(this).siblings().removeClass("on").attr("aria-selected", "false"); // 비활성화된 상위 탭
+    // if (!$(this).hasClass('swiper')) {
+    //     $(this).addClass("on").attr("aria-selected", "true"); // 활성화된 상위 탭
+    // }
 
     // 상위 탭 콘텐츠만 업데이트 (상위 탭 콘텐츠만 처리)
     $(this).closest(".tab-area").find(".tab-content").addClass("dp-none");// 메인 탭 추가
@@ -179,8 +179,8 @@ $(document).ready(function () {
     var subTabCont = $(this).attr("data-tab");
 
     // 하위 탭 상태 업데이트
-    $(this).siblings().removeClass("on").attr("aria-selected", "false"); // 비활성화된 하위 탭
-    $(this).addClass("on").attr("aria-selected", "true"); // 활성화된 하위 탭
+    // $(this).siblings().removeClass("on").attr("aria-selected", "false"); // 비활성화된 하위 탭
+    // $(this).addClass("on").attr("aria-selected", "true"); // 활성화된 하위 탭
 
     // 하위 탭 콘텐츠만 업데이트 (하위 탭 콘텐츠만 처리)
     // 문제 있는 부분 확인 후 탐색 범위 수정
@@ -199,7 +199,7 @@ $(document).ready(function () {
   // });
 
   // 활성화된 탭에 대한 aria-selected 업데이트
-  $(".tab-item > li.on, .tab-item02 > li.on").attr("aria-selected", "true");
+  // $(".tab-item > li.on, .tab-item02 > li.on").attr("aria-selected", "true");
 });
 
 /*********************************************************************

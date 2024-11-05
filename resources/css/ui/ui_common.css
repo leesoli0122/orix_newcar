@@ -541,6 +541,7 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap > .accordion-info > .ques-cont .Pre-purchase ul>li>p { display:inline-block; }
 .accordion-wrap > .accordion-info > .ques-cont .list-view ul>li>p:first-child { flex:0 0 168px; margin-left:20px; color:var(--normal); font-weight: var(--w-bold); }
 .accordion-wrap > .accordion-info > .ques-cont .list-view ul>li>p:last-child, .accordion-wrap > .accordion-info > .ques-cont .Pre-purchase ul>li>p:last-child { flex:1; color:var(--title); font-weight: var(--w-regular); }
+.accordion-wrap > .accordion-info > .ques-cont .list-view ul>li>p .ex { margin-left:20px; }
 
 /* 선구매-심사승인(선점완료) */
 .accordion-wrap > .accordion-info > .ques-cont .Pre-purchase { margin-bottom:50px; padding:29px 30px; border-radius:20px; background:var(--white); }
@@ -1293,6 +1294,7 @@ dd.download-wrap { padding:0; background:transparent; }
 ---------------------------------------------*/
 .grid-list-body.option { height:100%; overflow-y:auto; }
 .grid-list-body.option .form-group.check ul.check-box { display:block; font-size:0; }
+.grid-list-body.option .form-group.check ul.check-box .check-top label span { display:inline-block; max-width:240px; line-height:24px; }
 .grid-list-body.option ul li { padding:24px 34px 24px 20px; border-bottom:1px solid var(--border3); }
 .grid-list-body.option ul li:last-child { border-bottom:none; }
 .grid-list-body.option ul li .check-top { display:flex; justify-content:space-between; align-items:center; }

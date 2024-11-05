@@ -732,21 +732,22 @@ popup #팝업
 *********************************************************************/
 .pagination-wrap { display:block; margin:60px auto 40px; text-align:center; }
 .pagination { display:inline-block; }
-.pagination .btn-pg { display:inline-block; width:24px; height:24px; border:1px solid var(--border2); border-radius:4px; }
-.pagination .btn-pg + .btn-pg { margin-left:8px; }
+.pagination .btn-pg { display:inline-block; width:34px; height:34px; }
+.pagination .btn-pg + .btn-pg { margin-left:10px; }
 .pagination > a { float:left; }
-.pagination ul { float:left; margin-right:28px; }
-.pagination a + ul { margin-left:28px; }
+.pagination ul { float:left; margin-right:18px; }
+.pagination a + ul { margin-left:18px; }
 .pagination ul li { float:left; padding:0 12px; line-height:1.5; }
-.pagination ul li + li { margin-left:4px; }
+.pagination ul li + li { margin-left:6px; }
 .pagination ul li a { font-size:var(--font16); }
-.pagination a { font-size:0; }
-.pagination a.on { padding:5px 9px; border-radius:50%; font-weight:var(--w-bold); color:var(--white); background:var(--primary); }
+.pagination a { display:inline-block; padding:5px 0; width:34px; height:34px; font-size:0; }
+.pagination a.on { border-radius:50%; font-weight:var(--w-bold); color:var(--white); background:var(--primary); }
+.pagination a.on:hover { color:var(--white); }
 .pagination a:hover { font-weight:var(--w-bold); color:var(--primary); }
-.pagination a.prev { transform:rotate(180deg); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.2' height='11.41'%3E%3Cpath fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' d='m.7.7 6 5-6 5' data-name='Path 5'/%3E%3C/svg%3E")no-repeat center; }
-.pagination a.next { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.2' height='11.41'%3E%3Cpath fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' d='m.7.7 6 5-6 5' data-name='Path 5'/%3E%3C/svg%3E")no-repeat center; }
-.pagination a.last-prev { transform:rotate(180deg); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.2' height='11.41'%3E%3Cg fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-name='그룹 65114'%3E%3Cpath d='m.7.7 6 5-6 5' data-name='Path 5'/%3E%3Cpath d='m6.7.7 6 5-6 5' data-name='Path 5'/%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
-.pagination a.last-next { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.2' height='11.41'%3E%3Cg fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-name='그룹 65114'%3E%3Cpath d='m.7.7 6 5-6 5' data-name='Path 5'/%3E%3Cpath d='m6.7.7 6 5-6 5' data-name='Path 5'/%3E%3C/g%3E%3C/svg%3E")no-repeat center; }
+.pagination a.prev { background: url("../../images/common/btn_prev.png")no-repeat 50%/34px auto; }
+.pagination a.next { background: url("../../images/common/btn_next.png")no-repeat 50%/34px auto; }
+.pagination a.last-prev { background: url("../../images/common/first_btn_prev.png")no-repeat 50%/34px auto; }
+.pagination a.last-next { background: url("../../images/common/last_btn_next.png")no-repeat 50%/34px auto; }
 
 /*********************************************************************
 라벨

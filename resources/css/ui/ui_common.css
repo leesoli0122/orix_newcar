@@ -275,7 +275,7 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 	Input_Radio Style
 ---------------------------------------------*/
 .form-group > ul.radio-box input[type="radio"] ,
-.form-group > ul.check-box input[type="checkbox"] { width:24px; height:24px; }
+.form-group > ul.check-box input[type="checkbox"] { width:24px; height:24px;  }
 
 .form-group > ul.check-box li>label,
 .form-group > ul.radio-box li>label { line-height:24px; padding-left:10px;  }
@@ -1287,13 +1287,13 @@ dd.download-wrap { padding:0; background:transparent; }
 ---------------------------------------------*/
 .grid-list-body.option { height:100%; overflow-y:auto; }
 .grid-list-body.option .form-group.check ul.check-box { display:block; font-size:0; }
-.grid-list-body.option .form-group.check ul.check-box .check-top label span { display:inline-block; max-width:240px; line-height:24px; }
+.grid-list-body.option .form-group.check ul.check-box .check-top label { display:inline-block; max-width:240px; line-height:24px; padding-left:10px; }
 .grid-list-body.option ul li { padding:24px 34px 24px 20px; border-bottom:1px solid var(--border3); }
 .grid-list-body.option ul li:last-child { border-bottom:none; }
-.grid-list-body.option ul li .check-top { display:flex; justify-content:space-between; align-items:center; }
-.grid-list-body.option li span.txt { font-size: var(--font18); font-weight:var(--w-bold); color:var(--subtitle); text-align:right; word-break:break-all; }
+.grid-list-body.option ul li .check-top { display:flex; align-items:center; width:100%; }
+.grid-list-body.option li span.txt { position:absolute; right:0; font-size: var(--font18); font-weight:var(--w-bold); color:var(--subtitle); text-align:right; word-break:break-all; }
 .grid-list-body.option ul li .description { margin:16px 0 0 30px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--subtitle); }
-
+.grid-list-body.option ul li:has(.description) { display:flex; flex-direction: column; }
 /* 스크롤 */
 .grid-list-body.option::-webkit-scrollbar { width:14px; }
 .grid-list-body.option::-webkit-scrollbar-thumb { width:11px; background-color:var(--border2); border-radius:2px; border-radius:2px; }
@@ -1606,7 +1606,6 @@ animation:l4 1s infinite steps(10);}
 .perf-data { display:flex; flex-wrap:wrap; align-items: center; gap:20px; margin:20px 0 40px; padding-top:20px; }
 .perf-data li { display:inline-block; padding:29px 20px; min-width:120px; border:1px solid var(--border2); border-radius:6px; font-size:var(--font18); color:var(--normal); text-align: center; background:var(--white); }
 .perf-data li:hover { border:2px solid var(--background3); font-weight:var(--w-bold); color:var(--title); background:var(--white); }
-.perf-data li a:focus { border:1px solid var(--secondary); }
 .perf-data li:hover span { color:var(--secondary); }
 
 .perf-data li .sub-tit { font-weight:var(--w-regular); }

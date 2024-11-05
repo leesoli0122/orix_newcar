@@ -356,6 +356,8 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 .terms-area .terms-agr-wrap { display:inline-block; width:100%; margin-top:50px; }
 .terms-area .terms-agr-wrap .terms-tit { font-weight:600; font-size:1rem; color:#000; margin-bottom:20px; }
 
+/* 약관 포커스 */
+.terms-wrap input[type="checkbox"]:focus{ outline: 1px solid var(--secondary); }
 
 /*********************************************************************
 Button #버튼
@@ -385,7 +387,8 @@ button.btn.btn-close:focus,
 button.btn.btn-input:focus,
 button.btn.btn-secondary:focus,
 .btn-wrap.right-btn button.btn:focus,
-.btn.btn-num:focus { outline:1px solid var(--secondary); }
+.btn.btn-num:focus,
+.terms-wrap.level2 .btn.btn.btn-text:focus { outline:1px solid var(--secondary); }
 button.btn.btn-logout:focus,
 button.btn.btn-bottom:focus,
 button.btn.btn-input.active:focus,

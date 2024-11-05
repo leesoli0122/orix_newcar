@@ -918,8 +918,9 @@ list #리스트
 list-card : a링크로 감싸짐
 txt-list li -> txt-list(20240924 리스트 구조 변경에 따른 css 수정)
 ---------------------------------------------*/
-.list-card-group { padding:30px; border:1px solid var(--border1); border-radius:20px; background:var(--white); }
+.list-card-group { border:1px solid var(--border1); border-radius:20px; background:var(--white); }
 .list-card-group + .list-card-group { margin-top:28px; }
+.list-card-group a { display:block; padding:30px; }
 .list-card-group + .table-type { margin-top:40px; }
 .list-card-group .txt-list { display:flex; justify-content: space-between; align-items:center; margin-top:14px; font-size:var(--font16); }
 .list-card-group .txt-list:first-child { margin-top:0; }

@@ -22,7 +22,7 @@ $(document).ready(function() {
 			dimClass = 'stove-dim',
 			optionLayerClass = 'stove-option-layer',
 			optionLayerScrollClass = 'stove-option-scroll',
-			optionLayerCloseClass = 'stove-btn-close',
+			// optionLayerCloseClass = 'stove-btn-close',
 			optionTitleClass = 'stove-options-title',
 			optionListClass = 'stove-options',
 			optionClass = 'stove-option';
@@ -65,7 +65,7 @@ $(document).ready(function() {
 				$('<div>', { class: optionTitleClass, text: $select.attr('title') }).appendTo($optionLayer);
 			}
 
-			$('<button>', { class: optionLayerCloseClass, title: '닫기' }).appendTo($optionLayer);
+			// $('<button>', { class: optionLayerCloseClass, title: '닫기' }).appendTo($optionLayer);
 			createOptionButtons($optionList, optionLength);
 			highlightSelectedOption();
 		}
@@ -164,15 +164,15 @@ $(document).ready(function() {
 				}
 			});
 
-			$this.find('.' + optionLayerCloseClass).on({
-				click: function(e) {
-					e.stopPropagation();
-					close();
-				},
-				blur: function() {
-					$this.find('.' + optionLayerClass).addClass(onClass).attr('tabindex', 0).focus();
-				}
-			});
+			// $this.find('.' + optionLayerCloseClass).on({
+			// 	click: function(e) {
+			// 		e.stopPropagation();
+			// 		close();
+			// 	},
+			// 	blur: function() {
+			// 		$this.find('.' + optionLayerClass).addClass(onClass).attr('tabindex', 0).focus();
+			// 	}
+			// });
 
 			$this.find('.' + optionClass).on('click', function(e) {
 				e.stopPropagation();

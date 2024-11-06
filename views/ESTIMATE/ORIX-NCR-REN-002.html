@@ -1596,7 +1596,7 @@
                         <!-- <div class="first-choose">
                             <p>모델을 먼저 선택해 주세요</p>
                         </div> -->
-                        <div class="slider-wrap">
+                        <div class="swiper-container">
                             <div class="mySwiper">
                                 <div class="swiper-wrapper btnSelect">
                                     <div class="swiper-slide">
@@ -1766,21 +1766,4 @@
     </div>
     <script type="text/javascript" src="../../resources/js/lib/swiper-bundle.min.js"></script>
 </body>
-<script>
-$(document).ready(function() {
-    var swiper = new Swiper(".mySwiper", {
-			slidesPerView: 3, // Default
-			spaceBetween: 10,
-			pagination: {
-				el: ".swiper-pagination",
-				type: "fraction"
-			},
-			navigation: {
-				nextEl: ".swiper-button-next",
-				prevEl: ".swiper-button-prev",
-			}
-		});
-    });
-</script>
-
 </html>

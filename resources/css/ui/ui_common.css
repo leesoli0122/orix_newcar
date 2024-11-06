@@ -1519,33 +1519,33 @@ ul.btnSelect li button:focus-visible { outline: 1px solid var(--secondary); }
 /*---------------------------------------------
 	slide #스와이퍼
 ---------------------------------------------*/
-.slider-wrap { overflow: hidden; }
-.slider-wrap .mySwiper{ max-width:405px; margin:0 auto;  }
+.swiper-container { overflow: hidden; }
+.swiper-container .mySwiper{ max-width:405px; margin:0 auto;  }
 /* .mySwiper .swiper-wrapper  { max-width:400px; } */
-.slider-wrap .mySwiper .swiper-wrapper .swiper-slide{ flex:0 0 126px; }
+.swiper-container .mySwiper .swiper-wrapper .swiper-slide{ flex:0 0 126px; }
 
-.slider-wrap .mySwiper .swiper-slide button .img-box { margin:0 auto; width:106px; height:53px; }
-.slider-wrap .mySwiper .swiper-slide button img { display:block; width:100%; height:100%; }
-.slider-wrap .mySwiper .swiper-slide button { font-size:var(--font14); color:var(--normal); background: var(--white); }
-.slider-wrap .mySwiper .swiper-slide button .tit { margin-top:8px; font-size:var(--font14); font-weight:var(--w-bold); line-height:21px; }
+.swiper-container .mySwiper .swiper-slide button .img-box { margin:0 auto; width:106px; height:53px; }
+.swiper-container .mySwiper .swiper-slide button img { display:block; width:100%; height:100%; }
+.swiper-container .mySwiper .swiper-slide button { font-size:var(--font14); color:var(--normal); background: var(--white); }
+.swiper-container .mySwiper .swiper-slide button .tit { margin-top:8px; font-size:var(--font14); font-weight:var(--w-bold); line-height:21px; }
 
-.slider-wrap .mySwiper .swiper-slide.on { border:1px solid var(--secondary); border-radius:3px; background:var(--background4);}
-.slider-wrap .mySwiper .swiper-slide.on button {  background:var(--background4);}
-.slider-wrap .mySwiper .swiper-slide.on span,
-.slider-wrap .mySwiper .swiper-slide.on .tit { color:var(--secondary); }
+.swiper-container .mySwiper .swiper-slide.on { border:1px solid var(--secondary); border-radius:3px; background:var(--background4);}
+.swiper-container .mySwiper .swiper-slide.on button {  background:var(--background4);}
+.swiper-container .mySwiper .swiper-slide.on span,
+.swiper-container .mySwiper .swiper-slide.on .tit { color:var(--secondary); }
 
-.slider-wrap .mySwiper .navigation-wrapper { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display:flex; justify-content:space-between; margin:0 auto; width:512px; z-index:11; }
-.slider-wrap .mySwiper .navigation-wrapper .swiper-button-prev { left:-10px; width:42px; height:42px; background:url(../../images/swiper_l_arr.png)no-repeat 50%/42px auto; }
-.slider-wrap .mySwiper .navigation-wrapper .swiper-button-next { right:-10px; width:42px; height:42px; background:url(../../images/swiper_r_arr.png)no-repeat 50%/42px auto; }
-.slider-wrap .mySwiper .navigation-wrapper .swiper-button-prev::after,
-.slider-wrap .mySwiper .navigation-wrapper .swiper-button-next::after { content:none; }
+.swiper-container .mySwiper .navigation-wrapper { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display:flex; justify-content:space-between; margin:0 auto; width:512px; z-index:11; }
+.swiper-container .mySwiper .navigation-wrapper .swiper-button-prev { left:-10px; width:42px; height:42px; background:url(../../images/swiper_l_arr.png)no-repeat 50%/42px auto; }
+.swiper-container .mySwiper .navigation-wrapper .swiper-button-next { right:-10px; width:42px; height:42px; background:url(../../images/swiper_r_arr.png)no-repeat 50%/42px auto; }
+.swiper-container .mySwiper .navigation-wrapper .swiper-button-prev::after,
+.swiper-container .mySwiper .navigation-wrapper .swiper-button-next::after { content:none; }
 
-.slider-wrap .mySwiper .navigation-wrapper .swiper-button-prev:focus-visible,
-.slider-wrap .mySwiper .navigation-wrapper .swiper-button-next:focus-visible { outline: 1px solid var(--secondary); }
+.swiper-container .mySwiper .navigation-wrapper .swiper-button-prev:focus-visible,
+.swiper-container .mySwiper .navigation-wrapper .swiper-button-next:focus-visible { outline: 1px solid var(--secondary); }
 
-.slider-wrap::before, .slider-wrap::after { content:''; position: absolute; top:0; bottom:0; width:90px; z-index:10; background:var(--white); }
-.slider-wrap::before { left:-30px; }
-.slider-wrap::after  { right:-30px; }
+.swiper-container::before, .swiper-container::after { content:''; position: absolute; top:0; bottom:0; width:90px; z-index:10; background:var(--white); }
+.swiper-container::before { left:-30px; }
+.swiper-container::after  { right:-30px; }
 
 /*---------------------------------------------
 	조건부 업종 여부 확인

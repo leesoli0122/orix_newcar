@@ -1,5 +1,23 @@
 $(document).ready(function () {
 
+	//견적내기 스와이퍼
+	function mySwiper(e){
+		var swiper = new Swiper(".mySwiper", {
+			slidesPerView: 3, // Default
+			spaceBetween: 10,
+			pagination: {
+				el: ".swiper-pagination",
+				type: "fraction"
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			}
+		});
+		e.stoppropagation();
+
+	}mySwiper();
+
 	/**  3자리 수마다 콤마 적용 **/
 	$(document).on('keyup', 'input[inputmode=numeric]', function () {
 		this.value = this.value.replace(/[^0-9]/g, ''); // 입력값이 숫자가 아니면 공백
@@ -264,21 +282,6 @@ function openPopup(id) {
 	function showPopup($target) {
 		layerFunc($target);
 		$target.removeClass('close').addClass('on').show().focus();
-
-		// swiper 추가
-		var swiper = new Swiper(".mySwiper", {
-			slidesPerView: 'auto', // Default
-			spaceBetween: 10,
-			pagination: {
-				el: ".swiper-pagination",
-				type: "fraction"
-			},
-			navigation: {
-				nextEl: ".swiper-button-next",
-				prevEl: ".swiper-button-prev",
-			}
-		});
-
 		// close 버튼
 		$target.find('.btn-layer-close, .btn-close, .confirm').on('click', function () {
 			closePopup(id);

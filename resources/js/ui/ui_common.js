@@ -455,8 +455,8 @@ $(document).ready(function() {
 		$(button).attr('title', '선택됨');
 		$(a).attr('title', '선택됨');
 
-		button.focus();
-		a.focus();
+		// button.focus();
+		// a.focus();
 	}
 	
 	function initContainerClickEvent() {

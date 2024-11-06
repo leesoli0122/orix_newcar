@@ -325,7 +325,7 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 /* [필수/선택] - 개별체크 */
 .terms-box { padding:20px; }
 .terms-wrap.level2 + .level2 { margin-top:16px; }
-.terms-wrap.level2 .btn.btn.btn-text.small { position:absolute; right:20px; line-height:24px; }
+.terms-wrap.level2 .btn.btn.btn-text.small { z-index:1; position:absolute; right:20px; line-height:24px; }
 
 .terms-wrap.level2 input[type="checkbox"] { width:24px; height:24px; background: url(../../images/common/ic_check_off.png)no-repeat 50%/12px auto; }
 .terms-wrap.level2 input[type="checkbox"]:checked { width:24px; height:24px;  background: url(../../images/common/ic_chk2_on.png)no-repeat 50%/12px auto; }
@@ -1227,6 +1227,7 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-body li > .tit { display:inline-block; padding:4px 0; max-width:120px; width:100%; font-size:var(--font16); font-weight:var(--w-bold); color:var(--normal); text-align:center; }
 .grid-list-body li > .tit::after { content:""; position:absolute; top:50%; transform:translateY(-50%); right:0; display:inline-block; margin-left:37px; width:1px; height:14px; background:var(--border1); }
 .grid-list-body li .pop { padding:4px 54px 4px 24px; width:100%; font-size:var(--font16); font-weight:var(--w-regular); color:var(--subtitle); cursor: pointer;}
+.grid-list-body li .pop:focus-visible { outline:1px solid var(--secondary); }
 .grid-list-body li .form-group { padding:0 24px; width:100%; }
 /* .grid-list-body li .pop.form-group label { font-size:var(--font16); } */
 .grid-list-wrap.style2 .grid-list-body > ul >  li.num,

@@ -92,30 +92,6 @@ $(document).ready(function () {
 		}
 	});
 
-	/** popup focus **/
-	// $('.layerpopup.layer-up .form-control').focus(function(){
-	//   $('.ly-cont-wrap.ly-scroll-con').removeClass('plus-height2').addClass('plus-height3');
-	// });
-
-	// $('.layerpopup.layer-up .form-control').blur(function(){
-	//   $('.ly-cont-wrap.ly-scroll-con').addClass('plus-height2').removeClass('plus-height3');
-	// });
-
-	/** 리스트 선택이 필요한 경우 **/
-	// $(document).on('click', '.txt-list-wrap.click .txt-detail-area', function () {
-	//   $('.txt-list-wrap.click .txt-detail-area').not(this).removeClass('on');
-	//   $(this).toggleClass('on');
-	//   $('.txt-list-wrap.click .txt-detail-area').not(this).find('input').removeClass('on');
-	//   $(this).find('input').toggleClass('on');
-	// });
-
-	/** 테이블 상세현황 **/
-	// $(".table-type.check tbody tr").click(function () {
-	//   $(".table-type.check tbody tr").not(this).removeClass("checked");
-	//   $(this).toggleClass("checked");
-	//   $(".table-type.result").css("display", $(this).hasClass("checked") ? "block" : "none");
-	// });
-
 	/** 전체동의 **/
 	$('.check.all').on('click', function () {
 		var termsPopID = $(this).attr("terms-all");
@@ -157,24 +133,26 @@ $(document).ready(function () {
 	/*********************************************************************
 		tab
 	*********************************************************************/
-	// 상위 탭 클릭 처리 (견적, 심사 등 상위 탭)
+	/// 상위 탭
 	$(".tab-item > li").click(function () {
-		var tabCont = $(this).attr("data-tab");
-		var tabContList = $(this).closest(".tabs").find(".tab-content-area > .tab-content");
+		var selectedTab  = $(this).attr("data-tab");
+		var tabContents  = $(this).closest(".tabs").find(".tab-content-area > .tab-content");
 
-		tabContList.addClass("dp-none");
-		$("#" + tabCont).removeClass("dp-none");
+		tabContents.addClass("dp-none");
+		$("#" + selectedTab).removeClass("dp-none");
+
 		$(this).addClass("on").attr('title', '선택됨').siblings().removeClass("on").attr('title', '');
 	});
 
-	// 하위 탭 클릭 처리 (예: 심사 안의 심사승인, 심사협의 등 하위 탭)
+	// 하위 탭 (e.g., 심사 > 심사승인, 심사협의)
 	$(".tab-item02 > li").click(function (e) {
 		e.stopPropagation();
-		var subTabCont = $(this).attr("data-tab");
-		var tabContList = $(this).closest(".tabs").find(".tab-content-area02 > .tab-content");
+		var selectedSubTab  = $(this).attr("data-tab");
+		var subTabContents = $(this).closest(".tabs").find(".tab-content-area02 > .tab-content");
 
-		tabContList.addClass("dp-none");
-		$("#" + subTabCont).removeClass("dp-none");
+		subTabContents.addClass("dp-none");
+		$("#" + selectedSubTab).removeClass("dp-none");
+		
 		$(this).addClass("on").attr('title', '선택됨').siblings().removeClass("on").attr('title', '');
 	});
 
@@ -209,10 +187,8 @@ function layerFunc(_target) {
 // block 추가 및 삭제
 function addBlock(_full) {
 	console.log('Adding block:', _full);
-	// 블록 추가 로직 필요 시 구현
-	// 예: $('body').append('<div class="block"></div>');
 
-	// close 버튼에 이벤트 추가
+	// close 버튼
 	$('.close').on('click', function () {
 		$('.block').trigger('click');
 	});
@@ -275,12 +251,10 @@ function openPopup(id) {
 	$('body').css({ 'overflow': 'hidden', 'position': 'fixed', });
 
 	if ($target.length) {
+
 		// 현재 스크롤 위치 저장
 		scrollPosition = $(window).scrollTop();
 		console.log('Scroll position saved:', scrollPosition);
-
-		// header-wrap before 뒤로가게
-		// $('.layerpopup').css('z-index', '201');
 
 		showPopup($target);
 	} else {
@@ -305,7 +279,7 @@ function openPopup(id) {
 			}
 		});
 
-		// close 버튼에 이벤트 추가
+		// close 버튼
 		$target.find('.btn-layer-close, .btn-close, .confirm').on('click', function () {
 			closePopup(id);
 		});
@@ -317,9 +291,6 @@ function closePopup(id, storedScrollPosition) {
 
 	deleteBlock();
 	$target.fadeOut(200).removeClass('on');
-
-	// header-wrap의 z-index 복원
-	// $('.header-wrap').css('z-index', '999');
 
 	// 스크롤 위치 복원 및 스타일 초기화
 	$('body').css({

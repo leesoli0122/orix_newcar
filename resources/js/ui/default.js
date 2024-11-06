@@ -232,7 +232,7 @@ function messagePopup(id) {
 	const currentTop = $(window).scrollTop();
 
 	// 스크롤 방지
-	$('body').css({ 'position': 'fixed', 'top': -currentTop + 'px' });
+	$('body').css({ 'position': 'fixed', 'top': -currentTop + 'px', 'overflow': 'hidden' });
 
 	_target.find('.btn-layer-close, .btn-close, .confirm').off('click').on('click', function () {
 		closePopup(id, currentTop);
@@ -270,6 +270,9 @@ let scrollPosition = 0;
 
 function openPopup(id) {
 	const $target = $('#' + id);
+
+	// 스크롤 위치 복원 및 스타일 초기화
+	$('body').css({ 'overflow': 'hidden', 'position': 'fixed', });
 
 	if ($target.length) {
 		// 현재 스크롤 위치 저장

@@ -22,7 +22,7 @@ SELECT #셀렉트
 /* select disabled */
 .select-box > .se-select select:disabled,
 .select-box > .se-select select[disabled=disabled],
-.select-box > .se-select[data-stove=select] select[disabled]  { border-color: var(--border2); background-color:var(--background2); color: var(--inactive); opacity: 1; }
+.select-box > .se-select[data-stove=select] select[disabled]  { border-color: var(--border2); background-color:var(--background2); color: var(--inactive); opacity: 1; cursor: initial; }
 /* select readonly */
 .select-box > .se-select select:disabled[data-status=readonly],
 .select-box > .se-select select[disabled=disabled][data-status=readonly] {  border-color: var(--border2); background-color:var(--white); }
@@ -169,6 +169,7 @@ INPUT  #인풋
 	Input Reset
 ---------------------------------------------*/
 input { display:block; width:100%; line-height:initial; box-sizing:border-box; border:none; border-radius: 0; background-color: none; -o-appearance:none; -webkit-appearance:none; -moz-appearance: none; appearance: none; white-space: nowrap; overflow:hidden; outline:none; cursor: pointer; }
+input:disabled { cursor: initial; }
 /** Firefox Browser **/
 input[type=number],
 input[type=number] { -moz-appearance: textfield; }

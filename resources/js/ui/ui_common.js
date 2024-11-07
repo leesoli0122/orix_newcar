@@ -480,8 +480,8 @@ $(document).ready(function() {
 			var scrollTop = $(this).scrollTop();
 			var windowHeight = $(this).height();
 			var footerTop = $('footer').offset().top;
-			var contentWrapOffset = $('#contentWrap').offset(); // #contentWrap의 위치
-        	var contentWrapWidth = $('#contentWrap').outerWidth(); // #contentWrap의 너비
+			var contentWrapOffset = $('.sub-content').offset(); // #contentWrap의 위치
+        	var contentWrapWidth = $('.sub-content').outerWidth(); // #contentWrap의 너비
 	
 			// 위치
 			if (scrollTop > 0) {
@@ -499,7 +499,7 @@ $(document).ready(function() {
 
 					$('.btn-top').css({
 						position: 'absolute',
-						bottom: `${30}px`,
+						bottom: '30px',
 						right: '10px'
 					});
 				} else {
@@ -518,7 +518,7 @@ $(document).ready(function() {
 					// #contentWrap 밖으로 나갈 경우
 					if (buttonRightEdge > contentWrapRightEdge) {
 						$('.btn-top').css({
-							right: `${$(window).width() - contentWrapRightEdge + 10}px`
+							right: ($(window).width() - contentWrapRightEdge + 10) + 'px'
 						});
 					} else {
 						$('.btn-top').css({

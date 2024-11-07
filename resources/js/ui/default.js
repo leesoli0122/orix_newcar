@@ -226,7 +226,7 @@ function messagePopup(id) {
 	const currentTop = $(window).scrollTop();
 
 	// 스크롤 방지
-	$('body').css({ 'position': 'fixed', 'top': -currentTop + 'px', 'overflow': 'hidden' });
+	$('body').css({ 'position': 'fixed', 'top': -currentTop + 'px' });
 
 	_target.find('.btn-layer-close, .btn-close, .confirm').off('click').on('click', function () {
 		closePopup(id, currentTop);

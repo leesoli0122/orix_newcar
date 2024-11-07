@@ -290,12 +290,16 @@
         var introTodoSlider  = new Swiper(".introTodoSlider", {
             slidesPerView: 2, // Default
             spaceBetween: 24,
+            watchOverflow: false,
+            initialSlide:0,
             scrollbar: {
                 el: ".swiper-scrollbar",
+                draggable: true,
             },
             pagination: {
                 el: ".swiper-pagination",
                 type: "fraction",
+                clickable: true,
             },
             navigation: {
                 nextEl: ".swiper-button-next",
@@ -321,6 +325,7 @@
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
+                clickable: true,
             },
             breakpoints: {
                 1200: {

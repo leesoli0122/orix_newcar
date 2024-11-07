@@ -273,7 +273,7 @@ header #헤더
 .header-wrap > .h-menu ul.menu > li .menuitem-wrap .menuitem { display:inline-block; width:100%; }
 .header-wrap > .h-menu ul.menu > li .menuitem-wrap .menuitem > li { display:block; margin:0 0 8px; text-align:left; }
 .header-wrap > .h-menu ul.menu > li .menuitem-wrap .menuitem > li a { display:inline-block; padding:9px 12px; width:100%; border-radius:12px; font-size:var(--font18); font-weight:var(--w-regular); color:var(--title); }
-.header-wrap > .h-menu ul.menu > li .menuitem-wrap .menuitem > li.on a,
+.header-wrap > .h-menu ul.menu > li .menuitem-wrap .menuitem > li a:focus-visible,
 .header-wrap:not(.header-wrap.side) > .h-menu ul.menu > li .menuitem-wrap .menuitem > li a:hover { color:var(--secondary); background:var(--background4); font-weight: var(--w-bold); }
 .header-wrap > .h-menu ul.menu > li .menuitem-wrap .menuitem > li .bul-dot > li::before { top:50%; transform:translateY(-50%); left:15px; z-index:1; }
 

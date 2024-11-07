@@ -138,6 +138,7 @@
                 clearTimeout(hideMenuTimer);
                 $(this).closest('li').addClass('on').siblings().removeClass('on').find(".menuitem-wrap").removeClass('on');
                 $(this).closest('li').find(".menuitem-wrap").addClass('on');
+                $(".menuitem-wrap a").closest('li').removeAttr('class');
             }).on('blur', function () {
                 hideMenuTimer = setTimeout(function () {
                     $(".menu > li, .menuitem-wrap").removeClass('on');

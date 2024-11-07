@@ -1,23 +1,5 @@
 $(document).ready(function () {
 
-	//견적내기 스와이퍼
-	function mySwiper(){
-		var swiper = new Swiper(".mySwiper", {
-			slidesPerView: 3, // Default
-			spaceBetween: 10,
-			watchOverflow:false,
-			initialSlide:0,
-			pagination: {
-				el: ".swiper-pagination",
-				type: "fraction"
-			},
-			navigation: {
-				nextEl: ".swiper-button-next",
-				prevEl: ".swiper-button-prev",
-			}
-		});
-	}mySwiper();
-
 	/**  3자리 수마다 콤마 적용 **/
 	$(document).on('keyup', 'input[inputmode=numeric]', function () {
 		this.value = this.value.replace(/[^0-9]/g, ''); // 입력값이 숫자가 아니면 공백

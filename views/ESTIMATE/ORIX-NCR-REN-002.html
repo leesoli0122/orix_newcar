@@ -1569,9 +1569,9 @@
                             <li><button type="button">그레이스</button></li>
                             <li><button type="button">넥쏘</button></li>
                             <li><button type="button">맥스크루즈</button></li>
-                            <li><button type="button">베뉴</button></li>
-                            <li><button type="button">베라크루즈</button></li>
-                            <li><button type="button">베르나</button></li>
+                            <li onclick="inqDtlMdl(this)"><button type="button">베뉴</button></li>
+                            <li onclick="inqDtlMdl(this)"><button type="button">베라크루즈</button></li>
+                            <li onclick="inqDtlMdl(this)"><button type="button">베르나</button></li>
                             <li><button type="button">벨로스터</button></li>
                             <li><button type="button">스타렉스</button></li>
                             <li><button type="button">싼타페</button></li>
@@ -1766,4 +1766,22 @@
     </div>
     <script type="text/javascript" src="../../resources/js/lib/swiper-bundle.min.js"></script>
 </body>
+<script>
+$(document).ready(function() {
+var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3, // Default
+        spaceBetween: 10,
+        watchOverflow:false,
+        initialSlide:0,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction"
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        }
+    });
+});
+</script>
 </html>

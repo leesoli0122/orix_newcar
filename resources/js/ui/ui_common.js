@@ -249,10 +249,6 @@ $(document).ready(function() {
 	function customDatepicker(){
         // 기본 설정
         $.datepicker.setDefaults({
-            // showOn: "both",
-            // buttonImage:"/resources/images/ic_datepicker.png",
-            // buttonImageOnly:true,
-            // buttonText:"달력 선택",
             closeText: "닫기",
             prevText: "이전달",
             nextText: "다음달",
@@ -271,17 +267,29 @@ $(document).ready(function() {
             firstDay: 0,
             isRTL: true,
 			 // yearSuffix: "년",
-			minDate:null, //null
-			beforeShow: function(input, inst) {
-                repositionDatepicker(input, inst);
-                $(window).on('scroll resize', function() {
-                    repositionDatepicker(input, inst);
-                });
-            },
-            onClose: function() {
-                $(window).off('scroll resize');
-            }
+			minDate:null //null
         });
+
+		$('.datepicker').datepicker({
+			showOtherMonths:true,
+			showMonthAfterYear: true,
+			showButtonPanel: true,
+			changeYear: true,
+			changeMonth: true,
+			yearRange:'c-5:c+5',//선택 범위
+			beforeShow: function(input, inst) {
+				repositionDatepicker(input, inst);
+				$(window).on('scroll resize', function() {
+					repositionDatepicker(input, inst);
+				});
+				setTimeout(function() {
+					$('.ui-datepicker').css('z-index', '202');
+				}, 0);
+			},
+			onClose: function() {
+				$(window).off('scroll resize');
+			}
+		});
         
         // 위치 조절 함수
         function repositionDatepicker(input, inst){
@@ -289,19 +297,10 @@ $(document).ready(function() {
             var inputHeight = $(input).outerHeight();
             inst.dpDiv.css({
                 top: inputOffset.top + inputHeight + 'px', // input 바로 아래
-                left: inputOffset.left + '-10px' // input의 왼쪽
+                left: inputOffset.left + 'px' // input의 왼쪽
             });
         }
-        
-        $('.datepicker').datepicker({
-			showOtherMonths:true,
-            showMonthAfterYear: true,
-            showButtonPanel: true,
-            changeYear: true,
-            changeMonth: true,
-            yearRange:'c-5:c+5'//선택 범위
-        });
-    
+
 		//오늘 버튼
 		var old_goToToday = $.datepicker._gotoToday;
 		$.datepicker._gotoToday = function(id) {
@@ -311,6 +310,7 @@ $(document).ready(function() {
 			this._selectDate(id);
 			target.blur();
 		};
+		
     }
     // Datepicker 핸들러 실행
     customDatepicker();
@@ -518,7 +518,7 @@ $(document).ready(function() {
 					// #contentWrap 밖으로 나갈 경우
 					if (buttonRightEdge > contentWrapRightEdge) {
 						$('.btn-top').css({
-							right: ($(window).width() - contentWrapRightEdge + 10) + 'px'
+							right: ($(window).width() - contentWrapRightEdge + '10px')
 						});
 					} else {
 						$('.btn-top').css({

@@ -134,7 +134,7 @@ $(document).ready(function () {
 		tab
 	*********************************************************************/
 	/// 상위 탭
-	$(".tab-item > li").click(function () {
+	$(".tab-item > li > a").click(function () {
 		var selectedTab  = $(this).attr("data-tab");
 		var tabContents  = $(this).closest(".tabs").find(".tab-content-area > .tab-content");
 
@@ -145,7 +145,7 @@ $(document).ready(function () {
 	});
 
 	// 하위 탭 (e.g., 심사 > 심사승인, 심사협의)
-	$(".tab-item02 > li").click(function (e) {
+	$(".tab-item02 > li > a").click(function (e) {
 		e.stopPropagation();
 		var selectedSubTab  = $(this).attr("data-tab");
 		var subTabContents = $(this).closest(".tabs").find(".tab-content-area02 > .tab-content");
@@ -208,7 +208,7 @@ function messagePopup(id) {
 	const currentTop = $(window).scrollTop();
 
 	// 스크롤 방지
-	$('body').css({ 'position': 'fixed', 'top': -currentTop + 'px' });
+	$('body').css({ 'position': 'auto'});
 
 	_target.find('.btn-layer-close, .btn-close, .confirm').off('click').on('click', function () {
 		closePopup(id, currentTop);
@@ -248,7 +248,7 @@ function openPopup(id) {
 	const $target = $('#' + id);
 
 	// 스크롤 위치 복원 및 스타일 초기화
-	$('body').css({ 'overflow': 'hidden', 'position': 'fixed', });
+	$('html').css({ 'overflow': 'hidden'});
 
 	if ($target.length) {
 
@@ -278,10 +278,8 @@ function closePopup(id, storedScrollPosition) {
 	$target.fadeOut(200).removeClass('on');
 
 	// 스크롤 위치 복원 및 스타일 초기화
-	$('body').css({
+	$('html').css({
 		'overflow': '',
-		'position': '',
-		'top': ''
 	});
 
 	// 스크롤 위치 복원

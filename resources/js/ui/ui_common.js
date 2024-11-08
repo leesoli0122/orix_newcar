@@ -376,70 +376,63 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Input_File [파일 업로드]
 	---------------------------------------------*/
-    function setupFileInputHandlers() {
-        const $fileInput = $('.attachmentFile');  // 파일 입력
-        const $addFileList = $('.add-file'); // 파일 리스트
-        const maxFiles = 3;                  // 최대 파일 개수
-        const maxFileSize = 50 * 1024 * 1024; // 50MB 제한 (바이트로 변환)
-
-        // "찾아보기" 버튼 트리거
-        $('.file .btn-input').on('click', function() {
-            $fileInput.click();
-        });
-
-        // 파일 선택 (50MB 이하의 xlsx, pdf, hwp, pptx, doc파일 3개까지 업로드)
-        $fileInput.on('change', function() {
-			
-            if ($addFileList.children('li').length >= maxFiles) {
-                messageView('최대 3개의 파일만 선택할 수 있습니다.');
-                return;
-            }
-
-            const files = Array.from(this.files);
-
-            // 선택 파일 검사
-            files.forEach(function(file) {
-                const fileSize = file.size;
-				const filename = file.name;
-				const allowFileNm = filename.split('.').pop().toLowerCase();
-				var allowFile = ['jpg','xlsx','pdf','doc','hwp','pptx'];
-				// 파일형식과 크기 검사 (JPC, PNG, 300MB 이하)
-				// 파일형식과 크기 검사 (jpg, xlsx, pdf, doc, hwp, pptx, 50MB 이하)
-				if($.inArray(allowFileNm , allowFile) === -1){
-					messageView(allowFileNm+"는 지원하지 않는 확장자입니다");
+	function setupFileInputHandlers() {
+		const maxFiles = 3;// 최대 파일 개수
+		const maxFileSize = 300 * 1024 * 1024; // 300MB 제한
+		const allowedExtensions = ['jpg', 'png', 'xlsx', 'pdf', 'doc', 'hwp', 'pptx']; // 허용된 파일 확장자
+	
+		
+		$('.file').each(function() {
+			const $container = $(this); 
+			const $fileInput = $container.find('.attachmentFile');
+			const $addFileList = $container.find('.add-file');
+	
+			// "찾아보기" 버튼 클릭 시 파일 선택 창 열기
+			$container.find('.btn-input').on('click', function() {
+				$fileInput.click();
+			});
+	
+			// 파일 선택
+			$fileInput.on('change', function() {
+				if ($addFileList.children('li').length >= maxFiles) {
+					messageView('최대 3개의 파일만 선택할 수 있습니다.');
 					return;
 				}
-				if (fileSize > maxFileSize) {
-					messageView('파일크기는 50MB를 초과할 수 없습니다.');
-					return;
-				}
-
-				// 파일이 3개 미만일 때만 리스트에 추가
-                if ($addFileList.children('li').length < maxFiles) {
-                    const $newListItem = $('<li>').text(file.name);
-                    const $deleteButton = $('<span>').addClass('delete-file').text('삭제'); // 삭제 버튼 추가
-					const $deleteButton2 = $deleteButton.on('click',function(){
-
-						var indexToRemove = $(this).closest('li').index();
-						removeFiles(indexToRemove);
-						$(this).closest('li').remove();
-					})
-                    $newListItem.append($deleteButton);
-                    $newListItem.append($deleteButton2);
-                    $addFileList.append($newListItem);
-                }
-            });
-
-            $fileInput.val('');
-        });
-
-		$addFileList.on('click', '.delete-file', function() {
-			$(this).parent().remove();
-			$uploadName.text(updatedFileNames.join(', '));
+	
+				const files = Array.from(this.files);
+	
+				files.forEach(function(file) {
+					const fileSize = file.size;
+					const filename = file.name;
+					const fileExtension = filename.split('.').pop().toLowerCase();
+	
+					if (!allowedExtensions.includes(fileExtension)) {
+						messageView(fileExtension + '는 지원하지 않는 확장자입니다.');
+						return;
+					}
+					if (fileSize > maxFileSize) {
+						messageView('파일 크기는 50MB를 초과할 수 없습니다.');
+						return;
+					}
+	
+					if ($addFileList.children('li').length < maxFiles) {
+						const $newListItem = $('<li>').text(file.name);
+						const $deleteButton = $('<span>').addClass('delete-file').text('삭제');
+	
+						$deleteButton.on('click', function() {
+							$(this).closest('li').remove();
+						});
+						$newListItem.append($deleteButton);
+						$addFileList.append($newListItem);
+					}
+				});
+	
+				$fileInput.val('');
+			});
 		});
-    }
-
-    setupFileInputHandlers();
+	}
+	
+	setupFileInputHandlers();
 
 	/*********************************************************************
 		Select Popup [년도 선택_팝업 / 차량 선택 _ 팝업/ 실적조회_테이블]

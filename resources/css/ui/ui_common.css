@@ -215,6 +215,11 @@ INPUT_ ETC
 input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; height:100%; opacity: 0; cursor: pointer; font-size:0; max-width:512px; z-index:1; }
 
 /*---------------------------------------------
+	Input_첨부파일 error
+---------------------------------------------*/
+.form-group.error .upload-name { border:1px solid var(--error); }
+
+/*---------------------------------------------
     Input_첨부파일_File Custom_파일첨부했을 때 list
 ---------------------------------------------*/
 .add-file li { display:inline-flex; margin-top:20px; margin-right:20px; padding:11px 14px 12px; border:1px solid var(--border3); border-radius:4px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--title); background:var(--white); }
@@ -686,7 +691,7 @@ popup #팝업
 	select style3
 ---------------------------------------------*/
 .form-group.style3 .form-row { align-items:center; justify-content:space-between; }
-.form-group.style3 .select-box { max-width:280px; }
+.form-group.style3 .select-box { max-width:240px; }
 /* 합계 */
 .layerpopup .sum { text-align:right; }
 .layerpopup .sum span { color:var(--secondary); }

@@ -282,9 +282,15 @@ $(document).ready(function() {
 				$(window).on('scroll resize', function() {
 					repositionDatepicker(input, inst);
 				});
-				setTimeout(function() {
+				if ($(input).closest('.layerpopup').length) {
+					setTimeout(function() {
 					$('.ui-datepicker').css('z-index', '202');
 				}, 0);
+				} else {
+					setTimeout(function() {
+					$('.ui-datepicker').css('z-index', '2');
+				}, 0);
+				}
 			},
 			onClose: function() {
 				$(window).off('scroll resize');

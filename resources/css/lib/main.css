@@ -117,6 +117,8 @@
 .mainSec-myTodoList div.intro-con>ul>li.date>span.txt { font-size:var(--font18); font-weight:var(--w-bold); }
 .mainSec-myTodoList div.intro-con>ul>li.deadline>span.txt { color:var(--error); }
 .mainSec-myTodoList div.intro-con>ul>li.num{ font-size:var(--font14); color:var(--inactive); }
+.mainSec-myTodoList div.intro-con>p.btn { position:absolute; right:20px; }
+.mainSec-myTodoList div.intro-con>p.btn::after { content:">"; padding-left:6px;}
 /*---------------------------------------------
     mainSec-myTodoList result
 ---------------------------------------------*/

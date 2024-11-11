@@ -561,7 +561,7 @@ $(document).ready(function() {
 					inputElement.off('keyup').on('keyup', function() {
 						var inputValue = inputElement.val().trim();
 						var btnCancelContainer = inputElement.closest('.col-10'); // 부모
-						const btnCancel = $('<button type="button" class="btn btn-cancel"><span class="ir">입력취소</span></button>');
+						const btnCancel = $('<button type="button" class="btn btn-cancel" onclick="clearBtn()"><span class="ir">입력취소</span></button>');
 	
 						if (inputValue !== '') {
 							if (btnCancelContainer.find('.btn-cancel').length === 0) {

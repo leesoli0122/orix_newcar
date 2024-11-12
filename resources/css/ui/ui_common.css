@@ -281,7 +281,7 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 	Input_Radio Style
 ---------------------------------------------*/
 .form-group > ul.radio-box input[type="radio"] ,
-.form-group > ul.check-box input[type="checkbox"] { width:24px; height:24px;  }
+.form-group > ul.check-box input[type="checkbox"] {  min-width:24px; width:24px; height:24px;   }
 
 .form-group > ul.check-box li>label,
 .form-group > ul.radio-box li>label { line-height:24px; padding-left:10px;  }

@@ -284,15 +284,15 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 .form-group > ul.check-box input[type="checkbox"] { width:24px; height:24px;  }
 
 .form-group > ul.check-box li>label,
-.form-group > ul.radio-box li>label { line-height:24px; padding-left:10px;  }
+.form-group > ul.radio-box li>label { line-height:24px; /*padding-left:10px;*/  }
 
 .form-group > ul.radio-box input[type="radio"]:checked + label,
 .form-group > ul.check-box input[type="checkbox"]:checked  + label { font-weight: var(--w-bold); color:var(--title); }
 
 .form-group ul.radio-box>li,
-.form-group ul.check-box>li{ display:flex; }
-.form-group > ul.radio-box input[type="radio"]:focus,
-.form-group > ul.check-box input[type="checkbox"]:focus { outline: 1px solid var(--secondary); }
+.form-group ul.check-box>li{ display:flex; column-gap:10px; }
+.form-group > ul.radio-box input[type="radio"]:focus-visible,
+.form-group > ul.check-box input[type="checkbox"]:focus-visible { outline: 1px solid var(--secondary); }
 
 .form-group > ul.radio-box input[type="radio"] { border:7.5px solid var(--background1); background: var(--white); border-radius: 50%; }
 .form-group > ul.radio-box input[type="radio"]:checked { background:var(--white); border:7.5px solid var(--secondary);  }
@@ -1467,7 +1467,7 @@ dd.download-wrap { padding:0; background:transparent; }
 팝업에서 #선택
 *********************************************************************/
 .choose-wrap .choose-group { padding-left:10px; padding-bottom:40px; margin-bottom:30px; border-bottom:1px solid var(--border3); font-size:0; }
-.choose-wrap .choose-group:last-child { padding-bottom:20px; border-bottom:none; }
+.choose-wrap .choose-group:last-child { padding-bottom:20px; margin-bottom:20px; border-bottom:none; }
 .choose-wrap .choose-group .choose { display:flex; align-items:center; flex-wrap:wrap; gap:12px; max-width:540px; width:100%; }
 .choose-wrap .choose-group .choose li { display:inline-block; gap:12px; padding:9px 16px; border:1px solid var(--border2); border-radius:18px; font-size:var(--font14); cursor:pointer; }
 .choose-wrap .choose-group .choose li button { background:transparent; color:var(--inactive); cursor:pointer; }
@@ -1551,6 +1551,13 @@ ul.btnSelect li button:focus-visible { outline: 1px solid var(--secondary); }
 .swiper-container::before, .swiper-container::after { content:''; position: absolute; top:0; bottom:0; width:90px; z-index:10; background:var(--white); }
 .swiper-container::before { left:-30px; }
 .swiper-container::after  { right:-30px; }
+
+/*---------------------------------------------
+	조건부 업종 선택(팝업 안에 라디오)
+---------------------------------------------*/
+.layerpopup .form-group.radio { padding:0 0 10px 10px; }
+.layerpopup .form-group.radio label { display:inline-block; min-width:300px; width:100%; }
+
 
 /*---------------------------------------------
 	조건부 업종 여부 확인

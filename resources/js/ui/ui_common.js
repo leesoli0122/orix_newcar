@@ -270,6 +270,7 @@ $(document).ready(function() {
 			minDate:null //null
         });
 
+		// 커스텀 설정
 		$('.datepicker').datepicker({
 			showOtherMonths:true,
 			showMonthAfterYear: true,
@@ -487,12 +488,14 @@ $(document).ready(function() {
 				if (scrollTop > 0) {
 					
 					if ($('.btn-top').css('display') === 'none') {
+
 						$('.btn-top').css({
 							display: 'block',
 							opacity: 0
 						}).stop(true, true).animate({
 							opacity: 1
-						}, 0);
+						});
+
 					}
 				
 					if (scrollTop + windowHeight >= footerTop) {
@@ -502,6 +505,7 @@ $(document).ready(function() {
 							bottom: '30px',
 							right: '10px'
 						});
+						
 					} else {
 						
 						$('.btn-top').css({
@@ -526,8 +530,6 @@ $(document).ready(function() {
 							});
 						}
 					}
-
-					
 					
 				} else {
 
@@ -535,7 +537,7 @@ $(document).ready(function() {
 				}
 			});
 		
-			$(document).on('click', '.btn-top', function() {
+			$('.btn-top').on('click', function() {
 				$('html, body').stop().animate({ scrollTop: 0 }, 'linear');
 			});
 		}

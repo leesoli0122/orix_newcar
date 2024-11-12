@@ -97,6 +97,7 @@
                                                 <li class="deadline"><span class="tit">확보가능기한 :</span><span class="txt">2024.10.29&nbsp;&nbsp;&nbsp;&nbsp;23:59:59</span></li>
                                                 <li class="num"><span class="tit">견적번호 :</span><span class="txt">RM02938-000002</span>&nbsp;·&nbsp;<span class="tit">제조사 계약번호 : </span><span class="txt">AAAAA0</span></li>
                                             </ul>
+                                            <p class="btn"><span class="ir">선점요청완료</span>바로가기</p>
                                         </div>
                                     </a>
                                 </li>
@@ -114,6 +115,7 @@
                                                 <li class="deadline"><span class="txt">다시 선점요청을 진행해주세요.</span></li>
                                                 <li class="num"><span class="tit">견적번호 :</span><span class="txt">RM02938-000002</span>&nbsp;·&nbsp;<span class="tit">제조사 계약번호 : </span><span class="txt">AAAAA0</span></li>
                                             </ul>
+                                            <p class="btn"><span class="ir">선점기한만료</span>바로가기</p>
                                         </div>
                                     </a>
                                 </li>
@@ -130,6 +132,7 @@
                                                 <li class="deadline"><span class="tit">예시일 :</span><span class="txt">2024.10.29&nbsp;&nbsp;&nbsp;&nbsp;23:59:59</span></li>
                                                 <li class="num"><span class="tit">견적번호 :</span><span class="txt">RM02938-000002</span>&nbsp;·&nbsp;<span class="tit">제조사 계약번호 : </span><span class="txt">AAAAA0</span></li>
                                             </ul>
+                                            <p class="btn"><span class="ir">배정완료</span>바로가기</p>
                                         </div>
                                     </a>
                                 </li>
@@ -233,7 +236,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <a href="javascript:void(0);" class="btn"><span class="ir">자료실</span>더보기</a>
+                                <a href="javascript:void(0);" class="btn"><span class="ir">공지사항</span>더보기</a>
                             </div>
                         </div>
                         <div class="introList-area">
@@ -290,12 +293,16 @@
         var introTodoSlider  = new Swiper(".introTodoSlider", {
             slidesPerView: 2, // Default
             spaceBetween: 24,
+            watchOverflow: false,
+            initialSlide:0,
             scrollbar: {
                 el: ".swiper-scrollbar",
+                draggable: true,
             },
             pagination: {
                 el: ".swiper-pagination",
                 type: "fraction",
+                clickable: true,
             },
             navigation: {
                 nextEl: ".swiper-button-next",
@@ -321,6 +328,7 @@
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
+                clickable: true,
             },
             breakpoints: {
                 1200: {

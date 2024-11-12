@@ -499,7 +499,7 @@ $(document).ready(function() {
 
 					$('.btn-top').css({
 						position: 'absolute',
-						bottom: '30px',
+						bottom: `${30}px`,
 						right: '10px'
 					});
 				} else {
@@ -518,7 +518,7 @@ $(document).ready(function() {
 					// #contentWrap 밖으로 나갈 경우
 					if (buttonRightEdge > contentWrapRightEdge) {
 						$('.btn-top').css({
-							right: ($(window).width() - contentWrapRightEdge + '10px')
+							right: `${$(window).width() - contentWrapRightEdge + 10}px`
 						});
 					} else {
 						$('.btn-top').css({
@@ -549,33 +549,32 @@ $(document).ready(function() {
 		Input_Delete Button
 	---------------------------------------------*/
 	function delEvent() {
+
 		$('.form-wrap .form-group').each(function(idx, obj) {
 			var formGroup = $(obj);
 	
 			// input 필드를 선택
-			formGroup.find('.form-control.hasCancel').each(function() {
+			formGroup.find('.form-control.hasCancel').off('focus').on('focus', function() {
 				var inputElement = $(this);
-				var btnCancelContainer = inputElement.closest('.col-10'); // 부모
-				const btnCancel = $('<button type="button" class="btn btn-cancel"><span class="ir">입력취소</span></button>');
 	
-				// 페이지 로드 시 값이 있는 경우 취소 버튼 생성
-				if (inputElement.val().trim() !== '' && btnCancelContainer.find('.btn-cancel').length === 0) {
-					btnCancelContainer.append(btnCancel);
-				}
+				if (inputElement.hasClass('hasCancel')) {
 	
-				inputElement.off('focus').on('focus', function() {
 					inputElement.off('keyup').on('keyup', function() {
 						var inputValue = inputElement.val().trim();
+						var btnCancelContainer = inputElement.closest('.col-10'); // 부모
+						const btnCancel = $('<button type="button" class="btn btn-cancel"><span class="ir">입력취소</span></button>');
 	
 						if (inputValue !== '') {
 							if (btnCancelContainer.find('.btn-cancel').length === 0) {
+								
 								btnCancelContainer.append(btnCancel);
 							}
 						} else {
+							
 							btnCancelContainer.find('.btn-cancel').remove();
 						}
 					});
-				});
+				}
 			});
 	
 			formGroup.off('click', '.btn-cancel').on('click', '.btn-cancel', function() {
@@ -587,58 +586,6 @@ $(document).ready(function() {
 	}
 	
 	delEvent();
-
-	// 페이지 로드 시 실행
-	$(document).ready(function() {
-
-		delEvent();
-
-		// 페이지 갱신 시 실행
-		$(document).on('page:load', function() {
-			delEvent();
-		});
-	});
-	
-
-	// function delEvent() {
-
-	// 	$('.form-wrap .form-group').each(function(idx, obj) {
-	// 		var formGroup = $(obj);
-	
-	// 		// input 필드를 선택
-	// 		formGroup.find('.form-control.hasCancel').off('focus').on('focus', function() {
-	// 			var inputElement = $(this);
-	
-	// 			if (inputElement.hasClass('hasCancel')) {
-	
-	// 				inputElement.off('keyup').on('keyup', function() {
-	// 					var inputValue = inputElement.val().trim();
-	// 					var btnCancelContainer = inputElement.closest('.col-10'); // 부모
-	// 					const btnCancel = $('<button type="button" class="btn btn-cancel"><span class="ir">입력취소</span></button>');
-	
-	// 					if (inputValue !== '') {
-	// 						if (btnCancelContainer.find('.btn-cancel').length === 0) {
-								
-	// 							btnCancelContainer.append(btnCancel);
-	// 						}
-	// 					} else {
-							
-	// 						btnCancelContainer.find('.btn-cancel').remove();
-	// 					}
-	// 				});
-	// 			}
-	// 		});
-	
-	// 		formGroup.off('click', '.btn-cancel').on('click', '.btn-cancel', function() {
-	// 			var inputElement = $(this).closest('.col-10').find('.form-control');
-	// 			inputElement.val('');
-	// 			$(this).remove();
-	// 		});
-	// 	});
-	// }
-	
-	// delEvent();
-
 
 });
 

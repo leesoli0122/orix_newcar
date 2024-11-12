@@ -79,7 +79,6 @@
 .mainSec-banner div.shortcut-area { margin-top:60px; padding:36px; width:368px; height:382px; border-radius: 36px; background: var(--white); box-shadow: 0px 0px 10px rgba(0,12 ,44, 0.16); }
 .mainSec-banner div.shortcut-area>.btn-wrap { display:flex; }
 .mainSec-banner div.shortcut-area>.btn-wrap>.btn { display:flex; align-items: center; word-break: keep-all; margin-left:10px; height:70px; border-radius: 8px; font-size: var(--font22); font-weight: var(--w-bold); color:var(--white); }
-.mainSec-banner div.shortcut-area>.btn-wrap>.btn:focus { outline:2px solid var(--title); }
 .mainSec-banner div.shortcut-area>.btn-wrap>.btn:nth-child(1) { margin-left:0; padding:0 40px; background: var(--m-color02); }
 .mainSec-banner div.shortcut-area>.btn-wrap>.btn:nth-child(2) { padding:0 30px; background: var(--m-color03); }
 .mainSec-banner div.shortcut-area>ul>li:nth-of-type(1) { background: var(--m-img-shortCut01) no-repeat 50% 10px/50px auto;  }
@@ -87,7 +86,9 @@
 .mainSec-banner div.shortcut-area>ul>li:nth-of-type(3) { background: var(--m-img-shortCut03) no-repeat 50% 10px/50px auto; }
 .mainSec-banner div.shortcut-area>ul>li:nth-of-type(4) { background: var(--m-img-shortCut04) no-repeat 50% 10px/50px auto; }
 .mainSec-banner div.shortcut-area>ul>li:hover { background-color: var(--m-background5); border-radius: 10px;}
-.mainSec-banner div.shortcut-area>ul>li>a:focus { border:1px solid var(--secondary); }
+
+.mainSec-banner div.shortcut-area>.btn-wrap>.btn:focus-visible { outline:1px solid var(--secondary); border:1px solid var(--white); }
+.mainSec-banner div.shortcut-area>ul>li>a:focus-visible { outline:1px solid var(--secondary); }
 /*********************************************************************
 메인.02 - To-Do-List
 *********************************************************************/
@@ -108,7 +109,8 @@
 .mainSec-myTodoList ul.introToList-area>li>a:hover,
 .mainSec-myTodoList ul.introToList-area>li>a:focus { border:1px solid var(--secondary); }
 .mainSec-myTodoList div.intro-con>p>em { display:inline-block; padding:0 12px; height:27px; line-height: 27px; border-radius: 4px; font-weight:var(--w-bold); color: var(--m-color11); background: var(--tag5); }
-.mainSec-myTodoList div.intro-con>p>strong { display:block; margin-top:18px; font-size:var(--font20); line-height: 1.4; }
+.mainSec-myTodoList div.intro-con>p>strong { display:block; margin-top:45px; font-size:var(--font20); line-height: 1.4; }
+.mainSec-myTodoList div.intro-con>p>em + strong { margin-top:18px; }
 .mainSec-myTodoList div.intro-con>ul { margin-top:34px; }
 .mainSec-myTodoList div.intro-con>ul>li:first-child { margin-top:0; }
 .mainSec-myTodoList div.intro-con>ul>li { margin-top:16px; }
@@ -116,6 +118,8 @@
 .mainSec-myTodoList div.intro-con>ul>li.date>span.txt { font-size:var(--font18); font-weight:var(--w-bold); }
 .mainSec-myTodoList div.intro-con>ul>li.deadline>span.txt { color:var(--error); }
 .mainSec-myTodoList div.intro-con>ul>li.num{ font-size:var(--font14); color:var(--inactive); }
+.mainSec-myTodoList div.intro-con>p.btn { position:absolute; right:24px; }
+.mainSec-myTodoList div.intro-con>p.btn::after { content:">"; padding-left:6px;}
 /*---------------------------------------------
     mainSec-myTodoList result
 ---------------------------------------------*/
@@ -132,10 +136,10 @@
 .swiper.introTodoSlider ul.introToList-area>li { height:322px; }
 .swiper.introTodoSlider .swiper-controller { margin:17px 0; padding-bottom: 4px; }
 .swiper.introTodoSlider .swiper-controller .swiper-scrollbar-area .swiper-scrollbar {  flex-grow: 1; bottom:var(--swiper-scrollbar-bottom, -4px); max-width: calc(100% - 164px); width: calc(85.85% - 2 * var(--swiper-scrollbar-sides-offset, 1%)); margin-right:32px; }
-.swiper.introTodoSlider .swiper-controller .swiper-button-area  {  flex-shrink: 0; position:absolute; right:0; width:132px; }
-.swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next, .swiper-controller .swiper-button-area .swiper-button-prev { top:initial; }
+.swiper.introTodoSlider .swiper-controller .swiper-button-area  { position:absolute; right:0; width:132px; }
+.swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next, .swiper-controller .swiper-button-area .swiper-button-prev { top:initial; height:43px; }
 .swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next:after, .swiper-controller .swiper-button-area .swiper-button-prev:after { font-size:var(--font22); color:var(--title); }
-.swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next:focus, .swiper-controller .swiper-button-area .swiper-button-prev:focus { border:1px solid var(--secondary); }
+.swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next:focus-visible, .swiper-controller .swiper-button-area .swiper-button-prev:focus-visible { outline:1px solid var(--secondary); }
 .swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-pagination { top:-11px; }
 
 /*********************************************************************
@@ -182,8 +186,8 @@
 .swiper.introListSlider .swiper-controller .swiper-button-next:after { content: ''; position: absolute; width:41px; height:41px; background: var(--m-img-swiper) no-repeat right 8px center/16px auto;  border: 3px solid var(--m-color09); border-radius:50%; }
 .swiper.introListSlider .swiper-controller .swiper-button-prev:hover,
 .swiper.introListSlider .swiper-controller .swiper-button-next:hover { transform: scale(1.1); }
-.swiper.introListSlider .swiper-controller .swiper-button-prev:focus,
-.swiper.introListSlider .swiper-controller .swiper-button-next:focus { border:1px solid var(--secondary); }
+.swiper.introListSlider .swiper-controller .swiper-button-prev:focus-visible,
+.swiper.introListSlider .swiper-controller .swiper-button-next:focus-visible { outline:1px solid var(--secondary); }
 .swiper.introListSlider .swiper-controller .swiper-pagination { width:auto; transform: translateX(-50%); top:var(--swiper-pagination-top, 8px); left:50%; bottom:0px; font-size:var(--font24); font-weight:var(--w-bold); color:var(--inactive); }
 .swiper.introListSlider .swiper-controller .swiper-pagination .swiper-pagination-current { color:var(--normal); }
 /*********************************************************************
@@ -193,13 +197,13 @@
     mainSec-myPerfo Default
 ---------------------------------------------*/
 .mainSec-myPerfo { margin-top:122px; }
-.mainSec-myPerfo a { display:block; transition: all 0.2s ease; }
+.mainSec-myPerfo a { display:flex; justify-content: center; align-items:center; gap:12px; padding:32px 0; font-weight: var(--w-bold); text-align: center; border-radius: 20px; transition: all 0.2s ease;  }
 .mainSec-myPerfo a:hover,
 .mainSec-myPerfo a:focus { transform: scale(1.05); }
 /*---------------------------------------------
     mainSec-myPerfo Contents
 ---------------------------------------------*/
-.mainSec-myPerfo a{ display:flex; justify-content: center; gap:12px; padding:32px 0; font-weight: var(--w-bold); text-align: center; border-radius: 20px; color:var(--m-color06); background: var(--m-background4); }
+.mainSec-myPerfo a{ color:var(--m-color06); background: var(--m-background4); }
 .mainSec-myPerfo a>em { font-size: var(--font24); }
 .mainSec-myPerfo a>strong { font-size: var(--font20); }
 .mainSec-myPerfo a>.img { position: absolute; bottom:0; right:0; width:212px; height:138px; }
@@ -264,9 +268,8 @@
 .mainSec-notice div.intro-con a.btn::after { content:'>'; margin-left:6px; font-size:var(--font14); color:var(--subtitle);  }
 .mainSec-notice div.intro-con a.btn:hover,
 .mainSec-notice div.intro-con a.btn:hover::after,
-.mainSec-notice div.intro-con a.btn:focus,
-.mainSec-notice div.intro-con a.btn:focus::after { color:var(--secondary); }
-.mainSec-notice div.intro-con a.btn:focus { border:1px solid var(--secondary); }
+.mainSec-notice div.intro-con a.btn:focus-visible::after { color:var(--secondary); }
+.mainSec-notice div.intro-con a.btn:focus-visible { color:var(--secondary);  outline:1px solid var(--secondary); }
 /*---------------------------------------------
     mainSec-notice Contents Q 아이콘
 ---------------------------------------------*/

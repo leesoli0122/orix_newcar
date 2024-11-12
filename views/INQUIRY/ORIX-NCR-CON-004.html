@@ -193,17 +193,19 @@
                             </dd>
                         </dl>
                         <dl>
-                            <dt>계좌번호</dt>
-                            <dd class="form-group">
+                            <dt>계좌번호</dt><!--[20241108]check 수정-->
+                            <dd class="form-group check">
                                 <div class="col-1">
                                     <input id="" title="계좌번호" type="text" name="" class="form-control" placeholder="숫자만 입력">
                                 </div>
-                                <div class="check-box">
-                                    <input type="checkbox" id="check-1" name="checkbox">
+                                <ul class="check-box">
+                                    <li>
+                                        <input type="checkbox" id="check-1" name="checkbox">
                                     <label for="check-1" class="check-button">
                                         <span>제조사 가상계좌 여부</span>
                                     </label>
-                                </div>
+                                    </li>
+                                </ul>
                                 <!-- 유효성 체크 시, 오류 메시지(form-group에 error추가)
                                     <p class="info">계좌번호를 입력해주세요.</p>
                                 -->

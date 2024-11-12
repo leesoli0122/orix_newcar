@@ -456,7 +456,7 @@
                                     </li>
                                     <li>
                                         <span class="tit">출고지</span>
-                                        <div><span class="change-txt">차량을 먼저 선택해 주세요</span></div>
+                                        <span class="change-txt">차량을 먼저 선택해 주세요</span><!--[20241106] 감싸고 있는 div 삭제-->
                                     </li>
                                     <!--s :외주탁송 포함된 경우 -->
                                     <li>
@@ -1569,9 +1569,9 @@
                             <li><button type="button">그레이스</button></li>
                             <li><button type="button">넥쏘</button></li>
                             <li><button type="button">맥스크루즈</button></li>
-                            <li><button type="button">베뉴</button></li>
-                            <li><button type="button">베라크루즈</button></li>
-                            <li><button type="button">베르나</button></li>
+                            <li onclick="inqDtlMdl(this)"><button type="button">베뉴</button></li>
+                            <li onclick="inqDtlMdl(this)"><button type="button">베라크루즈</button></li>
+                            <li onclick="inqDtlMdl(this)"><button type="button">베르나</button></li>
                             <li><button type="button">벨로스터</button></li>
                             <li><button type="button">스타렉스</button></li>
                             <li><button type="button">싼타페</button></li>
@@ -1596,130 +1596,131 @@
                         <!-- <div class="first-choose">
                             <p>모델을 먼저 선택해 주세요</p>
                         </div> -->
-                        
-                        <div class="mySwiper">
-                            <div class="swiper-wrapper btnSelect">
-                                <div class="swiper-slide">
-                                    <button type="button">
-                                        <div class="img-box">
-                                            <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
-                                        </div>
-                                        <span>2025</span>
-                                        <p class="tit">디 올 뉴 그랜저 하이브리드</p>
-                                    </button>
+                        <div class="swiper-container">
+                            <div class="mySwiper">
+                                <div class="swiper-wrapper btnSelect">
+                                    <div class="swiper-slide">
+                                        <button type="button">
+                                            <div class="img-box">
+                                                <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
+                                            </div>
+                                            <span>2025</span>
+                                            <p class="tit">디 올 뉴 그랜저 하이브리드</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button">
+                                            <div class="img-box">
+                                                <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
+                                            </div>
+                                            <span>2023</span>
+                                            <p class="tit">디 올 뉴 그랜저 하이브리드</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button">
+                                            <div class="img-box">
+                                                <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="더 뉴 그랜저 LG LPG 이미지">
+                                            </div>
+                                            <span>2023</span>
+                                            <p class="tit">더 뉴 그랜저 LG LPG</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button">
+                                            <div class="img-box">
+                                                <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
+                                            </div>
+                                            <span>2022</span>
+                                            <p class="tit">디 올 뉴 그랜저 하이브리드</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button">
+                                            <div class="img-box">
+                                                <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
+                                            </div>
+                                            <span>2022</span>
+                                            <p class="tit">디 올 뉴 그랜저 하이브리드</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button">
+                                            <div class="img-box">
+                                                <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
+                                            </div>
+                                            <span>2022</span>
+                                            <p class="tit">디 올 뉴 그랜저 하이브리드</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button">
+                                            <div class="img-box">
+                                                <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
+                                            </div>
+                                            <span>2022</span>
+                                            <p class="tit">디 올 뉴 그랜저 하이브리드</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button">
+                                            <div class="img-box">
+                                                <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
+                                            </div>
+                                            <span>2022</span>
+                                            <p class="tit">디 올 뉴 그랜저 하이브리드</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button">
+                                            <div class="img-box">
+                                                <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
+                                            </div>
+                                            <span>2022</span>
+                                            <p class="tit">디 올 뉴 그랜저 하이브리드</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button">
+                                            <div class="img-box">
+                                                <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
+                                            </div>
+                                            <span>2022</span>
+                                            <p class="tit">디 올 뉴 그랜저 하이브리드</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button">
+                                            <div class="img-box">
+                                                <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
+                                            </div>
+                                            <span>2022</span>
+                                            <p class="tit">디 올 뉴 그랜저 하이브리드</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button">
+                                            <div class="img-box">
+                                                <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
+                                            </div>
+                                            <span>2022</span>
+                                            <p class="tit">디 올 뉴 그랜저 하이브리드</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button">
+                                            <div class="img-box">
+                                                <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
+                                            </div>
+                                            <span>2024</span>
+                                            <p class="tit">디 올 뉴 그랜저 하이브리드</p>
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <button type="button">
-                                        <div class="img-box">
-                                            <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
-                                        </div>
-                                        <span>2023</span>
-                                        <p class="tit">디 올 뉴 그랜저 하이브리드</p>
-                                    </button>
+                                <div class="navigation-wrapper">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <button type="button">
-                                        <div class="img-box">
-                                            <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="더 뉴 그랜저 LG LPG 이미지">
-                                        </div>
-                                        <span>2023</span>
-                                        <p class="tit">더 뉴 그랜저 LG LPG</p>
-                                    </button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button type="button">
-                                        <div class="img-box">
-                                            <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
-                                        </div>
-                                        <span>2022</span>
-                                        <p class="tit">디 올 뉴 그랜저 하이브리드</p>
-                                    </button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button type="button">
-                                        <div class="img-box">
-                                            <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
-                                        </div>
-                                        <span>2022</span>
-                                        <p class="tit">디 올 뉴 그랜저 하이브리드</p>
-                                    </button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button type="button">
-                                        <div class="img-box">
-                                            <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
-                                        </div>
-                                        <span>2022</span>
-                                        <p class="tit">디 올 뉴 그랜저 하이브리드</p>
-                                    </button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button type="button">
-                                        <div class="img-box">
-                                            <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
-                                        </div>
-                                        <span>2022</span>
-                                        <p class="tit">디 올 뉴 그랜저 하이브리드</p>
-                                    </button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button type="button">
-                                        <div class="img-box">
-                                            <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
-                                        </div>
-                                        <span>2022</span>
-                                        <p class="tit">디 올 뉴 그랜저 하이브리드</p>
-                                    </button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button type="button">
-                                        <div class="img-box">
-                                            <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
-                                        </div>
-                                        <span>2022</span>
-                                        <p class="tit">디 올 뉴 그랜저 하이브리드</p>
-                                    </button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button type="button">
-                                        <div class="img-box">
-                                            <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
-                                        </div>
-                                        <span>2022</span>
-                                        <p class="tit">디 올 뉴 그랜저 하이브리드</p>
-                                    </button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button type="button">
-                                        <div class="img-box">
-                                            <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
-                                        </div>
-                                        <span>2022</span>
-                                        <p class="tit">디 올 뉴 그랜저 하이브리드</p>
-                                    </button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button type="button">
-                                        <div class="img-box">
-                                            <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
-                                        </div>
-                                        <span>2022</span>
-                                        <p class="tit">디 올 뉴 그랜저 하이브리드</p>
-                                    </button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button type="button">
-                                        <div class="img-box">
-                                            <img src="../../resources/images/car/hd_d_a_n_g_h.png" alt="디 올 뉴 그랜저 하이브리드 이미지">
-                                        </div>
-                                        <span>2022</span>
-                                        <p class="tit">디 올 뉴 그랜저 하이브리드</p>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="navigation-wrapper">
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
                             </div>
                         </div>
                     </div>
@@ -1765,5 +1766,22 @@
     </div>
     <script type="text/javascript" src="../../resources/js/lib/swiper-bundle.min.js"></script>
 </body>
-
+<script>
+$(document).ready(function() {
+var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3, // Default
+        spaceBetween: 10,
+        watchOverflow:false,
+        initialSlide:0,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction"
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        }
+    });
+});
+</script>
 </html>

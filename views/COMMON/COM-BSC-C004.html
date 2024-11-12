@@ -164,8 +164,8 @@
                                     <div class="e-select-dim"></div>
                                 </div>
                             </div>
-                            <div class="col-1">
-                                <input id="" title="" type="tel" name="" class="form-control" maxlength="11" placeholder="휴대폰번호 입력">
+                            <div class="col-1"><!--[20241104] input 수정-->
+                                <input id="" title="" type="number" name="" class="form-control" maxlength="11" oninput="this.value = this.value.slice(0,11)" placeholder="휴대폰번호 입력">
                             </div>
                             <button class="btn btn-input" type="button">인증번호 요청</button>
                         </div>
@@ -193,9 +193,9 @@
                     <h4>인증번호 입력</h4>
                     <div class="form-group correct time">
                         <label for="" class="">디폴트</label>
-                        <div class="form-row">
+                        <div class="form-row"><!--[20241104] input 수정-->
                             <div class="col-1">
-                                <input id="" title="" type="text" class="form-control" name="" placeholder="숫자 6자리 입력">
+                                <input id="" title="" type="number" class="form-control" name="" placeholder="숫자 6자리 입력" oninput="this.value = this.value.slice(0,6)">
                                 <span class="timeNum">3:00</span>
                             </div>
                             <button class="btn btn-input active" type="button">시간연장</button>
@@ -205,9 +205,9 @@
 
                     <div class="form-group correct">
                         <label for="" class="">시간연장 버튼 1회 클릭 시 (active 클래스 변경 필요)</label>
-                        <div class="form-row">
+                        <div class="form-row"><!--[20241104] input 수정-->
                             <div class="col-1 time">
-                                <input id="" title="" type="text" class="form-control" name="" placeholder="숫자 6자리 입력" disabled>
+                                <input id="" title="" type="number" class="form-control" name="" placeholder="숫자 6자리 입력" oninput="this.value = this.value.slice(0,6)" disabled>
                                 <span class="timeNum active">3:00</span><!-- [D] : 1회 - 시간연장 버튼 클릭 시 active클래스 생성 -->
                             </div>
                             <button class="btn btn-input" type="button" disabled id="myButton">시간연장</button><!-- [D] : 1회 - 시간연장 버튼 클릭 시 active 클래스 삭제 -->
@@ -238,13 +238,14 @@
 
                     <div class="form-group">
                         <label for="">주민등록번호 뒷자리 하나만 노출될 경우</label>
-                        <div class="form-row">
+                        <div class="form-row"><!--[20241104] input 수정-->
                             <div class="col-2">
-                                <input id="" title="" type="tel" class="form-control" maxlength="6" name="" value="" placeholder="" >
+                                <input id="" title="주민등록번호 앞자리" type="number" class="form-control" min="0" step="1" maxlength="6" oninput="this.value = this.value.slice(0, 6)" name="" value="" placeholder="" >
                             </div>
                             <div class="input-hyphen">-</div>
                             <div class="col-2">
-                                <input id="" title="" type="password" class="form-control" maxlength="7" placeholder="•••••••" name="" value="">
+                                <input id="" title="주민등록번호 뒷자리" type="number" class="form-control jumin" min="0" step="1" maxlength="1" oninput="this.value = this.value.slice(0, 1)" placeholder="●" name="" value="">
+                                <span class="jumintext">●●●●●●</span>
                             </div>
                         </div>
                     </div>
@@ -361,6 +362,18 @@
                     <h4>File Button</h4>
                     <div class="form-group file">
                         <label for="file" class="essential">첨부파일</label><!-- [D] essential 클래스 : 필수 입력폼  -->
+                        <div class="form-row">
+                            <div class="upload-name" id="" type="file" tabindex="0">첨부파일</div>
+                            <input  title="file" type="file" class="form-control plus-file  attachmentFile" name="" placeholder="내용을 선택해 주세요"><!--[D] attachmentFile 클래스 :: 첨부 파일 선택 시 리스트 뿌려짐 [ 300MB 이하의 JPG, PNG Case ]-->
+                            <button class="btn btn-input" type="button">찾아보기</button>
+                        </div>
+                        <p class="caption">300MB 이하의 JPG, PNG파일 3개까지 업로드 가능합니다.</p>
+                        <ul class="add-file"><!-- [D] : 파일 리스트 - 스크립트 적용되어있음 -->
+                        </ul>
+                    </div>
+
+                    <div class="form-group file">
+                        <label for="file" class="essential">첨부파일 여러개일 경우 - test</label><!-- [D] essential 클래스 : 필수 입력폼  -->
                         <div class="form-row">
                             <div class="upload-name" id="" type="file" tabindex="0">첨부파일</div>
                             <input  title="file" type="file" class="form-control plus-file  attachmentFile" name="" placeholder="내용을 선택해 주세요"><!--[D] attachmentFile 클래스 :: 첨부 파일 선택 시 리스트 뿌려짐 [ 300MB 이하의 JPG, PNG Case ]-->

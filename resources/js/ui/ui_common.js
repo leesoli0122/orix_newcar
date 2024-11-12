@@ -549,6 +549,7 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Input_Delete Button
 	---------------------------------------------*/
+	
 	function delEvent() {
 		$('.form-wrap .form-group').each(function(idx, obj) {
 			var formGroup = $(obj);
@@ -591,16 +592,6 @@ $(document).ready(function() {
 	
 	delEvent();
 
-	// 페이지 로드 시 실행
-	$(document).ready(function() {
-
-		delEvent();
-
-		// 페이지 갱신 시 실행
-		$(document).on('page:load', function() {
-			delEvent();
-		});
-	});
 	
 });
 

@@ -549,7 +549,7 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Input_Delete Button
 	---------------------------------------------*/
-	
+
 	function delEvent() {
 		$('.form-wrap .form-group').each(function(idx, obj) {
 			var formGroup = $(obj);
@@ -558,7 +558,7 @@ $(document).ready(function() {
 			formGroup.find('.form-control.hasCancel').each(function() {
 				var inputElement = $(this);
 				var btnCancelContainer = inputElement.closest('.col-10'); // 부모
-				const btnCancel = $('<button type="button" class="btn btn-cancel" onclick="clearBtn()"><span class="ir">입력취소</span></button>');
+				const btnCancel = $('<button type="button" class="btn btn-cancel" onclick="clearBtn()"><span class="ir">입력취소</span></button>');//개발 : onclick="clearBtn()"
 	
 				// 페이지 로드 시 값이 있는 경우 취소 버튼 생성
 				if (inputElement.val().trim() !== '' && btnCancelContainer.find('.btn-cancel').length === 0) {
@@ -569,7 +569,7 @@ $(document).ready(function() {
 					inputElement.off('keyup').on('keyup', function() {
 						var inputValue = inputElement.val().trim();
 						var btnCancelContainer = inputElement.closest('.col-10'); // 부모
-						const btnCancel = $('<button type="button" class="btn btn-cancel" onclick="clearBtn()"><span class="ir">입력취소</span></button>');
+						const btnCancel = $('<button type="button" class="btn btn-cancel" onclick="clearBtn()"><span class="ir">입력취소</span></button>');//개발 : onclick="clearBtn()"
 	
 						if (inputValue !== '') {
 							if (btnCancelContainer.find('.btn-cancel').length === 0) {

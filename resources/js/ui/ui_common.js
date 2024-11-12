@@ -473,70 +473,72 @@ $(document).ready(function() {
 		scrollTop
 	---------------------------------------------*/
 	function handleScrollTop() {
-		$('.btn-top').hide();
-	
-		$(window).on('scroll', function() {
-			var scrollTop = $(this).scrollTop();
-			var windowHeight = $(this).height();
-			var footerTop = $('footer').offset().top;
-			var contentWrapOffset = $('.sub-content').offset(); // #contentWrap의 위치
-        	var contentWrapWidth = $('.sub-content').outerWidth(); // #contentWrap의 너비
-	
-			// 위치
-			if (scrollTop > 0) {
-				
-				if ($('.btn-top').css('display') === 'none') {
-					$('.btn-top').css({
-						display: 'block',
-						opacity: 0
-					}).stop(true, true).animate({
-						opacity: 1
-					}, 0);
-				}
-			
-				if (scrollTop + windowHeight >= footerTop) {
-
-					$('.btn-top').css({
-						position: 'absolute',
-						bottom: '30px',
-						right: '10px'
-					});
-				} else {
+		if ($('.btn-top').length > 0) {
+			$('.btn-top').hide();
+		
+			$(window).on('scroll', function() {
+				var scrollTop = $(this).scrollTop();
+				var windowHeight = $(this).height();
+				var footerTop = $('footer').offset().top;
+				var contentWrapOffset = $('.sub-content').offset(); // #contentWrap의 위치
+				var contentWrapWidth = $('.sub-content').outerWidth(); // #contentWrap의 너비
+		
+				// 위치
+				if (scrollTop > 0) {
 					
-					$('.btn-top').css({
-						position: 'fixed',
-						bottom: '30px',
-						right: '10px'
-					});
-
-					// contentWrap
-					var buttonWidth = $('.btn-top').outerWidth();
-					var contentWrapRightEdge = contentWrapOffset.left + contentWrapWidth;
-					var buttonRightEdge = $(window).width() - buttonWidth - 10;
-	
-					// #contentWrap 밖으로 나갈 경우
-					if (buttonRightEdge > contentWrapRightEdge) {
+					if ($('.btn-top').css('display') === 'none') {
 						$('.btn-top').css({
-							right: ($(window).width() - contentWrapRightEdge + '10px')
+							display: 'block',
+							opacity: 0
+						}).stop(true, true).animate({
+							opacity: 1
+						}, 0);
+					}
+				
+					if (scrollTop + windowHeight >= footerTop) {
+
+						$('.btn-top').css({
+							position: 'absolute',
+							bottom: '30px',
+							right: '10px'
 						});
 					} else {
+						
 						$('.btn-top').css({
-							right: '10px' // 원래 위치
+							position: 'fixed',
+							bottom: '30px',
+							right: '10px'
 						});
+
+						// contentWrap
+						var buttonWidth = $('.btn-top').outerWidth();
+						var contentWrapRightEdge = contentWrapOffset.left + contentWrapWidth;
+						var buttonRightEdge = $(window).width() - buttonWidth - 10;
+		
+						// #contentWrap 밖으로 나갈 경우
+						if (buttonRightEdge > contentWrapRightEdge) {
+							$('.btn-top').css({
+								right: ($(window).width() - contentWrapRightEdge + '10px')
+							});
+						} else {
+							$('.btn-top').css({
+								right: '10px' // 원래 위치
+							});
+						}
 					}
+
+					
+					
+				} else {
+
+					$('.btn-top').css('display', 'none');
 				}
-
-				
-				
-			} else {
-
-				$('.btn-top').css('display', 'none');
-			}
-		});
-	
-		$(document).on('click', '.btn-top', function() {
-			$('html, body').stop().animate({ scrollTop: 0 }, 'linear');
-		});
+			});
+		
+			$(document).on('click', '.btn-top', function() {
+				$('html, body').stop().animate({ scrollTop: 0 }, 'linear');
+			});
+		}
 	}
 	
 	handleScrollTop();
@@ -600,46 +602,5 @@ $(document).ready(function() {
 		});
 	});
 	
-
-	// function delEvent() {
-
-	// 	$('.form-wrap .form-group').each(function(idx, obj) {
-	// 		var formGroup = $(obj);
-	
-	// 		// input 필드를 선택
-	// 		formGroup.find('.form-control.hasCancel').off('focus').on('focus', function() {
-	// 			var inputElement = $(this);
-	
-	// 			if (inputElement.hasClass('hasCancel')) {
-	
-	// 				inputElement.off('keyup').on('keyup', function() {
-	// 					var inputValue = inputElement.val().trim();
-	// 					var btnCancelContainer = inputElement.closest('.col-10'); // 부모
-	// 					const btnCancel = $('<button type="button" class="btn btn-cancel"><span class="ir">입력취소</span></button>');
-	
-	// 					if (inputValue !== '') {
-	// 						if (btnCancelContainer.find('.btn-cancel').length === 0) {
-								
-	// 							btnCancelContainer.append(btnCancel);
-	// 						}
-	// 					} else {
-							
-	// 						btnCancelContainer.find('.btn-cancel').remove();
-	// 					}
-	// 				});
-	// 			}
-	// 		});
-	
-	// 		formGroup.off('click', '.btn-cancel').on('click', '.btn-cancel', function() {
-	// 			var inputElement = $(this).closest('.col-10').find('.form-control');
-	// 			inputElement.val('');
-	// 			$(this).remove();
-	// 		});
-	// 	});
-	// }
-	
-	// delEvent();
-
-
 });
 

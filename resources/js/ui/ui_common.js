@@ -22,7 +22,7 @@ $(document).ready(function() {
 			dimClass = 'stove-dim',
 			optionLayerClass = 'stove-option-layer',
 			optionLayerScrollClass = 'stove-option-scroll',
-			optionLayerCloseClass = 'stove-btn-close',
+			// optionLayerCloseClass = 'stove-btn-close',
 			optionTitleClass = 'stove-options-title',
 			optionListClass = 'stove-options',
 			optionClass = 'stove-option';
@@ -65,7 +65,7 @@ $(document).ready(function() {
 				$('<div>', { class: optionTitleClass, text: $select.attr('title') }).appendTo($optionLayer);
 			}
 
-			$('<button>', { class: optionLayerCloseClass, title: '닫기' }).appendTo($optionLayer);
+			// $('<button>', { class: optionLayerCloseClass, title: '닫기' }).appendTo($optionLayer);
 			createOptionButtons($optionList, optionLength);
 			highlightSelectedOption();
 		}
@@ -164,15 +164,15 @@ $(document).ready(function() {
 				}
 			});
 
-			$this.find('.' + optionLayerCloseClass).on({
-				click: function(e) {
-					e.stopPropagation();
-					close();
-				},
-				blur: function() {
-					$this.find('.' + optionLayerClass).addClass(onClass).attr('tabindex', 0).focus();
-				}
-			});
+			// $this.find('.' + optionLayerCloseClass).on({
+			// 	click: function(e) {
+			// 		e.stopPropagation();
+			// 		close();
+			// 	},
+			// 	blur: function() {
+			// 		$this.find('.' + optionLayerClass).addClass(onClass).attr('tabindex', 0).focus();
+			// 	}
+			// });
 
 			$this.find('.' + optionClass).on('click', function(e) {
 				e.stopPropagation();
@@ -249,10 +249,6 @@ $(document).ready(function() {
 	function customDatepicker(){
         // 기본 설정
         $.datepicker.setDefaults({
-            // showOn: "both",
-            // buttonImage:"/resources/images/ic_datepicker.png",
-            // buttonImageOnly:true,
-            // buttonText:"달력 선택",
             closeText: "닫기",
             prevText: "이전달",
             nextText: "다음달",
@@ -271,17 +267,35 @@ $(document).ready(function() {
             firstDay: 0,
             isRTL: true,
 			 // yearSuffix: "년",
-			minDate:null, //null
-			beforeShow: function(input, inst) {
-                repositionDatepicker(input, inst);
-                $(window).on('scroll resize', function() {
-                    repositionDatepicker(input, inst);
-                });
-            },
-            onClose: function() {
-                $(window).off('scroll resize');
-            }
+			minDate:null //null
         });
+
+		$('.datepicker').datepicker({
+			showOtherMonths:true,
+			showMonthAfterYear: true,
+			showButtonPanel: true,
+			changeYear: true,
+			changeMonth: true,
+			yearRange:'c-5:c+5',//선택 범위
+			beforeShow: function(input, inst) {
+				repositionDatepicker(input, inst);
+				$(window).on('scroll resize', function() {
+					repositionDatepicker(input, inst);
+				});
+				if ($(input).closest('.layerpopup').length) {
+					setTimeout(function() {
+					$('.ui-datepicker').css('z-index', '202');
+				}, 0);
+				} else {
+					setTimeout(function() {
+					$('.ui-datepicker').css('z-index', '2');
+				}, 0);
+				}
+			},
+			onClose: function() {
+				$(window).off('scroll resize');
+			}
+		});
         
         // 위치 조절 함수
         function repositionDatepicker(input, inst){
@@ -289,19 +303,10 @@ $(document).ready(function() {
             var inputHeight = $(input).outerHeight();
             inst.dpDiv.css({
                 top: inputOffset.top + inputHeight + 'px', // input 바로 아래
-                left: inputOffset.left + '-10px' // input의 왼쪽
+                left: inputOffset.left + 'px' // input의 왼쪽
             });
         }
-        
-        $('.datepicker').datepicker({
-			showOtherMonths:true,
-            showMonthAfterYear: true,
-            showButtonPanel: true,
-            changeYear: true,
-            changeMonth: true,
-            yearRange:'c-5:c+5'//선택 범위
-        });
-    
+
 		//오늘 버튼
 		var old_goToToday = $.datepicker._gotoToday;
 		$.datepicker._gotoToday = function(id) {
@@ -311,6 +316,7 @@ $(document).ready(function() {
 			this._selectDate(id);
 			target.blur();
 		};
+		
     }
     // Datepicker 핸들러 실행
     customDatepicker();
@@ -370,70 +376,63 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Input_File [파일 업로드]
 	---------------------------------------------*/
-    function setupFileInputHandlers() {
-        const $fileInput = $('.attachmentFile');  // 파일 입력
-        const $addFileList = $('.add-file'); // 파일 리스트
-        const maxFiles = 3;                  // 최대 파일 개수
-        const maxFileSize = 50 * 1024 * 1024; // 50MB 제한 (바이트로 변환)
-
-        // "찾아보기" 버튼 트리거
-        $('.file .btn-input').on('click', function() {
-            $fileInput.click();
-        });
-
-        // 파일 선택 (50MB 이하의 xlsx, pdf, hwp, pptx, doc파일 3개까지 업로드)
-        $fileInput.on('change', function() {
-			
-            if ($addFileList.children('li').length >= maxFiles) {
-                messageView('최대 3개의 파일만 선택할 수 있습니다.');
-                return;
-            }
-
-            const files = Array.from(this.files);
-
-            // 선택 파일 검사
-            files.forEach(function(file) {
-                const fileSize = file.size;
-				const filename = file.name;
-				const allowFileNm = filename.split('.').pop().toLowerCase();
-				var allowFile = ['jpg','xlsx','pdf','doc','hwp','pptx'];
-				// 파일형식과 크기 검사 (JPC, PNG, 300MB 이하)
-				// 파일형식과 크기 검사 (jpg, xlsx, pdf, doc, hwp, pptx, 50MB 이하)
-				if($.inArray(allowFileNm , allowFile) === -1){
-					messageView(allowFileNm+"는 지원하지 않는 확장자입니다");
+	function setupFileInputHandlers() {
+		const maxFiles = 3;// 최대 파일 개수
+		const maxFileSize = 300 * 1024 * 1024; // 300MB 제한
+		const allowedExtensions = ['jpg', 'png', 'xlsx', 'pdf', 'doc', 'hwp', 'pptx']; // 허용된 파일 확장자
+	
+		
+		$('.file').each(function() {
+			const $container = $(this); 
+			const $fileInput = $container.find('.attachmentFile');
+			const $addFileList = $container.find('.add-file');
+	
+			// "찾아보기" 버튼 클릭 시 파일 선택 창 열기
+			$container.find('.btn-input').on('click', function() {
+				$fileInput.click();
+			});
+	
+			// 파일 선택
+			$fileInput.on('change', function() {
+				if ($addFileList.children('li').length >= maxFiles) {
+					messageView('최대 3개의 파일만 선택할 수 있습니다.');
 					return;
 				}
-				if (fileSize > maxFileSize) {
-					messageView('파일크기는 50MB를 초과할 수 없습니다.');
-					return;
-				}
-
-				// 파일이 3개 미만일 때만 리스트에 추가
-                if ($addFileList.children('li').length < maxFiles) {
-                    const $newListItem = $('<li>').text(file.name);
-                    const $deleteButton = $('<span>').addClass('delete-file').text('삭제'); // 삭제 버튼 추가
-					const $deleteButton2 = $deleteButton.on('click',function(){
-
-						var indexToRemove = $(this).closest('li').index();
-						removeFiles(indexToRemove);
-						$(this).closest('li').remove();
-					})
-                    $newListItem.append($deleteButton);
-                    $newListItem.append($deleteButton2);
-                    $addFileList.append($newListItem);
-                }
-            });
-
-            $fileInput.val('');
-        });
-
-		$addFileList.on('click', '.delete-file', function() {
-			$(this).parent().remove();
-			$uploadName.text(updatedFileNames.join(', '));
+	
+				const files = Array.from(this.files);
+	
+				files.forEach(function(file) {
+					const fileSize = file.size;
+					const filename = file.name;
+					const fileExtension = filename.split('.').pop().toLowerCase();
+	
+					if (!allowedExtensions.includes(fileExtension)) {
+						messageView(fileExtension + '는 지원하지 않는 확장자입니다.');
+						return;
+					}
+					if (fileSize > maxFileSize) {
+						messageView('파일 크기는 50MB를 초과할 수 없습니다.');
+						return;
+					}
+	
+					if ($addFileList.children('li').length < maxFiles) {
+						const $newListItem = $('<li>').text(file.name);
+						const $deleteButton = $('<span>').addClass('delete-file').text('삭제');
+	
+						$deleteButton.on('click', function() {
+							$(this).closest('li').remove();
+						});
+						$newListItem.append($deleteButton);
+						$addFileList.append($newListItem);
+					}
+				});
+	
+				$fileInput.val('');
+			});
 		});
-    }
-
-    setupFileInputHandlers();
+	}
+	
+	setupFileInputHandlers();
 
 	/*********************************************************************
 		Select Popup [년도 선택_팝업 / 차량 선택 _ 팝업/ 실적조회_테이블]
@@ -455,8 +454,8 @@ $(document).ready(function() {
 		$(button).attr('title', '선택됨');
 		$(a).attr('title', '선택됨');
 
-		button.focus();
-		a.focus();
+		// button.focus();
+		// a.focus();
 	}
 	
 	function initContainerClickEvent() {
@@ -480,8 +479,8 @@ $(document).ready(function() {
 			var scrollTop = $(this).scrollTop();
 			var windowHeight = $(this).height();
 			var footerTop = $('footer').offset().top;
-			var contentWrapOffset = $('#contentWrap').offset(); // #contentWrap의 위치
-        	var contentWrapWidth = $('#contentWrap').outerWidth(); // #contentWrap의 너비
+			var contentWrapOffset = $('.sub-content').offset(); // #contentWrap의 위치
+        	var contentWrapWidth = $('.sub-content').outerWidth(); // #contentWrap의 너비
 	
 			// 위치
 			if (scrollTop > 0) {
@@ -499,7 +498,7 @@ $(document).ready(function() {
 
 					$('.btn-top').css({
 						position: 'absolute',
-						bottom: `${30}px`,
+						bottom: '30px',
 						right: '10px'
 					});
 				} else {
@@ -518,7 +517,7 @@ $(document).ready(function() {
 					// #contentWrap 밖으로 나갈 경우
 					if (buttonRightEdge > contentWrapRightEdge) {
 						$('.btn-top').css({
-							right: `${$(window).width() - contentWrapRightEdge + 10}px`
+							right: ($(window).width() - contentWrapRightEdge + '10px')
 						});
 					} else {
 						$('.btn-top').css({
@@ -549,16 +548,21 @@ $(document).ready(function() {
 		Input_Delete Button
 	---------------------------------------------*/
 	function delEvent() {
-
 		$('.form-wrap .form-group').each(function(idx, obj) {
 			var formGroup = $(obj);
 	
 			// input 필드를 선택
-			formGroup.find('.form-control.hasCancel').off('focus').on('focus', function() {
+			formGroup.find('.form-control.hasCancel').each(function() {
 				var inputElement = $(this);
+				var btnCancelContainer = inputElement.closest('.col-10'); // 부모
+				const btnCancel = $('<button type="button" class="btn btn-cancel"><span class="ir">입력취소</span></button>');
 	
-				if (inputElement.hasClass('hasCancel')) {
+				// 페이지 로드 시 값이 있는 경우 취소 버튼 생성
+				if (inputElement.val().trim() !== '' && btnCancelContainer.find('.btn-cancel').length === 0) {
+					btnCancelContainer.append(btnCancel);
+				}
 	
+				inputElement.off('focus').on('focus', function() {
 					inputElement.off('keyup').on('keyup', function() {
 						var inputValue = inputElement.val().trim();
 						var btnCancelContainer = inputElement.closest('.col-10'); // 부모
@@ -566,15 +570,13 @@ $(document).ready(function() {
 	
 						if (inputValue !== '') {
 							if (btnCancelContainer.find('.btn-cancel').length === 0) {
-								
 								btnCancelContainer.append(btnCancel);
 							}
 						} else {
-							
 							btnCancelContainer.find('.btn-cancel').remove();
 						}
 					});
-				}
+				});
 			});
 	
 			formGroup.off('click', '.btn-cancel').on('click', '.btn-cancel', function() {
@@ -586,6 +588,58 @@ $(document).ready(function() {
 	}
 	
 	delEvent();
+
+	// 페이지 로드 시 실행
+	$(document).ready(function() {
+
+		delEvent();
+
+		// 페이지 갱신 시 실행
+		$(document).on('page:load', function() {
+			delEvent();
+		});
+	});
+	
+
+	// function delEvent() {
+
+	// 	$('.form-wrap .form-group').each(function(idx, obj) {
+	// 		var formGroup = $(obj);
+	
+	// 		// input 필드를 선택
+	// 		formGroup.find('.form-control.hasCancel').off('focus').on('focus', function() {
+	// 			var inputElement = $(this);
+	
+	// 			if (inputElement.hasClass('hasCancel')) {
+	
+	// 				inputElement.off('keyup').on('keyup', function() {
+	// 					var inputValue = inputElement.val().trim();
+	// 					var btnCancelContainer = inputElement.closest('.col-10'); // 부모
+	// 					const btnCancel = $('<button type="button" class="btn btn-cancel"><span class="ir">입력취소</span></button>');
+	
+	// 					if (inputValue !== '') {
+	// 						if (btnCancelContainer.find('.btn-cancel').length === 0) {
+								
+	// 							btnCancelContainer.append(btnCancel);
+	// 						}
+	// 					} else {
+							
+	// 						btnCancelContainer.find('.btn-cancel').remove();
+	// 					}
+	// 				});
+	// 			}
+	// 		});
+	
+	// 		formGroup.off('click', '.btn-cancel').on('click', '.btn-cancel', function() {
+	// 			var inputElement = $(this).closest('.col-10').find('.form-control');
+	// 			inputElement.val('');
+	// 			$(this).remove();
+	// 		});
+	// 	});
+	// }
+	
+	// delEvent();
+
 
 });
 

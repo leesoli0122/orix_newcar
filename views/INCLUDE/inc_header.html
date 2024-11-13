@@ -111,7 +111,6 @@
             // 초기화
             $(".menu > li").off('mouseenter mouseleave');
             $("html").css({ 'overflow': 'auto' });
-            $lnb.css({ 'right': '0', 'display': 'flex', 'opacity': '1', 'overflow': 'visible' });
             $header.removeClass('side');
 
             // 메뉴에 마우스가 올라가면 서브메뉴 보이기
@@ -186,9 +185,6 @@
             $(".ham-close").click(function (e) {
                 e.preventDefault();
                 $("html").css({ 'overflow': 'auto' }); // 스크롤 활성화
-                $lnb.fadeOut(500, function() {
-                    $(this).css({'right': '-100%', 'opacity': '0'}); // 닫힌 후 상태 재설정
-                });
                 $header.removeClass('side'); // .header-wrap에서 side 클래스 제거
             });
         }

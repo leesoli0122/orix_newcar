@@ -1390,6 +1390,8 @@ dd.download-wrap { padding:0; background:transparent; }
 .estimate-box .estimate-header .top .customer-info ul li .tit { font-size:var(--font14); font-weight:var(--w-regular); color:var(--inactive); }
 .estimate-box .estimate-header .top .customer-info ul li .txt { font-size:var(--font14); font-weight:var(--w-bold); color:var(--inactive); }
 .estimate-box .sub-header { display:flex; align-items:center; justify-content:space-between; padding-bottom:10px; border-bottom:3px solid var(--subtitle); }
+.estimate-box .sub-header li { max-width:150px; width:100%; }
+.estimate-box .sub-header li:last-child { text-align:right; }
 .estimate-box .sub-header li p { display:inline-block; }
 .estimate-box .sub-header li .tit { font-size:var(--font16); font-weight:var(--w-bold); color:var(--normal); }
 .estimate-box .sub-header li .txt { font-size:var(--font16); font-weight:var(--w-regular); color:var(--normal); }

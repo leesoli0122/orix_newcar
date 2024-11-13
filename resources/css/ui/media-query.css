@@ -41,6 +41,11 @@
 	.grid-list-body li .residual { flex-direction:column; }
 	.grid-list-body li .residual .form-group .col-4 { max-width:none; }
 	.grid-list-body li .residual .num { margin-top:10px; width:100%; }
+
+	/* 페이지네이션 */
+	.pagination ul li { padding-right:0; }
+	.pagination ul li:first-child { padding-left:0; }
+	.pagination ul li + li { margin:0; }
 }
 
 @media screen and (max-width:800px) {

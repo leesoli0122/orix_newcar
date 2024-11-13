@@ -251,7 +251,7 @@ header #헤더
 .header-wrap .top > div > ul li a { font-size:var(--font14); font-weight:700; color:var(--subtitle); }
 
 .header-wrap > .h-menu { max-width:1400px; width:100%; margin:0 auto; }
-.header-wrap > .h-menu { display:flex; align-items:center; justify-content:space-between;}
+.header-wrap > .h-menu { display:flex; align-items:center; justify-content:space-between; flex-direction: row-reverse;}
 .header-wrap > .nav-btn { display:none; width:37px; height:37px; z-index:999px; }
 .header-wrap > .nav-btn .ham { display:inline-block; width:37px; height:37px; background:transparent; cursor:pointer; }
 .header-wrap > .nav-btn .ham img,

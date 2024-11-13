@@ -540,4 +540,82 @@
         </div>
     </div>
 </div>
+
+<script>
+    	function setupFileInputHandlers() {
+		const maxFiles = 3; // 최대 파일 개수
+		const maxFileSize = 50 * 1024 * 1024; // 50MB 제한
+		const imageExtensions = ['jpg', 'gif', 'png', 'pdf']; // 이미지 파일
+		const documentExtensions = ['xlsx', 'pdf', 'hwp', 'doc', 'pptx']; // 문서 파일
+	
+		$('.file').each(function() {
+			const $container = $(this);
+			const $fileInput = $container.find('.attachmentFile');
+			const $addFileList = $container.find('.add-file');
+			const isImageFile = $fileInput.hasClass('imgFile'); // 이미지 파일 클래스
+			const isDocumentFile = $fileInput.hasClass('documentFile');// 문서 파일 클래스
+	
+			// 파일 선택
+			$fileInput.on('change', function() {
+				if ($addFileList.children('li').length >= maxFiles) {
+					messageView('최대 3개의 파일만 선택할 수 있습니다.');
+					return;
+				}
+	
+				const files = Array.from(this.files);
+	
+				files.forEach(function(file) {
+					const fileSize = file.size;
+					const filename = file.name;
+					const fileExtension = filename.split('.').pop().toLowerCase();
+	
+					// 이미지 파일 확인
+					if (isImageFile && !imageExtensions.includes(fileExtension)) {
+						messageView(fileExtension + '는 지원하지 않는 이미지 파일 확장자입니다.');
+						return;
+					}
+	
+					// 문서 파일 확인
+					if (isDocumentFile && !documentExtensions.includes(fileExtension)) {
+						messageView(fileExtension + '는 지원하지 않는 문서 파일 확장자입니다.');
+						return;
+					}
+	
+					// 파일 크기 확인
+					if (fileSize > maxFileSize) {
+						messageView('파일 크기는 50MB를 초과할 수 없습니다.');
+						return;
+					}
+	
+					// 파일 리스트에 추가
+					if ($addFileList.children('li').length < maxFiles) {
+						const $newListItem = $('<li>').text(file.name);
+						const $deleteButton = $('<span>').addClass('delete-file').text('삭제');
+	
+						$deleteButton.on('click', function() {
+							$(this).closest('li').remove();
+						});
+						$newListItem.append($deleteButton);
+						$addFileList.append($newListItem);
+					}
+				});
+	
+				$fileInput.val('');
+			});
+		});
+	}
+
+	function messageView(message) {
+		const $messageView = $('#messageView');
+		const $title = $messageView.find('.tit');
+
+		// 메시지 설정
+		$title.text(message);
+		
+		// 팝업 열기
+		openPopup('messageView');
+	}
+	
+	setupFileInputHandlers();
+</script>
 </html>

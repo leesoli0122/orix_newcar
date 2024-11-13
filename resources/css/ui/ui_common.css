@@ -400,7 +400,7 @@ button.btn.btn-cont.disabled { border:0; color:var(--inactive); background: var(
 /*폼버튼*/
 button.btn.btn-input { height:46px; padding:0 16px; font-size:var(--font16); color:var(--inactive); background:var(--background1); }
 button.btn.btn-input.active { color:var(--white); background: var(--background3); }
-button.btn.btn-input:disabled { cursor:unset; }
+button.btn.btn-input:disabled { cursor:unset; background:var(--background1); }
 
 
 /* 팝업 및 알럿 버튼 */
@@ -1563,8 +1563,8 @@ ul.btnSelect li button:focus-visible { outline: 1px solid var(--secondary); }
 /*---------------------------------------------
 	조건부 업종 선택(팝업 안에 라디오)
 ---------------------------------------------*/
-.layerpopup .form-group.radio { padding:0 0 10px 10px; }
-.layerpopup .form-group.radio label { display:inline-block; min-width:300px; width:100%; }
+.layerpopup .form-group.radio .radio-box.column { padding:0 0 10px 10px; }
+.layerpopup .form-group.radio .radio-box.column label { display:inline-block; min-width:300px; width:100%; }
 
 
 /*---------------------------------------------

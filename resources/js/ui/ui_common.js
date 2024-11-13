@@ -446,6 +446,10 @@ $(document).ready(function() {
 		const button = $(container).find('button').get(0);
 		const a = $(container).find('a').get(0);
 
+		if ($(container).closest('li').hasClass('disabled')) {
+			$(container).removeClass('on'); $(container).find('button').attr('title', 'disabled'); return
+		}
+
 		// 초기화
 		const parent = $(container).closest('.btnSelect');
 		parent.find('li, div, tr td:first-child').removeClass('on');

@@ -413,7 +413,7 @@ $(document).ready(function() {
 						messageView(fileExtension + '는 지원하지 않는 확장자입니다.');
 						return;
 					}
-					if (fileSize > maxFileSize) {
+					if (fileSize >= maxFileSize) {
 						messageView('파일 크기는 50MB를 초과할 수 없습니다.');
 						return;
 					}
@@ -472,7 +472,7 @@ $(document).ready(function() {
 						messageView(fileExtension + '는 지원하지 않는 확장자입니다.');
 						return;
 					}
-					if (fileSize > maxFileSize) {
+					if (fileSize >= maxFileSize) {
 						messageView('파일 크기는 300MB를 초과할 수 없습니다.');
 						return;
 					}

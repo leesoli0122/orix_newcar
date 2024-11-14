@@ -1126,7 +1126,8 @@ tfoot tr td:last-child { border-right:none; }
 .table-type.table-scroll tfoot tr .details div { display:inline-block; font-size:var(--font16); font-weight:var(--w-regular); }
 .table-type.table-scroll tbody tr .details div:first-child:after,
 .table-type.table-scroll tfoot tr .details div:first-child:after { content:""; display:inline-block; margin:0 10px; width:1px; height:14px; background:var(--border2); vertical-align:baseline; }
-.table-type.table-scroll tbody tr .details div:only-child:after { content:none; }
+.table-type.table-scroll tbody tr .details div:only-child:after,
+.table-type.table-scroll tfoot tr .details div:only-child:after { content:none; }
 .table-type.table-scroll tbody tr .details.sum div:first-child:after,
 .table-type.table-scroll tfoot tr .details.sum div:first-child:after { background:var(--background3); }
 .table-type.table-scroll tbody tr:last-child td { border-bottom:none; }

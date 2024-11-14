@@ -378,7 +378,7 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Input_File [파일 업로드]
 	---------------------------------------------*/
-	// 견적내기 및 자료실 파일 업로드 추가 (문서 파일)
+	// 견적내기 및 자료실 파일 업로드 추가 (문서 파일 - .attachmentFile)
 	function setupFileInputHandlers() {
 		const maxFiles = 3;// 최대 파일 개수
 		const maxFileSize = 50 * 1024 * 1024; // 50MB 제한
@@ -437,10 +437,10 @@ $(document).ready(function() {
 	
 	setupFileInputHandlers();
 
-	// 개발 - 현황조회 파일 업로드 추가 (이미지 파일)
+	// 개발 - 현황조회 파일 업로드 추가 (이미지 파일 -  .nwcFile)
 	function setupFileInputHandlersNwc() {
 		const maxFiles = 5;// 최대 파일 개수
-		const maxFileSize = 300 * 1024 * 1024; // 50MB 제한
+		const maxFileSize = 300 * 1024 * 1024; // 300MB 제한
 		const allowedExtensions = ['jpg', 'gif', 'png', 'pdf']; // 허용된 파일 확장자
 	
 		
@@ -555,7 +555,7 @@ $(document).ready(function() {
 			$parent.find('button').removeAttr('title');
 		}
 
-		// disable 포커스 방지
+		// disabled 포커스 방지
 		function disableFocusItems() {
 			$('.btnSelect .disabled button, .btnSelect .disabled a').attr('tabindex', '-1');
 		}
@@ -569,7 +569,7 @@ $(document).ready(function() {
 				$this.find('li, div, tr td:first-child').on('click', handleContainerClick);
 			});
 
-			// disable 포커스 방지
+			// disabled 포커스 방지
 			disableFocusItems();
 		}
 

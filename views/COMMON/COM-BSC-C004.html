@@ -535,7 +535,7 @@
 
 // 견적내기 및 자료실 파일 업로드 추가 (문서 파일)
 function setupFileInputHandlers() {
-    const maxFiles = 3;// 최대 파일 개수
+    const maxFiles = 4;// 최대 파일 개수 +1
     const maxFileSize = 50 * 1024 * 1024; // 50MB 제한
     const allowedExtensions = ['xlsx', 'pdf', 'hwp', 'doc', 'pptx']; // 허용된 파일 확장자
 
@@ -568,7 +568,7 @@ function setupFileInputHandlers() {
                     messageView(fileExtension + '는 지원하지 않는 확장자입니다.');
                     return;
                 }
-                if (fileSize >= maxFileSize) {
+                if (fileSize > maxFileSize) {
                     messageView('파일 크기는 50MB를 초과할 수 없습니다.');
                     return;
                 }
@@ -594,8 +594,8 @@ setupFileInputHandlers();
 
 // 개발 - 현황조회 파일 업로드 추가 (이미지 파일)
 function setupFileInputHandlersNwc() {
-    const maxFiles = 5;// 최대 파일 개수
-    const maxFileSize = 300 * 1024 * 1024; // 50MB 제한
+    const maxFiles = 6;// 최대 파일 개수 +1
+    const maxFileSize = 300 * 1024 * 1024; // 300MB 제한
     const allowedExtensions = ['jpg', 'gif', 'png', 'pdf']; // 허용된 파일 확장자
 
     
@@ -627,7 +627,7 @@ function setupFileInputHandlersNwc() {
                     messageView(fileExtension + '는 지원하지 않는 확장자입니다.');
                     return;
                 }
-                if (fileSize >= maxFileSize) {
+                if (fileSize > maxFileSize) {
                     messageView('파일 크기는 300MB를 초과할 수 없습니다.');
                     return;
                 }

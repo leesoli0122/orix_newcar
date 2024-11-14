@@ -355,22 +355,22 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Filter_fixed [상담내역]
 	---------------------------------------------*/
-	function handleScroll() {
-        var scrollTop = $(window).scrollTop();
+	// function handleScroll() {
+    //     var scrollTop = $(window).scrollTop();
 
-        if (scrollTop > 400) {
-            $('.filter').addClass('fix');
-        } else {
-            $('.filter').removeClass('fix');
-        }
-    }
+    //     if (scrollTop > 400) {
+    //         $('.filter').addClass('fix');
+    //     } else {
+    //         $('.filter').removeClass('fix');
+    //     }
+    // }
 
-    function initScrollEvent() {
-        $(window).on('scroll', handleScroll);
-    }
+    // function initScrollEvent() {
+    //     $(window).on('scroll', handleScroll);
+    // }
 
-    // 이벤트 초기화 함수 실행
-    initScrollEvent();
+    // // 이벤트 초기화 함수 실행
+    // initScrollEvent();
 
 	/*********************************************************************
 		Input_File #인풋_파일 업로드

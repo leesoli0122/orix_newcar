@@ -533,137 +533,133 @@
 
 <script>
 
-// 견적내기 및 자료실 파일 업로드 추가 (문서 파일)
-function setupFileInputHandlers() {
-    const maxFiles = 4;// 최대 파일 개수 +1
-    const maxFileSize = 50 * 1024 * 1024; // 50MB 제한
-    const allowedExtensions = ['xlsx', 'pdf', 'hwp', 'doc', 'pptx']; // 허용된 파일 확장자
-
     
-    $('.file').each(function() {
-        const $container = $(this); 
-        const $fileInput = $container.find('.attachmentFile');
-        const $addFileList = $container.find('.add-file');
+	// 견적내기 및 자료실 파일 업로드 추가 (문서 파일 - .attachmentFile)
+	function setupFileInputHandlers() {
+		const maxFiles = 3;// 최대 파일 개수 +1
+		const maxFileSize = 50 * 1024 * 1024; // 50MB 제한
+		const allowedExtensions = ['xlsx', 'pdf', 'hwp', 'doc', 'pptx']; // 허용된 파일 확장자
+        
+		
+		$('.file').each(function() {
+			const $container = $(this);
+			const $fileInput = $container.find('.attachmentFile');
+			const $addFileList = $container.find('.add-file');
+            
+            // "찾아보기" 버튼 클릭 시 파일 선택 창 열기
+			$container.find('.btn-input').on('click', function() {
+				$fileInput.click();
+			});
+	
 
-        // "찾아보기" 버튼 클릭 시 파일 선택 창 열기
-        $container.find('.btn-input').on('click', function() {
-            $fileInput.click();
-        });
+			// 파일 선택
+			$fileInput.on('change', function() {
+				const files = Array.from(this.files);
 
-        // 파일 선택
-        $fileInput.on('change', function() {
-            if ($addFileList.children('li').length >= maxFiles) {
-                messageView('최대 3개의 파일만 선택할 수 있습니다.');
-                return;
-            }
-
-            const files = Array.from(this.files);
-
-            files.forEach(function(file) {
-                const fileSize = file.size;
-                const filename = file.name;
-                const fileExtension = filename.split('.').pop().toLowerCase();
-
-                if (!allowedExtensions.includes(fileExtension)) {
-                    messageView(fileExtension + '는 지원하지 않는 확장자입니다.');
+                if ($addFileList.children('li').length + files.length > maxFiles) {
+                    messageView('최대 3개의 파일만 선택할 수 있습니다.');
                     return;
                 }
-                if (fileSize > maxFileSize) {
-                    messageView('파일 크기는 50MB를 초과할 수 없습니다.');
+                    
+				files.forEach(function(file) {
+					const fileSize = file.size;
+					const filename = file.name;
+					const fileExtension = filename.split('.').pop().toLowerCase();
+					
+
+					if (!allowedExtensions.includes(fileExtension)) {
+						messageView(fileExtension + '는 지원하지 않는 확장자입니다.');
+						return;
+					}
+					if (fileSize >= maxFileSize) {
+						messageView('파일 크기는 50MB를 초과할 수 없습니다.');
+						return;
+					}
+	
+					if ($addFileList.children('li').length < maxFiles) {
+						const $newListItem = $('<li>').text(file.name);
+						const $deleteButton = $('<span>').addClass('delete-file').text('삭제');
+	
+						$deleteButton.on('click', function() {
+							$(this).closest('li').remove();
+						});
+						$newListItem.append($deleteButton);
+						$addFileList.append($newListItem);
+					}
+				});
+	
+				$fileInput.val('');
+			});
+		});
+	}
+	setupFileInputHandlers();
+
+	// 개발 - 현황조회 파일 업로드 추가 (이미지 파일 -  .nwcFile)
+	function setupFileInputHandlersNwc() {
+		const maxFiles = 5;// 최대 파일 개수
+		const maxFileSize = 300 * 1024 * 1024; // 300MB 제한
+		const allowedExtensions = ['jpg', 'gif', 'png', 'pdf']; // 허용된 파일 확장자
+	
+		
+		$('.file').each(function() {
+			const $container = $(this);
+			const $fileInput = $container.find('.nwcFile');
+			const $addFileList = $container.find('.add-file');
+	
+			// 파일 선택
+			$fileInput.on('change', function() {
+				const files = Array.from(this.files);
+
+                if ($addFileList.children('li').length + files.length > maxFiles) {
+                    messageView('최대 5개의 파일만 선택할 수 있습니다.');
                     return;
                 }
-
-                if ($addFileList.children('li').length < maxFiles) {
-                    const $newListItem = $('<li>').text(file.name);
-                    const $deleteButton = $('<span>').addClass('delete-file').text('삭제');
-
-                    $deleteButton.on('click', function() {
-                        $(this).closest('li').remove();
-                    });
-                    $newListItem.append($deleteButton);
-                    $addFileList.append($newListItem);
-                }
-            });
-
-            $fileInput.val('');
-        });
-    });
-}
-
-setupFileInputHandlers();
-
-// 개발 - 현황조회 파일 업로드 추가 (이미지 파일)
-function setupFileInputHandlersNwc() {
-    const maxFiles = 6;// 최대 파일 개수 +1
-    const maxFileSize = 300 * 1024 * 1024; // 300MB 제한
-    const allowedExtensions = ['jpg', 'gif', 'png', 'pdf']; // 허용된 파일 확장자
-
-    
-    $('.file').each(function() {
-        const $container = $(this); 
-        const $fileInput = $container.find('.nwcFile');
-        const $addFileList = $container.find('.add-file');
-
-        // "찾아보기" 버튼 클릭 시 파일 선택 창 열기
-        $container.find('.btn-input').on('click', function() {
-            $fileInput.click();
-        });
-
-        // 파일 선택
-        $fileInput.on('change', function() {
-            if ($addFileList.children('li').length >= maxFiles) {
-                messageView('최대 3개의 파일만 선택할 수 있습니다.');
-                return;
-            }
-
-            const files = Array.from(this.files);
-
-            files.forEach(function(file) {
-                const fileSize = file.size;
-                const filename = file.name;
-                const fileExtension = filename.split('.').pop().toLowerCase();
-
-                if (!allowedExtensions.includes(fileExtension)) {
-                    messageView(fileExtension + '는 지원하지 않는 확장자입니다.');
-                    return;
-                }
-                if (fileSize > maxFileSize) {
-                    messageView('파일 크기는 300MB를 초과할 수 없습니다.');
-                    return;
-                }
-
-                if ($addFileList.children('li').length < maxFiles) {
-                    const $newListItem = $('<li>').text(file.name);
-                    const $deleteButton = $('<span>').addClass('delete-file').text('삭제');
-
-                    $deleteButton.on('click', function() {
-                        $(this).closest('li').remove();
-                    });
-                    $newListItem.append($deleteButton);
-                    $addFileList.append($newListItem);
-                }
-            });
-
-            $fileInput.val('');
-        });
-    });
-}
-
-setupFileInputHandlersNwc();
+	
+				files.forEach(function(file) {
+					const fileSize = file.size;
+					const filename = file.name;
+					const fileExtension = filename.split('.').pop().toLowerCase();
+	
+					if (!allowedExtensions.includes(fileExtension)) {
+						messageView(fileExtension + '는 지원하지 않는 확장자입니다.');
+						return;
+					}
+					if (fileSize >= maxFileSize) {
+						messageView('파일 크기는 300MB를 초과할 수 없습니다.');
+						return;
+					}
+	
+					if ($addFileList.children('li').length < maxFiles) {
+						const $newListItem = $('<li>').text(file.name);
+						const $deleteButton = $('<span>').addClass('delete-file').text('삭제');
+	
+						$deleteButton.on('click', function() {
+							$(this).closest('li').remove();
+						});
+						$newListItem.append($deleteButton);
+						$addFileList.append($newListItem);
+					}
+				});
+	
+				$fileInput.val('');
+			});
+		});
+	}
+	
+	setupFileInputHandlersNwc();
 
 
-function messageView(message) {
-    const messageView = document.getElementById('messageView');
-    const title = messageView.querySelector('.tit');
+    function messageView(message) {
+        const messageView = document.getElementById('messageView');
+        const title = messageView.querySelector('.tit');
 
-    // 메시지 설정
-    title.textContent = message;
+        // 메시지 설정
+        title.textContent = message;
 
-    // 팝업 열기
-    openPopup('messageView');
-}
+        // 팝업 열기
+        openPopup('messageView');
+    }
 
-setupFileInputHandlers();
 
 </script>
 </html>

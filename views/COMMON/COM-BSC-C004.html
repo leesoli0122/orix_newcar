@@ -360,15 +360,16 @@
                     </div>
 
                     <h4>File Button</h4>
-                    <!-- <div class="form-group file">
+                    <div class="form-group file">
                         <label for="file" class="essential">첨부파일</label>
                         <div class="form-row">
                             <div class="upload-name" id="" type="file" tabindex="0">첨부파일</div>
                             <input  title="file" type="file" class="form-control plus-file  attachmentFile" name="" placeholder="내용을 선택해 주세요">
+                            <button class="btn btn-input" type="button">찾아보기</button>
                         </div>
                         <p class="caption">300MB 이하의 JPG, PNG파일 3개까지 업로드 가능합니다.</p>
-                        <ul class="add-file">
-                    </div> -->
+                        <ul class="add-file"></ul>
+                    </div>
 
                     <div class="form-group file">
                         <label for="file" class="essential">첨부파일 여러개일 경우 - imgFile</label><!-- [D] essential 클래스 : 필수 입력폼  -->
@@ -542,80 +543,91 @@
 </div>
 
 <script>
-    function setupFileInputHandlers() {
-		const maxFiles = 3; // 최대 파일 개수
-		const maxFileSize = 50 * 1024 * 1024; // 50MB 제한
-		const imageExtensions = ['jpg', 'gif', 'png', 'pdf']; // 이미지 파일
-		const documentExtensions = ['xlsx', 'pdf', 'hwp', 'doc', 'pptx']; // 문서 파일
-	
-		$('.file').each(function() {
-			const $container = $(this);
-			const $fileInput = $container.find('.attachmentFile');
-			const $addFileList = $container.find('.add-file');
-			const isImageFile = $fileInput.hasClass('imgFile'); // 이미지 파일 클래스
-			const isDocumentFile = $fileInput.hasClass('documentFile');// 문서 파일 클래스
-	
-			// 파일 선택
-			$fileInput.on('change', function() {
-				if ($addFileList.children('li').length >= maxFiles) {
-					messageView('최대 3개의 파일만 선택할 수 있습니다.');
-					return;
-				}
-	
-				const files = Array.from(this.files);
-	
-				files.forEach(function(file) {
-					const fileSize = file.size;
-					const filename = file.name;
-					const fileExtension = filename.split('.').pop().toLowerCase();
-	
-					// 이미지 파일 확인
-					if (isImageFile && !imageExtensions.includes(fileExtension)) {
-						messageView(fileExtension + '는 지원하지 않는 이미지 파일 확장자입니다.');
-						return;
-					}
-	
-					// 문서 파일 확인
-					if (isDocumentFile && !documentExtensions.includes(fileExtension)) {
-						messageView(fileExtension + '는 지원하지 않는 문서 파일 확장자입니다.');
-						return;
-					}
-	
-					// 파일 크기 확인
-					if (fileSize > maxFileSize) {
-						messageView('파일 크기는 50MB를 초과할 수 없습니다.');
-						return;
-					}
-	
-					// 파일 리스트에 추가
-					if ($addFileList.children('li').length < maxFiles) {
-						const $newListItem = $('<li>').text(file.name);
-						const $deleteButton = $('<span>').addClass('delete-file').text('삭제');
-	
-						$deleteButton.on('click', function() {
-							$(this).closest('li').remove();
-						});
-						$newListItem.append($deleteButton);
-						$addFileList.append($newListItem);
-					}
-				});
-	
-				$fileInput.val('');
-			});
-		});
-	}
+function setupFileInputHandlers() {
+    const maxFiles = 3; // 최대 파일 개수
+    const maxFileSize = 50 * 1024 * 1024; // 50MB 제한
+    const imageExtensions = ['jpg', 'gif', 'png', 'pdf']; // 이미지 파일 확장자
+    const documentExtensions = ['xlsx', 'pdf', 'hwp', 'doc', 'pptx']; // 문서 파일 확장자
 
-	function messageView(message) {
-		const $messageView = $('#messageView');
-		const $title = $messageView.find('.tit');
+    // .file 클래스를 가진 모든 요소에 대해 처리
+    const fileContainers = document.querySelectorAll('.file');
 
-		// 메시지 설정
-		$title.text(message);
-		
-		// 팝업 열기
-		openPopup('messageView');
-	}
-	
-	setupFileInputHandlers();
+    fileContainers.forEach(function(container) {
+        const fileInput = container.querySelector('.attachmentFile');
+        const addFileList = container.querySelector('.add-file');
+        const isImageFile = fileInput.classList.contains('imgFile'); // 이미지 파일 클래스
+        const isDocumentFile = fileInput.classList.contains('documentFile'); // 문서 파일 클래스
+
+        // 파일 선택 시 처리
+        fileInput.addEventListener('change', function() {
+            // 파일 개수 초과시
+            if (addFileList.children.length >= maxFiles) {
+                messageView('최대 3개의 파일만 선택할 수 있습니다.');
+                return;
+            }
+
+            const files = Array.from(this.files);
+
+            files.forEach(function(file) {
+                const fileSize = file.size;
+                const filename = file.name;
+                const fileExtension = filename.split('.').pop().toLowerCase();
+
+                // 이미지 파일 확인
+                if (isImageFile && !imageExtensions.includes(fileExtension)) {
+                    messageView(fileExtension + '는 지원하지 않는 이미지 파일 확장자입니다.');
+                    return;
+                }
+
+                // 문서 파일 확인
+                if (isDocumentFile && !documentExtensions.includes(fileExtension)) {
+                    messageView(fileExtension + '는 지원하지 않는 문서 파일 확장자입니다.');
+                    return;
+                }
+
+                // 파일 크기 확인
+                if (fileSize > maxFileSize) {
+                    messageView('파일 크기는 50MB를 초과할 수 없습니다.');
+                    return;
+                }
+
+                // 파일 리스트에 추가
+                if (addFileList.children.length < maxFiles) {
+                    const newListItem = document.createElement('li');
+                    newListItem.textContent = file.name;
+
+                    const deleteButton = document.createElement('span');
+                    deleteButton.classList.add('delete-file');
+                    deleteButton.textContent = '삭제';
+
+                    // 삭제 버튼 클릭 시 해당 파일 항목 삭제
+                    deleteButton.addEventListener('click', function() {
+                        newListItem.remove();
+                    });
+
+                    newListItem.appendChild(deleteButton);
+                    addFileList.appendChild(newListItem);
+                }
+            });
+
+            // 파일 선택 후 파일 입력값 초기화
+            fileInput.value = '';
+        });
+    });
+}
+
+function messageView(message) {
+    const messageView = document.getElementById('messageView');
+    const title = messageView.querySelector('.tit');
+
+    // 메시지 설정
+    title.textContent = message;
+
+    // 팝업 열기
+    openPopup('messageView');
+}
+
+setupFileInputHandlers();
+
 </script>
 </html>

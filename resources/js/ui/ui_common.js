@@ -440,7 +440,7 @@ $(document).ready(function() {
 	// 개발 - 현황조회 파일 업로드 추가 (이미지 파일 -  .nwcFile)
 	function setupFileInputHandlersNwc() {
 		const maxFiles = 5;// 최대 파일 개수
-		const maxFileSize = 300 * 1024 * 1024; // 50MB 제한
+		const maxFileSize = 300 * 1024 * 1024; // 300MB 제한
 		const allowedExtensions = ['jpg', 'gif', 'png', 'pdf']; // 허용된 파일 확장자
 	
 		

@@ -165,17 +165,13 @@ $(document).ready(function () {
 function layerFunc(_target) {
 	if (!_target.hasClass('laypop-all')) {
 		if (_target.outerHeight() > $(window).height()) {
-			console.log('Full screen layer required');
 			addBlock('full');
 		} else {
 			if (_target.attr('id') === "loadingLayer") {
-				console.log('Loading layer detected');
 				addBlock('removeEvent');
 			} else if (_target.attr('id') === "customAlertLayer") {
-				console.log('Custom alert layer detected');
 				addBlock('fixed');
 			} else {
-				console.log('Regular layer');
 				addBlock();
 			}
 		}
@@ -186,7 +182,6 @@ function layerFunc(_target) {
 
 // block 추가 및 삭제
 function addBlock(_full) {
-	console.log('Adding block:', _full);
 
 	// close 버튼
 	$('.close').on('click', function () {
@@ -195,7 +190,6 @@ function addBlock(_full) {
 }
 
 function deleteBlock(_full) {
-	console.log('Deleting block:', _full);
 	if (_full === 'fixed') {
 		$('.block').fadeOut(300).remove();
 	}
@@ -254,7 +248,6 @@ function openPopup(id) {
 
 		// 현재 스크롤 위치 저장
 		scrollPosition = $(window).scrollTop();
-		console.log('Scroll position saved:', scrollPosition);
 
 		showPopup($target);
 	} else {
@@ -284,7 +277,6 @@ function closePopup(id, storedScrollPosition) {
 
 	// 스크롤 위치 복원
 	if (storedScrollPosition !== undefined) {
-		console.log('Restoring scroll position:', storedScrollPosition);
 		$(window).scrollTop(storedScrollPosition);
 	}
 }

@@ -378,7 +378,7 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Input_File [파일 업로드]
 	---------------------------------------------*/
-	// 경적내기 및 
+	// 견적내기 및 자료실 파일 업로드 추가 (문서 파일)
 	function setupFileInputHandlers() {
 		const maxFiles = 3;// 최대 파일 개수
 		const maxFileSize = 50 * 1024 * 1024; // 50MB 제한

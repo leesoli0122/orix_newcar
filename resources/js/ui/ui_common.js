@@ -211,41 +211,34 @@ $(document).ready(function() {
 		Custom Select  Event Binding
 	---------------------------------------------*/
 	function customEventBindingHandlers() {
-		document.addEventListener("mousedown", function(e) {
-			if (e.target.matches('.se-select[data-stove="select"] select')) {
-				if (isIOS()) {
-					// iOS 기본 동작
-					return;
-				}
+		$(document).on('mousedown', '.se-select[data-stove="select"] select', function(e) {
+			if (isIOS()) {
+				// iOS 기본 동작
+				return;
+			}
+			e.preventDefault();
+		});
+
+		$(document).on('keydown', '.se-select[data-stove="select"] select', function(e) {
+			if (isIOS()) {
+				// iOS 기본 동작
+				return;
+			}
+			if (e.keyCode === 13 || e.keyCode === 32) { // Enter or Space
 				e.preventDefault();
+				customSelect($(this));
 			}
 		});
-	
-		document.addEventListener("keydown", function(e) {
-			if (e.target.matches('.se-select[data-stove="select"] select')) {
-				if (isIOS()) {
-					// iOS 기본 동작
-					return;
-				}
-				if (e.key === "Enter" || e.key === " ") { // Enter or Space
-					e.preventDefault();
-					customSelect(e.target); // Vanilla JS에서 e.target을 직접 전달
-				}
+
+		$(document).on('click', '.se-select[data-stove="select"] select', function(e) {
+			if (isIOS()) {
+				// iOS 기본 동작
+				return;
 			}
-		});
-	
-		document.addEventListener("click", function(e) {
-			if (e.target.matches('.se-select[data-stove="select"] select')) {
-				if (isIOS()) {
-					// iOS 기본 동작
-					return;
-				}
-				e.preventDefault();
-				customSelect(e.target); // Vanilla JS에서 e.target을 직접 전달
-			}
+			e.preventDefault();
+			customSelect($(this));
 		});
 	}
-	
 	customEventBindingHandlers();
 	
 	/*********************************************************************
@@ -256,7 +249,7 @@ $(document).ready(function() {
 	---------------------------------------------*/
 	function customDatepicker(){
         // 기본 설정
-		const datepickerOptions  ={
+        $.datepicker.setDefaults({
             closeText: "닫기",
             prevText: "이전달",
             nextText: "다음달",
@@ -276,9 +269,7 @@ $(document).ready(function() {
             isRTL: true,
 			 // yearSuffix: "년",
 			minDate:null //null
-		}
-
-		$.datepicker.setDefaults(datepickerOptions);
+        });
 
 		// 커스텀 설정
 		$('.datepicker').datepicker({
@@ -289,12 +280,19 @@ $(document).ready(function() {
 			changeMonth: true,
 			yearRange:'c-5:c+5',//선택 범위
 			beforeShow: function(input, inst) {
-				repositionDatepicker(input, inst);// 위치 조정
+				repositionDatepicker(input, inst);
 				$(window).on('scroll resize', function() {
 					repositionDatepicker(input, inst);
 				});
-	
-				setZIndexBasedOnPopup(input);// 팝업 내 z-index 설정
+				if ($(input).closest('.layerpopup').length) {
+					setTimeout(function() {
+					$('.ui-datepicker').css('z-index', '202');
+				}, 0);
+				} else {
+					setTimeout(function() {
+					$('.ui-datepicker').css('z-index', '2');
+				}, 0);
+				}
 			},
 			onClose: function() {
 				$(window).off('scroll resize');
@@ -311,31 +309,16 @@ $(document).ready(function() {
             });
         }
 
-		// 팝업 내에서 z-index 조정 (LayerPopup 확인)
-		function setZIndexBasedOnPopup(input) {
-			if ($(input).closest('.layerpopup').length) {
-				setTimeout(function() {
-					$('.ui-datepicker').css('z-index', '202');
-				}, 0);
-			} else {
-				setTimeout(function() {
-					$('.ui-datepicker').css('z-index', '2');
-				}, 0);
-			}
-		}
-
 		//오늘 버튼
-		function overrideGoToToday(id) {
-			var old_goToToday = $.datepicker._gotoToday; // 기존 _gotoToday 메서드 백업
-			$.datepicker._gotoToday = function(id) {
-				old_goToToday.call(this, id); // 기존 동작 호출
-				var target = $(id); // input 포커스 설정
-				target.focus();
-				this._selectDate(id); // 날짜 선택
-				target.blur(); // 포커스 제거
-			};
-		}overrideGoToToday();
-	
+		var old_goToToday = $.datepicker._gotoToday;
+		$.datepicker._gotoToday = function(id) {
+			old_goToToday.call(this,id);
+			var target = $(id); // input 포커스 설정
+			target.focus();
+			this._selectDate(id);
+			target.blur();
+		};
+		
     }
     // Datepicker 핸들러 실행
     customDatepicker();
@@ -346,7 +329,7 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Toggle_Accordion [QnA]
 	---------------------------------------------*/
-	function toggleChkHandlers() {
+    function toggleChkHandlers() {
         $(document).on('click', '.toggleChk', function(e){
 			handleToggleClick($(this));
 		});
@@ -363,6 +346,7 @@ $(document).ready(function() {
         $toggleCont.toggleClass('active');
         $toggleElement.attr('title', isOpen ? '닫힘' : '열림');
     }
+
     toggleChkHandlers();
 	
 	/*********************************************************************
@@ -371,22 +355,22 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Filter_fixed [상담내역]
 	---------------------------------------------*/
-	// function handleScroll() {
-    //     var scrollTop = $(window).scrollTop();
+	function handleScroll() {
+        var scrollTop = $(window).scrollTop();
 
-    //     if (scrollTop > 400) {
-    //         $('.filter').addClass('fix');
-    //     } else {
-    //         $('.filter').removeClass('fix');
-    //     }
-    // }
+        if (scrollTop > 400) {
+            $('.filter').addClass('fix');
+        } else {
+            $('.filter').removeClass('fix');
+        }
+    }
 
-    // function initScrollEvent() {
-    //     $(window).on('scroll', handleScroll);
-    // }
+    function initScrollEvent() {
+        $(window).on('scroll', handleScroll);
+    }
 
-    // // 이벤트 초기화 함수 실행
-    // initScrollEvent();
+    // 이벤트 초기화 함수 실행
+    initScrollEvent();
 
 	/*********************************************************************
 		Input_File #인풋_파일 업로드
@@ -395,24 +379,24 @@ $(document).ready(function() {
 		Input_File [파일 업로드]
 	---------------------------------------------*/
 	function setupFileInputHandlers() {
-		const maxFiles = 3; // 최대 파일 개수
-		const maxFileSize = 50 * 1024 * 1024; // 50MB 제한
-		const imageExtensions = ['jpg', 'gif', 'png', 'pdf']; // 이미지 파일 확장자
-		const documentExtensions = ['xlsx', 'pdf', 'hwp', 'doc', 'pptx']; // 문서 파일 확장자
+		const maxFiles = 3;// 최대 파일 개수
+		const maxFileSize = 300 * 1024 * 1024; // 300MB 제한
+		const allowedExtensions = ['jpg', 'png', 'xlsx', 'pdf', 'doc', 'hwp', 'pptx']; // 허용된 파일 확장자
 	
-		// .file 클래스를 가진 모든 요소에 대해 처리
-		const fileContainers = document.querySelectorAll('.file');
+		
+		$('.file').each(function() {
+			const $container = $(this); 
+			const $fileInput = $container.find('.attachmentFile');
+			const $addFileList = $container.find('.add-file');
 	
-		fileContainers.forEach(function(container) {
-			const fileInput = container.querySelector('.attachmentFile');
-			const addFileList = container.querySelector('.add-file');
-			const isImageFile = fileInput.classList.contains('imgFile'); // 이미지 파일 클래스
-			const isDocumentFile = fileInput.classList.contains('documentFile'); // 문서 파일 클래스
+			// "찾아보기" 버튼 클릭 시 파일 선택 창 열기
+			$container.find('.btn-input').on('click', function() {
+				$fileInput.click();
+			});
 	
-			// 파일 선택 시 처리
-			fileInput.addEventListener('change', function() {
-				// 파일 개수 초과시
-				if (addFileList.children.length >= maxFiles) {
+			// 파일 선택
+			$fileInput.on('change', function() {
+				if ($addFileList.children('li').length >= maxFiles) {
 					messageView('최대 3개의 파일만 선택할 수 있습니다.');
 					return;
 				}
@@ -424,49 +408,35 @@ $(document).ready(function() {
 					const filename = file.name;
 					const fileExtension = filename.split('.').pop().toLowerCase();
 	
-					// 이미지 파일 확인
-					if (isImageFile && !imageExtensions.includes(fileExtension)) {
-						messageView(fileExtension + '는 지원하지 않는 이미지 파일 확장자입니다.');
+					if (!allowedExtensions.includes(fileExtension)) {
+						messageView(fileExtension + '는 지원하지 않는 확장자입니다.');
 						return;
 					}
-	
-					// 문서 파일 확인
-					if (isDocumentFile && !documentExtensions.includes(fileExtension)) {
-						messageView(fileExtension + '는 지원하지 않는 문서 파일 확장자입니다.');
-						return;
-					}
-	
-					// 파일 크기 확인
 					if (fileSize > maxFileSize) {
 						messageView('파일 크기는 50MB를 초과할 수 없습니다.');
 						return;
 					}
 	
-					// 파일 리스트에 추가
-					if (addFileList.children.length < maxFiles) {
-						const newListItem = document.createElement('li');
-						newListItem.textContent = file.name;
+					if ($addFileList.children('li').length < maxFiles) {
+						const $newListItem = $('<li>').text(file.name);
+						const $deleteButton = $('<span>').addClass('delete-file').text('삭제');
 	
-						const deleteButton = document.createElement('span');
-						deleteButton.classList.add('delete-file');
-						deleteButton.textContent = '삭제';
-	
-						// 삭제 버튼 클릭 시 해당 파일 항목 삭제
-						deleteButton.addEventListener('click', function() {
-							newListItem.remove();
+						$deleteButton.on('click', function() {
+							$(this).closest('li').remove();
 						});
-	
-						newListItem.appendChild(deleteButton);
-						addFileList.appendChild(newListItem);
+						$newListItem.append($deleteButton);
+						$addFileList.append($newListItem);
 					}
 				});
 	
-				// 파일 선택 후 파일 입력값 초기화
-				fileInput.value = '';
+				$fileInput.val('');
 			});
 		});
 	}
+	
 	setupFileInputHandlers();
+
+	
 
 	/*********************************************************************
 		Select Popup [년도 선택_팝업 / 차량 선택 _ 팝업/ 실적조회_테이블]
@@ -474,65 +444,34 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Select Popup [년도 선택_팝업 / 차량 선택 _ 팝업/ 실적조회_테이블]
 	---------------------------------------------*/
-	// 선택된 항목
-	function updateSelection(container, button, link) {
-
-		// disabled
-		if (container.classList.contains('disabled')) return;
-
-		// 항목을 선택
-		container.classList.add('on');
-
-		// '선택됨' title 추가
-		if (button) button.setAttribute('title', '선택됨');
-		if (link) link.setAttribute('title', '선택됨');
-	}
-
-	// 클릭 이벤트
 	function handleContainerClick(e) {
 		const container = e.currentTarget;
-		const button = container.querySelector('button');
-		const link = container.querySelector('a');
+		const button = $(container).find('button').get(0);
+		const link = $(container).find('a').get(0);
 
-		// disabled 이벤트 종료
-		if (container.classList.contains('disabled')) return;
+		if ($(container).closest('li').hasClass('disabled')) {
+			$(container).removeClass('on');
+			$(button).attr('title', '').attr('tabindex', '-1');
+			return;
+		}
 
-		// 부모
-		const parent = container.closest('.btnSelect');
-
-		// 리스트 아이템
-		const listItems = parent.querySelectorAll('li, div, tr td:first-child');
-		listItems.forEach(item => item.classList.remove('on'));
-
-		// 버튼
-		const buttons = parent.querySelectorAll('button');
-		buttons.forEach(btn => btn.removeAttribute('title'));
-
-		updateSelection(container, button, link);
+		// 초기화
+		const parent = $(container).closest('.btnSelect');
+		parent.find('li, div, tr td:first-child').removeClass('on');
+		parent.find('button').attr('title', '');
+	
+		$(container).addClass('on');
+		$(button).attr('title', '선택됨');
+		$(a).attr('title', '선택됨');
 	}
-
-	// disabled 포커스 방지
-	function disableFocusOnDisabledItems() {
-		const disabledItems = document.querySelectorAll('.btnSelect .disabled button, .btnSelect .disabled a');
-		disabledItems.forEach(item => item.setAttribute('tabindex', '-1'));
-	}
-
-	// 클릭 이벤트 초기화
+	
 	function initContainerClickEvent() {
-		const btnSelects = document.querySelectorAll('.btnSelect');
-
-		btnSelects.forEach(btnSelect => {
-			const clickableElements = btnSelect.querySelectorAll('li, div, tr td:first-child');
-			clickableElements.forEach(element => element.addEventListener('click', handleContainerClick));
+		$('.btnSelect').each(function() {
+			$(this).find('li, div, tr td:first-child').on('click', handleContainerClick);
 		});
-
-		// disabled 포커스 방지
-		disableFocusOnDisabledItems();
 	}
 
 	initContainerClickEvent();
-
-	
 
 	/*********************************************************************
 		scrollTop Button
@@ -599,6 +538,7 @@ $(document).ready(function() {
 					}
 					
 				} else {
+
 					$('.btn-top').css('display', 'none');
 				}
 			});
@@ -662,3 +602,4 @@ $(document).ready(function() {
 
 	
 });
+

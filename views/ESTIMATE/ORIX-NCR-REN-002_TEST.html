@@ -130,40 +130,66 @@
                             </div>
                             <script>//개발 스크립트 추가
                                 $(document).ready(function () {
-                                    function deliveryEvent() {
+                                    // function deliveryEvent() {
+                                    //     var deliType = $("#deliveryInfo select").eq(0).val();
+                                    //     var toArea = $("#deliveryInfo select").eq(1).val();
+                                        
+                                    //     if (deliType == "2") {
+                                    //         $("#deliveryInfo li").eq(2).hide(); // Hide 도착지
+                                    //         $("#deliveryInfo li").eq(3).hide();   // Hide 외주 탁송료
+                                    //     } else {
+                                    //         $("#deliveryInfo li").eq(2).show();  // Show 도착지
+                                    //         $("#deliveryInfo li").eq(3).show();    // Show 외주 탁송료
+                                    //     }
+                                    // }
+
+                                    // deliveryEvent();
+
+                                    // $("#deliveryInfo select").change(function() {
+                                    //     deliveryEvent();
+                                    // });
+
+                                    // var target = document.getElementById("deliveryInfo");
+                                    // var observer = new MutationObserver(function(mutations) {
+                                    //     mutations.forEach((mutation) => {
+                                    //         if(mutation.target.getAttribute("data-status") != "open") {
+                                    //             deliveryEvent();
+                                    //         }
+                                    //     });
+                                    // });
+                                    
+                                    // observer.observe(target, {
+                                    //     attributes: true,
+                                    //     childList: true,
+                                    //     subtree: true
+                                    // });
+                                    
+
+                                    //탁송정보 선택 이벤트
+                                    function deliveryEvent (){
                                         var deliType = $("#deliveryInfo select").eq(0).val();
                                         var toArea = $("#deliveryInfo select").eq(1).val();
-                                        
-                                        if (deliType == "2") {
-                                            $("#deliveryInfo li").eq(2).hide(); // Hide 도착지
-                                            $("#deliveryInfo li").eq(3).hide();   // Hide 외주 탁송료
-                                        } else {
-                                            $("#deliveryInfo li").eq(2).show();  // Show 도착지
-                                            $("#deliveryInfo li").eq(3).show();    // Show 외주 탁송료
-                                        }
-                                    }
 
-                                    deliveryEvent();
-
-                                    $("#deliveryInfo select").change(function() {
-                                        deliveryEvent();
-                                    });
-
-                                    var target = document.getElementById("deliveryInfo");
-                                    var observer = new MutationObserver(function(mutations) {
-                                        mutations.forEach((mutation) => {
-                                            if(mutation.target.getAttribute("data-status") != "open") {
-                                                deliveryEvent();
+                                        $("#deliveryInfo select").eq(0).off("change").on("change", function(){
+                                            //탁송방법이 제조사탁송일 경우
+                                            if($("#deliveryInfo select").eq(0).val() === "2") {
+                                                $("#deliveryInfo li").eq(2).hide();
+                                                $("#deliveryInfo li").eq(3).hide();
+                                            }else{
+                                                $("#deliveryInfo li").eq(2).show();
+                                                $("#deliveryInfo li").eq(3).show();
                                             }
                                         });
-                                    });
+
+                                        //Todo 탁송료 조회
+                                        if(deliType != null && deliType != "" && toArea != null && toArea != ""){
+
+                                        }
+                                    };deliveryEvent();
+
                                     
-                                    observer.observe(target, {
-                                        attributes: true,
-                                        childList: true,
-                                        subtree: true
-                                    });
                                 });
+
                             </script>
                         </div>
                     </section>

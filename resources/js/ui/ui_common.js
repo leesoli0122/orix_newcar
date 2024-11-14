@@ -475,51 +475,64 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Select Popup [년도 선택_팝업 / 차량 선택 _ 팝업/ 실적조회_테이블]
 	---------------------------------------------*/
+	// 선택된 항목
+	function updateSelection(container, button, link) {
 
-	function updateSelection(container, button, a) {
-		// 선택된 항목
+		// disabled
+		if (container.classList.contains('disabled')) return;
+
+		// 항목을 선택
 		container.classList.add('on');
-	
-		// '선택됨' title
+
+		// '선택됨' title 추가
 		if (button) button.setAttribute('title', '선택됨');
-		if (a) a.setAttribute('title', '선택됨');
+		if (link) link.setAttribute('title', '선택됨');
 	}
-	
+
+	// 클릭 이벤트
 	function handleContainerClick(e) {
 		const container = e.currentTarget;
 		const button = container.querySelector('button');
-		const a = container.querySelector('a');
-	
-		// 초기화
+		const link = container.querySelector('a');
+
+		// disabled 이벤트 종료
+		if (container.classList.contains('disabled')) return;
+
+		// 부모
 		const parent = container.closest('.btnSelect');
+
+		// 리스트 아이템
 		const listItems = parent.querySelectorAll('li, div, tr td:first-child');
-	
-		listItems.forEach(function(item) {
-			item.classList.remove('on');
-		});
-	
+		listItems.forEach(item => item.classList.remove('on'));
+
+		// 버튼
 		const buttons = parent.querySelectorAll('button');
-		buttons.forEach(function(btn) {
-			btn.removeAttribute('title');
-		});
-	
-		updateSelection(container, button, a);
+		buttons.forEach(btn => btn.removeAttribute('title'));
+
+		updateSelection(container, button, link);
 	}
-	
+
+	// disabled 포커스 방지
+	function disableFocusOnDisabledItems() {
+		const disabledItems = document.querySelectorAll('.btnSelect .disabled button, .btnSelect .disabled a');
+		disabledItems.forEach(item => item.setAttribute('tabindex', '-1'));
+	}
+
+	// 클릭 이벤트 초기화
 	function initContainerClickEvent() {
 		const btnSelects = document.querySelectorAll('.btnSelect');
-	
-		btnSelects.forEach(function(btnSelect) {
+
+		btnSelects.forEach(btnSelect => {
 			const clickableElements = btnSelect.querySelectorAll('li, div, tr td:first-child');
-	
-			clickableElements.forEach(function(element) {
-				element.addEventListener('click', handleContainerClick);
-			});
+			clickableElements.forEach(element => element.addEventListener('click', handleContainerClick));
 		});
+
+		// disabled 포커스 방지
+		disableFocusOnDisabledItems();
 	}
-	
+
 	initContainerClickEvent();
-	
+
 	
 
 	/*********************************************************************

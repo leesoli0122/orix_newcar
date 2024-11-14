@@ -378,10 +378,11 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Input_File [파일 업로드]
 	---------------------------------------------*/
+	
 	function setupFileInputHandlers() {
 		const maxFiles = 3;// 최대 파일 개수
-		const maxFileSize = 300 * 1024 * 1024; // 300MB 제한
-		const allowedExtensions = ['jpg', 'png', 'xlsx', 'pdf', 'doc', 'hwp', 'pptx']; // 허용된 파일 확장자
+		const maxFileSize = 50 * 1024 * 1024; // 50MB 제한
+		const allowedExtensions = ['jpg', 'gif', 'png', 'pdf']; // 허용된 파일 확장자
 	
 		
 		$('.file').each(function() {
@@ -436,7 +437,7 @@ $(document).ready(function() {
 	
 	setupFileInputHandlers();
 
-	
+
 
 	/*********************************************************************
 		Select Popup [년도 선택_팝업 / 차량 선택 _ 팝업/ 실적조회_테이블]
@@ -444,34 +445,60 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Select Popup [년도 선택_팝업 / 차량 선택 _ 팝업/ 실적조회_테이블]
 	---------------------------------------------*/
-	function handleContainerClick(e) {
-		const container = e.currentTarget;
-		const button = $(container).find('button').get(0);
-		const link = $(container).find('a').get(0);
-
-		if ($(container).closest('li').hasClass('disabled')) {
-			$(container).removeClass('on');
-			$(button).attr('title', '').attr('tabindex', '-1');
-			return;
+	function btnSelectHandlers() {
+		// 항목 선택 함수
+		function updateSelection(container, button, link) {
+			// disabled 상태일 경우 아무 작업도 하지 않음
+			if ($(container).hasClass('disabled')) return;
+	
+			// 항목을 선택
+			$(container).addClass('on');
+	
+			// '선택됨' title 추가
+			if (button) $(button).attr('title', '선택됨');
+			if (link) $(link).attr('title', '선택됨');
 		}
-
-		// 초기화
-		const parent = $(container).closest('.btnSelect');
-		parent.find('li, div, tr td:first-child').removeClass('on');
-		parent.find('button').attr('title', '');
 	
-		$(container).addClass('on');
-		$(button).attr('title', '선택됨');
-		$(a).attr('title', '선택됨');
-	}
+		// 클릭 이벤트 핸들러
+		function handleContainerClick(e) {
+			const container = e.currentTarget;
+			const $container = $(container);
+			const $button = $container.find('button').get(0);
+			const $link = $container.find('a').get(0);
 	
-	function initContainerClickEvent() {
-		$('.btnSelect').each(function() {
-			$(this).find('li, div, tr td:first-child').on('click', handleContainerClick);
-		});
-	}
-
-	initContainerClickEvent();
+			// disabled 상태일 경우 이벤트 종료
+			if ($container.hasClass('disabled')) return;
+	
+			// 부모 요소
+			const $parent = $container.closest('.btnSelect');
+	
+			// 리스트 아이템 초기화
+			$parent.find('li, div, tr td:first-child').removeClass('on');
+	
+			// 버튼 초기화
+			$parent.find('button').removeAttr('title');
+	
+			// 항목 선택 처리
+			updateSelection(container, $button, $link);
+		}
+	
+		// disabled 항목에 tabindex="-1"을 설정하여 포커스 방지
+		function disableFocusOnDisabledItems() {
+			$('.btnSelect .disabled button, .btnSelect .disabled a').attr('tabindex', '-1');
+		}
+	
+		// 클릭 이벤트 초기화 함수
+		function initContainerClickEvent() {
+			// .btnSelect 내의 항목에 클릭 이벤트 리스너 추가
+			$('.btnSelect').each(function() {
+				$(this).find('li, div, tr td:first-child').on('click', handleContainerClick);
+			});
+	
+			// disabled 항목에 tabindex=-1 설정
+			disableFocusOnDisabledItems();
+		}initContainerClickEvent();
+	
+	}btnSelectHandlers();
 
 	/*********************************************************************
 		scrollTop Button

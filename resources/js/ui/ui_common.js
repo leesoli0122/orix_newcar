@@ -555,7 +555,7 @@ $(document).ready(function() {
 			$parent.find('button').removeAttr('title');
 		}
 
-		// disable 포커스 방지
+		// disabled 포커스 방지
 		function disableFocusItems() {
 			$('.btnSelect .disabled button, .btnSelect .disabled a').attr('tabindex', '-1');
 		}
@@ -569,7 +569,7 @@ $(document).ready(function() {
 				$this.find('li, div, tr td:first-child').on('click', handleContainerClick);
 			});
 
-			// disable 포커스 방지
+			// disabled 포커스 방지
 			disableFocusItems();
 		}
 

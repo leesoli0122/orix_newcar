@@ -734,7 +734,7 @@ popup #팝업
 /*********************************************************************
 라벨
 *********************************************************************/
-.badge01, .badge02 { display:inline-block; padding:6px 12px; border-radius:16px; font-size:var(--font14); font-weight:var(--w-bold); }
+.badge01, .badge02 { display:inline-block; padding:6px 12px; min-width:62px; border-radius:16px; font-size:var(--font14); font-weight:var(--w-bold); text-align:center; }
 
 .badge01.mip { border:1px solid var(--tag1); color:var(--tag1); }
 .badge01.rcar { border:1px solid var(--tag2); color:var(--tag2); }

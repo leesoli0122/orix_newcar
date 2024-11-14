@@ -177,6 +177,7 @@ $(document).ready(function() {
 			$this.find('.' + optionClass).on('click', function(e) {
 				e.stopPropagation();
 				$select.val($(this).attr('rel'));
+				$select.trigger('change');
 				e.preventDefault(); //select 선택 시 기본 폼 리셋 x
 				close();
 			});
@@ -345,25 +346,23 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Toggle_Accordion [QnA]
 	---------------------------------------------*/
-    function toggleChkHandlers() {
-        document.addEventListener('click', function(e) {
-			if (e.target.matches('.toggleChk')) {
-				handleToggleClick(e.target);
-			} else if (e.target.closest('.toggleChk .btn')) {
-				e.preventDefault();
-				e.stopPropagation();
-			}
+	function toggleChkHandlers() {
+        $(document).on('click', '.toggleChk', function(e){
+			handleToggleClick($(this));
+		});
+		$(document).on('click','.toggleChk .btn', function(e){
+			e.preventDefault();
+			e.stopPropagation();
 		});
     }//개발 수정
 
     function handleToggleClick($toggleElement) {
-        const  $toggleCont = $toggleElement.parent().find('.ques-cont');
-        const  isOpen = $toggleElement.toggleClass('active').hasClass('active');
+        var $toggleCont = $toggleElement.parent().find('.ques-cont');
+        var isOpen = $toggleElement.toggleClass('active').hasClass('active');
 		
         $toggleCont.toggleClass('active');
         $toggleElement.attr('title', isOpen ? '닫힘' : '열림');
     }
-
     toggleChkHandlers();
 	
 	/*********************************************************************

@@ -177,7 +177,7 @@ $(document).ready(function() {
 			$this.find('.' + optionClass).on('click', function(e) {
 				e.stopPropagation();
 				$select.val($(this).attr('rel'));
-				$select.trigger('change');
+				$select.trigger('change'); // 브라우저와 다른 코드 인식 , 이벤트 발생
 				e.preventDefault(); //select 선택 시 기본 폼 리셋 x
 				close();
 			});

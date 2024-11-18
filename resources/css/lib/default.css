@@ -331,7 +331,7 @@ sub-content
 /**** breadcrumb ****/
 .subvisual-wrap .breadcrumb-wrap { width:100%; text-align:right; }
 .subvisual-wrap .breadcrumb-wrap ul > li{ display:inline-block; padding-right:30px; vertical-align:top;  }
-.subvisual-wrap .breadcrumb-wrap ul > li a { display:inline-block; width:auto; min-width:16px; height:30px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--subtitle); line-height:30px; }
+.subvisual-wrap .breadcrumb-wrap ul > li a { display:inline-block; width:auto; min-width:16px; height:30px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--subtitle); line-height:30px;  pointer-events : none; }
 .subvisual-wrap .breadcrumb-wrap ul > li:last-of-type a { padding-right:0; font-weight:var(--w-bold); color:var(--title); }
 .subvisual-wrap .breadcrumb-wrap ul > li::after { content:""; display:inline-block; position:absolute; top:50%; right:0; transform:translateY(-50%); width:30px; height:30px; background: url(../../images/breadcrumb_arrow.png)no-repeat 50%/30px auto; }
 .subvisual-wrap .breadcrumb-wrap ul > li:last-of-type::after { display:none; width:0; background:transparent; }

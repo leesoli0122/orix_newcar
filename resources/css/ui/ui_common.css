@@ -484,7 +484,7 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap > .accordion-info > .ques .left:not(:has(.date),:has(+.right .after-line)) { width:calc(100% - 150px);}
 .accordion-wrap > .accordion-info > .ques .left { width:calc(100% - 200px);}
 /* column default */
-.accordion-wrap > .accordion-info > .ques .left .tit { overflow:hidden; text-overflow: ellipsis;  white-space:nowrap;}
+.accordion-wrap > .accordion-info > .ques .left .tit:not(:has(.pre-ing)) { overflow:hidden; text-overflow: ellipsis;  white-space:nowrap;}
 .accordion-wrap > .accordion-info > .ques .left,
 .accordion-wrap > .accordion-info > .ques .right { display:flex; flex-direction:column; }
 /* inline */
@@ -1464,6 +1464,11 @@ dd.download-wrap { padding:0; background:transparent; }
 .choose-wrap .choose-group.model:last-child { margin:0; padding:0; }
 .choose-wrap .choose-group.model .choose li.chk { border:1px solid var(--secondary); color:var(--normal); font-weight:var(--w-bold); }
 .choose-wrap .choose-group.model .choose li.chk button { color:var(--normal); font-size:var(--font14); font-weight:var(--w-bold); }
+
+/* 선점중일때 */
+.accordion-wrap > .accordion-info > .ques .left .after-line span.pre-ing { display:inline-block; padding-left:32px; font-size:var(--font16); color:var(--primary); }
+.accordion-wrap > .accordion-info > .ques .left .after-line span.pre-ing::before { content:""; position:absolute; top:50%; transform:translateY(-50%); left:0; display:inline-block; margin:0 16px; width:1px; height:16px; background:var(--title); }
+.accordion-wrap > .accordion-info > .ques .left .after-line span.pre-ing .icon { margin-right:6px; width:18px; height:18px; font-size:0; background:url(../../images/ic_first.png)no-repeat 50%/18px; vertical-align:middle; }
 
 /* 선구매에서 오토리스,렌터카 견적내기 화면 들어갈 때 */
 .grid-list-body.deactive li:hover { background:transparent; }

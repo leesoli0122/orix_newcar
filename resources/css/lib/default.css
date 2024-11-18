@@ -233,8 +233,10 @@ login #로그인
 .wrap.login .form-wrap .form-group input.form-control { margin:0 auto; padding:0 20px; height:61px; font-size:var(--font18); }
 
 /* 로그인 버튼 */
-.wrap.login .form-wrap .btn-wrap.bottom { margin:50px 0 100px; }
-.wrap.login .form-wrap .btn-wrap.bottom .btn.btn-primary { width:410px; }
+.btn-wrap.loginBtn { display:flex; flex-direction:column; row-gap:20px; align-items:center; margin:50px 0 100px; }
+.btn-wrap.loginBtn .btn { margin-left:0; width:410px; }
+.btn-wrap.loginBtn button.btn.btn-cont { border:1.3px solid var(--border2); }
+.btn-wrap.loginBtn button.btn.btn-cont:not(.disabled):hover { border:1.3px solid var(--background3); color:var(--background3); }
 
 /*********************************************************************
 header #헤더

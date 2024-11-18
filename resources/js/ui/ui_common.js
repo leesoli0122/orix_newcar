@@ -380,40 +380,42 @@ $(document).ready(function() {
 	---------------------------------------------*/
 	// 견적내기 및 자료실 파일 업로드 추가 (문서 파일 - .attachmentFile)
 	function setupFileInputHandlers() {
-		const maxFiles = 3;// 최대 파일 개수
+		const maxFiles = 3;// 최대 파일 개수 +1
 		const maxFileSize = 50 * 1024 * 1024; // 50MB 제한
 		const allowedExtensions = ['xlsx', 'pdf', 'hwp', 'doc', 'pptx']; // 허용된 파일 확장자
-	
+        
 		
 		$('.file').each(function() {
-			const $container = $(this); 
+			const $container = $(this);
 			const $fileInput = $container.find('.attachmentFile');
 			const $addFileList = $container.find('.add-file');
-	
-			// "찾아보기" 버튼 클릭 시 파일 선택 창 열기
+            
+            // "찾아보기" 버튼 클릭 시 파일 선택 창 열기
 			$container.find('.btn-input').on('click', function() {
 				$fileInput.click();
 			});
 	
+
 			// 파일 선택
 			$fileInput.on('change', function() {
-				if ($addFileList.children('li').length >= maxFiles) {
-					messageView('최대 3개의 파일만 선택할 수 있습니다.');
-					return;
-				}
-	
 				const files = Array.from(this.files);
-	
+
+                if ($addFileList.children('li').length + files.length > maxFiles) {
+                    messageView('최대 3개의 파일만 선택할 수 있습니다.');
+                    return;
+                }
+                    
 				files.forEach(function(file) {
 					const fileSize = file.size;
 					const filename = file.name;
 					const fileExtension = filename.split('.').pop().toLowerCase();
-	
+					
+
 					if (!allowedExtensions.includes(fileExtension)) {
 						messageView(fileExtension + '는 지원하지 않는 확장자입니다.');
 						return;
 					}
-					if (fileSize > maxFileSize) {
+					if (fileSize >= maxFileSize) {
 						messageView('파일 크기는 50MB를 초과할 수 없습니다.');
 						return;
 					}
@@ -434,7 +436,6 @@ $(document).ready(function() {
 			});
 		});
 	}
-	
 	setupFileInputHandlers();
 
 	// 개발 - 현황조회 파일 업로드 추가 (이미지 파일 -  .nwcFile)
@@ -445,23 +446,18 @@ $(document).ready(function() {
 	
 		
 		$('.file').each(function() {
-			const $container = $(this); 
+			const $container = $(this);
 			const $fileInput = $container.find('.nwcFile');
 			const $addFileList = $container.find('.add-file');
 	
-			// "찾아보기" 버튼 클릭 시 파일 선택 창 열기
-			$container.find('.btn-input').on('click', function() {
-				$fileInput.click();
-			});
-	
 			// 파일 선택
 			$fileInput.on('change', function() {
-				if ($addFileList.children('li').length >= maxFiles) {
-					messageView('최대 3개의 파일만 선택할 수 있습니다.');
-					return;
-				}
-	
 				const files = Array.from(this.files);
+
+                if ($addFileList.children('li').length + files.length > maxFiles) {
+                    messageView('최대 5개의 파일만 선택할 수 있습니다.');
+                    return;
+                }
 	
 				files.forEach(function(file) {
 					const fileSize = file.size;
@@ -472,7 +468,7 @@ $(document).ready(function() {
 						messageView(fileExtension + '는 지원하지 않는 확장자입니다.');
 						return;
 					}
-					if (fileSize > maxFileSize) {
+					if (fileSize >= maxFileSize) {
 						messageView('파일 크기는 300MB를 초과할 수 없습니다.');
 						return;
 					}

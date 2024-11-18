@@ -10,6 +10,9 @@
     --m-img-shortCut03: url(../../images/main/ic_sc_data.png);
     --m-img-shortCut04: url(../../images/main/ic_sc_faq.png);
     --m-img-todo: url(../../images/main/ic_todo_car.png);
+    --m-img-todo-arrow-l: url(../../images/main/ic_m_arrow_l.png);
+    --m-img-todo-arrow-r: url(../../images/main/ic_m_arrow_r.png);
+
 
     --m-color01:#1A3B6C;
     --m-color02:#1168E6;
@@ -135,10 +138,11 @@
 .swiper.introTodoSlider ul.introToList-area,
 .swiper.introTodoSlider ul.introToList-area>li { height:322px; }
 .swiper.introTodoSlider .swiper-controller { margin:17px 0; padding-bottom: 4px; }
-.swiper.introTodoSlider .swiper-controller .swiper-scrollbar-area .swiper-scrollbar {  flex-grow: 1; bottom:var(--swiper-scrollbar-bottom, -4px); max-width: calc(100% - 164px); width: calc(85.85% - 2 * var(--swiper-scrollbar-sides-offset, 1%)); margin-right:32px; }
+.swiper.introTodoSlider .swiper-controller .swiper-scrollbar-area .swiper-scrollbar {  flex-grow: 1; bottom:-4px; max-width: calc(100% - 164px);  margin-right:32px; }
 .swiper.introTodoSlider .swiper-controller .swiper-button-area  { position:absolute; right:0; width:132px; }
-.swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next, .swiper-controller .swiper-button-area .swiper-button-prev { top:initial; height:43px; }
-.swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next:after, .swiper-controller .swiper-button-area .swiper-button-prev:after { font-size:var(--font22); color:var(--title); }
+.swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-prev { background: var(--m-img-todo-arrow-l) no-repeat 50%/39px auto;}
+.swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next {top:-1px; background: var(--m-img-todo-arrow-r) no-repeat 50%/39px auto;}
+.swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next:after, .swiper-controller .swiper-button-area .swiper-button-prev:after { content: none; }
 .swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-button-next:focus-visible, .swiper-controller .swiper-button-area .swiper-button-prev:focus-visible { outline:1px solid var(--secondary); }
 .swiper.introTodoSlider .swiper-controller .swiper-button-area .swiper-pagination { top:-11px; }
 
@@ -181,14 +185,14 @@
 .swiper.introListSlider .swiper-controller, div.introListSlider .swiper-controller { display: none; }
 .swiper.introListSlider .swiper-controller { width:200px; margin-top:20px; }
 .swiper.introListSlider .swiper-controller .swiper-button-prev,
-.swiper.introListSlider .swiper-controller .swiper-button-next { z-index:11; width:41px; height:41px; transition: transform 0.3s ease;  top:var(--swiper-navigation-top-offset, 22px); bottom:0; }
+.swiper.introListSlider .swiper-controller .swiper-button-next { width:26px; height:26px; z-index:11; width:41px; height:41px; transition: transform 0.3s ease;  top:22px; bottom:0; }
 .swiper.introListSlider .swiper-controller .swiper-button-prev:after { transform: rotate(180deg); content: ''; position: absolute; width:41px; height:41px; background: var(--m-img-swiper) no-repeat left 12px center/16px auto; border: 3px solid var(--m-color09); border-radius:50%;   }
 .swiper.introListSlider .swiper-controller .swiper-button-next:after { content: ''; position: absolute; width:41px; height:41px; background: var(--m-img-swiper) no-repeat right 8px center/16px auto;  border: 3px solid var(--m-color09); border-radius:50%; }
 .swiper.introListSlider .swiper-controller .swiper-button-prev:hover,
 .swiper.introListSlider .swiper-controller .swiper-button-next:hover { transform: scale(1.1); }
 .swiper.introListSlider .swiper-controller .swiper-button-prev:focus-visible,
 .swiper.introListSlider .swiper-controller .swiper-button-next:focus-visible { outline:1px solid var(--secondary); }
-.swiper.introListSlider .swiper-controller .swiper-pagination { width:auto; transform: translateX(-50%); top:var(--swiper-pagination-top, 8px); left:50%; bottom:0px; font-size:var(--font24); font-weight:var(--w-bold); color:var(--inactive); }
+.swiper.introListSlider .swiper-controller .swiper-pagination { width:auto; transform: translateX(-50%); top:8px; left:50%; bottom:0px; font-size:var(--font24); font-weight:var(--w-bold); color:var(--inactive); }
 .swiper.introListSlider .swiper-controller .swiper-pagination .swiper-pagination-current { color:var(--normal); }
 /*********************************************************************
 메인.04 - 나의 실적

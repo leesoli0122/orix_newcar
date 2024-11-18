@@ -270,7 +270,7 @@ input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; hei
 ---------------------------------------------*/
 .form-group .timeNum { position:absolute; transform: translateY(-50%); top:50%; right:34px; color:var(--error); }
 .form-group .timeNum::before,
-.form-group .timeNum::before { content:''; position: absolute; right:-24px; width:20px; height:20px; }
+.form-group .timeNum::before { content:''; position: absolute; top:50%; transform:translateY(-50%); right:-24px; width:20px; height:20px; }
 .form-group .timeNum::before { background: url(../../images/ic_time_off.png) no-repeat 100%/20px auto; }
 .form-group .timeNum.active::before { background: url(../../images/ic_time_on.png) no-repeat 100%/20px auto; }
 

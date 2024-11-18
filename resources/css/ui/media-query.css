@@ -46,6 +46,10 @@
 	.pagination ul li { padding-right:0; }
 	.pagination ul li:first-child { padding-left:0; }
 	.pagination ul li + li { margin:0; }
+
+	/* 선구매 */
+	.accordion-wrap > .accordion-info > .ques .left .after-line span.pre-ing { padding:0; margin-top:16px; }
+	.accordion-wrap > .accordion-info > .ques .left .after-line span.pre-ing::before { content:none; }
 }
 
 @media screen and (max-width:800px) {

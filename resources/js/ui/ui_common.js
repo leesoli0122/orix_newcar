@@ -380,7 +380,7 @@ $(document).ready(function() {
 	---------------------------------------------*/
 	// 견적내기 및 자료실 파일 업로드 추가 (문서 파일 - .attachmentFile)
 	function setupFileInputHandlers() {
-		const maxFiles = 3;// 최대 파일 개수 +1
+		const maxFiles = 3;// 최대 파일 개수
 		const maxFileSize = 50 * 1024 * 1024; // 50MB 제한
 		const allowedExtensions = ['xlsx', 'pdf', 'hwp', 'doc', 'pptx']; // 허용된 파일 확장자
         
@@ -390,12 +390,6 @@ $(document).ready(function() {
 			const $fileInput = $container.find('.attachmentFile');
 			const $addFileList = $container.find('.add-file');
             
-            // "찾아보기" 버튼 클릭 시 파일 선택 창 열기
-			$container.find('.btn-input').on('click', function() {
-				$fileInput.click();
-			});
-	
-
 			// 파일 선택
 			$fileInput.on('change', function() {
 				const files = Array.from(this.files);
@@ -421,14 +415,38 @@ $(document).ready(function() {
 					}
 	
 					if ($addFileList.children('li').length < maxFiles) {
-						const $newListItem = $('<li>').text(file.name);
+						const $newListItem = $('<li>').text(file.name);''
 						const $deleteButton = $('<span>').addClass('delete-file').text('삭제');
+
 	
 						$deleteButton.on('click', function() {
 							$(this).closest('li').remove();
 						});
-						$newListItem.append($deleteButton);
-						$addFileList.append($newListItem);
+
+						var fileNm = $('.attachmentFile')[0].files[0].name; // 파일명
+						var fileNa = $('.delete-file').closet('li').text().replaceAll('삭제', '');
+						var gijun = $('.delete-file').parent('li').text();
+                        var delimitter = '삭제';
+                        var flag = 'Y';
+                        var resultArray = gijun.split(delimitter);
+						
+
+						console.log(resultArray);
+						resultArray.some((item,index,arr) => {
+							console.log('item'+index+arr[index]);
+							if(arr[index] === fileNm) {
+								flag = 'N';
+								return flag === 'N';
+							}
+						});
+
+						if(flag === 'Y') {
+							$addFileList.append($newListItem);
+							$newListItem.append($deleteButton);
+						}else{
+							messageView("동일파일 업로드 불가합니다.");
+							return;
+						}
 					}
 				});
 	

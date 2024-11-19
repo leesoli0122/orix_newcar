@@ -429,12 +429,11 @@ $(document).ready(function() {
                         var delimitter = '삭제';
                         var flag = 'Y';
                         var resultArray = gijun.split(delimitter);
-						
 
 						console.log(resultArray);
-						resultArray.some((item,index,arr) => {
-							console.log('item'+index+arr[index]);
-							if(arr[index] === fileNm) {
+						resultArray.some(function(item, index, arr) {
+							console.log('item' + index + arr[index]);
+							if (arr[index] === fileNm) {
 								flag = 'N';
 								return flag === 'N';
 							}

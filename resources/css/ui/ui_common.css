@@ -745,6 +745,7 @@ popup #팝업
 .badge02.promotions { background-color:var(--tag6); color:#802CE3; }
 .badge02.event { background-color:var(--tag7); color:var(--error); }
 .badge02.last { background-color:var(--background2); color:var(--normal); }
+.badge02.same { background-color:#ECF2F8; color:var(--primary); }
 
 /*********************************************************************
 스탭
@@ -1016,13 +1017,16 @@ font-weight:var(--w-regular); color:var(--subtitle); }
 .grid-wrap .result-area .result ul { margin-top:0; max-width:326px; }
 .grid-wrap .result-area .result ul li { line-height:1.5; }
 .grid-wrap .result-area .result ul li .blue,
-.grid-wrap .result-area .result ul li .red { font-weight:var(--w-bold); }
+.grid-wrap .result-area .result ul li .red,
+.grid-wrap .result-area .result ul li .blue-p { font-weight:var(--w-bold); }
 .grid-wrap.list-card-wrap .list-card-group + .list-card-group { margin-top:0; }
 
 /* 완료 */
 .grid-wrap .result-area.success::before { background:url(../../images/success.png)no-repeat 50%/58px auto; }
 /* 실패 */
 .grid-wrap .result-area.fail::before { background:url(../../images/fail.png)no-repeat 50%/58px auto; }
+/* 동일 */
+.grid-wrap .result-area.same::before { background:url(../../images/same.png)no-repeat 50%/58px auto; }
 
 /*---------------------------------------------
 	상환스케줄 list

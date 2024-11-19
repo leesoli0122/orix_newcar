@@ -466,7 +466,9 @@ button.btn.btn-top:focus { border:1px solid var(--secondary); background:url("..
 ul.text-after { margin:16px auto 0; max-width:410px; width:100%; text-align:right; }
 ul.text-after.style4 { margin:16px auto 0; max-width:788px; width:100%; text-align:right; }
 ul.text-after li { display:inline-block; }
-ul.text-after li:first-child::after { content:""; display:inline-block; margin:0 16px; width:1px; height:14px; font-size:0; background:var(--border1); vertical-align:bottom; }
+ul.text-after li:only-of-type::after,
+ul.text-after li:last-of-type::after { content:none; }
+ul.text-after li::after { content:""; display:inline-block; margin:0 16px; width:1px; height:14px; font-size:0; background:var(--border1); vertical-align:bottom; }
 ul.text-after li a { font-size:var(--font14); font-weight:var(--w-regular); color:var(--title); }
 
 /*********************************************************************

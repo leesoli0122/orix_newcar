@@ -222,7 +222,7 @@ function messagePopup(id) {
 
 				setTimeout(function () {
 					$('html, body').animate({
-						scrollTop: $this.offset().top
+						scrollTop: $this.offset().top - 300
 					}, 500);
 				}, 0);
 

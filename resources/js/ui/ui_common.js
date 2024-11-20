@@ -422,7 +422,7 @@ $(document).ready(function() {
 						$deleteButton.on('click', function() {
 							$(this).closest('li').remove();
 						});
-
+						// S:개발 현행화
 						var fileNm = $('.attachmentFile')[0].files[0].name; // 파일명
 						var fileNa = $('.delete-file').closet('li').text().replaceAll('삭제', '');
 						var gijun = $('.delete-file').parent('li').text();
@@ -446,6 +446,7 @@ $(document).ready(function() {
 							messageView("동일파일 업로드 불가합니다.");
 							return;
 						}
+						// E:개발 현행화
 					}
 				});
 	
@@ -455,7 +456,7 @@ $(document).ready(function() {
 	}
 	setupFileInputHandlers();
 
-	// 개발 - 현황조회 파일 업로드 추가 (이미지 파일 -  .nwcFile)
+	// 개발현행화 - 현황조회 파일 업로드 추가 (이미지 파일 -  .nwcFile)
 	function setupFileInputHandlersNwc() {
 		const maxFiles = 5;// 최대 파일 개수
 		const maxFileSize = 300 * 1024 * 1024; // 300MB 제한
@@ -521,7 +522,6 @@ $(document).ready(function() {
 	function btnSelectHandlers() {
 		// 항목 선택
 		function updateSelection(container, button, link) {
-
 			if ($(container).hasClass('disabled')) return;
 
 			// 항목을 선택
@@ -675,7 +675,7 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Input_Delete Button
 	---------------------------------------------*/
-
+	//개발-> 검색 INPUT : 삭제 버튼 고정으로 변경 (스크립트 미사용)
 	function delEvent() {
 		$('.form-wrap .form-group').each(function(idx, obj) {
 			var formGroup = $(obj);

@@ -675,7 +675,7 @@ $(document).ready(function() {
 	/*---------------------------------------------
 		Input_Delete Button
 	---------------------------------------------*/
-	//개발-> 검색 INPUT : 삭제 버튼 고정으로 변경
+	//개발-> 검색 INPUT : 삭제 버튼 고정으로 변경 (스크립트 미사용)
 	function delEvent() {
 		$('.form-wrap .form-group').each(function(idx, obj) {
 			var formGroup = $(obj);

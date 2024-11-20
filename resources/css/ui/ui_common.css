@@ -857,7 +857,7 @@ tab #탭
 .result-area.nodata { margin-top:20px; text-align:center; border:1px solid var(--border1); background:var(--white); }
 .result-area.nodata::before { position:initial; transform: unset; margin-bottom:32px; width:80px; height:80px; background:url(../../images/nodata.png)no-repeat 50%/80px auto; }
 /* 차량을 먼저 선택해 주세요 */
-.grid-list-wrap.style3 .result-area.nodata.frist-car { border:none; border-bottom:1px solid var(--border2); border-radius:0; }
+.grid-list-wrap.style3 .result-area.nodata.frist-car { border:none; border-radius:0; }
 /* 완료 */
 .result-area.success::before { background:url(../../images/success.png)no-repeat 50%/64px auto; }
 /* 실패 */

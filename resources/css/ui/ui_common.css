@@ -1651,8 +1651,9 @@ animation:l4 1s infinite steps(10);}
 *********************************************************************/
 /* 견적,상담심사,발주배정,약정펀딩,인도 */
 .perf-data { display:flex; flex-wrap:wrap; align-items: center; gap:20px; margin:20px 0 40px; padding-top:20px; }
-.perf-data li { display:inline-block; padding:29px 20px; min-width:120px; border:1px solid var(--border2); outline:1px solid transparent; border-radius:6px; font-size:var(--font18); color:var(--normal); text-align: center; background:var(--white); }
+.perf-data li { display:inline-block; min-width:120px; border:1px solid var(--border2); outline:1px solid transparent; border-radius:6px; font-size:var(--font18); color:var(--normal); text-align: center; background:var(--white); }
 .perf-data li:hover { border:1px solid var(--background3); outline:1px solid var(--background3); font-weight:var(--w-bold); color:var(--title); background:var(--white); }
+.perf-data li a { display:inline-block; padding:29px 20px; width:100%; height:100%; }
 .perf-data li a:focus-visible { outline:1px solid var(--secondary); }
 .perf-data li:hover span { color:var(--secondary); }
 

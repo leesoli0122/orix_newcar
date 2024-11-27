@@ -432,7 +432,7 @@ Media Query
     mainSec-myTodoList Default
 ---------------------------------------------*/
 .mainSec-myTodoList { margin-top:100px; }
-.mainSec-myTodoList>div{ display:flex; gap:68px; }
+.mainSec-myTodoList.style3>div{ display:flex; gap:40px; }
 /*---------------------------------------------
     mainSec-myTodoList Contents
 ---------------------------------------------*/

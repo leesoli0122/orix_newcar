@@ -1573,10 +1573,10 @@ ul.btnSelect li button:focus-visible { outline: 1px solid var(--secondary); }
 .swiper-container::after  { right:-30px; }
 
 /*---------------------------------------------
-	조건부 업종 선택(팝업 안에 라디오)
+	조건부 업종 선택
 ---------------------------------------------*/
-.layerpopup .form-group.radio .radio-box.column { padding:0 0 10px 10px; }
-.layerpopup .form-group.radio .radio-box.column label { display:inline-block; min-width:300px; width:100%; }
+.business.bul-dot { padding:0 0 10px 10px; }
+.business.bul-dot li { line-height:1.5; }
 
 
 /*---------------------------------------------

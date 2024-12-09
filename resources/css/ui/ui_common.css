@@ -1383,6 +1383,7 @@ dd.download-wrap { padding:0; background:transparent; }
 ---------------------------------------------*/
 .calctemp.table-type { margin-top:20px; }
 .calctemp.table-type.table-col th { padding:15px 0; color:var(--title); }
+.calctemp.table-type.table-col td { text-align:right; }
 /*********************************************************************
 견적서
 *********************************************************************/

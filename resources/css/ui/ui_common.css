@@ -1239,7 +1239,7 @@ dd.download-wrap { padding:0; background:transparent; }
 	grid-list-body 리스트 바디
 	style2 = 팝업창이 열리지 않는(안 열리는것들은 pop 빼야함)
 ---------------------------------------------*/
-.grid-list-body { max-height:455px; height:100%; border-left:1px solid var(--border1); border-right:1px solid var(--border1); border-bottom:1px solid var(--border1); background-color:var(--white); font-size:0; }
+.grid-list-body { max-height:503px; height:100%; border-left:1px solid var(--border1); border-right:1px solid var(--border1); border-bottom:1px solid var(--border1); background-color:var(--white); font-size:0; }
 .grid-list-body > ul > li { display:flex; align-items:center; padding:20px 0; border-bottom:1px solid var(--border3); }
 .grid-list-body li:last-child { border-bottom:none; }
 .grid-list-body li:hover { background:var(--background4); }
@@ -1269,7 +1269,9 @@ section.grid-wrap:first-child .grid-list-wrap .grid-list-body { max-height:422px
 .grid-list-wrap.no .grid-list-body.style2 { max-height:unset; }
 
 /* 공채/부대비용 선택 */
-.grid-list-body.style2 .form-group.radio .radio-box + .charge { margin-top:20px; }
+.grid-list-body.style2 .form-group.radio .radio-box + .charge,
+.grid-list-body.style2 .form-group.radio .radio-box + .col-1 { margin-top:20px; }
+
 /* arr가 생기는 선택 */
 .grid-list-body li .pop.arr::after { content:""; position:absolute; top:50%; transform:translateY(-50%); right:20px; display:inline-block; width:20px; height:20px; background:url(../../images/ic_est_arr.png)no-repeat 50%/20px auto; cursor:pointer; }
 

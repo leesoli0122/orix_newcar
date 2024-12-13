@@ -1270,7 +1270,7 @@ section.grid-wrap:first-child .grid-list-wrap .grid-list-body { max-height:422px
 
 /* 공채/부대비용 선택 */
 .grid-list-body.style2 .form-group.radio .radio-box + .charge,
-.grid-list-body.style2 .form-group.radio .radio-box + .col-1 { margin-top:20px; }
+.grid-list-body.style2 .form-group.radio .radio-box + .col-1 { margin-top:20px; }/*20241213 .col-1 추가*/
 
 /* arr가 생기는 선택 */
 .grid-list-body li .pop.arr::after { content:""; position:absolute; top:50%; transform:translateY(-50%); right:20px; display:inline-block; width:20px; height:20px; background:url(../../images/ic_est_arr.png)no-repeat 50%/20px auto; cursor:pointer; }

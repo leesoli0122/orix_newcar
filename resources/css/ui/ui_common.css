@@ -480,6 +480,7 @@ TOGGLE_ACCORDION #토글_아코디언
 /*---------------------------------------------
 	Toggle_Accordion Default [QnA]
 ---------------------------------------------*/
+.accordion-wrap + .accordion-wrap { margin-top:20px; }
 .accordion-wrap > .accordion-info:first-child { margin-top:0; }
 .accordion-wrap > .accordion-info { margin-top:20px; border:1px solid #DDDDDD; border-radius: 20px; overflow: hidden;}
 .accordion-wrap > .accordion-info > .ques { position:relative; display:flex; width:100%; justify-content:space-between; align-items:center; padding:30px 74px 30px 30px;  font-size: var(--font18); font-weight:var(--w-bold); color:var(--title);  }
@@ -574,7 +575,7 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap > .accordion-info > .ques-cont .estimate-view>ul>li>div>p:last-child { text-align: right; flex:0 0 210px; }
 
 .accordion-wrap > .accordion-info > a:focus-visible { border: 1px solid var(--secondary); }
-.accordion-wrap > .accordion-info > .ques .right .btn button:focus { outline: 1px solid var(--secondary); }
+.accordion-wrap > .accordion-info > .ques .right .btn button:focus-visible { outline: 1px solid var(--secondary); }
 /*---------------------------------------------
 	Toggle_Accordion  [QnA] 아이콘있을 경우
 ---------------------------------------------*/
@@ -1224,8 +1225,8 @@ dd.download-wrap { padding:0; background:transparent; }
 	.grid-list-wrap.style2 = 보험선택, 탁송정보 선택, 용품/수수료/CM 선택
 	.grid-list-wrap.style3 = 계약조건1,2,3
 *********************************************************************/
-.grid-list-wrap { max-height:558px; height:100%; }
-.grid-list-wrap.no { max-height:unset; }
+/* .grid-list-wrap { max-height:558px; height:100%; }
+.grid-list-wrap.no { max-height:unset; } 20241213 대구구분 추가하면서 화면 깨짐 */
 /*---------------------------------------------
 	grid-list-header 리스트 헤더
 ---------------------------------------------*/
@@ -1238,7 +1239,7 @@ dd.download-wrap { padding:0; background:transparent; }
 	grid-list-body 리스트 바디
 	style2 = 팝업창이 열리지 않는(안 열리는것들은 pop 빼야함)
 ---------------------------------------------*/
-.grid-list-body { max-height:426px; height:100%; border-left:1px solid var(--border1); border-right:1px solid var(--border1); border-bottom:1px solid var(--border1); background-color:var(--white); font-size:0; }
+.grid-list-body { max-height:455px; height:100%; border-left:1px solid var(--border1); border-right:1px solid var(--border1); border-bottom:1px solid var(--border1); background-color:var(--white); font-size:0; }
 .grid-list-body > ul > li { display:flex; align-items:center; padding:20px 0; border-bottom:1px solid var(--border3); }
 .grid-list-body li:last-child { border-bottom:none; }
 .grid-list-body li:hover { background:var(--background4); }
@@ -1253,6 +1254,9 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-wrap .grid-list-body > ul >  li.num { justify-content:space-between; padding-right:20px; }
 .grid-list-body .change-txt { padding:0 24px; width:100%; font-size:var(--font16); font-weight:var(--w-regular); color:var(--normal); }
 .grid-list-wrap .grid-list-body .change-txt.num { color:var(--title); text-align:right; }
+
+/* 20241213 차량선택 */
+section.grid-wrap:first-child .grid-list-wrap .grid-list-body { max-height:422px; }
 
 /* 출고 선택 */
 .grid-list-body.style2 { height:fit-content; margin-bottom:20px; }

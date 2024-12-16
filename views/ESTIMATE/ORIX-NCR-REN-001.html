@@ -14,23 +14,24 @@
 
     <title>렌터카 견적내기 < 견적내기</title>
 
-    <link href="../../resources/css/lib/default.css" rel="stylesheet" type="text/css" />
-    <link href="../../resources/css/lib/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
-    <link href="../../resources/css/ui/ui_common.css" rel="stylesheet" type="text/css" />
-    <link href="../../resources/css/lib/img.css" rel="stylesheet" type="text/css" />
-    <link href="../../resources/css/ui/media-query.css" rel="stylesheet" type="text/css" />
+            <link href="../../resources/css/lib/default.css" rel="stylesheet" type="text/css" />
+            <link href="../../resources/css/lib/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+            <link href="../../resources/css/ui/ui_common.css" rel="stylesheet" type="text/css" />
+            <link href="../../resources/css/lib/img.css" rel="stylesheet" type="text/css" />
+            <link href="../../resources/css/ui/media-query.css" rel="stylesheet" type="text/css" />
 
-    <script type="text/javascript" src="../../resources/js/lib/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="../../resources/js/lib/jquery-ui-1.12.1.js"></script>
-    <script type="text/javascript" src="../../resources/js/ui/ui_common.js"></script>
-    <script type="text/javascript" src="../../resources/js/ui/ui_plugin.js"></script>
-    <script type="text/javascript" src="../../resources/js/ui/default.js"></script>
+            <script type="text/javascript" src="../../resources/js/lib/jquery-1.9.1.min.js"></script>
+            <script type="text/javascript" src="../../resources/js/lib/jquery-ui-1.12.1.js"></script>
+            <script type="text/javascript" src="../../resources/js/ui/ui_common.js"></script>
+            <script type="text/javascript" src="../../resources/js/ui/ui_plugin.js"></script>
+            <script type="text/javascript" src="../../resources/js/ui/default.js"></script>
 </head>
+
 <body>
     <!-- S: skipnavi -->
     <div id="skipnavi">
         <script>
-            $(document).ready(function(){
+            $(document).ready(function () {
                 $("#skipnavi").load("../INCLUDE/inc_skipnavi.html");
             });
         </script>
@@ -40,13 +41,13 @@
         <!-- s:header -->
         <div id="headerWrap">
             <script>
-                $(document).ready(function(){
+                $(document).ready(function () {
                     $("#headerWrap").load("../INCLUDE/inc_header.html");
                 });
             </script>
         </div>
         <!-- //e:header -->
-         <!-- s:contentWrap -->
+        <!-- s:contentWrap -->
         <div id="contentWrap" class="sub-content">
             <!-- s:subvisual-wrap -->
             <div class="subvisual-wrap">
@@ -101,7 +102,8 @@
                                         <span class="tit">내장 색상</span>
                                         <div class="form-group">
                                             <div class="col-1">
-                                                <input id="" type="amount" title="내장 색상" class="form-control" placeholder="직접 입력">
+                                                <input id="" type="amount" title="내장 색상" class="form-control"
+                                                    placeholder="직접 입력">
                                             </div>
                                         </div>
                                     </li>
@@ -180,7 +182,8 @@
                                                 </label>
                                                 <span class="txt"><span class="num">000,000</span>원</span>
                                             </div>
-                                            <p class="description">Full LED 헤드램프(프로젝션 타입), 방향지시등(앞), LED 리어 콤비램프, LED 보조제등 등</p>
+                                            <p class="description">Full LED 헤드램프(프로젝션 타입), 방향지시등(앞), LED 리어 콤비램프, LED
+                                                보조제등 등</p>
                                         </li>
                                         <li>
                                             <div class="check-top">
@@ -225,7 +228,8 @@
                                             <span class="tit">옵션명</span>
                                             <div class="form-group">
                                                 <div class="col-1">
-                                                    <input id="" title="옵션명" type="text" name="" class="form-control" placeholder="직접 입력">
+                                                    <input id="" title="옵션명" type="text" name="" class="form-control"
+                                                        placeholder="직접 입력">
                                                 </div>
                                             </div>
                                         </li>
@@ -233,7 +237,8 @@
                                             <span class="tit">금액</span>
                                             <div class="form-group">
                                                 <div class="col-1">
-                                                    <input id="" type="amount" title="금액" class="form-control amount-num" placeholder="금액입력"
+                                                    <input id="" type="amount" title="금액"
+                                                        class="form-control amount-num" placeholder="금액입력"
                                                         inputmode="numeric">
                                                     <span class="amount-txt">원</span>
                                                 </div>
@@ -285,8 +290,8 @@
                                         <span class="tit">제조사 탁송료</span>
                                         <div class="form-group">
                                             <div class="col-1">
-                                                <input id="" type="amount" title="제조사 탁송료" class="form-control amount-num" placeholder="0"
-                                                    inputmode="numeric">
+                                                <input id="" type="amount" title="제조사 탁송료"
+                                                    class="form-control amount-num" placeholder="0" inputmode="numeric">
                                                 <span class="amount-txt">원</span>
                                             </div>
                                         </div>
@@ -329,7 +334,7 @@
                                     <!--E: 수입차일 경우 -->
                                 </ul>
                             </div>
-                            
+
                             <div>
                                 <!--S: 대리점 출고시 노출  -->
                                 <!-- <ul class="all-cost-area">
@@ -441,7 +446,8 @@
                         <!-- 탁송정보 선택 -->
                         <div class="grid-list-wrap style2">
                             <p class="grid-list-header">탁송정보 선택</p>
-                            <div class="grid-list-body style2">
+                            <!--S: 20241216 수정 -->
+                            <div class="grid-list-body option style2">
                                 <ul>
                                     <li>
                                         <span class="tit">탁송방법</span>
@@ -449,7 +455,8 @@
                                             <div class="select-box">
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
-                                                        <option value="" disabled="" selected="" hidden="">탁송방법 선택</option>
+                                                        <option value="" disabled="" selected="" hidden="">탁송방법 선택
+                                                        </option>
                                                         <option value="0">외주탁송(1차+2차)</option>
                                                         <option value="1">제조사+외주 2차</option>
                                                         <option value="2">제조사탁송</option><!-- [D]:특판출고 시 제조사탁송 불가처리 -->
@@ -470,7 +477,8 @@
                                             <div class="select-box">
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
-                                                        <option value="" disabled="" selected="" hidden="">도착지 선택</option><!-- [D] : default - 셀렉트의 placeholder 기능-->
+                                                        <option value="" disabled="" selected="" hidden="">도착지 선택
+                                                        </option><!-- [D] : default - 셀렉트의 placeholder 기능-->
                                                         <option value="0">서울</option>
                                                         <option value="1">경기 남부</option>
                                                         <option value="2">경기 북부</option>
@@ -496,8 +504,79 @@
                                         <div class="change-txt num"><span>0</span>원</div>
                                     </li>
                                     <!--E :대리점 출고인 경우-제조사 탁송일 때 숨김처리 -->
+                                    <li>
+                                        <span class="tit">등록업체</span>
+                                        <div class="consignment">
+                                            <div class="form-group">
+                                                <div class="select-box">
+                                                    <div class="se-select ei-w160" data-stove="select">
+                                                        <select class="" title="메뉴구분">
+                                                            <option value="" disabled="" selected="" hidden="">등록업체체 선택
+                                                            </option>
+                                                            <option value="0">옵션1</option>
+                                                            <option value="1">옵션2</option>
+                                                            <option value="2">옵션3</option>
+                                                        </select>
+                                                        <div class="e-select-dim"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="num">
+                                                <span>0</span> 원
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="tit">배송방법</span>
+                                        <div class="consignment">
+                                            <div class="form-group">
+                                                <div class="select-box">
+                                                    <div class="se-select ei-w160" data-stove="select">
+                                                        <select class="" title="메뉴구분">
+                                                            <option value="" disabled="" selected="" hidden="">배송방법 선택
+                                                            </option>
+                                                            <option value="0">옵션1</option>
+                                                            <option value="1">옵션2</option>
+                                                            <option value="2">옵션3</option>
+                                                        </select>
+                                                        <div class="e-select-dim"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="num">
+                                                <span>0</span> 원
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="tit">번호판선택</span>
+                                        <div class="consignment">
+                                            <div class="form-group">
+                                                <div class="select-box">
+                                                    <div class="se-select ei-w160" data-stove="select">
+                                                        <select class="" title="메뉴구분">
+                                                            <option value="" disabled="" selected="" hidden="">번호판 선택
+                                                            </option>
+                                                            <option value="0">옵션1</option>
+                                                            <option value="1">옵션2</option>
+                                                            <option value="2">옵션3</option>
+                                                        </select>
+                                                        <div class="e-select-dim"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="num">
+                                                <span>0</span> 원
+                                            </p>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
+                            <div class="grid-list-footer style2">
+                                <p class="tit">등록 비용합계</p>
+                                <span class="txt"><span>0</span>원</span>
+                            </div>
+                            <!--E: 20241216 수정 -->
                         </div>
                         <!-- 용품/수수료/CM 선택 -->
                         <div class="grid-list-wrap style2">
@@ -521,7 +600,8 @@
                                                 <div class="charge">
                                                     <span class="tit">CM</span>
                                                     <div class="col-2">
-                                                        <input id="" type="amount" class="form-control amount-num" placeholder="금액"
+                                                        <input id="" type="amount" class="form-control amount-num"
+                                                            placeholder="금액"
                                                             inputmode="numeric"><!-- [D] inputmode="numeric" : 세자리 수마다 콤마 적용  -->
                                                         <span class="amount-txt">%</span>
                                                     </div>
@@ -530,7 +610,8 @@
                                                 <div class="charge">
                                                     <span class="tit">AG</span>
                                                     <div class="col-2">
-                                                        <input id="" type="amount" class="form-control amount-num" placeholder="금액"
+                                                        <input id="" type="amount" class="form-control amount-num"
+                                                            placeholder="금액"
                                                             inputmode="numeric"><!-- [D] inputmode="numeric" : 세자리 수마다 콤마 적용  -->
                                                         <span class="amount-txt">%</span>
                                                     </div>
@@ -571,9 +652,11 @@
                                             <div class="select-box">
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
-                                                        <option value="" disabled="" selected="" hidden="">개인인수형(국산차-정비제외)</option>
+                                                        <option value="" disabled="" selected="" hidden="">
+                                                            개인인수형(국산차-정비제외)</option>
                                                         <option value="0">개인인수형</option>
-                                                        <option value="1">개인인수형(국산차-정비제외)</option><!--[D]: 국산차 일 때만 노출 -->
+                                                        <option value="1">개인인수형(국산차-정비제외)</option>
+                                                        <!--[D]: 국산차 일 때만 노출 -->
                                                         <!--<option value="2">만기인수형(수입차-소비자가)</option>--><!--[D]: 수입차 일 때만 노출 -->
                                                     </select>
                                                     <div class="e-select-dim"></div>
@@ -605,7 +688,8 @@
                                             <div class="select-box">
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
-                                                        <option value="" disabled="" selected="" hidden="">2만 Km</option>
+                                                        <option value="" disabled="" selected="" hidden="">2만 Km
+                                                        </option>
                                                         <option value="0">1만 Km</option>
                                                         <option value="1">1.5만 Km</option><!--[D]: 국산차 일때만 노출 -->
                                                         <option value="2">2만 Km</option>
@@ -638,7 +722,8 @@
                                                     <div class="select-box">
                                                         <div class="se-select" data-stove="select">
                                                             <select class="" title="메뉴구분">
-                                                                <option value="" disabled="" selected="" hidden="">64%</option>
+                                                                <option value="" disabled="" selected="" hidden="">64%
+                                                                </option>
                                                                 <option value="0">64%</option>
                                                                 <option value="1">63%</option>
                                                                 <option value="2">62%</option>
@@ -691,7 +776,8 @@
                                             <div class="select-box">
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분" disabled>
-                                                        <option value="" disabled="" selected="" hidden="">정비(미포함)</option>
+                                                        <option value="" disabled="" selected="" hidden="">정비(미포함)
+                                                        </option>
                                                         <option value="0">정비(미포함)</option>
                                                         <option value="1">오릭스 정비 Premium</option>
                                                     </select>
@@ -754,7 +840,8 @@
                                                     <select class="" title="메뉴구분">
                                                         <option value="" disabled="" selected="" hidden="">개인인수형</option>
                                                         <option value="0">개인인수형</option>
-                                                        <option value="1">개인인수형(국산차-정비제외)</option><!--[D]: 국산차 일 때만 노출 -->
+                                                        <option value="1">개인인수형(국산차-정비제외)</option>
+                                                        <!--[D]: 국산차 일 때만 노출 -->
                                                         <!--<option value="2">만기인수형(수입차-소비자가)</option>--><!--[D]: 수입차 일 때만 노출 -->
                                                     </select>
                                                     <div class="e-select-dim"></div>
@@ -786,7 +873,8 @@
                                             <div class="select-box">
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
-                                                        <option value="" disabled="" selected="" hidden="">2만 Km</option>
+                                                        <option value="" disabled="" selected="" hidden="">2만 Km
+                                                        </option>
                                                         <option value="0">1만 Km</option>
                                                         <option value="1">1.5만 Km</option><!--[D]: 국산차 일때만 노출 -->
                                                         <option value="2">2만 Km</option>
@@ -819,7 +907,8 @@
                                                     <div class="select-box">
                                                         <div class="se-select" data-stove="select">
                                                             <select class="" title="메뉴구분">
-                                                                <option value="" disabled="" selected="" hidden="">57%</option>
+                                                                <option value="" disabled="" selected="" hidden="">57%
+                                                                </option>
                                                                 <option value="0">64%</option>
                                                                 <option value="1">63%</option>
                                                                 <option value="2">62%</option>
@@ -872,7 +961,8 @@
                                             <div class="select-box">
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
-                                                        <option value="" disabled="" selected="" hidden="">오릭스 정비 Premium</option>
+                                                        <option value="" disabled="" selected="" hidden="">오릭스 정비
+                                                            Premium</option>
                                                         <option value="0">정비(미포함)</option>
                                                         <option value="1">오릭스 정비 Premium</option>
                                                     </select>
@@ -910,6 +1000,61 @@
                                 <!-- <span class="num">463,344</span> -->
                                 <button type="button" name="button" class="btn btn-input active">계산중…</button>
                             </div>
+                            <div class="table-type table-col ta-c calctemp">
+                                <table>
+                                    <caption>계약조건에 대한 렌트기간, 만기처리, 약정거리, 정비상품, 선납금, 보증금, 만기 인수가격 테이블</caption>
+                                    <colgroup>
+                                        <col width="40%">
+                                        <col width="*">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="col">면세율</th>
+                                            <td>1.15863</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">취득세</th>
+                                            <td>432,730</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">등록비용합계</th>
+                                            <td>432,730</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">공급가격</th>
+                                            <td>45,818,380</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">부가가치세</th>
+                                            <td>4,581,840</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">면세가액</th>
+                                            <td>50,400,22</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">취득원가</th>
+                                            <td>46,716,750</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">부대비용 기본가격</th>
+                                            <td>106,200</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">코일매트</th>
+                                            <td>33,000</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">제비용합계</th>
+                                            <td>512,200</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">썬팅/기타비용</th>
+                                            <td>479,200</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                         <!-- case3 수입차/만기인수형(수입차, 소비자가) -->
                         <div class="grid-list-wrap style3">
@@ -933,10 +1078,12 @@
                                             <div class="select-box">
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
-                                                        <option value="" disabled="" selected="" hidden="">만기인수형(수입차-소비자가)</option>
+                                                        <option value="" disabled="" selected="" hidden="">
+                                                            만기인수형(수입차-소비자가)</option>
                                                         <option value="0">개인인수형</option>
                                                         <!--<option value="1">개인인수형(국산차-정비제외)</option>--><!--[D]: 국산차 일 때만 노출 -->
-                                                        <option value="2">만기인수형(수입차-소비자가)</option><!--[D]: 수입차 일 때만 노출 -->
+                                                        <option value="2">만기인수형(수입차-소비자가)</option>
+                                                        <!--[D]: 수입차 일 때만 노출 -->
                                                     </select>
                                                     <div class="e-select-dim"></div>
                                                 </div>
@@ -967,7 +1114,8 @@
                                             <div class="select-box">
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
-                                                        <option value="" disabled="" selected="" hidden="">2만 Km</option>
+                                                        <option value="" disabled="" selected="" hidden="">2만 Km
+                                                        </option>
                                                         <option value="0">1만 Km</option>
                                                         <option value="1">1.5만 Km</option><!--[D]: 국산차 일때만 노출 -->
                                                         <option value="2">2만 Km</option>
@@ -1000,7 +1148,8 @@
                                                     <div class="select-box">
                                                         <div class="se-select" data-stove="select">
                                                             <select class="" title="메뉴구분">
-                                                                <option value="" disabled="" selected="" hidden="">49%</option>
+                                                                <option value="" disabled="" selected="" hidden="">49%
+                                                                </option>
                                                                 <option value="0">64%</option>
                                                                 <option value="1">63%</option>
                                                                 <option value="2">62%</option>
@@ -1053,7 +1202,8 @@
                                             <div class="select-box">
                                                 <div class="se-select ei-w160" data-stove="select">
                                                     <select class="" title="메뉴구분">
-                                                        <option value="" disabled="" selected="" hidden="">정비(미포함)</option>
+                                                        <option value="" disabled="" selected="" hidden="">정비(미포함)
+                                                        </option>
                                                         <option value="0">정비(미포함)</option>
                                                         <option value="1">오릭스 정비 Premium</option>
                                                     </select>
@@ -1162,7 +1312,8 @@
                                 <div class="estimate-body">
                                     <div class="specifications-wrap">
                                         <div class="car-img">
-                                            <img src="../../resources/images/car/hd_d_a_n_g.png" alt="현대 2025년형 디 올 뉴 그랜저 이미지">
+                                            <img src="../../resources/images/car/hd_d_a_n_g.png"
+                                                alt="현대 2025년형 디 올 뉴 그랜저 이미지">
                                             <p class="tit">현대 2025년형 디 올 뉴 그랜저</p>
                                             <span class="txt">가솔린 터보 1.6 하이브리드 익스클루시브</span>
                                         </div>
@@ -1171,7 +1322,8 @@
                                                 <div class="car-info-color">
                                                     <p class="title">색상</p>
                                                     <ul>
-                                                        <li>외장 <span class="txt">큐레이티드 실버 메탈릭 <span class="num">+ <span>000,000</span>원</span></span></li>
+                                                        <li>외장 <span class="txt">큐레이티드 실버 메탈릭 <span class="num">+
+                                                                    <span>000,000</span>원</span></span></li>
                                                         <li>내장 <span class="txt">다크 그레이/라이트 그레이 투톤</span></li>
                                                     </ul>
                                                 </div>
@@ -1207,7 +1359,8 @@
                                     <div class="table-wrap">
                                         <div class="table-type table-col ta-c">
                                             <table>
-                                                <caption>계약조건에 대한 렌트기간, 만기처리, 약정거리, 정비상품, 선납금, 보증금, 만기 인수가격 테이블</caption>
+                                                <caption>계약조건에 대한 렌트기간, 만기처리, 약정거리, 정비상품, 선납금, 보증금, 만기 인수가격 테이블
+                                                </caption>
                                                 <colgroup>
                                                     <col width="19%">
                                                     <col width="27%">
@@ -1371,7 +1524,8 @@
                                     <div class="table-wrap">
                                         <div class="table-type table-col">
                                             <table>
-                                                <caption>보험 조건에 대한 고객구분, 운전연령, 의무가입에 대한 테이블</caption><!-- [20241030] caption 수정 -->
+                                                <caption>보험 조건에 대한 고객구분, 운전연령, 의무가입에 대한 테이블</caption>
+                                                <!-- [20241030] caption 수정 -->
                                                 <colgroup>
                                                     <col width="20%">
                                                     <col width="*">
@@ -1393,7 +1547,9 @@
                                                         <th scope="col">의무가입</th>
                                                         <td>무보험차상해, 긴급출동</td>
                                                         <th>필수가입</th>
-                                                        <td>대물 : <span>1억</span>, 자손 : <span>1억</span>, 면책금 : <span>30만원</span></td>
+                                                        <td>대물 : <span>1억</span>, 자손 : <span>1억</span>, 면책금 :
+                                                            <span>30만원</span>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -1405,7 +1561,9 @@
                                     <div class="table-wrap">
                                         <div class="table-type ta-c repair style2 mb0">
                                             <table>
-                                                <caption>정비상품(정비-순회정비, 입고정비/소모품 교환-타이어,소모품/고장 및 사고-일반수리, 대차/door to door 서비스-정비, 자도차검사),오릭스 정비 Premium에 대한 정비상품 안내표</caption><!-- 2024.10.21 caption 수정 -->
+                                                <caption>정비상품(정비-순회정비, 입고정비/소모품 교환-타이어,소모품/고장 및 사고-일반수리, 대차/door to door
+                                                    서비스-정비, 자도차검사),오릭스 정비 Premium에 대한 정비상품 안내표</caption>
+                                                <!-- 2024.10.21 caption 수정 -->
                                                 <colgroup>
                                                     <col width="*%">
                                                     <col width="10%">
@@ -1466,24 +1624,29 @@
                                                 <tbody>
                                                     <tr>
                                                         <th scope="col">개인/개인사업자</th>
-                                                        <td>사업자등록증, 부가세 과세표준 증명원, 자격증(전문직 한정)</br>재산세과세증명서, 통장(사업자 추가서류), 운전면허증 사본(발급일 1년 경과)</td>
+                                                        <td>사업자등록증, 부가세 과세표준 증명원, 자격증(전문직 한정)</br>재산세과세증명서, 통장(사업자
+                                                            추가서류), 운전면허증 사본(발급일 1년 경과)</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="col">법인사업자</th>
-                                                        <td>법인 : 사업자등록증, 최근연도 재무제표/부가세 과세표준 증명원, 법인인감증명서, 법인등기부등본, 주주명부, 통장</br>대표자 : 인감증명서, 재산세과세증명서, 신분증</td>
+                                                        <td>법인 : 사업자등록증, 최근연도 재무제표/부가세 과세표준 증명원, 법인인감증명서, 법인등기부등본, 주주명부,
+                                                            통장</br>대표자 : 인감증명서, 재산세과세증명서, 신분증</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
-                                    <p class="notice-word">※ (개인/법인)인감증명서, 주민등록등본, 법인등기부등본은 계약체결시점 1개월 이내 발급분만 인정합니다.</p>
+                                    <p class="notice-word">※ (개인/법인)인감증명서, 주민등록등본, 법인등기부등본은 계약체결시점 1개월 이내 발급분만 인정합니다.
+                                    </p>
                                 </div>
                                 <div class="check-plz">
                                     <p class="plz-tit">[꼭 확인하세요!]</p>
                                     <ul class="bul-refer">
                                         <li class="red">상기 견적금액은 유효기간까지 적용 가능하며, 차량가 변동, 정부 시책에 따라 변동될 수 있습니다.</li>
-                                        <li>건설/토목, 보험사/보험대리점/정비업, 방송/엔터테인먼트, 렌터카업/셔틀업 업종은 렌트료가 변동되거나 취급이 제한될 수 있습니다.</li>
-                                        <li>상기 견적에는 보험료, 차량검사비, 세금이 모두 포함되어 있으며 정비상품 선택 시, 차량점검, 소모품 교체비용이 포함될 수 있습니다.</li>
+                                        <li>건설/토목, 보험사/보험대리점/정비업, 방송/엔터테인먼트, 렌터카업/셔틀업 업종은 렌트료가 변동되거나 취급이 제한될 수 있습니다.
+                                        </li>
+                                        <li>상기 견적에는 보험료, 차량검사비, 세금이 모두 포함되어 있으며 정비상품 선택 시, 차량점검, 소모품 교체비용이 포함될 수 있습니다.
+                                        </li>
                                         <li>차량등급별 세부 옵션 사항을 반드시 확인하시기 바라며, 각 차종별 세부옵션사항은 차량 제조사 홈페이지에서 확인 가능합니다.</li>
                                     </ul>
                                 </div>
@@ -1504,7 +1667,7 @@
         <!-- s:footer -->
         <div id="footerWrap">
             <script>
-                $(document).ready(function(){
+                $(document).ready(function () {
                     $("#footerWrap").load("../INCLUDE/inc_footer.html");
                 });
             </script>

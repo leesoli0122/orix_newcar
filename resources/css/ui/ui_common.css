@@ -338,7 +338,7 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 .terms-wrap.level2 input[type="checkbox"] + label { line-height: 24px; padding: 0 10px 0 34px; color:var(--normal); }
 
 /* 약관 포커스 */
-.terms-wrap input[type="checkbox"]:focus{ outline: 1px solid var(--secondary); }
+.terms-wrap input[type="checkbox"]:focus-visible{ outline: 1px solid var(--secondary); }/*20241218*/
 
 /*********************************************************************
 Button #버튼
@@ -454,7 +454,7 @@ button.btn.btn-cancel { content:''; position:absolute; z-index:11; transform: tr
 /** 탑 버튼 **/
 button.btn.btn-top { display:none; transition: opacity 0.3s, bottom 0.s; right:10px; bottom:30px; z-index:100; padding:7px; width:42px; height:42px; border:1px solid var(--border1); border-radius: 50%; background:url("../../images/common/ic_scrollTop_off.png")no-repeat #FFFFFF 50%/28px auto; cursor:pointer;  }
 button.btn.btn-top:hover,
-button.btn.btn-top:focus { border:1px solid var(--secondary); background:url("../../images/common/ic_scrollTop_on.png")no-repeat #FFFFFF  50%/28px auto; }
+button.btn.btn-top:focus-visible { border:1px solid var(--secondary); background:url("../../images/common/ic_scrollTop_on.png")no-repeat #FFFFFF  50%/28px auto; }/*20241218*/
 
 /* 에러 화면 버튼 */
 .btn-wrap.error button.btn { width:338px; }

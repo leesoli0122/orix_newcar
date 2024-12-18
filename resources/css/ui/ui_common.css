@@ -1604,8 +1604,8 @@ ul.btnSelect li button:focus-visible { outline: 1px solid var(--secondary); }
 /*---------------------------------------------
 	조건부 업종 선택
 ---------------------------------------------*/
-.business.bul-dot { padding:0 0 10px 10px; }
-.business.bul-dot li { line-height:1.5; }
+/* .business.bul-dot { padding:0 0 10px 10px; }
+.business.bul-dot li { line-height:1.5; } */
 
 
 /*---------------------------------------------

@@ -241,7 +241,7 @@ input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; hei
 ---------------------------------------------*/
 .charge { display:flex; align-items: center; width:100%; max-width:284px; }
 .charge .col-2 { max-width:107px; }
-.charge .tit { padding-right:12px; font-size:var(--font16); font-weight:bold;}
+.charge .tit { display:inline-block; padding-right:12px; width:39px; font-size:var(--font16); font-weight:bold;}/*20241224*/
 .charge .num { position:absolute; right:0; font-size:var(--font16); }
 .charge .num > span { padding-right:5px; }
 /*---------------------------------------------

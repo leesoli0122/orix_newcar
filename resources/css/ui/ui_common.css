@@ -1110,7 +1110,7 @@ tfoot tr td:last-child { border-right:none; }
 .table-col td:last-child { border-right:none; }
 
 .table-col th { padding:4px 0 5px; border-left:none; font-size:var(--font14); font-weight:var(--w-regular); color:var(--title); text-align:center; background:var(--background2); }
-.table-col td { padding:4px 12px 5px; border-right:1px solid var(--border3); font-size:var(--font14); font-weight:var(--w-regular); }
+.table-col td { padding:4px 12px 5px; border-right:1px solid var(--border3); font-size:var(--font14); font-weight:var(--w-regular); line-height:1.5; }/*20241226*/
 
 /*---------------------------------------------
     테이블 : table-scroll
@@ -1430,8 +1430,8 @@ section.grid-wrap:first-child .grid-list-wrap .grid-list-body { max-height:422px
 ---------------------------------------------*/
 .estimate-body { min-height:1096px; height:100%; }
 /* 차량정보 */
-.specifications-wrap { display:flex; align-items:center; justify-content:space-between; padding:10px 0 10px 20px; background:var(--background2); }
-.specifications-wrap .car-img { max-width:270px; text-align:center; }/*20241209*/
+.specifications-wrap { display:flex; /*align-items:center;*/ justify-content:space-between; padding:10px 0 10px 20px; background:var(--background2); }/*20241226*/
+.specifications-wrap .car-img { display:flex; flex-direction:column; justify-content:space-between; max-width:270px; text-align:center; }/*20241209*/
 .specifications-wrap .car-img .tit { margin-top:10px; margin-bottom:6px; font-size:var(--font16); font-weight:var(--w-bold); line-height:1.3; color:var(--normal); }/*20241209*/
 .specifications-wrap .car-img .txt { font-size:var(--font14); font-weight:var(--w-regular); color:var(--inactive); }
 .specifications-wrap .car-info { padding-top:12px; width:622px; }

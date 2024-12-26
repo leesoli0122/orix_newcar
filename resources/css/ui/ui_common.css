@@ -65,6 +65,14 @@ SELECT #셀렉트
 .select-box > .se-select[data-stove=select] div.stove-option-layer.va-slide.on { bottom: 0px; }
 .select-box > .se-select[data-stove=select] div.stove-option-layer.va-upshow { top: auto; bottom: 100%; }
 
+/*---------------------------------------------
+	Select scroll 20241226
+---------------------------------------------*/
+.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll::-webkit-scrollbar { width:11px; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll::-webkit-scrollbar-thumb { width:11px; background-color:var(--border2); border-radius:2px; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll::-webkit-scrollbar-track { width:14px; background-color:var(--background2); border-radius:5px; }
+.select-box > .se-select[data-stove=select] div.stove-option-layer div.stove-option-scroll::-webkit-scrollbar-button {  height:100%; }
+
 /*********************************************************************
 Datepicker #데이터피커
 *********************************************************************/
@@ -328,14 +336,14 @@ INPUT_ CHECKBOX/RADIO/Toggle  #체크박스 #라디오 #토글
 .terms-wrap .chk-all + .terms-wrap.level2 { margin-top:20px; }
 .terms-wrap.level1 { padding:12px 20px; border-bottom:1px solid var(--border3); }
 .terms-wrap.level1 input { width:24px; height:24px; border:1px solid var(--border1); border-radius: 50%; background:url(../../images/common/ic_check_off.png) no-repeat 50%/12px auto; }
-.terms-wrap.level1 input:checked { border:1px solid var(--secondary); border-radius: 50%; background:url(../../images/common/ic_check_on.png) no-repeat var(--secondary) 50%/12px auto; }
+.terms-wrap.level1 input:checked { border:1px solid var(--secondary); background:url(../../images/common/ic_check_on.png) no-repeat var(--secondary) 50%/12px auto; }/*20241226*/
 .terms-wrap.level1 input + label  { padding-left:34px; color:var(--normal); line-height: 24px; }
 .terms-wrap.level1 input:checked + label > span { font-weight: var(--w-bold); color:var(--titl); }
 
 /* [필수/선택] - 개별체크 */
 .terms-box { padding:20px; }
 .terms-wrap.level2 + .level2 { margin-top:16px; }
-.terms-wrap.level2 .btn.btn.btn-text.small { z-index:1; position:absolute; right:20px; line-height:24px; }
+.terms-wrap.level2 .btn.btn.btn-text.small { z-index:1; position:absolute; right:20px; padding-top:2px; line-height:21px; }/*20241226*/
 
 .terms-wrap.level2 input[type="checkbox"] { width:24px; height:24px; background: url(../../images/common/ic_check_off.png)no-repeat 50%/12px auto; }
 .terms-wrap.level2 input[type="checkbox"]:checked { width:24px; height:24px;  background: url(../../images/common/ic_chk2_on.png)no-repeat 50%/12px auto; }
@@ -796,6 +804,7 @@ tab #탭
 .tabs.type2 .tab-item02 { display:flex; flex-wrap:wrap; align-items: center; gap:20px; margin:20px 0 40px; }
 .tabs.type2 .tab-item02 li { display:inline-block; min-width:120px; border:1px solid var(--border2); border-radius:6px; font-size:var(--font18); color:var(--normal); text-align: center; background:var(--white); }
 .tabs.type2 .tab-item02 li.on { border:2px solid var(--background3); font-weight:var(--w-bold); color:var(--title); background:var(--white); }
+.tabs.type2 .tab-item02 li span { padding-left:5px; }/*20241226*/
 .tabs.type2 .tab-item02 li.on span { color:var(--secondary); }
 .tabs.type2 .tab-item02 li a { display:inline-block; padding:29px 20px; }
 
@@ -1083,7 +1092,7 @@ tfoot tr td:last-child { border-right:none; }
 .table-type > .col { border-top:1px solid var(--border3); border-bottom:1px solid var(--border3); }
 .table-type > div dt { margin:0; padding:20px 0; background:var(--background2); color:var(--normal); font-weight:700; text-align:center; }
 .table-type > div dd { padding:20px; }
-.table-type > div.col dl { display: table; width: 100%; border-bottom: 1px solid var(--border); table-layout: fixed; }
+.table-type > div.col dl { display: table; width: 100%; table-layout: fixed; }/*20241226*/
 .table-type > div.col dl + dl{ border-top:1px solid var(--border3); }
 
 .table-type > div.col dt,

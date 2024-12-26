@@ -1302,7 +1302,8 @@ section.grid-wrap:first-child .grid-list-wrap .grid-list-body { max-height:422px
 .grid-list-wrap.style3 .grid-list-header.on::before { background:url(../../images/ic_star_on.png)no-repeat 50%/24px auto; }
 
 .grid-list-wrap.style3 .grid-list-body { max-height:fit-content; height:auto; overflow:initial; }
-.grid-list-wrap.style3 .grid-list-body .change-txt.delivery { display:flex; justify-content:space-between; }
+.grid-list-wrap.style3 .grid-list-body .change-txt.delivery { display:flex; justify-content:space-between; padding-right:0; }/*20241226*/
+.grid-list-wrap.style3 .grid-list-body .change-txt.delivery > span { display:inline-block; width:117px; text-align:left; }/*20241226*/
 .grid-list-wrap.style3 .grid-list-body .change-txt.delivery > div { font-size:var(--font16); font-weight:var(--w-bold); color:var(--title); }
 .grid-list-wrap.style3 .grid-list-body .change-txt.delivery.num > div span,
 .grid-list-wrap.style3 .grid-list-body .change-txt.delivery2.num > div span { font-size:var(--font16); font-weight:var(--w-bold); color:var(--error); }

@@ -249,7 +249,7 @@ input.form-control.plus-file { position:absolute; left:0; top:0; width:100%; hei
 /*---------------------------------------------
 	Input_원/개월/%_수수료 Text Custom
 ---------------------------------------------*/
-.charge { display:flex; align-items: center; width:100%; max-width:284px; }
+.charge { display:flex; align-items: center; width:100%; width:100%; }/*20241231*/
 .charge .col-2 { max-width:107px; }
 .charge .tit { display:inline-block; padding-right:12px; width:39px; font-size:var(--font16); font-weight:bold;}/*20241224*/
 .charge .num { position:absolute; right:0; font-size:var(--font16); }
@@ -1239,7 +1239,8 @@ dd.download-wrap { padding:0; background:transparent; }
 ---------------------------------------------*/
 .grid-list-body { max-height:503px; height:100%; border-left:1px solid var(--border1); border-right:1px solid var(--border1); border-bottom:1px solid var(--border1); background-color:var(--white); font-size:0; }
 .grid-list-body > ul > li { display:flex; align-items:center; padding:20px 0; border-bottom:1px solid var(--border3); }
-.grid-list-body li:last-child { border-bottom:none; }
+.grid-list-body li:last-child,
+.grid-list-body li#autoTax { border-bottom:none; }/*20241231 #autoTax=오토리스 견적내기*/
 .grid-list-body li:hover { background:var(--background4); }
 .grid-list-body li:hover .pop.arr { font-weight:var(--w-bold); color:var(--secondary); cursor: pointer; }
 .grid-list-body li > .tit { display:inline-block; padding:4px 0; max-width:120px; width:100%; font-size:var(--font16); font-weight:var(--w-bold); color:var(--normal); text-align:center; }

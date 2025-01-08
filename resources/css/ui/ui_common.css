@@ -1097,6 +1097,7 @@ tfoot tr td:last-child { border-right:none; }
 
 .table-type > div.col dt,
 .table-type > div.col dd { width:auto; display:table-cell; }
+.table-type > div.col dd:has(.change-txt.num) { text-align:right; }/*20250108*/
 .table-type > div.col dd.form-group:not(.form-group.style1, .form-group.file) { display:block; }
 .table-type > div.col dt { width:190px; vertical-align:middle; border-right:1px solid var(--border1); font-size:var(--font16); font-weight:var(--w-bold); color:var(--title); line-height:23px; }
 

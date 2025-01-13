@@ -1326,17 +1326,12 @@ section.grid-wrap:first-child .grid-list-wrap .grid-list-body { max-height:422px
 .grid-list-body.option { overflow-y:auto; } /* 20250113 용품 컨텐츠랑 겹쳐서 height:100% 삭제 */
 .grid-list-body.option .form-group.check ul.check-box { display:block; font-size:0; }
 .grid-list-body.option .form-group.check ul.check-box .check-top label { display:inline-block; max-width:200px; line-height:24px; padding-left:10px; }/*20241216*/
-.grid-list-body.option > ul > li,
-.form-group > ul.check-box>li { padding:24px 34px 24px 20px; border-bottom:1px solid var(--border3); }/*20250113*/
+.grid-list-body.option ul li { padding:24px 34px 24px 20px; border-bottom:1px solid var(--border3); }
 .grid-list-body.option ul li:last-child { border-bottom:none; }
 .grid-list-body.option ul li .check-top { display:flex; align-items:center; width:100%; }
 .grid-list-body.option li span.txt { position:absolute; right:0; font-size: var(--font18); font-weight:var(--w-bold); color:var(--subtitle); text-align:right; word-break:break-all; }
 .grid-list-body.option ul li .description { margin:16px 0 0 30px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--subtitle); }
 .grid-list-body.option ul li:has(.description) { display:flex; flex-direction: column; }
-
-/* 20250113 style2 */
-.grid-list-body.option.style2 { margin-bottom:0; }
-.grid-list-body.option.style2 ul li { padding:20px 0; }
 
 /* 스크롤 */
 .grid-list-body.option::-webkit-scrollbar { width:14px; }

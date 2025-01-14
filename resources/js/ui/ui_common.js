@@ -342,7 +342,11 @@ $(document).ready(function() {
     function handleToggleClick($toggleElement) {
         var $toggleCont = $toggleElement.parent().find('.ques-cont');
         var isOpen = $toggleElement.toggleClass('active').hasClass('active');
-		
+
+		// 20250114 추가
+		$('.toggleChk.active').not($toggleElement).removeClass('active').attr('title', '열림');
+    	$('.ques-cont.active').not($toggleCont).removeClass('active');
+
         $toggleCont.toggleClass('active');
         $toggleElement.attr('title', isOpen ? '닫힘' : '열림');
     }

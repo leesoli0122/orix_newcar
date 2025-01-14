@@ -12,7 +12,7 @@
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:type" content="website" />
 
-    <title>펀딩승인 < 약정펀딩 < 현황조회</title>
+    <title>발주 < 발주배정 < 현황조회</title>
 
     <link href="../../resources/css/lib/default.css" rel="stylesheet" type="text/css" />
     <link href="../../resources/css/lib/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
@@ -55,8 +55,8 @@
                     <ul>
                         <li class="home"><a href="javascript:void(0);">홈</a></li>
                         <li><a href="javascript:void(0);">현황조회</a></li>
-                        <li><a href="javascript:void(0);">약정펀딩</a></li>
-                        <li><a href="javascript:void(0);">펀딩승인</a></li>
+                        <li><a href="javascript:void(0);">발주배정</a></li>
+                        <li><a href="javascript:void(0);">발주</a></li>
                     </ul>
                 </div>
                 <div class="text-wrap">
@@ -83,65 +83,48 @@
         </div>
         <!-- //e:footer -->
     </div>
-    <!-- 보증금 입금 요청 -->
-    <div id="PopUp39" class="layerpopup laypop on" style="display:block;" tabindex="0">
+    <!-- 발주취소 -->
+    <div id="PopUp40" class="layerpopup laypop on" style="display:block; z-index:9999;" tabindex="0">
         <div class="content-wrap">
             <div class="pop-header">
-                <h3 class="pop-title">보증금 입금 요청</h3>
+                <h3 class="pop-title">발주요청</h3>
                 <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
             </div>
             <div class="ly-con-wrap ly-scroll-con">
+                <div class="popup-text-wrap style3">
+                    <h4 class="tit">발주일을 입력해 주세요.</h4>
+                </div>
                 <div class="table-type">
                     <div class="col">
                         <dl>
-                            <dt>고객명</dt>
-                            <dd>
-                                <span class="change-txt">홍길동</span>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>휴대폰번호</dt>
-                            <dd class="form-group">
-                                <div class="col-1">
-                                    <input id="" title="인수자 연락처" type="text" name="" class="form-control" maxlength="11" placeholder="숫자만 입력">
-                                </div>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>차량</dt>
-                            <dd>
-                                <span class="change-txt">현대 캐스퍼 2023년형 가솔린 1.0 스마트</span>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>색상</dt>
-                            <dd>
-                                <span class="change-txt">톰보이 카키(TKS) 블랙</span>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>옵션</dt>
-                            <dd>
-                                <span class="change-txt">시그니처 디자인 셀렉션Ⅱ, (가니쉬)올리브애쉬 리얼우드, 파퓰러 패키지, 파노라마 선루프, 컨비니언스 패키지, 뱅앤올룹슨 사운드 패키지</span>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>보증금</dt>
-                            <dd>
-                                <span class="change-txt num">0,000,000</span>원
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>내용</dt>
+                            <dt>발주일</dt>
                             <dd class="form-group style3">
-                                <textarea type="text" title="전달사항" id="ipt02" class="inp" name="" value="" placeholder="요청내용 입력" maxlength="100" required=""></textarea>
+                                <div class="form-row">
+                                    <div class="col-2">
+                                        <input type="text" id="dp1736820294095" title="기간" name="from" class="form-control datepicker hasDatepicker" placeholder="YYYY.MM.DD" readonly="">
+                                    </div>
+                                    <div class="input-hyphen">~</div>
+                                    <div class="col-2">
+                                        <div class="select-box">
+                                            <div class="stove-dim"></div>
+                                            <div class="se-select" data-stove="select">
+                                                <select class="" title="메뉴구분">
+                                                    <option value="" disabled="" selected="" hidden="">시간선택</option><!-- [D] : default - 셀렉트의 placeholder 기능-->
+                                                    <option value="0">오전</option>
+                                                    <option value="1">오후</option>
+                                                </select>
+                                                <div class="e-select-dim"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </dd>
                         </dl>
                     </div>
                 </div>
             </div>
             <div class="btn-wrap popup">
-                <button type="button" name="button" class="btn btn-bottom" >보증금 입금요청</button>
+                <button type="button" name="button" class="btn btn-bottom" >발주요청</button>
             </div>
         </div>
     </div>

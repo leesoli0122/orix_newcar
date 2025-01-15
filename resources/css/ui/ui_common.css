@@ -1281,7 +1281,7 @@ section.grid-wrap:first-child .grid-list-wrap .grid-list-body { max-height:422px
 /* 차량 선택 완료 */
 .grid-list-body li .pop.arr span { display:inline-block; max-width:226px; width:100%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
 .grid-list-body li .pop.arr span::before { content:""; position:absolute; top:50%; transform:translateY(-50%); left:0; display:inline-block; width:18px; height:18px; }
-.grid-list-body li .pop.arr span[class] { padding-left:28px; }
+.grid-list-body li.brand-logo .pop.arr span[class] { padding-left:28px; }/*20250115 다른 span에 클래스가 들어가도 패딩값이 생겨서 수정*/
 
 /** style2 **/
 .grid-list-wrap.style2 .grid-list-body { border-right:0; border-left:0; background:var(--background4); }

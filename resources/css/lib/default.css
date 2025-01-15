@@ -109,6 +109,7 @@ table { border-collapse:collapse; border-spacing:0; width:100%; }
 .mb0 { margin-bottom:0 !important; }
 .mt14 { margin-top:14px !important; }
 .sr-only { position:absolute; margin:-1px; padding: 0; width:1px; height:1px; border: 0; overflow: hidden; clip: rect(0, 0, 0, 0); }
+.color { font-weight:var(--w-bold) !important; color:var(--secondary) !important; }
 
 /* 폰트숨김 */
 .ir { position:absolute; clip:rect(1px 1px 1px 1px); width:1px; height:1px; margin:-1px; overflow: hidden;   }

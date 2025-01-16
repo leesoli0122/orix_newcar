@@ -75,15 +75,32 @@
                                         <ul class="radio-box">
                                             <li>
                                                 <input type="radio" id="radio-1" name="product" checked="">
-                                                <label for="radio-1"class="radio-button"><span>전체(<span>197</span>대)</span></label>
+                                                <label for="radio-1"class="radio-button"><span>전체(<span>000</span>대)</span></label>
                                             </li>
                                             <li>
                                                 <input type="radio" id="radio-2" name="product">
-                                                <label for="radio-2"class="radio-button"><span>렌터카(<span>196)</span>대</span></label>
+                                                <label for="radio-2"class="radio-button"><span>렌터카(<span>000)</span>대</span></label>
                                             </li>
                                             <li>
                                                 <input type="radio" id="radio-3" name="product">
-                                                <label for="radio-3"class="radio-button"><span>오토리스(<span>1</span>대)</span></label>
+                                                <label for="radio-3"class="radio-button"><span>오토리스(<span>000</span>대)</span></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>예약구분</dt>
+                                <dd>
+                                    <div class="form-group radio">
+                                        <ul class="radio-box">
+                                            <li>
+                                                <input type="radio" id="radio-4" name="psb" checked="">
+                                                <label for="radio-4"class="radio-button"><span>예약가능</span></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="radio-6" name="psb">
+                                                <label for="radio-6"class="radio-button"><span>미진행선점건(<span>000</span>대</span></label>
                                             </li>
                                         </ul>
                                     </div>
@@ -95,23 +112,58 @@
                                     <div class="form-group radio">
                                         <ul class="radio-box">
                                             <li>
-                                                <input type="radio" id="radio-4" name="vehicle" checked="">
-                                                <label for="radio-4"class="radio-button"><span>선택없음</span></label>
+                                                <input type="radio" id="radio-7" name="vehicle" checked="">
+                                                <label for="radio-7"class="radio-button"><span>선택없음</span></label>
                                             </li>
                                             <li>
-                                                <input type="radio" id="radio-5" name="vehicle">
-                                                <label for="radio-5"class="radio-button"><span>프로모션(<span>5</span>대)</span></label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" id="radio-6" name="vehicle">
-                                                <label for="radio-6"class="radio-button"><span>이벤트(<span>78</span>대)</span></label>
+                                                <input type="radio" id="radio-8" name="vehicle">
+                                                <label for="radio-8"class="radio-button"><span>이벤트(<span>000</span>대)</span></label>
                                             </li>
                                         </ul>
                                     </div>
                                 </dd>
                             </dl>
+                            <dl><!--20250116 추가-->
+                                <dt>모델검색</dt>
+                                <dd>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col-5">
+                                                <input type="text" title="모델검색" name="" id="" class="form-control" placeholder="모델명 입력">
+                                                <button type="button" class="btn btn-cancel" onclick="clearBtn()"><span class="ir">입력취소</span></button>
+                                            </div>
+                                            <button class="btn btn-input active" type="button" id="">조회</button>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
                             <dl>
-                                <dt>모델선택</dt>
+                                <dt>출고완료</dt>
+                                <dd>
+                                    <div class="choose-wrap">
+                                        <div class="choose-group model">
+                                            <ul class="choose"><!--[D] 클릭 시 li에 chk 클래스 추가-->
+                                                <li><button type="button">디 올 뉴 스포티지 HEV(NQ5) (70대)</button></li>
+                                                <li><button type="button">더 뉴 아반떼 (4대)</button></li>
+                                                <li><button type="button">더 뉴 셀토스 (26대)</button></li>
+                                                <li><button type="button">디 올 뉴 산타페 HEV (34대)</button></li>
+                                                <li><button type="button">GV70 (34대)</button></li>
+                                                <li><button type="button">K8 HEV(GL3) (34대)</button></li>
+                                                <li><button type="button">더 뉴 토레스 (34대)</button></li>
+                                                <li><button type="button">쏘나타 디 엣지 (3대)</button></li>
+                                                <li><button type="button">디 올 뉴 그랜저(GN7) (5대)</button></li>
+                                                <li><button type="button">디 올 뉴G80 F/L (1대)</button></li>
+                                                <li><button type="button">더 뉴 K5 HEV (2대)</button></li>
+                                                <li><button type="button">K8(GL3) (2대)</button></li>
+                                                <li><button type="button">디 올 뉴 싼타페(MX5) (1대)</button></li>
+                                                <li><button type="button">더 뉴 팰리세이드 (8대)</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>배정예시시</dt>
                                 <dd>
                                     <div class="choose-wrap">
                                         <div class="choose-group model">

@@ -1494,6 +1494,7 @@ section.grid-wrap:first-child .grid-list-wrap .grid-list-body { max-height:422px
 	선구매
 ---------------------------------------------*/
 .choose-wrap .choose-group.model:last-child { margin:0; padding:0; }
+.choose-wrap .choose-group.model .choose { max-width:unset; } /*20250116*/
 .choose-wrap .choose-group.model .choose li.chk { border:1px solid var(--secondary); color:var(--normal); font-weight:var(--w-bold); }
 .choose-wrap .choose-group.model .choose li.chk button { color:var(--normal);  font-weight:var(--w-bold); }/*20241224*/
 

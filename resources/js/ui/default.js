@@ -61,10 +61,8 @@ $(document).ready(function () {
 	});
 
 	// 다중 선택(checkbox 사용 안함)
-	document.querySelectorAll('.choose-group.model .choose li').forEach(function (li) {
-		li.addEventListener('click', function () {
-			li.classList.toggle('chk');
-		});
+	$(document).on('click', '.choose-group.model .choose li', function () {
+		$(this).toggleClass('chk');
 	});
 
 	/*********************************************************************

@@ -506,16 +506,15 @@ TOGGLE_ACCORDION #토글_아코디언
 .accordion-wrap > .accordion-info > .ques .left,
 .accordion-wrap > .accordion-info > .ques .right { display:flex; flex-direction:column; }
 /* inline */
-.accordion-wrap > .accordion-info > .ques .right.inline,
-.accordion-wrap > .accordion-info > .ques .right.inline { display:flex; flex-direction: row; justify-content: center; align-items: center; }
+.accordion-wrap > .accordion-info > .ques .right.inline { display:flex; flex-direction: row; justify-content: center; align-items: center; }/*20250123*/
 
 /* 현황조회-약정펀딩 */
 .accordion-wrap > .accordion-info > .ques .right.inqu-fo { max-width:270px; width:100%; text-align:right; }
 .accordion-wrap > .accordion-info > .ques .right.inqu-fo .tit { margin-right:0; margin-bottom:14px; }
 
 /* 현황조회 삭제버튼 없을 때 */
-.accordion-wrap > .accordion-info > .ques .right.no-del { max-width:270px; width:100%; text-align:right; }
-.accordion-wrap > .accordion-info > .ques .righ.no-del .tit { margin-right:0; }
+.accordion-wrap > .accordion-info > .ques .right.no-del { display:flex; flex-direction: row; align-items: center; justify-content: flex-end; max-width:253px; width:100%; text-align:right; }/*20250123*/
+.accordion-wrap > .accordion-info > .ques .right.no-del .tit { margin-right:0; }/*20250123*/
 
 .accordion-wrap > .accordion-info > .ques-cont{ height:0; opacity: 0; overflow: hidden; padding-top:0; transition: height .2s ease, opacity .3s ease, padding-top .2s ease; }
 .accordion-wrap > .accordion-info > .ques-cont.active{ height:auto; opacity:1; background: var(--background4); padding:30px; font-size:var(--font16); font-weight:var(--w-bold); color:var(--inactive);}

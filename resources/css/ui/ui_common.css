@@ -1264,7 +1264,8 @@ section.grid-wrap:first-child .grid-list-wrap .grid-list-body { max-height:422px
 .grid-list-body.style2 .form-group.check ul.check-box + .col-1 { margin-top:14px;}
 
 /* 탁송정보/용품/수수료 선택 */
-.grid-list-wrap.no .grid-list-body.style2 { max-height:unset; }
+.grid-list-wrap.no .grid-list-body.style2,
+section.grid-wrap.no:first-child .grid-list-wrap .grid-list-body { max-height:unset !important; }
 
 /* 탁송정보/용품/수수료 선택 항목 추가된 것 20241216  */
 .grid-list-body li .consignment { width:100%; }

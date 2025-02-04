@@ -1517,6 +1517,9 @@ section.grid-wrap.no:first-child .grid-list-wrap .grid-list-body { max-height:un
 .choose-wrap .choose-group .choose li button { background:transparent; font-size:var(--font14); color:var(--inactive); cursor:pointer; }/*20241224*/
 .choose-wrap .choose-group .choose li::before { content:none; }
 
+/* 선구매 20250204 */
+.choose-wrap .choose-group.frist { margin-bottom:10px; padding-bottom:0; border-bottom:1px solid var(--border3); }
+
 /* 아이콘 있을 때 */
 .choose-wrap .choose-group .choose.image li { padding:9px 16px 9px 36px; }
 .choose-wrap .choose-group .choose.image li::before { content:""; display:inline-block; position:absolute; top:50%; transform:translateY(-50%); left:16px; width:18px; height:18px; }

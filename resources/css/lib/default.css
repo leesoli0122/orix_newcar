@@ -150,8 +150,9 @@ style5 = caption 포함 /*20250205*/
 .sub-text-wrap.style5 + .result-area.nodata { margin-top:0; }/*20250205*/
 
 .caption { padding-left:22px; margin-top:10px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--subtitle); line-height:18px; }
-.caption2 { /*position:absolute; top:-33px; right:0;*/ font-size:var(--font14); color:var(--inactive); }/*테이블캡션(단위)*/
+.caption2 { font-size:var(--font14); color:var(--inactive); }/*현황조회-가견적 20250210*/
 .caption3 { padding-left:22px; font-size:var(--font14); font-weight:var(--w-regular); color:var(--secondary); }/*레이어팝업에서*/
+.caption4 { position:absolute; top:-33px; right:0; font-size:var(--font14); color:var(--inactive); }/*테이블캡션(단위) 20250210*/
 
 .inquiry-info { width:auto; font-size:var(--font16); font-weight:var(--w-regular); color:var(--tag3); }/*현황조회 인포 삭제될 수도 있음*/
 .inquiry-info::before { content:''; display:inline-block; margin-right:8px; width:17px; height:17px; background:url(../../images/common/inquiry-info.png)no-repeat 50%/17px auto; vertical-align:top; }

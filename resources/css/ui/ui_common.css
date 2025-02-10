@@ -1299,11 +1299,14 @@ section.grid-wrap.no:first-child .grid-list-wrap .grid-list-body { max-height:un
 /* 공채/부대비용 선택 */
 /* .grid-list-wrap.style2 .grid-list-body > ul >  li .form-group .radio-box { margin-bottom:20px; } */
 
-/** 계약조건 **/
+/**
+	계약조건
+	.grid-list-header::before = 즐겨찾기 아이콘
+**/
 /* .grid-list-wrap.style3 { max-height:920px; } */
 .grid-list-wrap.style3 { max-height:none; }
 .grid-list-wrap.style3 .grid-list-header { background:var(--primary); }
-.grid-list-wrap.style3 .grid-list-header::before { content:""; position:absolute; left:24px; top:50%; transform:translateY(-50%); display:inline-block; width:24px; height:24px; background:url(../../images/ic_star.png)no-repeat 50%/24px auto; }
+.grid-list-wrap.style3 .grid-list-header::before { content:""; position:absolute; left:24px; top:50%; transform:translateY(-50%); display:inline-block; width:24px; height:24px; background:url(../../images/ic_star.png)no-repeat 50%/24px auto; cursor:pointer; }/*20250210*/
 .grid-list-wrap.style3 .grid-list-header.on::before { background:url(../../images/ic_star_on.png)no-repeat 50%/24px auto; }
 
 .grid-list-wrap.style3 .grid-list-body { max-height:fit-content; height:auto; overflow:initial; }

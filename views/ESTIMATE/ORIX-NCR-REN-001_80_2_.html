@@ -28,11 +28,21 @@
 </head>
 <style>
     @media screen and (min-width:1201px) {
+        .wrap { padding-top:115px; }
         .header-wrap { height:115px; }
         .header-wrap .top { padding:20px 0 14px; }
         .header-wrap > .h-menu ul.menu { margin:10px 0 10px; }
         .header-wrap > .h-menu ul.menu > li a { font-size:var(--font18); }
         .header-wrap:not(.header-wrap.side) > .h-menu ul.menu > li.on::after{ top:42px; }
+
+        /* 타이틀 */
+        .text-wrap h2 { font-size:var(--font24); }
+        /* 카드 */
+        .grid-list-header { padding:14px 0; font-size: var(--font20);}
+        section.grid-wrap:first-child .grid-list-wrap .grid-list-body { max-height:415px; }
+        .grid-list-body > ul > li { padding:19px 0; }
+        .grid-wrap { padding-bottom:24px; }
+        .grid-list-footer { padding:20px; }
     }
 </style>
 <body>

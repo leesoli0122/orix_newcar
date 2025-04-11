@@ -14,17 +14,17 @@
 
     <title>렌터카 견적내기 < 견적내기</title>
 
-            <link href="../../resources/css/lib/default_80.css" rel="stylesheet" type="text/css" />
-            <link href="../../resources/css/lib/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
-            <link href="../../resources/css/ui/ui_common.css" rel="stylesheet" type="text/css" />
-            <link href="../../resources/css/lib/img.css" rel="stylesheet" type="text/css" />
-            <link href="../../resources/css/ui/media-query.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/lib/default_80.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/lib/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/ui/ui_common.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/lib/img.css" rel="stylesheet" type="text/css" />
+    <link href="../../resources/css/ui/media-query.css" rel="stylesheet" type="text/css" />
 
-            <script type="text/javascript" src="../../resources/js/lib/jquery-1.9.1.min.js"></script>
-            <script type="text/javascript" src="../../resources/js/lib/jquery-ui-1.12.1.js"></script>
-            <script type="text/javascript" src="../../resources/js/ui/ui_common.js"></script>
-            <script type="text/javascript" src="../../resources/js/ui/ui_plugin.js"></script>
-            <script type="text/javascript" src="../../resources/js/ui/default.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/jquery-ui-1.12.1.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui/ui_common.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui/ui_plugin.js"></script>
+    <script type="text/javascript" src="../../resources/js/ui/default.js"></script>
 </head>
 <style>
     @media screen and (min-width:1201px) {
@@ -34,16 +34,20 @@
         .header-wrap > .h-menu ul.menu { margin:10px 0 10px; }
         .header-wrap > .h-menu ul.menu > li a { font-size:var(--font18); }
         .header-wrap:not(.header-wrap.side) > .h-menu ul.menu > li.on::after{ top:42px; }
-
-        /* 타이틀 */
-        .text-wrap h2 { font-size:var(--font24); }
-        /* 카드 */
-        .grid-list-header { padding:14px 0; font-size: var(--font20);}
-        section.grid-wrap:first-child .grid-list-wrap .grid-list-body { max-height:415px; }
-        .grid-list-body > ul > li { padding:19px 0; }
-        .grid-wrap { padding-bottom:24px; }
-        .grid-list-footer { padding:20px; }
     }
+    /* 타이틀 */
+    .text-wrap h2 { font-size:var(--font24); }
+    /* 카드 */
+    .grid-list-header { padding:14px 0; font-size: var(--font20);}
+    section.grid-wrap:first-child .grid-list-wrap .grid-list-body { max-height:415px; }
+    .grid-list-body > ul > li { padding:19px 0; }
+    .grid-wrap { padding-bottom:24px; }
+    .grid-list-footer { padding:20px; }
+
+    /* @media screen and (max-width: 500px) {
+        .grid-wrap{ grid-template-columns: 1fr; }
+        .grid-list-wrap:last-child {display:initial; grid-column-start:initial; grid-column-end: initial;}
+    } */
 </style>
 <body>
     <!-- S: skipnavi -->

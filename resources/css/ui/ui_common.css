@@ -1251,8 +1251,10 @@ dd.download-wrap { padding:0; background:transparent; }
 .grid-list-body li .pop { padding:4px 54px 4px 24px; width:100%; font-size:var(--font16); font-weight:var(--w-regular); color:var(--subtitle); }
 .grid-list-body li .pop.arr:focus-visible { outline:1px solid var(--secondary); }
 .grid-list-body li .form-group { padding:0 24px; width:100%; }
+/* s:[2025-04-16-퍼블] : 사이즈 변경 */
 .grid-list-wrap.style2 .grid-list-body > ul >  li.num,
 .grid-list-wrap .grid-list-body > ul >  li.num { justify-content:space-between; padding-right:20px; }/*20250109*/
+/* e:[2025-04-16-퍼블] : 사이즈 변경 */
 .grid-list-body .change-txt { padding-left:24px; width:100%; font-size:var(--font16); font-weight:var(--w-regular); color:var(--normal); }
 .grid-list-wrap .grid-list-body .change-txt.num { color:var(--title); text-align:right; }
 

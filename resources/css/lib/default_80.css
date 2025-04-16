@@ -14,15 +14,10 @@
 }
 
 html { overflow-y:auto; }
+/* s:[2025-04-16-퍼블] : 사이즈 변경 */
 body { zoom:0.8; width:100%; height:100%; font-size:16px; font-weight:400; color:var(--normal); text-align: left; background-color: #fff; }
-/* Firefox 대응용 (대체 수단) */
-/* @supports not (zoom: 1) {
-    body {
-        transform: scale(0.9);
-        transform-origin: top left;
-        width: 111.11%; 
-    }
-} */
+/* e:[2025-04-16-퍼블] : 사이즈 변경 */
+
 ul, ol { list-style:none; }
 *,
 *::before,
@@ -254,7 +249,9 @@ login #로그인
 header #헤더
 *********************************************************************/
 .header-wrap { position:fixed; top:0; z-index:200; padding:0 20px; width:100%; height:146px; border-bottom:1px solid var(--border1); background:var(--white); }
+/* s:[2025-04-16-퍼블] : 사이즈 변경 */
 .header-wrap .top { padding:33px 0px 15px; margin: 0 auto; max-width:1400px; width: 100%; /*min-width:1200px;*/ }
+/* e:[2025-04-16-퍼블] : 사이즈 변경 */
 .header-wrap .top div { display:flex; align-items:center; }
 .header-wrap .top > div > * { vertical-align:middle; }
 .header-wrap .top > div > h1 { display:inline-block; margin-right:25px; width:93px; height:24px; }
@@ -264,7 +261,9 @@ header #헤더
 .header-wrap .top > div > ul li:first-child::after { content:""; display:inline-block; margin:0 16px; width:1px; height:14px; background:var(--border1); vertical-align: middle; }
 .header-wrap .top > div > ul li a { font-size:var(--font14); font-weight:700; color:var(--subtitle); }
 
+/* s:[2025-04-16-퍼블] : 사이즈 변경 */
 .header-wrap > .h-menu { max-width:1400px; width:100%; margin:0 auto; }
+/* e:[2025-04-16-퍼블] : 사이즈 변경 */
 .header-wrap > .h-menu { display:flex; align-items:center; justify-content:space-between; flex-direction: row-reverse;}
 .header-wrap > .nav-btn { display:none; width:37px; height:37px; z-index:999px; }
 .header-wrap > .nav-btn .ham { display:inline-block; width:37px; height:37px; background:transparent; cursor:pointer; }
@@ -336,7 +335,9 @@ header(태블릿) .side
 /*********************************************************************
 sub-content
 *********************************************************************/
+/* s:[2025-04-16-퍼블] : 사이즈 변경 */
 .sub-content { padding:0 0 80px; margin:0 auto; max-width:1400px; width:100%; min-height:calc(100vh - 208px); }
+/* e:[2025-04-16-퍼블] : 사이즈 변경 */
 .sub-content > div { width:100%; }
 .subvisual-wrap{  padding:17px 0 50px; }
 
@@ -354,7 +355,9 @@ sub-content
 /* footer */
 .footer-wrap { padding:26px 0 50px; color:var(--white); background-color:#3F3F3F; }
 .footer-wrap .footer { margin:0 auto; }
+/* s:[2025-04-16-퍼블] : 사이즈 변경 */
 .footer-wrap > div {  margin:0 auto 0; max-width:1400px; }
+/* e:[2025-04-16-퍼블] : 사이즈 변경 */
 .footer-wrap .policy-link { display:flex; flex-wrap:wrap; gap:32px; font-size:var(--font16); font-weight:var(--w-bold); text-align:left; }
 .footer-wrap .btn-wrap.policy-link .btn.btn-text { padding:4px; height:auto; font-weight:var(--w-bold); color:var(--white); }
 .footer-wrap .btn-wrap.policy-link .btn:focus-visible { outline:1px solid var(--white); }
